@@ -1,0 +1,305 @@
+@charset "UTF-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+/*CORES*/
+    --cor1: #8F71FF;
+    --cor1_escurecida: #5123ff;
+    --cor1_clareada: #cbbeff;
+    --cor1_clareada_semitransparente: #cbbeff50;
+
+    --cor2: #82ACFF;
+    --cor2_escurecida: #3478ff; 
+    --cor2_clareada: #cfdfff;
+    --cor2_clareada_semitransparente: #cfdfff50;
+
+    --cor3: #8BFFFF;
+    --cor3_escurecida: #3dffff;
+    --cor3_clareada: #d8ffff;
+    --cor3_clareada_semitransparente: #d8ffff50;
+
+    --cor4: #FF5D9E;
+    --cor4_escurecida: #ff0f6f;
+    --cor4_clareada: #ffaacc;
+    --cor4_clareada_semitransparente: #ffaacc50;
+
+/*DECORATIVOS*/
+    --sombra_leve: 0px 0px 5px #00000030;
+
+/*FONTES*/
+    --títulos: "Josefin Sans", sans-serif;
+    --textos: "Roboto", sans-serif;
+    --texto_observação: "Lato", sans-serif;
+    --tamanho_h1: 32px;
+    --tamanho_h2: 32px;
+    --tamanho_h3: 28px;
+    --tamanho_título: 48px;
+    --tamanho_p_p: 16px;
+    --tamanho_p_m: 20px;
+    --tamanho_p_g: 22px;
+
+/*TAMANHOS DAS FONTES:
+    H1 = 32PX
+    H2 = 28PX
+    H3 = 16PX
+    P = ?
+*/
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+article.habilidades {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100%;
+    padding: 100px 20px;
+    border-radius: 20px;
+    background: white;
+    box-shadow: var(--sombra_leve);
+}
+
+article.habilidades div.cabeçalho {
+    display: block;
+    text-align: center;
+    height: fit-content;
+    width: 100%;
+    margin-bottom: 0px;
+}
+
+article.habilidades div.cabeçalho > h2 {
+    margin: 10px;
+    font-size: var(--tamanho_título);
+}
+
+article.habilidades p.descrição {
+    color: gray;
+    font-size: var(--tamanho_p_m);
+}
+
+div.contanier-habilidades {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+div.habilidades {
+    display: block;
+    justify-content: center;
+    background: transparent;
+    width: 250px;
+    height: 320px;
+    margin: 40px;
+    padding: 50px 20px;
+    border-radius: 25px;
+    transition-duration: 500ms;
+    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
+    border: 1px solid #c5c5c5;
+}
+
+div.habilidades p.habilidades-número {
+    font-size: 200px;
+    font-family: var(--títulos);
+    font-weight: bold;
+    position: relative;
+    line-height: 100px;
+    top: 135px;
+    left: 6px;
+    transition-duration: 500ms;
+    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+div.habilidades p.habilidades-título {
+    color: black;
+    font-size: var(--tamanho_h3);
+    font-family: var(--títulos);
+    width: 80%;
+    margin-bottom: 10px;
+    font-weight: bold;
+    position: relative;
+    left: 25px;
+    top: 30px;
+    transition-duration: 500ms;
+    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+div.habilidades p.habilidades-texto {
+    color: black;
+    display: none;
+    width: 80%;
+    margin: auto;
+    text-align: justify;
+    font-weight: 400;
+    line-height: 25px;
+    font-size: var(--tamanho_p_m);
+    transition-duration: 250ms;
+    transition: ease-in-out;
+}
+
+div.habilidades:hover {
+  transition-duration: 0ms;
+  border: 0px solid #c5c5c510;
+}
+
+div.habilidades:hover p.habilidades-texto {
+    display: block;
+    font-size: var(--tamanho_p_p);
+}
+
+div.habilidades:hover p.habilidades-número {
+    font-size: 96px;
+    position: relative;
+    top: -30px;
+}
+
+div.habilidades:hover p.habilidades-título {
+    font-size: 20px;
+    width: 80%;
+    margin-bottom: -30px;
+    position: relative;
+    top: -40px;
+    left: 25px;
+}
+
+/*↓ CONFIGURAÇÕES DE CORES DAS HABILIDADES ↓*/
+#habilidade-1 p.habilidades-número {
+    color: var(--cor1_clareada);
+}
+
+#habilidade-1:hover {
+    background-color: var(--cor1_clareada_semitransparente);
+    border: 1px solid var(--cor1_clareada);
+}
+
+#habilidade-1:hover p.habilidades-título{
+    color: var(--cor1_escurecida);
+}
+
+#habilidade-2:hover {
+    background-color: var(--cor2_clareada_semitransparente);
+    border: 1px solid var(--cor2_clareada);
+}
+
+#habilidade-2 p.habilidades-número {
+    color: var(--cor2_clareada);
+}
+
+#habilidade-2:hover p.habilidades-título{
+    color: var(--cor2_escurecida);
+}
+
+#habilidade-3:hover {
+    background-color: var(--cor4_clareada_semitransparente);
+    border: 1px solid var(--cor4_clareada);
+}
+
+#habilidade-3 p.habilidades-número {
+    color: var(--cor4_clareada);
+}
+
+#habilidade-3:hover p.habilidades-título{
+    color: var(--cor4_escurecida );
+}
+
+/*↓ MEDIA SCREEN RULES ↓*/
+@media screen and (max-width: 1150px) {
+    div.habilidades {
+        width: 200px;
+        padding: 40px 15px;
+    }
+
+    div.habilidades p.habilidades-número {
+        font-size: 160px;
+        top: 125px;
+    }
+
+    div.habilidades p.habilidades-título {
+        font-size: 22px;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+    div.habilidades:hover p.habilidades-título {
+        font-size: 18px;
+        left: 20px;
+    }
+
+    div.habilidades:hover p.habilidades-texto {
+        width: 80%;
+        line-height: 22px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 970px) {
+    div.habilidades {
+        margin: 20px;
+    }
+}
+
+@media screen and (max-width: 930px) {
+    article.habilidades {
+        padding: 100px 20px 50px 20px;
+        border-radius: 20px;
+    }
+
+    article.habilidades div.cabeçalho {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    div.habilidades {
+        margin: 10px;
+    }
+
+    div.habilidades p.habilidades-número {
+        font-size: 140px;
+        top: 115px;
+    }
+
+    div.habilidades:hover p.habilidades-título {
+        font-size: 18px;
+        left: 20px;
+    }
+
+    div.habilidades:hover p.habilidades-texto {
+        width: 80%;
+        line-height: 22px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 803px) {
+    article.habilidades div.cabeçalho > h2 {
+        font-size: 32px;
+    }
+
+    div.habilidades {
+        margin: 10px 100px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    div.habilidades {
+        margin: 10px 0px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    article.habilidades div.cabeçalho > h2 {
+        font-size: 24px;
+    }
+
+    article.habilidades p.descrição {
+        color: gray;
+        font-size: var(--tamanho_p_p);
+    }
+}
