@@ -141,7 +141,7 @@ header nav > a:hover {
 /*↑ DESIGN DO CABEÇALHO ↑*/
 
 /*↓ DESIGN CONTEÚDO DO SITE ↓*/
-article.habilidades {
+article {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -154,7 +154,7 @@ article.habilidades {
     box-shadow: var(--sombra_leve);
 }
 
-article.habilidades div.cabeçalho {
+article div.cabeçalho {
     display: block;
     text-align: center;
     height: fit-content;
@@ -162,12 +162,12 @@ article.habilidades div.cabeçalho {
     margin-bottom: 0px;
 }
 
-article.habilidades div.cabeçalho > h2 {
+article div.cabeçalho > h2 {
     margin: 10px;
     font-size: var(--tamanho_título);
 }
 
-article.habilidades p.descrição {
+article p.descrição {
     color: gray;
     font-size: var(--tamanho_p_m);
 }
@@ -192,7 +192,7 @@ div.separação > hr {
 }
 
     /*↓ SEÇÃO MINHAS HABILIDADES ↓*/
-        div.contanier-habilidades {
+        div.container-habilidades {
             display: flex;
             justify-content: space-evenly;
             align-items: center;
@@ -277,45 +277,83 @@ div.separação > hr {
             left: 25px;
         }
 
-    /*CONFIGURAÇÕES DE CORES DAS HABILIDADES ↓*/
-        #habilidade-1 p.habilidades-número {
-            color: var(--cor1_clareada);
-        }
+        /*CONFIGURAÇÕES DE CORES DAS HABILIDADES ↓*/
+            #habilidade-1 p.habilidades-número {
+                color: var(--cor1_clareada);
+            }
 
-        #habilidade-1:hover {
-            background-color: var(--cor1_clareada_semitransparente);
-            border: 1px solid var(--cor1_clareada);
-        }
+            #habilidade-1:hover {
+                background-color: var(--cor1_clareada_semitransparente);
+                border: 1px solid var(--cor1_clareada);
+            }
 
-        #habilidade-1:hover p.habilidades-título{
-            color: var(--cor1_escurecida);
-        }
+            #habilidade-1:hover p.habilidades-título{
+                color: var(--cor1_escurecida);
+            }
 
-        #habilidade-2:hover {
-            background-color: var(--cor2_clareada_semitransparente);
-            border: 1px solid var(--cor2_clareada);
-        }
+            #habilidade-2:hover {
+                background-color: var(--cor2_clareada_semitransparente);
+                border: 1px solid var(--cor2_clareada);
+            }
 
-        #habilidade-2 p.habilidades-número {
-            color: var(--cor2_clareada);
-        }
+            #habilidade-2 p.habilidades-número {
+                color: var(--cor2_clareada);
+            }
 
-        #habilidade-2:hover p.habilidades-título{
-            color: var(--cor2_escurecida);
-        }
+            #habilidade-2:hover p.habilidades-título{
+                color: var(--cor2_escurecida);
+            }
 
-        #habilidade-3:hover {
-            background-color: var(--cor4_clareada_semitransparente);
-            border: 1px solid var(--cor4_clareada);
-        }
+            #habilidade-3:hover {
+                background-color: var(--cor4_clareada_semitransparente);
+                border: 1px solid var(--cor4_clareada);
+            }
 
-        #habilidade-3 p.habilidades-número {
-            color: var(--cor4_clareada);
-        }
+            #habilidade-3 p.habilidades-número {
+                color: var(--cor4_clareada);
+            }
 
-        #habilidade-3:hover p.habilidades-título{
-            color: var(--cor4_escurecida );
-        }
+            #habilidade-3:hover p.habilidades-título{
+                color: var(--cor4_escurecida );
+            }
+
+    /*↓ SEÇÃO MEUS CONHECIMENTOS ↓*/
+    div.container-conhecimentos {
+        display: flex;
+        columns: 2;
+        margin: 40px 40px 0px 40px;
+    }
+
+    div.container-conhecimentos p {
+        text-align: justify;
+    }
+
+    #currículo {
+        display: flex;
+        columns: 2;
+        margin-right: 40px;
+        flex-grow: 1;
+    }
+
+    #currículo h2 {
+        text-align: right;
+    }
+
+    #currículo div {
+        margin: 0px 20px;
+    }
+
+    #certificados {
+        display: flex;
+        columns: 2;
+        margin-left: 40px;
+        flex-grow: 1;
+    }
+
+    #certificados div {
+        margin: 0px 20px;
+    }
+
 /*↑ DESIGN CONTEÚDO DO SITE ↑*/
 
 /*↓ DESIGN DO RODAPÉ ↓*/
@@ -392,12 +430,12 @@ footer p {
         padding: 15px 10px;
     }
 
-    article.habilidades {
+    article {
         padding: 100px 20px 90px 20px;
         border-radius: 20px;
     }
 
-    article.habilidades div.cabeçalho {
+    article div.cabeçalho {
         margin-bottom: 20px;
     }
 }
@@ -425,7 +463,7 @@ footer p {
 }
 
 @media screen and (max-width: 803px) {
-    article.habilidades div.cabeçalho > h2 {
+    article div.cabeçalho > h2 {
         font-size: 32px;
     }
 
@@ -492,11 +530,11 @@ footer p {
         font-size: 20px;
     }
 
-    article.habilidades div.cabeçalho > h2 {
+    article div.cabeçalho > h2 {
         font-size: 24px;
     }
 
-    article.habilidades p.descrição {
+    article p.descrição {
         color: gray;
         font-size: var(--tamanho_p_p);
     }
