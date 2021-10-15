@@ -35,9 +35,11 @@
     --tamanho_h2: 32px;
     --tamanho_h3: 28px;
     --tamanho_título: 48px;
+    --tamanho_p_pp: 14px;
     --tamanho_p_p: 16px;
     --tamanho_p_m: 20px;
     --tamanho_p_g: 22px;
+    --tamanho_p_gg: 24px;
 
 /*TAMANHOS DAS FONTES:
     H1 = 32PX
@@ -52,6 +54,10 @@
   margin: 0px;
   padding: 0px;
   border: 0px;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -320,7 +326,6 @@ div.separação > hr {
     /*↓ SEÇÃO MEUS CONHECIMENTOS ↓*/
     div.container-conhecimentos {
         display: flex;
-        columns: 2;
         margin: 40px 40px 0px 40px;
     }
 
@@ -328,11 +333,34 @@ div.separação > hr {
         text-align: justify;
     }
 
+    div.container-conhecimentos button {
+        padding: 15px 40px;
+        margin: 20px auto;
+        width: 80%;
+        color: white;
+        background-color: var(--cor1);
+        font-family: var(--títulos);
+        font-size: 18px;
+        border-radius: 15px;
+        transition-duration: 250ms;
+        box-shadow: var(--sombra_leve);
+    }
+
+    div.container-conhecimentos button:hover {
+        padding: 20px 45px;
+        font-weight: bold;
+    }
+
     #currículo {
         display: flex;
-        columns: 2;
         margin-right: 40px;
-        flex-grow: 1;
+        align-items: center;
+    }
+
+    #currículo-txt {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     #currículo h2 {
@@ -345,9 +373,14 @@ div.separação > hr {
 
     #certificados {
         display: flex;
-        columns: 2;
+        align-items: center;
         margin-left: 40px;
-        flex-grow: 1;
+    }
+
+    #certificados-txt {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     #certificados div {
@@ -400,6 +433,37 @@ footer p {
         width: 80%;
         line-height: 22px;
         font-size: 14px;
+    }
+
+    div.container-conhecimentos button {
+        width: 100%;
+        margin: 20px auto;
+    }
+
+    #currículo {
+        margin-right: 10px;
+    }
+
+    #certificados {
+        margin-left: 10px;
+    }
+}
+
+@media screen and (max-width: 1090px) {
+    div.container-conhecimentos {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin: 40px;
+    }
+
+    div.container-conhecimentos button {
+        width: 50%;
+        margin: 20px auto;
+    }
+
+    #currículo {
+        margin-bottom: 80px;
     }
 }
 
@@ -462,6 +526,7 @@ footer p {
     }
 }
 
+/*AJUSTE DE FONTE*/
 @media screen and (max-width: 803px) {
     article div.cabeçalho > h2 {
         font-size: 32px;
@@ -470,8 +535,61 @@ footer p {
     div.habilidades {
         margin: 10px 100px;
     }
+
+    div.container-conhecimentos button {
+        width: 100%;
+        margin: 20px auto;
+    }
+
+    div.container-conhecimentos p {
+        font-size: var(--tamanho_p_pp);
+    }
+
+    div.container-conhecimentos h2 {
+        font-size: var(--tamanho_p_gg);
+    }
 }
 
+@media screen and (max-width: 600px) {
+    div.container-conhecimentos button {
+        width: 100%;
+        margin: 20px auto;
+    }
+
+    #currículo-img {
+        order: 1;
+        padding-bottom: 40px;
+    }
+
+    #currículo-txt {
+        order: 2;
+    }
+
+    #currículo-txt h2 {
+        text-align: center;
+    }
+
+    #currículo {
+        margin-bottom: 80px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #certificados {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #certificados-txt h2 {
+        text-align: center;
+    }
+
+    #certificados-img {
+        padding-bottom: 40px;
+    }
+}
+
+/*AJUSTE DE FONTE*/
 @media screen and (max-width: 425px) {
     #cabeçalho--texto-foto img {
         margin: 0px 15px 0px 15px;
@@ -509,8 +627,29 @@ footer p {
     div.separação > hr {
         top: 35%;
     }
+
+    div.container-conhecimentos {
+        margin: 40px 20px 0px 20px;
+    }
+
+    #currículo-img img {
+        height: 150px;
+    }
+
+    #certificados-img img {
+        height: 150px;
+    }
+
+    div.container-conhecimentos p {
+        font-size: var(--tamanho_p_pp);
+    }
+
+    div.container-conhecimentos h2 {
+        font-size: 22px;
+    }
 }
 
+/*AJUSTE DE FONTE*/
 @media screen and (max-width: 350px) {
     header nav > a {
         margin: 10px 5px;
@@ -531,7 +670,7 @@ footer p {
     }
 
     article div.cabeçalho > h2 {
-        font-size: 24px;
+        font-size: 28px;
     }
 
     article p.descrição {
