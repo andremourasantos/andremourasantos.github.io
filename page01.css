@@ -355,12 +355,33 @@ div.separação > hr {
         display: flex;
         margin-right: 40px;
         align-items: center;
+        transition-duration: 250ms;
+        border-radius: 15px;
+        padding: 10px;
+    }
+
+    #currículo:hover {
+        box-shadow: var(--sombra_leve);
+        transform: scale(1.05);
     }
 
     #currículo-txt {
         display: flex;
         flex-direction: column;
         justify-content: center;
+    }
+
+    #currículo-img img {
+        border-radius: 15px;
+        width: 200px;
+        box-shadow: var(--sombra_leve);
+        transition-duration: 250ms;
+    }
+
+    #currículo:hover img {
+        border-radius: 15px;
+        transform: rotate(5deg) scale(1.1);
+        box-shadow: 0px 0px 10px #00000050;
     }
 
     #currículo h2 {
@@ -375,6 +396,26 @@ div.separação > hr {
         display: flex;
         align-items: center;
         margin-left: 40px;
+        transition-duration: 250ms;
+        border-radius: 15px;
+        padding: 10px;
+    }
+
+    #certificados-img img {
+        border-radius: 15px;
+        box-shadow: var(--sombra_leve);
+        transition-duration: 250ms;
+    }
+
+    #certificados:hover img {
+        border-radius: 15px;
+        transform: rotate(-5deg) scale(1.1);
+        box-shadow: 0px 0px 10px #00000050;
+    }
+
+    #certificados:hover {
+        box-shadow: var(--sombra_leve);
+        transform: scale(1.05);
     }
 
     #certificados-txt {
@@ -632,14 +673,6 @@ footer p {
         margin: 40px 20px 0px 20px;
     }
 
-    #currículo-img img {
-        height: 150px;
-    }
-
-    #certificados-img img {
-        height: 150px;
-    }
-
     div.container-conhecimentos p {
         font-size: var(--tamanho_p_pp);
     }
@@ -676,5 +709,15 @@ footer p {
     article p.descrição {
         color: gray;
         font-size: var(--tamanho_p_p);
+    }
+    
+    #currículo:hover {
+        box-shadow: 0px 0px 0px black;
+        transform: scale(1);
+    }
+
+    #certificados:hover {
+        box-shadow: 0px 0px 0px black;
+        transform: scale(1);
     }
 }
