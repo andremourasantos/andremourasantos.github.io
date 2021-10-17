@@ -26,6 +26,7 @@
 
 /*DECORATIVOS*/
     --sombra_leve: 0px 0px 5px #00000030;
+    --sombra_aparente: 0px 0px 10px #00000050;
 
 /*FONTES*/
     --títulos: "Josefin Sans", sans-serif;
@@ -259,8 +260,8 @@ div.separação > hr {
         }
 
         div.habilidades:hover {
-        transition-duration: 0ms;
-        border: 0px solid #c5c5c510;
+            transition-duration: 0ms;
+            border: 0px solid #c5c5c510;
         }
 
         div.habilidades:hover p.habilidades-texto {
@@ -290,7 +291,7 @@ div.separação > hr {
 
             #habilidade-1:hover {
                 background-color: var(--cor1_clareada_semitransparente);
-                border: 1.5px solid var(--cor1_clareada);
+                border: 2px solid var(--cor1_clareada);
             }
 
             #habilidade-1:hover p.habilidades-título{
@@ -299,7 +300,7 @@ div.separação > hr {
 
             #habilidade-2:hover {
                 background-color: var(--cor2_clareada_semitransparente);
-                border: 1.5px solid var(--cor2_clareada);
+                border: 2px solid var(--cor2_clareada);
             }
 
             #habilidade-2 p.habilidades-número {
@@ -312,7 +313,7 @@ div.separação > hr {
 
             #habilidade-3:hover {
                 background-color: var(--cor4_clareada_semitransparente);
-                border: 1.5px solid var(--cor4_clareada);
+                border: 2px solid var(--cor4_clareada);
             }
 
             #habilidade-3 p.habilidades-número {
@@ -447,17 +448,29 @@ div.separação > hr {
         margin: 40px;
         height: 450px;
         width: 300px;
-        border: 1px solid #c5c5c5;
         border-radius: 15px;
         transition-duration: 250ms;
     }
 
     .cartão:hover {
         transform: scale(1.05);
+        box-shadow: var(--sombra_aparente);
     }
 
     #email {
         background-image: url(imagens/email-photo-edited.jpeg);
+    }
+
+    #email img, #videochamada img, #linkedin img {
+        height: 100px;
+    }
+
+    #videochamada {
+        background-image: url(imagens/computer-edited.jpeg);
+    }
+
+    #linkedin {
+        background-image: url(imagens/chat-edited.jpg);
     }
 
     .cartão-ico {
@@ -474,7 +487,7 @@ div.separação > hr {
     }
 
     .cartão-txt {
-        margin-top: 40px;
+        margin-top: 20px;
     }
 
     .cartão-txt p {
@@ -495,12 +508,12 @@ div.separação > hr {
     }
 
     .cartão-hover-txt {
-        background: #c5c5c5;
+        background: #00000050;
         display: none;
         position: relative;
         border-radius: 15px 15px 14px 14px;
         padding: 20px;
-        bottom: -76px;
+        bottom: -87px;
         transition-duration: 250ms;
     }
 
@@ -516,18 +529,34 @@ div.separação > hr {
 
 /*↓ DESIGN DO RODAPÉ ↓*/
 footer {
-  background-color: white;
-  margin: 140px auto 0px auto;
-  padding: 20px 0px;
-  border-radius: 20px 20px 0px 0px;
+    background-color: white;
+    margin: 140px auto 0px auto;
+    padding: 20px 0px;
+    border-radius: 20px 20px 0px 0px;
 }
 
 footer p {
-  font-family: var(--texto_observação);
-  text-align: center;
-  margin: 0px auto 0px auto;
-  max-width: 80%;
-  font-size: 16px;
+    font-family: var(--texto_observação);
+    text-align: center;
+    margin: 0px auto 0px auto;
+    max-width: 80%;
+    font-size: 16px;
+}
+
+footer a {
+    color: var(--cor1);
+}
+
+footer a:hover {
+    color: var(--cor1_escurecida);
+}
+
+#mailto {
+    color: gray;
+}
+
+#mailto:hover {
+    color: #606060;
 }
 /*↑ DESIGN DO RODAPÉ ↑*/
 
