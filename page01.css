@@ -445,7 +445,7 @@ div.separação > hr {
         color: white;
         flex-direction: column;
         justify-content: center;
-        margin: 40px;
+        margin: 40px 40px;
         height: 450px;
         width: 300px;
         border-radius: 15px;
@@ -497,10 +497,11 @@ div.separação > hr {
     .cartão-txt a {
         text-align: center;
         display: none;
-        background: var(--cor1);
+        background: white;
         text-decoration: none;
         font-family: var(--títulos);
-        color: white;
+        color: black;
+        margin: 0px 20%;
         box-shadow: var(--sombra_leve);
         border-radius: 15px;
         padding: 15px 40px;
@@ -517,12 +518,44 @@ div.separação > hr {
         transition-duration: 250ms;
     }
 
-    .cartão:hover .cartão-hover-txt{
+    .cartão:hover .cartão-hover-txt {
         display: block;
+        animation-name: hover-cartão;
+        animation-duration: 500ms;
+        animation-fill-mode: forwards;
     }
     
+    @keyframes hover-cartão {
+        0% {
+            opacity: 0%;
+        }
+
+        100% {
+            opacity: 100%;
+        }
+    }
+
     .cartão:hover .cartão-txt > a {
-        display: inline-block;
+        display: block;
+        animation-name: hover-cartão;
+        animation-duration: 500ms;
+        animation-fill-mode: forwards;
+    }
+
+    .cartão-txt > a:hover {
+        font-weight: bold;
+    }
+
+    #email a:hover {
+        color: var(--cor1);
+    }
+
+    #videochamada a:hover {
+        color: var(--cor2);
+    }
+
+    #linkedin a:hover {
+        color: var(--cor4);
     }
 
 /*↑ DESIGN CONTEÚDO DO SITE ↑*/
@@ -561,7 +594,15 @@ footer a:hover {
 /*↑ DESIGN DO RODAPÉ ↑*/
 
 /*↓ RESPONSIVIDADE DO SITE ↓*/
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 1260px) {
+    .cartão {
+        margin: 40px 20px;
+        height: 450px;
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 1160px) {
     div.habilidades {
         width: 200px;
         padding: 40px 15px;
@@ -601,6 +642,19 @@ footer a:hover {
     #certificados {
         margin-left: 10px;
     }
+
+    .cartão {
+        margin: 40px 20px;
+        width: 250px;
+    }
+
+    #email .cartão-hover-txt, #videochamada .cartão-hover-txt {
+        bottom: -77px;
+    }
+
+    .cartão-ico img {
+        width: 80px;
+    }
 }
 
 @media screen and (max-width: 1090px) {
@@ -619,9 +673,14 @@ footer a:hover {
     #currículo {
         margin-bottom: 80px;
     }
+
+    .cartão {
+        margin: 40px 10px;
+        width: 250px;
+    }
 }
 
-@media screen and (max-width: 970px) {
+@media screen and (max-width: 976px) {
     div.habilidades {
         margin: 20px;
     }
@@ -656,9 +715,30 @@ footer a:hover {
     article div.cabeçalho {
         margin-bottom: 20px;
     }
+
+    .cartão {
+        margin: 40px 10px;
+        width: 200px;
+    }
+
+    .cartão h2 {
+        font-size: 24px;
+    }
+
+    .cartão-hover-txt {
+        bottom: -80px;
+    }
+
+    #videochamada .cartão-hover-txt {
+        bottom: -72px;
+    }
+
+    #email .cartão-hover-txt {
+        bottom: -82px;
+    }
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 855px) {
     div.habilidades {
         margin: 10px;
     }
@@ -701,6 +781,11 @@ footer a:hover {
 
     div.container-conhecimentos h2 {
         font-size: var(--tamanho_p_gg);
+    }
+
+    .cartão {
+        margin: 20px 100px;
+        width: 300px;
     }
 }
 
