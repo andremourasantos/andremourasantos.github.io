@@ -216,7 +216,7 @@ div.separação > hr {
             border-radius: 25px;
             transition-duration: 500ms;
             transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
-            border: 1px solid #c5c5c5;
+            border: 1.5px solid #c5c5c5;
         }
 
         div.habilidades p.habilidades-número {
@@ -290,7 +290,7 @@ div.separação > hr {
 
             #habilidade-1:hover {
                 background-color: var(--cor1_clareada_semitransparente);
-                border: 1px solid var(--cor1_clareada);
+                border: 1.5px solid var(--cor1_clareada);
             }
 
             #habilidade-1:hover p.habilidades-título{
@@ -299,7 +299,7 @@ div.separação > hr {
 
             #habilidade-2:hover {
                 background-color: var(--cor2_clareada_semitransparente);
-                border: 1px solid var(--cor2_clareada);
+                border: 1.5px solid var(--cor2_clareada);
             }
 
             #habilidade-2 p.habilidades-número {
@@ -312,7 +312,7 @@ div.separação > hr {
 
             #habilidade-3:hover {
                 background-color: var(--cor4_clareada_semitransparente);
-                border: 1px solid var(--cor4_clareada);
+                border: 1.5px solid var(--cor4_clareada);
             }
 
             #habilidade-3 p.habilidades-número {
@@ -326,7 +326,7 @@ div.separação > hr {
     /*↓ SEÇÃO MEUS CONHECIMENTOS ↓*/
     div.container-conhecimentos {
         display: flex;
-        margin: 40px 40px 0px 40px;
+        margin: 40px 40px 40px 40px;
     }
 
     div.container-conhecimentos p {
@@ -353,6 +353,7 @@ div.separação > hr {
 
     #currículo {
         display: flex;
+        border: 1px solid #c5c5c5;
         margin-right: 40px;
         align-items: center;
         transition-duration: 250ms;
@@ -361,7 +362,7 @@ div.separação > hr {
     }
 
     #currículo:hover {
-        box-shadow: var(--sombra_leve);
+        border: 1px solid var(--cor1_escurecida);
         transform: scale(1.05);
     }
 
@@ -394,11 +395,17 @@ div.separação > hr {
 
     #certificados {
         display: flex;
+        border: 1px solid #c5c5c5;
         align-items: center;
         margin-left: 40px;
         transition-duration: 250ms;
         border-radius: 15px;
         padding: 10px;
+    }
+
+    #certificados:hover {
+        border: 1px solid var(--cor1_escurecida);
+        transform: scale(1.05);
     }
 
     #certificados-img img {
@@ -413,11 +420,6 @@ div.separação > hr {
         box-shadow: 0px 0px 10px #00000050;
     }
 
-    #certificados:hover {
-        box-shadow: var(--sombra_leve);
-        transform: scale(1.05);
-    }
-
     #certificados-txt {
         display: flex;
         flex-direction: column;
@@ -426,6 +428,88 @@ div.separação > hr {
 
     #certificados div {
         margin: 0px 20px;
+    }
+
+    /*↓ SEÇÃO INFORMAÇÕES DE CONTATO ↓*/
+    div.container-infocontato {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        columns: 3;
+        margin: 20px 40px 0px 40px;
+    }
+
+    .cartão {
+        display: flex;
+        color: white;
+        flex-direction: column;
+        justify-content: center;
+        margin: 40px;
+        height: 450px;
+        width: 300px;
+        border: 1px solid #c5c5c5;
+        border-radius: 15px;
+        transition-duration: 250ms;
+    }
+
+    .cartão:hover {
+        transform: scale(1.05);
+    }
+
+    #email {
+        background-image: url(imagens/email-photo-edited.jpeg);
+    }
+
+    .cartão-ico {
+        display: flex;
+        justify-content: center;
+    }
+
+    .cartão-ico img {
+        width: 128px;
+    }
+
+    .cartão h2, .cartão p {
+        text-align: center;
+    }
+
+    .cartão-txt {
+        margin-top: 40px;
+    }
+
+    .cartão-txt p {
+        margin-bottom: 30px;
+    }
+
+    .cartão-txt a {
+        text-align: center;
+        display: none;
+        background: var(--cor1);
+        text-decoration: none;
+        font-family: var(--títulos);
+        color: white;
+        box-shadow: var(--sombra_leve);
+        border-radius: 15px;
+        padding: 15px 40px;
+        transition-duration: 250ms;
+    }
+
+    .cartão-hover-txt {
+        background: #c5c5c5;
+        display: none;
+        position: relative;
+        border-radius: 15px 15px 14px 14px;
+        padding: 20px;
+        bottom: -76px;
+        transition-duration: 250ms;
+    }
+
+    .cartão:hover .cartão-hover-txt{
+        display: block;
+    }
+    
+    .cartão:hover .cartão-txt > a {
+        display: inline-block;
     }
 
 /*↑ DESIGN CONTEÚDO DO SITE ↑*/
