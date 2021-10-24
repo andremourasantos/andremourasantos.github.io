@@ -25,6 +25,7 @@
     --cor4_clareada_semitransparente: #ffaacc50;
 
     --cor_borda: #d8d8d8;
+    --cor_borda_escurecida: #afafaf;
 
     /*DECORATIVOS*/
     --sombra_leve: 0px 0px 5px #00000030;
@@ -77,6 +78,7 @@ main {
             padding: 120px 20px 20px 20px;
             text-align: center;
             background: white;
+            transition-duration: 250ms;
         }
 
         div.container-cabeçalho h1 {
@@ -106,6 +108,7 @@ main {
 
         .icone-cabeçalho:active {
             background-color: var(--cor1_escurecida);
+            transform: scale(0.8);
         }
 
         #email {
@@ -181,6 +184,14 @@ main {
         mask: url(imagens/bio/youtube-logo-light.svg) no-repeat center;
     }
 
+    #site {
+        margin-top: 0px;
+    }
+
+    #vídeo {
+        margin-bottom: 0px;
+    }
+
     section.links article {
         background: white;
         border: 2px solid var(--cor_borda);
@@ -190,6 +201,12 @@ main {
         display: flex;
         flex-direction: row;
         align-items: center;
+        transition-duration: 250ms;
+    }
+
+    section.links article:hover, .container-cabeçalho:hover, .rodapé:hover {
+        border: 2px solid var(--cor_borda_escurecida);
+        transform: scale(1.01);
     }
 
     section.links article a {
@@ -211,10 +228,7 @@ main {
 
     section.links article a:active {
         background: var(--cor1_escurecida);
-    }
-    
-    #site {
-        margin-top: 0px;
+        transform: scale(0.9);
     }
 
     /*↓ RODAPÉ ↓*/
@@ -224,25 +238,25 @@ main {
             border: 2px solid var(--cor_borda);
             padding: 30px;
             text-align: center;
+            transition-duration: 250ms;
         }
 
-    /*↓ REGRAS DE MIDIA ↓*/
-
+/*↓ REGRAS DE MIDIA ↓*/
 @media screen and (max-width: 768px) {
     main {
         margin: auto;
-        width: 100%;
+        width: 85%;
         box-shadow: 0px 0px 0px;
+    }
+
+    section.links article:hover, .container-cabeçalho:hover, .rodapé:hover {
+        border: 2px solid var(--cor_borda);
+        transform: scale(1);
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
     section.links article {
-        background: white;
-        border: 2px solid var(--cor_borda);
-        border-radius: 15px;
-        padding: 20px;
-        margin: 10px auto;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -253,6 +267,7 @@ main {
         margin: 20px auto 0px auto;
         width: 50%;
         text-align: center;
+        padding: 10px 0px;
     }
 
     .div-icone {
@@ -261,5 +276,81 @@ main {
 
     section.links h1, section.links p {
         text-align: center;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    #foto {
+        transform: scale(0.9);
+    }
+
+    .container-cabeçalho div > h1 {
+        font-size: 40px;
+    }
+
+    .container-cabeçalho div > p {
+        margin-top: 5px;
+        font-size: 20px;
+    }
+
+    section.links article {
+        border: 2px solid var(--cor_borda);
+        border-radius: 15px;
+        padding: 20px;
+        margin: 10px 0px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .texto {
+        flex-grow: 3;
+    }
+
+    section.links article a {
+        margin: 20px auto 0px auto;
+        text-align: center;
+        border-color: var(--cor_borda_escurecida);
+        padding: 10px 0px;
+        flex-grow: 1;
+    }
+
+    .div-icone {
+        width: 80px;
+        height: 80px;
+        background-color: var(--cor1);
+        margin: 0px 10px 0px -5px;
+    }
+
+    .texto {
+        width: 100px;
+    }
+
+    section.links h1 {
+        text-align: left;
+        font: 16px;
+    }
+
+    section.links p {
+        text-align: justify;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    #foto {
+        transform: scale(0.8);
+    }
+
+    .container-cabeçalho div > h1 {
+        font-size: 30px;
+    }
+
+    .container-cabeçalho div > p {
+        font-size: 16px;
+    }
+
+    div.container-cabeçalho {
+        padding: 100px 20px 20px 20px;
     }
 }
