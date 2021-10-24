@@ -56,10 +56,53 @@ main {
     z-index: 1;
 }
 
+a {
+    font-family: var(--títulos);
+}
+
     /*↓ CABEÇALHO ↓*/
         section.cabeçalho {
             display: flex;
             flex-direction: column;
+        }
+
+        div.compartilhar a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            width: fit-content;
+            border: 2px solid var(--cor_borda);
+            border-radius: 15px;
+            margin: auto 0px auto auto;
+            padding: 10px;
+            color: black;
+            transition-duration: 250ms;
+        }
+
+        div.compartilhar a:hover {
+            transform: scale(1.1);
+            border-radius: 30px;
+            border: 2px solid var(--cor1_escurecida);
+            background: var(--cor1);
+            color: white;
+        }
+
+        div.compartilhar a:hover #compartilhar {
+            background: white;
+        }
+
+        div.compartilhar a:active {
+            transform: scale(0.99);
+            background: var(--cor1_escurecida);
+        }
+
+        #compartilhar {
+            background: var(--cor1);
+            height: 25px;
+            width: 25px;
+            margin: auto 10px auto auto;
+            -webkit-mask: url(imagens/compartilhar.svg);
+            mask: url(imagens/compartilhar.svg);
         }
 
         #foto {
@@ -204,7 +247,7 @@ main {
         transition-duration: 250ms;
     }
 
-    section.links article:hover, .container-cabeçalho:hover, .rodapé:hover {
+    section.links article:hover, .container-cabeçalho:hover, footer:hover {
         border: 2px solid var(--cor_borda_escurecida);
         transform: scale(1.01);
     }
@@ -249,10 +292,21 @@ main {
         box-shadow: 0px 0px 0px;
     }
 
-    section.links article:hover, .container-cabeçalho:hover, .rodapé:hover {
+    section.links article:hover, .container-cabeçalho:hover, footer:hover {
         border: 2px solid var(--cor_borda);
         transform: scale(1);
     }
+
+    div.compartilhar a > p {
+        display: none;
+    }
+
+    #compartilhar {
+        margin: auto;
+        -webkit-mask: url(imagens/compartilhar-regular.svg);
+        mask: url(imagens/compartilhar-regular.svg);
+    }
+
 }
 
 @media screen and (max-width: 600px) {
@@ -286,7 +340,12 @@ main {
     }
 
     section.cabeçalho {
-        margin-top: 30px;
+        margin-top: 20px;
+    }
+
+    div.compartilhar a {
+        background: white;
+        z-index: 1;
     }
 
     footer {
