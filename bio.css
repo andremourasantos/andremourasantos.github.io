@@ -245,7 +245,7 @@ main {
 @media screen and (max-width: 768px) {
     main {
         margin: auto;
-        width: 85%;
+        width: 80%;
         box-shadow: 0px 0px 0px;
     }
 
@@ -280,8 +280,17 @@ main {
 }
 
 @media screen and (max-width: 425px) {
+    main {
+        width: 90%;
+        padding: 0px;
+    }
+
     #foto {
         transform: scale(0.9);
+    }
+
+    .icone-cabeçalho {
+        margin: 0px 10px;
     }
 
     .container-cabeçalho div > h1 {
@@ -294,17 +303,14 @@ main {
     }
 
     section.links article {
-        border: 2px solid var(--cor_borda);
-        border-radius: 15px;
-        padding: 20px;
-        margin: 10px 0px;
         display: flex;
         flex-direction: row;
         align-items: center;
+        margin: 10px 0px;
     }
 
     .texto {
-        flex-grow: 3;
+        flex-grow: 1;
     }
 
     section.links article a {
@@ -352,5 +358,40 @@ main {
 
     div.container-cabeçalho {
         padding: 100px 20px 20px 20px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    #foto {
+        transform: scale(0.7);
+    }
+
+    div.container-cabeçalho {
+        padding: 90px 20px 20px 20px;
+    }
+
+    .icone-cabeçalho {
+        width: 35px;
+        height: 35px;
+        background-color: var(--cor1);
+    }
+    
+
+    section.links article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    div.texto {
+        width: fit-content;
+    }
+
+    div.texto h1, div.texto p {
+        text-align: center;
+    }
+
+    .div-icone {
+        margin: 0px 0px 10px 0px;
     }
 }
