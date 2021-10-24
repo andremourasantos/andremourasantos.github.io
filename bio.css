@@ -66,8 +66,10 @@ a {
             flex-direction: column;
         }
 
-        div.compartilhar a {
+        div.compartilhar button {
             display: flex;
+            font-family: var(--títulos);
+            background: white;
             align-items: center;
             text-decoration: none;
             width: fit-content;
@@ -79,20 +81,19 @@ a {
             transition-duration: 250ms;
         }
 
-        div.compartilhar a:hover {
-            transform: scale(1.1);
+        div.compartilhar button:hover {
             border-radius: 30px;
             border: 2px solid var(--cor1_escurecida);
             background: var(--cor1);
             color: white;
         }
 
-        div.compartilhar a:hover #compartilhar {
+        div.compartilhar button:hover #compartilhar {
             background: white;
         }
 
-        div.compartilhar a:active {
-            transform: scale(0.99);
+        div.compartilhar button:active {
+            transform: scale(0.9);
             background: var(--cor1_escurecida);
         }
 
@@ -297,7 +298,7 @@ a {
         transform: scale(1);
     }
 
-    div.compartilhar a > p {
+    div.compartilhar button > p {
         display: none;
     }
 
@@ -343,7 +344,7 @@ a {
         margin-top: 20px;
     }
 
-    div.compartilhar a {
+    div.compartilhar button {
         background: white;
         z-index: 1;
     }
