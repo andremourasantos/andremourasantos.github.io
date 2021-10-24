@@ -232,7 +232,7 @@ main {
     }
 
     /*↓ RODAPÉ ↓*/
-        section.rodapé {
+        footer {
             background: white;
             border-radius: 15px;
             border: 2px solid var(--cor_borda);
@@ -283,6 +283,14 @@ main {
     main {
         width: 90%;
         padding: 0px;
+    }
+
+    section.cabeçalho {
+        margin-top: 30px;
+    }
+
+    footer {
+        margin-bottom: 30px;
     }
 
     #foto {
