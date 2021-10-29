@@ -284,9 +284,24 @@ a {
             padding: 30px;
             text-align: center;
             transition-duration: 250ms;
+            text-align: justify;
+        }
+
+        footer .att {
+            color: gray;
+            text-decoration: underline solid;
+            font-size: 12px;
+            text-align: center;
         }
 
 /*↓ REGRAS DE MIDIA ↓*/
+@media screen and (min-width: 769px) {
+    section.links article div.texto {
+        margin-right: 50px;
+        text-align: justify;
+    }
+}
+
 @media screen and (max-width: 768px) {
     main {
         margin: auto;
