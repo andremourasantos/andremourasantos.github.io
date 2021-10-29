@@ -395,6 +395,7 @@ a {
 
     .texto {
         flex-grow: 1;
+        width: 100px;
     }
 
     section.links article a {
@@ -410,10 +411,6 @@ a {
         height: 80px;
         background-color: var(--cor1);
         margin: 0px 10px 0px -5px;
-    }
-
-    .texto {
-        width: 100px;
     }
 
     section.links h1 {
