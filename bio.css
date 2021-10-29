@@ -68,6 +68,7 @@ a {
 
         div.compartilhar button {
             display: flex;
+            cursor: pointer;
             font-family: var(--títulos);
             background: white;
             align-items: center;
@@ -143,11 +144,11 @@ a {
             align-content: center;
         }
 
-        .icone-cabeçalho {
+        div.icone-cabeçalho {
             margin: 0px 5px;
             width: 40px;
             height: 40px;
-            background-color: var(--cor1);
+            background-color: var(--cor_borda_escurecida);
         }
 
         .icone-cabeçalho:active {
@@ -384,7 +385,7 @@ a {
     section.links article a {
         margin: 20px auto 0px auto;
         text-align: center;
-        border-color: var(--cor_borda_escurecida);
+        border-color: var(--cor1);
         padding: 10px 0px;
         flex-grow: 1;
     }
