@@ -55,6 +55,7 @@
   margin: 0px;
   padding: 0px;
   border: 0px;
+  transition-duration: 250ms;
 }
 
 html {
@@ -214,10 +215,10 @@ div.separação > hr {
             height: 320px;
             margin: 40px;
             padding: 50px 20px;
-            border-radius: 25px;
+            border-radius: 15px;
             transition-duration: 500ms;
             transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
-            border: 1.5px solid #c5c5c5;
+            border: 2px solid #c5c5c5;
         }
 
         div.habilidades p.habilidades-número {
@@ -334,27 +335,39 @@ div.separação > hr {
         text-align: justify;
     }
 
-    div.container-conhecimentos button {
+    div.container-conhecimentos a {
         padding: 15px 40px;
         margin: 20px auto;
-        width: 80%;
-        color: white;
-        background-color: var(--cor1);
+        width: 50%;
+        border: 2px solid var(--cor1);
+        color: black;
         font-family: var(--títulos);
         font-size: 18px;
         border-radius: 15px;
         transition-duration: 250ms;
-        box-shadow: var(--sombra_leve);
+        text-align: center;
+        text-decoration: none;
     }
 
-    div.container-conhecimentos button:hover {
-        padding: 20px 45px;
+    #currículo:hover a, #certificados:hover a {
         font-weight: bold;
+        color: white;
+        background-color: var(--cor1);
+        border: 2px solid var(--cor1_escurecida);
+    }
+
+    #currículo a:hover, #certificados a:hover {
+        border-radius: 30px;
+    }
+
+    #currículo a:active, #certificados a:active {
+        background: var(--cor1_escurecida);
+        transform: scale(0.9);
     }
 
     #currículo {
         display: flex;
-        border: 1px solid #c5c5c5;
+        border: 2px solid #c5c5c5;
         margin-right: 40px;
         align-items: center;
         transition-duration: 250ms;
@@ -363,7 +376,7 @@ div.separação > hr {
     }
 
     #currículo:hover {
-        border: 1px solid var(--cor1_escurecida);
+        border: 2px solid var(--cor1_escurecida);
         transform: scale(1.05);
     }
 
@@ -396,7 +409,7 @@ div.separação > hr {
 
     #certificados {
         display: flex;
-        border: 1px solid #c5c5c5;
+        border: 2px solid #c5c5c5;
         align-items: center;
         margin-left: 40px;
         transition-duration: 250ms;
@@ -405,7 +418,7 @@ div.separação > hr {
     }
 
     #certificados:hover {
-        border: 1px solid var(--cor1_escurecida);
+        border: 2px solid var(--cor1_escurecida);
         transform: scale(1.05);
     }
 
@@ -437,126 +450,122 @@ div.separação > hr {
         flex-wrap: wrap;
         justify-content: center;
         columns: 3;
-        margin: 20px 40px 0px 40px;
+        margin: 20px 0px 0px 0px;
     }
 
-    .cartão {
+    .cartão-contato {
         display: flex;
-        color: white;
         flex-direction: column;
-        justify-content: center;
-        margin: 40px 40px;
-        height: 450px;
-        width: 300px;
+        justify-items: center;
+        align-items: center;
+        width: 250px;
+        height: 320px;
+        margin: 40px;
+        padding: 50px 20px;
+        border: 2px solid #c5c5c5;
         border-radius: 15px;
-        transition-duration: 250ms;
+        transition: 250ms;
+        text-align: center;
     }
 
-    .cartão:hover {
-        transform: scale(1.05);
-        box-shadow: var(--sombra_aparente);
+    .cartão-contato:hover {
+        border: 2px solid var(--cor1);
+        transform: scale(1.1);
+    }
+
+    .cartão-ícone {
+        height: 100px;
+        width: 100px;
+        margin: 0px auto 20px auto;
+    }
+
+    .cartão-contato:hover .cartão-ícone {
+        transform: scale(1.2) rotate(-5deg);
     }
 
     #email {
-        background-image: url(imagens/email-photo-edited.jpeg);
+        background-color: var(--cor1);
+        -webkit-mask: url(imagens/bio/email.svg) no-repeat center;
+        mask: url(imagens/bio/email.svg) no-repeat center;
     }
 
-    #email img, #videochamada img, #linkedin img {
-        height: 100px;
-    }
-
-    #videochamada {
-        background-image: url(imagens/computer-edited.jpeg);
+    #telefone {
+        background-color: var(--cor2);
+        -webkit-mask: url(imagens/bio/telefone.svg) no-repeat center;
+        mask: url(imagens/bio/telefone.svg) no-repeat center;
     }
 
     #linkedin {
-        background-image: url(imagens/chat-edited.jpg);
+        background-color: var(--cor4);
+        -webkit-mask: url(imagens/bio/linkedin.svg) no-repeat center;
+        mask: url(imagens/bio/linkedin.svg) no-repeat center;
     }
 
-    .cartão-ico {
-        display: flex;
-        justify-content: center;
-    }
-
-    .cartão-ico img {
-        width: 128px;
-    }
-
-    .cartão h2, .cartão p {
-        text-align: center;
-    }
-
-    .cartão-txt {
-        margin-top: 20px;
-    }
-
-    .cartão-txt p {
-        margin-bottom: 30px;
-    }
-
-    .cartão-txt a {
-        text-align: center;
-        display: none;
-        background: white;
+    .cartão-contato a {
+        padding: 15px 20px;
+        width: 50%;
+        border: 2px solid var(--cor1);
+        border-radius: 10px;
+        color: black;
         text-decoration: none;
         font-family: var(--títulos);
-        color: black;
-        margin: 0px 20%;
-        box-shadow: var(--sombra_leve);
-        border-radius: 15px;
-        padding: 15px 40px;
-        transition-duration: 250ms;
+        transition: 250ms;
+        text-align: center;
     }
 
-    .cartão-hover-txt {
-        background: #00000050;
-        display: none;
-        position: relative;
-        border-radius: 15px 15px 14px 14px;
-        padding: 20px;
-        bottom: -87px;
-        transition-duration: 250ms;
-    }
-
-    .cartão:hover .cartão-hover-txt {
-        display: block;
-        animation-name: hover-cartão;
-        animation-duration: 500ms;
-        animation-fill-mode: forwards;
-    }
-    
-    @keyframes hover-cartão {
-        0% {
-            opacity: 0%;
-        }
-
-        100% {
-            opacity: 100%;
-        }
-    }
-
-    .cartão:hover .cartão-txt > a {
-        display: block;
-        animation-name: hover-cartão;
-        animation-duration: 500ms;
-        animation-fill-mode: forwards;
-    }
-
-    .cartão-txt > a:hover {
+    .cartão-contato:hover a {
+        border: 2px solid var(--cor1_escurecida);
+        background: var(--cor1);
+        color: white;
         font-weight: bold;
     }
 
-    #email a:hover {
-        color: var(--cor1);
+    .cartão-contato a:hover {
+        border-radius: 30px;
     }
 
-    #videochamada a:hover {
-        color: var(--cor2);
+    .cartão-contato a:active {
+        background: var(--cor1_escurecida);
+        transform: scale(0.9);
     }
 
-    #linkedin a:hover {
-        color: var(--cor4);
+    .cartão-contato h2 {
+        margin-bottom: 10px;
     }
+
+    .cartão-contato p {
+        margin-bottom: 40px;
+    }
+
+    .contato-info {
+        display: none;
+        margin: auto;
+        text-align: center;
+        position: relative;
+        border-radius: 15px;
+        width: 290px;
+        right: 22px;
+        bottom: -52px;
+        padding: 10px 0px;
+        background: #c5c5c550;
+        border: 2px solid #c5c5c5;
+    }
+
+    .contato-info p {
+        width: 80%;
+        margin: auto;
+    }
+
+    .cartão-contato:hover .contato-info {
+        display: block;
+        animation-name: contato-info;
+        animation-duration: 250ms;
+    }
+
+        @keyframes contato-info {
+            0% {bottom: -40px; display: block; opacity: 0%;}
+            100% {transform: translateY(0); opacity: 100%;}
+        }
 
 /*↑ DESIGN CONTEÚDO DO SITE ↑*/
 
@@ -594,14 +603,6 @@ footer a:hover {
 /*↑ DESIGN DO RODAPÉ ↑*/
 
 /*↓ RESPONSIVIDADE DO SITE ↓*/
-@media screen and (max-width: 1260px) {
-    .cartão {
-        margin: 40px 20px;
-        height: 450px;
-        width: 300px;
-    }
-}
-
 @media screen and (max-width: 1160px) {
     div.habilidades {
         width: 200px;
@@ -655,6 +656,25 @@ footer a:hover {
     .cartão-ico img {
         width: 80px;
     }
+
+    .cartão-contato {
+        width: 200px;
+        padding: 40px 15px;
+    }
+
+    .contato-info {
+        width: 230px;
+        right: 17px;
+        bottom: -42px;
+        padding: 10px 0px;
+        background: #c5c5c550;
+        border: 2px solid #c5c5c5;
+    }
+
+    .cartão-contato h2 {
+        font-size: 28px;
+    }
+
 }
 
 @media screen and (max-width: 1090px) {
@@ -672,6 +692,11 @@ footer a:hover {
 
     #currículo {
         margin-bottom: 80px;
+        margin-right: 0px
+    }
+
+    #certificados {
+        margin-left: 0px;
     }
 
     .cartão {
@@ -683,6 +708,10 @@ footer a:hover {
 @media screen and (max-width: 976px) {
     div.habilidades {
         margin: 20px;
+    }
+
+    .cartão-contato {
+        margin: 40px 20px;
     }
 }
 
@@ -758,6 +787,10 @@ footer a:hover {
         line-height: 22px;
         font-size: 14px;
     }
+
+    .cartão-contato {
+        margin: 40px 10px;
+    }
 }
 
 /*AJUSTE DE FONTE*/
@@ -783,9 +816,32 @@ footer a:hover {
         font-size: var(--tamanho_p_gg);
     }
 
-    .cartão {
-        margin: 20px 100px;
-        width: 300px;
+    .cartão-contato {
+        margin: 10px 100px;
+    }
+
+    .cartão-contato:hover {
+        transform: scale(1);
+    }
+
+    .contato-info {
+        display: block;
+    }
+
+    .cartão-contato:hover .contato-info {
+        animation-duration: 0ms;
+    }
+
+    .cartão-contato h2 {
+        font-size: 22px;
+    }
+
+    .cartão-contato p {
+        font-size: 14px;
+    }
+
+    .contato-info {
+        bottom: -45px;
     }
 }
 
@@ -877,6 +933,10 @@ footer a:hover {
 
     div.container-conhecimentos h2 {
         font-size: 22px;
+    }
+
+    .cartão-contato {
+        margin: 10px 0px;
     }
 }
 
