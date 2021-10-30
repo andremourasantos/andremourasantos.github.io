@@ -841,7 +841,11 @@ footer a:hover {
     }
 
     .contato-info {
-        bottom: -45px;
+        bottom: -44px;
+    }
+
+    .cartão-contato:hover .cartão-ícone {
+        transform: scale(1) rotate(0deg);
     }
 }
 
