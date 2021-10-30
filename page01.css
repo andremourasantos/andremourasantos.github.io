@@ -445,12 +445,34 @@ div.separação > hr {
     }
 
     /*↓ SEÇÃO INFORMAÇÕES DE CONTATO ↓*/
+    #contato-horário, #contato-horário-2 {
+        background-color: #c5c5c550;
+        border-radius: 10px;
+        width: fit-content;
+        margin: 40px auto 0px auto;
+        padding: 10px 40px;
+    }
+
+    #contato-horário a, #contato-horário-2 a {
+        color: black;
+        text-decoration: underline solid black 1px;
+    }
+
+    #contato-horário a::after, #contato-horário-2 a::after {
+        content: "↗";
+    }
+
+    #contato-horário-2 {
+        display: none;
+    }
+
     div.container-infocontato {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         columns: 3;
         margin: 20px 0px 0px 0px;
+        max-width: 1200px;
     }
 
     .cartão-contato {
@@ -816,6 +838,14 @@ footer a:hover {
         font-size: var(--tamanho_p_gg);
     }
 
+    #contato-horário-2 {
+        display: block;
+    }
+
+    #contato-horário {
+        display: none;
+    }
+
     .cartão-contato {
         margin: 10px 100px;
     }
@@ -842,7 +872,7 @@ footer a:hover {
     }
 
     .contato-info {
-        bottom: -45px;
+        bottom: -42px;
     }
 
     .cartão-contato:hover .cartão-ícone {
@@ -982,5 +1012,9 @@ footer a:hover {
     #certificados:hover {
         box-shadow: 0px 0px 0px black;
         transform: scale(1);
+    }
+
+    #contato-horário {
+        padding: 10px 20px;
     }
 }
