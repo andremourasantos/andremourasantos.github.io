@@ -199,6 +199,39 @@ div.separação > hr {
     border-radius: 20px;
 }
 
+/*↓ MAIS INFORMAÇÃO ↓*/
+
+div.informação {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color: #c5c5c550;
+    border-radius: 10px;
+    width: fit-content;
+    margin: 40px auto 0px auto;
+    padding: 10px 20px;
+}
+
+    div.informação-ícone {
+        height: 25px;
+        width: 25px;
+        margin: auto;
+        background-color: #808080;
+        -webkit-mask: url(imagens/bio/info-fill.svg) no-repeat center;
+        mask: url(imagens/bio/info-fill.svg) no-repeat center;
+    }
+    
+    div.informação a {
+        color: black;
+        text-decoration: underline solid black 1px;
+    }
+
+    div.informação a::after {
+        content: "↗"
+    }
+
     /*↓ SEÇÃO MINHAS HABILIDADES ↓*/
         div.container-habilidades {
             display: flex;
@@ -445,27 +478,6 @@ div.separação > hr {
     }
 
     /*↓ SEÇÃO INFORMAÇÕES DE CONTATO ↓*/
-    #contato-horário, #contato-horário-2 {
-        background-color: #c5c5c550;
-        border-radius: 10px;
-        width: fit-content;
-        margin: 40px auto 0px auto;
-        padding: 10px 40px;
-    }
-
-    #contato-horário a, #contato-horário-2 a {
-        color: black;
-        text-decoration: underline solid black 1px;
-    }
-
-    #contato-horário a::after, #contato-horário-2 a::after {
-        content: "↗";
-    }
-
-    #contato-horário-2 {
-        display: none;
-    }
-
     div.container-infocontato {
         display: flex;
         flex-wrap: wrap;
@@ -502,7 +514,7 @@ div.separação > hr {
     }
 
     .cartão-contato:hover .cartão-ícone {
-        transform: scale(1.2) rotate(-5deg);
+        transform: scale(1.5) rotate(-5deg);
     }
 
     #email {
@@ -838,14 +850,6 @@ footer a:hover {
         font-size: var(--tamanho_p_gg);
     }
 
-    #contato-horário-2 {
-        display: block;
-    }
-
-    #contato-horário {
-        display: none;
-    }
-
     .cartão-contato {
         margin: 10px 100px;
     }
@@ -921,6 +925,10 @@ footer a:hover {
 
 /*AJUSTE DE FONTE*/
 @media screen and (max-width: 425px) {
+    div.informação {
+        width: 200px;
+    }
+
     #cabeçalho--texto-foto img {
         margin: 0px 15px 0px 15px;
         width: 50px;
@@ -1012,9 +1020,5 @@ footer a:hover {
     #certificados:hover {
         box-shadow: 0px 0px 0px black;
         transform: scale(1);
-    }
-
-    #contato-horário {
-        padding: 10px 20px;
     }
 }
