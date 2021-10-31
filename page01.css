@@ -200,7 +200,6 @@ div.separação > hr {
 }
 
 /*↓ MAIS INFORMAÇÃO ↓*/
-
 div.informação {
     display: flex;
     align-items: center;
@@ -519,27 +518,27 @@ div.informação {
 
     #email {
         background-color: var(--cor1);
-        -webkit-mask: url(imagens/bio/email.svg) no-repeat center;
-        mask: url(imagens/bio/email.svg) no-repeat center;
+        -webkit-mask: url(imagens/email.svg) no-repeat center;
+        mask: url(imagens/email.svg) no-repeat center;
     }
 
     #telefone {
         background-color: var(--cor2);
-        -webkit-mask: url(imagens/bio/telefone.svg) no-repeat center;
-        mask: url(imagens/bio/telefone.svg) no-repeat center;
+        -webkit-mask: url(imagens/telefone.svg) no-repeat center;
+        mask: url(imagens/telefone.svg) no-repeat center;
     }
 
     #linkedin {
         background-color: var(--cor4);
-        -webkit-mask: url(imagens/bio/linkedin.svg) no-repeat center;
-        mask: url(imagens/bio/linkedin.svg) no-repeat center;
+        -webkit-mask: url(imagens/linkedin.svg) no-repeat center;
+        mask: url(imagens/linkedin.svg) no-repeat center;
     }
 
     .cartão-contato a {
         padding: 15px 20px;
         width: 50%;
         border: 2px solid var(--cor1);
-        border-radius: 10px;
+        border-radius: 15px;
         color: black;
         text-decoration: none;
         font-family: var(--títulos);
@@ -576,13 +575,12 @@ div.informação {
         margin: auto;
         text-align: center;
         position: relative;
-        border-radius: 15px;
+        border-radius: 13px;
         width: 290px;
-        right: 22px;
-        bottom: -52px;
+        right: 20px;
+        bottom: -50px;
         padding: 10px 0px;
         background: #c5c5c550;
-        border: 2px solid #c5c5c5;
     }
 
     .contato-info p {
@@ -593,12 +591,30 @@ div.informação {
     .cartão-contato:hover .contato-info {
         display: block;
         animation-name: contato-info;
-        animation-duration: 250ms;
+        animation-timing-function: linear;
+        animation-duration: 150ms;
     }
 
         @keyframes contato-info {
-            0% {bottom: -40px; display: block; opacity: 0%;}
-            100% {transform: translateY(0); opacity: 100%;}
+            0% {transform: translateY(20px) scaleY(0); display: block; opacity: 0%;}
+            25% {transform: translateY(15px) scaleY(0.25); opacity: 25%;}
+            50% {transform: translateY(10px) scaleY(0.5); opacity: 50%;}
+            75% {transform: translateY(5px) scaleY(0.75); opacity: 75%;}
+            100% {transform: translateY(0px) scaleY(1); opacity: 100%;}
+        }
+    
+    .cartão-contato:hover .contato-info p {
+        animation-name: contato-info-p;
+        animation-timing-function: linear;
+        animation-duration: 500ms;
+    }
+
+        @keyframes contato-info-p {
+            0% {opacity: 25%}
+            25% {opacity: 25%;}
+            50% {opacity: 50%;}
+            75% {opacity: 75%;}
+            100% {opacity: 100%;}
         }
 
 /*↑ DESIGN CONTEÚDO DO SITE ↑*/
@@ -698,11 +714,10 @@ footer a:hover {
 
     .contato-info {
         width: 230px;
-        right: 17px;
-        bottom: -42px;
+        right: 15px;
+        bottom: -40px;
         padding: 10px 0px;
         background: #c5c5c550;
-        border: 2px solid #c5c5c5;
     }
 
     .cartão-contato h2 {
@@ -822,9 +837,6 @@ footer a:hover {
         font-size: 14px;
     }
 
-    .cartão-contato {
-        margin: 40px 10px;
-    }
 }
 
 /*AJUSTE DE FONTE*/
@@ -850,15 +862,6 @@ footer a:hover {
         font-size: var(--tamanho_p_gg);
     }
 
-    .cartão-contato {
-        margin: 10px 100px;
-    }
-
-    .cartão-contato:hover {
-        transform: scale(1);
-        border-bottom-color: transparent;
-    }
-
     .contato-info {
         display: block;
     }
@@ -875,12 +878,16 @@ footer a:hover {
         font-size: 14px;
     }
 
-    .contato-info {
-        bottom: -42px;
+    .cartão-contato .cartão-ícone {
+        transform: scale(1.2);
     }
 
     .cartão-contato:hover .cartão-ícone {
-        transform: scale(1) rotate(0deg);
+        transform: scale(1.4) rotate(-5deg);
+    }
+
+    .cartão-contato:hover .contato-info p {
+        animation-duration: 0s;
     }
 }
 
@@ -920,6 +927,10 @@ footer a:hover {
 
     #certificados-img {
         padding-bottom: 40px;
+    }
+
+    .cartão-contato {
+        margin: 20px 20px;
     }
 }
 
@@ -979,7 +990,7 @@ footer a:hover {
     }
 
     .cartão-contato {
-        margin: 10px 0px;
+        margin: 20px 0px;
     }
 }
 
