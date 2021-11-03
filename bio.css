@@ -144,54 +144,32 @@ a {
             align-content: center;
         }
 
-        div.icone-cabeçalho {
-            margin: 0px 5px;
+        div.ícone-cabeçalho img {
             width: 40px;
             height: 40px;
-            background-color: var(--cor_borda_escurecida);
+            margin: 0px 5px;
+            transition-duration: 250ms;
         }
 
-        .icone-cabeçalho:active {
-            background-color: var(--cor1_escurecida);
+        div.ícone-cabeçalho img:hover {
+            transform: scale(1.1);
+        }
+
+        div.ícone-cabeçalho img:active {
             transform: scale(0.8);
-        }
-
-        #email {
-            -webkit-mask: url(imagens/bio/email.svg) no-repeat center;
-            mask: url(imagens/bio/email.svg) no-repeat center;
-            transition-duration: 250ms;
-        }
-
-        #email:hover {
-            -webkit-mask: url(imagens/bio/email-cheio.svg) no-repeat center;
-            mask: url(imagens/bio/email-cheio.svg) no-repeat center;
-        }
-
-        #telefone {
-            -webkit-mask: url(imagens/bio/telefone.svg) no-repeat center;
-            mask: url(imagens/bio/telefone.svg) no-repeat center;
-            transition-duration: 250ms;
-        }
-
-        #telefone:hover {
-            -webkit-mask: url(imagens/bio/telefone-cheio.svg) no-repeat center;
-            mask: url(imagens/bio/telefone-cheio.svg) no-repeat center;
-        }
-
-        #linkedin {
-            -webkit-mask: url(imagens/bio/linkedin.svg) no-repeat center;
-            mask: url(imagens/bio/linkedin.svg) no-repeat center;
-            transition-duration: 250ms;
-        }
-
-        #linkedin:hover {
-            -webkit-mask: url(imagens/bio/linkedin-cheio.svg) no-repeat center;
-            mask: url(imagens/bio/linkedin-cheio.svg) no-repeat center;
         }
 
     /*↓ SEPRAÇÃO ↓*/
         section.separação {
             margin: 40px auto;
+        }
+
+        #antes-links {
+            margin-bottom: 30px;
+        }
+
+        #pós-links {
+            margin-top: 30px;
         }
 
         section.separação hr {
@@ -205,36 +183,13 @@ a {
     section.links {
         display: flex;
         flex-direction: column;
+        width: 100%;
     }
-    
-    .div-icone {
-        width: 180px;
+
+    div.links-ícones img {
+        width: 80px;
         height: 80px;
-        background: var(--cor1);
         margin-right: 20px;
-    }
-    
-    #icone-site {
-        -webkit-mask: url(imagens/bio/globo.svg) no-repeat center;
-        mask: url(imagens/bio/globo.svg) no-repeat center;
-    }
-
-    #icone-cc {
-        -webkit-mask: url(imagens/bio/graduação.svg) no-repeat center;
-        mask: url(imagens/bio/graduação.svg) no-repeat center;
-    }
-
-    #icone-video {
-        -webkit-mask: url(imagens/bio/youtube.svg) no-repeat center;
-        mask: url(imagens/bio/youtube.svg) no-repeat center;
-    }
-
-    #site {
-        margin-top: 0px;
-    }
-
-    #vídeo {
-        margin-bottom: 0px;
     }
 
     section.links article {
@@ -249,9 +204,14 @@ a {
         transition-duration: 250ms;
     }
 
-    section.links article:hover, .container-cabeçalho:hover, footer:hover {
+    .hover:hover {
         border: 2px solid var(--cor_borda_escurecida);
         transform: scale(1.01);
+    }
+
+    div.texto {
+        margin-right: 50px;
+        text-align: justify;
     }
 
     section.links article a {
@@ -278,22 +238,26 @@ a {
 
     /*↓ RODAPÉ ↓*/
         footer {
-            background: white;
-            border-radius: 15px;
-            border: 2px solid var(--cor_borda);
-            padding: 30px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            background: #c5c5c550;
+            border-radius: 10px;
+            width: fit-content;
+            margin: auto;
+            padding: 10px 20px;
             text-align: center;
-            transition-duration: 250ms;
         }
 
-/*↓ REGRAS DE MIDIA ↓*/
-@media screen and (min-width: 769px) {
-    section.links article div.texto {
-        margin-right: 50px;
-        text-align: justify;
-    }
-}
+        footer img {
+            height: 25px;
+            width: 25px;
+            margin: 0px 10px 0px 0px;
+        }
+    /*↑ RODAPÉ ↑*/
 
+/*↓ REGRAS DE RESPONSIVIDADE ↓*/
 @media screen and (max-width: 768px) {
     main {
         margin: auto;
@@ -301,7 +265,7 @@ a {
         box-shadow: 0px 0px 0px;
     }
 
-    section.links article:hover, .container-cabeçalho:hover, footer:hover {
+    .hover:hover {
         border: 2px solid var(--cor_borda);
         transform: scale(1);
     }
@@ -316,6 +280,19 @@ a {
         mask: url(imagens/compartilhar-regular.svg);
     }
 
+    div.texto {
+        margin-right: 25px;
+        text-align: justify;
+    }
+
+    footer {
+            display: flex;
+            flex-direction: column;
+    }
+
+    footer img {
+        margin: 0px 0px 10px 0px;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -323,7 +300,17 @@ a {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        align-items: center;
+    }
+
+    div.links-ícones img {
+        width: 100px;
+        height: 100px;
+        margin: 0px 0px 10px 0px;
+    }
+
+    div.texto {
+        margin-right: 0px;
+        text-align: center;
     }
 
     section.links article a {
@@ -331,14 +318,6 @@ a {
         width: 50%;
         text-align: center;
         padding: 10px 0px;
-    }
-
-    .div-icone {
-        margin: 0px auto 20px auto;
-    }
-
-    section.links h1, section.links p {
-        text-align: center;
     }
 }
 
@@ -385,7 +364,7 @@ a {
         margin: 10px 0px;
     }
 
-    .texto {
+    div.texto {
         flex-grow: 1;
         width: 100px;
     }
@@ -398,11 +377,10 @@ a {
         flex-grow: 1;
     }
 
-    .div-icone {
+    div.links-ícones img {
         width: 80px;
         height: 80px;
-        background-color: var(--cor1);
-        margin: 0px 10px 0px -5px;
+        margin: 0px 15px 0px 0px;
     }
 
     section.links h1 {
@@ -449,7 +427,6 @@ a {
         background-color: var(--cor1);
     }
     
-
     section.links article {
         display: flex;
         flex-direction: column;
@@ -464,7 +441,9 @@ a {
         text-align: center;
     }
 
-    .div-icone {
-        margin: 0px 0px 10px 0px;
+    div.links-ícones img {
+        width: 100px;
+        height: 100px;
+        margin: 0px;
     }
 }
