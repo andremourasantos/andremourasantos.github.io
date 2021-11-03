@@ -286,13 +286,6 @@ a {
             transition-duration: 250ms;
         }
 
-        footer .att {
-            color: gray;
-            text-decoration: underline solid;
-            font-size: 12px;
-            text-align: center;
-        }
-
 /*↓ REGRAS DE MIDIA ↓*/
 @media screen and (min-width: 769px) {
     section.links article div.texto {
@@ -328,7 +321,7 @@ a {
 @media screen and (max-width: 600px) {
     section.links article {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         flex-wrap: wrap;
         align-items: center;
     }
