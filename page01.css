@@ -231,6 +231,59 @@ div.informação {
         content: "↗"
     }
 
+    /*↓ SEÇÃO APRESENTAÇÃO ↓*/
+        .apresentação-container {
+            display: flex;
+            flex-wrap: nowrap;
+            margin-bottom: 40px;
+            align-items: center;
+            justify-content: space-evenly;
+            margin-top: 40px;
+            justify-content: center;
+            padding-left: 20px;
+        }
+
+        .apresentação-container > * {
+            flex-basis: 100%;
+            padding: 10px 40px;
+        }
+
+        #video-iframe {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 57%; 
+        }
+
+        #apresentação-video iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+            transform: scale(1.1);
+            box-shadow: var(--sombra_leve);
+        }
+
+        #apresentação > article h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        #apresentação-foto {
+            display: none;
+        }
+
+        #apresentação-info p {
+            line-height: 1.5em;
+            text-align: justify;
+        }
+
+        #apresentação-info a {
+            display: none;
+        }
+
     /*↓ SEÇÃO MINHAS HABILIDADES ↓*/
         div.container-habilidades {
             display: flex;
@@ -842,7 +895,24 @@ footer a:hover {
 /*AJUSTE DE FONTE*/
 @media screen and (max-width: 803px) {
     article div.cabeçalho > h2 {
-        font-size: 32px;
+        font-size: 48px;
+    }
+
+    .apresentação-container {
+        flex-wrap: wrap;
+        padding: 0px;
+        margin-top: 0px;
+    }
+
+    #apresentação-video iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+        transform: scale(0.9);
+        box-shadow: var(--sombra_leve);
     }
 
     div.habilidades {
@@ -892,6 +962,14 @@ footer a:hover {
 }
 
 @media screen and (max-width: 600px) {
+    article div.cabeçalho > h2 {
+        font-size: 36px;
+    }
+
+    article div.cabeçalho > p {
+        font-size: 16px;
+    }
+
     div.container-conhecimentos button {
         width: 100%;
         margin: 20px auto;
@@ -957,6 +1035,58 @@ footer a:hover {
 
     header nav > a:hover {
         padding: 10px;
+    }
+
+    #video-iframe {
+        display: none;
+    }
+
+    #apresentação-foto {
+        display: flex;
+    }
+
+    #apresentação-foto img {
+        margin: -10px auto 0px auto;
+        height: 250px;
+    }
+
+    #apresentação-info {
+        font-size: 16px;
+        line-height: 1em;
+    }
+
+    #apresentação-info p {
+        text-align: center;
+    }
+
+    #apresentação-info .somente-pc-tablet {
+        display: none;
+    }
+
+    #apresentação-info a {
+        display: block;
+        margin: 20px auto 0px auto;
+        padding: 20px 20px;
+        width: 60%;
+        border: 2px solid var(--cor1);
+        border-radius: 15px;
+        text-decoration: none;
+        font-family: var(--títulos);
+        color: black;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    #apresentação-info a:hover {
+        background-color: var(--cor1);
+        border: 2px solid var(--cor1_escurecida);
+        border-radius: 30px;
+        color: white;
+    }
+
+    #apresentação-info a:active {
+        background-color: var(--cor1_escurecida);
+        transform: scale(0.9);
     }
 
     div.habilidades {
