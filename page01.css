@@ -1179,6 +1179,10 @@ footer a:hover {
         display: none;
     }
 
+    #video-iframe iframe {
+        display: none;
+    }
+
     #apresentação-foto {
         display: flex;
     }
