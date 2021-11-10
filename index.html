@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    <script defer>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
@@ -17,6 +17,10 @@
     <meta property="og:url" content="www.andremourasantos.com">
     <meta property="og:image" content="https://res.cloudinary.com/linkly/image/upload/v1636235984/pekxckdflraapuhjqx2l.jpg">
 
+    <!--PERFOMANCE TAGS-->
+    <link rel="preload" href="fontes/JosefinSans-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="fontes/GlacialIndifference-Regular.otf" as="font" type="font/otf" crossorigin>
+
     <!-- OUTRAS TAGS -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,6 +30,7 @@
     <meta name="theme-color" content="#8F71FF"/>
     
     <!-- LINKS -->
+    <link rel="stylesheet" href="universal.css">
     <link rel="stylesheet" href="page01.css">
     <link rel="shortcut icon" href="/imagens/favicon.ico" type="image/x-icon">
 
@@ -43,7 +48,7 @@
             <h1>André Moura Santos</h1>
             <p>Conheça-me profissionalmente.</p>
         </div>
-        <a href="#cartão-contato-linkedin"><img loading="lazy" id="apresentação-linkedin" src="imagens/profissional-cabeçalho.webp" alt="Ícone do LinkedIn em branco."></a>
+        <a href="#cartão-contato-linkedin"><img loading="lazy" id="cabeçalho-linkedin-icone" src="imagens/profissional-cabeçalho.webp" alt="Ícone do LinkedIn em branco."></a>
     </div>
     <nav>
         <a href="#apresentação">Início</a>
@@ -61,10 +66,10 @@
         </div>
             <div class="apresentação-container">
                 <div id="apresentação-video" class="apresentação-video">
-                    <div loading="eager" id="video-iframe"><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/V_UE0XM3TX0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                    <div id="video-iframe"><iframe defer  width="560" height="315" src="https://www.youtube-nocookie.com/embed/V_UE0XM3TX0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
                 </div>
                 <div id="apresentação-foto">
-                    <img loading="lazy" src="imagens/foto-perfil.webp" alt="Foto de André Moura Santos.">
+                    <img src="imagens/foto-perfil.webp" alt="Foto de André Moura Santos.">
                 </div>
                 <div id="apresentação-info">
                     <h2 class="somente-pc-tablet">Sobre mim</h2>
@@ -157,7 +162,7 @@
     <hr>
 </div>
 
-<section loading="lazy" id="contato">
+<section id="contato">
     <article>
         <div class="cabeçalho">
             <h2>Informações de contato</h2>
@@ -173,7 +178,7 @@
                 <div class="cartão-ícone" id="email"></div>
                 <h2>Email</h2>
                 <p>Envie um email para começar a conversar.</p>
-                <a href="#">Enviar</a>
+                <a href="contato.html">Enviar</a>
                 <div class="contato-info">
                     <p>Todos os dias<br>9h às 18h</p>
                 </div>
@@ -182,7 +187,7 @@
                 <div class="cartão-ícone" id="telefone"></div>
                 <h2>Chamada</h2>
                 <p>Agende uma chama ou videochamada.</p>
-                <a href="#">Agendar</a>
+                <a href="contato.html">Agendar</a>
                 <div class="contato-info">
                     <p>Segunda à Sexta<br>9h às 18h</p>
                 </div>
@@ -200,7 +205,7 @@
     </article>
 </section>
 </main>
-<footer loading="lazy">
+<footer>
     <p>Site em desenvolvimento, criado por <a href="https://andremourasantos.com">André Moura Santos</a>. Ícones de <a href="https://phosphoricons.com/">Phosphor Icons</a>.</p>
     <p><a class="footer-email" href="mailto:contato@andremourasantos.com" id="mailto">contato@andremourasantos.com</a></p>
     <p style="margin-bottom: 0px;"><em>Última atualização em Novembro de 2021.</em></p>

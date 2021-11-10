@@ -5,21 +5,25 @@
 @font-face {
     font-family: "Josefin Sans";
     src: url(fontes/JosefinSans-VariableFont_wght.ttf);
+    font-display: swap;
 }
 
 @font-face {
     font-family: "Glacial-Regular";
     src: url(fontes/GlacialIndifference-Regular.otf);
+    font-display: swap;
 }
 
 @font-face {
     font-family: "Glacial-Bold";
     src: url(fontes/GlacialIndifference-Bold.otf);
+    font-display: swap;
 }
 
 @font-face {
     font-family: "Glacial-Italico";
     src: url(fontes/GlacialIndifference-Italic.otf);
+    font-display: swap;
 }
 
 :root {
@@ -155,6 +159,7 @@ header nav > a:active {
 #apresentação-foto-perfil {
     margin: 15px 30px;
     width: 80px;
+    height: 80px;
     top: 15px;
     left: 30px;
     border-color: var(--cor1);
@@ -172,7 +177,7 @@ header nav > a:active {
     display: none;
 }
 
-#apresentação-linkedin {
+#cabeçalho-linkedin-icone {
     display: none;
 }
 
@@ -513,6 +518,7 @@ div.informação a::after {
     #currículo-img img {
         border-radius: 15px;
         width: 200px;
+        height: 300px;
         box-shadow: var(--sombra_leve);
         transition-duration: 250ms;
     }
@@ -550,6 +556,8 @@ div.informação a::after {
         border-radius: 15px;
         box-shadow: var(--sombra_leve);
         transition-duration: 250ms;
+        height: 300px;
+        width: 200px;
     }
 
     #certificados:hover img {
@@ -856,9 +864,11 @@ footer a:hover {
     }
 }
 
+/*AJUSTE DE FONTE*/
 @media screen and (max-width: 930px) {
     #apresentação-foto-perfil {
         width: 50px;
+        height: 50px;
         margin: 0px 10px 0px 0px;
     }
 
@@ -951,6 +961,7 @@ footer a:hover {
     #apresentação-foto-perfil {
         margin-right: 20px;
         width: 70px;
+        height: 70px;
     }
 
     #cabeçalho--texto-foto h1, #cabeçalho--texto-foto p {
@@ -1072,6 +1083,7 @@ footer a:hover {
 @media screen and (max-width: 600px) {
     #apresentação-foto-perfil {
         width: 60px;
+        height: 60px;
         border: none;
     }
 
@@ -1144,13 +1156,14 @@ footer a:hover {
         display: none;
     }
 
-    #apresentação-linkedin {
+    #cabeçalho-linkedin-icone {
         display: block;
         width: 55px;
+        height: 55px;
         margin-left: 20px;
     }
 
-    #apresentação-linkedin:active {
+    #cabeçalho-linkedin-icone:active {
         transform: scale(0.9);
     }
 
@@ -1173,6 +1186,7 @@ footer a:hover {
     #apresentação-foto img {
         margin: auto;
         height: 250px;
+        width: 250px;
         box-shadow: var(--sombra_leve);
         border-radius: 50%;
         border: 5px solid var(--cor1);
@@ -1250,8 +1264,9 @@ footer a:hover {
 
 /*AJUSTE DE FONTE*/
 @media screen and (max-width: 350px) {
-    #apresentação-linkedin {
+    #cabeçalho-linkedin-icone {
         width: 50px;
+        height: 50px;
         margin-left: 10px;
     }
 
@@ -1274,6 +1289,7 @@ footer a:hover {
      #apresentação-foto img {
         margin: auto;
         height: 220px;
+        width: 220px;
     }
 
     #apresentação-info p {
