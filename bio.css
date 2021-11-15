@@ -1,49 +1,24 @@
 @charset "UTF-8";
 
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-
-:root {
-    /*CORES*/
-    --cor1: #8F71FF;
-    --cor1_escurecida: #5123ff;
-    --cor1_clareada: #cbbeff;
-    --cor1_clareada_semitransparente: #cbbeff50;
-
-    --cor2: #82ACFF;
-    --cor2_escurecida: #3478ff; 
-    --cor2_clareada: #cfdfff;
-    --cor2_clareada_semitransparente: #cfdfff50;
-
-    --cor3: #8BFFFF;
-    --cor3_escurecida: #3dffff;
-    --cor3_clareada: #d8ffff;
-    --cor3_clareada_semitransparente: #d8ffff50;
-
-    --cor4: #FF5D9E;
-    --cor4_escurecida: #ff0f6f;
-    --cor4_clareada: #ffaacc;
-    --cor4_clareada_semitransparente: #ffaacc50;
-
-    --cor_borda: #d8d8d8;
-    --cor_borda_escurecida: #afafaf;
-
-    /*DECORATIVOS*/
-    --sombra_leve: 0px 0px 5px #00000030;
-    --sombra_aparente: 0px 0px 10px #00000050;
-
-    /*FONTES*/
-    --títulos: "Josefin Sans", sans-serif;
-    --textos: "Roboto", sans-serif;
-    --texto_observação: "Lato", sans-serif;
-}
-
-* {
-    margin: 0px;
-    padding: 0px;
-}
-
 body {
-    font-family: var(--textos);
+    font-family: var(--texto);
+}
+
+h2 {
+    font-size: 22px;
+}
+
+p {
+    font-size: 18px;
+}
+
+a {
+    color: var(--cor1);
+}
+
+a:hover {
+    color: var(--cor1_escurecida);
+    text-decoration: underline;
 }
 
 main {
@@ -53,11 +28,6 @@ main {
     box-shadow: var(--sombra_leve);
     border-radius: 15px;
     padding: 30px;
-    z-index: 1;
-}
-
-a {
-    font-family: var(--títulos);
 }
 
     /*↓ CABEÇALHO ↓*/
@@ -66,12 +36,21 @@ a {
             flex-direction: column;
         }
 
+        #img-compartilhar-branco {
+            display: none;
+        }
+
+        div.compartilhar button img {
+            margin-right: 10px;
+        }
+
         div.compartilhar button {
             display: flex;
             cursor: pointer;
-            font-family: var(--títulos);
+            font-family: var(--título);
             background: white;
             align-items: center;
+            justify-content: center;
             text-decoration: none;
             width: fit-content;
             border: 2px solid var(--cor_borda);
@@ -89,6 +68,18 @@ a {
             color: white;
         }
 
+        div.compartilhar button:hover #img-compartilhar-roxo {
+            display: none;
+        }
+
+        div.compartilhar button:hover #img-compartilhar-branco {
+            display: block;
+        }
+
+        div.compartilhar button p {
+            font-family: var(--título);
+        }
+
         div.compartilhar button:hover #compartilhar {
             background: white;
         }
@@ -96,15 +87,6 @@ a {
         div.compartilhar button:active {
             transform: scale(0.9);
             background: var(--cor1_escurecida);
-        }
-
-        #compartilhar {
-            background: var(--cor1);
-            height: 25px;
-            width: 25px;
-            margin: auto 10px auto auto;
-            -webkit-mask: url(imagens/compartilhar.svg);
-            mask: url(imagens/compartilhar.svg);
         }
 
         #foto {
@@ -127,13 +109,13 @@ a {
         }
 
         div.container-cabeçalho h1 {
-            font-family: var(--títulos);
-            font-size: 2.5em;
+            font-family: var(--título);
+            font-size: 42px;
         }
 
         div.container-cabeçalho p {
             margin-bottom: 30px;
-            font-size: 1.3em;
+            font-size: 20px;
         }
 
         .container-icones-cabeçalho {
@@ -180,7 +162,7 @@ a {
             background: var(--cor_borda);
         }
     
-    /*↓ Links ↓*/
+    /*↓ LINKS ↓*/
     section.links {
         display: flex;
         flex-direction: column;
@@ -217,7 +199,7 @@ a {
 
     section.links article a {
         text-decoration: none;
-        font-family: var(--títulos);
+        font-family: var(--título);
         border: 2px solid var(--cor1);
         border-radius: 15px;
         padding: 10px 20px;
@@ -236,6 +218,87 @@ a {
         background: var(--cor1_escurecida);
         transform: scale(0.9);
     }
+
+    /*↓ LINKS ESPECIAIS ↓*/
+    /*~ainda tô trabalhando neles*/
+        section.links-especiais, .links-especiais {
+            display: none;
+        }
+
+        #doação {
+            background-color: #f5f9f9;
+            border-color: #659e96;
+        }
+
+        #doação:hover img {
+            animation: doação-hover;
+            animation-duration: 900ms;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            transition-duration: 500ms;
+        }
+
+            @keyframes doação-hover {
+                0% {transform: scale(1) rotate(0deg);}
+                25% {transform: scale(1.050) rotate(4deg);}
+                75% {transform: scale(1.1) rotate(-4deg);}
+                100% {transform: scale(1) rotate(0deg);}
+            }
+
+        #doação a {
+            background: #ddeae8;
+            color: #2f4b47;
+            border-color: #659e96;
+        }
+
+        #doação a:hover {
+            background: #659e96;
+            color: white;
+            border-color: #2f4b47;
+        }
+
+        #doação a:active {
+            background-color: #2f4b47;
+        }
+
+        #vacina {
+            background-color: #f4f7ff;
+            border-color: #0d53fa;
+        }
+
+        #vacina:hover img {
+            animation: vacina-hover;
+            animation-duration: 1200ms;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            transition-duration: 500ms;
+            animation-delay: 100ms;
+        }
+
+            @keyframes vacina-hover {
+                0% {transform: rotate(0deg);}
+                25% {transform: rotate(5deg);}
+                50% {transform: rotate(-5deg);}
+                75% {transform: rotate(5deg);}
+                100% {transform: rotate(0deg);}
+            }
+
+        #vacina a {
+            background: #cedcfe;
+            color: #02267c;
+            border-color: #0d53fa;
+        }
+
+        #vacina a:hover {
+            background-color: #0d53fa;
+            color: white;
+            border-color: #02267c;
+        }
+
+        #vacina a:active {
+            background-color: #02267c;
+        }
+    /*↑ LINKS ESPECIAIS ↑*/
 
     /*↓ RODAPÉ ↓*/
         footer {
@@ -271,14 +334,12 @@ a {
         transform: scale(1);
     }
 
+    div.compartilhar button img {
+            margin-right: 0px;
+        }
+
     div.compartilhar button > p {
         display: none;
-    }
-
-    #compartilhar {
-        margin: auto;
-        -webkit-mask: url(imagens/compartilhar-regular.svg);
-        mask: url(imagens/compartilhar-regular.svg);
     }
 
     div.texto {
@@ -384,14 +445,14 @@ a {
         margin: 0px 15px 0px 0px;
     }
 
-    section.links h1 {
+    section.links h2 {
         text-align: left;
         font: 16px;
     }
 
     section.links p {
         text-align: justify;
-        font-size: 14px;
+        font-size: 16px;
     }
 }
 
@@ -438,7 +499,7 @@ a {
         width: fit-content;
     }
 
-    div.texto h1, div.texto p {
+    div.texto h2, div.texto p {
         text-align: center;
     }
 

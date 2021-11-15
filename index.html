@@ -30,8 +30,8 @@
     <meta name="theme-color" content="#8F71FF"/>
     
     <!-- LINKS -->
-    <link rel="stylesheet" href="page01.css">
     <link rel="stylesheet" href="universal.css">
+    <link rel="stylesheet" href="index.css">
     <link rel="shortcut icon" href="/imagens/favicon.ico" type="image/x-icon">
 
     <title>André Moura Santos</title>
@@ -41,9 +41,9 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PWVNLHS"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-<header>
+<header class="universal">
     <div id="cabeçalho--texto-foto">
-        <img loading="lazy" id="apresentação-foto-perfil" src="imagens/foto-perfil.webp" alt="Foto de André Moura Santos." width="80" height="80">
+        <img loading="lazy" id="cabeçalho-foto" src="imagens/foto-perfil.webp" alt="Foto de André Moura Santos." width="80" height="80">
         <div>
             <h1>André Moura Santos</h1>
             <p>Conheça-me profissionalmente.</p>
@@ -66,14 +66,14 @@
         </div>
             <div class="apresentação-container">
                 <div id="apresentação-video" class="apresentação-video">
-                    <div id="video-iframe"><iframe defer loading="lazy"  width="560" height="315" src="https://www.youtube-nocookie.com/embed/V_UE0XM3TX0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                    <div id="video-iframe"><iframe defer loading="lazy" width="560" height="315" src="https://www.youtube-nocookie.com/embed/V_UE0XM3TX0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
                 </div>
                 <div id="apresentação-foto">
                     <img src="imagens/foto-perfil.webp" alt="Foto de André Moura Santos." width="80" height="80">
                 </div>
                 <div id="apresentação-info">
                     <h2 class="somente-pc-tablet">Sobre mim</h2>
-                    <p>Prazer, me chamo André Moura Santos e tenho 18 anos. Sou de Rondônia e viajei para Curitiba por causa dos meus estudos em Marketing. Sou bastante criativo, persistente e gosto sempre de procurar novas maneiras de criar algo novo. Tenho facilidade com trabalho em equipe e cooperação, gosto de liberdade e autonomia.</p>
+                    <p>Prazer, me chamo André Moura Santos e tenho 19 anos. Sou de Rondônia e viajei para Curitiba por causa dos meus estudos em Marketing. Sou bastante criativo, persistente e gosto sempre de procurar novas maneiras de criar algo novo. Tenho facilidade com trabalho em equipe e cooperação, gosto de liberdade e autonomia.</p>
                     <br>
                     <h2 class="somente-pc-tablet">Ambições</h2>
                     <p class="somente-pc-tablet">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum at est inventore nostrum exercitationem explicabo nulla similique, omnis voluptatum modi autem vitae enim repellendus voluptatibus nemo. Quae qui, recusandae facilis saepe nam, numquam nobis nemo, distinctio minima vero dolorem repellat!</p>
@@ -93,7 +93,7 @@
             <h2>Minhas habilidades</h2>
             <p class="descrição">Conheça mais sobre as minhas habilidades.</p>
             <div class="informação">
-                <div class="informação-ícone"></div>
+                <img src="imagens/info.webp" alt="Ícone de informações em cinza." width="25" height="25">
                 <p>Clique em um dos itens abaixo para ver mais informações.</p>
             </div>
         </div>
@@ -115,7 +115,7 @@
             <div class="habilidades" id="habilidade-3">
                 <p class="habilidades-número">03</p>
                 <p class="habilidades-título">Conhecimentos e habilidades avançadas</p>
-                <p class="habilidades-texto">Meu nível de Inglês é Avançado (C2), Francês Iniciantes (A1), fiz cursos na área de Marketing Digital, como Facebook, Google Ads e Inbound Marketing, além de cursos na área de Gestão de Pessoas.</p>
+                <p class="habilidades-texto">Meu nível de Inglês é Avançado (C2), Francês Iniciante (A1), fiz cursos na área de Marketing Digital, como Facebook, Google Ads e Inbound Marketing, além de cursos na área de Gestão de Pessoas.</p>
             </div>
         </div>
     </article>
@@ -168,36 +168,36 @@
             <h2>Informações de contato</h2>
             <p class="descrição">Contate-me para conversarmos!</p>
             <div class="informação">
-                <div class="informação-ícone"></div>
+                <img src="imagens/info.webp" alt="Ícone de informações em cinza." width="25" height="25">
                 <p>Os horários estão no Horário de Manaus (GMT-4).</p>
             </div>
         </div>
 
         <div class="container-infocontato">
             <div class="cartão-contato">
-                <div class="cartão-ícone" id="email"></div>
+                <img src="imagens/email.webp" alt="Foto de email em roxo." height="125" width="125" loading="lazy">
                 <h2>Email</h2>
                 <p>Envie um email para começar a conversar.</p>
-                <a href="contato.html">Enviar</a>
+                <a href="mailto:contato@andremourasantos.com?subject=Ol%C3%A1%2C%20gostaria%20de%20inicar%20uma%20conversa!&body=Ol%C3%A1%2C%20eu%20me%20chamo%20%5BNOME%5D%2C%20trabalho%20na%20empresa%20%5BEMPRESA%5D%20como%20%5BCARGO%5D%20e%20gostaria%20de%20falar%20com%20voc%C3%AA%20sobre%20%5BASSUNTO%5D." target="_blank">Enviar</a>
                 <div class="contato-info">
                     <p>Todos os dias<br>9h às 18h</p>
                 </div>
             </div>
             <div class="cartão-contato" id="cartão-contato-telefone">
-                <div class="cartão-ícone" id="telefone"></div>
+                <img src="imagens/chamada.webp" alt="Ícone de telefone chamando em azul." height="125" width="125" loading="lazy">
                 <h2>Chamada</h2>
-                <p>Agende uma chama ou videochamada.</p>
-                <a href="contato.html">Agendar</a>
+                <p>Agende uma chamada ou videochamada.</p>
+                <a href="mailto:contato@andremourasantos.com?subject=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20videochamada!&body=Ol%C3%A1%2C%20eu%20me%20chamo%20%5BNOME%5D%2C%20trabalho%20na%20empresa%20%5BEMPRESA%5D%20como%20%5BCARGO%5D%20e%20gostaria%20de%20falar%20com%20voc%C3%AA%20sobre%20%5BASSUNTO%5D%20via%20%5BPLATAFORMA%5D.%20Podemos%20marcar%20para%20%5Bdd%2Fmm%2Faaaa%5D%20%C3%A0s%20%5BHORAS%5D%20(Hor%C3%A1rio%20de%20Bras%C3%ADlia)%3F" target="_blank">Agendar</a>
                 <div class="contato-info">
-                    <p>Segunda à Sexta<br>9h às 18h</p>
+                <p>Segunda à Sexta<br>9h às 18h</p>
                 </div>
             </div>
             <div class="cartão-contato" id="cartão-contato-linkedin">
-                <div class="cartão-ícone" id="linkedin"></div>
+                <img src="imagens/linkedin.webp" alt="Logo do LinkedIn em rosa." height="125" width="125" loading="lazy">
                 <h2>LinkedIn</h2>
                 <p>Inicie uma conversa rápida pelo LinkedIn.</p>
-                <a href="#">Conversar</a>
-                <div class="contato-info">
+                <a href="https://www.linkedin.com/in/andremourasantos/"  target="_blank" rel="noopener noreferrer">Conversar</a>
+                <div class="contato-info contato-info">
                     <p>Segunda à Sábado<br>9h às 18h</p>
                 </div>
             </div>
@@ -207,8 +207,6 @@
 </main>
 <footer>
     <p>Site em desenvolvimento, criado por <a href="https://andremourasantos.com">André Moura Santos</a>. Ícones de <a href="https://phosphoricons.com/">Phosphor Icons</a>.</p>
-    <p><a class="footer-email" href="mailto:contato@andremourasantos.com" id="mailto">contato@andremourasantos.com</a></p>
-    <p style="margin-bottom: 0px;"><em>Última atualização em Novembro de 2021.</em></p>
 </footer>
 <main class="tela-pequena">
     <div class="tela-pequena">

@@ -48,6 +48,9 @@
     --cor4_clareada: #ffaacc;
     --cor4_clareada_semitransparente: #ffaacc50;
 
+    --cor_borda: #d8d8d8;
+    --cor_borda_escurecida: #afafaf;
+
 /*DECORATIVOS*/
     --sombra_leve: 0px 0px 5px #00000030;
     --sombra_aparente: 0px 0px 10px #00000050;
@@ -97,7 +100,7 @@ a {
 }
 
 /*↓ DESIGN DO CABEÇALHO ↓*/
-header {
+header.universal {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -106,14 +109,14 @@ header {
     background-color: white;
     padding: 10px 0px;
     border-radius: 0px 0px 20px 20px;
-    margin-bottom: 180px;
+    box-shadow: var(--sombra_aparente);
 }
 
-header nav {
+header.universal nav {
     margin-top: 5px;
 }
 
-header nav > a {
+header.universal nav > a {
     display: inline-flex;
     flex-direction: row;
     justify-content: space-between;
@@ -127,14 +130,14 @@ header nav > a {
     box-shadow: var(--sombra_leve);
 }
 
-header nav > a:hover {
+header.universal nav > a:hover {
     transform: scale(1.1);
     font-weight: bold;
     background-color: var(--cor1);
     border: 2px solid var(--cor1_escurecida);
 }
 
-header nav > a:active {
+header.universal nav > a:active {
     background-color: var(--cor1_escurecida);
     transform: scale(0.9);
 }
@@ -146,7 +149,7 @@ header nav > a:active {
     align-items: center;
 }
 
-#apresentação-foto-perfil {
+#cabeçalho-foto {
     margin: 15px 30px;
     width: 80px;
     top: 15px;
@@ -189,13 +192,10 @@ div.informação p {
     font-size: 18px;
 }
 
-div.informação-ícone {
+div.informação img {
     height: 25px;
     width: 25px;
     margin: auto;
-    background-color: #808080;
-    -webkit-mask: url(imagens/bio/info-fill.svg) no-repeat center;
-    mask: url(imagens/bio/info-fill.svg) no-repeat center;
 }
 
 div.informação a {
@@ -210,8 +210,9 @@ div.informação a::after {
 
 /*↓ RESPONSIVIDADE DO SITE ↓*/
 @media screen and (max-width: 930px) {
-    #apresentação-foto-perfil {
+    #cabeçalho-foto {
         width: 50px;
+        height: 50px;
         margin: 0px 10px 0px 0px;
     }
     
@@ -222,7 +223,7 @@ div.informação a::after {
 }
 
 @media screen and (max-width: 803px) {
-    header {
+    header.universal {
         display: flex;
         padding: 20px 0px;
         margin-bottom: 0px;
@@ -245,9 +246,10 @@ div.informação a::after {
         flex: 1 1 100%;
     }
 
-    #apresentação-foto-perfil {
+    #cabeçalho-foto {
         margin-right: 20px;
         width: 70px;
+        height: 70px;
     }
 
     #cabeçalho--texto-foto h1, #cabeçalho--texto-foto p {
@@ -268,8 +270,9 @@ div.informação a::after {
 }
 
 @media screen and (max-width: 600px) {
-    #apresentação-foto-perfil {
+    #cabeçalho-foto {
         width: 60px;
+        height: 60px;
         border: none;
     }
 
@@ -283,7 +286,7 @@ div.informação a::after {
 }
 
 @media screen and (max-width: 425px) {
-    #apresentação-foto-perfil {
+    #cabeçalho-foto {
         display: none;
     }
 
@@ -303,6 +306,11 @@ div.informação a::after {
 
     div.informação {
         width: 200px;
+    }
+
+    div.informação p {
+        margin-top: -10px;
+        font-size: 18px;
     }
 }
 
@@ -326,7 +334,7 @@ div.informação a::after {
         background: #ebebeb;
     }
 
-    header {
+    header.universal {
         display: none;
     }
 

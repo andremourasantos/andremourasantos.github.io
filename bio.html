@@ -1,15 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!--Estilo do site-->
+    <!--CSS & JS-->
+    <link rel="stylesheet" href="universal.css">
     <link rel="stylesheet" href="bio.css">
     <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
-
-    <!--JS-->
     <link rel="import" href="script.js">
 
     <!-- SEO TAGS -->
@@ -18,98 +13,133 @@
     <meta name="description" content="Conheça-me através do meu website.">
     <meta property="og:type" content="blog">
     <meta property="og:url" content="www.andremourasantos.com">
-    <meta property="og:image" content="https://i.imgur.com/KijJVpI.png">
+    <meta property="og:image" content="https://i.img loading="lazy"ur.com/KijJVpI.png">
+
+    <!--PERFOMANCE TAGS-->
+    <link rel="preload" href="fontes/JosefinSans-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="fontes/GlacialIndifference-Regular.otf" as="font" type="font/otf" crossorigin>
 
     <!-- OUTRAS TAGS -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="André Moura">
     <meta name="application-name" content="André Moura Santos">
 
     <title>Bio de André Moura Santos</title>
 </head>
 <body>
-    <main>
-        <section class="cabeçalho">
-            <div class="compartilhar">
-                <button id="share">
-                    <div id="compartilhar"></div>
-                    <p>Compartilhar</p>
-                </button>
-            </div>
-            <img src="imagens/foto-perfil.jpg" alt="Foto" id="foto">
-            <div class="container-cabeçalho hover">
-                <div>
-                    <h1>André Moura Santos</h1>
-                    <p>Marketing, Curitiba, PR.</p>
+<main>
+<section class="cabeçalho">
+    <div class="compartilhar">
+        <button>
+            <img loading="lazy" id="img-compartilhar-roxo" src="imagens/bio/compartilhar.webp" alt="Ícone de compartilhar em roxo." width="25" height="25">
+            <img loading="lazy" id="img-compartilhar-branco" src="imagens/bio/compartilhar-branco.webp" alt="Ícone de compartilhar em branco." width="25" height="25">
+            <p>Compartilhar</p>
+        </button>
+    </div>
+    <img loading="lazy" src="imagens/foto-perfil.webp" alt="Foto de perfil de André Moura Santos." id="foto" width="200" height="200">
+    <div class="container-cabeçalho hover">
+        <div>
+            <h1>André Moura Santos</h1>
+            <p>Estudante de Marketing em Curitiba, PR.</p>
+        </div>
+        <div class="container-icones-cabeçalho">
+            <a href="mailto:contato@andremourasantos.com?subject=Ol%C3%A1%2C%20gostaria%20de%20inicar%20uma%20conversa!&body=Ol%C3%A1%2C%20eu%20me%20chamo%20%5BNOME%5D%2C%20trabalho%20na%20empresa%20%5BEMPRESA%5D%20como%20%5BCARGO%5D%20e%20gostaria%20de%20falar%20com%20voc%C3%AA%20sobre%20%5BASSUNTO%5D." target="_blank" rel="nofollow">
+                <div class="ícone-cabeçalho">
+                    <img loading="lazy" src="imagens/bio/cabeçalho-icone-1.webp" alt="Ícone de email em cinza." width="40" height="40">
                 </div>
-                <div class="container-icones-cabeçalho">
-                    <a href="mailto:contato@andremourasnatos.com" target="_blank" rel="nofollow">
-                        <div class="ícone-cabeçalho">
-                            <img src="imagens/bio/email.png" alt="Ícone de email em cinza.">
-                        </div>
-                    </a>
+            </a>
 
-                    <a href="tel:05569981150440" rel="nofollow">
-                        <div class="ícone-cabeçalho">
-                            <img src="imagens/bio/telefone.png" alt="Ícone de telefone em cinza.">
-                        </div>
-                    </a>
-
-                    <a href="https://www.linkedin.com/in/andremourasantos/" target="_blank" rel="nofollow">
-                        <div class="ícone-cabeçalho">
-                            <img src="imagens/bio/profissional.png" alt="Ícone do LinkedIn em cinza.">
-                        </div>
-                    </a>
+            <a href="mailto:contato@andremourasantos.com?subject=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20videochamada!&body=Ol%C3%A1%2C%20eu%20me%20chamo%20%5BNOME%5D%2C%20trabalho%20na%20empresa%20%5BEMPRESA%5D%20como%20%5BCARGO%5D%20e%20gostaria%20de%20falar%20com%20voc%C3%AA%20sobre%20%5BASSUNTO%5D%20via%20%5BPLATAFORMA%5D.%20Podemos%20marcar%20para%20%5Bdd%2Fmm%2Faaaa%5D%20%C3%A0s%20%5BHORAS%5D%20(Hor%C3%A1rio%20de%20Bras%C3%ADlia)%3F" target="_blank" rel="nofollow">
+                <div class="ícone-cabeçalho">
+                    <img loading="lazy" src="imagens/bio/cabeçalho-icone-2.webp" alt="Ícone de videochamada em cinza." width="40" height="40">
                 </div>
-            </div>
-        </section>
+            </a>
 
-        <section class="separação" id="antes-links">
-            <hr>
-        </section>
+            <a href="https://www.linkedin.com/in/andremourasantos/" target="_blank" rel="noopener noreferrer">
+                <div class="ícone-cabeçalho">
+                    <img loading="lazy" src="imagens/bio/cabeçalho-icone-3.webp" alt="Ícone do LinkedIn em cinza." width="40" height="40">
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
 
-        <section class="links">
-            <article id="site" class="hover">
-                <div class="links-ícones">
-                    <img src="imagens/bio/globo.png" alt="Ícone do globo em 2D na cor roxa.">
-                </div>
-                <div class="texto">
-                    <h1>Site</h1>
-                    <p>Conheça meu site agora mesmo saiba mais sobre minhas capacidades e projetos.</p>
-                </div>
-                <a href="https://andremourasantos.github.io" target="_blank">Acessar</a>
-            </article>
+<section class="separação" id="antes-links">
+    <hr>
+</section>
 
-            <article id="cc" class="hover">
-                <div class="links-ícones">
-                    <img src="imagens/bio/graduação.png" alt="Ícone de chapéu de graduação em roxo.">
-                </div>
-                <div class="texto">
-                    <h1>Currículo & Certificados</h1>
-                    <p>Acesse meu currículo e meus certificados para conferir minhas habilidades rapidamente.</p>
-                </div>
-                <a href="https://andremourasantos.github.io/#conhecimentos" target="_blank">Acessar</a>
-            </article>
+<section class="links">
+    <article id="site" class="hover">
+        <div class="links-ícones">
+            <img loading="lazy" src="imagens/bio/globo.webp" alt="Ícone do globo em 2D na cor roxa." width="80" height="80">
+        </div>
+        <div class="texto">
+            <h2>Site</h2>
+            <p>Descubra quem sou através do meu site na internet: Simples, rápido e fácil! Como deve ser.</p>
+        </div>
+        <a href="index.html" target="_blank" rel="next">Acessar</a>
+    </article>
 
-            <article id="vídeo" class="hover">
-                <div class="links-ícones">
-                    <img src="imagens/bio/video.png" alt="Ícone do YouTube em roxo.">
-                </div>
-                <div class="texto">
-                    <h1>Carta de vídeo</h1>
-                    <p>Sem tempo pra nada? Não tem problema: Conheça-me em um minuto com este vídeo!</p>
-                </div>
-                <a href="https://andremourasantos.github.io/#contato" target="_blank">Acessar</a>
-            </article>
-        </section>
+    <article id="cc" class="hover">
+        <div class="links-ícones">
+            <img loading="lazy" src="imagens/bio/graduação.webp" alt="Ícone de chapéu de graduação em roxo." width="80" height="80">
+        </div>
+        <div class="texto">
+            <h2>Currículo & Certificados</h2>
+            <p>Acesse meu currículo e meus certificados para conferir minhas habilidades rapidamente.</p>
+        </div>
+        <a href="index.html#conhecimentos" target="_blank" rel="next">Acessar</a>
+    </article>
 
-        <section class="separação" id="pós-links">
-            <hr>
-        </section>
+    <article id="vídeo" class="hover">
+        <div class="links-ícones">
+            <img loading="lazy" src="imagens/bio/video.webp" alt="Ícone do YouTube em roxo." width="80" height="80">
+        </div>
+        <div class="texto">
+            <h2>Carta de vídeo</h2>
+            <p>Sem tempo pra nada? Não tem problema: Conheça-me em um minuto com este vídeo!</p>
+        </div>
+        <a href="https://youtu.be/V_UE0XM3TX0" target="_blank" rel="noopener noreferrer">Acessar</a>
+    </article>
+</section>
 
-        <footer>
-            <img src="imagens/bio/info.png" alt="Ícone de informações em cinza.">
-            <p>Criado por André Moura Santos. Ícones de <a href="https://phosphoricons.com/" target="_blank" rel="noopener noreferrer">Phosphor Icons</a>.</p>
-        </footer>
-    </main>
+<section class="separação" id="pós-links">
+    <hr>
+</section>
+
+<section class="links links-especiais">
+    <article id="doação" class="hover">
+        <div class="links-ícones">
+            <img loading="lazy" src="imagens/bio/doação.webp" alt="Ícone de coração em dourado." width="80" height="80">
+        </div>
+        <div class="texto">
+            <h2>Doação</h2>
+            <p>O que pode ser pouco para você é muito para o outro. Doe sangue, alimentos ou dinheiro.</p>
+        </div>
+        <a href="#" target="_blank" rel="noopener noreferrer">Acessar</a>
+    </article>
+
+    <article id="vacina" class="hover">
+        <div class="links-ícones">
+            <img loading="lazy" src="imagens/bio/vacina.webp" alt="Ícone de máscara em dourado." width="80" height="80">
+        </div>
+        <div class="texto">
+            <h2>Cuide da sua saúde</h2>
+            <p>As consequências das suas ações não são exclusivamente suas. Vacine-se para se proteger e proteger aos outros.</p>
+        </div>
+        <a href="https://www.google.com/search?q=vacina%C3%A7%C3%A3o+perto+de+mim" target="_blank" rel="noopener noreferrer">Acessar</a>
+    </article>
+</section>
+
+<section class="separação links-especiais" id="pós-links">
+    <hr>
+</section>
+<footer>
+    <img loading="lazy" src="imagens/info.webp" alt="Ícone de informações em cinza." width="25" height="25">
+    <p>Criado por André Moura Santos. Ícones de <a href="https://phosphoricons.com/" target="_blank" rel="noopener noreferrer">Phosphor Icons</a>.<span class="links-especiais"> As instituições que foram referidas nos links dos cartões "Doação" e "Cuide da sua saúde" não tem vínculo com André Moura Santos.</span></p>
+</footer>
+</main>
 </body>
 </html>
