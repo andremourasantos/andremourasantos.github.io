@@ -33,9 +33,11 @@ Atualmente o site principal (index.html) está em fase final de desenvolvimento,
 ![foto-site-tamanho-telefone](https://user-images.githubusercontent.com/92397834/140981879-81a0b9df-dd63-4212-9841-75b2088c2a7b.png)
 
 ### Status da performance do site:
-![foto-site-perfomance1](https://user-images.githubusercontent.com/92397834/140989001-ef2a748b-39c5-4a11-a10e-63db9a06e8dd.png)
-![foto-site-perfomance2](https://user-images.githubusercontent.com/92397834/140989481-9ae20922-806f-425c-9832-127b82322da7.png)
-
+Com a atualização da [3° semana de Novembro](https://github.com/andremourasantos/andremourasantos.github.io/commit/7cc10be792253b7e45174922f1cd6e74b482a8b6), a perfomance geral do site teve grandes melhorias.
+- Perfomance no computador (excelente): Uma melhora de 38 pontos em relação a versão anterior (61 pontos).
+	![Screenshot_20211115-200855](https://user-images.githubusercontent.com/92397834/142767748-3ca14e82-348c-4d63-abfb-6825248af248.png)
+- Perfomance em dispositivos móveis (passível de melhoria): Uma melhora de 16 pontos em relação a versão anterior (61 pontos).
+	![Screenshot_20211115-200910](https://user-images.githubusercontent.com/92397834/142767757-51d9de68-f4fe-4ac0-a835-0517f93243b5.png)
 
 ## Programas e serviços utilizados durante o projeto 💻
 Todos os programas e serviços que me ajudaram durante o desenvolvimento do meu projeto serão adicionados aqui.
