@@ -125,6 +125,66 @@
     <hr>
 </div>
 
+<!--POPUP FUNÇÃO EM TESTE-->
+<div class="popup-container" id="popup1">
+    <div class="popup popup1">
+        <img loading="lazy" src="imagens/novidade.webp" alt="Ícone de mágica em roxo." height="128" width="128">
+        <h1>Função em teste!</h1>
+        <p>Uma nova janela de oportunidades se abre.</p>
+        <p>No momento eu estou aprendendo a usar <strong>JavaScript</strong> para criar interações na página, essa janela é uma delas.</p>
+        <button id="fechar-popup">Fechar</button>
+        <button id="abrir-popup2">Saiba mais</button>
+        <button id="irParaPopupCertificados" style="display: none; margin: 20px auto;">Continuar</button>
+    </div>
+    <div class="popup popup2" style="display: none;">
+        <img loading="lazy" src="imagens/js.webp" alt="Ícone de mágica em roxo." height="128" width="128">
+        <h1>O que é JavaScript?</h1>
+        <p><em>"A linguagem da interação na internet."</em></p>
+        <p>O JavaScrip é uma linguagem de programação que foi criada para permitir <strong>interações em páginas da internet</strong>. As três principais linguagens do desenvolvimento front-end são: HTML, CSS e JavaScript.</p>
+        <button id="fechar-popup2">Fechar</button>
+    </div>
+    <!--↑ CURRÍCULO ↑-->
+    <!--↓ CERTIFICADOS ↓-->
+    <div class="popup popupCertificados" id="popupCertificados1">
+        <div class="certificadosTítulo">
+            <h1>Certificados</h1>
+        </div>
+        <img loading="lazy" src="imagens/certificados/base.webp" alt="Certificado 1." width="350" height="260">
+        <h2>Certificado 1</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque itaque maxime dignissimos nam quo nihil qui, repellendus deleniti. Repellendus vel distinctio neque sit magni dicta animi nulla ipsum voluptate laboriosam.</p>
+        <div>
+            <button id="fecharPopupCertificados-1">Fechar</button>
+            <button id="avançarPopupCertificados-1">Continuar</button>
+        </div>
+    </div>
+    <div class="popup popupCertificados" id="popupCertificados2">
+        <div class="certificadosTítulo">
+            <h1>Certificados</h1>
+        </div>
+        <img loading="lazy" src="imagens/certificados/base.webp" alt="Certificado 2." width="350" height="260">
+        <h2>Certificado 2</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque itaque maxime dignissimos nam quo nihil qui, repellendus deleniti. Repellendus vel distinctio neque sit magni dicta animi nulla ipsum voluptate laboriosam.</p>
+        <div>
+            <button id="voltarPopupCertificados-1">Voltar</button>
+            <button id="avançarPopupCertificados-2">Continuar</button>
+        </div>
+    </div>
+    <div class="popup popupCertificados" id="popupCertificados3">
+        <div class="certificadosTítulo">
+            <h1>Certificados</h1>
+        </div>
+        <img loading="lazy" src="imagens/certificados/base.webp" alt="Certificado 3." width="350" height="260">
+        <h2>Certificado 3</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque itaque maxime dignissimos nam quo nihil qui, repellendus deleniti. Repellendus vel distinctio neque sit magni dicta animi nulla ipsum voluptate laboriosam.</p>
+        <div>
+            <button id="voltarPopupCertificados-2">Voltar</button>
+            <button id="fecharPopupCertificados-2">Fechar</button>
+        </div>
+    </div>
+    <!--↑ CERTIFICADOS ↑-->
+</div>
+<!--POPUP FUNÇÃO EM TESTE-->
+
 <section id="conhecimentos">
     <article>
         <div class="cabeçalho">
@@ -137,12 +197,13 @@
                 <div id="currículo-txt">
                     <h2>Currículo</h2>
                     <p>Veja minhas habilidades pessoais e profissionais, confira minhas informações de contato e fique por dentro da minha formação acadêmico e experiências de trabalho.</p>
-                    <a href="#">Acessar</a>
+                    <a id="abrir-popup">Acessar</a>
                 </div>
                 <div id="currículo-img">
                     <img loading="lazy" src="imagens/curriculo.webp" alt="Imagem do currículo de André Moura Santos." width="200" height="300">
                 </div>
             </div>
+
             <div id="certificados">
                 <div id="certificados-img">
                     <img loading="lazy" src="imagens/certificado.webp" alt="Imagem dos certificados de André Moura Santos." id="c-img-1" width="200" height="300">
@@ -150,7 +211,7 @@
                 <div id="certificados-txt">
                     <h2>Certificados</h2>
                     <p>Você já viu todas as minhas habilidades no meu currículo? Agora é hora de ver os meus certificados que garantem que eu sou capaz de fazer o que digo!</p>
-                    <a href="#">Acessar</a>
+                    <a id="abrirPopupCertificados">Acessar</a>
                 </div>
             </div>
         </div>
@@ -178,7 +239,7 @@
                 <img src="imagens/email.webp" alt="Foto de email em roxo." height="125" width="125" loading="lazy">
                 <h2>Email</h2>
                 <p>Envie um email para começar a conversar.</p>
-                <a href="mailto:contato@andremourasantos.com?subject=Ol%C3%A1%2C%20gostaria%20de%20inicar%20uma%20conversa!&body=Ol%C3%A1%2C%20eu%20me%20chamo%20%5BNOME%5D%2C%20trabalho%20na%20empresa%20%5BEMPRESA%5D%20como%20%5BCARGO%5D%20e%20gostaria%20de%20falar%20com%20voc%C3%AA%20sobre%20%5BASSUNTO%5D." target="_blank">Enviar</a>
+                <a href="https://link.andremourasantos.com/contato-email" target="_blank">Enviar</a>
                 <div class="contato-info">
                     <p>Todos os dias<br>9h às 18h</p>
                 </div>
@@ -187,7 +248,7 @@
                 <img src="imagens/chamada.webp" alt="Ícone de telefone chamando em azul." height="125" width="125" loading="lazy">
                 <h2>Chamada</h2>
                 <p>Agende uma chamada ou videochamada.</p>
-                <a href="mailto:contato@andremourasantos.com?subject=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20videochamada!&body=Ol%C3%A1%2C%20eu%20me%20chamo%20%5BNOME%5D%2C%20trabalho%20na%20empresa%20%5BEMPRESA%5D%20como%20%5BCARGO%5D%20e%20gostaria%20de%20falar%20com%20voc%C3%AA%20sobre%20%5BASSUNTO%5D%20via%20%5BPLATAFORMA%5D.%20Podemos%20marcar%20para%20%5Bdd%2Fmm%2Faaaa%5D%20%C3%A0s%20%5BHORAS%5D%20(Hor%C3%A1rio%20de%20Bras%C3%ADlia)%3F" target="_blank">Agendar</a>
+                <a href="https://link.andremourasantos.com/contato-email-chamada" target="_blank">Agendar</a>
                 <div class="contato-info">
                 <p>Segunda à Sexta<br>9h às 18h</p>
                 </div>
@@ -206,7 +267,7 @@
 </section>
 </main>
 <footer>
-    <p>Site em desenvolvimento, criado por <a href="https://andremourasantos.com">André Moura Santos</a>. Ícones de <a href="https://phosphoricons.com/">Phosphor Icons</a>.</p>
+    <p>Site em desenvolvimento, criado por <a href="index.html">André Moura Santos</a>. Ícones de <a href="https://phosphoricons.com/">Phosphor Icons</a>.</p>
 </footer>
 <main class="tela-pequena">
     <div class="tela-pequena">
@@ -226,4 +287,6 @@
     </div>
 </main>
 </body>
+<!--ESSE SCRIPT AINDA ESTÁ EM DESENVOLVIMENTO-->
+<script defer src="index.js"></script>
 </html>

@@ -48,6 +48,9 @@
     --cor4_clareada: #ffaacc;
     --cor4_clareada_semitransparente: #ffaacc50;
 
+    --cor_borda: #d8d8d8;
+    --cor_borda_escurecida: #afafaf;
+
 /*DECORATIVOS*/
     --sombra_leve: 0px 0px 5px #00000030;
     --sombra_aparente: 0px 0px 10px #00000050;
@@ -67,7 +70,7 @@
 }
 
 html {
-    scroll-behavior: smooth;
+    overflow-y: auto;
 }
 
 body {
@@ -420,6 +423,104 @@ div.separação > hr {
             }
 
     /*↓ SEÇÃO MEUS CONHECIMENTOS ↓*/
+    /*↓ POPUPS ↓*/
+    .popup-container {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        height: 100vh;
+        width: 100vw;
+        background-color: #00000030;
+        backdrop-filter: blur(5px);
+        z-index: 999;
+    }
+
+    div.popup {
+        display: block;
+        background-color: white;
+        width: 350px;
+        height: fit-content;
+        box-shadow: 0px 0px 10px white;
+        border-radius: 20px;
+        text-align: center;
+        padding: 20px 40px;
+        overflow-y: scroll;
+        margin: 20px auto;
+    }
+    
+    div.popup > * {
+        margin: 20px auto;
+    }
+
+    div.popup img {
+        height: 128px;
+        width: 128px;
+        margin-bottom: 0px;
+    }
+
+    div.popup p {
+        margin: 10px auto;
+        font-size: 18px;
+    }
+
+    div.popup button {
+        cursor: pointer;
+        margin: 10px 10px 20px 10px;
+        padding: 15px 30px;
+        border-radius: 15px;
+        background-color: white;
+        font-family: var(--título);
+        font-size: 16px;
+        border: 2px solid var(--cor1);
+    }
+
+    div.popup button:hover {
+        border-color: var(--cor1_escurecida);
+        background-color: var(--cor1);
+        color: white;
+        font-weight: bold;
+        border-radius: 25px;
+    }
+
+    div.popup button:active {
+        background-color: var(--cor1_escurecida);
+        transform: scale(0.9);
+    }
+
+    div.popupCertificados {
+       display: none;
+       align-items: center;
+       justify-content: center;
+       overflow-y: scroll;
+       height: 80vh;
+    }
+
+    div.certificadosTítulo {
+        background-color: #c5c5c550;
+        width: calc(100% + 80px);
+        position: relative;
+        left: -40px;
+        top: -40px;
+        padding: 30px 0px;
+    }
+
+    div.popupCertificados h2 {
+        font-size: 26px;
+    }
+
+    div.popupCertificados img {
+        margin-top: -30px;
+        width: 100%;
+        height: fit-content;
+        border-radius: 20px;
+        box-shadow: var(--sombra_leve);
+    }
+
+    #popupCertificados1 {
+        display: none;
+    }
+
     div.container-conhecimentos {
         display: flex;
         margin: 40px;
@@ -437,6 +538,7 @@ div.separação > hr {
 
     div.container-conhecimentos a {
         padding: 15px 30px;
+        cursor: pointer;
         margin: 20px auto;
         width: 50%;
         border: 2px solid var(--cor1);
@@ -905,6 +1007,10 @@ footer a:hover {
 
 /*AJUSTE DE FONTE*/
 @media screen and (max-width: 803px) {
+    div.popup {
+        height: 80vh;
+    }
+
     body {
         background-color: white;
     }
@@ -1069,6 +1175,15 @@ footer a:hover {
 
 /*AJUSTE DE FONTE*/
 @media screen and (max-width: 600px) {
+    div.popup {
+        width: 60vw;
+    }
+
+    div.popupCertificados img {
+        width: 250px;
+        height: 186px;
+    }
+
     #cabeçalho-foto {
         width: 60px;
         height: 60px;
@@ -1135,7 +1250,24 @@ footer a:hover {
 }
 
 /*AJUSTE DE FONTE*/
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 425px) {  
+    div.popupCertificados img {
+        width: 100%;
+        height: fit-content;
+    }
+
+    div.popupCertificados button {
+        margin: 10px auto;
+    }
+
+    #fechar-popup {
+        margin: 10px 5px;
+    }
+
+    #abrir-popup2 {
+        margin: 10px 0px;
+    }
+
     #cabeçalho-foto {
         display: none;
     }

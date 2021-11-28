@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <!--CSS & JS-->
+    <!--CSS-->
     <link rel="stylesheet" href="universal.css">
     <link rel="stylesheet" href="bio.css">
     <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
-    <link rel="import" href="script.js">
 
     <!-- SEO TAGS -->
-    <meta property="og:title" content="Bio de André Moura Santos">
-    <meta property="og:description" content="Conheça-me através do meu website.">
-    <meta name="description" content="Conheça-me através do meu website.">
+    <meta property="og:title" content="Bio | André Moura Santos">
+    <meta property="og:description" content="Veja a Bio de André Moura Santos e obtenha links rápidos para o site, currículo e certificados, vídeo de introdução dentre outros! Além de informações de contato como email e LinkedIn.">
+    <meta name="description" content="Veja a Bio de André Moura Santos e obtenha links rápidos para o site, currículo e certificados, vídeo de introdução dentre outros! Além de informações de contato como email e LinkedIn.">
     <meta property="og:type" content="blog">
     <meta property="og:url" content="www.andremourasantos.com">
-    <meta property="og:image" content="https://i.img loading="lazy"ur.com/KijJVpI.png">
+    <meta property="og:image" content="https://res.cloudinary.com/linkly/image/upload/v1636235984/pekxckdflraapuhjqx2l.jpg">
 
     <!--PERFOMANCE TAGS-->
     <link rel="preload" href="fontes/JosefinSans-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
@@ -26,13 +25,37 @@
     <meta name="author" content="André Moura">
     <meta name="application-name" content="André Moura Santos">
 
-    <title>Bio de André Moura Santos</title>
+    <title>Bio | André Moura Santos</title>
 </head>
 <body>
+        <!--POPUP COMPARTILHAR-->
+        <div id="biopopup1Container">
+            <div id="biopopup0">
+                <div id="biopopup0conteudo">
+                    <img loading="lazy" src="imagens/novidade.webp" alt="Ícone de varinha mágica em amarelo." height="128" width="128" id="novidade">
+                    <h1>Função em teste!</h1>
+                    <p>Você está prestes a utilizar uma função atualmente em desenvolvimento.</p>
+                    <p>A função de compartilhamento irá, futuramente, utilizar-se da mais nova API disponível: A <strong>Navigator.share()</strong>, mas por enquanto, o menu clássico de compartilhamento continuará disponível.</p>
+                    <button id="fecharbiopopup0">Continuar</button>
+                </div>
+            </div>
+            <div id="biopopup1">
+                <div>
+                    <h1>Compartilhar</h1>
+                    <a id="compartilharLinkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https://andremourasantos.com/bio" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="imagens/bio/compartilhar-linkedin.webp" alt="Logo do LinkedIn em branco." width="30" height="30">Compartilhe no LinkedIn</a>
+                    <a id="compartilharFacebook" href="https://www.facebook.com/sharer/sharer.php?kid_directed_site=0&sdk=joey&u=https%3A%2F%2Fandremourasantos.com%2Fbio&display=popup&ref=plugin&src=share_button"
+                    target="_blank" rel="noopener noreferrer"><img loading="lazy" src="imagens/bio/compartilhar-facebook.webp" alt="Logo do Facebook em brnaco." width="30" height="30">Compartilhe no Facebook</a>
+                    <a id="compartilharWhatsapp" href="https://api.whatsapp.com/send?phone=&text=https://www.andremourasantos.com/bio" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="imagens/bio/compartilhar-whatsapp.webp" alt="Logo do WhatsApp em branco." width="30" height="30">Compartilhe no WhatsApp</a>
+                    <button id="fecharbiopopup1">Fechar</button>
+                </div>
+            </div>
+        </div>
+    <!--POPUP COMPARTILHAR-->
 <main>
 <section class="cabeçalho">
+
     <div class="compartilhar">
-        <button>
+        <button id="botaobioCompartilhar">
             <img loading="lazy" id="img-compartilhar-roxo" src="imagens/bio/compartilhar.webp" alt="Ícone de compartilhar em roxo." width="25" height="25">
             <img loading="lazy" id="img-compartilhar-branco" src="imagens/bio/compartilhar-branco.webp" alt="Ícone de compartilhar em branco." width="25" height="25">
             <p>Compartilhar</p>
@@ -45,13 +68,13 @@
             <p>Estudante de Marketing em Curitiba, PR.</p>
         </div>
         <div class="container-icones-cabeçalho">
-            <a href="mailto:contato@andremourasantos.com?subject=Ol%C3%A1%2C%20gostaria%20de%20inicar%20uma%20conversa!&body=Ol%C3%A1%2C%20eu%20me%20chamo%20%5BNOME%5D%2C%20trabalho%20na%20empresa%20%5BEMPRESA%5D%20como%20%5BCARGO%5D%20e%20gostaria%20de%20falar%20com%20voc%C3%AA%20sobre%20%5BASSUNTO%5D." target="_blank" rel="nofollow">
+            <a href="https://link.andremourasantos.com/contato-email" target="_blank" rel="nofollow">
                 <div class="ícone-cabeçalho">
                     <img loading="lazy" src="imagens/bio/cabeçalho-icone-1.webp" alt="Ícone de email em cinza." width="40" height="40">
                 </div>
             </a>
 
-            <a href="mailto:contato@andremourasantos.com?subject=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20videochamada!&body=Ol%C3%A1%2C%20eu%20me%20chamo%20%5BNOME%5D%2C%20trabalho%20na%20empresa%20%5BEMPRESA%5D%20como%20%5BCARGO%5D%20e%20gostaria%20de%20falar%20com%20voc%C3%AA%20sobre%20%5BASSUNTO%5D%20via%20%5BPLATAFORMA%5D.%20Podemos%20marcar%20para%20%5Bdd%2Fmm%2Faaaa%5D%20%C3%A0s%20%5BHORAS%5D%20(Hor%C3%A1rio%20de%20Bras%C3%ADlia)%3F" target="_blank" rel="nofollow">
+            <a href="https://link.andremourasantos.com/contato-email-chamada" target="_blank" rel="nofollow">
                 <div class="ícone-cabeçalho">
                     <img loading="lazy" src="imagens/bio/cabeçalho-icone-2.webp" alt="Ícone de videochamada em cinza." width="40" height="40">
                 </div>
@@ -105,7 +128,7 @@
     </article>
 </section>
 
-<section class="separação" id="pós-links">
+<section class="separação" id="entre-links">
     <hr>
 </section>
 
@@ -118,7 +141,7 @@
             <h2>Doação</h2>
             <p>O que pode ser pouco para você é muito para o outro. Doe sangue, alimentos ou dinheiro.</p>
         </div>
-        <a href="#" target="_blank" rel="noopener noreferrer">Acessar</a>
+        <a href="https://www.google.com/search?q=doa%C3%A7%C3%A3o+perto+de+mim" target="_blank" rel="noopener noreferrer">Acessar</a>
     </article>
 
     <article id="vacina" class="hover">
@@ -136,10 +159,12 @@
 <section class="separação links-especiais" id="pós-links">
     <hr>
 </section>
+
 <footer>
     <img loading="lazy" src="imagens/info.webp" alt="Ícone de informações em cinza." width="25" height="25">
-    <p>Criado por André Moura Santos. Ícones de <a href="https://phosphoricons.com/" target="_blank" rel="noopener noreferrer">Phosphor Icons</a>.<span class="links-especiais"> As instituições que foram referidas nos links dos cartões "Doação" e "Cuide da sua saúde" não tem vínculo com André Moura Santos.</span></p>
+    <p>Criado por André Moura Santos. Ícones de <a href="https://phosphoricons.com/" target="_blank" rel="noopener noreferrer">Phosphor Icons</a>.</p>
 </footer>
 </main>
+<script defer src="bio.js"></script>
 </body>
 </html>

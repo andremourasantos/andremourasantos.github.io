@@ -89,6 +89,128 @@ main {
             background: var(--cor1_escurecida);
         }
 
+            /*↓ POPUP COMPARTILHAR ↓*/
+            #biopopup1Container {
+                position: absolute;
+                display: none;
+                align-items: center;
+                justify-content: center;
+                width: 100vw;
+                height: 100vh;
+                z-index: 999;
+                background-color: #00000030;
+                backdrop-filter: blur(5px);
+            }
+
+            #biopopup0 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            #biopopup0 > div {
+                display: block;
+                background-color: #ffffff;
+                width: 350px;
+                margin: 20px;
+                height: fit-content;
+                overflow-y: scroll;
+                padding: 20px 40px;
+                box-shadow: 0px 0px 10px white;
+                border-radius: 20px;
+            }
+
+            #biopopup0 > div > *, #biopopup1 > div > * {
+                display: block;
+                margin: 20px auto;
+                text-align: center;
+            }
+
+            #biopopup0 > div > p {
+                margin: 10px auto;
+            }
+
+            #biopopup1 {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            #biopopup1 > div {
+                display: block;
+                width: 350px;
+                height: fit-content;
+                padding: 20px 40px;
+                box-shadow: 0px 0px 10px white;
+                border-radius: 20px;
+                overflow-y: scroll;
+                text-align: center;
+                margin: 20px;
+                background-color: white;
+            }
+
+            #biopopup1 a {
+                padding: 10px 20px;
+                width: 250px;
+                text-align: center;
+                border-radius: 10px;
+                text-decoration: none;
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition-duration: 250ms;
+                box-shadow: var(--sombra_leve);
+            }
+
+            #biopopup1 a:hover {
+                transform: scale(1.05);
+                font-weight: bold;
+            }
+
+            #biopopup1 a > img {
+                margin-right: 15px;
+            }
+
+            #compartilharLinkedin {
+                background-color: #0077b5;
+            }
+
+            #compartilharFacebook {
+                background-color: #1877f2;
+            }
+
+            #compartilharWhatsapp {
+                background-color: #25d366;
+            }
+
+            #fecharbiopopup1, #fecharbiopopup0 {
+                cursor: pointer;
+                margin-top: 20px;
+                padding: 15px 30px;
+                border-radius: 15px;
+                background-color: white;
+                font-family: var(--título);
+                font-size: 16px;
+                border: 2px solid var(--cor1);
+                transition-duration: 250ms;
+            }
+        
+            #fecharbiopopup1:hover, #fecharbiopopup0:hover {
+                border-color: var(--cor1_escurecida);
+                background-color: var(--cor1);
+                color: white;
+                font-weight: bold;
+                border-radius: 25px;
+            }
+        
+            #fecharbiopopup1:active, #fecharbiopopup0:active {
+                background-color: var(--cor1_escurecida);
+                transform: scale(0.9);
+            }
+
         #foto {
             height: 200px;
             margin: auto auto -100px auto;
@@ -147,6 +269,11 @@ main {
         }
 
         #antes-links {
+            margin-bottom: 30px;
+        }
+
+        #entre-links {
+            margin-top: 30px;
             margin-bottom: 30px;
         }
 
@@ -220,14 +347,26 @@ main {
     }
 
     /*↓ LINKS ESPECIAIS ↓*/
-    /*~ainda tô trabalhando neles*/
         section.links-especiais, .links-especiais {
-            display: none;
+            display: show;
         }
 
-        #doação {
-            background-color: #f5f9f9;
-            border-color: #659e96;
+        section.links-especiais article, section.links-especiais article:hover {
+            border-color: #898900;
+            background-color: #ffffeb;
+        }
+
+        section.links-especiais article a {
+            border-color: #898900;
+        }
+
+        section.links-especiais article a:hover {
+            border-color: #3b3b00;
+            background-color: #898900;
+        }
+
+        section.links-especiais article a:active {
+            background-color: #3b3b00;
         }
 
         #doação:hover img {
@@ -245,27 +384,6 @@ main {
                 100% {transform: scale(1) rotate(0deg);}
             }
 
-        #doação a {
-            background: #ddeae8;
-            color: #2f4b47;
-            border-color: #659e96;
-        }
-
-        #doação a:hover {
-            background: #659e96;
-            color: white;
-            border-color: #2f4b47;
-        }
-
-        #doação a:active {
-            background-color: #2f4b47;
-        }
-
-        #vacina {
-            background-color: #f4f7ff;
-            border-color: #0d53fa;
-        }
-
         #vacina:hover img {
             animation: vacina-hover;
             animation-duration: 1200ms;
@@ -282,22 +400,6 @@ main {
                 75% {transform: rotate(5deg);}
                 100% {transform: rotate(0deg);}
             }
-
-        #vacina a {
-            background: #cedcfe;
-            color: #02267c;
-            border-color: #0d53fa;
-        }
-
-        #vacina a:hover {
-            background-color: #0d53fa;
-            color: white;
-            border-color: #02267c;
-        }
-
-        #vacina a:active {
-            background-color: #02267c;
-        }
     /*↑ LINKS ESPECIAIS ↑*/
 
     /*↓ RODAPÉ ↓*/
@@ -323,6 +425,10 @@ main {
 
 /*↓ REGRAS DE RESPONSIVIDADE ↓*/
 @media screen and (max-width: 768px) {
+    #biopopup0 > div {
+        height: 80vh;
+    }
+
     main {
         margin: auto;
         width: 80%;
@@ -358,6 +464,15 @@ main {
 }
 
 @media screen and (max-width: 600px) {
+    #biopopup0 > div {
+        height: 80vh;
+        width: 60vw;
+    }
+
+    #biopopup1 > div {
+        width: 60vw;
+    }
+
     section.links article {
         display: flex;
         flex-direction: column;
@@ -384,6 +499,10 @@ main {
 }
 
 @media screen and (max-width: 425px) {
+    #biopopup1 a {
+        width: 150px;
+    }
+        
     main {
         width: 90%;
         padding: 0px;
@@ -437,6 +556,10 @@ main {
         border-color: var(--cor1);
         padding: 10px 0px;
         flex-grow: 1;
+    }
+
+    section.links-especiais article a {
+        border-color: #898900;
     }
 
     div.links-ícones img {

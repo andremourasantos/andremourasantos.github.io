@@ -19,6 +19,8 @@ Com isso em mente, continuo a ver os vídeos do Gustavo Guanabara, que foi essen
 - Como criar e manter um bom código (legível e de fácil manutenção).
 - Como instalar e utilizar o GitHub Desktop.
 - Como criar, utilizar e atualizar repositórios no GitHub.
+- Princípios básicos de JavaScript.
+- Como utilizar o JavaScript para criar interações básicas na página.
 
 ---
 
@@ -50,6 +52,8 @@ Todos os programas e serviços que me ajudaram durante o desenvolvimento do meu 
 - VisualStudio Code [^8]
 	- Live Server Extension [^9]
 - Google Fonts [^10]
+- Linkly [^11]
+- Canva [^12]
 
 ---
 
@@ -64,3 +68,5 @@ Todos os programas e serviços que me ajudaram durante o desenvolvimento do meu 
 [^8]:O VisualStudio Code foi o programa utilizado para escrever os códigos HTML e CSS do projeto (futuramente também será utilizado para escrever os códigos JavaScript).
 [^9]:A extensão Live Server foi utilizada para que eu conseguisse visualizar as alterações feitas nos arquivos em tempo real, sem ter que realizar atualizações repetidas vezes no repositório ou precisasse recarregar o arquivo HTML.
 [^10]:O Google Fonts foi utilizado para baixar ou importar as fontes que estão sendo utilizadas no site.
+[^11]: O Linkly é um serviço de gerenciamento de links gratuito. Eu utilizei ele para criar URLs personalizadas e adaptáveis ao dispositivo utilizado, língua de acesso dentre outros. Foi muito útil para padronizar diversas ações no site e fora dele.
+[^12]: O Canva é um serviço online de criação de desings personalizados. Utilizei o Canva para criar as artes dos links do Linkly, além de ser muito fácil de utilizar, é muito mais rápido que criar e editar cada aspecto das imagens no GIMP.
