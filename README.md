@@ -10,6 +10,7 @@ Com isso em mente, continuo a ver os vídeos do Gustavo Guanabara, que foi essen
 
 ## O que aprendi até aqui? 🎓
 - Como funciona a internet (domínios, sub-domínios, DNS, servidores, back-end, front-end, etc).
+- Como configurar um domínio.
 - Os princípios básicos do HTML.
 - Os princípios básicos do CSS.
 - Como utilizar o CSS para estilizar páginas.
@@ -21,18 +22,19 @@ Com isso em mente, continuo a ver os vídeos do Gustavo Guanabara, que foi essen
 - Como criar, utilizar e atualizar repositórios no GitHub.
 - Princípios básicos de JavaScript.
 - Como utilizar o JavaScript para criar interações básicas na página.
+- Criar e utilizar os snippets do VS Code.
 
 ---
 
 # Estado atual de desenvolvimento do projeto 🏗
-_*Atualizado em Novembro de 2021. Próxima atualização em Dezembro de 2021._
+_*Atualizado em Dezembro de 2021._
 
-Atualmente o site principal (index.html) está em fase final de desenvolvimento, com suas partes de responsividade plenamente desenvolvidas. Restam apenas inclusão de pequenas linhas de texto e ligeiras alterações no CSS e no funcionamento interno do documento, como a criação do arquivo universal.css, que deve guardar regras de estilização para as principais tags ou conjunto de itens das páginas HTML (_como header.universal, footer, a, div.informação, entre outros_). Outros tópicos, como a perfomance do site, precisam ser aprimorados e eu estou aprendendo a como fazer isso.
+Atualmente o site encontra-se praticamente completo, com uma boa pontuação do Google PageInsights e completamente adaptado para dispositivos móveis, faltando apenas a adição de pequnas partes de conteúdo (como o meu currículo). Após finalizar todo o conteúdo do site em Português, irei começar a adatpação do conteúdo também para o Inglês (US). Confira as alterações com a [Atualização da 1° semana de Dezembro](https://github.com/andremourasantos/andremourasantos.github.io/commits/main) para saber mais.
 
 ### Fotos do DevTools:
-![foto-site-tamanho-pc](https://user-images.githubusercontent.com/92397834/140981870-86a6eda3-662d-434a-a324-aeba7fb4b817.png)
-![foto-site-tamanho-tablet](https://user-images.githubusercontent.com/92397834/140981875-ec3bc36a-5db0-4379-a4c5-44bfbd8eca85.png)
-![foto-site-tamanho-telefone](https://user-images.githubusercontent.com/92397834/140981879-81a0b9df-dd63-4212-9841-75b2088c2a7b.png)
+![foto-site-tamanho-pc](https://i.imgur.com/W2bEE6Z.png)
+![foto-site-tamanho-tablet](https://i.imgur.com/vWUGBgj.png)
+![foto-site-tamanho-telefone](https://i.imgur.com/0iA9Doc.png)
 
 ### Status da performance do site:
 Com a atualização da [3° semana de Novembro](https://github.com/andremourasantos/andremourasantos.github.io/commit/7cc10be792253b7e45174922f1cd6e74b482a8b6), a perfomance geral do site teve grandes melhorias.

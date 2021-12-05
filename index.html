@@ -73,11 +73,25 @@
                 </div>
                 <div id="apresentação-info">
                     <h2 class="somente-pc-tablet">Sobre mim</h2>
-                    <p>Prazer, me chamo André Moura Santos e tenho 19 anos. Sou de Rondônia e viajei para Curitiba por causa dos meus estudos em Marketing. Sou bastante criativo, persistente e gosto sempre de procurar novas maneiras de criar algo novo. Tenho facilidade com trabalho em equipe e cooperação, gosto de liberdade e autonomia.</p>
-                    <br>
-                    <h2 class="somente-pc-tablet">Ambições</h2>
-                    <p class="somente-pc-tablet">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum at est inventore nostrum exercitationem explicabo nulla similique, omnis voluptatum modi autem vitae enim repellendus voluptatibus nemo. Quae qui, recusandae facilis saepe nam, numquam nobis nemo, distinctio minima vero dolorem repellat!</p>
-                    <a href="https://youtu.be/V_UE0XM3TX0" target="_blank" rel="noopener noreferrer">Veja meu vídeo!</a>
+                    <p>Prazer, me chamo André Moura Santos e tenho 19 anos. Sou de Rondônia e viajei para Curitiba por causa dos meus estudos em Marketing. Sou bastante criativo, persistente e gosto sempre de procurar novas maneiras de criar algo novo. Tenho facilidade com trabalho em equipe e cooperação, gosto de liberdade e autonomia.<br><a href="https://youtu.be/V_UE0XM3TX0" target="_blank" rel="noopener noreferrer">Conheça-me em um minuto!</a><br><strong>Confira abaixo algumas das minhas habilidades:</strong></p>
+                    <div class="habilidadesVisãoRápida">
+                        <ul id="habilidadesVisãoRápida">
+                            <li class="hab02">Criatividade</li>
+                            <li class="hab03">Facebook Ads</li>
+                            <li class="hab01">Front-end Dev (HTML, CSS & JS)</li>
+                            <li class="hab03">Google Ads & Analytics</li>
+                            <li class="hab01">Google Suíte</li>
+                            <li class="hab03">Inglês Avançado</li>
+                            <li class="hab03">Marketing</li>
+                            <li class="hab03">Marketing Digital</li>
+                            <li class="hab01">Office 365</li>
+                            <li class="hab02">Proatividade</li>
+                            <li class="hab02">Publicidade Segmentada</li>
+                            <li class="hab03">SEO</li>
+                            <li class="hab03">SEM</li>
+                            <li class="hab02">Trabalho em equipe</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </article>
@@ -125,65 +139,166 @@
     <hr>
 </div>
 
-<!--POPUP FUNÇÃO EM TESTE-->
-<div class="popup-container" id="popup1">
-    <div class="popup popup1">
-        <img loading="lazy" src="imagens/novidade.webp" alt="Ícone de mágica em roxo." height="128" width="128">
+<!--↓ POPUP FUNÇÃO EM TESTE ↓-->
+<div class="popup-container" id="popupConhecimentos">
+    <div class="popup" id="popupNovidade">
+        <img loading="lazy" src="imagens/novidade.webp" alt="Ícone de mágica em laranja." height="128" width="128">
         <h1>Função em teste!</h1>
         <p>Uma nova janela de oportunidades se abre.</p>
-        <p>No momento eu estou aprendendo a usar <strong>JavaScript</strong> para criar interações na página, essa janela é uma delas.</p>
-        <button id="fechar-popup">Fechar</button>
-        <button id="abrir-popup2">Saiba mais</button>
-        <button id="irParaPopupCertificados" style="display: none; margin: 20px auto;">Continuar</button>
+        <p>No momento estou aprendendo a usar <strong>JavaScript</strong> para criar interações na página, essa janela é uma delas.</p>
+        <div>
+            <button id="irParaPopupCurrículo">Continuar</button>
+            <button id="irParaPopupCertificados" style="display: none;">Continuar</button>
+        </div>
     </div>
-    <div class="popup popup2" style="display: none;">
-        <img loading="lazy" src="imagens/js.webp" alt="Ícone de mágica em roxo." height="128" width="128">
-        <h1>O que é JavaScript?</h1>
-        <p><em>"A linguagem da interação na internet."</em></p>
-        <p>O JavaScrip é uma linguagem de programação que foi criada para permitir <strong>interações em páginas da internet</strong>. As três principais linguagens do desenvolvimento front-end são: HTML, CSS e JavaScript.</p>
-        <button id="fechar-popup2">Fechar</button>
+    <!--↓ CURRÍCULO ↓-->
+    <div class="popup" style="display: none;" id="popupCurrículoEmProgresso">
+        <img loading="lazy" src="imagens/js.webp" alt="Ícone de mágica em laranja." height="128" width="128">
+        <h1>Trabalho em progesso</h1>
+        <p>Olá, fico feliz que esteja interessado em ver o meu currículo! No momento estou trabalhando para adaptá-lo para uma visão agradável tanto para telefones quanto no computador.</p>
+        <p>Até lá, você pode conferir o meu currículo completo no botão "Conferir" logo abaixo.</p>
+        <div>
+            <button id="fecharPopupCurrículo-1">Fechar</button>
+            <a href="https://link.andremourasantos.com/curriculo" target="_blank" rel="noopener noreferrer" id="abrirCurrículoDrive">Conferir</a>
+        </div>
     </div>
     <!--↑ CURRÍCULO ↑-->
     <!--↓ CERTIFICADOS ↓-->
     <div class="popup popupCertificados" id="popupCertificados1">
-        <div class="certificadosTítulo">
-            <h1>Certificados</h1>
+        <div class="certificadosTítulo certificadosTítulohab03">
+            <h1>Conhecimentos e habilidades avançadas</h1>
         </div>
-        <img loading="lazy" src="imagens/certificados/base.webp" alt="Certificado 1." width="350" height="260">
-        <h2>Certificado 1</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque itaque maxime dignissimos nam quo nihil qui, repellendus deleniti. Repellendus vel distinctio neque sit magni dicta animi nulla ipsum voluptate laboriosam.</p>
+        <img loading="lazy" src="imagens/certificados/Marketing Digital USP.webp" alt="Certificado da USP de Marketing Digital de André Moura Santos." width="350" height="270">
+        <h2>Marketing Digital - USP</h2>
+        <p>Neste curso da Universidade de São Paulo (USP), aprendi os fundamentos do Marketing Digital, métricas utilizadas e formas de mensuração de resultados (como CPA, CPC, CLV, ROI, CTA entre outros) para Google Ads, Facebook Ads e Email Marketing.</p>
         <div>
             <button id="fecharPopupCertificados-1">Fechar</button>
-            <button id="avançarPopupCertificados-1">Continuar</button>
+            <button id="avançarPopupCertificados-1"><span class="somente-pc-tablet">Continuar</span><span class="somente-telefone">&gt;</span></button>
         </div>
     </div>
     <div class="popup popupCertificados" id="popupCertificados2">
-        <div class="certificadosTítulo">
-            <h1>Certificados</h1>
+        <div class="certificadosTítulo certificadosTítulohab03">
+            <h1>Conhecimentos e habilidades avançadas</h1>
         </div>
-        <img loading="lazy" src="imagens/certificados/base.webp" alt="Certificado 2." width="350" height="260">
-        <h2>Certificado 2</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque itaque maxime dignissimos nam quo nihil qui, repellendus deleniti. Repellendus vel distinctio neque sit magni dicta animi nulla ipsum voluptate laboriosam.</p>
+        <img loading="lazy" src="imagens/certificados/Facebook & Instagram Ads.webp" alt="Certificado da Udemy de Publicidade para Facebook e Instagram de André Moura Santos." width="350" height="270">
+        <h2>Facebook & Instagram Ads</h2>
+        <p>Neste curso da Udemy, com foco específico na ferramente de Gerenciador de Anúncios do Facebook, aprendi a criar campanhas e metas personalizadas, promover publicações e gerir resultados na plataforma (que inclui o Facebook App, o Instagram e o Messenger).</p>
         <div>
-            <button id="voltarPopupCertificados-1">Voltar</button>
-            <button id="avançarPopupCertificados-2">Continuar</button>
+            <button id="voltarPopupCertificados-1"><span class="somente-pc-tablet">Voltar</span><span class="somente-telefone">&lt;</span></button>
+            <button id="avançarPopupCertificados-2"><span class="somente-pc-tablet">Continuar</span><span class="somente-telefone">&gt;</span></button>
         </div>
     </div>
     <div class="popup popupCertificados" id="popupCertificados3">
-        <div class="certificadosTítulo">
-            <h1>Certificados</h1>
+        <div class="certificadosTítulo certificadosTítulohab03">
+            <h1>Conhecimentos e habilidades avançadas</h1>
         </div>
-        <img loading="lazy" src="imagens/certificados/base.webp" alt="Certificado 3." width="350" height="260">
-        <h2>Certificado 3</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque itaque maxime dignissimos nam quo nihil qui, repellendus deleniti. Repellendus vel distinctio neque sit magni dicta animi nulla ipsum voluptate laboriosam.</p>
+        <img loading="lazy" src="imagens/certificados/EFSET Listening and Reading Certificate.webp" alt="Certificado da English First Standardized English Test de procificência C2 em inglês de André Moura Santos." width="350" height="495">
+        <h2>Certificado de Inglês Avançado (C2)</h2>
+        <p>Esse certificado atesta a minha proficiência na língua inglesa. Sou capaz de escrever e ler sobre qualquer tipo de assunto, expressar emoções, opiniões e nuances na fala e escrita e ativamente participar de discussões ao nível acadêmico ou profissional.</p>
         <div>
-            <button id="voltarPopupCertificados-2">Voltar</button>
+            <button id="voltarPopupCertificados-2"><span class="somente-pc-tablet">Voltar</span><span class="somente-telefone">&lt;</span></button>
+            <button id="avançarPopupCertificados-3"><span class="somente-pc-tablet">Continuar</span><span class="somente-telefone">&gt;</span></button>
+        </div>
+    </div>
+    <div class="popup popupCertificados" id="popupCertificados4">
+        <div class="certificadosTítulo certificadosTítulohab03">
+            <h1>Conhecimentos e habilidades avançadas</h1>
+        </div>
+        <img loading="lazy" src="imagens/certificados/Inbound Marketing.webp" alt="Certificado da Udemy de Inbound Marketing de André Moura Santos." width="350" height="270">
+        <h2>Inbound Marketing</h2>
+        <p>Neste curso da Udemy, aprendi sobre o que é Inbound Marketing, como identificar as preferências e anseios do seu consumidor para criação de conteúdo relevante e engajador, vi também sobre o funil do Inbound e como os departamentos devem estar intrinsecamente interligados para mais sucesso em campanhas.</p>
+        <div>
+            <button id="voltarPopupCertificados-3"><span class="somente-pc-tablet">Voltar</span><span class="somente-telefone">&lt;</span></button>
+            <button id="avançarPopupCertificados-4"><span class="somente-pc-tablet">Continuar</span><span class="somente-telefone">&gt;</span></button>
+        </div>
+    </div>
+    <div class="popup popupCertificados" id="popupCertificados5">
+        <div class="certificadosTítulo certificadosTítulohab01">
+            <h1>Facilidade de aprendizagem e criatividade</h1>
+        </div>
+        <img loading="lazy" src="imagens/certificados/Curso de Inglês - Wise Up.webp" alt="Certificado de conclusão do curso de Inglês como segunda língua da Wise Up de André Moura Santos." width="350" height="270">
+        <h2>Wise Up - Curso de Inglês</h2>
+        <p>O certificado de finalização do curso de inglês da Wise Up (que está inteiramente em língua inglesa ─ inclusive as datas) é recebido apenas após aprovação no teste final, composto por quatro etapas (Compreensão de leitura; Compreensão de vídeo; Projeto escrito e; Apresentação do projeto), no qual recebi uma aprovação de 89,5 de 100.</p>
+        <div>
+            <button id="voltarPopupCertificados-4"><span class="somente-pc-tablet">Voltar</span><span class="somente-telefone">&lt;</span></button>
+            <button id="avançarPopupCertificados-5"><span class="somente-pc-tablet">Continuar</span><span class="somente-telefone">&gt;</span></button>
+        </div>
+    </div>
+    <div class="popup popupCertificados" id="popupCertificados6">
+        <div class="certificadosTítulo certificadosTítulohab01">
+            <h1>Facilidade de aprendizagem e criatividade</h1>
+        </div>
+        <img loading="lazy" src="imagens/certificados/Google Ateliê Digital.webp" alt="Certificado do Google Atelié Digital sobre Princípios básicos e aplicações do Marketing Digital de André Moura Santos." width="350" height="270">
+        <h2>Princípios e aplicações do Marketing Digital</h2>
+        <p>Neste curso do Google Ateliê Digital, aprendi a utilizar as mais diversas ferramentas e meios para promover negócios locais através da internet, principalmente com foco em Otimização de Pesquisa Orgânica (da sigla em inglês SEO) e Otimização de Marketing de Pesquisa (da sigla em inglês SEM).</p>
+        <div>
+            <button id="voltarPopupCertificados-5"><span class="somente-pc-tablet">Voltar</span><span class="somente-telefone">&lt;</span></button>
+            <button id="avançarPopupCertificados-6"><span class="somente-pc-tablet">Continuar</span><span class="somente-telefone">&gt;</span></button>
+        </div>
+    </div>
+    <div class="popup popupCertificados" id="popupCertificados7">
+        <div class="certificadosTítulo certificadosTítulohab02">
+            <h1>​​​Trabalho em equipe e proatividade​​</h1>
+        </div>
+        <img loading="lazy" src="imagens/certificados/Introdução à Gestão de Pessoas.webp" alt="Certificado da Ampli sobre a Introdução à Gestão de Pessoas  de André Moura Santos." width="350" height="270">
+        <h2>Introdução à Gestão de Pessoas</h2>
+        <p>Com o curso da Ampli, aprendi os conceitos básicos da Gestão de Pessoas, como a evolução do RH, formas de gerir talentos, as definições e formas de gerir o capital intelectual e o clima organizacional de um time ou empresa.</p>
+        <div>
+            <button id="voltarPopupCertificados-6"><span class="somente-pc-tablet">Voltar</span><span class="somente-telefone">&lt;</span></button>
+            <button id="avançarPopupCertificados-7"><span class="somente-pc-tablet">Continuar</span><span class="somente-telefone">&gt;</span></button>
+        </div>
+    </div>
+    <div class="popup popupCertificados" id="popupCertificados8">
+        <div class="certificadosTítulo certificadosTítulohab02">
+            <h1>​​​Trabalho em equipe e proatividade​​</h1>
+        </div>
+        <img loading="lazy" src="imagens/certificados/Desafios da Gestão de Pessoas.webp" alt="Certificado da Ampli sobre os Desafios da Gestão de Pessoas de André Moura Santos." width="350" height="270">
+        <h2>Desafios da Gestão de Pessoas</h2>
+        <p>Em complemento ao certificado de Introdução à Gestão de Pessoas, com este curso aprendi sobre como os problemas na gestão de pessoas repercute em todo time ou empresa, como identificar e solucionar esses conflitos e sobre as principais formas de incentivo e desincentivo aos funcionários.</p>
+        <div>
+            <button id="voltarPopupCertificados-7"><span class="somente-pc-tablet">Voltar</span><span class="somente-telefone">&lt;</span></button>
+            <button id="avançarPopupCertificados-8"><span class="somente-pc-tablet">Continuar</span><span class="somente-telefone">&gt;</span></button>
+        </div>
+    </div>
+    <div class="popup popupCertificados" id="popupCertificados9">
+        <div class="certificadosTítulo certificadosTítulohab02">
+            <h1>​​​Trabalho em equipe e proatividade​​</h1>
+        </div>
+        <img loading="lazy" src="imagens/certificados/Grupo de Estudos - Marca BSUP.webp" alt="Certificado do Grupo de Estudos para Rebranding da Business School da Universidade Positivo de André Moura Santos." width="350" height="270">
+        <h2>Rebranding da Business School</h2>
+        <p>O Projeto de Rebranding da Business School foi proposto pelo coordenador da Business School, da Universidade Positivo, e consistia em criar um logotipo para a faculdade, que representasse as mudanças ocorridas e que se adaptá-se melhor às redes sociais da organização. Foi um longo projeto que juntou diversas pessoas com habilidades diferentes, como Design, Organização, Criativo e Lidar com situações de estresse.</p>
+        <div>
+            <button id="voltarPopupCertificados-8"><span class="somente-pc-tablet">Voltar</span><span class="somente-telefone">&lt;</span></button>
+            <button id="avançarPopupCertificados-9"><span class="somente-pc-tablet">Continuar</span><span class="somente-telefone">&gt;</span></button>
+        </div>
+    </div>
+    <div class="popup popupCertificados" id="popupCertificados10">
+        <div class="certificadosTítulo certificadosTítulohab02">
+            <h1>​​​Trabalho em equipe e proatividade​​</h1>
+        </div>
+        <img loading="lazy" src="imagens/certificados/Destaque na participação do Rebranding da Business School.webp" alt="Certificado de Destaque de participação no Rebranding da Business School da Universidade Positivo de André Moura Santos." width="350" height="270">
+        <h2>Destaque no Rebranding da Business School</h2>
+        <p>Durante o Rebranding da Business School, recebi um certificado de distinção na participação do projeto, devido ao meu engajamento com o mesmo durante os vários meses, com agendamento de reuniões, organização de ATAs e de todos os arquivos dele, bem como trabalho com a comunicação entre os membros da equipe e assegurar que atingíssemos os objetivos em prazo.</p>
+        <div>
+            <button id="voltarPopupCertificados-9"><span class="somente-pc-tablet">Voltar</span><span class="somente-telefone">&lt;</span></button>
+            <button id="avançarPopupCertificados10"><span class="somente-pc-tablet">Continuar</span><span class="somente-telefone">&gt;</span></button>
+        </div>
+    </div>
+    <div class="popup popupCertificados" id="popupCertificados11">
+        <div class="certificadosTítulo certificadosTítulohab03">
+            <h1>Conhecimentos e habilidades avançadas</h1>
+        </div>
+        <img loading="lazy" src="imagens/certificados/McGraw Hill Certificat Français Débutant - A1.webp" alt="Certificado de Francês Iniciante (A1) da McGraw Hill de André Moura Santos." width="350" height="495">
+        <h2>Certificado de Francês Iniciante (A1)</h2>
+        <p>Após finalizar o curso de inglês e obter excelentes níveis de proficiência na língua, comecei a estudar Francês por conta própria, como passatempo. Este certificado da McGraw Hill foi obtido através do Busuu.</p>
+        <div>
+            <button id="voltarPopupCertificados-10"><span class="somente-pc-tablet">Voltar</span><span class="somente-telefone">&lt;</span></button>
             <button id="fecharPopupCertificados-2">Fechar</button>
         </div>
     </div>
     <!--↑ CERTIFICADOS ↑-->
 </div>
-<!--POPUP FUNÇÃO EM TESTE-->
+<!--↑ POPUP FUNÇÃO EM TESTE ↑-->
 
 <section id="conhecimentos">
     <article>
@@ -196,7 +311,7 @@
             <div id="currículo">
                 <div id="currículo-txt">
                     <h2>Currículo</h2>
-                    <p>Veja minhas habilidades pessoais e profissionais, confira minhas informações de contato e fique por dentro da minha formação acadêmico e experiências de trabalho.</p>
+                    <p>Veja minhas habilidades pessoais e profissionais, confira minhas informações de contato e fique por dentro da minha formação acadêmica e experiências de trabalho.</p>
                     <a id="abrir-popup">Acessar</a>
                 </div>
                 <div id="currículo-img">
@@ -210,7 +325,7 @@
                 </div>
                 <div id="certificados-txt">
                     <h2>Certificados</h2>
-                    <p>Você já viu todas as minhas habilidades no meu currículo? Agora é hora de ver os meus certificados que garantem que eu sou capaz de fazer o que digo!</p>
+                    <p>Você já viu todas as minhas habilidades no meu currículo? Agora é hora de ver os meus certificados que garantem que sou capaz de fazer o que digo!</p>
                     <a id="abrirPopupCertificados">Acessar</a>
                 </div>
             </div>
@@ -222,6 +337,20 @@
 <div class="separação">
     <hr>
 </div>
+
+<!--↓ POPUP RODAPÉ ↓-->
+<div class="popup-container" id="popupRodapé">
+    <div class="popup" id="popupGitHub">
+        <img loading="lazy" src="imagens/GitHub Octocat.webp" alt="Ícone do Octocat do GitHub em laranja." height="128" width="128">
+        <h1>Acompanhe no GitHub!</h1>
+        <p>Se você está interessado em acompanhar o desenvolvimento do site de pertinho, você pode conferir no meu repositório do GitHub! Lá você tem acesso a todos os arquivos, com licença MIT.</p>
+        <div>
+            <button id="fecharPopupRodapé">Fechar</button>
+            <a href="https://github.com/andremourasantos/andremourasantos.github.io" target="_blank" rel="noopener noreferrer">Conferir</a>
+        </div>
+    </div>
+</div>
+<!--↑ POPUP RODAPÉ ↑-->
 
 <section id="contato">
     <article>
@@ -267,22 +396,17 @@
 </section>
 </main>
 <footer>
-    <p>Site em desenvolvimento, criado por <a href="index.html">André Moura Santos</a>. Ícones de <a href="https://phosphoricons.com/">Phosphor Icons</a>.</p>
+    <p>Site <span id="abrirPopupGitHub">em desenvolvimento</span>, criado por André Moura Santos, 2021. Ícones de <a href="https://phosphoricons.com/" target="_blank" rel="noopener noreferrer">Phosphor Icons</a>.</p>
 </footer>
-<main class="tela-pequena">
+<main class="tela-pequena" id="mainTelaPequena">
     <div class="tela-pequena">
-        <img loading="lazy" src="imagens/tela-pequena.webp" alt="Ícone de inseto simplificado em cinza.">
-        <h1>Nossa, que tela pequena!</h1>
-        <p>Uau! Seu dispositivo possui uma tela muito pequena para visualizar meu site.</p>
-        <p>Você realmente me pegou desprevenido! Acesse meu site em outro dispositivo:</p>
-        <img loading="lazy" class="tela-pequena-qr-code" src="imagens/qr-code.webp" alt="QR-Code para acessar o meu site: www.andremourasantos.com.">
-        <hr>
+        <img loading="lazy" src="imagens/tela-pequena.webp" alt="Ícone de inseto simplificado em cinza." height="128" width="128">
+        <h1>Nossa, que estreito!</h1>
+        <p>Uau! Meu site ainda não está adaptado para uma tela tão estreita assim.</p>
+        <p>Se você possui um dispositivo dobrável, abra-o na tela maior e recarregue a página para poder visualizar o site.</p>
+        <button id="telaPequenaAbrirSite">Abrir mesmo assim</button>
         <div class="xda">
             <p>André Moura Santos</p>
-        </div>
-        <hr>
-        <div class="código">
-            <p>tela-pequena-1121</p>
         </div>
     </div>
 </main>

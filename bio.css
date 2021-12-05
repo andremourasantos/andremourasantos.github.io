@@ -96,7 +96,7 @@ main {
                 align-items: center;
                 justify-content: center;
                 width: 100vw;
-                height: 100vh;
+                height: 100%;
                 z-index: 999;
                 background-color: #00000030;
                 backdrop-filter: blur(5px);
@@ -425,10 +425,6 @@ main {
 
 /*↓ REGRAS DE RESPONSIVIDADE ↓*/
 @media screen and (max-width: 768px) {
-    #biopopup0 > div {
-        height: 80vh;
-    }
-
     main {
         margin: auto;
         width: 80%;
@@ -463,9 +459,20 @@ main {
     }
 }
 
+@media screen and (max-height: 600px) {
+    #biopopup0 > div, #biopopup1 > div {
+        max-height: 400px;
+    }
+}
+
+@media screen and (max-height: 640px) {
+    #biopopup0 > div {
+        max-height: 500px;
+    }
+}
+
 @media screen and (max-width: 600px) {
     #biopopup0 > div {
-        height: 80vh;
         width: 60vw;
     }
 
