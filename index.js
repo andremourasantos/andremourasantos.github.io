@@ -9,13 +9,33 @@ function findPos(obj) {
 }
 //↑ CONFIGURAÇÕES ↑
 
-//↓ APRESENTAÇÃO ↓
-document.getElementById('habilidadesVisãoRápida').addEventListener('click', function timeFunction(){
-    setTimeout(function() {
-        window.scroll(0, findPos(document.getElementById('habilidades')));
+//↓ CABEÇALHO ↓
+document.getElementById('cabeçalho-linkedin-icone').addEventListener('click', function timeFunction(){
+    setTimeout(() => {
+        window.scroll(0, findPos(document.getElementById('cartão-contato-linkedin')));
     }, 250);
 });
 
+//↓ APRESENTAÇÃO ↓
+document.querySelectorAll('li.hab01').forEach(item => {item.addEventListener('click', function timeFunction(){
+    setTimeout(function(){
+        window.scroll(0, findPos(document.getElementById('habilidade-1')));
+    },250)
+})})
+
+document.querySelectorAll('li.hab02').forEach(item => {item.addEventListener('click', function timeFunction(){
+    setTimeout(function(){
+        window.scroll(0, findPos(document.getElementById('habilidade-2')));
+    },250)
+})})
+
+document.querySelectorAll('li.hab03').forEach(item => {item.addEventListener('click', function timeFunction(){
+    setTimeout(function(){
+        window.scroll(0, findPos(document.getElementById('habilidade-3')));
+    },250)
+})})
+
+/* ESSE CÓDIGO FICARÁ SALVO PARA FUTURO USO
 //↓ FUNÇÃO EM TESTE ↓
 document.getElementById('abrir-popup').addEventListener('click', function timeFunction(){
     setTimeout(function(){
@@ -29,24 +49,46 @@ document.getElementById('abrir-popup').addEventListener('click', function timeFu
     }, 250);
 });
 
+//↓ CURRICULO ↓
 document.getElementById('irParaPopupCurrículo').addEventListener('click', function timeFunction(){
     setTimeout(function(){
         document.querySelector('#popupNovidade').style.display = 'none';
-        document.querySelector('#popupCurrículoEmProgresso').style.display = 'block';
+        document.querySelector('#popupCurrículo').style.display = 'block';
     }, 250);
 });
 
-//↓ CURRICULO ↓
-document.getElementById('fecharPopupCurrículo-1').addEventListener('click', function timeFunction(){
-    setTimeout(function(){
-        document.querySelector('#popupCurrículoEmProgresso').style.display = 'none';
+document.getElementById('fecharPopupCurrículo-2').addEventListener('click', function timeFunction(){
+    setTimeout(() => {
+        document.getElementById('popupCurrículo').style.display = 'none';
         document.querySelector('#popupNovidade').style.display = 'block';
         document.querySelector('html').style.overflowY = 'auto';
         document.querySelector('#popupConhecimentos').style.display = 'none';
         document.querySelector('html').style.scrollBehavior = 'smooth';
     }, 250);
 });
+*/
 
+//↓ CURRÍCULO ↓
+document.getElementById('abrirPopupCurrículo').addEventListener('click', function timeFunction(){
+    setTimeout(() => {
+        document.querySelector('html').style.scrollBehavior = 'auto';
+        document.querySelector('html').style.overflowY = 'hidden';
+        document.querySelector('#popupConhecimentos').style.display = 'flex';
+        window.scroll(0, findPos(document.getElementById('popupConhecimentos')));
+        document.querySelector('#popupCurrículo').style.display = 'block';
+    }, 250);
+});
+
+document.getElementById('fecharPopupCurrículo-2').addEventListener('click', function timeFunction(){
+    setTimeout(() => {
+        document.querySelector('html').style.scrollBehavior = 'smooth';
+        document.querySelector('html').style.overflowY = 'auto';
+        document.querySelector('#popupConhecimentos').style.display = 'none';
+        document.querySelector('#popupCurrículo').style.display = 'none';
+    }, 250);
+});
+
+/* ESSE CÓDIGO FICARÁ SALVO PARA FUTURO USO
 //↓ CERTIFICADOS ↓
 document.getElementById('abrirPopupCertificados').addEventListener('click', function timeFunction(){
     setTimeout(function(){
@@ -63,6 +105,18 @@ document.getElementById('abrirPopupCertificados').addEventListener('click', func
 document.getElementById('irParaPopupCertificados').addEventListener('click', function timeFunction(){
     setTimeout(function(){
         document.querySelector('#popupNovidade').style.display = 'none';
+        document.querySelector('#popupCertificados1').style.display = 'block';
+    }, 250);
+});
+*/
+
+//↓ CERTIFICADOS ↓
+document.getElementById('abrirPopupCertificados').addEventListener('click', function timeFunction(){
+    setTimeout(() => {
+        document.querySelector('html').style.scrollBehavior = 'auto';
+        document.querySelector('html').style.overflowY = 'hidden';
+        document.querySelector('#popupConhecimentos').style.display = 'flex';
+        window.scroll(0, findPos(document.getElementById('popupConhecimentos')));
         document.querySelector('#popupCertificados1').style.display = 'block';
     }, 250);
 });

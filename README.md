@@ -27,9 +27,9 @@ Com isso em mente, continuo a ver os vídeos do Gustavo Guanabara, que foi essen
 ---
 
 # Estado atual de desenvolvimento do projeto 🏗
-_*Atualizado em Dezembro de 2021._
+_*Atualizado em Janeiro de 2022._
 
-Atualmente o site encontra-se praticamente completo, com uma boa pontuação do Google PageInsights e completamente adaptado para dispositivos móveis, faltando apenas a adição de pequnas partes de conteúdo (como o meu currículo). Após finalizar todo o conteúdo do site em Português, irei começar a adatpação do conteúdo também para o Inglês (US). Confira as alterações com a [Atualização da 1° semana de Dezembro](https://github.com/andremourasantos/andremourasantos.github.io/commits/main) para saber mais.
+O site agora encontra-se completo e plenamente funcional, todas os itens pendentes foram concluídos. O Google Tag Manager foi configurado para as duas páginas, bem como o Google Analytics. Com essa [Atualização da 2° semana de Janeiro/22](https://github.com/andremourasantos/andremourasantos.github.io/commits/main), o envio de commits semanais será suspenso e apenas serão realizadas novas alterações quando pertinentes.
 
 ### Fotos do DevTools:
 ![foto-site-tamanho-pc](https://i.imgur.com/W2bEE6Z.png)

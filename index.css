@@ -356,6 +356,7 @@ div.separação > hr {
             transition-duration: 500ms;
             transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
             border: 2px solid #c5c5c5;
+            overflow: hidden;
         }
 
         div.habilidades p.habilidades-número {
@@ -535,6 +536,86 @@ div.separação > hr {
         transform: scale(0.9);
     }
 
+    div.containerPopupCurrículo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    div.containerPopupCurrículo p {
+        text-align: justify;
+    }
+
+    section.sobreMimCurrículo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    section.sobreMimCurrículo > article {
+        display: block;
+        margin: 0px;
+        width: 100%;
+        height: fit-content;
+        padding: 10px 0px;
+        border-radius: 20px;
+        box-shadow: 0px 0px 5px 0px #00000020;
+    }
+
+    section.sobreMimCurrículo > article > p {
+        width: 80%;
+    }
+
+    section.popupCurrículocabeçalho {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+        border-radius: 20px;
+        padding: 20px 0px;
+        box-shadow: var(--sombra_leve);
+    }
+
+    section.popupCurrículocabeçalho > p.infoContatoCurrículo {
+        text-align: center;
+        font-size: calc(90%);
+    }
+
+    section.popupCurrículocabeçalho img {
+        width: 200px;
+        height: fit-content;
+        border-radius: 100%;
+        border: 5px solid var(--cor1);
+        box-shadow: var(--sombra_aparente);
+        margin-bottom: 20px;
+    }
+
+    section.popupCurrículocabeçalho h3 {
+        color: #808080;
+        font-size: calc(100%);
+        text-align: center;
+    }
+
+    section.sobreMimCurrículo > article h3 {
+        font-size: 22px;
+        margin-bottom: -10px;
+        background-color: var(--cor1);
+        color: white;
+        text-shadow: 0px 0px 1px #00000050;
+        border-radius: 20px 20px 0px 0px;
+        width: calc(100% - 40px);
+        padding: 15px 20px;
+        position: relative;
+        left: 0px;
+        top: -10px;
+    }
+
     div.popupCertificados button > span.somente-telefone {
         display: none;
     }
@@ -612,9 +693,10 @@ div.separação > hr {
         font-size: 20px;
     }
 
-    div.container-conhecimentos a {
+    div.container-conhecimentos button {
         padding: 15px 30px;
         cursor: pointer;
+        background-color: white;
         margin: 20px auto;
         width: 50%;
         border: 2px solid var(--cor1);
@@ -626,18 +708,18 @@ div.separação > hr {
         text-align: center;
     }
 
-    #currículo:hover a, #certificados:hover a {
+    #currículo:hover button, #certificados:hover button {
         font-weight: bold;
         color: white;
         background-color: var(--cor1);
         border: 2px solid var(--cor1_escurecida);
     }
 
-    #currículo a:hover, #certificados a:hover {
+    #currículo button:hover, #certificados button:hover {
         border-radius: 30px;
     }
 
-    #currículo a:active, #certificados a:active {
+    #currículo button:active, #certificados button:active {
         background: var(--cor1_escurecida);
         transform: scale(0.9);
     }
@@ -1366,6 +1448,36 @@ footer a:hover, #abrirPopupGitHub:hover {
         display: none;
     }
 
+    section.popupCurrículocabeçalho {
+        box-shadow: none;
+        width: 100%;
+    }
+
+    section.popupCurrículocabeçalho img {
+        width: 90%;
+        height: fit-content;
+    }
+
+    section.popupCurrículocabeçalho > h2 {
+        width: 100%;
+    }
+
+    section.popupCurrículocabeçalho > p.infoContatoCurrículo > .somente-pc-tablet {
+        display: none;
+    }
+
+    section.popupCurrículocabeçalho > p.infoContatoCurrículo {
+        margin-top: -20px;
+    }
+
+    section.sobreMimCurrículo > article p {
+        font-size: 16px;
+    }
+
+    section.sobreMimCurrículo article:nth-child(4) p, section.sobreMimCurrículo article:nth-child(5) p {
+        text-align: center;
+    }
+
     div.popupCertificados button > span.somente-telefone {
         display: block;
     }
@@ -1382,6 +1494,18 @@ footer a:hover, #abrirPopupGitHub:hover {
         font-size: 16px;
     }
 
+    section.popupCurrículocabeçalho > * {
+        width: 100%;
+    }
+
+    section.popupCurrículocabeçalho h2 {
+        font-size: 28px;
+    }
+
+    section.popupCurrículocabeçalho h3 {
+        font-size: 18px;
+    }
+
     #cabeçalho-foto {
         display: none;
     }
@@ -1391,6 +1515,7 @@ footer a:hover, #abrirPopupGitHub:hover {
         width: 55px;
         height: 55px;
         margin-left: 20px;
+        transition-duration: 250ms;
     }
 
     #cabeçalho-linkedin-icone:active {
