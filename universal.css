@@ -157,16 +157,12 @@ header.universal nav > a:active {
     border-color: var(--cor1);
     border-radius: 100%;
     border-style: solid;
-    border-width: 3px;
+    border-width: 4px;
 }
 
 #cabeçalho--texto-foto h1 {
     font-family: var(--título);
     margin-top: 5px;
-}
-
-#cabeçalho--texto-foto p {
-    display: none;
 }
 
 #cabeçalho-linkedin-icone {
@@ -260,12 +256,6 @@ div.informação a::after {
     #cabeçalho--texto-foto h1 {
         font-size: 32px;
         margin-right: 0px;
-    }
-
-    #cabeçalho--texto-foto p {
-        display: block;
-        flex: 1 1 100%;
-        text-align: center;
     }
 }
 
