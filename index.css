@@ -616,6 +616,40 @@ div.separação > hr {
         top: -10px;
     }
 
+    div.experiênciasProfissionais {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: calc(100% - 80px);
+        gap: 20px;
+        margin: 10px 35px;
+    }
+
+    div.experiênciasProfissionais img {
+        width: 25%;
+        height: fit-content;
+        border-radius: 100%;
+    }
+
+    div.experiênciasProfissionais > div > div {
+        text-align: left;
+    }
+
+    div.experiênciasProfissionais h4 {
+        font-size: 18px;
+    }
+
+    div.experiênciasProfissionais p.exPdata {
+        font-size: 16px;
+        margin-top: 0px;
+    }
+
+    div.experiênciasProfissionais p {
+        text-align: left;
+        font-size: 18px;
+        margin: 5px 0;
+    }
+
     div.popupCertificados button > span.somente-telefone {
         display: none;
     }
@@ -851,12 +885,14 @@ div.separação > hr {
     }
 
     div.listagemProjetos > *:hover {
-        border-color: var(--cor1_escurecida);
+        border-color: var(--cor_borda_escurecida);
         transform: scale(1.05);
     }
 
     div.listagemProjetos > * img {
         width: calc(100% + 10vh);
+        object-fit: cover;
+        object-position: top;
         position: relative;
         left: -5vh;
         top: -5vh;
@@ -872,6 +908,18 @@ div.separação > hr {
         background-image: linear-gradient(0deg, white 0%, transparent 20%);
         z-index: 1;
         margin-top: -150px;
+    }
+
+    div.listagemProjetos h3 {
+        font-size: 24px;
+    }
+
+    div.listagemProjetos p {
+        text-align: justify;
+    }
+
+    div.listagemProjetos p, div.exibiçãoProjetos > a {
+        font-size: 20px;
     }
 
     /*↓ SEÇÃO INFORMAÇÕES DE CONTATO ↓*/
@@ -989,30 +1037,20 @@ div.separação > hr {
 
     .cartão-contato:hover .contato-info {
         display: block;
-        animation-name: contato-info;
-        animation-timing-function: linear;
-        animation-duration: 150ms;
+        animation: contato-info 150ms linear;
     }
 
         @keyframes contato-info {
-            0% {transform: translateY(20px) scaleY(0); display: block; opacity: 0%;}
-            25% {transform: translateY(15px) scaleY(0.25); opacity: 25%;}
-            50% {transform: translateY(10px) scaleY(0.5); opacity: 50%;}
-            75% {transform: translateY(5px) scaleY(0.75); opacity: 75%;}
+            0% {transform: translateY(20px) scaleY(0); opacity: 0%;}
             100% {transform: translateY(0px) scaleY(1); opacity: 100%;}
         }
     
     .cartão-contato:hover .contato-info p {
-        animation-name: contato-info-p;
-        animation-timing-function: linear;
-        animation-duration: 500ms;
+        animation: contato-info-p 300ms linear;
     }
 
         @keyframes contato-info-p {
             0% {opacity: 25%}
-            25% {opacity: 25%;}
-            50% {opacity: 50%;}
-            75% {opacity: 75%;}
             100% {opacity: 100%;}
         }
 
@@ -1097,19 +1135,6 @@ footer a:hover, #abrirPopupGitHub:hover {
 
     #certificados {
         margin-left: 10px;
-    }
-
-    .cartão {
-        margin: 40px 20px;
-        width: 250px;
-    }
-
-    #email .cartão-hover-txt, #videochamada .cartão-hover-txt {
-        bottom: -77px;
-    }
-
-    .cartão-ico img {
-        width: 80px;
     }
 
     div.container-infocontato {
@@ -1197,27 +1222,6 @@ footer a:hover, #abrirPopupGitHub:hover {
 
     article div.cabeçalho {
         margin-bottom: 20px;
-    }
-
-    .cartão {
-        margin: 40px 10px;
-        width: 200px;
-    }
-
-    .cartão h2 {
-        font-size: 24px;
-    }
-
-    .cartão-hover-txt {
-        bottom: -80px;
-    }
-
-    #videochamada .cartão-hover-txt {
-        bottom: -72px;
-    }
-
-    #email .cartão-hover-txt {
-        bottom: -82px;
     }
 }
 
@@ -1537,12 +1541,50 @@ footer a:hover, #abrirPopupGitHub:hover {
         margin-top: -20px;
     }
 
+    section.sobreMimCurrículo > article {
+        width: 115%;
+    }
+
     section.sobreMimCurrículo > article p {
         font-size: 16px;
     }
 
-    section.sobreMimCurrículo article:nth-last-child(2) p, section.sobreMimCurrículo article:last-child p {
+    section.sobreMimCurrículo article:nth-last-child(2) p {
         text-align: center;
+    }
+
+    div.experiênciasProfissionais {
+        margin: 20px auto;
+        width: 80%;
+        flex-direction: column;
+        background-color: #ececec80;
+        border-radius: 10px;
+    }
+
+    div.experiênciasProfissionais img {
+        width: 45%;
+        height: fit-content;
+        border-radius: 100%;
+        margin-top: 20px;
+    }
+
+    div.experiênciasProfissionais > div > div {
+        width: 80%;
+        margin: 0 auto 20px auto;
+    }
+
+    div.experiênciasProfissionais h4 {
+        text-align: center;
+    }
+
+    div.experiênciasProfissionais p.exPdata {
+        margin-top: 0px;
+        text-align: center;
+    }
+
+    div.experiênciasProfissionais p {
+        text-align: center;
+        font-size: 16px;
     }
 
     div.popupCertificados button > span.somente-telefone {
@@ -1575,6 +1617,30 @@ footer a:hover, #abrirPopupGitHub:hover {
 
     div.listagemProjetos > * {
         width: 200px;
+        padding: 3vh;
+    }
+
+    div.listagemProjetos > * img {
+        width: calc(100% + 6vh);
+        left: -3vh;
+        top: -3vh;
+    }
+
+    div.degradêListagemProjetos {
+        inset: calc(150px - 3vh) 0 0 -3vh;
+        width: calc(100% + 6vh);
+    }
+
+    div.listagemProjetos h3 {
+        font-size: 20px;
+    }
+
+    div.listagemProjetos p {
+        font-size: 16px;
+    }
+
+    div.exibiçãoProjetos > a {
+        font-size: 18px;
     }
 
     #cabeçalho-foto {
