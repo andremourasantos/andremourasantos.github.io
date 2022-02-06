@@ -34,5 +34,28 @@
 			"prefix": "botãopopup",
 			"body": "document.getElementById('$1').addEventListener('click', function timeFunction(){\n\tsetTimeout(() => {\n\t\t$2\n\t},$3 250);\n});",
 			"description": "Seleciona um elemento pela ID e cria um addEventListener que executa uma função com delay de 250ms."
+		},
+
+		"checarIdioma": {
+			"scope": "javascript,typescript",
+			"prefix": "checarIdioma",
+			"body": [
+				"let idioma = window.navigator.userLanguage || window.navigator.language",
+				"",
+				"if (window.location.pathname.includes('${1:idioma_secundário}')) {if (idioma == '${2:idioma_principal_do_site}') {window.location.replace(`/${3:caminho_para_página_principal}.html`)} else {}}else {if (idioma == '${2:idioma_principal_do_site}') {} else{window.location.replace(`/${4:caminho_para_página_do_idioma_secundário}.html`)}}"
+			],
+			"description": "Esse script utiliza a técnia de separar os idiomas de uma página em pastas diferentes. Utilização apenas em páginas com dois idiomas disponiveis. Ao carregar o script, ele analise o idioma do navegador, com base nisso, executa as ações definidas."
+		},
+
+		"checarDispositivo": {
+			"scope": "javascript,typescript",
+			"prefix": "checarDispositivo",
+			"body": ["let computador = false",
+			"",
+			"function checarDispositivo(){if (window.innerWidth<768) {} else {computador = true}}",
+			"",
+			"checarDispositivo()",
+			"window.addEventListener('resize', checarDispositivo)"],
+			"description": "Analisa e checa constantemente a largura da tela de exibição da página e define o tipo de dispotivio baseado nisso."
 		}
 }

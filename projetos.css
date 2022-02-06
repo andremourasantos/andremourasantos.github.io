@@ -1,6 +1,33 @@
 @charset "UTF-8";
-
 /* ↑ REGRAS ↑ */
+
+/* ↓ BARRA DE ROLAGEM ↓ */
+#popupcontainer >*::-webkit-scrollbar {
+    width: 10px;
+}
+
+#popupcontainer >*::-webkit-scrollbar-track {
+    background: var(--cor_borda);
+    border-radius: 5px;
+    margin: 0px auto;
+    margin-block: 60px;
+}
+
+#popupcontainer >*::-webkit-scrollbar-thumb {
+    background: var(--cor_borda_escurecida);
+    border-radius: 5px;
+}
+
+#popupcontainer >*::-webkit-scrollbar-thumb:hover, #popupcontainer >*::-webkit-scrollbar-thumb:active {
+    background: var(--cor1);
+}
+
+@media screen and (max-width: 768px) {
+    #popupcontainer >*::-webkit-scrollbar {
+        width: 5px;
+    }
+}
+
 /* ↓ GERAL ↓ */
 main {
     max-width: 1440px;
@@ -177,6 +204,28 @@ article.cartãoDoProjeto p.descriçãoCompleta {
     border-radius: 5px;
 }
 
+article.cartãoDoProjeto p.translateoff {
+    font-size: 16px;
+    text-align: left;
+    margin-bottom: 10px;
+    color: black;
+    background-color: rgb(252, 252, 188);
+    width: fit-content;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+article.cartãoDoProjeto p.translateon {
+    font-size: 16px;
+    text-align: left;
+    margin-bottom: 10px;
+    color: black;
+    background-color: rgb(187, 255, 188);
+    width: fit-content;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
 article.cartãoDoProjeto button {
     display: block;
     font-size: 18px;
@@ -231,7 +280,7 @@ footer a {
     padding: 5vw;
     height: fit-content;
     max-height: 70vh;
-    overflow-y: scroll;
+    overflow: overlay;
     overflow-x: hidden;
     margin: auto;
     background-color: white;

@@ -7,6 +7,23 @@ function findPos(obj) {
         return [curtop];
     }
 }
+
+let idioma = window.navigator.userLanguage || window.navigator.language
+let computador = false
+
+if (window.location.pathname.includes('en-US')) {
+    if (idioma == 'pt-BR') {window.location.replace(`/index.html`)} else {}
+} else {
+    if (idioma == 'pt-BR') {} else {window.location.replace(`/en-US/index.html`)}
+}
+
+function checarDispositivo(){
+    if (window.innerWidth<768) {} else {computador = true}
+    adicionarVideo()
+}
+
+checarDispositivo()
+window.addEventListener('resize', adicionarVideo)
 //↑ CONFIGURAÇÕES ↑
 
 //↓ CABEÇALHO ↓
@@ -34,6 +51,14 @@ document.querySelectorAll('li.hab03').forEach(item => {item.addEventListener('cl
         window.scroll(0, findPos(document.getElementById('habilidade-3')));
     },250)
 })})
+
+function adicionarVideo() {
+    if (window.innerWidth<=425) {
+        document.getElementById('video-iframe').innerHTML = ''
+    } else {
+        document.getElementById('video-iframe').innerHTML = '<div id="video-iframe"><iframe defer width="560" height="315" src="https://www.youtube.com/embed/V_UE0XM3TX0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>'
+    }
+}
 
 /* ESSE CÓDIGO FICARÁ SALVO PARA FUTURO USO
 //↓ FUNÇÃO EM TESTE ↓
@@ -74,7 +99,6 @@ document.getElementById('abrirPopupCurrículo').addEventListener('click', functi
         document.querySelector('html').style.scrollBehavior = 'auto';
         document.querySelector('html').style.overflowY = 'hidden';
         document.querySelector('#popupConhecimentos').style.display = 'flex';
-        window.scroll(0, findPos(document.getElementById('popupConhecimentos')));
         document.querySelector('#popupCurrículo').style.display = 'block';
     }, 250);
 });
@@ -116,7 +140,6 @@ document.getElementById('abrirPopupCertificados').addEventListener('click', func
         document.querySelector('html').style.scrollBehavior = 'auto';
         document.querySelector('html').style.overflowY = 'hidden';
         document.querySelector('#popupConhecimentos').style.display = 'flex';
-        window.scroll(0, findPos(document.getElementById('popupConhecimentos')));
         document.querySelector('#popupCertificados1').style.display = 'block';
     }, 250);
 });
@@ -126,7 +149,6 @@ document.getElementById('fecharPopupCertificados-1').addEventListener('click', f
         document.querySelector('.popup-container').style.display = 'none';
         document.querySelector('html').style.overflowY = 'auto';
         document.querySelector('#popupCertificados1').style.display = 'none';
-        window.scroll(0, findPos(document.getElementById('conhecimentos')));
         document.querySelector('html').style.scrollBehavior = 'smooth';
     }, 250);
 });
@@ -276,7 +298,6 @@ document.getElementById('fecharPopupCertificados-2').addEventListener('click', f
         document.querySelector('.popup-container').style.display = 'none';
         document.querySelector('html').style.overflowY = 'auto';
         document.querySelector('#popupCertificados11').style.display = 'none';
-        window.scroll(0, findPos(document.getElementById('conhecimentos')));
         document.querySelector('html').style.scrollBehavior = 'smooth';
     }, 250);
 });
@@ -288,7 +309,6 @@ document.getElementById('abrirPopupGitHub').addEventListener('click', function t
         document.querySelector('#popupGitHub').style.display = 'block';
         document.querySelector('html').style.overflowY = 'hidden';
         document.querySelector('html').style.scrollBehavior = 'auto';
-        window.scroll(0, findPos(document.getElementById('popupRodapé')));
     }, 250);
 });
 
@@ -297,7 +317,6 @@ document.getElementById('fecharPopupRodapé').addEventListener('click', function
         document.querySelector('#popupRodapé').style.display = 'none';
         document.querySelector('html').style.overflowY = 'auto';
         document.querySelector('html').style.scrollBehavior = 'smooth';
-        window.scroll(0, findPos(document.getElementById('abrirPopupGitHub')));
     }, 250);
 });
 

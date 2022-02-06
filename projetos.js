@@ -1,5 +1,14 @@
 const popupContainer = document.getElementById('popupcontainer')
 const html = document.querySelector('html')
+let idioma = window.navigator.userLanguage || window.navigator.language;
+
+if (window.location.pathname.includes('en-US')) {
+    if (idioma == 'pt-BR') {window.location.replace(`/projetos.html`)} else {}
+} else {
+    if (idioma == 'pt-BR') {} else {window.location.replace(`/en-US/projects.html`)}
+}
+
+//↑ CONFIGURAÇÕES
 
 // ↓ POPUPS ↓
 function abrirContainerPopup() {

@@ -26,6 +26,40 @@
     font-display: swap;
 }
 
+/* ↓ BARRA DE ROLAGEM ↓ */
+div.habilidadesVisãoRápida > ul::-webkit-scrollbar, div.popup::-webkit-scrollbar, div.tela-pequena::-webkit-scrollbar {
+    width: 10px;
+}
+
+div.habilidadesVisãoRápida > ul::-webkit-scrollbar-track {
+    background: var(--cor_borda);
+    border-radius: 10px;
+    margin-block: 20px;
+}
+
+div.popup::-webkit-scrollbar-track, div.tela-pequena::-webkit-scrollbar-track {
+    background: var(--cor_borda);
+    border-radius: 10px;
+    margin-block: 40px;
+}
+
+div.habilidadesVisãoRápida > ul::-webkit-scrollbar-thumb, div.popup::-webkit-scrollbar-thumb, div.tela-pequena::-webkit-scrollbar-thumb {
+    background: var(--cor_borda_escurecida);
+    border-radius: 5px;
+}
+
+div.habilidadesVisãoRápida > ul::-webkit-scrollbar-thumb:hover, div.habilidadesVisãoRápida > ul::-webkit-scrollbar-thumb:active, div.popup::-webkit-scrollbar-thumb:hover, div.popup::-webkit-scrollbar-thumb:active, div.tela-pequena::-webkit-scrollbar-thumb:hover, div.tela-pequena::-webkit-scrollbar-thumb:active {
+    background: var(--cor1);
+}
+
+@media screen and (max-width: 768px) {
+    div.habilidadesVisãoRápida > ul::-webkit-scrollbar, div.popup::-webkit-scrollbar, div.tela-pequena::-webkit-scrollbar {
+        width: 5px;
+    }
+}
+
+/* ↑ BARRA DE ROLAGEM ↑ */
+
 :root {
 /*CORES*/
     --cor1: #8F71FF;
@@ -265,7 +299,7 @@ div.separação > hr {
             position: relative;
             width: 100%;
             height: 0;
-            padding-bottom: 57%; 
+            padding-bottom: 57%;
         }
 
         #apresentação-video iframe {
@@ -306,7 +340,8 @@ div.separação > hr {
             flex-wrap: wrap;
             align-items: center;
             justify-content: center;
-            overflow-y: scroll;
+            overflow: overlay;
+            overflow-x: hidden;
             height: 100px;
         }
         
@@ -474,9 +509,8 @@ div.separação > hr {
         display: none;
         align-items: center;
         justify-content: center;
-        position: absolute;
-        height: 100%;
-        width: 100vw;
+        position: fixed;
+        inset: 0 0 0 0;
         background-color: #00000030;
         backdrop-filter: blur(5px);
         z-index: 999;
@@ -491,10 +525,21 @@ div.separação > hr {
         border-radius: 20px;
         text-align: center;
         padding: 20px 40px;
-        overflow-y: scroll;
+        overflow-y: overlay;
         margin: 20px auto;
+        animation: 250ms linear abrirPopup;
     }
-    
+
+    @keyframes abrirPopup {
+        0% {transform: scale(0.95); opacity: 0;}
+        100% {transform: scale(1); opacity: 1;}
+    }
+
+    @keyframes fecharPopup {
+        0% {transform: scale(1); opacity: 1;}
+        100% {transform: scale(0.95); opacity: 0;}
+    }
+
     div.popup > * {
         margin: 20px auto;
     }
@@ -631,6 +676,10 @@ div.separação > hr {
         border-radius: 100%;
     }
 
+     div.experiênciasProfissionais > div {
+        width: 100%;
+    }
+
     div.experiênciasProfissionais > div > div {
         text-align: left;
     }
@@ -658,7 +707,7 @@ div.separação > hr {
        display: none;
        align-items: center;
        justify-content: center;
-       overflow-y: scroll;
+       overflow-y: overlay;
        overflow-x: hidden;
        height: 80vh;
     }
@@ -1412,15 +1461,9 @@ footer a:hover, #abrirPopupGitHub:hover {
     }
 }
 
-@media screen and (max-height: 508px) {
-    div.popup {
-        height: 50vh;
-    }
-}
-
 @media screen and (max-height: 640px) {
     div.popup {
-        max-height: 500px;
+        max-height: 80%;
     }
 }
 
@@ -1843,11 +1886,15 @@ footer a:hover, #abrirPopupGitHub:hover {
         text-align: center;
         height: fit-content;
         max-height: 70vh;
-        overflow-y: scroll;
+        overflow-y: overlay;
     }
 
     div.tela-pequena > * {
         margin: 20px auto;
+    }
+
+    #telaPequenaAbrirSite {
+        display: none;
     }
 
     div.tela-pequena button {

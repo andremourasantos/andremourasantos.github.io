@@ -91,7 +91,8 @@ main {
 
             /*↓ POPUP COMPARTILHAR ↓*/
             #biopopup1Container {
-                position: absolute;
+                position: fixed;
+                inset: 0 0 0 0;
                 display: none;
                 align-items: center;
                 justify-content: center;
@@ -103,11 +104,22 @@ main {
             }
 
             #biopopup0 {
-                display: flex;
+                display: none;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
+                animation: 250ms abrirPopup0 linear;
             }
+
+                @keyframes abrirPopup0 {
+                    0% {transform: scale(0.9); opacity: 0;}
+                    100% {transform: scale(1); opacity: 1;}
+                }
+
+                @keyframes fecharPopup0 {
+                    0% {transform: scale(1); opacity: 1;}
+                    100% {transform: scale(0.9); opacity: 0;}
+                }
 
             #biopopup0 > div {
                 display: block;
@@ -132,10 +144,11 @@ main {
             }
 
             #biopopup1 {
-                display: none;
+                display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
+                animation: 250ms abrirPopup0 linear;
             }
 
             #biopopup1 > div {
@@ -150,7 +163,7 @@ main {
                 margin: 20px;
                 background-color: white;
             }
-
+            
             #biopopup1 a {
                 padding: 10px 20px;
                 width: 250px;
@@ -184,6 +197,11 @@ main {
 
             #compartilharWhatsapp {
                 background-color: #25d366;
+            }
+
+            #compartilharCopiarLink {
+                background-color: #a5a5a5;
+                cursor: pointer;
             }
 
             #fecharbiopopup1, #fecharbiopopup0 {
@@ -370,10 +388,7 @@ main {
         }
 
         #doação:hover img {
-            animation: doação-hover;
-            animation-duration: 900ms;
-            animation-timing-function: linear;
-            animation-iteration-count: infinite;
+            animation: 900ms linear doação-hover infinite;
             transition-duration: 500ms;
         }
 
@@ -385,12 +400,8 @@ main {
             }
 
         #vacina:hover img {
-            animation: vacina-hover;
-            animation-duration: 1200ms;
-            animation-timing-function: linear;
-            animation-iteration-count: infinite;
+            animation: 1200ms linear vacina-hover infinite;
             transition-duration: 500ms;
-            animation-delay: 100ms;
         }
 
             @keyframes vacina-hover {
