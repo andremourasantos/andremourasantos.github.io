@@ -20,10 +20,7 @@
     <!--PERFOMANCE TAGS-->
     <link rel="preload" href="fontes/JosefinSans-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
     <link rel="preload" href="fontes/GlacialIndifference-Regular.otf" as="font" type="font/otf" crossorigin>
-    <link rel="preconnect" href="https://www.youtube.com">
-    <link rel="preconnect" href="https://i.ytimg.com">
-    <link rel="preconnect" href="https://i9.ytimg.com">
-    <link rel="preconnect" href="https://s.ytimg.com">
+
 
     <!-- OUTRAS TAGS -->
     <meta charset="UTF-8">
@@ -64,7 +61,7 @@
         </div>
             <div class="apresentação-container">
                 <div id="apresentação-video" class="apresentação-video">
-                    <div id="video-iframe"></div>
+                    <div id="video-iframe" onclick="adicionarVideo()"></div>
                 </div>
                 <div id="apresentação-foto">
                     <img src="imagens/foto-perfil.webp" alt="Foto de André Moura Santos." width="80" height="80">
@@ -208,7 +205,7 @@
     </div>
     <!--↑ CURRÍCULO ↑-->
     <!--↓ CERTIFICADOS ↓-->
-    <div class="popup popupCertificados" id="popupCertificados1">
+    <div class="popup popupCertificados" id="popupCertificados">
         <div class="certificadosTítulo certificadosTítulohab03">
             <h1>Conhecimentos e habilidades avançadas</h1>
         </div>
@@ -325,7 +322,7 @@
         <p>Durante o Rebranding da Business School, recebi um certificado de distinção na participação do projeto, devido ao meu engajamento com o mesmo durante os vários meses, com agendamento de reuniões, organização de ATAs e de todos os arquivos dele, bem como trabalho com a comunicação entre os membros da equipe e assegurar que atingíssemos os objetivos em prazo.</p>
         <div>
             <button id="voltarPopupCertificados-9"><span class="somente-pc-tablet">Voltar</span><span class="somente-telefone">&lt;</span></button>
-            <button id="avançarPopupCertificados10"><span class="somente-pc-tablet">Continuar</span><span class="somente-telefone">&gt;</span></button>
+            <button id="avançarPopupCertificados-10"><span class="somente-pc-tablet">Continuar</span><span class="somente-telefone">&gt;</span></button>
         </div>
     </div>
     <div class="popup popupCertificados" id="popupCertificados11">
@@ -341,6 +338,18 @@
         </div>
     </div>
     <!--↑ CERTIFICADOS ↑-->
+    
+    <!--↓ GITHUB ↓-->
+    <div class="popup" id="popupGitHub" style="display: none;">
+        <img loading="lazy" src="imagens/GitHub Octocat.webp" alt="Ícone do Octocat do GitHub em laranja." height="128" width="128">
+        <h1>Acompanhe no GitHub!</h1>
+        <p>Todos os arquivos do site estão disponíveis para acesso pelo meu repositório o GitHub, com licença MIT. Você pode ver todo o progresso e evolução das minhas habilidades de Front-End Dev por lá.</p>
+        <div>
+            <button id="fecharPopupRodapé">Fechar</button>
+            <a href="https://github.com/andremourasantos/andremourasantos.github.io" target="_blank" rel="noopener noreferrer">Conferir</a>
+        </div>
+    </div>
+    <!--↑ GITHUB ↑-->
 </div>
 
 <section id="conhecimentos">
@@ -416,20 +425,6 @@
 <div class="separação">
     <hr>
 </div>
-
-<!--↓ POPUP RODAPÉ ↓-->
-<div class="popup-container" id="popupRodapé">
-    <div class="popup" id="popupGitHub">
-        <img loading="lazy" src="imagens/GitHub Octocat.webp" alt="Ícone do Octocat do GitHub em laranja." height="128" width="128">
-        <h1>Acompanhe no GitHub!</h1>
-        <p>Todos os arquivos do site estão disponíveis para acesso pelo meu repositório o GitHub, com licença MIT. Você pode ver todo o progresso e evolução das minhas habilidades de Front-End Dev por lá.</p>
-        <div>
-            <button id="fecharPopupRodapé">Fechar</button>
-            <a href="https://github.com/andremourasantos/andremourasantos.github.io" target="_blank" rel="noopener noreferrer">Conferir</a>
-        </div>
-    </div>
-</div>
-<!--↑ POPUP RODAPÉ ↑-->
 
 <section id="contato">
     <article>

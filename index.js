@@ -10,6 +10,7 @@ function findPos(obj) {
 
 let idioma = window.navigator.userLanguage || window.navigator.language
 let computador = false
+let contadorCliquesVideo = 0
 
 if (window.location.pathname.includes('en-US')) {
     if (idioma == 'pt-BR') {window.location.replace(`/index.html`)} else {}
@@ -19,11 +20,9 @@ if (window.location.pathname.includes('en-US')) {
 
 function checarDispositivo(){
     if (window.innerWidth<768) {} else {computador = true}
-    adicionarVideo()
 }
 
 checarDispositivo()
-window.addEventListener('resize', adicionarVideo)
 //↑ CONFIGURAÇÕES ↑
 
 //↓ CABEÇALHO ↓
@@ -53,272 +52,57 @@ document.querySelectorAll('li.hab03').forEach(item => {item.addEventListener('cl
 })})
 
 function adicionarVideo() {
-    if (window.innerWidth<=425) {
-        document.getElementById('video-iframe').innerHTML = ''
-    } else {
-        document.getElementById('video-iframe').innerHTML = '<div id="video-iframe"><iframe defer width="560" height="315" src="https://www.youtube.com/embed/V_UE0XM3TX0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>'
+    if (contadorCliquesVideo == 0) {
+        document.getElementById('video-iframe').style.background = 'none'
+        document.getElementById('video-iframe').innerHTML =     '<iframe width="560" height="315" src="https://www.youtube.com/embed/V_UE0XM3TX0?&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+        contadorCliquesVideo++
     }
 }
 
-/* ESSE CÓDIGO FICARÁ SALVO PARA FUTURO USO
-//↓ FUNÇÃO EM TESTE ↓
-document.getElementById('abrir-popup').addEventListener('click', function timeFunction(){
-    setTimeout(function(){
-        document.querySelector('html').style.scrollBehavior = 'auto';
-        document.querySelector('#irParaPopupCurrículo').style.display = 'inline-block';
-        document.querySelector('#irParaPopupCertificados').style.display = 'none';
-        document.querySelector('#popupConhecimentos').style.display = 'flex';
-        document.querySelector('#popupNovidade').style.display = 'block';
-        document.querySelector('html').style.overflowY = 'hidden';
-        window.scroll(0, findPos(document.getElementById('popupConhecimentos')));
-    }, 250);
-});
-
-//↓ CURRICULO ↓
-document.getElementById('irParaPopupCurrículo').addEventListener('click', function timeFunction(){
-    setTimeout(function(){
-        document.querySelector('#popupNovidade').style.display = 'none';
-        document.querySelector('#popupCurrículo').style.display = 'block';
-    }, 250);
-});
-
-document.getElementById('fecharPopupCurrículo-2').addEventListener('click', function timeFunction(){
+//↓ POPUPS ↓
+document.querySelectorAll('*[id^="abrirPopup"]').forEach(item => {item.addEventListener('click', function(){
     setTimeout(() => {
-        document.getElementById('popupCurrículo').style.display = 'none';
-        document.querySelector('#popupNovidade').style.display = 'block';
-        document.querySelector('html').style.overflowY = 'auto';
-        document.querySelector('#popupConhecimentos').style.display = 'none';
-        document.querySelector('html').style.scrollBehavior = 'smooth';
-    }, 250);
-});
-*/
-
-//↓ CURRÍCULO ↓
-document.getElementById('abrirPopupCurrículo').addEventListener('click', function timeFunction(){
-    setTimeout(() => {
+        document.querySelector('#'+this.id.replace('abrirPopup', 'popup')).style.display = 'block'
+        document.querySelectorAll('*[class^="popup-container"]').forEach(item => {item.style.display = 'flex'})
         document.querySelector('html').style.scrollBehavior = 'auto';
         document.querySelector('html').style.overflowY = 'hidden';
-        document.querySelector('#popupConhecimentos').style.display = 'flex';
-        document.querySelector('#popupCurrículo').style.display = 'block';
     }, 250);
-});
+})})
 
-document.getElementById('fecharPopupCurrículo-2').addEventListener('click', function timeFunction(){
+document.querySelectorAll('*[id^="fecharPopup"]').forEach(item => {item.addEventListener('click', function(){
     setTimeout(() => {
+        document.querySelectorAll('div.popup').forEach(item => {item.style.display = 'none'})
+        document.querySelectorAll('*[class^="popup-container"]').forEach(item => {item.style.display = 'none'})
         document.querySelector('html').style.scrollBehavior = 'smooth';
         document.querySelector('html').style.overflowY = 'auto';
-        document.querySelector('#popupConhecimentos').style.display = 'none';
-        document.querySelector('#popupCurrículo').style.display = 'none';
     }, 250);
-});
+})})
 
-/* ESSE CÓDIGO FICARÁ SALVO PARA FUTURO USO
-//↓ CERTIFICADOS ↓
-document.getElementById('abrirPopupCertificados').addEventListener('click', function timeFunction(){
-    setTimeout(function(){
-        document.querySelector('.popup-container').style.display = 'flex';
-        document.querySelector('#popupNovidade').style.display = 'block';
-        document.querySelector('#irParaPopupCurrículo').style.display = 'none';
-        document.querySelector('#irParaPopupCertificados').style.display = 'inline-block';
-        document.querySelector('html').style.scrollBehavior = 'auto';
-        document.querySelector('html').style.overflowY = 'hidden';
-        window.scroll(0, findPos(document.getElementById('popupConhecimentos')));
-    }, 250);
-});
+document.querySelectorAll('*[id^="avançarPopupCertificados"]').forEach(item => {item.addEventListener('click', function(){
+    var idDoBotãoCertificados = this.id.replace("avançarPopupCertificados-", '')
+    if (this.id == 'avançarPopupCertificados-1') {
+        idDoBotãoCertificados = 2
+        document.querySelector('#popupCertificados').style.display = 'none'
+        document.querySelector('#popupCertificados' + idDoBotãoCertificados).style.display = 'block'
+    } else {
+        document.querySelector('#popupCertificados' + idDoBotãoCertificados).style.display = 'none'
+        idDoBotãoCertificados++
+        document.querySelector('#popupCertificados' + idDoBotãoCertificados).style.display = 'block'
+    }
+})})
 
-document.getElementById('irParaPopupCertificados').addEventListener('click', function timeFunction(){
-    setTimeout(function(){
-        document.querySelector('#popupNovidade').style.display = 'none';
-        document.querySelector('#popupCertificados1').style.display = 'block';
-    }, 250);
-});
-*/
-
-//↓ CERTIFICADOS ↓
-document.getElementById('abrirPopupCertificados').addEventListener('click', function timeFunction(){
-    setTimeout(() => {
-        document.querySelector('html').style.scrollBehavior = 'auto';
-        document.querySelector('html').style.overflowY = 'hidden';
-        document.querySelector('#popupConhecimentos').style.display = 'flex';
-        document.querySelector('#popupCertificados1').style.display = 'block';
-    }, 250);
-});
-
-document.getElementById('fecharPopupCertificados-1').addEventListener('click', function timeFunction(){
-    setTimeout(() => {
-        document.querySelector('.popup-container').style.display = 'none';
-        document.querySelector('html').style.overflowY = 'auto';
-        document.querySelector('#popupCertificados1').style.display = 'none';
-        document.querySelector('html').style.scrollBehavior = 'smooth';
-    }, 250);
-});
-
-document.getElementById('avançarPopupCertificados-1').addEventListener('click', function timeFunction(){
-    setTimeout(function() {
-        document.querySelector('#popupCertificados1').style.display = 'none';
-        document.querySelector('#popupCertificados2').style.display = 'block';
-    }, 250);
-});
-
-document.getElementById('voltarPopupCertificados-1').addEventListener('click', function timeFunction(){
-    setTimeout(function() {
-        document.querySelector('#popupCertificados2').style.display = 'none';
-        document.querySelector('#popupCertificados1').style.display = 'block';
-    }, 250);
-});
-
-document.getElementById('avançarPopupCertificados-2').addEventListener('click', function timeFunction(){
-    setTimeout(function() {
-        document.querySelector('#popupCertificados2').style.display = 'none';
-        document.querySelector('#popupCertificados3').style.display = 'block';
-    }, 250);
-});
-
-document.getElementById('voltarPopupCertificados-2').addEventListener('click', function timeFunction(){
-    setTimeout(function() {
-        document.querySelector('#popupCertificados3').style.display = 'none';
-        document.querySelector('#popupCertificados2').style.display = 'block';
-    }, 250);
-});
-
-document.getElementById('avançarPopupCertificados-3').addEventListener('click', function timeFunction(){
-    setTimeout(function() {
-        document.querySelector('#popupCertificados3').style.display = 'none';
-        document.querySelector('#popupCertificados4').style.display = 'block';
-    }, 250);
-});
-
-document.getElementById('voltarPopupCertificados-3').addEventListener('click', function timeFunction(){
-    setTimeout(function() {
-        document.querySelector('#popupCertificados4').style.display = 'none';
-        document.querySelector('#popupCertificados3').style.display = 'block';
-    }, 250);
-});
-
-document.getElementById('avançarPopupCertificados-4').addEventListener('click', function timeFunction(){
-    setTimeout(function() {
-        document.querySelector('#popupCertificados4').style.display = 'none';
-        document.querySelector('#popupCertificados5').style.display = 'block';
-    }, 250);
-});
-
-document.getElementById('voltarPopupCertificados-4').addEventListener('click', function timeFunction(){
-    setTimeout(function() {
-        document.querySelector('#popupCertificados5').style.display = 'none';
-        document.querySelector('#popupCertificados4').style.display = 'block';
-    }, 250);
-});
-
-document.getElementById('avançarPopupCertificados-5').addEventListener('click', function timeFunction(){
-    setTimeout(function() {
-        document.querySelector('#popupCertificados5').style.display = 'none';
-        document.querySelector('#popupCertificados6').style.display = 'block';
-    }, 250);
-});
-
-document.getElementById('voltarPopupCertificados-5').addEventListener('click', function timeFunction(){
-    setTimeout(function() {
-        document.querySelector('#popupCertificados6').style.display = 'none';
-        document.querySelector('#popupCertificados5').style.display = 'block';
-    }, 250);
-});
-
-document.getElementById('avançarPopupCertificados-6').addEventListener('click', function timeFunction(){
-    setTimeout(function() {
-        document.querySelector('#popupCertificados6').style.display = 'none';
-        document.querySelector('#popupCertificados7').style.display = 'block';
-    }, 250);
-});
-
-document.getElementById('voltarPopupCertificados-6').addEventListener('click', function timeFunction(){
-    setTimeout(function() {
-        document.querySelector('#popupCertificados7').style.display = 'none';
-        document.querySelector('#popupCertificados6').style.display = 'block';
-    }, 250);
-});
-
-document.getElementById('avançarPopupCertificados-7').addEventListener('click', function timeFunction(){
-    setTimeout(function() {
-        document.querySelector('#popupCertificados7').style.display = 'none';
-        document.querySelector('#popupCertificados8').style.display = 'block';
-    }, 250);
-});
-
-document.getElementById('voltarPopupCertificados-7').addEventListener('click', function timeFunction(){
-    setTimeout(function() {
-        document.querySelector('#popupCertificados8').style.display = 'none';
-        document.querySelector('#popupCertificados7').style.display = 'block';
-    }, 250);
-});
-
-document.getElementById('avançarPopupCertificados-8').addEventListener('click', function timeFunction(){
-    setTimeout(function() {
-        document.querySelector('#popupCertificados8').style.display = 'none';
-        document.querySelector('#popupCertificados9').style.display = 'block';
-    }, 250);
-});
-
-document.getElementById('voltarPopupCertificados-8').addEventListener('click', function timeFunction(){
-    setTimeout(function() {
-        document.querySelector('#popupCertificados9').style.display = 'none';
-        document.querySelector('#popupCertificados8').style.display = 'block';
-    }, 250);
-});
-
-document.getElementById('avançarPopupCertificados-9').addEventListener('click', function timeFunction(){
-    setTimeout(function() {
-        document.querySelector('#popupCertificados9').style.display = 'none';
-        document.querySelector('#popupCertificados10').style.display = 'block';
-    }, 250);
-});
-
-document.getElementById('voltarPopupCertificados-9').addEventListener('click', function timeFunction(){
-    setTimeout(function() {
-        document.querySelector('#popupCertificados10').style.display = 'none';
-        document.querySelector('#popupCertificados9').style.display = 'block';
-    }, 250);
-});
-
-document.getElementById('avançarPopupCertificados10').addEventListener('click', function timeFunction(){
-    setTimeout(function() {
-        document.querySelector('#popupCertificados10').style.display = 'none';
-        document.querySelector('#popupCertificados11').style.display = 'block';
-    }, 250);
-});
-
-document.getElementById('voltarPopupCertificados-10').addEventListener('click', function timeFunction(){
-    setTimeout(function() {
-        document.querySelector('#popupCertificados11').style.display = 'none';
-        document.querySelector('#popupCertificados10').style.display = 'block';
-    }, 250);
-});
-
-document.getElementById('fecharPopupCertificados-2').addEventListener('click', function timeFunction(){
-    setTimeout(function(){
-        document.querySelector('.popup-container').style.display = 'none';
-        document.querySelector('html').style.overflowY = 'auto';
-        document.querySelector('#popupCertificados11').style.display = 'none';
-        document.querySelector('html').style.scrollBehavior = 'smooth';
-    }, 250);
-});
-
-//↓ RODAPÉ ↓
-document.getElementById('abrirPopupGitHub').addEventListener('click', function timeFunction(){
-    setTimeout(function() {
-        document.querySelector('#popupRodapé').style.display = 'flex';
-        document.querySelector('#popupGitHub').style.display = 'block';
-        document.querySelector('html').style.overflowY = 'hidden';
-        document.querySelector('html').style.scrollBehavior = 'auto';
-    }, 250);
-});
-
-document.getElementById('fecharPopupRodapé').addEventListener('click', function timeFunction(){
-    setTimeout(function(){
-        document.querySelector('#popupRodapé').style.display = 'none';
-        document.querySelector('html').style.overflowY = 'auto';
-        document.querySelector('html').style.scrollBehavior = 'smooth';
-    }, 250);
-});
+document.querySelectorAll('*[id^="voltarPopupCertificados"]').forEach(item => {item.addEventListener('click', function(){
+    var idDoBotãoCertificados = this.id.replace("voltarPopupCertificados-", '')
+    idDoBotãoCertificados++
+    if (this.id == 'voltarPopupCertificados-1') {
+        document.querySelector('#popupCertificados' + idDoBotãoCertificados).style.display = 'none'
+        document.querySelector('#popupCertificados').style.display = 'block'
+    } else {
+        document.querySelector('#popupCertificados' + idDoBotãoCertificados).style.display = 'none'
+        idDoBotãoCertificados--
+        document.querySelector('#popupCertificados' + idDoBotãoCertificados).style.display = 'block'
+    }
+})})
 
 //↓ TELA-PEQUENA ↓
 document.getElementById('telaPequenaAbrirSite').addEventListener('click', function timeFunction(){
