@@ -72,6 +72,11 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    max-width: 1440px;
+    margin: auto;
+}
+
 h1, h2, h3 {
     font-family: var(--título);
 }

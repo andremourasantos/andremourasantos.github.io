@@ -121,7 +121,7 @@ header.universal {
     align-items: center;
     justify-content: center;
     gap: 10vh;
-    padding: 10vh 10vw;
+    padding: 10vh 5vw;
 }
 
 #gradeProjetos {
@@ -277,6 +277,7 @@ footer a {
 #popupcontainer > * {
     display: none;
     width: 50vw;
+    max-width: 500px;
     padding: 5vw;
     height: fit-content;
     max-height: 70vh;

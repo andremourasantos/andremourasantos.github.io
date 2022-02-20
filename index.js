@@ -13,9 +13,9 @@ let computador = false
 let contadorCliquesVideo = 0
 
 if (window.location.pathname.includes('en-US')) {
-    if (idioma == 'pt-BR') {window.location.replace(`/index.html`)} else {}
+    if (idioma == 'pt-BR') {window.location.replace(`/index.html${atalho != undefined ? `#${atalho}`: ''}`)} else {}
 } else {
-    if (idioma == 'pt-BR') {} else {window.location.replace(`/en-US/index.html`)}
+    if (idioma == 'pt-BR') {} else {window.location.replace(`/en-US/index.html${atalho != undefined ? `#${atalho}`: ''}`)}
 }
 
 function checarDispositivo(){

@@ -1,28 +1,30 @@
 const popupContainer = document.getElementById('popupcontainer')
 const html = document.querySelector('html')
+let atalho = window.location.href.split('#')[1]
 let idioma = window.navigator.userLanguage || window.navigator.language;
 
 if (window.location.pathname.includes('en-US')) {
-    if (idioma == 'pt-BR') {window.location.replace(`/projetos.html`)} else {}
+    if (idioma == 'pt-BR') {window.location.replace(`/projetos.html${atalho != undefined ? `#${atalho}`: ''}`)} else {}
 } else {
-    if (idioma == 'pt-BR') {} else {window.location.replace(`/en-US/projects.html`)}
+    if (idioma == 'pt-BR') {} else {window.location.replace(`/en-US/projects.html${atalho != undefined ? `#${atalho}`: ''}`)}
 }
+
+console.log(atalho != undefined ? `#${atalho}`: '')
 
 //↑ CONFIGURAÇÕES
 
 // ↓ POPUPS ↓
-function abrirContainerPopup() {
-    var nodes = document.getElementById('popupcontainer').childNodes;
-    for(var i=0; i<nodes.length; i++) {
-        if (nodes[i].nodeName.toLowerCase() == 'div') {
-            nodes[i].style.animation = '250ms linear abrirPopup';
-        }}
+document.querySelectorAll('*[id^="abrirPopup"]').forEach(item => item.addEventListener('click', function(){
     setTimeout(() => {
+        var idDoPopup = document.querySelector('#' + this.id.replace('abrirPopup', ''))
+
         popupContainer.style.display = 'flex'
         html.style.scrollBahavior = 'auto'
         html.style.overflowY = 'hidden'
+        idDoPopup.style.animation = '250ms linear abrirPopup'
+        idDoPopup.style.display = 'block'
     }, 250);
-}
+}))
 
 function fecharPopup() {
     var nodes = document.getElementById('popupcontainer').childNodes;
@@ -39,39 +41,4 @@ function fecharPopup() {
         html.style.scrollBahavior = 'smooth'
         html.style.overflowY = 'auto'
     }, 250);
-}
-
-// ↓ SITE PROFISSIONAL ↓
-function siteProfissionalPopup() {
-    document.getElementById('siteProfissional').style.display = 'block'
-}
-
-// ↓ SITE DR. ANDRÉ ↓
-function siteDrAndréPopup() {
-    document.getElementById('siteDrAndré').style.display = 'block'
-}
-
-// ↓ REBRANDING DA BUSINESS SCHOOL ↓
-function rebrandingBSPopup() {
-    document.getElementById('rebrandingBS').style.display = 'block'
-}
-
-// ↓ UM ANDRÉ EM CURITIBA ↓
-function umAndreemCuritibaPopup() {
-    document.getElementById('umAndreemCuritiba').style.display = 'block'
-}
-
-// ↓ INTERVENÇÃO ARTÍSTICA ↓
-function intervençãoArtísticaPopup() {
-    document.getElementById('intervençãoArtística').style.display = 'block'
-}
-
-// ↓ WAVE ↓
-function wavePopup() {
-    document.getElementById('wave').style.display = 'block'
-}
-
-// ↓ EMCT ↓
-function ecmtPopup() {
-    document.getElementById('emct').style.display = 'block'
 }
