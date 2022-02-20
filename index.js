@@ -8,6 +8,7 @@ function findPos(obj) {
     }
 }
 
+let atalho = window.location.href.split('#')[1]
 let idioma = window.navigator.userLanguage || window.navigator.language
 let computador = false
 let contadorCliquesVideo = 0

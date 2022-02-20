@@ -8,9 +8,6 @@ if (window.location.pathname.includes('en-US')) {
 } else {
     if (idioma == 'pt-BR') {} else {window.location.replace(`/en-US/projects.html${atalho != undefined ? `#${atalho}`: ''}`)}
 }
-
-console.log(atalho != undefined ? `#${atalho}`: '')
-
 //↑ CONFIGURAÇÕES
 
 // ↓ POPUPS ↓
