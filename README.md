@@ -9,39 +9,43 @@ Com esse projeto, viso aprimorar meus conhecimentos sobre o desenvolvimento web 
 Com isso em mente, continuo a ver os vídeos do Gustavo Guanabara, que foi essencial para o meu caminho até aqui, e outros youtubers que me ensiam como fazer e o porquê fazer as coisas de tal maneira. Afinal de contas há vários jeitos de se fazer a mesma coisa, mas uns são melhores que outros ou simplesmente mais fáceis de usar ou de mais fácil manutenção.
 
 ## O que aprendi até aqui? 🎓
-- Como funciona a internet (domínios, sub-domínios, DNS, servidores, back-end, front-end, etc).
-- Como configurar um domínio.
-- Os princípios básicos do HTML.
-- Os princípios básicos do CSS.
-- Como utilizar o CSS para estilizar páginas.
-- Responsividade com media queries.
-- Técnicas de SEO.
-- Como utilizar o VS Code.
+- Como funciona a internet (domínios, sub-domínios, DNS, servidores, back-end, front-end, etc) e como configurar um domínio.
+- Os princípios básicos do HTML e CSS.
+- Responsividade com Media Queries.
+- Técnicas de SEO, tipos de mídia e otmização para sites.
+- Como utilizar o Visual Studio Code (VS Code).
+- Criar e utilizar os snippets do VS Code.
 - Como criar e manter um bom código (legível e de fácil manutenção).
 - Como instalar e utilizar o GitHub Desktop.
 - Como criar, utilizar e atualizar repositórios no GitHub.
+- Uso nato de HTML e CSS.
 - Princípios básicos de JavaScript.
 - Como utilizar o JavaScript para criar interações básicas na página.
-- Criar e utilizar os snippets do VS Code.
+- Desenvolver códigos avançados e o uso de loops em JavaScript para criar páginas funcionais, dinâmicas e uso na responsividade do site.
+- Aprendi sobre o uso de fachadas para otimizar a velocidade de carregamento do site sem comprometer funcionalidades.
+	- Utilizada no vídeo do YouTube, que apenas carrega o iframe após a interação direta do usuário.
 
 ---
 
 # Estado atual de desenvolvimento do projeto 🏗
-_*Atualizado em Janeiro de 2022._
+_*Atualizado em Março de 2022._
 
-O site agora encontra-se completo e plenamente funcional, todas os itens pendentes foram concluídos. O Google Tag Manager foi configurado para as duas páginas, bem como o Google Analytics. Com essa [Atualização da 2° semana de Janeiro/22](https://github.com/andremourasantos/andremourasantos.github.io/commits/main), o envio de commits semanais será suspenso e apenas serão realizadas novas alterações quando pertinentes.
+O site agora encontra-se completo e plenamente funcional, todas os itens pendentes foram concluídos. O Google Tag Manager foi configurado para todas as páginas, bem como o Google Analytics. Com essa [Atualização da 2° semana de Janeiro/22](https://github.com/andremourasantos/andremourasantos.github.io/commits/main), o envio de commits semanais será suspenso e apenas serão realizadas novas alterações quando pertinentes.
 
 ### Fotos do DevTools:
-![foto-site-tamanho-pc](https://i.imgur.com/W2bEE6Z.png)
-![foto-site-tamanho-tablet](https://i.imgur.com/vWUGBgj.png)
-![foto-site-tamanho-telefone](https://i.imgur.com/0iA9Doc.png)
+![Screenshot 2022-03-18 17 21 29](https://user-images.githubusercontent.com/92397834/159077962-7c4dd529-195e-40cd-aeea-335503f69d4b.png)
+![Screenshot 2022-03-18 17 21 17](https://user-images.githubusercontent.com/92397834/159077970-83488523-ccbd-405e-9797-ba032cc3ba70.png)
+![Screenshot 2022-03-18 17 20 26](https://user-images.githubusercontent.com/92397834/159077979-68ab3223-2c62-4b3e-bc90-71decc058664.png)
 
 ### Status da performance do site:
-Com a atualização da [3° semana de Novembro](https://github.com/andremourasantos/andremourasantos.github.io/commit/7cc10be792253b7e45174922f1cd6e74b482a8b6), a perfomance geral do site teve grandes melhorias.
-- Perfomance no computador (excelente): Uma melhora de 38 pontos em relação a versão anterior (61 pontos).
-	![Screenshot_20211115-200855](https://user-images.githubusercontent.com/92397834/142767748-3ca14e82-348c-4d63-abfb-6825248af248.png)
-- Perfomance em dispositivos móveis (passível de melhoria): Uma melhora de 16 pontos em relação a versão anterior (61 pontos).
-	![Screenshot_20211115-200910](https://user-images.githubusercontent.com/92397834/142767757-51d9de68-f4fe-4ac0-a835-0517f93243b5.png)
+_*Atualizado em Março de 2022._
+
+O atual estado da performance do site é espetacular. Em pouco tempo foi possível obter uma melhora significativa de desempenho, enquanto incrementos aos conteúdo e novos códigos continuavam a serem feitos.
+- Perfomance em dispositivos móveis (excelente): Uma melhora de 20 pontos em relação a versão anterior (77 pontos).
+	![Screenshot 2022-03-18 17 11 20](https://user-images.githubusercontent.com/92397834/159076712-90ad4efb-b718-4ca4-a9e7-fad37b86e26b.png)
+	
+- Perfomance no computador (perfeita): Uma melhora de 1 ponto em relação a versão anterior (99 pontos).	
+	![Screenshot 2022-03-17 09 12 14](https://user-images.githubusercontent.com/92397834/159076332-dc0c46d5-2aae-49ce-9f37-c45ce5cb50ca.png)
 
 ## Programas e serviços utilizados durante o projeto 💻
 Todos os programas e serviços que me ajudaram durante o desenvolvimento do meu projeto serão adicionados aqui.
