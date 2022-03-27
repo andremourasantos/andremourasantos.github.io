@@ -14,9 +14,9 @@ let computador = false
 let contadorCliquesVideo = 0
 
 if (window.location.pathname.includes('en-US')) {
-    if (idioma == 'pt-BR') {window.location.replace(`/index.html${atalho != undefined ? `#${atalho}`: ''}`)} else {}
+    if (idioma.includes('pt')) {window.location.replace(`/index.html${atalho != undefined ? `#${atalho}`: ''}`)} else {}
 } else {
-    if (idioma == 'pt-BR') {} else {window.location.replace(`/en-US/index.html${atalho != undefined ? `#${atalho}`: ''}`)}
+    if (idioma.includes('pt')) {} else {window.location.replace(`/en-US/index.html${atalho != undefined ? `#${atalho}`: ''}`)}
 }
 
 function checarDispositivo(){
@@ -62,6 +62,7 @@ function adicionarVideo() {
 
 //↓ POPUPS ↓
 document.querySelectorAll('*[id^="abrirPopup"]').forEach(item => {item.addEventListener('click', function(){
+    document.querySelector('#'+this.id.replace('abrirPopup', 'popup')).style.animation = '250ms linear abrirPopup'
     setTimeout(() => {
         document.querySelector('#'+this.id.replace('abrirPopup', 'popup')).style.display = 'block'
         document.querySelectorAll('*[class^="popup-container"]').forEach(item => {item.style.display = 'flex'})
@@ -71,6 +72,7 @@ document.querySelectorAll('*[id^="abrirPopup"]').forEach(item => {item.addEventL
 })})
 
 document.querySelectorAll('*[id^="fecharPopup"]').forEach(item => {item.addEventListener('click', function(){
+    document.querySelector(this.id.includes('-') ? '#'+this.id.replace('fecharPopup', 'popup').split('-',1):'#'+this.id.replace('fecharPopup', 'popup')).style.animation = '250ms linear fecharPopup'
     setTimeout(() => {
         document.querySelectorAll('div.popup').forEach(item => {item.style.display = 'none'})
         document.querySelectorAll('*[class^="popup-container"]').forEach(item => {item.style.display = 'none'})

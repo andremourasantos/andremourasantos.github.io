@@ -17,7 +17,7 @@ let computador = false
 if (window.location.pathname.includes('en-US')) {
     if (idioma == 'pt-BR') {window.location.replace(`/bio.html${atalho != undefined ? `#${atalho}`: ''}`)} else {}
 } else {
-    if (idioma == 'pt-BR') {} else {window.location.replace(`/en-US/bio.html${atalho != undefined ? `#${atalho}`: ''}`)}
+    if (idioma == 'pt-BR') {} else {window.location.replace(`/en-US/bio.html${atalho != undefined ? `#${atalho}`: ''}`);}
 }
 
 function checarDispositivo(){

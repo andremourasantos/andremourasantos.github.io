@@ -134,6 +134,7 @@ header.universal {
 
 article.cartãoDoProjeto {
     width: 20vw;
+    max-width: 300px;
     padding: 30px;
     border: 2px solid var(--cor_borda);
     border-radius: 20px;

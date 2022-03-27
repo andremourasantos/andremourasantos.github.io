@@ -603,6 +603,30 @@ div.separação > hr {
         width: 80%;
     }
 
+    section.sobreMimCurrículo > article.linkedinAssessments > p {
+        text-align: left;
+    }
+
+    section.sobreMimCurrículo > article.linkedinAssessments p.curriculoInfo {
+        background-color: var(--cor_info);
+        padding: 10px;
+        border-radius: 10px;
+        text-align: justify;
+    }
+
+    section.sobreMimCurrículo > article .curriculoCartaRecomendacao {
+        display: none;
+        padding: 10px;
+        font-size: 14px;
+        margin: 0 auto;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    section.sobreMimCurrículo > article .curriculoCartaRecomendacao:hover {
+        border-radius: 20px;
+    }
+
     section.popupCurrículocabeçalho {
         display: flex;
         flex-direction: column;
@@ -640,10 +664,9 @@ div.separação > hr {
         margin-bottom: -10px;
         background-color: var(--cor1);
         color: white;
-        text-shadow: 0px 0px 1px #00000050;
         border-radius: 20px 20px 0px 0px;
         width: calc(100% - 40px);
-        padding: 15px 20px;
+        padding: 20px 20px 15px 20px;
         position: relative;
         left: 0px;
         top: -10px;
@@ -747,6 +770,31 @@ div.separação > hr {
 
     #popupCertificados1 {
         display: none;
+    }
+
+    div.popupCertificados a {
+        padding: 0;
+        margin: 0;
+        border: none;
+        color: black;
+        font-family: var(--texto);
+        text-decoration: underline;
+        font-size: 18px;
+    }
+
+    div.popupCertificados a:hover {
+        color: black;
+        background: initial;
+        font-weight: initial;
+    }
+
+    div.popupCertificados a:active {
+        transition: 0;
+        transform: initial;
+    }
+
+    div.popupCertificados a::after {
+        content: ' ↗';
     }
 
     div.container-conhecimentos {
@@ -1116,6 +1164,7 @@ footer a {
 #abrirPopupGitHub {
     cursor: pointer;
     font-weight: bold;
+    text-decoration: underline;
 }
 
 #mailto {
@@ -1442,7 +1491,6 @@ footer a {
 
     footer a, #abrirPopupGitHub {
         color: white;
-        text-decoration: underline;
     }
 
     footer a:hover, #abrirPopupGitHub:hover {
@@ -1508,7 +1556,7 @@ footer a {
         order: 2;
     }
 
-    #currículo-txt h2 {
+    #currículo-txt h3 {
         text-align: center;
     }
 
@@ -1523,7 +1571,7 @@ footer a {
         flex-direction: column;
     }
 
-    #certificados-txt h2 {
+    #certificados-txt h3 {
         text-align: center;
     }
 
@@ -1617,6 +1665,15 @@ footer a {
     div.experiênciasProfissionais p {
         text-align: center;
         font-size: 16px;
+    }
+
+    section.sobreMimCurrículo > article .curriculoCartaRecomendacao {
+        margin-top: 10px;
+        background-color: var(--cor_info2);
+    }
+
+    section.sobreMimCurrículo > article .curriculoCartaRecomendacao:hover {
+        background-color: var(--cor1);
     }
 
     div.popupCertificados button > span.somente-telefone {

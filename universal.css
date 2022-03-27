@@ -51,6 +51,9 @@
     --cor_borda: #d8d8d8;
     --cor_borda_escurecida: #afafaf;
 
+    --cor_info: #c5c5c550;
+    --cor_info2: #ececec80;
+
 /*DECORATIVOS*/
     --sombra_leve: 0px 0px 5px #00000030;
     --sombra_aparente: 0px 0px 10px #00000050;
@@ -208,6 +211,39 @@ div.informação a::after {
     content: "↗"
 }
 /*↑ MAIS INFORMAÇÃO ↑*/
+
+/*↓ POPUP DE NOTIFICAÇÃO ↓*/
+div.popupNotificacao {
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: fit-content;
+    max-width: 80vw;
+    background: #ffffff99;
+    border-radius: 10px;
+    padding: 10px 20px;
+    backdrop-filter: blur(5px);
+    box-shadow: var(--sombra_leve);
+    animation: 250ms linear abrirNotificacao;
+    text-align: justify;
+}
+
+    @keyframes abrirNotificacao {
+        0% {transform: translate(-50%, -120%) scale(0.95);}
+        100% {transform: translate(-50%, 0) scale(1);}
+    }
+
+    @keyframes fecharNotificacao {
+        0% {transform: translate(-50%, 0) scale(1);}
+        100% {transform: translate(-50%, -120%) scale(0.95);}
+    }
+/*↑ POPUP DE NOTIFICAÇÃO ↑*/
 
 /*↓ RESPONSIVIDADE DO SITE ↓*/
 @media screen and (max-width: 930px) {
