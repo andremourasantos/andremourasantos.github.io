@@ -684,6 +684,7 @@ div.separação > hr {
         width: 25%;
         height: fit-content;
         border-radius: 100%;
+        border: 2px solid var(--cor1);
     }
 
      div.experiênciasProfissionais > div {
