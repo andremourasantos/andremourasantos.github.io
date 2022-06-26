@@ -4,9 +4,9 @@ let atalho = window.location.href.split('#')[1]
 let idioma = window.navigator.userLanguage || window.navigator.language;
 
 if (window.location.pathname.includes('en-US')) {
-    if (idioma == 'pt-BR') {window.location.replace(`/projetos.html${atalho != undefined ? `#${atalho}`: ''}`)} else {}
+    if (idioma.includes('pt')) {window.location.replace(`/projetos.html${atalho != undefined ? `#${atalho}`: ''}?redirecionamento=idioma`)} else {}
 } else {
-    if (idioma == 'pt-BR') {} else {window.location.replace(`/en-US/projects.html${atalho != undefined ? `#${atalho}`: ''}`)}
+    if (idioma.includes('pt')) {} else {window.location.replace(`/en-US/projects.html${atalho != undefined ? `#${atalho}`: ''}?redirecionamento=idioma`)}
 }
 //↑ CONFIGURAÇÕES
 

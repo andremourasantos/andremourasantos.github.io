@@ -15,9 +15,9 @@ let computador = false
 
 
 if (window.location.pathname.includes('en-US')) {
-    if (idioma == 'pt-BR') {window.location.replace(`/bio.html${atalho != undefined ? `#${atalho}`: ''}`)} else {}
+    if (idioma.includes('pt')) {window.location.replace(`/bio.html${atalho != undefined ? `#${atalho}`: ''}?redirecionamento=idioma`)} else {}
 } else {
-    if (idioma == 'pt-BR') {} else {window.location.replace(`/en-US/bio.html${atalho != undefined ? `#${atalho}`: ''}`);}
+    if (idioma.includes('pt')) {} else {window.location.replace(`/en-US/bio.html${atalho != undefined ? `#${atalho}`: ''}?redirecionamento=idioma`);}
 }
 
 function checarDispositivo(){

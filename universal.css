@@ -232,6 +232,7 @@ div.popupNotificacao {
     box-shadow: var(--sombra_leve);
     animation: 250ms linear abrirNotificacao;
     text-align: justify;
+    cursor: pointer;
 }
 
     @keyframes abrirNotificacao {

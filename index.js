@@ -14,9 +14,9 @@ let computador = false
 let contadorCliquesVideo = 0
 
 if (window.location.pathname.includes('en-US')) {
-    if (idioma.includes('pt')) {window.location.replace(`/index.html${atalho != undefined ? `#${atalho}`: ''}`)} else {}
+    if (idioma.includes('pt')) {window.location.replace(`/index.html${atalho != undefined ? `#${atalho}`: ''}?redirecionamento=idioma`)} else {}
 } else {
-    if (idioma.includes('pt')) {} else {window.location.replace(`/en-US/index.html${atalho != undefined ? `#${atalho}`: ''}`)}
+    if (idioma.includes('pt')) {} else {window.location.replace(`/en-US/index.html${atalho != undefined ? `#${atalho}`: ''}?redirecionamento=idioma`)}
 }
 
 function checarDispositivo(){
