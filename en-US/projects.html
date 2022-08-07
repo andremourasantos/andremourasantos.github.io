@@ -55,7 +55,7 @@
 </header>
 
 <section id="introdução">
-    <img src="/imagens/projetos/emct.webp" alt="Screenshot of a Trello's board with cards and lists." style="object-position: top;">
+    <img src="/imagens/projetos/intervencao_artistica.webp" alt="Picture of the artistic intervention." style="object-position: top;">
     <div>
         <h2>My projects</h2>
         <p>See a collection of all the projects that I've led or participated in with detailed descriptions and illustrative images of the process.</p>
@@ -65,6 +65,16 @@
 <main>
     <section id="seçãoProjetos">
         <div id="gradeProjetos">
+            <article class="cartãoDoProjeto" id="projeto_wpLink">
+                <img loading="lazy" src="https://andremourasantos.com/wplink/capa.png" alt="The Link for WhatsApp project's thumbnail.">
+                <div>
+                    <h2>Link for WhatsApp</h2>
+                    <p class="data">2022</p>
+                    <p class="descriçãoCompleta">Text & Image</p>
+                    <p>This project was created with the intention of being a easy-to-use tool and free of ads tools to create links for WhatsApp.</p>
+                    <button id="abrirPopupwpLink">View</button>
+                </div>
+            </article>
             <article class="cartãoDoProjeto" id="projeto_siteProfissional">
                 <img loading="lazy" src="/imagens/miniaturas/site_profissional(en_US).jpg" alt="Thumbnail of André Moura Santos's website.">
                 <div>
@@ -143,6 +153,33 @@
 </main>
 
 <div id="popupcontainer">
+    <div id="wpLink">
+        <div class="popupContainerImagemCabeçalho">
+            <img loading="lazy" src="https://andremourasantos.com/wplink/capa.png" alt="The Link for WhatsApp project's thumbnail.">
+            <div></div>
+        </div>
+        <h3>Link for WhatsApp</h3>
+        <p>In Brazil, WhatsApp is the most used app by far, and there are many apps that use the official API to create links for WhatsApp that guide users directly to a conversation. But, the main problem with those tools is that many of them contain lots of ads or even subscriptions plans to create "premium WhatsApp links".</p>
+        <p>This scenario gave the opportunity to create a website with the same purpose, but without those downsides that emerged: The <a href="https://andremourasantos.com/wplink" rel="noreffer" target="_blank">Link for WhatsApp</a>. That's how I came up with the idea to create this tool, that's fully optimized to work in Brazil.</p>
+        <div class="conteúdoExtra">
+            <picture>
+                <source media="(max-width: 425px)" srcset="/imagens/projetos/wpLink-foto1_2.webp" height="384" loading="lazy">
+                <img loading="lazy" src="/imagens/projetos/wpLink-foto1_1.webp" alt="Foto do site Link de WhatsApp, criado por André Moura Santos." class="horizontal" height="768">
+            </picture>
+        </div>
+        <p>The project started with the creation of and interactive wireframe for the website in order to test the layout and features quickly. I used Framer to create the wireframes for both PC and mobile.</p>
+        <p>At first, I created the main blocks of construction: geometric forms that would set the layout of the website setted in grayscale to set the importance of each element. After that, content was inserted into each of those blocks. Then, features, like input forms, popups and buttons taken place. To finished the first part of the project, a color pallet and the icons were added and.</p>
+        <div class="conteúdoExtra">
+            <picture>
+                <source loading="lazy" media="(max-width: 425px)" srcset="/imagens/projetos/wpLink-foto2_2.webp" height="384">
+                <img loading="lazy" src="/imagens/projetos/wpLink-foto2_1.webp" alt="Foto do esboço (wireframe) do projeto Link de WhatsApp, criado no Framer, por André Moura Santos." class="horizontal" height="768">
+            </picture>
+        </div>
+        <p>After the first step concluded, it was time to experiment with different ideas. Because the wireframe was interactive, creating, deleting and changing its features was easy and quickly I could test all of my ideas of interactivity.</p>
+        <p>With the intent to be easy-to-use, responsiveness was the top-one priority and the website was adapted to work on both small mobile devices and large monitors. Beyond responsiveness, interactivity was a priority too, and, because of that, the code was created to be as clean as it can be and easy to update, with many little interactions that help the user use the tool in a natural and expected way.</p>
+        <p>The advantage of being constructed by a multistep process gives the website an excellent technical SEO that was built from the scratch with it. The result of such planning and execution gave the website a +90 score on PageSpeed Insights for mobile devices and a +99 score for PCs and laptops, turning itself into a technical success project.</p>
+        <button onclick="fecharPopup()">Fechar</button>
+    </div>
     <div id="siteProfissional">
         <div class="popupContainerImagemCabeçalho">
             <img loading="lazy" src="/imagens/miniaturas/site_profissional(en_US).jpg" alt="Thumbnail of André Moura Santos's website.">

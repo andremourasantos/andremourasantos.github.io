@@ -55,7 +55,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </header>
 
 <section id="introdução">
-    <img src="imagens/projetos/emct.webp" alt="Foto do quadro no Trello, mostrando vários cartões e listas." style="object-position: top;">
+    <img src="imagens/projetos/intervencao_artistica.webp" alt="Foto da intervenção artística." style="object-position: top;">
     <div>
         <h2>Meus Projetos</h2>
         <p>Veja uma coleção com todos os projetos que eu já realizei, com descrições dos processos envolvidos e fotos para ilustrar os acontecimentos.</p>
@@ -65,6 +65,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <main>
     <section id="seçãoProjetos">
         <div id="gradeProjetos">
+            <article class="cartãoDoProjeto" id="projeto_wpLink">
+                <img loading="lazy" src="https://andremourasantos.com/wplink/capa.png" alt="Miniatura do projeto Link de WhatsApp de André Moura Santos.">
+                <div>
+                    <h2>Link de WhatsApp</h2>
+                    <p class="data">2022</p>
+                    <p class="descriçãoCompleta">Texto & Imagens</p>
+                    <p>O projeto Link de WhatsApp foi criado com o intuito de ser uma ferramenta de fácil uso e livre acesso para a criação de links para WhatsApp sem anúncios abusivos ou links suspeitos.</p>
+                    <button id="abrirPopupwpLink">Ver mais</button>
+                </div>
+            </article>
             <article class="cartãoDoProjeto" id="projeto_siteProfissional">
                 <img loading="lazy" src="imagens/miniaturas/site_profissional.jpg" alt="Miniatura do site de André Moura Santos.">
                 <div>
@@ -143,6 +153,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </main>
 
 <div id="popupcontainer">
+    <div id="wpLink">
+        <div class="popupContainerImagemCabeçalho">
+            <img loading="lazy" src="https://andremourasantos.com/wplink/capa.png" alt="Miniatura do projeto Link de WhatsApp de André Moura Santos.">
+            <div></div>
+        </div>
+        <h3>Link de WhatsApp</h3>
+        <p>No Brasil, onde o WhatsApp é o aplicativo mais utilizado de todos, existem vários sites que fazem o uso da API oficial do WhatsApp para criação de links que direcionam o usuário diretamente para uma conversa, podendo inclusive conter uma mensagem pré-definida. Contudo, muitos desses sites possuem uma quantidade inadmissível de anúncios e muitos até cobram por "serviços premium".</p>
+        <p>Com isso, surgiu a oportunidade de criar um site com esse mesmo propósito, de criar links para WhatsApp através da API oficial, porém, sem anúncios abusivos ou cobranças ou assinaturas: O <a href="https://andremourasantos.com/wplink" target="_blank" rel="nofollow">Link de WhatsApp</a>.</p>
+        <div class="conteúdoExtra">
+            <picture>
+                <source media="(max-width: 425px)" srcset="imagens/projetos/wpLink-foto1_2.webp" height="384" loading="lazy">
+                <img loading="lazy" src="imagens/projetos/wpLink-foto1_1.webp" alt="Foto do site Link de WhatsApp, criado por André Moura Santos." class="horizontal" height="768">
+            </picture>
+        </div>
+        <p>O início do projeto se deu com a criação de um esboço (wireframe) interativo do site, para que as ideias de desenho (layout) e funcionalidades pudessem ser testadas de forma rápida e prática. A plataforma utilizada foi o Framer, onde criei dois modelos do site, um para computadores e outro para telefone.</p>
+        <p>Primeiramente foi criado o esboço de como seria a página, apenas formas geométricas sem conteúdo e em escalas de cinza. Após isso, o conteúdo a ser exibido em cada pedaço do site foi pensada e definida. Depois, as funcionalidades do site, como popups, botões e formas de interação foram inseridas no projeto. Por fim, cores e ícones foram acrescentados.</p>
+        <div class="conteúdoExtra">
+            <picture>
+                <source loading="lazy" media="(max-width: 425px)" srcset="imagens/projetos/wpLink-foto2_2.webp" height="384">
+                <img loading="lazy" src="imagens/projetos/wpLink-foto2_1.webp" alt="Foto do esboço (wireframe) do projeto Link de WhatsApp, criado no Framer, por André Moura Santos." class="horizontal" height="768">
+            </picture>
+        </div>
+        <p>Após a finalização do esboço das ideias, estava na hora de passar para a prática. Com o projeto interativo pronto, a execução das ideias foi muito mais simples e rápida, foi possível definir os elementos a serem utilizados e criar um projeto que pode ser atualizado facilmente.</p>
+        <p>Criado para ser de fácil uso, a responsividade do site está em primeiro lugar, sendo adaptado para diversos tipos de telas. Para além de responsividade, interatividade também era a prioridade, por isso, o código foi criado para ser limpo, facilmente atualizável e com pequenas interações que auxiliam o usuário com o uso da plataforma de uma maneira natural e previsível.</p>
+        <p>Com a vantagem de ter sido criado em etapas, o site possui um excelente SEO técnico, construído com o site. Como resultado de planejamento e desenvolvimento por etapas, o site possui uma excelente nota técnica na plataforma do PageSpeed Insights, sendo +90 para dispositivos móveis e +99 em computadores, sendo um sucesso técnico.</p>
+        <button onclick="fecharPopup()">Fechar</button>
+    </div>
     <div id="siteProfissional">
         <div class="popupContainerImagemCabeçalho">
             <img loading="lazy" src="imagens/miniaturas/site_profissional.jpg" alt="Foto do quadro no Trello, mostrando vários cartões e listas.">
