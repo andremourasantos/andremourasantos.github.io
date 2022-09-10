@@ -1,14 +1,16 @@
-# Sobre o projeto 📝
-Esse repositório guarda os arquivos do novo site que eu estou desenvolvendo, que pode ser acessado [clicando aqui ↗](https://andremourasantos.github.io/). O site está hospedado no serviço do GitHub Pages e é constantemente atualizado conforme meus conhecimentos sobre o desenovlvimento front-end vão avançando. Eu tive essa ideia após conhecer os vídeos do [Gustavo Guanabara ↗](https://www.youtube.com/c/CursoemV%C3%ADdeo) no YouTube. Eu sempre tive interesse em aprender mais sobre como a internet funciona e, em 2020, eu cirei o meu primeiro site oficial pelo WIX. Depois disso, sentindo a limitação que usar a plataforma oferecia, em troca de versatilidade, decidi aprender mais sobre desenvolvimento web.
+# **Sobre o projeto** 📝
+Esse repositório guarda os arquivos do novo site que eu estou desenvolvendo, que pode ser acessado [clicando aqui ↗](https://andremourasantos.github.io/). O site está hospedado no serviço do GitHub Pages e é constantemente atualizado conforme meus conhecimentos sobre o desenovlvimento front-end vão avançando.
+
+Eu tive essa ideia após conhecer os vídeos do [Gustavo Guanabara ↗](https://www.youtube.com/c/CursoemV%C3%ADdeo) no YouTube. Eu sempre tive interesse em aprender mais sobre como a internet funciona e, em 2020, eu cirei o meu primeiro site profissional pelo WIX. Depois de sentir as limitações que a plataforma impunha, decidi aprender os conceitos básicos de desenvolvimento web para criar meu próprio site. 
 
 > Objetivo desse repositório é armazenar os arquivos do site que estou desenvolvendo com o intuito de me aprofundar mais na área de desenvolvimento front-end.
 
-## Desenvolvimento Web 👨🏽‍💻
-Com esse projeto, viso aprimorar meus conhecimentos sobre o desenvolvimento web e, futuramente, utilizar o site construído inteiramente por mim como meu site principal no domínio [andremourasantos.com ↗](https://www.andremoruasantos.com) (que já me pertence).
+## **Desenvolvimento Web** 👨🏽‍💻
+Com este projeto, busquei aprender HTML, CSS e JavaScript, a partir do zero mesmo! Consegui, ao longo dos meses, aprimorar minhas habilidades e polir cada vez mais o meu site.
 
-Com isso em mente, continuo a ver os vídeos do Gustavo Guanabara, que foi essencial para o meu caminho até aqui, e outros youtubers que me ensiam como fazer e o porquê fazer as coisas de tal maneira. Afinal de contas há vários jeitos de se fazer a mesma coisa, mas uns são melhores que outros ou simplesmente mais fáceis de usar ou de mais fácil manutenção.
+Atuamente, meu objetivo inicial foi alcançado com sucesso: Ter no meu domínio ([andremourasantos.com](https://andremourasantos.com)) um site criado inteiramente por mim!
 
-## O que aprendi até aqui? 🎓
+### **O que aprendi até aqui?** 🎓
 - Como funciona a internet (domínios, sub-domínios, DNS, servidores, back-end, front-end, etc) e como configurar um domínio.
 - Os princípios básicos do HTML e CSS.
 - Responsividade com Media Queries.
@@ -27,17 +29,17 @@ Com isso em mente, continuo a ver os vídeos do Gustavo Guanabara, que foi essen
 
 ---
 
-# Estado atual de desenvolvimento do projeto 🏗
+# **Estado atual de desenvolvimento do projeto** 🏗
 _*Atualizado em Março de 2022._
 
 O site agora encontra-se completo e plenamente funcional, todas os itens pendentes foram concluídos. O Google Tag Manager foi configurado para todas as páginas, bem como o Google Analytics. Com essa [Atualização da 2° semana de Janeiro/22](https://github.com/andremourasantos/andremourasantos.github.io/commits/main), o envio de commits semanais será suspenso e apenas serão realizadas novas alterações quando pertinentes.
 
-### Fotos do DevTools:
+### **Fotos do DevTools:**
 ![Screenshot 2022-03-18 17 21 29](https://user-images.githubusercontent.com/92397834/159077962-7c4dd529-195e-40cd-aeea-335503f69d4b.png)
 ![Screenshot 2022-03-18 17 21 17](https://user-images.githubusercontent.com/92397834/159077970-83488523-ccbd-405e-9797-ba032cc3ba70.png)
 ![Screenshot 2022-03-18 17 20 26](https://user-images.githubusercontent.com/92397834/159077979-68ab3223-2c62-4b3e-bc90-71decc058664.png)
 
-### Status da performance do site:
+### **Status da performance do site:**
 _*Atualizado em Março de 2022._
 
 O atual estado da performance do site é espetacular. Em pouco tempo foi possível obter uma melhora significativa de desempenho, enquanto incrementos aos conteúdo e novos códigos continuavam a serem feitos.
@@ -47,7 +49,7 @@ O atual estado da performance do site é espetacular. Em pouco tempo foi possív
 - Perfomance no computador (perfeita): Uma melhora de 1 ponto em relação a versão anterior (99 pontos).	
 	![Screenshot 2022-03-17 09 12 14](https://user-images.githubusercontent.com/92397834/159076332-dc0c46d5-2aae-49ce-9f37-c45ce5cb50ca.png)
 
-## Programas e serviços utilizados durante o projeto 💻
+## **Programas e serviços utilizados durante o projeto** 💻
 Todos os programas e serviços que me ajudaram durante o desenvolvimento do meu projeto serão adicionados aqui.
 - CodeSandbox [^1]
 - DevTools [^2]
@@ -65,7 +67,7 @@ Todos os programas e serviços que me ajudaram durante o desenvolvimento do meu 
 
 ---
 
-### Notas de rodapé
+### **Notas de rodapé**
 [^1]:O CodeSandbox foi utilizado para testar rapidamente ideias ou outras formas de realizar a mesma ação com o intuito de acelerar o processo de desenvolvimento, já que sua praticidade de uso e facilidade de acesso são muito boas.
 [^2]:O DevTools do Google Chrome foi essencial durante todo o projeto e continuará sendo indispensável. A responsividade do site foi feita através de observações feitas em tempo real no DevTools.
 [^3]:O GIMP é um programa do qual já tenho certa familiaridade. Eu utilizei o GIMP para criar as imagens para o site.

@@ -65,13 +65,23 @@
 <main>
     <section id="seçãoProjetos">
         <div id="gradeProjetos">
+            <article class="cartãoDoProjeto" id="projeto_LoremIpsum">
+                <img loading="lazy" src="https://andremourasantos.com/loremipsum/capa.png" alt="The Lorem Ipsum Generator project's thumbnail.">
+                <div>
+                    <h2>Lorem Ipsum Generator</h2>
+                    <p class="data">2022</p>
+                    <p class="descriçãoCompleta">Text & Image</p>
+                    <p>With this website, you can easily create a text to populate your prototypes or designs ideas.</p>
+                    <button id="abrirPopuploremIpsum">View</button>
+                </div>
+            </article>
             <article class="cartãoDoProjeto" id="projeto_wpLink">
                 <img loading="lazy" src="https://andremourasantos.com/wplink/capa.png" alt="The Link for WhatsApp project's thumbnail.">
                 <div>
                     <h2>Link for WhatsApp</h2>
                     <p class="data">2022</p>
                     <p class="descriçãoCompleta">Text & Image</p>
-                    <p>This project was created with the intention of being a easy-to-use tool and free of ads tools to create links for WhatsApp.</p>
+                    <p>This project was created with the intention of being a easy-to-use free of ads tool to create links for WhatsApp.</p>
                     <button id="abrirPopupwpLink">View</button>
                 </div>
             </article>
@@ -153,6 +163,24 @@
 </main>
 
 <div id="popupcontainer">
+    <div id="loremIpsum">
+        <div class="popupContainerImagemCabeçalho">
+            <img loading="lazy" src="https://andremourasantos.com/loremipsum/capa.png" alt="The Lorem Ipsum Generator project's thumbnail.">
+            <div></div>
+        </div>
+        <h3>Lorem Ipsum Generator</h3>
+        <p>The <em>Lorem Ipsum</em> text is a very well-known tool in the field of design and web development: It originates from a Cícero's book called "De finibus bonorum et malorum" (About the ends of the good and the bad) that talks about ethics.</p>
+        <p>With this project, created to meet my needs to populate designs that I was working on, you can easily generate Lorem Ipsum text in a variety of sizes to better fit your needs. The <a href="https://andremourasantos.com/loremipsum" target="_blank" rel="nofollow">Lorem Ipsum Generator</a> was created with the same base files as my Link for WhatsApp project.</p>
+        <div class="conteúdoExtra">
+            <picture>
+                <source media="(max-width: 425px)" srcset="https://andremourasantos.com/loremipsum/imagens/site_telefone.png" height="384" loading="lazy">
+                <img loading="lazy" src="https://andremourasantos.com/loremipsum/imagens/site_computador.png" alt="A picture of the Lorem Ipsum Generator website, by André Moura Santos." class="horizontal" height="768">
+            </picture>
+        </div>
+        <p>Because this project used the same base as my previous one, so I could make some features shared between them; for example: when you change the page theme, the theme of both projects will respond. My plans are to make even more shared features between them.</p>
+        <p>I also deepened my knowledge in the JavaScript Switch statement, been more capable of identifying ideal use cases, as well as made my previous features functions more logical and clean.</p>
+        <button onclick="fecharPopup()">Fechar</button>
+    </div>
     <div id="wpLink">
         <div class="popupContainerImagemCabeçalho">
             <img loading="lazy" src="https://andremourasantos.com/wplink/capa.png" alt="The Link for WhatsApp project's thumbnail.">
@@ -160,7 +188,7 @@
         </div>
         <h3>Link for WhatsApp</h3>
         <p>In Brazil, WhatsApp is the most used app by far, and there are many apps that use the official API to create links for WhatsApp that guide users directly to a conversation. But, the main problem with those tools is that many of them contain lots of ads or even subscriptions plans to create "premium WhatsApp links".</p>
-        <p>This scenario gave the opportunity to create a website with the same purpose, but without those downsides that emerged: The <a href="https://andremourasantos.com/wplink" rel="noreffer" target="_blank">Link for WhatsApp</a>. That's how I came up with the idea to create this tool, that's fully optimized to work in Brazil.</p>
+        <p>Com este projeto, criado para suprir a minha necessidade de popular designs de projetos que estava criando, você pode facilmente gerar um texto em latim personalizando o tamanho para atender às suas necessidades. O <a href="https://andremourasantos.com/loremipsum" target="_blank" rel="nofollow">Gerador de Lorem Ipsum</a> foi criado com a mesma base do Link de WhatsApp.</p>
         <div class="conteúdoExtra">
             <picture>
                 <source media="(max-width: 425px)" srcset="/imagens/projetos/wpLink-foto1_2.webp" height="384" loading="lazy">

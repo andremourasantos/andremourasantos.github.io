@@ -1,24 +1,21 @@
-/* Função de achar objeto
-function findPos(obj) {
-    var curtop = 0;
-    if (obj.offsetParent) {
-        do {
-            curtop += obj.offsetTop;
-        } while (obj = obj.offsetParent);
-    return [curtop];
-    }
+let PAGINA = {
+    nome: 'bio',
+    nomeAlternativo: 'bio',
+    atalho: window.location.href.split('#')[1],
+    idioma: window.location.pathname,
+    idiomaUsuario: window.navigator.userLanguage || window.navigator.language
 }
-*/
+
 let atalho = window.location.href.split('#')[1]
 let idioma = window.navigator.userLanguage || window.navigator.language
 let computador = false
 
-
+/*
 if (window.location.pathname.includes('en-US')) {
     if (idioma.includes('pt')) {window.location.replace(`/bio.html${atalho != undefined ? `#${atalho}`: ''}?redirecionamento=idioma`)} else {}
 } else {
     if (idioma.includes('pt')) {} else {window.location.replace(`/en-US/bio.html${atalho != undefined ? `#${atalho}`: ''}?redirecionamento=idioma`);}
-}
+}*/
 
 function checarDispositivo(){
     if (window.innerWidth<768) {} else {

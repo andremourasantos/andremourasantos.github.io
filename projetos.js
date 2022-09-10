@@ -1,13 +1,21 @@
+const PAGINA = {
+    nome: 'projetos',
+    nomeAlternativo: 'projects',
+    atalho: window.location.href.split('#')[1],
+    idioma: window.location.pathname,
+    idiomaUsuario: window.navigator.userLanguage || window.navigator.language
+}
 const popupContainer = document.getElementById('popupcontainer')
 const html = document.querySelector('html')
 let atalho = window.location.href.split('#')[1]
 let idioma = window.navigator.userLanguage || window.navigator.language;
 
+/*
 if (window.location.pathname.includes('en-US')) {
     if (idioma.includes('pt')) {window.location.replace(`/projetos.html${atalho != undefined ? `#${atalho}`: ''}?redirecionamento=idioma`)} else {}
 } else {
     if (idioma.includes('pt')) {} else {window.location.replace(`/en-US/projects.html${atalho != undefined ? `#${atalho}`: ''}?redirecionamento=idioma`)}
-}
+}*/
 //↑ CONFIGURAÇÕES
 
 // ↓ POPUPS ↓

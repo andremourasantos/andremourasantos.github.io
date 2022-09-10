@@ -1,3 +1,11 @@
+let PAGINA = {
+    nome: 'index',
+    nomeAlternativo: 'index',
+    atalho: window.location.href.split('#')[1],
+    idioma: window.location.pathname,
+    idiomaUsuario: window.navigator.userLanguage || window.navigator.language
+}
+
 function findPos(obj) {
     var curtop = 0;
     if (obj.offsetParent) {
@@ -10,20 +18,14 @@ function findPos(obj) {
 
 let atalho = window.location.href.split('#')[1]
 let idioma = window.navigator.userLanguage || window.navigator.language
-let computador = false
 let contadorCliquesVideo = 0
 
+/*
 if (window.location.pathname.includes('en-US')) {
     if (idioma.includes('pt')) {window.location.replace(`/index.html${atalho != undefined ? `#${atalho}`: ''}?redirecionamento=idioma`)} else {}
 } else {
     if (idioma.includes('pt')) {} else {window.location.replace(`/en-US/index.html${atalho != undefined ? `#${atalho}`: ''}?redirecionamento=idioma`)}
-}
-
-function checarDispositivo(){
-    if (window.innerWidth<768) {} else {computador = true}
-}
-
-checarDispositivo()
+}*/
 //↑ CONFIGURAÇÕES ↑
 
 //↓ CABEÇALHO ↓

@@ -65,6 +65,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <main>
     <section id="seçãoProjetos">
         <div id="gradeProjetos">
+            <article class="cartãoDoProjeto" id="projeto_LoremIpsum">
+                <img loading="lazy" src="https://andremourasantos.com/loremipsum/capa.png" alt="Miniatura do projeto Gerador de Lorem Ipsum de André Moura Santos.">
+                <div>
+                    <h2>Gerador de Lorem Ipsum</h2>
+                    <p class="data">2022</p>
+                    <p class="descriçãoCompleta">Texto & Imagens</p>
+                    <p>Com este meu projeto, você pode facilmente gerar textos para popular áreas de conteúdos em seus protótipos ou designs.</p>
+                    <button id="abrirPopuploremIpsum">Ver mais</button>
+                </div>
+            </article>
             <article class="cartãoDoProjeto" id="projeto_wpLink">
                 <img loading="lazy" src="https://andremourasantos.com/wplink/capa.png" alt="Miniatura do projeto Link de WhatsApp de André Moura Santos.">
                 <div>
@@ -153,6 +163,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </main>
 
 <div id="popupcontainer">
+    <div id="loremIpsum">
+        <div class="popupContainerImagemCabeçalho">
+            <img loading="lazy" src="https://andremourasantos.com/loremipsum/capa.png" alt="Miniatura do projeto Gerador de Lorem Ipsum de André Moura Santos.">
+            <div></div>
+        </div>
+        <h3>Gerador de Lorem Ipsum</h3>
+        <p>Muito comumente utilizados em protótipos e designs para popular áreas de conteúdos, o texto <em>Lorem Ipsum</em> vem de uma obra de Cícero, 45 AC, intitulada "De finibus bonorum et malorum" (Sobre os fins do bem e do mal), que fala sobre ética.</p>
+        <p>Com este projeto, criado para suprir a minha necessidade de popular designs de projetos que estava criando, você pode facilmente gerar um texto em latim personalizando o tamanho para atender às suas necessidades. O <a href="https://andremourasantos.com/loremipsum" target="_blank" rel="nofollow">Gerador de Lorem Ipsum</a> foi criado com a mesma base do Link de WhatsApp.</p>
+        <div class="conteúdoExtra">
+            <picture>
+                <source media="(max-width: 425px)" srcset="https://andremourasantos.com/loremipsum/imagens/site_telefone.png" height="384" loading="lazy">
+                <img loading="lazy" src="https://andremourasantos.com/loremipsum/imagens/site_computador.png" alt="Foto do site Link de WhatsApp, criado por André Moura Santos." class="horizontal" height="768">
+            </picture>
+        </div>
+        <p>Como este projeto utilizou a mesma base do anterior, algumas funcionalidades funcionam de maneira compartilhada, como, por exemplo: o tema da página é sincronizado entre ambas as páginas. Futuramente, ambas as ferramentas serão atualizadas com ainda mais funções compartilhadas.</p>
+        <p>Também aprofundei meus conhecimentos no uso da declaração Switch e na identificação de bons casos de uso, bem como consegui criar interações mais lógicas para funções que já havia utilizado.</p>
+        <button onclick="fecharPopup()">Fechar</button>
+    </div>
     <div id="wpLink">
         <div class="popupContainerImagemCabeçalho">
             <img loading="lazy" src="https://andremourasantos.com/wplink/capa.png" alt="Miniatura do projeto Link de WhatsApp de André Moura Santos.">
