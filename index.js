@@ -57,7 +57,7 @@ document.querySelectorAll('li.hab03').forEach(item => {item.addEventListener('cl
 function adicionarVideo() {
     if (contadorCliquesVideo == 0) {
         document.getElementById('video-iframe').style.background = 'none'
-        document.getElementById('video-iframe').innerHTML =     '<iframe width="560" height="315" src="https://www.youtube.com/embed/uYcp-LyTEnc&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+        document.getElementById('video-iframe').innerHTML =     '<iframe width="560" height="315" src="https://www.youtube.com/embed/uYcp-LyTEnc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
         contadorCliquesVideo++
     }
 }
