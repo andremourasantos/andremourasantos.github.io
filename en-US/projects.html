@@ -65,24 +65,14 @@
 <main>
     <section id="seçãoProjetos">
         <div id="gradeProjetos">
-            <article class="cartãoDoProjeto" id="projeto_LoremIpsum">
-                <img loading="lazy" src="https://andremourasantos.com/loremipsum/capa.png" alt="The Lorem Ipsum Generator project's thumbnail.">
+            <article class="cartãoDoProjeto" id="projeto_FerramentasDeAndre">
+                <img loading="lazy" src="https://apps.andremourasantos.com/imagens/capa.png" alt="Thumbnail of Ferramentas de André' project, by André Moura Santos.">
                 <div>
-                    <h2>Lorem Ipsum Generator</h2>
+                    <h2>Ferramentas de André</h2>
                     <p class="data">2022</p>
-                    <p class="descriçãoCompleta">Text & Image</p>
-                    <p>With this website, you can easily create a text to populate your prototypes or designs ideas.</p>
-                    <button id="abrirPopuploremIpsum">View</button>
-                </div>
-            </article>
-            <article class="cartãoDoProjeto" id="projeto_wpLink">
-                <img loading="lazy" src="https://andremourasantos.com/wplink/capa.png" alt="The Link for WhatsApp project's thumbnail.">
-                <div>
-                    <h2>Link for WhatsApp</h2>
-                    <p class="data">2022</p>
-                    <p class="descriçãoCompleta">Text & Image</p>
-                    <p>This project was created with the intention of being a easy-to-use free of ads tool to create links for WhatsApp.</p>
-                    <button id="abrirPopupwpLink">View</button>
+                    <p class="translateon">Available in English</p>
+                    <p>These web apps were created to be simple, efficient and integrated. No ads, no laggy pages, no bad practices.</p>
+                    <button id="abrirPopupferramentasDeAndre">View</button>
                 </div>
             </article>
             <article class="cartãoDoProjeto" id="projeto_siteProfissional">
@@ -163,49 +153,21 @@
 </main>
 
 <div id="popupcontainer">
-    <div id="loremIpsum">
+    <div id="ferramentasDeAndre">
         <div class="popupContainerImagemCabeçalho">
-            <img loading="lazy" src="https://andremourasantos.com/loremipsum/capa.png" alt="The Lorem Ipsum Generator project's thumbnail.">
+            <img loading="lazy" src="https://apps.andremourasantos.com/imagens/capa.png" alt="Thumbnail of Ferramentas de André' project, by André Moura Santos.">
             <div></div>
         </div>
-        <h3>Lorem Ipsum Generator</h3>
-        <p>The <em>Lorem Ipsum</em> text is a very well-known tool in the field of design and web development: It originates from a Cícero's book called "De finibus bonorum et malorum" (About the ends of the good and the bad) that talks about ethics.</p>
-        <p>With this project, created to meet my needs to populate designs that I was working on, you can easily generate Lorem Ipsum text in a variety of sizes to better fit your needs. The <a href="https://andremourasantos.com/loremipsum" target="_blank" rel="nofollow">Lorem Ipsum Generator</a> was created with the same base files as my Link for WhatsApp project.</p>
+        <h3>Ferramentas de André</h3>
+        <p>This page allows you to see all my web apps that I've developed to improve my abilities with Front-End development. All the pages are free-to-use and with no ads. The idea to create a website come from my need to use some tools on web and ended up frustrated by an infinite amount of ads, laggy pages and some tricky tricks to get you to do things that you don't want to.</p>
         <div class="conteúdoExtra">
             <picture>
-                <source media="(max-width: 425px)" srcset="https://andremourasantos.com/loremipsum/imagens/site_telefone.png" height="384" loading="lazy">
-                <img loading="lazy" src="https://andremourasantos.com/loremipsum/imagens/site_computador.png" alt="A picture of the Lorem Ipsum Generator website, by André Moura Santos." class="horizontal" height="768">
+                <source media="(max-width: 425px)" srcset="https://apps.andremourasantos.com/imagens/site_telefone.png" height="384" loading="lazy">
+                <img loading="lazy" src="https://apps.andremourasantos.com/imagens/site_computador.png" alt="Foto do site Link de WhatsApp, criado por André Moura Santos." class="horizontal" height="768">
             </picture>
         </div>
-        <p>Because this project used the same base as my previous one, so I could make some features shared between them; for example: when you change the page theme, the theme of both projects will respond. My plans are to make even more shared features between them.</p>
-        <p>I also deepened my knowledge in the JavaScript Switch statement, been more capable of identifying ideal use cases, as well as made my previous features functions more logical and clean.</p>
-        <button onclick="fecharPopup()">Fechar</button>
-    </div>
-    <div id="wpLink">
-        <div class="popupContainerImagemCabeçalho">
-            <img loading="lazy" src="https://andremourasantos.com/wplink/capa.png" alt="The Link for WhatsApp project's thumbnail.">
-            <div></div>
-        </div>
-        <h3>Link for WhatsApp</h3>
-        <p>In Brazil, WhatsApp is the most used app by far, and there are many apps that use the official API to create links for WhatsApp that guide users directly to a conversation. But, the main problem with those tools is that many of them contain lots of ads or even subscriptions plans to create "premium WhatsApp links".</p>
-        <p>Com este projeto, criado para suprir a minha necessidade de popular designs de projetos que estava criando, você pode facilmente gerar um texto em latim personalizando o tamanho para atender às suas necessidades. O <a href="https://andremourasantos.com/loremipsum" target="_blank" rel="nofollow">Gerador de Lorem Ipsum</a> foi criado com a mesma base do Link de WhatsApp.</p>
-        <div class="conteúdoExtra">
-            <picture>
-                <source media="(max-width: 425px)" srcset="/imagens/projetos/wpLink-foto1_2.webp" height="384" loading="lazy">
-                <img loading="lazy" src="/imagens/projetos/wpLink-foto1_1.webp" alt="Foto do site Link de WhatsApp, criado por André Moura Santos." class="horizontal" height="768">
-            </picture>
-        </div>
-        <p>The project started with the creation of and interactive wireframe for the website in order to test the layout and features quickly. I used Framer to create the wireframes for both PC and mobile.</p>
-        <p>At first, I created the main blocks of construction: geometric forms that would set the layout of the website setted in grayscale to set the importance of each element. After that, content was inserted into each of those blocks. Then, features, like input forms, popups and buttons taken place. To finished the first part of the project, a color pallet and the icons were added and.</p>
-        <div class="conteúdoExtra">
-            <picture>
-                <source loading="lazy" media="(max-width: 425px)" srcset="/imagens/projetos/wpLink-foto2_2.webp" height="384">
-                <img loading="lazy" src="/imagens/projetos/wpLink-foto2_1.webp" alt="Foto do esboço (wireframe) do projeto Link de WhatsApp, criado no Framer, por André Moura Santos." class="horizontal" height="768">
-            </picture>
-        </div>
-        <p>After the first step concluded, it was time to experiment with different ideas. Because the wireframe was interactive, creating, deleting and changing its features was easy and quickly I could test all of my ideas of interactivity.</p>
-        <p>With the intent to be easy-to-use, responsiveness was the top-one priority and the website was adapted to work on both small mobile devices and large monitors. Beyond responsiveness, interactivity was a priority too, and, because of that, the code was created to be as clean as it can be and easy to update, with many little interactions that help the user use the tool in a natural and expected way.</p>
-        <p>The advantage of being constructed by a multistep process gives the website an excellent technical SEO that was built from the scratch with it. The result of such planning and execution gave the website a +90 score on PageSpeed Insights for mobile devices and a +99 score for PCs and laptops, turning itself into a technical success project.</p>
+        <p>Now, the website has many tools created by me, and it's used as a showroom for me to demonstrate my creativity, organization, documentation and problem-solving abilities. Each page use the best and modern practices to date and have been built in a very flexible way, allowing the creation of new tools easily and wild spread updates.</p>
+        <p>This project is only available in Portuguese, but you can give it a try accessing <a href="https://apps.andremourasantos.com/" target="_blank" rel="nofollow">Ferramentas de André</a>. More tools are on the way and you can see them by visiting my GitHub repository.</p>
         <button onclick="fecharPopup()">Fechar</button>
     </div>
     <div id="siteProfissional">
