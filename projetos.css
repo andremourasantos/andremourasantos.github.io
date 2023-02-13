@@ -327,6 +327,10 @@ div.popupContainerImagemCabeçalho > div:first-of-type {
     background-image: linear-gradient(0deg, white 1%, transparent 20%);
 }
 
+#siteDrAndré div.conteúdoExtra img {
+    width: 100%;
+}
+
 #popupcontainer > * h3  {
     text-align: left;
 }
