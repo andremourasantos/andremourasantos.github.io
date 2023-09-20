@@ -1,5 +1,8 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
+import HomeView from '../views/HomeView.vue';
+import WebDev from '../views/WebDev.vue';
+import Marketing from '../views/Marketing.vue';
+import PrivacyPolicy from '../views/PrivacyPolicy.vue';
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -8,12 +11,19 @@ const routes: Array<RouteRecordRaw> = [
     component: HomeView
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    path: '/desenvolvimento-web',
+    name: 'webDev',
+    component: WebDev
+  },
+  {
+    path: '/marketing-digital',
+    name: 'marketing',
+    component: Marketing
+  },
+  {
+    path: '/politica-de-privacidade',
+    name: 'pp',
+    component: PrivacyPolicy
   }
 ]
 
