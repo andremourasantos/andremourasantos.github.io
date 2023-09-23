@@ -16,6 +16,13 @@ export default defineComponent({
 
 
 <style scoped>
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+  }
   p {
     text-align: center;
   }

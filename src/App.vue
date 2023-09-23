@@ -39,6 +39,10 @@ export default defineComponent({
   /*COLORS*/
   --colors-background: #ffffff;
   --colors-icons: #ffffff;
+
+  /*EFFECTS*/
+  --glass_effect-color: #FFFFFF35;
+  --glass_effect-shadow: 5px 5px 15px #00000010, inset 0px 0px 5px #00000020;
 }
 
 * {margin:0; padding:0; font-family: var(--font-paragraph); color: var(--font_color-paragraph); box-sizing: border-box;}
@@ -46,7 +50,7 @@ export default defineComponent({
 body {
   min-height: 100vh;
   min-height: 100dvh;
-  padding:16px;
+  padding: 16px;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -59,6 +63,7 @@ h1,h2,h3,h4,h5,h6 {
 p {
   line-height: 100%;
   font-weight: 500;
+  font-size: 18px
 }
 
 i {font-size: 32px;}

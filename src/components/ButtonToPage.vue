@@ -53,10 +53,7 @@ export default defineComponent({
   }
 
   h2 {
+    font-size: 18px;
     margin-bottom: 4px;
-  }
-
-  h2, p {
-    font-size: 16px;
   }
 </style>
