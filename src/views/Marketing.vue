@@ -3,15 +3,20 @@
   <img src="../assets/purple.png" id="gradient-top-right">
   <section id="servicesGroup">
     <ServicesGroup :GroupTitle="'Combos de serviços'" :GroupDescription="'Economize tempo e dinheiro na hora de criar sua estratégia de Marketing.'">
-      <ServiceButton :ServiceImage="'general'" :ServiceTitle="'Serviço completo'" :ServiceDescription="'Contrate todos os serviços para começar seu Marketing a todo vapor.'" :ServiceTag="'Indisponível'"/>
-      <ServiceButton :ServiceImage="'first-steps'" :ServiceTitle="'Primeiros passos'" :ServiceDescription="'Obtenha o básico para renovar os trabalhos com o Marketing da sua empresa.'" :ServiceTag="'Indisponível'"/>
+      <ServiceButton :ServiceImage="'general'" :ServiceTitle="'Serviço completo'" :ServiceDescription="'Contrate todos os serviços para começar seu Marketing a todo vapor.'" :ServiceTag="'Indisponível'" :ServiceID="'geral'"/>
+
+      <ServiceButton :ServiceImage="'first-steps'" :ServiceTitle="'Primeiros passos'" :ServiceDescription="'Obtenha o básico para renovar os trabalhos com o Marketing da sua empresa.'" :ServiceTag="'Indisponível'" :ServiceID="'primeiros-passos'"/>
     </ServicesGroup>
     <ServicesGroup :GroupTitle="'Serviços oferecidos'" :GroupDescription="'Confira abaixo todos os serviços disponíveis, com detalhes.'">
-      <ServiceButton :ServiceImage="'presenca-digital'" :ServiceTitle="'Presença digital'" :ServiceDescription="'Receba uma análise de como sua empresa está no ambiente digital com sugestões de melhorias.'"/>
-      <ServiceButton :ServiceImage="'publico-alvo'" :ServiceTitle="'Público-alvo'" :ServiceDescription="'Entenda quem é o público da sua empresa ou descubra novas clientes em potencial.'"/>
-      <ServiceButton :ServiceImage="'personas'" :ServiceTitle="'Personas'" :ServiceDescription="'Aumente a agilidade e eficiência do seu Marketing atingindo o seu cliente ideal.'"/>
-      <ServiceButton :ServiceImage="'estrategia-de-conteudo'" :ServiceTitle="'Estratégia de conteúdo'" :ServiceDescription="'Obtenha uma estratégia de conteúdo para satisfazer o seu público sem estresse.'"/>
-      <ServiceButton :ServiceImage="'estrategia-de-anuncios'" :ServiceTitle="'Estratégia de anúncios'" :ServiceDescription="'Comece seus anúncios de forma simples e objetiva nas principais plataformas do mercado.'"/>
+      <ServiceButton :ServiceImage="'presenca-digital'" :ServiceTitle="'Presença digital'" :ServiceDescription="'Receba uma análise de como sua empresa está no ambiente digital com sugestões de melhorias.'" :ServiceID="'presenca-digital'"/>
+
+      <ServiceButton :ServiceImage="'publico-alvo'" :ServiceTitle="'Público-alvo'" :ServiceDescription="'Entenda quem é o público da sua empresa ou descubra novas clientes em potencial.'" :ServiceID="'publico-alvo'"/>
+
+      <ServiceButton :ServiceImage="'personas'" :ServiceTitle="'Personas'" :ServiceDescription="'Aumente a agilidade e eficiência do seu Marketing atingindo o seu cliente ideal.'" :ServiceID="'personas'"/>
+
+      <ServiceButton :ServiceImage="'estrategia-de-conteudo'" :ServiceTitle="'Estratégia de conteúdo'" :ServiceDescription="'Obtenha uma estratégia de conteúdo para satisfazer o seu público sem estresse.'" :ServiceID="'estrategia-de-conteudo'"/>
+
+      <ServiceButton :ServiceImage="'estrategia-de-anuncios'" :ServiceTitle="'Estratégia de anúncios'" :ServiceDescription="'Comece seus anúncios de forma simples e objetiva nas principais plataformas do mercado.'" :ServiceID="'estrategia-de-anuncios'"/>
     </ServicesGroup>
   </section>
 </template>

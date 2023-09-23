@@ -1,5 +1,5 @@
 <template>
-  <button :disabled="ServiceTag !== undefined">
+  <button :disabled="ServiceTag !== undefined" @click="showModal(ServiceID)">
     <img :src="require(`../assets/icons/${ServiceImage}.png`)">
     <div>
       <h3>{{ ServiceTitle }}</h3>
@@ -12,7 +12,10 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, ref } from 'vue';
+
+//Stores
+import serviceModalInfo from '@/stores/serviceModal';
 
 export default defineComponent({
   props: {
@@ -30,11 +33,29 @@ export default defineComponent({
     },
     'ServiceTag': {
       required: false,
+      type: String as () => "Novo" | "Indisponível",
+    },
+    'ServiceID': {
+      required: true,
       type: String
     }
   },
   setup(props) {
+    const modalInfo = ref(serviceModalInfo);
+
+    function showModal(serviceID:string):void {
+      const info = modalInfo.value;
+      location.pathname.includes('marketing-digital') ? info.serviceCategory = 'Marketing' : info.serviceCategory = 'Web'
+      info.serviceID = serviceID;
+      info.serviceImage = props.ServiceImage;
+      info.serviceName = props.ServiceTitle;
+      info.serviceButtonDescription = props.ServiceDescription
+      info.status = 'Show';
+    };
     
+    return {
+      showModal
+    }
   },
 })
 </script>

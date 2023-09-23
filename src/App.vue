@@ -3,20 +3,29 @@
   <main>
     <router-view/>
   </main>
+  <ServiceModal v-if="modalInfo.status == 'Show'"/>
   <Footer/>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, ref } from 'vue'
 
 //Components
 import Header from '@/components/Header.vue';
+import ServiceModal from './components/ServiceModal.vue';
 import Footer from '@/components/Footer.vue';
 
+//Stores
+import serviceModalInfo from './stores/serviceModal';
+
 export default defineComponent({
-  components: {Header, Footer},
+  components: {Header, Footer, ServiceModal},
   setup() {
-    
+    const modalInfo = ref(serviceModalInfo);
+
+    return {
+      modalInfo
+    }
   },
 })
 </script>

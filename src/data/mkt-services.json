@@ -1,0 +1,34 @@
+[
+  {
+    "id": "nome-do-servico",
+    "show": true,
+    "status": "unavailable",
+    "introduction": "",
+    "tableOfBenefits": [["Item 1", true], ["Item 2", true], ["Item 3", true], ["Item 4", true], ["Item 5", true], ["Preço reduzido para ONGs e ações sociais¹.", true]],
+    "serviceInfo": {
+      "deadline": 20,
+      "price": 600
+    },
+    "footerNotes": [
+      "O valor cobrado para instituições não governamentais (OGNs) ou ações sociais/comunitárias pode ser combinado abaixo dessa faixa.",
+      "A assinatura digital pode ser feita gratuitamente através do site do Instituto Nacional de Tecnologia da Informação, com a sua conta gov.br.",
+      "Ao escolher o PIX como forma de pagamento, você ganha um desconto de 5% em cima do valor do serviço."
+    ]
+  },
+  {
+    "id": "presenca-digital",
+    "show": true,
+    "status": "unavailable",
+    "introduction": "",
+    "tableOfBenefits": [["Item 1", true], ["Item 2", true], ["Item 3", true], ["Item 4", true], ["Item 5", true], ["Preço reduzido para ONGs e ações sociais¹.", true]],
+    "serviceInfo": {
+      "deadline": 20,
+      "price": 600
+    },
+    "footerNotes": [
+      "O valor cobrado para instituições não governamentais (OGNs) ou ações sociais/comunitárias pode ser combinado abaixo dessa faixa.",
+      "A assinatura digital pode ser feita gratuitamente através do site do Instituto Nacional de Tecnologia da Informação, com a sua conta gov.br.",
+      "Ao escolher o PIX como forma de pagamento, você ganha um desconto de 5% em cima do valor do serviço."
+    ]
+  }
+]
