@@ -33,11 +33,6 @@ export default defineComponent({
   }
   
   h1 {
-    font-size: 36px;
-    margin-bottom: 16px;
-  }
-
-  p {
-    font-size: 18px;
+    margin-bottom: 8px;
   }
 </style>

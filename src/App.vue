@@ -59,7 +59,7 @@ export default defineComponent({
 body {
   min-height: 100vh;
   min-height: 100dvh;
-  padding: 16px;
+  padding: 24px;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -67,6 +67,31 @@ h1,h2,h3,h4,h5,h6 {
   color: var(--font_color-title);
   font-weight: bold;
   line-height: 100%;
+}
+
+h1 {
+  font-size: 28px;
+}
+
+h1 + p {
+  font-size: 18px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h2 + p {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+h4 + p {
+  font-size: 16px;
 }
 
 p {

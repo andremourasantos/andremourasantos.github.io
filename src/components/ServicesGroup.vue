@@ -45,7 +45,6 @@ export default defineComponent({
   }
 
   h2 {
-    font-size: 20px;
     margin-bottom: 4px;
   }
 

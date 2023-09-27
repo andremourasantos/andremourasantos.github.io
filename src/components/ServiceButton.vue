@@ -90,7 +90,12 @@ export default defineComponent({
   }
 
   h3 {
+    font-size: 16px;
+    font-weight: 500;
     margin-bottom: 2px;
+  }
+
+  h3 + p {
     font-size: 16px;
   }
 
@@ -105,6 +110,6 @@ export default defineComponent({
 
   #tag p {
     color: white;
-    font-size: 16px;
+    font-size: 14px;
   }
 </style>

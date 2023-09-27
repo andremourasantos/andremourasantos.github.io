@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <img :src="require(`../assets/icons/${BenefitImage}.png`)">
+  <div class="benefitDescription">
+    <img :src="require(`../assets/icons/${BenefitImage}.png`)" height="24" width="24">
     <p>{{ BenefitText }}</p>
   </div>
 </template>
@@ -27,6 +27,12 @@ export default defineComponent({
 </script>
 
 
-<style>
-
+<style scoped>
+  div {
+    display: flex;
+    width: 100%;
+    padding-bottom: 8px;
+    gap: 8px;
+    border-bottom: 2px solid #00000030;
+  }
 </style>

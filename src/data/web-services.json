@@ -3,32 +3,126 @@
     "id": "nome-do-servico",
     "show": true,
     "status": "unavailable",
-    "introduction": "",
-    "tableOfBenefits": [["Item 1", true], ["Item 2", true], ["Item 3", true], ["Item 4", true], ["Item 5", true], ["Preço reduzido para ONGs e ações sociais¹.", true]],
+    "introduction": [
+      "Introdução."
+    ],
+    "tableOfBenefits": [
+      ["medalha", "Item1", true],
+      ["medalha", "Item2", true],
+      ["medalha", "Item3", true],
+      ["medalha", "Item4", true],
+      ["medalha", "Item5", true],
+      ["desconto", "Preço reduzido para ONGs e ações sociais.", true]
+    ],
     "serviceInfo": {
-      "deadline": 20,
-      "price": 600
+      "deadline": ["calendario", "Data de entrega", 5],
+      "price": ["moeda", "Preço do serviço", 300]
     },
     "footerNotes": [
       "O valor cobrado para instituições não governamentais (OGNs) ou ações sociais/comunitárias pode ser combinado abaixo dessa faixa.",
-      "A assinatura digital pode ser feita gratuitamente através do site do Instituto Nacional de Tecnologia da Informação, com a sua conta gov.br.",
-      "Ao escolher o PIX como forma de pagamento, você ganha um desconto de 5% em cima do valor do serviço."
+      "Ao escolher o PIX como forma de pagamento, você ganha um desconto de 5% em cima do valor do serviço.",
+      "Este contrato exige uma assinatura digital. Você pode realizar essa ação gratuitamente através do site ou aplicativo do Gov.br (conta prata exigida)."
     ]
   },
   {
-    "id": "nome-do-servico-2",
+    "id": "criacao-de-sites",
+    "show": true,
+    "status": "available",
+    "introduction": [
+      "Introdução."
+    ],
+    "tableOfBenefits": [
+      ["medalha", "Comece pequeno e incremente seu site com o tempo.", true],
+      ["medalha", "Fácil atualização/manutenção das informações.", true],
+      ["medalha", "Código moderno, rápido e otimizado para SEO.", true],
+      ["medalha", "Possibilidade de atualização de informações em tempo real.", true],
+      ["medalha", "Hospedagem de até 10 GB grátis.", true],
+      ["desconto", "Preço reduzido para ONGs e ações sociais.", true]
+    ],
+    "serviceInfo": {
+      "deadline": ["calendario", "Data de entrega", 30],
+      "price": ["moeda", "Preço do serviço", 600]
+    },
+    "footerNotes": [
+      "Os serviços de hospedagem e banco de dados são fornecidos pelo Firebase, que conta com sua própria política de preços.",
+      "O valor cobrado para instituições não governamentais (OGNs) ou ações sociais/comunitárias pode ser combinado abaixo dessa faixa.",
+      "Ao escolher o PIX como forma de pagamento, você ganha um desconto de 5% em cima do valor do serviço.",
+      "Este contrato exige uma assinatura digital. Você pode realizar essa ação gratuitamente através do site ou aplicativo do Gov.br (conta prata exigida)."
+    ]
+  },
+  {
+    "id": "design-de-sites",
+    "show": true,
+    "status": "available",
+    "introduction": [
+      "Introdução."
+    ],
+    "tableOfBenefits": [
+      ["medalha", "Tenha um design pronto para produção de sites.", true],
+      ["medalha", "Trabalho com foco em acessibilidade e facilidade de uso.", true],
+      ["medalha", "Leiaute responsivo para telefones, tablets e computadores.", true],
+      ["medalha", "Escolha ativos entre mais de 10 milhões de arquivos de mídia.", true],
+      ["medalha", "Tenha total acesso aos arquivos usados no projeto final.", true],
+      ["desconto", "Preço reduzido para ONGs e ações sociais.", false]
+    ],
+    "serviceInfo": {
+      "deadline": ["calendario", "Data de entrega", 20],
+      "price": ["moeda", "Preço do serviço", 600]
+    },
+    "footerNotes": [
+      "Entre os 10 milhões de ativos estão inclusos fotos, vídeos, modelos 3D, ícones e ilustrações.",
+      "Ao escolher o PIX como forma de pagamento, você ganha um desconto de 5% em cima do valor do serviço.",
+      "Este contrato exige uma assinatura digital. Você pode realizar essa ação gratuitamente através do site ou aplicativo do Gov.br (conta prata exigida)."
+    ]
+  },
+  {
+    "id": "consultoria-web",
     "show": true,
     "status": "unavailable",
-    "introduction": "",
-    "tableOfBenefits": [["Item 1", true], ["Item 2", true], ["Item 3", true], ["Item 4", true], ["Item 5", true], ["Preço reduzido para ONGs e ações sociais¹.", true]],
+    "introduction": [
+      "Introdução."
+    ],
+    "tableOfBenefits": [
+      ["medalha", "Item1", true],
+      ["medalha", "Linguagem acessível e sem jargões.", true],
+      ["medalha", "Lista de alterações e sugestões de melhorias.", true],
+      ["medalha", "Item4", true],
+      ["medalha", "Item5", true],
+      ["desconto", "Preço reduzido para ONGs e ações sociais.", true]
+    ],
     "serviceInfo": {
-      "deadline": 20,
-      "price": 600
+      "deadline": ["calendario", "Data de entrega", 14],
+      "price": ["moeda", "Preço do serviço", 300]
     },
     "footerNotes": [
       "O valor cobrado para instituições não governamentais (OGNs) ou ações sociais/comunitárias pode ser combinado abaixo dessa faixa.",
-      "A assinatura digital pode ser feita gratuitamente através do site do Instituto Nacional de Tecnologia da Informação, com a sua conta gov.br.",
-      "Ao escolher o PIX como forma de pagamento, você ganha um desconto de 5% em cima do valor do serviço."
+      "Ao escolher o PIX como forma de pagamento, você ganha um desconto de 5% em cima do valor do serviço.",
+      "Este contrato exige uma assinatura digital. Você pode realizar essa ação gratuitamente através do site ou aplicativo do Gov.br (conta prata exigida)."
+    ]
+  },
+  {
+    "id": "relatorios-web",
+    "show": true,
+    "status": "available",
+    "introduction": [
+      "Introdução."
+    ],
+    "tableOfBenefits": [
+      ["medalha", "Painéis atualizados em tempo real.", true],
+      ["medalha", "Linguagem acessível e sem jargões.", true],
+      ["medalha", "Envio de resumo mensal de desempenho.", true],
+      ["medalha", "Métricas específicas para o site do seu negócio.", true],
+      ["medalha", "Opções de contrato trimestral, bimestral e semestral.", true],
+      ["desconto", "Preço reduzido para ONGs e ações sociais.", false]
+    ],
+    "serviceInfo": {
+      "deadline": ["calendario", "Data de entrega", 10],
+      "price": ["moeda", "Preço do serviço", 300]
+    },
+    "footerNotes": [
+      "A disponilibidade de painéis atualizados em tempo real está restrita a uma seleta soma de serviços do Google, como Google Ads e Analytics.",
+      "Ao escolher o PIX como forma de pagamento, você ganha um desconto de 5% em cima do valor do serviço.",
+      "Este contrato exige uma assinatura digital. Você pode realizar essa ação gratuitamente através do site ou aplicativo do Gov.br (conta prata exigida)."
     ]
   }
 ]

@@ -1,0 +1,56 @@
+<template>
+  <div class="sideServiceInfo">
+    <img :src="require(`../assets/icons/${SideInfoImage}.png`)" height="36" width="36">
+    <div>
+      <h4>{{ SideInfoTitle }}</h4>
+      <p v-if="SideInfoDescriptionType == 'Date'">Até {{ SideInfoDescription }} dias úteis.</p>
+      <p v-if="SideInfoDescriptionType == 'Price'">A partir de R$ {{ SideInfoDescription }},00.</p>
+      <p v-if="SideInfoDescriptionType == 'Custom'">{{ SideInfoDescription }}</p>
+    </div>
+  </div>
+</template>
+
+<script lang="ts">
+import { defineComponent } from 'vue'
+
+export default defineComponent({
+  props: {
+    'SideInfoImage': {
+      required: true,
+      type: String
+    },
+    'SideInfoTitle': {
+      required: true,
+      type: String
+    },
+    'SideInfoDescription': {
+      required: true,
+      type: [String, Number]
+    },
+    'SideInfoDescriptionType': {
+      required: true,
+      type: String as () => "Date" | "Price" | "Custom"
+    }
+  },
+  setup(props) {
+    
+  },
+})
+</script>
+
+
+<style scoped>
+  .sideServiceInfo {
+    display: flex;
+    gap: 16px;
+    padding: 16px;
+    background-color: #d5d5d535;
+    box-shadow: var(--glass_effect-shadow);
+    border-radius: 16px;
+    margin: 16px 0px;
+  }
+
+  h4 {
+    margin-bottom: 2px;
+  }
+</style>

@@ -12,7 +12,7 @@
 
       <ServiceButton :ServiceImage="'design-de-sites'" :ServiceTitle="'Design de sites'" :ServiceDescription="'Só tem uma ideia? Vamos transformá-la em um design para que tome vida.'" :ServiceID="'design-de-sites'"/>
 
-      <ServiceButton :ServiceImage="'consultoria-web'" :ServiceTitle="'Consultoria'" :ServiceDescription="'Tenha uma segunda opinião sobre o seu site, com sugestões de melhorias.'" :ServiceTag="'Indisponível'" :ServiceID="'consultoria-web'"/>
+      <ServiceButton :ServiceImage="'consultoria-web'" :ServiceTitle="'Consultoria'" :ServiceDescription="'Tenha uma segunda opinião sobre o seu site, com sugestões de melhorias.'" :ServiceID="'consultoria-web'"/>
 
       <ServiceButton :ServiceImage="'relatorios-web'" :ServiceTitle="'Relatórios personalizados'" :ServiceDescription="'Não fique no escuro quanto a eficácia do seu site, tenha um relatório detalhado.'" :ServiceID="'relatorios-web'"/>
     </ServicesGroup>

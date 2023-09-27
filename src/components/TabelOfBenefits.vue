@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="tableOfBenefits">
     <slot></slot>
   </div>
 </template>
@@ -16,5 +16,20 @@ export default defineComponent({
 
 
 <style>
+  #tableOfBenefits {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    align-items: flex-start;
+    gap: 16px;
+    background-color: #d5d5d535;
+    box-shadow: var(--glass_effect-shadow);
+    border-radius: 24px;
+    padding: 24px;
+  }
 
+  #tableOfBenefits > .benefitDescription:last-child {
+    border-bottom: 0px !important;
+    padding-bottom: unset;
+  }
 </style>
