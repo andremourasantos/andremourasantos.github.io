@@ -3,7 +3,9 @@
   <main>
     <router-view/>
   </main>
-  <ServiceModal v-if="modalInfo.status == 'Show'"/>
+  <Transition name="modal">
+    <ServiceModal v-if="modalInfo.status == 'Show'"/>
+  </Transition>
   <Footer/>
 </template>
 
@@ -110,4 +112,17 @@ i {font-size: 32px;}
   left: 14vw;
   z-index: -1;
 }
+</style>
+
+<style>
+  .modal-enter-active, .modal-leave-active {
+    transition: 100ms ease-in;
+  }
+
+  .modal-enter-from,
+  .modal-leave-to {
+    opacity: 0;
+    transform: translateY(50px) scale(0.95);
+  }
+
 </style>

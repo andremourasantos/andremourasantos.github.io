@@ -112,7 +112,7 @@
       ["medalha", "Linguagem acessível e sem jargões.", true],
       ["medalha", "Envio de resumo mensal de desempenho.", true],
       ["medalha", "Métricas específicas para o site do seu negócio.", true],
-      ["medalha", "Opções de contrato trimestral, bimestral e semestral.", true],
+      ["medalha", "Opções de contrato trimestral e semestral.", true],
       ["desconto", "Preço reduzido para ONGs e ações sociais.", false]
     ],
     "serviceInfo": {

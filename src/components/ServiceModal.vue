@@ -35,6 +35,9 @@ import BenefitDescription from './BenefitDescription.vue';
 import SideServiceInfo from './SideServiceInfo.vue';
 import FooterNotes from './serviceModal/ServiceFooterNotes.vue';
 
+//Composables
+import { toggleHTMLOverflowY } from "@/composables/general";
+
 //Stores
 import serviceModalInfo from '@/stores/serviceModal';
 import marketingJSON from '@/data/mkt-services.json';
@@ -72,7 +75,11 @@ export default defineComponent({
           fillBenefitsTable(serviceInfo.tableOfBenefits);
           fillServiceSideInfoList(serviceInfo.serviceInfo);
           fillServiceFooterNotes(serviceInfo.footerNotes);
+
           el.showModal();
+          el.scrollTo(0,0);
+
+          toggleHTMLOverflowY();
         } else {
           closeModal();
           return alert('Desculpe, ocorreu um erro ao recuperar as informações sobre este serviço.');
@@ -101,10 +108,14 @@ export default defineComponent({
     const closeModal = () => {
       if(dialogEl.value instanceof HTMLElement){
         const el = dialogEl.value;
-        el.close();
+        setTimeout(() => {
+          //This timeOut function is here to sync with the transition in-and-out of the element (available in /src/App.vue).
+          el.close();
+        }, 100);
       };
 
       modalInfo.value.status = 'Hide';
+      toggleHTMLOverflowY();
     };
 
     return {

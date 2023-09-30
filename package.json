@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
+    "ngrok": "ngrok http --host-header=rewrite localhost:5500",
     "build": "vue-cli-service build"
   },
   "dependencies": {

@@ -1,5 +1,5 @@
 <template>
-  <button :disabled="ServiceTag !== undefined" @click="showModal(ServiceID)">
+  <button :disabled="ServiceTag !== undefined" @click="checkService(ServiceID)">
     <img :src="require(`../assets/icons/${ServiceImage}.png`)">
     <div>
       <h3>{{ ServiceTitle }}</h3>
@@ -13,6 +13,9 @@
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
+
+//Composables
+import { checkServiceExistence } from '@/composables/data-base';
 
 //Stores
 import serviceModalInfo from '@/stores/serviceModal';
@@ -43,18 +46,27 @@ export default defineComponent({
   setup(props) {
     const modalInfo = ref(serviceModalInfo);
 
-    function showModal(serviceID:string):void {
-      const info = modalInfo.value;
-      location.pathname.includes('marketing-digital') ? info.serviceCategory = 'Marketing' : info.serviceCategory = 'Web'
-      info.serviceID = serviceID;
-      info.serviceImage = props.ServiceImage;
-      info.serviceName = props.ServiceTitle;
-      info.serviceButtonDescription = props.ServiceDescription
-      info.status = 'Show';
-    };
+    const checkService = async (serviceID:string):Promise<void> => {
+      return new Promise(async (resolve) => {
+        if(await checkServiceExistence(serviceID)){
+        const info = modalInfo.value;
+        location.pathname.includes('marketing-digital') ? info.serviceCategory = 'Marketing' : info.serviceCategory = 'Web'
+        info.serviceID = serviceID;
+        info.serviceImage = props.ServiceImage;
+        info.serviceName = props.ServiceTitle;
+        info.serviceButtonDescription = props.ServiceDescription
+        info.status = 'Show';
+
+        return resolve();
+      } else {
+        alert('Desculpe, ocorreu um erro ao recuperar as informações sobre este serviço.');
+        return resolve();
+      }
+      })
+    } 
     
     return {
-      showModal
+      checkService
     }
   },
 })
