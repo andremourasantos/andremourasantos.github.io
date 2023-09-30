@@ -1,7 +1,12 @@
 <template>
   <PageTitle :PageTitle="'Criação de sites'" :PageDescription="'Desde a concepção ao produto final, ou apenas a etapa que precisar, confira os serviços fornecidos.'"/>
-  <img src="../assets/blue.png" id="gradient-top-right">
+  <div id="gradient-top-right">
+    <img src="../assets/blue.png">
+  </div>
   <section id="servicesGroup">
+    <div id="gradient-center-left">
+      <img src="../assets/lateral.png">
+    </div>
     <ServicesGroup :GroupTitle="'Combos de serviços'" :GroupDescription="'Não sabe por onde começar, então você está no lugar certo!'">
       <ServiceButton :ServiceImage="'general'" :ServiceTitle="'Serviço completo'" :ServiceDescription="'A solução tudo-em-um que você estava procurando.'" :ServiceTag="'Indisponível'" :ServiceID="'geral'"/>
 
@@ -37,9 +42,4 @@ export default defineComponent({
 
 
 <style scoped>
-  #servicesGroup {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
 </style>

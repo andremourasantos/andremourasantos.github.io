@@ -1,7 +1,7 @@
 <template>
-  <div id="tableOfBenefits">
-    <slot></slot>
-  </div>
+  <ul id="tableOfBenefits">
+      <slot></slot>
+  </ul>
 </template>
 
 <script lang="ts">
@@ -26,6 +26,7 @@ export default defineComponent({
     box-shadow: var(--glass_effect-shadow);
     border-radius: 24px;
     padding: 24px;
+    list-style-type: none;
   }
 
   #tableOfBenefits > .benefitDescription:last-child {

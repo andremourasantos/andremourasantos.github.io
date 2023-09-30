@@ -1,6 +1,8 @@
 <template>
   <PageTitle :PageTitle="'Política de Privacidade'" :PageDescription="'Este site com funcionalidades de terceiros e coleta informações sobre a sua sessão. Confira mais aqui.'"/>
-  <img src="../assets/purple.png" id="gradient-top-right">
+  <div id="gradient-top-right">
+    <img src="../assets/purple.png">
+  </div>
 </template>
 
 <script lang="ts">

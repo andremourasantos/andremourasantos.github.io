@@ -1,16 +1,21 @@
 <template>
   <PageTitle :PageTitle="'Marketing Digital'" :PageDescription="'Tenha uma estratégia de Marketing confeccionada especificamente para as necessidades do seu negócio.'"/>
-  <img src="../assets/purple.png" id="gradient-top-right">
+  <div id="gradient-top-right">
+    <img src="../assets/purple.png">
+  </div>
   <section id="servicesGroup">
+    <div id="gradient-center-left">
+      <img src="../assets/lateral.png">
+    </div>
     <ServicesGroup :GroupTitle="'Combos de serviços'" :GroupDescription="'Economize tempo e dinheiro na hora de criar sua estratégia de Marketing.'">
       <ServiceButton :ServiceImage="'general'" :ServiceTitle="'Serviço completo'" :ServiceDescription="'Contrate todos os serviços para começar seu Marketing a todo vapor.'" :ServiceTag="'Indisponível'" :ServiceID="'geral'"/>
 
       <ServiceButton :ServiceImage="'first-steps'" :ServiceTitle="'Primeiros passos'" :ServiceDescription="'Obtenha o básico para renovar os trabalhos com o Marketing da sua empresa.'" :ServiceTag="'Indisponível'" :ServiceID="'primeiros-passos'"/>
     </ServicesGroup>
     <ServicesGroup :GroupTitle="'Serviços oferecidos'" :GroupDescription="'Confira abaixo todos os serviços disponíveis, com detalhes.'">
-      <ServiceButton :ServiceImage="'presenca-digital'" :ServiceTitle="'Presença digital'" :ServiceDescription="'Receba uma análise de como sua empresa está no ambiente digital com sugestões de melhorias.'" :ServiceID="'presenca-digital'"/>
+      <ServiceButton :ServiceImage="'presenca-digital'" :ServiceTitle="'Presença digital'" :ServiceDescription="'Receba uma análise de como sua empresa está no ambiente digital, com sugestões de melhorias.'" :ServiceID="'presenca-digital'"/>
 
-      <ServiceButton :ServiceImage="'publico-alvo'" :ServiceTitle="'Público-alvo'" :ServiceDescription="'Entenda quem é o público da sua empresa ou descubra novas clientes em potencial.'" :ServiceID="'publico-alvo'"/>
+      <ServiceButton :ServiceImage="'publico-alvo'" :ServiceTitle="'Público-alvo'" :ServiceDescription="'Entenda quem é o público da sua empresa ou descubra novos clientes em potencial.'" :ServiceID="'publico-alvo'"/>
 
       <ServiceButton :ServiceImage="'personas'" :ServiceTitle="'Personas'" :ServiceDescription="'Aumente a agilidade e eficiência do seu Marketing atingindo o seu cliente ideal.'" :ServiceID="'personas'"/>
 
@@ -39,5 +44,15 @@ export default defineComponent({
 
 
 <style scoped>
+#gradient-center-left {
+  height: 718px !important;
+}
 
+#gradient-center-left img {
+  position: relative;
+  left: -150px;
+  top: -100px;
+  height: 850px;
+  width: 900px;
+}
 </style>

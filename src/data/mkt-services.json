@@ -42,7 +42,7 @@
     ],
     "serviceInfo": {
       "deadline": ["calendario", "Data de entrega", 5],
-      "price": ["moeda", "Preço do serviço", 300]
+      "price": ["moeda", "Preço do serviço", 999]
     },
     "footerNotes": [
       "O valor cobrado para instituições não governamentais (OGNs) ou ações sociais/comunitárias pode ser combinado abaixo dessa faixa.",
@@ -65,7 +65,7 @@
     ],
     "serviceInfo": {
       "deadline": ["calendario", "Data de entrega", 5],
-      "price": ["moeda", "Preço do serviço", 300]
+      "price": ["moeda", "Preço do serviço", 999]
     },
     "footerNotes": [
       "Ao escolher o PIX como forma de pagamento, você ganha um desconto de 5% em cima do valor do serviço.",
@@ -87,7 +87,7 @@
     ],
     "serviceInfo": {
       "deadline": ["calendario", "Data de entrega", 5],
-      "price": ["moeda", "Preço do serviço", 300]
+      "price": ["moeda", "Preço do serviço", 999]
     },
     "footerNotes": [
       "O valor cobrado para instituições não governamentais (OGNs) ou ações sociais/comunitárias pode ser combinado abaixo dessa faixa.",
@@ -114,7 +114,7 @@
     ],
     "serviceInfo": {
       "deadline": ["calendario", "Data de entrega", 14],
-      "price": ["moeda", "Preço do serviço", 600]
+      "price": ["moeda", "Preço do serviço", 999]
     },
     "footerNotes": [
       "O valor cobrado para instituições não governamentais (OGNs) ou ações sociais/comunitárias pode ser combinado abaixo dessa faixa.",
@@ -140,7 +140,7 @@
     ],
     "serviceInfo": {
       "deadline": ["calendario", "Data de entrega", 14],
-      "price": ["moeda", "Preço do serviço", 600]
+      "price": ["moeda", "Preço do serviço", 999]
     },
     "footerNotes": [
       "O valor cobrado para instituições não governamentais (OGNs) ou ações sociais/comunitárias pode ser combinado abaixo dessa faixa.",

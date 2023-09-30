@@ -16,7 +16,7 @@
     ],
     "serviceInfo": {
       "deadline": ["calendario", "Data de entrega", 5],
-      "price": ["moeda", "Preço do serviço", 300]
+      "price": ["moeda", "Preço do serviço", 999]
     },
     "footerNotes": [
       "O valor cobrado para instituições não governamentais (OGNs) ou ações sociais/comunitárias pode ser combinado abaixo dessa faixa.",
@@ -41,7 +41,7 @@
     ],
     "serviceInfo": {
       "deadline": ["calendario", "Data de entrega", 30],
-      "price": ["moeda", "Preço do serviço", 600]
+      "price": ["moeda", "Preço do serviço", 999]
     },
     "footerNotes": [
       "Os serviços de hospedagem e banco de dados são fornecidos pelo Firebase, que conta com sua própria política de preços.",
@@ -67,7 +67,7 @@
     ],
     "serviceInfo": {
       "deadline": ["calendario", "Data de entrega", 20],
-      "price": ["moeda", "Preço do serviço", 600]
+      "price": ["moeda", "Preço do serviço", 999]
     },
     "footerNotes": [
       "Entre os 10 milhões de ativos estão inclusos fotos, vídeos, modelos 3D, ícones e ilustrações.",
@@ -92,7 +92,7 @@
     ],
     "serviceInfo": {
       "deadline": ["calendario", "Data de entrega", 14],
-      "price": ["moeda", "Preço do serviço", 300]
+      "price": ["moeda", "Preço do serviço", 999]
     },
     "footerNotes": [
       "O valor cobrado para instituições não governamentais (OGNs) ou ações sociais/comunitárias pode ser combinado abaixo dessa faixa.",
@@ -117,7 +117,7 @@
     ],
     "serviceInfo": {
       "deadline": ["calendario", "Data de entrega", 10],
-      "price": ["moeda", "Preço do serviço", 300]
+      "price": ["moeda", "Preço do serviço", 999]
     },
     "footerNotes": [
       "A disponilibidade de painéis atualizados em tempo real está restrita a uma seleta soma de serviços do Google, como Google Ads e Analytics.",

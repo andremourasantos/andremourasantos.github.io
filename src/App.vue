@@ -14,7 +14,7 @@ import { defineComponent, ref } from 'vue'
 
 //Components
 import Header from '@/components/Header.vue';
-import ServiceModal from './components/ServiceModal.vue';
+import ServiceModal from './components/serviceModal/ServiceModal.vue';
 import Footer from '@/components/Footer.vue';
 
 //Stores
@@ -104,13 +104,46 @@ p {
 
 i {font-size: 32px;}
 
+#servicesGroup {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 #gradient-top-right {
-  position: fixed;
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  top: 0px;
+  left: 0px;
   transform: scaleX(-100%);
-  top: -25vh;
-  rotate: 360deg;
-  left: 14vw;
   z-index: -1;
+}
+
+#gradient-top-right img {
+  position: relative;
+  right: 300px;
+  top: -150px;
+}
+
+#gradient-center-left {
+  position: absolute;
+  width: 100%;
+  height: 604px;
+  overflow: hidden;
+  bottom: -24px;
+  left: -24px;
+  transform: scaleX(-100%);
+  z-index: -1;
+}
+
+#gradient-center-left img {
+  position: relative;
+  left: -150px;
+  top: -100px;
+  height: 760px;
+  width: 900px;
 }
 </style>
 

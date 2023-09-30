@@ -1,11 +1,12 @@
 <template>
   <dialog ref="dialogEl">
     <div id="headerIcons">
-      <i class="ph-fill ph-x-circle" @click="closeModal"></i>
+      <i class="ph-fill ph-share-network" aria-label="Compartilhar" @click="shareModal"></i>
+      <i class="ph-fill ph-x-circle" arial-label="Fechar" @click="closeModal"></i>
     </div>
     <article>
       <div id="mainServiceInfo">
-        <img :src="require(`../assets/icons/${modalInfo.serviceImage}.png`)">
+        <img :src="require(`@/assets/icons/${modalInfo.serviceImage}.png`)">
         <h2>{{ modalInfo.serviceName }}</h2>
         <p>{{ modalInfo.serviceButtonDescription }}</p>
       </div>
@@ -21,6 +22,12 @@
         <SideServiceInfo v-for="entry in serviceSideInfoList" :key="entry[0]" :SideInfoImage="entry[0]" :SideInfoTitle="entry[1]" :SideInfoDescription="entry[2]" :SideInfoDescriptionType="entry[0] == 'calendario' ? 'Date' : 'Price'"/>
         <SideServiceInfo :SideInfoImage="'pagamento'" :SideInfoTitle="'Formas de pagamento'" :SideInfoDescription="'PIX e cartão de crédito.'" :SideInfoDescriptionType="'Custom'"/>
       </div>
+      <div>
+        <h3>Entre em contato</h3>
+        <p>Disponível para conversa de Segunda à Sábado, das 16h às 20h.</p>
+        <ContactButton/>
+      </div>
+      <hr>
       <FooterNotes :FooterNotes="serviceFooterNotes"/>
     </article>
   </dialog>
@@ -33,7 +40,8 @@ import { defineComponent, ref, onMounted } from 'vue';
 import TabelOfBenefits from './TabelOfBenefits.vue';
 import BenefitDescription from './BenefitDescription.vue';
 import SideServiceInfo from './SideServiceInfo.vue';
-import FooterNotes from './serviceModal/ServiceFooterNotes.vue';
+import ContactButton from './ContactButton.vue';
+import FooterNotes from './ServiceFooterNotes.vue';
 
 //Composables
 import { toggleHTMLOverflowY } from "@/composables/general";
@@ -44,7 +52,7 @@ import marketingJSON from '@/data/mkt-services.json';
 import webJSON from '@/data/web-services.json';
 
 export default defineComponent({
-  components: {TabelOfBenefits, BenefitDescription, SideServiceInfo, FooterNotes},
+  components: {TabelOfBenefits, BenefitDescription, SideServiceInfo, ContactButton, FooterNotes},
   setup() {
     const dialogEl = ref<HTMLDialogElement | null>(null);
     const modalInfo = ref(serviceModalInfo);
@@ -105,7 +113,11 @@ export default defineComponent({
       serviceFooterNotes.value = footerNotes;
     }
 
-    const closeModal = () => {
+    const shareModal = ():void => {
+      alert('A opção de compartilhar ainda não está disponível.');
+    };
+
+    const closeModal = ():void => {
       if(dialogEl.value instanceof HTMLElement){
         const el = dialogEl.value;
         setTimeout(() => {
@@ -125,6 +137,7 @@ export default defineComponent({
       serviceBenefitsList,
       serviceSideInfoList,
       serviceFooterNotes,
+      shareModal,
       closeModal
     }
   },
@@ -148,7 +161,8 @@ export default defineComponent({
     top: 0;
     display: flex;
     justify-content: flex-end;
-    gap: 8px;
+    gap: 16px;
+    z-index: 2;
   }
 
   #headerIcons i {
@@ -166,6 +180,7 @@ export default defineComponent({
     height: 80px;
     width: fit-content;
     margin-bottom: 16px;
+    filter: drop-shadow(0px 0px 5px #00000015);
   }
 
   h2 {
