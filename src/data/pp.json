@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Informações gerais",
+    "description": "Este site é um projeto pessoal gerenciado por André Moura Santos, como um freelancer.",
+    "content": [
+      "Esta política de privacidade é estabelecida para cumprir as disposições da Lei Geral de Proteção de Dados (LGPD) e fornecer transparência sobre a coleta e o uso de informações pessoais neste site.",
+      "Ao continuar a usar este site, os usuários concordam com a coleta de informações pessoais genéricas. Essas informações são utilizadas para analisar a origem dos acessos, compreender quem visita o site e avaliar a eficácia de eventuais campanhas publicitárias realizadas pelo responsável."
+    ]
+  },
+  {
+    "title": "Coleta de dados",
+    "description": "Entenda quais os tipos de dados são coletados e como essa coleta ocorre.",
+    "content": [
+      "Este site coleta uma variedade de informações pessoais para melhorar a experiência do usuário e avaliar a eficácia do conteúdo. Os tipos de dados coletados incluem, mas não se limitam a: Idade; Gênero; Interesses; Dados de navegação e interação no site; Dados de dispositivos; Fonte de tráfego; Localização geográfica (país, cidade).",
+      "Esses dados são coletados principalmente por meio de ferramentas de análise, como Google Analytics e Google Ads, que utilizam códigos de rastreamento e cookies. Essas tecnologias permitem a análise do comportamento dos usuários, a origem do tráfego e outros padrões de navegação. Além disso, essas informações são fundamentais para avaliar a eficácia de eventuais campanhas publicitárias e aprimorar a experiência do usuário.",
+      "Os usuários podem gerenciar as configurações de cookies e preferências de rastreamento diretamente em seus navegadores."
+    ]
+  },
+  {
+    "title": "Uso dos dados",
+    "description": "Veja para quê os dados coletados são usados e a base legal para seu uso.",
+    "content": [
+      "Os dados pessoais mencionados anteriormente são coletados com o objetivo de analisar o desempenho deste site e avaliar a eficácia de campanhas publicitárias. As principais finalidades incluem, mas não se limitam a: Análise do tráfego e comportamento do usuário; Aprimoramento da experiência do usuário; Avaliação da eficácia de campanhas publicitárias.",
+      "A coleta e processamento desses dados baseiam-se no consentimento do usuário. Ao navegar neste site, o usuário concorda implicitamente com a coleta de dados anonimizados para as finalidades mencionadas anteriormente."
+    ]
+  },
+  {
+    "title": "Cookies e tecnologias semelhantes",
+    "description": "Compreenda o uso dos cookies neste site e como é sua operação.",
+    "content": [
+      "Este site utiliza cookies para diversas finalidades, incluindo: Identificação de Usuário Único; Rastreamento de Sessão; Rastreamento de Campanhas; Integração com Outros Serviços.",
+      "Os cookies utilizados neste site são principalmente cookies persistentes, que permanecem no dispositivo do usuário após o término da sessão de navegação.",
+      "Os usuários têm a opção de gerenciar suas preferências de cookies diretamente por meio das configurações de seus navegadores. Essas configurações permitem aos usuários aceitar, recusar ou excluir cookies conforme desejado. Os usuários também têm o direito de desativar os cookies através das configurações de seus navegadores."
+    ]
+  },
+  {
+    "title": "Compartilhamento de dados",
+    "description": "Veja como e com quem seus dados são compartilhados.",
+    "content": [
+      "Os dados coletados neste site não são compartilhados com serviços de terceiros, exceto pelo possível uso desses dados pelo Google para aprimoramento de seus serviços. Nenhum compartilhamento adicional com parceiros de negócios ou outros serviços de terceiros é realizado.",
+      "Os dados coletados podem ser transferidos para servidores do Google localizados fora do Brasil, como nos Estados Unidos, por exemplo. Essa transferência pode ser necessária para o processamento e aprimoramento dos serviços fornecidos por terceiros. Asseguramos que, ao realizar tais transferências, medidas adequadas são tomadas para garantir a proteção dos dados, conforme exigido pelas leis aplicáveis."
+    ]
+  },
+  {
+    "title": "Revisão desta política",
+    "description": "Veja como seus dados são compartilhados.",
+    "content": [
+      "Esta política de privacidade pode ser revisada a qualquer momento e sem aviso prévio. A revisão pode ser realizada para garantir a conformidade com as leis aplicáveis, refletir as práticas atualizadas do site ou por outros motivos pertinentes. Os usuários são encorajados a revisitar esta página regularmente para estar cientes de quaisquer alterações."
+    ]
+  },
+  {
+    "title": "Canais de contato",
+    "description": "Veja por onde expressar suas dúvidas ou preocupações em relação a esta política de privacidade.",
+    "content": [
+      "Os usuários podem entrar em contato em caso de dúvidas ou preocupações relacionadas à privacidade através do e-mail: contato@andremourasantos.com.br."
+    ]
+  }
+]
