@@ -29,13 +29,6 @@ export default defineComponent({
 
 
 <style scoped>
-  /* details {
-    background: #ffffff35;
-    box-shadow: var(--glass_effect-shadow);
-    padding: 24px;
-    border-radius: 24px;
-  } */
-
   details p {
     margin-bottom: 8px;
   }
@@ -49,6 +42,7 @@ export default defineComponent({
     font-weight: bold;
     color: var(--font_color-title);
     transition: 200ms;
+    cursor: pointer;
   }
 
   details[open] summary {

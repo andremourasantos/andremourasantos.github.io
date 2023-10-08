@@ -4,7 +4,9 @@
     <ButtonToPage :ButtonTitle="'Desenvolvimento Web'" :ButtonDescription="'Criação de sites e landing pages responsivas e de fácil atualização.'" :ButtonImage="'web-development'" @click="goToPage('webDev')"/>
     <ButtonToPage :ButtonTitle="'Marketing Digital'" :ButtonDescription="'Público-alvo, personas, canais e estratégia de anúncios e conteúdos.'" :ButtonImage="'digital-marketing'" @click="goToPage('marketing')"/>
   </section>
-  <img src="../assets/lateral.png">
+  <div id="gradient-top-right">
+    <img src="../assets/lateral.png">
+  </div>
 </template>
 
 <script lang="ts">
@@ -39,11 +41,17 @@ export default defineComponent({
     width: 100%;
   }
 
-  img {
-    position: fixed;
-    top: -30vh;
-    left: -10vw;
-    z-index: -1;
+  #gradient-top-right img {
+    right: 400px;
+    top: -300px;
+  }
+
+  @media screen and (min-width: 425px) {
+    section:nth-child(2) {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
   }
 </style>
 

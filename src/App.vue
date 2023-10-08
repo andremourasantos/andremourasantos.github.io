@@ -104,6 +104,45 @@ p {
 
 i {font-size: 32px;}
 
+@media screen and (min-width: 425px) {
+  body {
+    padding: 36px;
+  }
+
+  h1 {
+  font-size: 36px;
+  }
+
+  h1 + p {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h2 + p {
+    font-size: 18px;
+  }
+
+  h4 {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  h4 + p {
+    font-size: 16px;
+  }
+
+  p {
+    line-height: 100%;
+    font-weight: 500;
+    font-size: 18px
+  }
+
+  i {font-size: 36px;}
+}
+
 #servicesGroup {
   position: relative;
   display: flex;
@@ -113,6 +152,7 @@ i {font-size: 32px;}
 
 #gradient-top-right {
   position: absolute;
+  max-height: 100%;
   width: 100%;
   overflow: hidden;
   top: 0px;

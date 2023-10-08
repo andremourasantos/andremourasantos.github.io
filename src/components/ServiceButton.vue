@@ -1,6 +1,6 @@
 <template>
   <button :disabled="ServiceTag !== undefined" @click="checkService(ServiceID)">
-    <img :src="require(`../assets/icons/${ServiceImage}.png`)">
+    <img :src="require(`@/assets/icons/${ServiceImage}.png`)">
     <div>
       <h3>{{ ServiceTitle }}</h3>
       <p>{{ ServiceDescription }}</p>
@@ -118,10 +118,41 @@ export default defineComponent({
     padding: 4px 8px;
     border-radius: 0px 10px 0px 10px;
     right: 0px;
+    top: 0px;
   }
 
   #tag p {
     color: white;
     font-size: 14px;
+  }
+
+  @media screen and (min-width: 425px) {
+    button {
+      grid-template-columns: auto;
+      grid-template-rows: 56px auto;
+      align-items: center;
+      justify-items: center;
+      row-gap: 16px;
+      width: 220px;
+      padding: 24px;
+      text-align: center;
+    }
+
+    button:has(#tag) {
+      padding: 36px 24px 24px 24px;
+    }
+
+    button img {
+      width: 56px;
+    }
+
+    h3 {
+      font-size: 18px;
+      margin-bottom: 4px;
+    }
+
+    h3 + p {
+      font-size: 16px;
+    }
   }
 </style>

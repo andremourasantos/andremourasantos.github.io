@@ -56,4 +56,30 @@ export default defineComponent({
     font-size: 16px;
     margin-bottom: 4px;
   }
+
+  @media screen and (min-width: 425px) {
+    button {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      row-gap: 16px;
+      width: 300px;
+      padding: 24px;
+    }
+
+    button img {
+      height: 56px;
+      width: 56px;
+    }
+
+    h2 {
+      font-size: 18px;
+    }
+
+    h2 + p {
+      font-size: 18px;
+    }
+  }
 </style>

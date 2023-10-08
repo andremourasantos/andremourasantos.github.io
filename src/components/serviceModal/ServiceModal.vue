@@ -1,7 +1,7 @@
 <template>
   <dialog ref="dialogEl">
     <div id="headerIcons">
-      <i class="ph-fill ph-share-network" aria-label="Compartilhar" @click="shareModal"></i>
+      <!-- <i class="ph-fill ph-share-network" aria-label="Compartilhar" @click="shareModal"></i> -->
       <i class="ph-fill ph-x-circle" arial-label="Fechar" @click="closeModal"></i>
     </div>
     <article>
@@ -19,8 +19,10 @@
       <div id="sideServiceInfo">
         <h3>Informações do serviço</h3>
         <p>Veja as informações sobre prazos de entrega, formas de pagamento e valor do serviço.</p>
-        <SideServiceInfo v-for="entry in serviceSideInfoList" :key="entry[0]" :SideInfoImage="entry[0]" :SideInfoTitle="entry[1]" :SideInfoDescription="entry[2]" :SideInfoDescriptionType="entry[0] == 'calendario' ? 'Date' : 'Price'"/>
-        <SideServiceInfo :SideInfoImage="'pagamento'" :SideInfoTitle="'Formas de pagamento'" :SideInfoDescription="'PIX e cartão de crédito.'" :SideInfoDescriptionType="'Custom'"/>
+        <div>
+          <SideServiceInfo v-for="entry in serviceSideInfoList" :key="entry[0]" :SideInfoImage="entry[0]" :SideInfoTitle="entry[1]" :SideInfoDescription="entry[2]" :SideInfoDescriptionType="entry[0] == 'calendario' ? 'Date' : 'Price'"/>
+          <SideServiceInfo :SideInfoImage="'pagamento'" :SideInfoTitle="'Formas de pagamento'" :SideInfoDescription="'PIX e cartão de crédito.'" :SideInfoDescriptionType="'Custom'"/>
+        </div>
       </div>
       <div>
         <h3>Entre em contato</h3>
@@ -61,8 +63,8 @@ export default defineComponent({
     const serviceFooterNotes = ref<string[]>([]);
 
     interface sideInfo {
-      deadline:[string,string,number][],
-      price:[string,string,number][]
+      deadline:[string,string,number],
+      price:[string,string,number]
     };
 
     const serviceSideInfoList = ref<sideInfo | [string,string,number][] | null>(null);
@@ -152,8 +154,9 @@ export default defineComponent({
     background-color: #ffffff90;
     box-shadow: var(--glass_effect-shadow);
     backdrop-filter: blur(50px);
-    margin: auto;
+    margin: auto 24px;
     padding: 24px;
+    max-width: 520px;
   }
 
   #headerIcons {
@@ -168,6 +171,7 @@ export default defineComponent({
   #headerIcons i {
     color: var(--font_color-title);
     font-size: 32px;
+    cursor: pointer;
   }
 
   dialog > article {
@@ -196,5 +200,21 @@ export default defineComponent({
     display: flex;
     flex-direction: column;
     gap: 16px;
+  }
+
+  @media screen and (min-width: 425px) {
+    dialog {
+      padding: 24px 36px;
+      margin: auto;
+    }
+
+    #sideServiceInfo > div {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      column-gap: 32px;
+    }
   }
 </style>

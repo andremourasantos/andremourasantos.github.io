@@ -53,4 +53,19 @@ export default defineComponent({
   h4 {
     margin-bottom: 2px;
   }
+
+  @media screen and (min-width: 425px) {
+    .sideServiceInfo {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: 200px;
+    }
+
+    img {
+      height: 44px;
+      width: 44px;
+    }
+  }
 </style>

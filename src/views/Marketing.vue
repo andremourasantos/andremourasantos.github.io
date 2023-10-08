@@ -13,16 +13,8 @@
       <ServiceButton :ServiceImage="'first-steps'" :ServiceTitle="'Primeiros passos'" :ServiceDescription="'Obtenha o básico para renovar os trabalhos com o Marketing da sua empresa.'" :ServiceTag="'Indisponível'" :ServiceID="'primeiros-passos'"/>
     </ServicesGroup>
     <ServicesGroup :GroupTitle="'Serviços oferecidos'" :GroupDescription="'Confira abaixo todos os serviços disponíveis, com detalhes.'">
-      <ServiceButton :ServiceImage="'presenca-digital'" :ServiceTitle="'Presença digital'" :ServiceDescription="'Receba uma análise de como sua empresa está no ambiente digital, com sugestões de melhorias.'" :ServiceID="'presenca-digital'"/>
-
-      <ServiceButton :ServiceImage="'publico-alvo'" :ServiceTitle="'Público-alvo'" :ServiceDescription="'Entenda quem é o público da sua empresa ou descubra novos clientes em potencial.'" :ServiceID="'publico-alvo'"/>
-
-      <ServiceButton :ServiceImage="'personas'" :ServiceTitle="'Personas'" :ServiceDescription="'Aumente a agilidade e eficiência do seu Marketing atingindo o seu cliente ideal.'" :ServiceID="'personas'"/>
-
-      <ServiceButton :ServiceImage="'estrategia-de-conteudo'" :ServiceTitle="'Estratégia de conteúdo'" :ServiceDescription="'Obtenha uma estratégia de conteúdo para satisfazer o seu público sem estresse.'" :ServiceID="'estrategia-de-conteudo'"/>
-
-      <ServiceButton :ServiceImage="'estrategia-de-anuncios'" :ServiceTitle="'Estratégia de anúncios'" :ServiceDescription="'Comece seus anúncios de forma simples e objetiva nas principais plataformas do mercado.'" :ServiceID="'estrategia-de-anuncios'"/>
-    </ServicesGroup>
+      <ServiceButton v-for="entry in servicesToShow" :key="entry.id" :ServiceImage="entry.image" :ServiceTitle="entry.title" :ServiceDescription="entry.description" :ServiceID="entry.id"/>
+      </ServicesGroup>
   </section>
 </template>
 
@@ -34,10 +26,20 @@ import PageTitle from '@/components/PageTitle.vue';
 import ServicesGroup from '@/components/ServicesGroup.vue';
 import ServiceButton from '@/components/ServiceButton.vue';
 
+//Composables
+import { filterServicesToShow } from "@/composables/general";
+
+//Data
+import servicesJSON from '@/data/mkt-services.json';
+
 export default defineComponent({
   components: {PageTitle, ServicesGroup, ServiceButton},
   setup() {
-    
+    let servicesToShow:NonNullable<ServiceInfo>[] = filterServicesToShow(servicesJSON as ServiceInfo[]);
+
+    return {
+      servicesToShow
+    }
   },
 })
 </script>

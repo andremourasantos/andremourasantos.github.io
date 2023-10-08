@@ -13,14 +13,8 @@
       <ServiceButton :ServiceImage="'first-steps'" :ServiceTitle="'Primeiros passos'" :ServiceDescription="'Tire suas ideias do papel e leve-as para a internet.'" :ServiceTag="'Indisponível'" :ServiceID="'primeiros-passos'"/>
     </ServicesGroup>
     <ServicesGroup :GroupTitle="'Serviços oferecidos'" :GroupDescription="'Confira abaixo todos os serviços disponíveis, com detalhes.'">
-      <ServiceButton :ServiceImage="'criacao-de-sites'" :ServiceTitle="'Criação de sites'" :ServiceDescription="'Um site criado a partir de um design completo. Rápido, otimizado para SEO e acessibilidade.'" :ServiceID="'criacao-de-sites'"/>
-
-      <ServiceButton :ServiceImage="'design-de-sites'" :ServiceTitle="'Design de sites'" :ServiceDescription="'Só tem uma ideia? Vamos transformá-la em um design para que tome vida.'" :ServiceID="'design-de-sites'"/>
-
-      <ServiceButton :ServiceImage="'consultoria-web'" :ServiceTitle="'Consultoria'" :ServiceDescription="'Tenha uma segunda opinião sobre o seu site, com sugestões de melhorias.'" :ServiceID="'consultoria-web'"/>
-
-      <ServiceButton :ServiceImage="'relatorios-web'" :ServiceTitle="'Relatórios personalizados'" :ServiceDescription="'Não fique no escuro quanto a eficácia do seu site, tenha um relatório detalhado.'" :ServiceID="'relatorios-web'"/>
-    </ServicesGroup>
+      <ServiceButton v-for="entry in servicesToShow" :key="entry.id" :ServiceImage="entry.image" :ServiceTitle="entry.title" :ServiceDescription="entry.description" :ServiceID="entry.id"/>
+      </ServicesGroup>
   </section>
 </template>
 
@@ -32,10 +26,20 @@ import PageTitle from '@/components/PageTitle.vue';
 import ServicesGroup from '@/components/ServicesGroup.vue';
 import ServiceButton from '@/components/ServiceButton.vue';
 
+//Composables
+import { filterServicesToShow } from "@/composables/general";
+
+//Data
+import servicesJSON from '@/data/web-services.json';
+
 export default defineComponent({
   components: {PageTitle, ServicesGroup, ServiceButton},
   setup() {
-    
+    let servicesToShow:NonNullable<ServiceInfo>[] = filterServicesToShow(servicesJSON as ServiceInfo[]);
+
+    return {
+      servicesToShow
+    }
   },
 })
 </script>

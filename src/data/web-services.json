@@ -1,33 +1,11 @@
 [
   {
-    "id": "nome-do-servico",
-    "show": true,
-    "status": "unavailable",
-    "introduction": [
-      "Introdução."
-    ],
-    "tableOfBenefits": [
-      ["medalha", "Item1", true],
-      ["medalha", "Item2", true],
-      ["medalha", "Item3", true],
-      ["medalha", "Item4", true],
-      ["medalha", "Item5", true],
-      ["desconto", "Preço reduzido para ONGs e ações sociais.", true]
-    ],
-    "serviceInfo": {
-      "deadline": ["calendario", "Data de entrega", 5],
-      "price": ["moeda", "Preço do serviço", 999]
-    },
-    "footerNotes": [
-      "O valor cobrado para instituições não governamentais (OGNs) ou ações sociais/comunitárias pode ser combinado abaixo dessa faixa.",
-      "Ao escolher o PIX como forma de pagamento, você ganha um desconto de 5% em cima do valor do serviço.",
-      "Este contrato exige uma assinatura digital. Você pode realizar essa ação gratuitamente através do site ou aplicativo do Gov.br (conta prata exigida)."
-    ]
-  },
-  {
     "id": "criacao-de-sites",
     "show": true,
-    "status": "available",
+    "title": "Criação de sites",
+    "status": "",
+    "image": "criacao-de-sites",
+    "description": "Um site criado a partir de um design completo. Rápido, otimizado para SEO e acessibilidade.",
     "introduction": [
       "Introdução."
     ],
@@ -53,7 +31,10 @@
   {
     "id": "design-de-sites",
     "show": true,
-    "status": "available",
+    "title": "Design de sites",
+    "status": "",
+    "image": "design-de-sites",
+    "description": "Só tem uma ideia? Vamos transformá-la em um design para que tome vida.",
     "introduction": [
       "Introdução."
     ],
@@ -78,9 +59,13 @@
   {
     "id": "consultoria-web",
     "show": true,
-    "status": "unavailable",
+    "title": "Consultoria",
+    "status": "Indisponível",
+    "image": "consultoria-web",
+    "description": "Tenha uma segunda opinião sobre o seu site, com sugestões de melhorias.",
     "introduction": [
-      "Introdução."
+      "O serviço de consultoria é essencial para casos em que você quer realizar uma mudança ou incrementar o seu site, mas está em dúvida sobre se esta é a ação certa.",
+      "Com essa consultoria, você obtém um ponto de vista totalmente novo sobre o seu site, exatamente como um novo cliente em potêncial. Graças a isso, você pode obter novas percepções sobre o seu próprio site, o que auxiliará na hora de tomar decisões no futuro, evitando dores de cabeça, perda de tempo e gastos financeiros mal direcionados."
     ],
     "tableOfBenefits": [
       ["medalha", "Item1", true],
@@ -103,9 +88,13 @@
   {
     "id": "relatorios-web",
     "show": true,
-    "status": "available",
+    "title": "Relatórios personalizados",
+    "status": "Indisponível",
+    "image": "relatorio-web",
+    "description": "Não fique no escuro quanto a eficácia do seu site, tenha um relatório detalhado.",
     "introduction": [
-      "Introdução."
+      "Com um site pronto e rodando, é imprescindível que você tenha acesso as principais métricas de sucesso relacionadas ao seu negócio à disposição para poder avaliar o desempenho das suas ações na internet.",
+      "A partir de um relatório detalhado, criado especialmente para as suas necessidades, você pode, facilmente, compreender se o seu site está em indo bem ou mal, de onde estão vindo os acessos, quem são essas pessoas e como interagem com o seu site. Assim, ficará mais fácil para você ou o seu time planejar ações ou anúncios e obter o retorno sobre o desempenho das mesmas."
     ],
     "tableOfBenefits": [
       ["medalha", "Painéis atualizados em tempo real.", true],

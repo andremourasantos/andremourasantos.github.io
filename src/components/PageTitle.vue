@@ -35,4 +35,12 @@ export default defineComponent({
   h1 {
     margin-bottom: 8px;
   }
+
+  @media screen and (min-width: 425px) {
+    section {
+      width: 400px;
+      margin: auto;
+      text-align: center;
+    }
+  }
 </style>

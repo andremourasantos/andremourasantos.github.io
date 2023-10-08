@@ -37,7 +37,8 @@ export default defineComponent({
   section {
     height: fit-content;
     width: 100%;
-    margin-top: 48px;
+    max-width: 550px;
+    margin: 48px auto 0px auto;
     border-radius: 24px;
     padding: 24px;
     background-color: #d5d5d535;
@@ -49,12 +50,27 @@ export default defineComponent({
   }
 
   section > div:nth-of-type(1) {
-    margin-bottom: 24px;
+    margin: 0px auto 24px auto;
   }
 
   section > article {
     display: flex;
     flex-direction: column;
     gap: 16px;
+  }
+
+  @media screen and (min-width: 425px) {
+    section > div:nth-of-type(1) {
+      text-align: center;
+      width: 70%;
+    }
+
+    section > article {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: start;
+    }
   }
 </style>

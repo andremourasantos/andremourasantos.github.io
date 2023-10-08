@@ -1,33 +1,11 @@
 [
   {
-    "id": "nome-do-servico",
-    "show": true,
-    "status": "unavailable",
-    "introduction": [
-      "Introdução."
-    ],
-    "tableOfBenefits": [
-      ["medalha", "Item1", true],
-      ["medalha", "Item2", true],
-      ["medalha", "Item3", true],
-      ["medalha", "Item4", true],
-      ["medalha", "Item5", true],
-      ["desconto", "Preço reduzido para ONGs e ações sociais.", true]
-    ],
-    "serviceInfo": {
-      "deadline": ["calendario", "Data de entrega", 5],
-      "price": ["moeda", "Preço do serviço", 300]
-    },
-    "footerNotes": [
-      "O valor cobrado para instituições não governamentais (OGNs) ou ações sociais/comunitárias pode ser combinado abaixo dessa faixa.",
-      "Ao escolher o PIX como forma de pagamento, você ganha um desconto de 5% em cima do valor do serviço.",
-      "Este contrato exige uma assinatura digital. Você pode realizar essa ação gratuitamente através do site ou aplicativo do Gov.br (conta prata exigida)."
-    ]
-  },
-  {
     "id": "presenca-digital",
     "show": true,
+    "title": "Presença digital",
     "status": "available",
+    "image": "presenca-digital",
+    "description": "Receba uma análise de como sua empresa está no ambiente digital, com sugestões de melhorias.",
     "introduction": [
       "A Análise de Presença Digital é um documento muito importante para os inícios do trabalho com o Marketing. É nele que identificamos os pontos fortes e fracos da sua presença nas principais plataformas digitias relevantes para o seu negócio, fornecendo sugestões de melhorias.",
       "Além disso, você também obtém, de brinde, uma análise do comportamento do consumidor nas principais plataformas, assim, conseguiremos alinhar o que é necessário fazer em cada plataforma para obter o máximo de retorno sobre o investimento no Marketing."
@@ -53,7 +31,10 @@
   {
     "id": "publico-alvo",
     "show": true,
+    "title": "Público-alvo",
     "status": "available",
+    "image": "publico-alvo",
+    "description": "Entenda quem é o público da sua empresa ou descubra novos clientes em potencial.",
     "introduction": ["Introdução."],
     "tableOfBenefits": [
       ["medalha", "Introdução ao conceito e seu uso no Marketing", true],
@@ -75,7 +56,10 @@
   {
     "id": "personas",
     "show": true,
-    "status": "available",
+    "title": "Personas",
+    "status": "",
+    "image": "personas",
+    "description": "Aumente a agilidade e eficiência do seu Marketing atingindo o seu cliente ideal.",
     "introduction": ["Introdução."],
     "tableOfBenefits": [
       ["medalha", "Item1", true],
@@ -98,7 +82,10 @@
   {
     "id": "estrategia-de-conteudo",
     "show": true,
-    "status": "available",
+    "title": "Estratégia de conteúdo",
+    "status": "",
+    "image": "estrategia-de-conteudo",
+    "description": "Obtenha uma estratégia de conteúdo para satisfazer o seu público sem estresse.",
     "introduction": [
       "A estratégia de conteúdo é um documento completo que auxiliará você na parte de idealização da produção de conteúdo.",
       "Apresentando os principais usos de cada canal e propostas de tópicos que seu público-alvo pode estar interessado em consumir, auxiliando também no seu funil de vendas (orgânico).",
@@ -125,7 +112,10 @@
   {
     "id": "estrategia-de-anuncios",
     "show": true,
-    "status": "available",
+    "title": "Estratégia de anúncios",
+    "status": "",
+    "image": "estrategia-de-anuncios",
+    "description": "Comece seus anúncios de forma simples e objetiva nas principais plataformas do mercado.",
     "introduction": [
       "Anunciar pode ser caro, e é por isso que a estratégia é fundamental. A Estratégia de Anúncios é a chave para o sucesso de sua campanha publicitária. Não deixe que seu orçamento de publicidade seja gasto de forma aleatória.",
       "Mas apenas lançar anúncios não é suficiente, é preciso acompanhar o seu desempenho. É por isso que a Estratégia de Anúncios também conta com os indicadores-chave para você acompanhar o sucesso de cada anúncio facilmente."
