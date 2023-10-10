@@ -1,12 +1,12 @@
 <template>
-  <button :disabled="ServiceTag === 'Indisponível'" @click="checkService(ServiceID)">
-    <img :src="require(`@/assets/icons/${ServiceImage}.png`)">
+  <button :disabled="serviceTag === 'Indisponível'" @click="openModal(serviceId)">
+    <img :src="require(`@/assets/icons/${serviceImage}.png`)">
     <div>
-      <h3>{{ ServiceTitle }}</h3>
-      <p>{{ ServiceDescription }}</p>
+      <h3>{{ serviceTitle }}</h3>
+      <p>{{ serviceDescription }}</p>
     </div>
-    <div id="tag" v-if="ServiceTag !== undefined && ServiceTag !== null">
-      <p>{{ ServiceTag }}</p>
+    <div id="tag" v-if="serviceTag !== undefined && serviceTag !== null">
+      <p>{{ serviceTag }}</p>
     </div>
   </button>
 </template>
@@ -15,55 +15,63 @@
 import { defineComponent, ref } from 'vue';
 
 //Composables
-import { checkServiceExistence } from '@/composables/data-base';
+import { openServiceIDServiceModal } from '@/composables/general';
 
 //Stores
 import serviceModalInfo from '@/stores/serviceModal';
 
 export default defineComponent({
   props: {
-    'ServiceImage': {
+    'serviceImage': {
       required: true,
       type: String
     },
-    'ServiceTitle': {
+    'serviceTitle': {
       required: true,
       type: String
     },
-    'ServiceDescription': {
+    'serviceDescription': {
       required: true,
       type: String
     },
-    'ServiceTag': {
+    'serviceTag': {
       required: false,
       type: String as () => "Novo" | "Indisponível" | null,
     },
-    'ServiceID': {
+    'serviceId': {
       required: true,
       type: String
+    },
+    'serviceCategory': {
+      required: true,
+      type: String as () => 'Marketing' | 'Web'
     }
   },
   setup(props) {
     const modalInfo = ref(serviceModalInfo);
 
-    const checkService = async (serviceID:string):Promise<void> => {
-      return new Promise(async (resolve) => {
-        if(await checkServiceExistence(serviceID)){
-        const info = modalInfo.value;
-        location.pathname.includes('marketing-digital') ? info.serviceCategory = 'Marketing' : info.serviceCategory = 'Web';
-        info.serviceID = serviceID;
-        info.status = 'Show';
+    const openModal = (serviceID:string):void => {
+      openServiceIDServiceModal(serviceID, props.serviceCategory);
+    }
 
-        return resolve();
-      } else {
-        alert('Desculpe, ocorreu um erro ao recuperar as informações sobre este serviço.');
-        return resolve();
-      }
-      })
-    } 
+    // const checkService = async (serviceID:string):Promise<void> => {
+    //   return new Promise(async (resolve) => {
+    //     if(await checkServiceExistence(serviceID)){
+    //     const info = modalInfo.value;
+    //     location.pathname.includes('marketing-digital') ? info.serviceCategory = 'Marketing' : info.serviceCategory = 'Web';
+    //     info.serviceID = serviceID;
+    //     info.status = 'Show';
+
+    //     return resolve();
+    //   } else {
+    //     alert('Desculpe, ocorreu um erro ao recuperar as informações sobre este serviço.');
+    //     return resolve();
+    //   }
+    //   })
+    // } 
     
     return {
-      checkService
+      openModal
     }
   },
 })

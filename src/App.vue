@@ -4,13 +4,13 @@
     <router-view/>
   </main>
   <Transition name="modal">
-    <ServiceModal v-if="modalInfo.status == 'Show'"/>
+    <ServiceModal v-if="showModal === true"/>
   </Transition>
   <Footer/>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue'
+import { defineComponent, ref, computed } from 'vue'
 
 //Components
 import Header from '@/components/Header.vue';
@@ -24,9 +24,10 @@ export default defineComponent({
   components: {Header, Footer, ServiceModal},
   setup() {
     const modalInfo = ref(serviceModalInfo);
+    const showModal = computed(() => modalInfo.value.status === 'Show');
 
     return {
-      modalInfo
+      showModal
     }
   },
 })

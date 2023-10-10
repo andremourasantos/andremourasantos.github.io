@@ -6,12 +6,20 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent } from 'vue';
+
+//Stores
+import serviceModalnfo from "@/stores/serviceModal";
 
 export default defineComponent({
   setup() {
-    const shareService = () => {
-      alert('Ok.')
+    const shareService = async () => {
+      try {
+        await navigator.clipboard.writeText(`${location.host + location.pathname}?serviceID=${serviceModalnfo.serviceID}`)
+        alert('Link copiado para sua área de transferência!')
+      } catch (error) {
+        alert(`Ocorreu um erro ao copiar o link: ${error}`)
+      }
     }
 
     return {

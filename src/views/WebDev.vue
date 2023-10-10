@@ -8,18 +8,19 @@
       <img src="../assets/lateral.png">
     </div>
     <ServicesGroup :GroupTitle="'Combos de serviços'" :GroupDescription="'Não sabe por onde começar, então você está no lugar certo!'">
-      <ServiceButton :ServiceImage="'general'" :ServiceTitle="'Serviço completo'" :ServiceDescription="'A solução tudo-em-um que você estava procurando.'" :ServiceTag="'Indisponível'" :ServiceID="'geral'"/>
+      <ServiceButton :service-image="'general'" :service-title="'Serviço completo'" :service-description="'A solução tudo-em-um que você estava procurando.'" :service-tag="'Indisponível'" :service-id="'geral'" :service-category="'Web'"/>
 
-      <ServiceButton :ServiceImage="'first-steps'" :ServiceTitle="'Primeiros passos'" :ServiceDescription="'Tire suas ideias do papel e leve-as para a internet.'" :ServiceTag="'Indisponível'" :ServiceID="'primeiros-passos'"/>
+      <ServiceButton :service-image="'first-steps'" :service-title="'Primeiros passos'" :service-description="'Tire suas ideias do papel e leve-as para a internet.'" :service-tag="'Indisponível'" :service-id="'primeiros-passos'" :service-category="'Web'"/>
     </ServicesGroup>
+
     <ServicesGroup :GroupTitle="'Serviços oferecidos'" :GroupDescription="'Confira abaixo todos os serviços disponíveis, com detalhes.'">
-      <ServiceButton v-for="entry in servicesToShow" :key="entry.id" :ServiceImage="entry.image" :ServiceTitle="entry.title" :ServiceDescription="entry.description" :ServiceID="entry.id" :ServiceTag="entry.status"/>
-      </ServicesGroup>
+      <ServiceButton v-for="entry in servicesToShow" :key="entry.id" :service-image="entry.image" :service-title="entry.title" :service-description="entry.description" :service-id="entry.id" :service-tag="entry.status" :service-category="'Web'"/>
+    </ServicesGroup>
   </section>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, onMounted } from 'vue';
 
 //Components
 import PageTitle from '@/components/PageTitle.vue';
@@ -27,7 +28,7 @@ import ServicesGroup from '@/components/ServicesGroup.vue';
 import ServiceButton from '@/components/ServiceButton.vue';
 
 //Composables
-import { filterServicesToShow } from "@/composables/general";
+import { filterServicesToShow, openServiceIDServiceModal, searchForURLParam } from "@/composables/general";
 
 //Data
 import servicesJSON from '@/data/web-services.json';
@@ -36,6 +37,14 @@ export default defineComponent({
   components: {PageTitle, ServicesGroup, ServiceButton},
   setup() {
     let servicesToShow:NonNullable<ServiceInfo>[] = filterServicesToShow(servicesJSON as ServiceInfo[]);
+
+    onMounted(() => {
+      const serviceIDURLParam = searchForURLParam('serviceID');
+
+      if(serviceIDURLParam !== null) {
+        openServiceIDServiceModal(serviceIDURLParam, 'Web');
+      }
+    })
 
     return {
       servicesToShow
