@@ -15,14 +15,20 @@ import { defineComponent, ref } from 'vue';
 import serviceModalInfo from '@/stores/serviceModal';
 
 export default defineComponent({
-  setup() {
+  props: {
+    serviceName: {
+      required: true,
+      type: String
+    }
+  },
+  setup(props) {
     const serviceInfo = ref(serviceModalInfo);
 
     const goToWhatsApp = ():void => {
       const link = 'https://api.whatsapp.com/send/?phone=5541935009236&text=';
       const message = `Olá, prazer!
       
-Vi o serviço de ${serviceInfo.value.serviceCategory} para *${serviceInfo.value.serviceName.toLocaleLowerCase()}* e gostaria de apresentar minha empresa:
+Vi o serviço de *${props.serviceName.toLocaleLowerCase()}* para ${serviceInfo.value.serviceCategory} e gostaria de apresentar minha empresa:
 `;
 
       window.open(link + encodeURIComponent(message), '_blank');

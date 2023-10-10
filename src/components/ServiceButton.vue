@@ -1,11 +1,11 @@
 <template>
-  <button :disabled="ServiceTag !== undefined" @click="checkService(ServiceID)">
+  <button :disabled="ServiceTag === 'Indisponível'" @click="checkService(ServiceID)">
     <img :src="require(`@/assets/icons/${ServiceImage}.png`)">
     <div>
       <h3>{{ ServiceTitle }}</h3>
       <p>{{ ServiceDescription }}</p>
     </div>
-    <div id="tag" v-if="ServiceTag !== undefined">
+    <div id="tag" v-if="ServiceTag !== undefined && ServiceTag !== null">
       <p>{{ ServiceTag }}</p>
     </div>
   </button>
@@ -36,7 +36,7 @@ export default defineComponent({
     },
     'ServiceTag': {
       required: false,
-      type: String as () => "Novo" | "Indisponível",
+      type: String as () => "Novo" | "Indisponível" | null,
     },
     'ServiceID': {
       required: true,
@@ -50,11 +50,8 @@ export default defineComponent({
       return new Promise(async (resolve) => {
         if(await checkServiceExistence(serviceID)){
         const info = modalInfo.value;
-        location.pathname.includes('marketing-digital') ? info.serviceCategory = 'Marketing' : info.serviceCategory = 'Web'
+        location.pathname.includes('marketing-digital') ? info.serviceCategory = 'Marketing' : info.serviceCategory = 'Web';
         info.serviceID = serviceID;
-        info.serviceImage = props.ServiceImage;
-        info.serviceName = props.ServiceTitle;
-        info.serviceButtonDescription = props.ServiceDescription
         info.status = 'Show';
 
         return resolve();

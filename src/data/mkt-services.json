@@ -2,8 +2,9 @@
   {
     "id": "presenca-digital",
     "show": true,
+    "status": null,
+    "group": "Marketing",
     "title": "Presença digital",
-    "status": "available",
     "image": "presenca-digital",
     "description": "Receba uma análise de como sua empresa está no ambiente digital, com sugestões de melhorias.",
     "introduction": [
@@ -31,8 +32,9 @@
   {
     "id": "publico-alvo",
     "show": true,
+    "status": null,
+    "group": "Marketing",
     "title": "Público-alvo",
-    "status": "available",
     "image": "publico-alvo",
     "description": "Entenda quem é o público da sua empresa ou descubra novos clientes em potencial.",
     "introduction": ["Introdução."],
@@ -56,8 +58,9 @@
   {
     "id": "personas",
     "show": true,
+    "status": null,
+    "group": "Marketing",
     "title": "Personas",
-    "status": "",
     "image": "personas",
     "description": "Aumente a agilidade e eficiência do seu Marketing atingindo o seu cliente ideal.",
     "introduction": ["Introdução."],
@@ -82,8 +85,9 @@
   {
     "id": "estrategia-de-conteudo",
     "show": true,
+    "status": null,
+    "group": "Marketing",
     "title": "Estratégia de conteúdo",
-    "status": "",
     "image": "estrategia-de-conteudo",
     "description": "Obtenha uma estratégia de conteúdo para satisfazer o seu público sem estresse.",
     "introduction": [
@@ -112,8 +116,9 @@
   {
     "id": "estrategia-de-anuncios",
     "show": true,
+    "status": "Novo",
+    "group": "Marketing",
     "title": "Estratégia de anúncios",
-    "status": "",
     "image": "estrategia-de-anuncios",
     "description": "Comece seus anúncios de forma simples e objetiva nas principais plataformas do mercado.",
     "introduction": [

@@ -104,6 +104,14 @@ p {
 
 i {font-size: 32px;}
 
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
 @media screen and (min-width: 425px) {
   body {
     padding: 36px;

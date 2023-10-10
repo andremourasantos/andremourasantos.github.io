@@ -4,8 +4,9 @@ declare global {
   type ServiceInfo = {
     id:string,
     show:boolean,
+    status:null | "Novo" | "Indisponível",
+    group:"Marketing" | "Web",
     title:string,
-    status:"" | "Novo" | "Indisponível",
     image:string,
     description:string,
     introduction:string[],

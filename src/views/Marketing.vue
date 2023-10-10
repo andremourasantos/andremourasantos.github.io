@@ -13,7 +13,7 @@
       <ServiceButton :ServiceImage="'first-steps'" :ServiceTitle="'Primeiros passos'" :ServiceDescription="'Obtenha o básico para renovar os trabalhos com o Marketing da sua empresa.'" :ServiceTag="'Indisponível'" :ServiceID="'primeiros-passos'"/>
     </ServicesGroup>
     <ServicesGroup :GroupTitle="'Serviços oferecidos'" :GroupDescription="'Confira abaixo todos os serviços disponíveis, com detalhes.'">
-      <ServiceButton v-for="entry in servicesToShow" :key="entry.id" :ServiceImage="entry.image" :ServiceTitle="entry.title" :ServiceDescription="entry.description" :ServiceID="entry.id"/>
+      <ServiceButton v-for="entry in servicesToShow" :key="entry.id" :ServiceImage="entry.image" :ServiceTitle="entry.title" :ServiceDescription="entry.description" :ServiceID="entry.id" :-service-tag="entry.status"/>
       </ServicesGroup>
   </section>
 </template>

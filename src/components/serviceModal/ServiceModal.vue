@@ -1,14 +1,11 @@
 <template>
   <dialog ref="dialogEl">
-    <div id="headerIcons">
-      <!-- <i class="ph-fill ph-share-network" aria-label="Compartilhar" @click="shareModal"></i> -->
-      <i class="ph-fill ph-x-circle" arial-label="Fechar" @click="closeModal"></i>
-    </div>
+    <HeaderIcons @closeModalButton="closeModal"/>
     <article>
-      <div id="mainServiceInfo">
-        <img :src="require(`@/assets/icons/${modalInfo.serviceImage}.png`)">
-        <h2>{{ modalInfo.serviceName }}</h2>
-        <p>{{ modalInfo.serviceButtonDescription }}</p>
+      <div id="mainServiceInfo" v-if="serviceHeader !== null">
+        <img :src="require(`@/assets/icons/${serviceHeader.image}.png`)">
+        <h2>{{ serviceHeader.title }}</h2>
+        <p>{{ serviceHeader.description }}</p>
       </div>
       <div id="detailedServiceInfo">
         <p v-for="(entry, index) in serviceIntroduction" :key="index"> {{ entry }}</p>
@@ -27,9 +24,8 @@
       <div>
         <h3>Entre em contato</h3>
         <p>Disponível para conversa de Segunda à Sábado, das 16h às 20h.</p>
-        <ContactButton/>
+        <ContactButton v-if="serviceHeader !== null" :service-name="serviceHeader.title"/>
       </div>
-      <hr>
       <FooterNotes :FooterNotes="serviceFooterNotes"/>
     </article>
   </dialog>
@@ -39,6 +35,7 @@
 import { defineComponent, ref, onMounted } from 'vue';
 
 //Components
+import HeaderIcons from './HeaderIcons.vue';
 import TabelOfBenefits from './TabelOfBenefits.vue';
 import BenefitDescription from './BenefitDescription.vue';
 import SideServiceInfo from './SideServiceInfo.vue';
@@ -54,10 +51,12 @@ import marketingJSON from '@/data/mkt-services.json';
 import webJSON from '@/data/web-services.json';
 
 export default defineComponent({
-  components: {TabelOfBenefits, BenefitDescription, SideServiceInfo, ContactButton, FooterNotes},
+  components: {HeaderIcons, TabelOfBenefits, BenefitDescription, SideServiceInfo, ContactButton, FooterNotes},
   setup() {
     const dialogEl = ref<HTMLDialogElement | null>(null);
     const modalInfo = ref(serviceModalInfo);
+
+    const serviceHeader = ref<{title:string, description:string, image:string} | null>(null);
     const serviceIntroduction = ref<string[] | null>(null);
     const serviceBenefitsList = ref<[string,string][] | null>(null);
     const serviceFooterNotes = ref<string[]>([]);
@@ -67,7 +66,7 @@ export default defineComponent({
       price:[string,string,number]
     };
 
-    const serviceSideInfoList = ref<sideInfo | [string,string,number][] | null>(null);
+    const serviceSideInfoList = ref<sideInfo | [string,string,number] | null>(null);
 
     onMounted(()=>{
       if(dialogEl.value instanceof HTMLElement){
@@ -81,6 +80,7 @@ export default defineComponent({
         };
 
         if(serviceInfo !== undefined){
+          fillHeader(serviceInfo.title,serviceInfo.description, serviceInfo.image)
           fillIntroduction(serviceInfo.introduction);
           fillBenefitsTable(serviceInfo.tableOfBenefits);
           fillServiceSideInfoList(serviceInfo.serviceInfo);
@@ -97,6 +97,14 @@ export default defineComponent({
       }
     });
 
+    const fillHeader = (title:string, description:string, image:string):void => {
+      serviceHeader.value = {
+        title: title,
+        description: description,
+        image: image
+      }
+    };
+
     const fillIntroduction = (introductionTextArray:string[]):void => {
       serviceIntroduction.value = introductionTextArray;
     };
@@ -107,7 +115,7 @@ export default defineComponent({
     };
 
     const fillServiceSideInfoList = (infoArray:sideInfo):void => {
-      const array:[string,string,number][] = Array.from(Object.entries(infoArray)).map((array,index) => {return array[1]});
+      const array = Array.from(Object.entries(infoArray)).map((array,index) => {return array[1]}) as [string,string,number];
       serviceSideInfoList.value = array;
     };
 
@@ -135,6 +143,7 @@ export default defineComponent({
     return {
       dialogEl,
       modalInfo,
+      serviceHeader,
       serviceIntroduction,
       serviceBenefitsList,
       serviceSideInfoList,
@@ -157,21 +166,6 @@ export default defineComponent({
     margin: auto 24px;
     padding: 24px;
     max-width: 520px;
-  }
-
-  #headerIcons {
-    position: sticky;
-    top: 0;
-    display: flex;
-    justify-content: flex-end;
-    gap: 16px;
-    z-index: 2;
-  }
-
-  #headerIcons i {
-    color: var(--font_color-title);
-    font-size: 32px;
-    cursor: pointer;
   }
 
   dialog > article {

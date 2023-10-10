@@ -61,6 +61,7 @@ export default defineComponent({
       align-items: center;
       text-align: center;
       width: 200px;
+      padding: 24px 16px;
     }
 
     img {
