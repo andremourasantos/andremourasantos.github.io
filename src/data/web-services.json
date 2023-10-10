@@ -1,18 +1,80 @@
 [
   {
-    "id": "criacao-de-sites",
+    "id": "servico-completo",
     "show": true,
-    "status": null,
-    "group": "Web",
-    "title": "Criação de sites",
-    "image": "criacao-de-sites",
-    "description": "Um site criado a partir de um design completo. Rápido, otimizado para SEO e acessibilidade.",
+    "status": "Indisponível",
+    "group": "Combo",
+    "title": "Serviço completo",
+    "image": "estrela",
+    "description": "A solução tudo-em-um que você estava procurando.",
     "introduction": [
       "Introdução."
     ],
     "tableOfBenefits": [
+      ["medalha", "Item", true],
+      ["medalha", "Item", true],
+      ["medalha", "Item", true],
+      ["medalha", "Item", true],
+      ["medalha", "Item", true],
+      ["desconto", "Preço reduzido para ONGs e ações sociais.", true]
+    ],
+    "serviceInfo": {
+      "deadline": ["calendario", "Data de entrega", 60],
+      "price": ["moeda", "Preço do serviço", 999]
+    },
+    "footerNotes": [
+      "Os serviços de hospedagem e banco de dados são fornecidos pelo Firebase, que conta com sua própria política de preços.",
+      "O valor cobrado para instituições não governamentais (OGNs) ou ações sociais/comunitárias de pequeno porte pode ser combinado abaixo dessa faixa.",
+      "Ao escolher o PIX como forma de pagamento, você ganha um desconto de 5% em cima do valor do serviço.",
+      "Este contrato exige uma assinatura digital. Você pode realizar essa ação gratuitamente através do site ou aplicativo do Gov.br (conta prata exigida)."
+    ]
+  },
+  {
+    "id": "primeiros-passos",
+    "show": true,
+    "status": "Indisponível",
+    "group": "Combo",
+    "title": "Primeiros passos",
+    "image": "primeiros-passos",
+    "description": "Tire suas ideias do papel e leve-as a internet!",
+    "introduction": [
+      "Introdução."
+    ],
+    "tableOfBenefits": [
+      ["medalha", "Item", true],
+      ["medalha", "Item", true],
+      ["medalha", "Item", true],
+      ["medalha", "Item", true],
+      ["medalha", "Item", true],
+      ["desconto", "Preço reduzido para ONGs e ações sociais.", true]
+    ],
+    "serviceInfo": {
+      "deadline": ["calendario", "Data de entrega", 40],
+      "price": ["moeda", "Preço do serviço", 999]
+    },
+    "footerNotes": [
+      "Os serviços de hospedagem e banco de dados são fornecidos pelo Firebase, que conta com sua própria política de preços.",
+      "O valor cobrado para instituições não governamentais (OGNs) ou ações sociais/comunitárias de pequeno porte pode ser combinado abaixo dessa faixa.",
+      "Ao escolher o PIX como forma de pagamento, você ganha um desconto de 5% em cima do valor do serviço.",
+      "Este contrato exige uma assinatura digital. Você pode realizar essa ação gratuitamente através do site ou aplicativo do Gov.br (conta prata exigida)."
+    ]
+  },
+  {
+    "id": "criacao-de-sites",
+    "show": true,
+    "status": null,
+    "group": "Individual",
+    "title": "Criação de sites",
+    "image": "criacao-de-sites",
+    "description": "Um site criado a partir de um design completo. Rápido, otimizado para SEO e acessibilidade.",
+    "introduction": [
+      "Ter um site responsível e acessível é um requirimento para qualquer negócio na atualidade que queira poder ser encontrado pelos seus clientes. Sendo a porta de entrada para o seu negócio, é importante que ele transpareça os principais aspectos da sua empresa de forma simples e intuitiva.",
+      "Você não precisa começar com tudo, muito menos gastando horrores apenas para manter seu site no ar. O importante é obter um site que ajude-o a alavancar o seu negócio e alcançar novos clientes com facilidade.",
+      "Caso já tenha o design do seu site completo e pronto para produção, entre em contato e apresente seu projeto!"
+    ],
+    "tableOfBenefits": [
       ["medalha", "Comece pequeno e incremente seu site com o tempo.", true],
-      ["medalha", "Fácil atualização/manutenção das informações.", true],
+      ["medalha", "Fácil atualização das informações no site.", true],
       ["medalha", "Código moderno, rápido e otimizado para SEO.", true],
       ["medalha", "Possibilidade de atualização de informações em tempo real.", true],
       ["medalha", "Hospedagem de até 10 GB grátis.", true],
@@ -20,11 +82,11 @@
     ],
     "serviceInfo": {
       "deadline": ["calendario", "Data de entrega", 30],
-      "price": ["moeda", "Preço do serviço", 999]
+      "price": ["moeda", "Preço do serviço", 650]
     },
     "footerNotes": [
       "Os serviços de hospedagem e banco de dados são fornecidos pelo Firebase, que conta com sua própria política de preços.",
-      "O valor cobrado para instituições não governamentais (OGNs) ou ações sociais/comunitárias pode ser combinado abaixo dessa faixa.",
+      "O valor cobrado para instituições não governamentais (OGNs) ou ações sociais/comunitárias de pequeno porte pode ser combinado abaixo dessa faixa.",
       "Ao escolher o PIX como forma de pagamento, você ganha um desconto de 5% em cima do valor do serviço.",
       "Este contrato exige uma assinatura digital. Você pode realizar essa ação gratuitamente através do site ou aplicativo do Gov.br (conta prata exigida)."
     ]
@@ -33,24 +95,26 @@
     "id": "design-de-sites",
     "show": true,
     "status": null,
-    "group": "Web",
+    "group": "Individual",
     "title": "Design de sites",
     "image": "design-de-sites",
     "description": "Só tem uma ideia? Vamos transformá-la em um design para que tome vida.",
     "introduction": [
-      "Introdução."
+      "Está pensando em criar um site para a sua empresa ou já conta com um, mas quer atualizar a sua vitrine? Comece por aqui!",
+      "O design do site é o ponto de partida para a produção do seu site, é aqui que definiremos forma, cores, funcionalidades, interações e tudo mais que o seu site deve agregar, levando em consideração os principais aspectos da sua empresa e as funcionalidades esperados pelos seus clientes.",
+      "Com o design pronto, é possível apresentá-lo para um profissional de desenvolvimento web para que ele possa programá-lo."
     ],
     "tableOfBenefits": [
-      ["medalha", "Tenha um design pronto para produção de sites.", true],
+      ["medalha", "Tenha um design pronto para produção.", true],
       ["medalha", "Trabalho com foco em acessibilidade e facilidade de uso.", true],
       ["medalha", "Leiaute responsivo para telefones, tablets e computadores.", true],
       ["medalha", "Escolha ativos entre mais de 10 milhões de arquivos de mídia.", true],
-      ["medalha", "Tenha total acesso aos arquivos usados no projeto final.", true],
+      ["medalha", "Tenha acesso aos arquivos usados no projeto final.", true],
       ["desconto", "Preço reduzido para ONGs e ações sociais.", false]
     ],
     "serviceInfo": {
       "deadline": ["calendario", "Data de entrega", 20],
-      "price": ["moeda", "Preço do serviço", 999]
+      "price": ["moeda", "Preço do serviço", 450]
     },
     "footerNotes": [
       "Entre os 10 milhões de ativos estão inclusos fotos, vídeos, modelos 3D, ícones e ilustrações.",
@@ -62,7 +126,7 @@
     "id": "consultoria-web",
     "show": true,
     "status": "Indisponível",
-    "group": "Web",
+    "group": "Individual",
     "title": "Consultoria",
     "image": "consultoria-web",
     "description": "Tenha uma segunda opinião sobre o seu site, com sugestões de melhorias.",
@@ -71,19 +135,19 @@
       "Com essa consultoria, você obtém um ponto de vista totalmente novo sobre o seu site, exatamente como um novo cliente em potêncial. Graças a isso, você pode obter novas percepções sobre o seu próprio site, o que auxiliará na hora de tomar decisões no futuro, evitando dores de cabeça, perda de tempo e gastos financeiros mal direcionados."
     ],
     "tableOfBenefits": [
-      ["medalha", "Item1", true],
+      ["medalha", "Ponto de vista sem viéses.", true],
       ["medalha", "Linguagem acessível e sem jargões.", true],
       ["medalha", "Lista de alterações e sugestões de melhorias.", true],
-      ["medalha", "Item4", true],
-      ["medalha", "Item5", true],
+      ["medalha", "Explicações detalhadas das sugestões.", true],
+      ["medalha", "Referências de pesquisas de mercado recentes.", true],
       ["desconto", "Preço reduzido para ONGs e ações sociais.", true]
     ],
     "serviceInfo": {
-      "deadline": ["calendario", "Data de entrega", 14],
-      "price": ["moeda", "Preço do serviço", 999]
+      "deadline": ["calendario", "Data de entrega", 5],
+      "price": ["moeda", "Preço do serviço", 200]
     },
     "footerNotes": [
-      "O valor cobrado para instituições não governamentais (OGNs) ou ações sociais/comunitárias pode ser combinado abaixo dessa faixa.",
+      "O valor cobrado para instituições não governamentais (OGNs) ou ações sociais/comunitárias de pequeno porte pode ser combinado abaixo dessa faixa.",
       "Ao escolher o PIX como forma de pagamento, você ganha um desconto de 5% em cima do valor do serviço.",
       "Este contrato exige uma assinatura digital. Você pode realizar essa ação gratuitamente através do site ou aplicativo do Gov.br (conta prata exigida)."
     ]
@@ -92,7 +156,7 @@
     "id": "relatorios-web",
     "show": true,
     "status": "Indisponível",
-    "group": "Web",
+    "group": "Individual",
     "title": "Relatórios personalizados",
     "image": "relatorio-web",
     "description": "Não fique no escuro quanto a eficácia do seu site, tenha um relatório detalhado.",

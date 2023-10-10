@@ -5,7 +5,7 @@ declare global {
     id:string,
     show:boolean,
     status:null | "Novo" | "Indisponível",
-    group:"Marketing" | "Web",
+    group:"Individual" | "Combo",
     title:string,
     image:string,
     description:string,

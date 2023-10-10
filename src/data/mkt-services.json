@@ -1,27 +1,87 @@
 [
   {
+    "id": "servico-completo",
+    "show": true,
+    "status": "Indisponível",
+    "group": "Combo",
+    "title": "Serviço completo",
+    "image": "estrela",
+    "description": "A solução tudo-em-um que você estava procurando.",
+    "introduction": [
+      "Introdução."
+    ],
+    "tableOfBenefits": [
+      ["medalha", "Item", true],
+      ["medalha", "Item", true],
+      ["medalha", "Item", true],
+      ["medalha", "Item", true],
+      ["medalha", "Item", true],
+      ["desconto", "Preço reduzido para ONGs e ações sociais.", true]
+    ],
+    "serviceInfo": {
+      "deadline": ["calendario", "Data de entrega", 60],
+      "price": ["moeda", "Preço do serviço", 999]
+    },
+    "footerNotes": [
+      "Os serviços de hospedagem e banco de dados são fornecidos pelo Firebase, que conta com sua própria política de preços.",
+      "O valor cobrado para instituições não governamentais (OGNs) ou ações sociais/comunitárias de pequeno porte pode ser combinado abaixo dessa faixa.",
+      "Ao escolher o PIX como forma de pagamento, você ganha um desconto de 5% em cima do valor do serviço.",
+      "Este contrato exige uma assinatura digital. Você pode realizar essa ação gratuitamente através do site ou aplicativo do Gov.br (conta prata exigida)."
+    ]
+  },
+  {
+    "id": "primeiros-passos",
+    "show": true,
+    "status": "Indisponível",
+    "group": "Combo",
+    "title": "Primeiros passos",
+    "image": "primeiros-passos",
+    "description": "Obtenha o básico para os trabalhos com o Marketing da sua empresa.",
+    "introduction": [
+      "Introdução."
+    ],
+    "tableOfBenefits": [
+      ["medalha", "Item", true],
+      ["medalha", "Item", true],
+      ["medalha", "Item", true],
+      ["medalha", "Item", true],
+      ["medalha", "Item", true],
+      ["desconto", "Preço reduzido para ONGs e ações sociais.", true]
+    ],
+    "serviceInfo": {
+      "deadline": ["calendario", "Data de entrega", 40],
+      "price": ["moeda", "Preço do serviço", 999]
+    },
+    "footerNotes": [
+      "Os serviços de hospedagem e banco de dados são fornecidos pelo Firebase, que conta com sua própria política de preços.",
+      "O valor cobrado para instituições não governamentais (OGNs) ou ações sociais/comunitárias de pequeno porte pode ser combinado abaixo dessa faixa.",
+      "Ao escolher o PIX como forma de pagamento, você ganha um desconto de 5% em cima do valor do serviço.",
+      "Este contrato exige uma assinatura digital. Você pode realizar essa ação gratuitamente através do site ou aplicativo do Gov.br (conta prata exigida)."
+    ]
+  },
+  {
     "id": "presenca-digital",
     "show": true,
     "status": null,
-    "group": "Marketing",
+    "group": "Individual",
     "title": "Presença digital",
     "image": "presenca-digital",
     "description": "Receba uma análise de como sua empresa está no ambiente digital, com sugestões de melhorias.",
     "introduction": [
-      "A Análise de Presença Digital é um documento muito importante para os inícios do trabalho com o Marketing. É nele que identificamos os pontos fortes e fracos da sua presença nas principais plataformas digitias relevantes para o seu negócio, fornecendo sugestões de melhorias.",
-      "Além disso, você também obtém, de brinde, uma análise do comportamento do consumidor nas principais plataformas, assim, conseguiremos alinhar o que é necessário fazer em cada plataforma para obter o máximo de retorno sobre o investimento no Marketing."
+      "Pensar em estratégias de marketing sem entender a fundo como sua empresa está se destacando no mundo digital é como dar um passo no escuro. É por isso que a Análise de Presença Digital é o ponto de partida essencial para impulsionar o seu negócio.",
+      "Receba uma análise resumida sobre a sua presença digital, destacando pontos fortes e áreas que merecem atenção, sem se preocupar com jargões ou termos do mercado. O documento final é intuitivo e contará com explicações sobre termos e conceitos (caso aplicável)."
     ],
     "tableOfBenefits": [
       ["medalha", "Uma análise resumida sobre sua presença digital.", true],
       ["medalha", "Análise descritiva de melhorias em cada canal.", true],
-      ["medalha", "Checklist com ações a serem realizadas.", true],
+      ["medalha", "Lista com ações a serem realizadas.", true],
       ["medalha", "Descrição do comportamento do consumidor em cada plataforma.", true],
       ["medalha", "Referências de pesquisas de mercado recentes.", true],
       ["desconto", "Preço reduzido para ONGs e ações sociais.", true]
     ],
     "serviceInfo": {
       "deadline": ["calendario", "Data de entrega", 5],
-      "price": ["moeda", "Preço do serviço", 999]
+      "price": ["moeda", "Preço do serviço", 150]
     },
     "footerNotes": [
       "O valor cobrado para instituições não governamentais (OGNs) ou ações sociais/comunitárias pode ser combinado abaixo dessa faixa.",
@@ -33,11 +93,14 @@
     "id": "publico-alvo",
     "show": true,
     "status": null,
-    "group": "Marketing",
+    "group": "Individual",
     "title": "Público-alvo",
     "image": "publico-alvo",
     "description": "Entenda quem é o público da sua empresa ou descubra novos clientes em potencial.",
-    "introduction": ["Introdução."],
+    "introduction": [
+      "Entender quem são seus clientes é o primeiro passo para cativá-los. Com o documento de Público-Alvo, você terá uma visão clara do seu mercado, abrindo portas para estratégias de marketing mais eficazes.",
+      "Seja notado pelos clientes certos.: com uma abordagem descomplicada, você pode deixar as adivinhações e achismos de lado e parte para conceitos e informações palpáveis para ajudar a sua empresa também na criação de conteúdos, anúncios, promoções ou até mesmo na oferta de serviços."
+    ],
     "tableOfBenefits": [
       ["medalha", "Introdução ao conceito e seu uso no Marketing", true],
       ["medalha", "Linguagem acessível e sem jargões.", true],
@@ -48,7 +111,7 @@
     ],
     "serviceInfo": {
       "deadline": ["calendario", "Data de entrega", 5],
-      "price": ["moeda", "Preço do serviço", 999]
+      "price": ["moeda", "Preço do serviço", 300]
     },
     "footerNotes": [
       "Ao escolher o PIX como forma de pagamento, você ganha um desconto de 5% em cima do valor do serviço.",
@@ -58,23 +121,26 @@
   {
     "id": "personas",
     "show": true,
-    "status": null,
-    "group": "Marketing",
+    "status": "Indisponível",
+    "group": "Individual",
     "title": "Personas",
     "image": "personas",
     "description": "Aumente a agilidade e eficiência do seu Marketing atingindo o seu cliente ideal.",
-    "introduction": ["Introdução."],
+    "introduction": [
+      "Desvendar o perfil do seu cliente ideal não precisa ser complicado. Com as Personas, criadas a partir do seu público-alvo, você simplifica esse processo para que você possa concentrar-se em cuidar do seu negócio.",
+      "Sem jargões complicados ou conceitos confusos, o documento das Personas é um aprofundamento do seu público-alvo e retrata detalhadamente o seu cliente ideal, permitindo que suas estratégias de marketing sejam mais fácies de serem construídas, melhor direcionadas e mais eficazes."
+    ],
     "tableOfBenefits": [
-      ["medalha", "Item1", true],
+      ["medalha", "Até 3 personas, para uso em diferentes fins.", true],
       ["medalha", "Linguaguem acessível e sem jargões.", true],
-      ["medalha", "Item3", true],
+      ["medalha", "Até 3 personas.", true],
       ["medalha", "Item4", true],
       ["medalha", "Item5", true],
       ["desconto", "Preço reduzido para ONGs e ações sociais.", true]
     ],
     "serviceInfo": {
       "deadline": ["calendario", "Data de entrega", 5],
-      "price": ["moeda", "Preço do serviço", 999]
+      "price": ["moeda", "Preço do serviço", 100]
     },
     "footerNotes": [
       "O valor cobrado para instituições não governamentais (OGNs) ou ações sociais/comunitárias pode ser combinado abaixo dessa faixa.",
@@ -86,7 +152,7 @@
     "id": "estrategia-de-conteudo",
     "show": true,
     "status": null,
-    "group": "Marketing",
+    "group": "Individual",
     "title": "Estratégia de conteúdo",
     "image": "estrategia-de-conteudo",
     "description": "Obtenha uma estratégia de conteúdo para satisfazer o seu público sem estresse.",
@@ -105,7 +171,7 @@
     ],
     "serviceInfo": {
       "deadline": ["calendario", "Data de entrega", 14],
-      "price": ["moeda", "Preço do serviço", 999]
+      "price": ["moeda", "Preço do serviço", 600]
     },
     "footerNotes": [
       "O valor cobrado para instituições não governamentais (OGNs) ou ações sociais/comunitárias pode ser combinado abaixo dessa faixa.",
@@ -117,7 +183,7 @@
     "id": "estrategia-de-anuncios",
     "show": true,
     "status": "Novo",
-    "group": "Marketing",
+    "group": "Individual",
     "title": "Estratégia de anúncios",
     "image": "estrategia-de-anuncios",
     "description": "Comece seus anúncios de forma simples e objetiva nas principais plataformas do mercado.",
@@ -135,10 +201,10 @@
     ],
     "serviceInfo": {
       "deadline": ["calendario", "Data de entrega", 14],
-      "price": ["moeda", "Preço do serviço", 999]
+      "price": ["moeda", "Preço do serviço", 600]
     },
     "footerNotes": [
-      "O valor cobrado para instituições não governamentais (OGNs) ou ações sociais/comunitárias pode ser combinado abaixo dessa faixa.",
+      "O valor cobrado para instituições não governamentais (OGNs) ou ações sociais/comunitárias de pequeno porte pode ser combinado abaixo dessa faixa.",
       "Ao escolher o PIX como forma de pagamento, você ganha um desconto de 5% em cima do valor do serviço.",
       "Este contrato exige uma assinatura digital. Você pode realizar essa ação gratuitamente através do site ou aplicativo do Gov.br (conta prata exigida)."
     ]

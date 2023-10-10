@@ -15,7 +15,7 @@ export default defineComponent({
   setup() {
     const shareService = async () => {
       try {
-        await navigator.clipboard.writeText(`${location.host + location.pathname}?serviceID=${serviceModalnfo.serviceID}`)
+        await navigator.clipboard.writeText(`https://${location.host + location.pathname}?serviceID=${serviceModalnfo.serviceID}`)
         alert('Link copiado para sua área de transferência!')
       } catch (error) {
         alert(`Ocorreu um erro ao copiar o link: ${error}`)
