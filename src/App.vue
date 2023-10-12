@@ -107,6 +107,8 @@ i {font-size: 32px;}
 
 button {
   cursor: pointer;
+  border: none;
+  background: transparent;
 }
 
 button:disabled {

@@ -1,6 +1,6 @@
 <template>
   <button aria-label="Entrar em contato pelo WhatsApp" @click="goToWhatsApp">
-    <img src="@/assets/icons/aviao-de-papel.png" height="48" width="48">
+    <img src="@/assets/icons/aviao-de-papel.png" alt="Ícone de avião de papel" height="48" width="48">
     <div>
       <h4>Entre em contato</h4>
       <p>Apresente suas ideias ou sane suas dúvidas pelo WhatsApp.</p>

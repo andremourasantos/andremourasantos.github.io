@@ -1,12 +1,12 @@
 <template>
   <button :disabled="serviceTag === 'Indisponível'" @click="openModal(serviceId)">
-    <img :src="require(`@/assets/icons/${serviceImage}.png`)">
+    <div id="tag" v-if="serviceTag !== undefined && serviceTag !== null" aria-label="Estado do serviço">
+      <p>{{ serviceTag }}</p>
+    </div>
+    <img :src="require(`@/assets/icons/${serviceImage}.png`)" :alt="`Imagem de ${serviceTitle}`">
     <div>
       <h3>{{ serviceTitle }}</h3>
       <p>{{ serviceDescription }}</p>
-    </div>
-    <div id="tag" v-if="serviceTag !== undefined && serviceTag !== null">
-      <p>{{ serviceTag }}</p>
     </div>
   </button>
 </template>
@@ -52,23 +52,7 @@ export default defineComponent({
 
     const openModal = (serviceID:string):void => {
       openServiceIDServiceModal(serviceID, props.serviceCategory);
-    }
-
-    // const checkService = async (serviceID:string):Promise<void> => {
-    //   return new Promise(async (resolve) => {
-    //     if(await checkServiceExistence(serviceID)){
-    //     const info = modalInfo.value;
-    //     location.pathname.includes('marketing-digital') ? info.serviceCategory = 'Marketing' : info.serviceCategory = 'Web';
-    //     info.serviceID = serviceID;
-    //     info.status = 'Show';
-
-    //     return resolve();
-    //   } else {
-    //     alert('Desculpe, ocorreu um erro ao recuperar as informações sobre este serviço.');
-    //     return resolve();
-    //   }
-    //   })
-    // } 
+    };
     
     return {
       openModal
@@ -124,6 +108,7 @@ export default defineComponent({
     border-radius: 0px 10px 0px 10px;
     right: 0px;
     top: 0px;
+    user-select: none;
   }
 
   #tag p {

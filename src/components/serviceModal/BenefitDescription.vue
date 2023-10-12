@@ -1,6 +1,6 @@
 <template>
   <li class="benefitDescription">
-    <img :src="require(`@/assets/icons/${BenefitImage}.png`)" height="24" width="24">
+    <img :src="require(`@/assets/icons/${BenefitImage}.png`)" :alt="`Ícone de ${BenefitImage}`" height="24" width="24">
     <p>{{ BenefitText }}</p>
   </li>
 </template>

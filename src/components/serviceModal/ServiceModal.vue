@@ -3,7 +3,7 @@
     <HeaderIcons @closeModalButton="closeModal"/>
     <article>
       <div id="mainServiceInfo" v-if="serviceHeader !== null">
-        <img :src="require(`@/assets/icons/${serviceHeader.image}.png`)">
+        <img :src="require(`@/assets/icons/${serviceHeader.image}.png`)" :alt="`Imagem de ${serviceHeader.title}`">
         <h2>{{ serviceHeader.title }}</h2>
         <p>{{ serviceHeader.description }}</p>
       </div>

@@ -1,6 +1,6 @@
 <template>
-  <button :title="`Navegar para página de ${ButtonTitle}`">
-    <img :src="require(`@/assets/icons/${ButtonImage}.png`)" height="48" width="48">
+  <button :aria-label="`Navegar para página de ${ButtonTitle}`" :title="`Navegar para página de ${ButtonTitle}`">
+    <img :src="require(`@/assets/icons/${ButtonImage}.png`)" height="48" width="48" :alt="`Imagem de representação da página de ${ButtonTitle}`">
     <div>
       <h2>{{ ButtonTitle }}</h2>
       <p>{{ ButtonDescription }}</p>

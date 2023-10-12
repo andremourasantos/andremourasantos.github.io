@@ -1,6 +1,6 @@
 <template>
   <div class="sideServiceInfo">
-    <img :src="require(`@/assets/icons/${SideInfoImage}.png`)" height="36" width="36">
+    <img :src="require(`@/assets/icons/${SideInfoImage}.png`)" :alt="`Ícone de ${SideInfoImage}`" height="36" width="36">
     <div>
       <h4>{{ SideInfoTitle }}</h4>
       <p v-if="SideInfoDescriptionType == 'Date'">Até {{ SideInfoDescription }} dias úteis.</p>

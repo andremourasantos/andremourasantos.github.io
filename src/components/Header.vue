@@ -1,6 +1,8 @@
 <template>
   <header>
-    <i class="ph-fill ph-house" @click="goToPage('home')" title="Navegar para Página Inicial"></i>
+    <button aria-label="Navegar para Página Inicial" title="Navegar para Página Inicial">
+      <i class="ph-fill ph-house" @click="goToPage('home')"></i>
+    </button>
   </header>
 </template>
 
@@ -28,6 +30,12 @@ export default defineComponent({
     justify-items: end;
     height: 32px;
     width: 100%;
+  }
+
+  button {
+    height: fit-content;
+    width: fit-content;
+    background: transparent;
   }
 
   i {
