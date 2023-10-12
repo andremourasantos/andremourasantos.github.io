@@ -12,6 +12,11 @@ const routes: Array<RouteRecordRaw> = [
     component: HomeView
   },
   {
+    path: '/:pathMatch(.*)*',
+    name: 'notFound',
+    redirect: {name: 'home'}
+  },
+  {
     path: '/desenvolvimento-web',
     name: 'webDev',
     meta: {title: 'Desenvolvimento Web'},

@@ -1,7 +1,7 @@
 [
   {
     "title": "Informações gerais",
-    "description": "Este site é um projeto pessoal gerenciado por André Moura Santos, como um freelancer.",
+    "description": "Última atualização em 12/10/2023.",
     "content": [
       "Esta política de privacidade é estabelecida para cumprir as disposições da Lei Geral de Proteção de Dados (LGPD) e fornecer transparência sobre a coleta e o uso de informações pessoais neste site.",
       "Ao continuar a usar este site, os usuários concordam com a coleta de informações pessoais genéricas. Essas informações são utilizadas para analisar a origem dos acessos, compreender quem visita o site e avaliar a eficácia de eventuais campanhas publicitárias realizadas pelo responsável."
@@ -21,7 +21,7 @@
     "description": "Veja para quê os dados coletados são usados e a base legal para seu uso.",
     "content": [
       "Os dados pessoais mencionados anteriormente são coletados com o objetivo de analisar o desempenho deste site e avaliar a eficácia de campanhas publicitárias. As principais finalidades incluem, mas não se limitam a: Análise do tráfego e comportamento do usuário; Aprimoramento da experiência do usuário; Avaliação da eficácia de campanhas publicitárias.",
-      "A coleta e processamento desses dados baseiam-se no consentimento do usuário. Ao navegar neste site, o usuário concorda implicitamente com a coleta de dados anonimizados para as finalidades mencionadas anteriormente."
+      "A coleta e processamento desses dados baseiam-se no consentimento do usuário. Ao navegar neste site, o usuário concorda com a coleta de dados anonimizados para as finalidades mencionadas anteriormente."
     ]
   },
   {
@@ -37,8 +37,8 @@
     "title": "Compartilhamento de dados",
     "description": "Veja como e com quem seus dados são compartilhados.",
     "content": [
-      "Os dados coletados neste site não são compartilhados com serviços de terceiros, exceto pelo possível uso desses dados pelo Google para aprimoramento de seus serviços. Nenhum compartilhamento adicional com parceiros de negócios ou outros serviços de terceiros é realizado.",
-      "Os dados coletados podem ser transferidos para servidores do Google localizados fora do Brasil, como nos Estados Unidos, por exemplo. Essa transferência pode ser necessária para o processamento e aprimoramento dos serviços fornecidos por terceiros. Asseguramos que, ao realizar tais transferências, medidas adequadas são tomadas para garantir a proteção dos dados, conforme exigido pelas leis aplicáveis."
+      "Os dados coletados neste site podem ser compartilhados com serviços de terceiros, como o Google Analytics e Google Ads, que contam com suas próprias políticas de privacidade de configurações. É recomendado ao usuário conferir tais informações em https://myadcenter.google.com/",
+      "Os dados coletados podem ser transferidos para servidores do Google localizados fora do Brasil, como nos Estados Unidos, por exemplo. Essa transferência pode ser necessária para o processamento e aprimoramento dos serviços fornecidos por terceiros. O Google Analytics e Google Ads asseguram que, ao realizar tais transferências, medidas adequadas são tomadas para garantir a proteção dos dados, conforme exigido pelas leis aplicáveis."
     ]
   },
   {
