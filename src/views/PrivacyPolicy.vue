@@ -1,8 +1,8 @@
 <template>
   <PageTitle :PageTitle="'Política de Privacidade'" :PageDescription="'Este site com funcionalidades de terceiros e coleta informações sobre a sua sessão. Confira mais aqui.'"/>
-  <div id="gradient-top-right">
+  <!-- <div id="gradient-top-right">
     <img src="../assets/purple.png">
-  </div>
+  </div> -->
   <section id="pp-section">
     <article v-for="entry in PPJSON" :key="entry.title" class="pp-entry">
       <div class="pp-entry-title">

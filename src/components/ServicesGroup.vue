@@ -40,9 +40,9 @@ export default defineComponent({
     max-width: 550px;
     margin: 48px auto 0px auto;
     border-radius: 24px;
-    padding: 24px;
-    background-color: #d5d5d535;
-    box-shadow: var(--glass_effect-shadow);
+    padding: 32px 24px 24px 24px;
+    background-color: var(--colors-background);
+    box-shadow: var(--neumorphism-inner_shadow);
   }
 
   h2 {
@@ -56,7 +56,7 @@ export default defineComponent({
   section > article {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 24px;
   }
 
   @media screen and (min-width: 425px) {

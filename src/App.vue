@@ -49,12 +49,14 @@ export default defineComponent({
   --font_color-loading: #4a4a4a;
 
   /*COLORS*/
-  --colors-background: #ffffff;
-  --colors-icons: #ffffff;
+  --colors-background: #f5f5f5;
+  --colors-icons: #333333;
 
   /*EFFECTS*/
   --glass_effect-color: #FFFFFF35;
   --glass_effect-shadow: 5px 5px 15px #00000010, inset 0px 0px 5px #00000020;
+  --neumorphism-inner_shadow: inset 5px 5px 10px #d0d0d0, inset -5px -5px 10px #FFFFFF;
+  --neumorphism-out_shadow: -5px -5px 10px #FFFFFF, 5px 5px 10px #d0d0d0;
 }
 
 * {margin:0; padding:0; font-family: var(--font-paragraph); color: var(--font_color-paragraph); box-sizing: border-box;}
@@ -63,6 +65,7 @@ body {
   min-height: 100vh;
   min-height: 100dvh;
   padding: 24px;
+  background: var(--colors-background);
 }
 
 h1,h2,h3,h4,h5,h6 {

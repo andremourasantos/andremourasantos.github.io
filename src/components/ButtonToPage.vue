@@ -42,19 +42,19 @@ export default defineComponent({
     width: 100%;
     height: fit-content;
     min-height: 100px;
-    background: #FFFFFF35;
+    background: var(--colors-background);
     backdrop-filter: blur(50px);
-    box-shadow: 5px 5px 15px #00000010, inset 0px 0px 5px #00000020;
+    box-shadow: var(--neumorphism-inner_shadow);
     text-align: left;
-    padding: 16px 24px;
+    padding: 24px;
     border: none;
     border-radius: 16px;
     cursor: pointer;
   }
 
   h2 {
-    font-size: 16px;
-    margin-bottom: 4px;
+    font-size: 17px;
+    margin-bottom: 2px;
   }
 
   @media screen and (min-width: 425px) {

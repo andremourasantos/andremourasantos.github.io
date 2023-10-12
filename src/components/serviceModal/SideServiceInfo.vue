@@ -43,9 +43,9 @@ export default defineComponent({
   .sideServiceInfo {
     display: flex;
     gap: 16px;
-    padding: 16px;
-    background-color: #d5d5d535;
-    box-shadow: var(--glass_effect-shadow);
+    padding: 24px 16px;
+    background-color: var(--colors-background);
+    box-shadow: var(--neumorphism-inner_shadow);
     border-radius: 16px;
     margin: 16px 0px;
   }

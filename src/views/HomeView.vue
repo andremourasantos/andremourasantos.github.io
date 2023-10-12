@@ -4,9 +4,9 @@
     <ButtonToPage :ButtonTitle="'Desenvolvimento Web'" :ButtonDescription="'Criação de sites e landing pages responsivas e de fácil atualização.'" :ButtonImage="'web-development'" @click="goToPage('webDev')"/>
     <ButtonToPage :ButtonTitle="'Marketing Digital'" :ButtonDescription="'Público-alvo, personas, canais e estratégia de anúncios e conteúdos.'" :ButtonImage="'digital-marketing'" @click="goToPage('marketing')"/>
   </section>
-  <div id="gradient-top-right">
+  <!-- <div id="gradient-top-right">
     <img src="../assets/lateral.png">
-  </div>
+  </div> -->
 </template>
 
 <script lang="ts">

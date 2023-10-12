@@ -72,13 +72,20 @@ export default defineComponent({
     column-gap: 16px;
     height: fit-content;
     width: 100%;
-    background-color: var(--glass_effect-color);
-    box-shadow: var(--glass_effect-shadow);
+    background-color: var(--colors-background);
+    box-shadow: var(--neumorphism-out_shadow);
     text-align: left;
     border: none;
     border-radius: 16px;
     padding: 16px;
     cursor: pointer;
+    transition: 200ms;
+  }
+
+  button:hover:not(:disabled) {
+    transition: 200ms;
+    transform: scale(0.99);
+    box-shadow: var(--neumorphism-inner_shadow);
   }
 
   button:has(#tag) {

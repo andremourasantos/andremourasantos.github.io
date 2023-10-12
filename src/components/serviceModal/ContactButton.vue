@@ -53,13 +53,19 @@ Vi o serviço de *${props.serviceName.toLocaleLowerCase()}* para ${serviceInfo.v
     min-height: 100px;
     background: #FFFFFF35;
     backdrop-filter: blur(50px);
-    box-shadow: 5px 5px 15px #00000010, inset 0px 0px 5px #00000020;
+    box-shadow: var(--neumorphism-out_shadow);
     text-align: left;
     padding: 16px 24px;
     border: none;
     border-radius: 16px;
     cursor: pointer;
     margin: 16px auto;
+    transition: 200ms;
+  }
+
+  button:hover {
+    box-shadow: var(--neumorphism-inner_shadow);
+    transform: scale(0.99);
   }
 
   h4 {

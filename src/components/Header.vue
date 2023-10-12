@@ -39,8 +39,7 @@ export default defineComponent({
   }
 
   i {
-    text-shadow: 0px 0px 5px #00000030;
-    color: white;
+    color: var(--font_color-title);
     cursor: pointer;
   }
 </style>

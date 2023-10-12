@@ -21,8 +21,8 @@ export default defineComponent({
     align-content: flex-start;
     align-items: flex-start;
     gap: 16px;
-    background-color: #d5d5d535;
-    box-shadow: var(--glass_effect-shadow);
+    background-color: var(--colors-background);
+    box-shadow: var(--neumorphism-inner_shadow);
     border-radius: 24px;
     padding: 24px;
     list-style-type: none;

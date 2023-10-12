@@ -160,9 +160,8 @@ export default defineComponent({
   dialog {
     border-radius: 24px;
     border: none;
-    background-color: #ffffff90;
-    box-shadow: var(--glass_effect-shadow);
-    backdrop-filter: blur(50px);
+    background-color: var(--colors-background);
+    /* box-shadow: var(--neumorphism-inner_shadow); */
     margin: auto 24px;
     padding: 24px;
     max-width: 520px;

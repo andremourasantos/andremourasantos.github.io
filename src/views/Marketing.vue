@@ -1,12 +1,12 @@
 <template>
   <PageTitle :PageTitle="'Marketing Digital'" :PageDescription="'Tenha uma estratégia de Marketing confeccionada especificamente para as necessidades do seu negócio.'"/>
-  <div id="gradient-top-right">
+  <!-- <div id="gradient-top-right">
     <img src="../assets/purple.png">
-  </div>
+  </div> -->
   <section id="servicesGroup">
-    <div id="gradient-center-left">
+    <!-- <div id="gradient-center-left">
       <img src="../assets/lateral.png">
-    </div>
+    </div> -->
     <ServicesGroup :GroupTitle="'Combos de serviços'" :GroupDescription="'Economize tempo e dinheiro na hora de criar sua estratégia de Marketing.'">
       <ServiceButton v-for="entry in comboServices" :key="entry.id" :service-image="entry.image" :service-title="entry.title" :service-description="entry.description" :service-id="entry.id" :service-tag="entry.status" :service-category="'Web'"/>
     </ServicesGroup>
