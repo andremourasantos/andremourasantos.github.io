@@ -1,5 +1,5 @@
 <template>
-  <button aria-label="Entrar em contato pelo WhatsApp" @click="goToWhatsApp">
+  <button aria-label="Entrar em contato pelo WhatsApp" @click="goToWhatsApp(), emitGtmEvent()">
     <img src="@/assets/icons/aviao-de-papel.png" alt="Ícone de avião de papel" height="48" width="48">
     <div>
       <h4>Entre em contato</h4>
@@ -10,6 +10,7 @@
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
+import { useGtm } from "@gtm-support/vue-gtm";
 
 //Stores
 import serviceModalInfo from '@/stores/serviceModal';
@@ -22,6 +23,7 @@ export default defineComponent({
     }
   },
   setup(props) {
+    const gtm = useGtm();
     const serviceInfo = ref(serviceModalInfo);
 
     const goToWhatsApp = ():void => {
@@ -34,8 +36,18 @@ Vi o serviço de *${props.serviceName.toLocaleLowerCase()}* para ${serviceInfo.v
       window.open(link + encodeURIComponent(message), '_blank');
     };
 
+    const emitGtmEvent = () => {
+      gtm?.trackEvent({
+        event: 'contact-button',
+        action: 'Click',
+        category: 'contactButton',
+        serviceid: serviceInfo.value.serviceID,
+      })
+    }
+
     return {
-      goToWhatsApp
+      goToWhatsApp,
+      emitGtmEvent
     }
   },
 })

@@ -1,5 +1,5 @@
 <template>
-  <button :disabled="serviceTag === 'Indisponível'" @click="openModal(serviceId)">
+  <button :disabled="serviceTag === 'Indisponível'" @click="openModal(serviceId), emitGtmEvent(serviceId)">
     <div id="tag" v-if="serviceTag !== undefined && serviceTag !== null" aria-label="Estado do serviço">
       <p>{{ serviceTag }}</p>
     </div>
@@ -12,13 +12,11 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue';
+import { defineComponent } from 'vue';
+import { useGtm } from '@gtm-support/vue-gtm';
 
 //Composables
 import { openServiceIDServiceModal } from '@/composables/general';
-
-//Stores
-import serviceModalInfo from '@/stores/serviceModal';
 
 export default defineComponent({
   props: {
@@ -48,14 +46,24 @@ export default defineComponent({
     }
   },
   setup(props) {
-    const modalInfo = ref(serviceModalInfo);
+    const gtm = useGtm()
 
     const openModal = (serviceID:string):void => {
       openServiceIDServiceModal(serviceID, props.serviceCategory);
     };
+
+    const emitGtmEvent = (serviceID:string) => {
+      gtm?.trackEvent({
+        event: 'service-button',
+        action: 'Click',
+        category: 'ServiceButton',
+        serviceid: serviceID
+      })
+    }
     
     return {
-      openModal
+      openModal,
+      emitGtmEvent
     }
   },
 })
