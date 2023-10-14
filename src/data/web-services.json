@@ -16,17 +16,16 @@
       ["medalha", "Item", true],
       ["medalha", "Item", true],
       ["medalha", "Item", true],
-      ["desconto", "Preço reduzido para ONGs e ações sociais.", true]
+      ["desconto", "Preço reduzido para ONGs e ações sociais.", false]
     ],
     "serviceInfo": {
-      "deadline": ["calendario", "Data de entrega", 60],
+      "deadline": ["calendario", "Data de entrega", 50],
       "price": ["moeda", "Preço do serviço", 999]
     },
     "footerNotes": [
       "Os serviços de hospedagem e banco de dados são fornecidos pelo Firebase, que conta com sua própria política de preços.",
-      "O valor cobrado para instituições não governamentais (OGNs) ou ações sociais/comunitárias de pequeno porte pode ser combinado abaixo dessa faixa.",
       "Ao escolher o PIX como forma de pagamento, você ganha um desconto de 5% em cima do valor do serviço.",
-      "Este contrato exige uma assinatura digital. Você pode realizar essa ação gratuitamente através do site ou aplicativo do Gov.br (conta prata exigida)."
+      "Este contrato exige uma assinatura digital. Você pode realizar essa ação gratuitamente através do site ou aplicativo do Gov.br (conta prata ou acima exigida)."
     ]
   },
   {
@@ -41,22 +40,22 @@
       "Introdução."
     ],
     "tableOfBenefits": [
-      ["medalha", "Item", true],
-      ["medalha", "Item", true],
-      ["medalha", "Item", true],
-      ["medalha", "Item", true],
-      ["medalha", "Item", true],
+      ["medalha", "Chegue com uma ideia, saia com um site completo.", true],
+      ["medalha", "Preço reduzido para os serviços neste combo.", true],
+      ["medalha", "Obtenha prioridade na entrega do seu contrato.", true],
+      ["medalha", "Consultoria web simples incluída no pacote.", true],
+      ["medalha", "Presença digital simples incluída no pacote.", true],
       ["desconto", "Preço reduzido para ONGs e ações sociais.", true]
     ],
     "serviceInfo": {
-      "deadline": ["calendario", "Data de entrega", 40],
-      "price": ["moeda", "Preço do serviço", 999]
+      "deadline": ["calendario", "Data de entrega", 30],
+      "price": ["moeda", "Preço do serviço", 1199]
     },
     "footerNotes": [
       "Os serviços de hospedagem e banco de dados são fornecidos pelo Firebase, que conta com sua própria política de preços.",
       "O valor cobrado para instituições não governamentais (OGNs) ou ações sociais/comunitárias de pequeno porte pode ser combinado abaixo dessa faixa.",
       "Ao escolher o PIX como forma de pagamento, você ganha um desconto de 5% em cima do valor do serviço.",
-      "Este contrato exige uma assinatura digital. Você pode realizar essa ação gratuitamente através do site ou aplicativo do Gov.br (conta prata exigida)."
+      "Este contrato exige uma assinatura digital. Você pode realizar essa ação gratuitamente através do site ou aplicativo do Gov.br (conta prata ou acima exigida)."
     ]
   },
   {
@@ -88,7 +87,7 @@
       "Os serviços de hospedagem e banco de dados são fornecidos pelo Firebase, que conta com sua própria política de preços.",
       "O valor cobrado para instituições não governamentais (OGNs) ou ações sociais/comunitárias de pequeno porte pode ser combinado abaixo dessa faixa.",
       "Ao escolher o PIX como forma de pagamento, você ganha um desconto de 5% em cima do valor do serviço.",
-      "Este contrato exige uma assinatura digital. Você pode realizar essa ação gratuitamente através do site ou aplicativo do Gov.br (conta prata exigida)."
+      "Este contrato exige uma assinatura digital. Você pode realizar essa ação gratuitamente através do site ou aplicativo do Gov.br (conta prata ou acima exigida)."
     ]
   },
   {
@@ -119,7 +118,7 @@
     "footerNotes": [
       "Entre os 10 milhões de ativos estão inclusos fotos, vídeos, modelos 3D, ícones e ilustrações.",
       "Ao escolher o PIX como forma de pagamento, você ganha um desconto de 5% em cima do valor do serviço.",
-      "Este contrato exige uma assinatura digital. Você pode realizar essa ação gratuitamente através do site ou aplicativo do Gov.br (conta prata exigida)."
+      "Este contrato exige uma assinatura digital. Você pode realizar essa ação gratuitamente através do site ou aplicativo do Gov.br (conta prata ou acima exigida)."
     ]
   },
   {
@@ -149,7 +148,7 @@
     "footerNotes": [
       "O valor cobrado para instituições não governamentais (OGNs) ou ações sociais/comunitárias de pequeno porte pode ser combinado abaixo dessa faixa.",
       "Ao escolher o PIX como forma de pagamento, você ganha um desconto de 5% em cima do valor do serviço.",
-      "Este contrato exige uma assinatura digital. Você pode realizar essa ação gratuitamente através do site ou aplicativo do Gov.br (conta prata exigida)."
+      "Este contrato exige uma assinatura digital. Você pode realizar essa ação gratuitamente através do site ou aplicativo do Gov.br (conta prata ou acima exigida)."
     ]
   },
   {
@@ -179,7 +178,7 @@
     "footerNotes": [
       "A disponilibidade de painéis atualizados em tempo real está restrita a uma seleta soma de serviços do Google, como Google Ads e Analytics.",
       "Ao escolher o PIX como forma de pagamento, você ganha um desconto de 5% em cima do valor do serviço.",
-      "Este contrato exige uma assinatura digital. Você pode realizar essa ação gratuitamente através do site ou aplicativo do Gov.br (conta prata exigida)."
+      "Este contrato exige uma assinatura digital. Você pode realizar essa ação gratuitamente através do site ou aplicativo do Gov.br (conta prata ou acima exigida)."
     ]
   }
 ]

@@ -3,7 +3,7 @@
   <main>
     <router-view/>
   </main>
-  <Transition name="modal">
+  <Transition name="serviceModal">
     <ServiceModal v-if="showModal === true"/>
   </Transition>
   <Footer/>
@@ -221,12 +221,12 @@ button:disabled {
 </style>
 
 <style>
-  .modal-enter-active, .modal-leave-active {
+  .serviceModal-enter-active, .serviceModal-leave-active {
     transition: 100ms ease-in;
   }
 
-  .modal-enter-from,
-  .modal-leave-to {
+  .serviceModal-enter-from,
+  .serviceModal-leave-to {
     opacity: 0;
     transform: translateY(50px) scale(0.95);
   }

@@ -80,7 +80,7 @@ export default defineComponent({
         };
 
         if(serviceInfo !== undefined){
-          fillHeader(serviceInfo.title,serviceInfo.description, serviceInfo.image)
+          fillHeader(serviceInfo.title,serviceInfo.description, serviceInfo.image);
           fillIntroduction(serviceInfo.introduction);
           fillBenefitsTable(serviceInfo.tableOfBenefits);
           fillServiceSideInfoList(serviceInfo.serviceInfo);
@@ -92,7 +92,7 @@ export default defineComponent({
           toggleHTMLOverflowY();
         } else {
           closeModal();
-          return alert('Desculpe, ocorreu um erro ao recuperar as informações sobre este serviço.');
+          return alert('Desculpe, ocorreu um erro ao exibir as informações sobre este serviço.');
         }
       }
     });
