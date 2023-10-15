@@ -1,12 +1,13 @@
 <template>
-  <details>
+  <details ref="notesDetails">
     <summary><h4>Notas de rodapé</h4><i class="ph-fill ph-caret-circle-down"></i></summary>
-    <p v-for="(note, index) in FooterNotes" :key="index"><span>{{ generateAsterisks(index + 1) }}</span>{{ note }}</p>
+    <p v-for="note in filteredFooterNotes">{{ note }}</p>
+    <slot></slot>
   </details>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, onMounted, ref, nextTick, watch } from 'vue'
 
 export default defineComponent({
   props: {
@@ -16,12 +17,30 @@ export default defineComponent({
     }
   },
   setup(props) {
-    const generateAsterisks = (count:number):string => {
-      return "*".repeat(count);
-    };
+    const notesDetails = ref<HTMLDetailsElement | null>(null);
+    const filteredFooterNotes = ref<string[]>(props.FooterNotes);
+
+    onMounted(() => {
+      const addAsterisks = async ():Promise<void> => {
+        let arrayOfParagraphs:ChildNode[];
+        if(!(notesDetails.value instanceof HTMLElement)){return};
+        
+        await nextTick(); //wait until the next DOM update cycle before applying continuing
+        arrayOfParagraphs = Array.from(notesDetails.value.childNodes).filter((el:Node) => {return el.nodeName === 'P' || (el.nodeName === '#text' && el.textContent?.trim() !== '')});
+
+        arrayOfParagraphs.forEach((el, index) => {el.textContent = `${"*".repeat(index + 1)}${el.textContent}`});
+
+        return;
+      }; addAsterisks();
+    });
+
+    watch(() => props.FooterNotes, (newFooterNotes) => {
+      filteredFooterNotes.value = newFooterNotes.filter(entry => {return entry !== ""});
+    });
 
     return {
-      generateAsterisks
+      notesDetails,
+      filteredFooterNotes
     }
   },
 })
@@ -29,7 +48,7 @@ export default defineComponent({
 
 
 <style scoped>
-  details p {
+  details p, :slotted(p) {
     margin-bottom: 8px;
   }
 
@@ -60,7 +79,7 @@ export default defineComponent({
     transform: rotate(180deg);
   }
 
-  details p:last-of-type {
+  :slotted(p:last-of-type) {
     margin-bottom: 0px;
   }
 </style>

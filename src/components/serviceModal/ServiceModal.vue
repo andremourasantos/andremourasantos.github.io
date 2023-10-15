@@ -26,7 +26,11 @@
         <p>Converse diretamente comigo, disponível de Segunda à Sábado.</p>
         <ContactButton v-if="serviceHeader !== null" :service-name="serviceHeader.title"/>
       </div>
-      <FooterNotes :FooterNotes="serviceFooterNotes"/>
+      <FooterNotes :FooterNotes="serviceFooterNotes">
+        <p v-if="showONGsDiscount">O valor cobrado para organizações não governamentais (OGNs) ou ações sociais/comunitárias de pequeno porte pode ser combinado abaixo dessa faixa.</p>
+        <p>Ao escolher o PIX como forma de pagamento, você ganha um desconto de 5% em cima do valor total. Parcelamento no cartão de crédito até 2x sem juros.</p>
+        <p>Este contrato exige uma assinatura eletrônica. Você pode realizar essa ação gratuitamente através do site ou aplicativo do Gov.br.</p>
+      </FooterNotes>
     </article>
   </dialog>
 </template>
@@ -59,6 +63,7 @@ export default defineComponent({
     const serviceHeader = ref<{title:string, description:string, image:string} | null>(null);
     const serviceIntroduction = ref<string[] | null>(null);
     const serviceBenefitsList = ref<[string,string][] | null>(null);
+    const showONGsDiscount = ref(true);
     const serviceFooterNotes = ref<string[]>([]);
 
     interface sideInfo {
@@ -69,32 +74,35 @@ export default defineComponent({
     const serviceSideInfoList = ref<sideInfo | [string,string,number] | null>(null);
 
     onMounted(()=>{
-      if(dialogEl.value instanceof HTMLElement){
-        const el = dialogEl.value;
-        
-        let serviceInfo;
-        if(modalInfo.value.serviceCategory === 'Marketing'){
-          serviceInfo = marketingJSON.find(obj => {return obj.id == modalInfo.value.serviceID}) as ServiceInfo;
-        } else {
-          serviceInfo = webJSON.find(obj => {return obj.id == modalInfo.value.serviceID}) as ServiceInfo;
-        };
+      if(!(dialogEl.value instanceof HTMLElement)){
+        closeModal();
+        return alert('Desculpe, ocorreu um erro ao exibir as informações sobre este serviço.');
+      };
 
-        if(serviceInfo !== undefined){
-          fillHeader(serviceInfo.title,serviceInfo.description, serviceInfo.image);
-          fillIntroduction(serviceInfo.introduction);
-          fillBenefitsTable(serviceInfo.tableOfBenefits);
-          fillServiceSideInfoList(serviceInfo.serviceInfo);
-          fillServiceFooterNotes(serviceInfo.footerNotes);
+      const el = dialogEl.value;
+      let serviceInfo;
 
-          el.showModal();
-          el.scrollTo(0,0);
+      if(modalInfo.value.serviceCategory === 'Marketing'){
+        serviceInfo = marketingJSON.find(obj => {return obj.id == modalInfo.value.serviceID}) as ServiceInfo;
+      } else {
+        serviceInfo = webJSON.find(obj => {return obj.id == modalInfo.value.serviceID}) as ServiceInfo;
+      };
 
-          toggleHTMLOverflowY();
-        } else {
-          closeModal();
-          return alert('Desculpe, ocorreu um erro ao exibir as informações sobre este serviço.');
-        }
-      }
+      if(serviceInfo === undefined){
+        closeModal();
+        return alert('Desculpe, ocorreu um erro ao recolher as informações sobre este serviço.');
+      };
+
+      fillHeader(serviceInfo.title,serviceInfo.description, serviceInfo.image);
+      fillIntroduction(serviceInfo.introduction);
+      fillBenefitsTable(serviceInfo.tableOfBenefits);
+      fillServiceSideInfoList(serviceInfo.serviceInfo);
+      fillServiceFooterNotes(serviceInfo.footerNotes);
+
+      el.showModal();
+      el.scrollTo(0,0);
+
+      toggleHTMLOverflowY();
     });
 
     const fillHeader = (title:string, description:string, image:string):void => {
@@ -110,6 +118,8 @@ export default defineComponent({
     };
 
     const fillBenefitsTable = (benefitsArray:[string,string,boolean][]):void => {
+      if(benefitsArray[benefitsArray.length - 1][2] !== true){showONGsDiscount.value = false};
+      
       const array:[string,string][] = Array.from(benefitsArray.filter(entry => {return entry[2] == true}).map((value, index) => {return [value[0],value[1]]}));
       serviceBenefitsList.value = array;
     };
@@ -146,6 +156,7 @@ export default defineComponent({
       serviceHeader,
       serviceIntroduction,
       serviceBenefitsList,
+      showONGsDiscount,
       serviceSideInfoList,
       serviceFooterNotes,
       shareModal,

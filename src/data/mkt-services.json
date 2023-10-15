@@ -23,10 +23,7 @@
       "price": ["moeda", "Preço do serviço", 999]
     },
     "footerNotes": [
-      "Os serviços de hospedagem e banco de dados são fornecidos pelo Firebase, que conta com sua própria política de preços.",
-      "O valor cobrado para instituições não governamentais (OGNs) ou ações sociais/comunitárias de pequeno porte pode ser combinado abaixo dessa faixa.",
-      "Ao escolher o PIX como forma de pagamento, você ganha um desconto de 5% em cima do valor do serviço. Parcelamento no cartão de crédito até 2x sem juros.",
-      "Este contrato exige uma assinatura digital. Você pode realizar essa ação gratuitamente através do site ou aplicativo do Gov.br (conta prata ou acima exigida)."
+      "Os serviços de hospedagem e banco de dados são fornecidos pelo Firebase, que conta com sua própria política de preços."
     ]
   },
   {
@@ -53,10 +50,7 @@
       "price": ["moeda", "Preço do serviço", 999]
     },
     "footerNotes": [
-      "Os serviços de hospedagem e banco de dados são fornecidos pelo Firebase, que conta com sua própria política de preços.",
-      "O valor cobrado para instituições não governamentais (OGNs) ou ações sociais/comunitárias de pequeno porte pode ser combinado abaixo dessa faixa.",
-      "Ao escolher o PIX como forma de pagamento, você ganha um desconto de 5% em cima do valor do serviço. Parcelamento no cartão de crédito até 2x sem juros.",
-      "Este contrato exige uma assinatura digital. Você pode realizar essa ação gratuitamente através do site ou aplicativo do Gov.br (conta prata ou acima exigida)."
+      "Os serviços de hospedagem e banco de dados são fornecidos pelo Firebase, que conta com sua própria política de preços."
     ]
   },
   {
@@ -84,9 +78,7 @@
       "price": ["moeda", "Preço do serviço", 150]
     },
     "footerNotes": [
-      "O valor cobrado para instituições não governamentais (OGNs) ou ações sociais/comunitárias pode ser combinado abaixo dessa faixa.",
-      "Ao escolher o PIX como forma de pagamento, você ganha um desconto de 5% em cima do valor do serviço. Parcelamento no cartão de crédito até 2x sem juros.",
-      "Este contrato exige uma assinatura digital. Você pode realizar essa ação gratuitamente através do site ou aplicativo do Gov.br (conta prata ou acima exigida)."
+      ""
     ]
   },
   {
@@ -114,8 +106,7 @@
       "price": ["moeda", "Preço do serviço", 300]
     },
     "footerNotes": [
-      "Ao escolher o PIX como forma de pagamento, você ganha um desconto de 5% em cima do valor do serviço. Parcelamento no cartão de crédito até 2x sem juros.",
-      "Este contrato exige uma assinatura digital. Você pode realizar essa ação gratuitamente através do site ou aplicativo do Gov.br (conta prata ou acima exigida)."
+      ""
     ]
   },
   {
@@ -143,9 +134,7 @@
       "price": ["moeda", "Preço do serviço", 100]
     },
     "footerNotes": [
-      "O valor cobrado para instituições não governamentais (OGNs) ou ações sociais/comunitárias pode ser combinado abaixo dessa faixa.",
-      "Ao escolher o PIX como forma de pagamento, você ganha um desconto de 5% em cima do valor do serviço. Parcelamento no cartão de crédito até 2x sem juros.",
-      "Este contrato exige uma assinatura digital. Você pode realizar essa ação gratuitamente através do site ou aplicativo do Gov.br (conta prata ou acima exigida)."
+      ""
     ]
   },
   {
@@ -174,9 +163,7 @@
       "price": ["moeda", "Preço do serviço", 600]
     },
     "footerNotes": [
-      "O valor cobrado para instituições não governamentais (OGNs) ou ações sociais/comunitárias pode ser combinado abaixo dessa faixa.",
-      "Ao escolher o PIX como forma de pagamento, você ganha um desconto de 5% em cima do valor do serviço. Parcelamento no cartão de crédito até 2x sem juros.",
-      "Este contrato exige uma assinatura digital. Você pode realizar essa ação gratuitamente através do site ou aplicativo do Gov.br (conta prata ou acima exigida)."
+      ""
     ]
   },
   {
@@ -204,9 +191,7 @@
       "price": ["moeda", "Preço do serviço", 600]
     },
     "footerNotes": [
-      "O valor cobrado para instituições não governamentais (OGNs) ou ações sociais/comunitárias de pequeno porte pode ser combinado abaixo dessa faixa.",
-      "Ao escolher o PIX como forma de pagamento, você ganha um desconto de 5% em cima do valor do serviço. Parcelamento no cartão de crédito até 2x sem juros.",
-      "Este contrato exige uma assinatura digital. Você pode realizar essa ação gratuitamente através do site ou aplicativo do Gov.br (conta prata ou acima exigida)."
+      ""
     ]
   }
 ]
