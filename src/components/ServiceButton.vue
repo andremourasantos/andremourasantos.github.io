@@ -1,6 +1,8 @@
 <template>
   <button :disabled="serviceTag === 'Indisponível'" @click="openModal(serviceId), emitGtmEvent(serviceId)">
-    <div id="tag" v-if="serviceTag !== undefined && serviceTag !== null" aria-label="Estado do serviço">
+    <div id="tag" v-if="serviceTag !== undefined && serviceTag !== null" :class="{
+      newService: serviceTag === 'Novo' 
+    }" aria-label="Estado do serviço">
       <p>{{ serviceTag }}</p>
     </div>
     <img :src="require(`@/assets/icons/${serviceImage}.png`)" :alt="`Imagem de ${serviceTitle}`">
@@ -124,6 +126,10 @@ export default defineComponent({
     right: 0px;
     top: 0px;
     user-select: none;
+  }
+
+  #tag.newService {
+    background-color: #0095ff;
   }
 
   #tag p {

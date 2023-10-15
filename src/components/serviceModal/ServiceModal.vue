@@ -18,12 +18,12 @@
         <p>Veja as informações sobre prazos de entrega, formas de pagamento e valor do serviço.</p>
         <div>
           <SideServiceInfo v-for="entry in serviceSideInfoList" :key="entry[0]" :SideInfoImage="entry[0]" :SideInfoTitle="entry[1]" :SideInfoDescription="entry[2]" :SideInfoDescriptionType="entry[0] == 'calendario' ? 'Date' : 'Price'"/>
-          <SideServiceInfo :SideInfoImage="'pagamento'" :SideInfoTitle="'Formas de pagamento'" :SideInfoDescription="'PIX e cartão de crédito.'" :SideInfoDescriptionType="'Custom'"/>
+          <SideServiceInfo :SideInfoImage="'pagamento'" :SideInfoTitle="'Formas de pagamento'" :SideInfoDescription="'PIX e Cartão de Crédito.'" :SideInfoDescriptionType="'Custom'"/>
         </div>
       </div>
       <div>
-        <h3>Entre em contato</h3>
-        <p>Disponível para conversa de Segunda à Sábado, das 16h às 20h.</p>
+        <h3>Informações de contato</h3>
+        <p>Converse diretamente comigo, disponível de Segunda à Sábado.</p>
         <ContactButton v-if="serviceHeader !== null" :service-name="serviceHeader.title"/>
       </div>
       <FooterNotes :FooterNotes="serviceFooterNotes"/>

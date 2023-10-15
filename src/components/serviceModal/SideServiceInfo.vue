@@ -4,14 +4,14 @@
     <div>
       <h4>{{ SideInfoTitle }}</h4>
       <p v-if="SideInfoDescriptionType == 'Date'">Até {{ SideInfoDescription }} dias úteis.</p>
-      <p v-if="SideInfoDescriptionType == 'Price'">A partir de R$ {{ SideInfoDescription }},00.</p>
+      <p v-if="SideInfoDescriptionType == 'Price'">A partir de R$ {{ styledPriceNumber }},00.</p>
       <p v-if="SideInfoDescriptionType == 'Custom'">{{ SideInfoDescription }}</p>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, ref } from 'vue'
 
 export default defineComponent({
   props: {
@@ -33,7 +33,15 @@ export default defineComponent({
     }
   },
   setup(props) {
-    
+    const styledPriceNumber = ref<string>('0');
+
+    if(props.SideInfoDescriptionType === 'Price'){
+      styledPriceNumber.value = String(props.SideInfoDescription).replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+    }
+
+    return {
+      styledPriceNumber
+    }
   },
 })
 </script>

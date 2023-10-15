@@ -24,14 +24,14 @@
     },
     "footerNotes": [
       "Os serviços de hospedagem e banco de dados são fornecidos pelo Firebase, que conta com sua própria política de preços.",
-      "Ao escolher o PIX como forma de pagamento, você ganha um desconto de 5% em cima do valor do serviço.",
+      "Ao escolher o PIX como forma de pagamento, você ganha um desconto de 5% em cima do valor do serviço. Parcelamento no cartão de crédito até 2x sem juros.",
       "Este contrato exige uma assinatura digital. Você pode realizar essa ação gratuitamente através do site ou aplicativo do Gov.br (conta prata ou acima exigida)."
     ]
   },
   {
     "id": "primeiros-passos",
     "show": true,
-    "status": "Indisponível",
+    "status": "Novo",
     "group": "Combo",
     "title": "Primeiros passos",
     "image": "primeiros-passos",
@@ -41,20 +41,20 @@
     ],
     "tableOfBenefits": [
       ["medalha", "Chegue com uma ideia, saia com um site completo.", true],
-      ["medalha", "Preço reduzido para os serviços neste combo.", true],
       ["medalha", "Obtenha prioridade na entrega do seu contrato.", true],
       ["medalha", "Consultoria web simples incluída no pacote.", true],
       ["medalha", "Presença digital simples incluída no pacote.", true],
+      ["desconto", "Economize até R$ 400 com os serviços neste combo.", true],
       ["desconto", "Preço reduzido para ONGs e ações sociais.", true]
     ],
     "serviceInfo": {
-      "deadline": ["calendario", "Data de entrega", 30],
-      "price": ["moeda", "Preço do serviço", 1199]
+      "deadline": ["calendario", "Data de entrega", 35],
+      "price": ["moeda", "Preço do serviço", 999]
     },
     "footerNotes": [
       "Os serviços de hospedagem e banco de dados são fornecidos pelo Firebase, que conta com sua própria política de preços.",
       "O valor cobrado para instituições não governamentais (OGNs) ou ações sociais/comunitárias de pequeno porte pode ser combinado abaixo dessa faixa.",
-      "Ao escolher o PIX como forma de pagamento, você ganha um desconto de 5% em cima do valor do serviço.",
+      "Ao escolher o PIX como forma de pagamento, você ganha um desconto de 5% em cima do valor do serviço. Parcelamento no cartão de crédito até 2x sem juros.",
       "Este contrato exige uma assinatura digital. Você pode realizar essa ação gratuitamente através do site ou aplicativo do Gov.br (conta prata ou acima exigida)."
     ]
   },
@@ -65,15 +65,15 @@
     "group": "Individual",
     "title": "Criação de sites",
     "image": "criacao-de-sites",
-    "description": "Um site criado a partir de um design completo. Rápido, otimizado para SEO e acessibilidade.",
+    "description": "Um site criado a partir de um design completo para atender o seu negócio.",
     "introduction": [
-      "Ter um site responsível e acessível é um requirimento para qualquer negócio na atualidade que queira poder ser encontrado pelos seus clientes. Sendo a porta de entrada para o seu negócio, é importante que ele transpareça os principais aspectos da sua empresa de forma simples e intuitiva.",
-      "Você não precisa começar com tudo, muito menos gastando horrores apenas para manter seu site no ar. O importante é obter um site que ajude-o a alavancar o seu negócio e alcançar novos clientes com facilidade.",
-      "Caso já tenha o design do seu site completo e pronto para produção, entre em contato e apresente seu projeto!"
-    ],
+      "Ter um site responsível e acessível é um requirimento para qualquer negócio na atualidade que queira poder ser encontrado pelos seus clientes. Sendo a porta de entrada para o seu negócio, é importante que o seu site transpareça os principais aspectos da sua empresa, de forma simples e intuitiva.",
+      "Você não precisa começar com tudo, muito menos gastando horrores apenas para manter seu site no ar, basta já ter em mãos o design do seu site completo e pronto para produção. O importante é obter um site que ajude-o a alavancar o seu negócio e a alcançar novos clientes com facilidade.",
+      "Sites relacionados a apostas, lojas virtuais ou blogs não são produzidos."
+      ],
     "tableOfBenefits": [
       ["medalha", "Comece pequeno e incremente seu site com o tempo.", true],
-      ["medalha", "Fácil atualização das informações no site.", true],
+      ["medalha", "Fácil manutenção das informações no site.", true],
       ["medalha", "Código moderno, rápido e otimizado para SEO.", true],
       ["medalha", "Possibilidade de atualização de informações em tempo real.", true],
       ["medalha", "Hospedagem de até 10 GB grátis.", true],
@@ -86,7 +86,7 @@
     "footerNotes": [
       "Os serviços de hospedagem e banco de dados são fornecidos pelo Firebase, que conta com sua própria política de preços.",
       "O valor cobrado para instituições não governamentais (OGNs) ou ações sociais/comunitárias de pequeno porte pode ser combinado abaixo dessa faixa.",
-      "Ao escolher o PIX como forma de pagamento, você ganha um desconto de 5% em cima do valor do serviço.",
+      "Ao escolher o PIX como forma de pagamento, você ganha um desconto de 5% em cima do valor do serviço. Parcelamento no cartão de crédito até 2x sem juros.",
       "Este contrato exige uma assinatura digital. Você pode realizar essa ação gratuitamente através do site ou aplicativo do Gov.br (conta prata ou acima exigida)."
     ]
   },
@@ -101,7 +101,7 @@
     "introduction": [
       "Está pensando em criar um site para a sua empresa ou já conta com um, mas quer atualizar a sua vitrine? Comece por aqui!",
       "O design do site é o ponto de partida para a produção do seu site, é aqui que definiremos forma, cores, funcionalidades, interações e tudo mais que o seu site deve agregar, levando em consideração os principais aspectos da sua empresa e as funcionalidades esperados pelos seus clientes.",
-      "Com o design pronto, é possível apresentá-lo para um profissional de desenvolvimento web para que ele possa programá-lo."
+      "Com o design pronto, é possível apresentá-lo para um profissional de desenvolvimento web para que ele possa programá-lo. Sites relacionados a apostas ou lojas virtuais não são produzidos."
     ],
     "tableOfBenefits": [
       ["medalha", "Tenha um design pronto para produção.", true],
@@ -113,18 +113,18 @@
     ],
     "serviceInfo": {
       "deadline": ["calendario", "Data de entrega", 20],
-      "price": ["moeda", "Preço do serviço", 450]
+      "price": ["moeda", "Preço do serviço", 500]
     },
     "footerNotes": [
       "Entre os 10 milhões de ativos estão inclusos fotos, vídeos, modelos 3D, ícones e ilustrações.",
-      "Ao escolher o PIX como forma de pagamento, você ganha um desconto de 5% em cima do valor do serviço.",
+      "Ao escolher o PIX como forma de pagamento, você ganha um desconto de 5% em cima do valor do serviço. Parcelamento no cartão de crédito até 2x sem juros.",
       "Este contrato exige uma assinatura digital. Você pode realizar essa ação gratuitamente através do site ou aplicativo do Gov.br (conta prata ou acima exigida)."
     ]
   },
   {
     "id": "consultoria-web",
     "show": true,
-    "status": "Indisponível",
+    "status": null,
     "group": "Individual",
     "title": "Consultoria",
     "image": "consultoria-web",
@@ -143,11 +143,11 @@
     ],
     "serviceInfo": {
       "deadline": ["calendario", "Data de entrega", 5],
-      "price": ["moeda", "Preço do serviço", 200]
+      "price": ["moeda", "Preço do serviço", 150]
     },
     "footerNotes": [
       "O valor cobrado para instituições não governamentais (OGNs) ou ações sociais/comunitárias de pequeno porte pode ser combinado abaixo dessa faixa.",
-      "Ao escolher o PIX como forma de pagamento, você ganha um desconto de 5% em cima do valor do serviço.",
+      "Ao escolher o PIX como forma de pagamento, você ganha um desconto de 5% em cima do valor do serviço. Parcelamento no cartão de crédito até 2x sem juros.",
       "Este contrato exige uma assinatura digital. Você pode realizar essa ação gratuitamente através do site ou aplicativo do Gov.br (conta prata ou acima exigida)."
     ]
   },
@@ -172,12 +172,12 @@
       ["desconto", "Preço reduzido para ONGs e ações sociais.", false]
     ],
     "serviceInfo": {
-      "deadline": ["calendario", "Data de entrega", 10],
+      "deadline": ["calendario", "Data de entrega", 14],
       "price": ["moeda", "Preço do serviço", 999]
     },
     "footerNotes": [
       "A disponilibidade de painéis atualizados em tempo real está restrita a uma seleta soma de serviços do Google, como Google Ads e Analytics.",
-      "Ao escolher o PIX como forma de pagamento, você ganha um desconto de 5% em cima do valor do serviço.",
+      "Ao escolher o PIX como forma de pagamento, você ganha um desconto de 5% em cima do valor do serviço. Parcelamento no cartão de crédito até 2x sem juros.",
       "Este contrato exige uma assinatura digital. Você pode realizar essa ação gratuitamente através do site ou aplicativo do Gov.br (conta prata ou acima exigida)."
     ]
   }
