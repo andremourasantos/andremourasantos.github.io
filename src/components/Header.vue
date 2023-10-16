@@ -3,10 +3,10 @@
     <button aria-label="Navegar para Página Inicial" title="Navegar para Página Inicial">
       <i class="ph-fill ph-house" @click="goToPage('home')"></i>
     </button>
-    <a aria-label="Navegar para LinkedIn de André Moura Santos" title="Navegar para LinkedIn de André Moura Santos" href="https://br.linkedin.com/in/andremourasantos" target="_blank" rel="external">
+    <a aria-label="Navegar para LinkedIn de André Moura Santos" title="Navegar para LinkedIn de André Moura Santos" href="https://br.linkedin.com/in/andremourasantos" target="_blank" rel="external nofollow noopener noreffer author">
       <i class="ph-fill ph-linkedin-logo"></i>
     </a>
-    <!-- <a aria-label="Navegar para GitHub de André Moura Santos" title="Navegar para GitHub de André Moura Santos" href="https://github.com/andremourasantos" target="_blank" rel="external">
+    <!-- <a aria-label="Navegar para GitHub de André Moura Santos" title="Navegar para GitHub de André Moura Santos" href="https://github.com/andremourasantos" target="_blank" rel="external nofollow noopener noreffer">
       <i class="ph-fill ph-github-logo"></i>
     </a> -->
   </header>

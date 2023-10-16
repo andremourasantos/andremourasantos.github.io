@@ -1,5 +1,5 @@
 <template>
-  <button aria-label="Entrar em contato pelo WhatsApp" @click="goToWhatsApp(), emitGtmEvent()">
+  <button aria-label="Entrar em contato pelo WhatsApp" title="Entrar em contato pelo WhatsApp" @click="goToWhatsApp(), emitGtmEvent()">
     <img src="@/assets/icons/aviao-de-papel.png" alt="Ícone de avião de papel" height="48" width="48">
     <div>
       <h4>Entre em contato</h4>
@@ -30,7 +30,7 @@ export default defineComponent({
       const link = 'https://api.whatsapp.com/send/?phone=5541935009236&text=';
       const message = `Olá, prazer!
       
-Vi o serviço de *${props.serviceName.toLocaleLowerCase()}* para ${serviceInfo.value.serviceCategory} e gostaria de apresentar minha empresa:
+Vi o serviço de *${props.serviceName.toLocaleLowerCase()}*, para ${serviceInfo.value.serviceCategory}, e gostaria de apresentar minha empresa:
 `;
 
       window.open(link + encodeURIComponent(message), '_blank');

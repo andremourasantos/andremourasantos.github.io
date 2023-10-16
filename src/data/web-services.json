@@ -35,13 +35,16 @@
     "image": "primeiros-passos",
     "description": "Tire suas ideias do papel e leve-as a internet!",
     "introduction": [
-      "Introdução."
+      "O combo de serviços Primeiros Passos é ideal para você que está procurando realizar um projeto, mas não tem uma base pronta para construir suas ideias ou apresentar seu negócio para o público.",
+      "Neste combo, você obtém os serviços de Design de sites, onde terá um design completo e pronto para produção criado especialmente para as necessidades do seu negócio, e o serviço de Criação de sites, para transformar o design recém aprovado em um produto completo e publicá-lo na internet!",
+      "Além desses serviços, também estão inclusas versões simples dos serviços de Consultoria (web) e Público-alvo, ambos para alinhar as expectativas e garantir que o projeto seja feito sob medida para as necessidades do seu negócio.",
+      "Sites relacionados a apostas, lojas virtuais ou blogs não são produzidos."
     ],
     "tableOfBenefits": [
-      ["medalha", "Chegue com uma ideia, saia com um site completo.", true],
+      ["medalha", "Chegue com uma ideia, saia com um projeto completo.", true],
       ["medalha", "Obtenha prioridade na entrega do seu contrato.", true],
-      ["medalha", "Consultoria web simples incluída no pacote.", true],
-      ["medalha", "Presença digital simples incluída no pacote.", true],
+      ["medalha", "Consultoria (web) simples incluída no pacote.", true],
+      ["medalha", "Público-alvo simples incluída no pacote.", true],
       ["desconto", "Economize até R$ 400 com os serviços neste combo.", true],
       ["desconto", "Preço reduzido para ONGs e ações sociais.", true]
     ],
@@ -51,7 +54,7 @@
     },
     "footerNotes": [
       "Os serviços de hospedagem e banco de dados são fornecidos pelo Firebase, que conta com sua própria política de preços.",
-      "A economia de preço foi calculada com os valores em outubro de 2023."
+      "A economia de preço apresentada neste serviço foi calculada em outubro de 2023."
     ]
   },
   {
@@ -63,8 +66,9 @@
     "image": "criacao-de-sites",
     "description": "Um site criado a partir de um design completo para atender o seu negócio.",
     "introduction": [
-      "Ter um site responsível e acessível é um requirimento para qualquer negócio na atualidade que queira poder ser encontrado pelos seus clientes. Sendo a porta de entrada para o seu negócio, é importante que o seu site transpareça os principais aspectos da sua empresa, de forma simples e intuitiva.",
-      "Você não precisa começar com tudo, muito menos gastando horrores apenas para manter seu site no ar, basta já ter em mãos o design do seu site completo e pronto para produção. O importante é obter um site que ajude-o a alavancar o seu negócio e a alcançar novos clientes com facilidade.",
+      "Ter um site responsivo e acessível é um requirimento para qualquer negócio na atualidade que queira poder ser encontrado pelos seus clientes. Sendo a porta de entrada para o seu negócio, é importante que o seu site transpareça os principais aspectos da sua empresa, de forma simples e intuitiva.",
+      "Você não precisa começar com tudo, muito menos gastando horrores apenas para manter seu site no ar, basta já ter em mãos o design do seu site completo e pronto para produção. O importante é obter um site que o ajude a alavancar o seu negócio e a alcançar novos clientes com facilidade.",
+      "Seu site será indexado ao Google e outros buscadores, bem como contará com serviços como Google Analytics, Google Tag Manager e Google Ads, para que você possa obter as métricas de desempenho do seu site.",
       "Sites relacionados a apostas, lojas virtuais ou blogs não são produzidos."
       ],
     "tableOfBenefits": [
@@ -90,7 +94,7 @@
     "group": "Individual",
     "title": "Design de sites",
     "image": "design-de-sites",
-    "description": "Só tem uma ideia? Vamos transformá-la em um design para que tome vida.",
+    "description": "Só tem uma ideia? Vamos transformá-la em um design pronto para produção.",
     "introduction": [
       "Está pensando em criar um site para a sua empresa ou já conta com um, mas quer atualizar a sua vitrine? Comece por aqui!",
       "O design do site é o ponto de partida para a produção do seu site, é aqui que definiremos forma, cores, funcionalidades, interações e tudo mais que o seu site deve agregar, levando em consideração os principais aspectos da sua empresa e as funcionalidades esperados pelos seus clientes.",
@@ -122,10 +126,10 @@
     "description": "Tenha uma segunda opinião sobre o seu site, com sugestões de melhorias.",
     "introduction": [
       "O serviço de consultoria é essencial para casos em que você quer realizar uma mudança ou incrementar o seu site, mas está em dúvida sobre se esta é a ação certa.",
-      "Com essa consultoria, você obtém um ponto de vista totalmente novo sobre o seu site, exatamente como um novo cliente em potêncial. Graças a isso, você pode obter novas percepções sobre o seu próprio site, o que auxiliará na hora de tomar decisões no futuro, evitando dores de cabeça, perda de tempo e gastos financeiros mal direcionados."
+      "Com essa consultoria, você obtém um ponto de vista totalmente novo sobre o seu site, exatamente como um novo cliente em potencial. Graças a isso, você pode obter novas percepções sobre o seu próprio site, o que auxiliará na hora de tomar decisões no futuro, evitando dores de cabeça, perda de tempo e gastos financeiros mal direcionados."
     ],
     "tableOfBenefits": [
-      ["medalha", "Ponto de vista sem viéses.", true],
+      ["medalha", "Ponto de vista sem vieses.", true],
       ["medalha", "Linguagem acessível e sem jargões.", true],
       ["medalha", "Lista de alterações e sugestões de melhorias.", true],
       ["medalha", "Explicações detalhadas das sugestões.", true],
@@ -150,7 +154,7 @@
     "description": "Não fique no escuro quanto a eficácia do seu site, tenha um relatório detalhado.",
     "introduction": [
       "Com um site pronto e rodando, é imprescindível que você tenha acesso as principais métricas de sucesso relacionadas ao seu negócio à disposição para poder avaliar o desempenho das suas ações na internet.",
-      "A partir de um relatório detalhado, criado especialmente para as suas necessidades, você pode, facilmente, compreender se o seu site está em indo bem ou mal, de onde estão vindo os acessos, quem são essas pessoas e como interagem com o seu site. Assim, ficará mais fácil para você ou o seu time planejar ações ou anúncios e obter o retorno sobre o desempenho das mesmas."
+      "A partir de um relatório detalhado, criado especialmente para as suas necessidades, você pode, facilmente, compreender se o seu site está em indo bem ou mal, de onde estão vindo os acessos, quem são essas pessoas e como interagem com o seu site. Assim, ficará mais fácil para você ou o seu time planejar ações, ou anúncios e obter o retorno sobre o desempenho das mesmas."
     ],
     "tableOfBenefits": [
       ["medalha", "Painéis atualizados em tempo real.", true],

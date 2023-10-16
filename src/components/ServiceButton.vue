@@ -1,5 +1,5 @@
 <template>
-  <button :disabled="serviceTag === 'Indisponível'" @click="openModal(serviceId), emitGtmEvent(serviceId)">
+  <button :disabled="serviceTag === 'Indisponível'" :aria-label="serviceTitle" @click="openModal(serviceId), emitGtmEvent(serviceId)">
     <div id="tag" v-if="serviceTag !== undefined && serviceTag !== null" :class="{
       newService: serviceTag === 'Novo' 
     }" aria-label="Estado do serviço">

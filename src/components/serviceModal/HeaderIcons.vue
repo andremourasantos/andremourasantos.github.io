@@ -1,7 +1,7 @@
 <template>
   <div>
-    <button aria-label="Compartilhar" @click="shareService"><i class="ph-fill ph-share-network"></i></button>
-    <button aria-label="Fechar" @click="$emit('closeModalButton')"><i class="ph-fill ph-x-circle"></i></button>
+    <button aria-label="Compartilhar" title="Compartilhar" @click="shareService"><i class="ph-fill ph-share-network"></i></button>
+    <button aria-label="Fechar" title="Fechar" @click="$emit('closeModalButton')"><i class="ph-fill ph-x-circle"></i></button>
   </div>
 </template>
 

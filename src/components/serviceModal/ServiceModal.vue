@@ -23,12 +23,12 @@
       </div>
       <div>
         <h3>Informações de contato</h3>
-        <p>Converse diretamente comigo, disponível de Segunda à Sábado.</p>
+        <p>Converse diretamente comigo, disponível de Segunda a Sábado.</p>
         <ContactButton v-if="serviceHeader !== null" :service-name="serviceHeader.title"/>
       </div>
       <FooterNotes :FooterNotes="serviceFooterNotes">
         <p v-if="showONGsDiscount">O valor cobrado para organizações não governamentais (OGNs) ou ações sociais/comunitárias de pequeno porte pode ser combinado abaixo dessa faixa.</p>
-        <p>Ao escolher o PIX como forma de pagamento, você ganha um desconto de 5% em cima do valor total. Parcelamento no cartão de crédito até 2x sem juros.</p>
+        <p>Ao escolher o PIX como forma de pagamento, você ganha um desconto de 5% em cima do valor total. Pagamentos no Cartão de Crédito até 2x sem juros.</p>
         <p>Este contrato exige uma assinatura eletrônica. Você pode realizar essa ação gratuitamente através do site ou aplicativo do Gov.br.</p>
       </FooterNotes>
     </article>
