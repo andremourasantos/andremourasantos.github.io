@@ -34,7 +34,7 @@ _*Atualizado em outubro de 2023._
 
 _*Atualizado em outubro de 2023._
 
-Veja abaixo as árvore de componentes do VueJs e também o fluxograma de lógica da aplicação, assim, você poderá ter um bom entendimento de como o projeto foi estruturado desde o começo para permitir uma fácil manutenção e adição de funcionalidades.
+Veja abaixo a árvore de componentes do VueJs e também o fluxograma de lógica da aplicação, assim, você poderá ter um bom entendimento de como o projeto foi estruturado desde o começo para permitir uma fácil manutenção e adição de funcionalidades.
 
 <img title="Árvode de componentes do VueJS" src="./public/imagens/vuejs-tree.png">
 <img title="Fluxograma de lógica da aplicação" src="./public/imagens/logic-fluxogram.png">
