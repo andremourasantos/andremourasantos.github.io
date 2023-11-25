@@ -75,7 +75,7 @@
     ],
     "serviceInfo": {
       "deadline": ["calendario", "Data de entrega", 5],
-      "price": ["moeda", "Preço do serviço", 150]
+      "price": ["moeda", "Preço do serviço", 100]
     },
     "footerNotes": [
       ""
@@ -159,8 +159,8 @@
       ["desconto", "Preço reduzido para ONGs e ações sociais.", true]
     ],
     "serviceInfo": {
-      "deadline": ["calendario", "Data de entrega", 14],
-      "price": ["moeda", "Preço do serviço", 600]
+      "deadline": ["calendario", "Data de entrega", 7],
+      "price": ["moeda", "Preço do serviço", 400]
     },
     "footerNotes": [
       ""
@@ -187,7 +187,7 @@
       ["desconto", "Preço reduzido para ONGs e ações sociais.", true]
     ],
     "serviceInfo": {
-      "deadline": ["calendario", "Data de entrega", 14],
+      "deadline": ["calendario", "Data de entrega", 10],
       "price": ["moeda", "Preço do serviço", 600]
     },
     "footerNotes": [

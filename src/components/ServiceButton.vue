@@ -92,7 +92,7 @@ export default defineComponent({
     transition: 200ms;
   }
 
-  button:hover:not(:disabled) {
+  button:hover:not(:disabled), button:focus {
     transition: 200ms;
     transform: scale(0.99);
     box-shadow: var(--neumorphism-inner_shadow);

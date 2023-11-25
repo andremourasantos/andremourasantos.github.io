@@ -81,7 +81,7 @@
     ],
     "serviceInfo": {
       "deadline": ["calendario", "Data de entrega", 30],
-      "price": ["moeda", "Preço do serviço", 650]
+      "price": ["moeda", "Preço do serviço", 600]
     },
     "footerNotes": [
       "Os serviços de hospedagem e banco de dados são fornecidos pelo Firebase, que conta com sua própria política de preços."
@@ -110,7 +110,7 @@
     ],
     "serviceInfo": {
       "deadline": ["calendario", "Data de entrega", 20],
-      "price": ["moeda", "Preço do serviço", 500]
+      "price": ["moeda", "Preço do serviço", 400]
     },
     "footerNotes": [
       "Entre os 10 milhões de ativos estão inclusos fotos, vídeos, modelos 3D, ícones e ilustrações."
@@ -138,7 +138,7 @@
     ],
     "serviceInfo": {
       "deadline": ["calendario", "Data de entrega", 5],
-      "price": ["moeda", "Preço do serviço", 150]
+      "price": ["moeda", "Preço do serviço", 100]
     },
     "footerNotes": [
       ""

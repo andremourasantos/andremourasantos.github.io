@@ -38,7 +38,7 @@ Vi o serviço de *${props.serviceName.toLocaleLowerCase()}*, para ${serviceInfo.
 
     const emitGtmEvent = () => {
       gtm?.trackEvent({
-        event: 'contact-button',
+        event: 'contact_button',
         action: 'Click',
         category: 'contactButton',
         serviceid: serviceInfo.value.serviceID,

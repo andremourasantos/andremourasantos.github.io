@@ -53,7 +53,7 @@ export default defineComponent({
     top: 0;
     display: flex;
     justify-content: flex-end;
-    gap: 16px;
+    gap: 8px;
     z-index: 2;
   }
 

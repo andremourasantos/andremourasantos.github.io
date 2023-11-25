@@ -4,7 +4,7 @@
     <div>
       <h4>{{ SideInfoTitle }}</h4>
       <p v-if="SideInfoDescriptionType == 'Date'">Até {{ SideInfoDescription }} dias úteis.</p>
-      <p v-if="SideInfoDescriptionType == 'Price'">A partir de R$ {{ styledPriceNumber }},00.</p>
+      <p v-if="SideInfoDescriptionType == 'Price'">A partir de {{ styledPriceNumber }}.</p>
       <p v-if="SideInfoDescriptionType == 'Custom'">{{ SideInfoDescription }}</p>
     </div>
   </div>
@@ -36,7 +36,7 @@ export default defineComponent({
     const styledPriceNumber = ref<string>('0');
 
     if(props.SideInfoDescriptionType === 'Price'){
-      styledPriceNumber.value = String(props.SideInfoDescription).replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+      styledPriceNumber.value = new Intl.NumberFormat('pt-br', {style: 'currency', currency: 'BRL'}).format(Number(props.SideInfoDescription));
     }
 
     return {

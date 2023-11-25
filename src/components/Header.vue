@@ -1,7 +1,7 @@
 <template>
   <header>
-    <button aria-label="Navegar para Página Inicial" title="Navegar para Página Inicial">
-      <i class="ph-fill ph-house" @click="goToPage('home')"></i>
+    <button aria-label="Navegar para Página Inicial" title="Navegar para Página Inicial" @click="goToPage('home')">
+      <i class="ph-fill ph-house"></i>
     </button>
     <a aria-label="Navegar para LinkedIn de André Moura Santos" title="Navegar para LinkedIn de André Moura Santos" href="https://br.linkedin.com/in/andremourasantos" target="_blank" rel="external nofollow noopener noreffer author">
       <i class="ph-fill ph-linkedin-logo"></i>
