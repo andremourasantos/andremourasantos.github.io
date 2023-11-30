@@ -1,13 +1,13 @@
 <template>
   <header>
     <button aria-label="Navegar para Página Inicial" title="Navegar para Página Inicial" @click="goToPage('home')">
-      <i class="ph-fill ph-house"></i>
+      <PhHouse/>
     </button>
     <a aria-label="Navegar para LinkedIn de André Moura Santos" title="Navegar para LinkedIn de André Moura Santos" href="https://br.linkedin.com/in/andremourasantos" target="_blank" rel="external nofollow noopener noreffer author">
-      <i class="ph-fill ph-linkedin-logo"></i>
+      <PhLinkedinLogo/>
     </a>
     <!-- <a aria-label="Navegar para GitHub de André Moura Santos" title="Navegar para GitHub de André Moura Santos" href="https://github.com/andremourasantos" target="_blank" rel="external nofollow noopener noreffer">
-      <i class="ph-fill ph-github-logo"></i>
+      <PhGithubLogo/>
     </a> -->
   </header>
 </template>
@@ -16,13 +16,17 @@
 import { defineComponent } from 'vue';
 import router from '@/router';
 
+//Icons
+import { PhHouse, PhLinkedinLogo, PhGithubLogo } from '@phosphor-icons/vue';
+
 export default defineComponent({
+  components: {PhHouse, PhLinkedinLogo, PhGithubLogo},
   setup() {
     function goToPage(routeName:string) {
       return router.push({name: routeName});
     }
     return {
-      goToPage
+      goToPage,
     }
   },
 })

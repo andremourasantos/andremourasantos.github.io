@@ -1,13 +1,17 @@
 <template>
   <details ref="notesDetails">
-    <summary><h4>Notas de rodapé</h4><i class="ph-fill ph-caret-circle-down"></i></summary>
+    <summary>
+      <h4>Notas de rodapé</h4>
+      <PhCaretCircleDown/>
+    </summary>
     <p v-for="note in filteredFooterNotes">{{ note }}</p>
     <slot></slot>
   </details>
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, ref, nextTick, watch } from 'vue'
+import { defineComponent, onMounted, ref, nextTick, watch, provide } from 'vue';
+import { PhCaretCircleDown } from '@phosphor-icons/vue';
 
 export default defineComponent({
   props: {
@@ -16,6 +20,7 @@ export default defineComponent({
       type: Array as () => string[]
     }
   },
+  components: {PhCaretCircleDown},
   setup(props) {
     const notesDetails = ref<HTMLDetailsElement | null>(null);
     const filteredFooterNotes = ref<string[]>(props.FooterNotes);
@@ -37,6 +42,9 @@ export default defineComponent({
     watch(() => props.FooterNotes, (newFooterNotes) => {
       filteredFooterNotes.value = newFooterNotes.filter(entry => {return entry !== ""});
     });
+
+    //Phosphor Icons settings
+    provide("size", 24);
 
     return {
       notesDetails,
@@ -70,12 +78,11 @@ export default defineComponent({
     margin-bottom: 16px;
   }
 
-  i {
-    font-size: 24px;
+  details summary svg {
     transition: 200ms;
   }
   
-  details[open] i {
+  details[open] svg {
     transform: rotate(180deg);
   }
 

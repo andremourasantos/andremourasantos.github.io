@@ -10,11 +10,10 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, computed, onMounted } from 'vue';
+import { defineComponent, ref, computed, onMounted, provide } from 'vue';
 
 //Firebase
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+import { app } from '@/firebase';
 
 //Components
 import Header from '@/components/Header.vue';
@@ -30,20 +29,14 @@ export default defineComponent({
     const modalInfo = ref(serviceModalInfo);
     const showModal = computed(() => modalInfo.value.status === 'Show');
 
-    onMounted(() => {
-      const firebaseConfig = {
-        apiKey: "AIzaSyAneNAD2jfP63gmC9rlvn2TLF8livxpYxo",
-        authDomain: "andremourasantos-2c83a.firebaseapp.com",
-        projectId: "andremourasantos-2c83a",
-        storageBucket: "andremourasantos-2c83a.appspot.com",
-        messagingSenderId: "495363231805",
-        appId: "1:495363231805:web:67b7dba4f0dff32d49da54",
-        measurementId: "G-RWXZ8BGYKH"
-      };
-
-      const app = initializeApp(firebaseConfig);
-      const analytics = getAnalytics(app);
-    })
+    //Phosphor Icons settings
+    provide("color", "#333333");
+    if(window.innerWidth > 425){
+      provide("size", 36);
+    } else {
+      provide("size", 32);
+    }
+    provide("weight", "fill");
 
     return {
       showModal
@@ -125,8 +118,6 @@ p {
   font-size: 18px
 }
 
-i {font-size: 32px;}
-
 button {
   cursor: pointer;
   border: none;
@@ -172,8 +163,6 @@ button:disabled {
     font-weight: 500;
     font-size: 18px
   }
-
-  i {font-size: 36px;}
 }
 
 #servicesGroup {

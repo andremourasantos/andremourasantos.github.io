@@ -1,18 +1,24 @@
 <template>
   <div>
-    <button aria-label="Compartilhar" title="Compartilhar" @click="shareService"><i class="ph-fill ph-share-network"></i></button>
-    <button aria-label="Fechar" title="Fechar" @click="$emit('closeModalButton')"><i class="ph-fill ph-x-circle"></i></button>
+    <button aria-label="Compartilhar" title="Compartilhar" @click="shareService">
+      <PhShareNetwork/>
+    </button>
+    <button aria-label="Fechar" title="Fechar" @click="$emit('closeModalButton')">
+      <PhXCircle/>
+    </button>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
 import { useGtm } from "@gtm-support/vue-gtm";
+import { PhShareNetwork, PhXCircle } from '@phosphor-icons/vue';
 
 //Stores
 import serviceModalnfo from "@/stores/serviceModal";
 
 export default defineComponent({
+  components: {PhShareNetwork, PhXCircle},
   setup() {
     const gtm = useGtm();
 
