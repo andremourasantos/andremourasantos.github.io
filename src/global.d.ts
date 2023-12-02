@@ -17,4 +17,22 @@ declare global {
     },
     footerNotes:string[]
   } | undefined;
+
+  type ProjectInfo = {
+    id:string,
+    status:null | "Novo",
+    group:"Featured" | "Prototype",
+    title:string,
+    favicon:string,
+    description:string,
+    introductionText:string,
+    image1:string
+    developmentText:string[],
+    image2:string,
+    conclusionText: string[],
+    relatedServices: {
+      servicesID: string[]
+    },
+    footerNotes:string[]
+  } | undefined;
 }

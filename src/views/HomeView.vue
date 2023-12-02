@@ -1,12 +1,9 @@
 <template>
   <PageTitle :PageTitle="'André Moura'" :PageDescription="'Profissional de Marketing e Desenvolvedor Web freelancer.'"/>
   <section>
-    <ButtonToPage :ButtonTitle="'Desenvolvimento Web'" :ButtonDescription="'Criação de sites e landing pages responsivas e de fácil atualização.'" :ButtonImage="'web-development'" @click="goToPage('webDev')"/>
-    <ButtonToPage :ButtonTitle="'Marketing Digital'" :ButtonDescription="'Público-alvo, personas, canais e estratégia de anúncios e conteúdos.'" :ButtonImage="'digital-marketing'" @click="goToPage('marketing')"/>
+    <ButtonToPage :button-title="'Desenvolvimento Web'" :button-description="'Criação de sites e landing pages responsivas e de fácil atualização.'" :button-image="'web-development'" @click="goToPage('webDev')"/>
+    <ButtonToPage :button-title="'Marketing Digital'" :button-description="'Público-alvo, personas, canais e estratégia de anúncios e conteúdos.'" :button-image="'digital-marketing'" @click="goToPage('marketing')"/>
   </section>
-  <!-- <div id="gradient-top-right">
-    <img src="../assets/lateral.png">
-  </div> -->
 </template>
 
 <script lang="ts">

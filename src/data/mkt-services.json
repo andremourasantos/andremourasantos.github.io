@@ -140,7 +140,7 @@
   {
     "id": "estrategia-de-conteudo",
     "show": true,
-    "status": "Novo",
+    "status": "Indisponível",
     "group": "Individual",
     "title": "Estratégia de conteúdo",
     "image": "estrategia-de-conteudo",
@@ -188,7 +188,7 @@
     ],
     "serviceInfo": {
       "deadline": ["calendario", "Data de entrega", 10],
-      "price": ["moeda", "Preço do serviço", 600]
+      "price": ["moeda", "Preço do serviço", 400]
     },
     "footerNotes": [
       ""
