@@ -23,6 +23,7 @@ declare global {
     status:null | "Novo",
     group:"Featured" | "Prototype",
     title:string,
+    featuredImage:string,
     favicon:string,
     description:string,
     introductionText:string,
