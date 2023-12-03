@@ -3,15 +3,17 @@
 
   <section id="servicesGroup">
     <ServicesGroup :GroupTitle="'Projetos em destaque'" :GroupDescription="'Essas são os projetos que me dão orgulho, saiba mais sobre cada um deles.'">
-      <ProjectButton v-for="item in portfolioProjects" :project-title="item.title" :project-description="item.description" :project-image="item.featuredImage" :project-id="item.id" :project-tag="item.status"/>
+      <ProjectButton v-for="item in featuredProjects" :project-title="item.title" :project-description="item.description" :project-image="item.featuredImage" :project-id="item.id" :project-tag="item.status"/>
     </ServicesGroup>
     
     <ServicesGroup :GroupTitle="'Protótipos funcionais'" :GroupDescription="'Veja uma coletânea de protótipos de sites e teste suas funcionalidades.'">
-
+      <ProjectButton v-for="item in prototypesProjects" :project-title="item.title" :project-description="item.description" :project-image="item.featuredImage" :project-id="item.id" :project-tag="item.status"/>
     </ServicesGroup>
   </section>
 
-  <ProjectModal v-if="modalStore.status === 'Show'"/>
+  <Transition name="serviceModal">
+    <ProjectModal v-if="modalStore.status === 'Show'"/>
+  </Transition>
 </template>
 
 <script lang="ts">
@@ -32,11 +34,14 @@ import projectModal from '@/stores/projectModal';
 export default defineComponent({
   components: {PageTitle, ServicesGroup, ProjectButton, ProjectModal},
   setup () {
-    const portfolioProjects:NonNullable<ProjectInfo>[] = projectsJSON as NonNullable<ProjectInfo>[];
     const modalStore = ref(projectModal);
 
+    const featuredProjects:NonNullable<ProjectInfo>[] = projectsJSON.filter(obj => {return obj.group === 'Featured'}) as (NonNullable<ProjectInfo>[]);
+    const prototypesProjects:NonNullable<ProjectInfo>[] = projectsJSON.filter(obj => {return obj.group !== 'Featured'}) as (NonNullable<ProjectInfo>[]);
+
     return {
-      portfolioProjects,
+      featuredProjects,
+      prototypesProjects,
       modalStore
     }
   }

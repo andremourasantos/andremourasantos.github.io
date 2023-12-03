@@ -1,5 +1,5 @@
 <template>
-  <button :disabled="serviceTag === 'Indisponível'" :aria-label="serviceTitle" @click="openModal(serviceId), emitGtmEvent(serviceId)">
+  <button :disabled="serviceTag === 'Indisponível'" :aria-label="serviceTitle" @click="handleClick(serviceId), emitGtmEvent(serviceId)">
     <div id="tag" v-if="serviceTag !== undefined && serviceTag !== null" :class="{
       newService: serviceTag === 'Novo' 
     }" aria-label="Estado do serviço">
@@ -19,6 +19,7 @@ import { useGtm } from '@gtm-support/vue-gtm';
 
 //Composables
 import { openServiceIDServiceModal } from '@/composables/general';
+import router from '@/router';
 
 export default defineComponent({
   props: {
@@ -45,13 +46,39 @@ export default defineComponent({
     'serviceCategory': {
       required: true,
       type: String as () => 'Marketing' | 'Web'
+    },
+    'serviceButtonEnviroment': {
+      required: false,
+      default: 'Page',
+      type: String as () => 'Page' | 'Popup'
     }
   },
   setup(props) {
     const gtm = useGtm()
 
-    const openModal = (serviceID:string):void => {
-      openServiceIDServiceModal(serviceID, props.serviceCategory);
+    const handleClick = (serviceId:string):void => {
+      switch (props.serviceButtonEnviroment) {
+        case 'Popup':
+          goToService(serviceId);
+          break;
+      
+        default:
+          openModal(serviceId);
+          break;
+      }
+    };
+
+    const goToService = (serviceId:string):void => {
+      const page = props.serviceCategory === 'Marketing' ? 'marketing' : 'webDev';
+      router.push({name: page, query:{
+        serviceID: serviceId,
+        'utm_source': 'website',
+        'utm_medium': 'projectModal'
+      }})
+    }
+
+    const openModal = (serviceId:string):void => {
+      openServiceIDServiceModal(serviceId, props.serviceCategory);
     };
 
     const emitGtmEvent = (serviceID:string) => {
@@ -64,7 +91,7 @@ export default defineComponent({
     }
     
     return {
-      openModal,
+      handleClick,
       emitGtmEvent
     }
   },

@@ -32,7 +32,7 @@ declare global {
     image2:string,
     conclusionText: string[],
     relatedServices: {
-      servicesID: string[]
+      servicesID: ["Marketing" | "Web",string][]
     },
     footerNotes:string[]
   } | undefined;

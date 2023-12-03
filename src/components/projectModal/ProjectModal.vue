@@ -21,6 +21,14 @@
         <p v-for="paragraph in conclusionText">{{ paragraph }}</p>
       </div>
 
+      <div class="relatedServices">
+        <h3>Serviços relacionados</h3>
+        <p>Confira os serviços que foram contratados por este cliente para a realização do projeto.</p>
+        <div>
+          <ServiceButton @click="closeModal" v-for="service in relatedServices" :service-button-enviroment="'Popup'" :service-id="service[0].id" :service-image="service[0].image" :service-title="service[0].title" :service-description="service[0].description" :service-category="service[1]" @click.prevent="" :service-tag="service[0].status"/>
+        </div>
+      </div>
+
     </article>
 
   </dialog>
@@ -31,9 +39,11 @@ import { defineComponent, ref, onMounted } from 'vue';
 
 //Components
 import HeaderIcons from '../serviceModal/HeaderIcons.vue';
+import ServiceButton from '../ServiceButton.vue';
 
 //Composables
 import { toggleHTMLOverflowY } from '@/composables/general';
+import { checkServiceExistenceV2, getServiceInfo } from '@/composables/data-base';
 
 //Data
 import projectsJSON from '@/data/projects.json';
@@ -42,43 +52,45 @@ import projectsJSON from '@/data/projects.json';
 import projectModalInfo from '@/stores/projectModal';
 
 export default defineComponent({
-  components: {HeaderIcons},
-  setup () {
+  components: { HeaderIcons, ServiceButton },
+  setup() {
     const projectDialogEl = ref<HTMLDialogElement | null>(null);
     const modalInfo = ref(projectModalInfo);
 
     //Dialog content related
-    const projectHeader = ref<{id:string, title:string, description:string, favicon:string} | null>(null);
+    const projectHeader = ref<{ id: string, title: string, description: string, favicon: string } | null>(null);
     const introductionText = ref<string>("");
-    const images1And2 = ref<[string, string]>(["",""]);
+    const images1And2 = ref<[string, string]>(["", ""]);
     const developmentText = ref<string[]>([""]);
     const conclusionText = ref<string[]>([""]);
+    const relatedServices = ref<[NonNullable<ServiceInfo>,"Marketing" | "Web"][] | null>(null);
 
     onMounted(() => {
-      if(!(projectDialogEl.value instanceof HTMLElement)){
+      if (!(projectDialogEl.value instanceof HTMLElement)) {
         closeModal();
         return alert('Desculpe, ocorreu um erro ao exibir as informações sobre este serviço.');
       };
 
       const el = projectDialogEl.value;
-      const projectInfo:ProjectInfo  = projectsJSON.find(obj => {return obj.id === modalInfo.value.projectID}) as NonNullable<ProjectInfo>;
+      const projectInfo: ProjectInfo = projectsJSON.find(obj => { return obj.id === modalInfo.value.projectID }) as NonNullable<ProjectInfo>;
 
       fillProjectHeader(projectInfo);
       fillIntroduction(projectInfo.introductionText);
       fillImages(projectInfo.image1, projectInfo.image2);
       fillDevelopmentText(projectInfo.developmentText);
       fillConclusionText(projectInfo.conclusionText);
+      fillRelatedServices(projectInfo.relatedServices.servicesID);
 
       toggleHTMLOverflowY();
       el.showModal();
     })
 
-    const fillProjectHeader = (projectInfo:NonNullable<ProjectInfo>):void => {
+    const fillProjectHeader = (projectInfo: NonNullable<ProjectInfo>):void => {
       projectHeader.value = {
         id: projectInfo.id,
         title: projectInfo.title,
         description: projectInfo.description,
-        favicon: projectInfo.favicon 
+        favicon: projectInfo.favicon
       }
     };
 
@@ -86,20 +98,42 @@ export default defineComponent({
       introductionText.value = text;
     };
 
-    const fillImages = (image1:string, image2:string) => {
+    const fillImages = (image1:string, image2:string):void => {
       images1And2.value = [image1, image2];
     };
 
-    const fillDevelopmentText = (text:string[]) => {
+    const fillDevelopmentText = (text:string[]):void => {
       developmentText.value = text;
     };
 
-    const fillConclusionText = (text:string[]) => {
+    const fillConclusionText = (text:string[]):void => {
       conclusionText.value = text;
-    }
+    };
+
+    const fillRelatedServices = async (servicesArray: ["Marketing" | "Web", string][]):Promise<void> => {
+      const filteredServices = await Promise.all(servicesArray.map(async (array) => {
+        if (await checkServiceExistenceV2(array[1], array[0]) === true) {
+          return array;
+        }
+      }));
+
+      const servicesToShow = filteredServices.filter(Boolean) as ["Marketing" | "Web", string][];
+
+      relatedServices.value = [];
+      servicesToShow.forEach((service) => {
+        getServiceInfo(service[1], service[0])
+          .then(res => {
+            relatedServices.value?.push([res as NonNullable<ServiceInfo>, service[0]]);
+            console.log(relatedServices.value);
+          })
+          .catch(error => {
+            console.error(error);
+          })
+      })
+    };
 
     const closeModal = ():void => {
-      if(projectDialogEl.value instanceof HTMLElement){
+      if (projectDialogEl.value instanceof HTMLElement) {
         const el = projectDialogEl.value;
         setTimeout(() => {
           //This timeOut function is here to sync with the transition in-and-out of the element (available in /src/App.vue).
@@ -118,6 +152,7 @@ export default defineComponent({
       images1And2,
       developmentText,
       conclusionText,
+      relatedServices,
       closeModal
     }
   }
@@ -125,19 +160,34 @@ export default defineComponent({
 </script>
 
 <style scoped>
-  div.content img {
-    width: 100%;
-  }
+div.content img {
+  width: 100%;
+}
 
-  div.content p {
-    margin: 8px auto;
-  }
+div.content p {
+  margin: 8px auto;
+}
 
-  div.content p:first-of-type {
-    margin-top: 0px;
-  }
+div.content p:first-of-type {
+  margin-top: 0px;
+}
 
-  div.content p:last-of-type {
-    margin-bottom: 0px;
+div.content p:last-of-type {
+  margin-bottom: 0px;
+}
+
+div.relatedServices > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+  margin: 16px auto;
+}
+
+@media screen and (min-width: 425px) {
+  div.relatedServices > div > button {
+    width: 200px;
   }
+}
 </style>

@@ -19,4 +19,40 @@ export async function checkServiceExistence(serviceID:string):Promise<boolean> {
       return resolve(false);
     }
   });
-}
+};
+
+export async function checkServiceExistenceV2(serviceId:string, serviceCategory:"Marketing" | "Web"):Promise<boolean> {
+  let serviceInfo:ServiceInfo;
+
+  if(serviceCategory === 'Marketing') {
+    serviceInfo = marketingJSON.find(obj => {return obj.id == serviceId}) as ServiceInfo;
+  } else {
+    serviceInfo = webJSON.find(obj => {return obj.id == serviceId}) as ServiceInfo;
+  }
+
+  return new Promise<boolean>((resolve) => {
+    if(serviceInfo !== undefined){
+      return resolve(true);
+    } else {
+      return resolve(false);
+    }
+  });
+};
+
+export async function getServiceInfo(serviceId:string, serviceCategory:"Marketing" | "Web"):Promise<ServiceInfo> {
+  let serviceInfo:ServiceInfo | undefined;
+
+  if(serviceCategory === 'Marketing') {
+    serviceInfo = marketingJSON.find(obj => {return obj.id == serviceId}) as ServiceInfo;
+  } else {
+    serviceInfo = webJSON.find(obj => {return obj.id == serviceId}) as ServiceInfo;
+  }
+
+  return new Promise<ServiceInfo>((resolve, reject) => {
+    if(serviceInfo !== undefined){
+      return resolve(serviceInfo);
+    } else {
+      return reject('Serviço não encontrado');
+    }
+  })
+};

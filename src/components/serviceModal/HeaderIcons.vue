@@ -22,7 +22,7 @@ export default defineComponent({
   components: {PhShareNetwork, PhXCircle},
   props: {
     modalType: {
-      required: true,
+      required: false,
       default: 'Service',
       type: String as () => 'Service' | 'Project'
     }

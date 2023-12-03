@@ -13,13 +13,13 @@
     "image2": "image-2",
     "conclusionText": ["Com este novo site, os pacientes do Dr. André poderão encontrar informações essenciais para consultas mais facilmente, idenpendentemente da velocidade de sua conexão à internet ou dispositivo de acesso. Além disso, os relatórios automatizados mantém o cliente informado sobre o desempenho do site e auxiliam na identificação de novas oportunidades de melhorias."],
     "relatedServices": {
-      "servicesID": ["criacao-de-sites", "design-de-sites", "relatorios-web"]
+      "servicesID": [["Web", "criacao-de-sites"], ["Web", "design-de-sites"], ["Web", "relatorios-web"], ["Marketing", "estrategia-de-anuncios"]]
     },
     "footerNotes": ["Nada"]
   },
   {
     "id": "andremourasantos",
-    "status": null,
+    "status": "Novo",
     "group": "Featured",
     "title": "Meu site profissional",
     "featuredImage": "image-1",
@@ -31,13 +31,13 @@
     "image2": "image-2",
     "conclusionText": ["Por fim, no final de 2023..."],
     "relatedServices": {
-      "servicesID": ["criacao-de-sites", "design-de-sites", "relatorios-web"]
+      "servicesID": [["Web", "criacao-de-sites"], ["Web", "design-de-sites"], ["Web", "relatorios-web"]]
     },
     "footerNotes": ["Nada"]
   },
   {
     "id": "lista-de-compras",
-    "status": null,
+    "status": "Novo",
     "group": "Prototype",
     "title": "Lista de compras",
     "featuredImage": "image-1",
@@ -49,7 +49,7 @@
     "image2": "image-2",
     "conclusionText": ["Por fim, no final de 2023..."],
     "relatedServices": {
-      "servicesID": ["criacao-de-sites", "design-de-sites", "relatorios-web"]
+      "servicesID": [["Web", "criacao-de-sites"], ["Web", "design-de-sites"]]
     },
     "footerNotes": ["Nada"]
   },
@@ -67,7 +67,7 @@
     "image2": "image-2",
     "conclusionText": ["Como características, as páginas contam com o chamado Painel Universal de Ajustes do Usuário (PUAU), que foi a minha primeira tentativa em criar um menu interativo e universal para que o usuário possa definir seus preferências e formas de utilização da ferramenta. Essa também foi minha primeira interação com importação de <em>snippets</em> HTML e criação de códigos que consigam identificar diversos aspectos e circustâncias e adaptar sua funcionalidade à situação."],
     "relatedServices": {
-      "servicesID": ["criacao-de-sites", "design-de-sites", "relatorios-web"]
+      "servicesID": [["Web", "criacao-de-sites"], ["Web", "design-de-sites"]]
     },
     "footerNotes": ["Nada"]
   }
