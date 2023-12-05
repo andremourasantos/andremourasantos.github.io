@@ -124,7 +124,6 @@ export default defineComponent({
         getServiceInfo(service[1], service[0])
           .then(res => {
             relatedServices.value?.push([res as NonNullable<ServiceInfo>, service[0]]);
-            console.log(relatedServices.value);
           })
           .catch(error => {
             console.error(error);
@@ -162,6 +161,7 @@ export default defineComponent({
 <style scoped>
 div.content img {
   width: 100%;
+  border-radius: 24px;
 }
 
 div.content p {

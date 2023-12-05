@@ -17,18 +17,21 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue';
+import { defineComponent, ref, onMounted } from 'vue';
 
-//Components
+//composables
+import { searchForURLParam, openProjectModal } from "@/composables/general";
+
+//components
 import PageTitle from '@/components/PageTitle.vue';
 import ServicesGroup from '@/components/ServicesGroup.vue';
 import ProjectButton from '@/components/ProjectButton.vue';
 import ProjectModal from '@/components/projectModal/ProjectModal.vue';
 
-//Data
+//data
 import projectsJSON from '@/data/projects.json';
 
-//Stores
+//stores
 import projectModal from '@/stores/projectModal';
 
 export default defineComponent({
@@ -38,6 +41,15 @@ export default defineComponent({
 
     const featuredProjects:NonNullable<ProjectInfo>[] = projectsJSON.filter(obj => {return obj.group === 'Featured'}) as (NonNullable<ProjectInfo>[]);
     const prototypesProjects:NonNullable<ProjectInfo>[] = projectsJSON.filter(obj => {return obj.group !== 'Featured'}) as (NonNullable<ProjectInfo>[]);
+
+    onMounted(() => {
+      let urlProjectIDParam = searchForURLParam('projectID');
+
+      if(urlProjectIDParam){
+        openProjectModal(urlProjectIDParam)
+          .catch(error => console.error(error))
+      }
+    })
 
     return {
       featuredProjects,

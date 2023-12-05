@@ -79,9 +79,9 @@ export default defineComponent({
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items: start;
-    justify-items: start;
-    column-gap: 16px;
+    align-items: flex-start;
+    justify-items: flex-start;
+    gap: 16px;
     height: fit-content;
     width: 100%;
     background-color: var(--colors-background);
@@ -107,6 +107,7 @@ export default defineComponent({
   button img {
     height: fit-content;
     width: 100%;
+    border-radius: 8px;
   }
 
   h3 {

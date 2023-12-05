@@ -1,6 +1,7 @@
-//Stores
+//Data
 import marketingJSON from '@/data/mkt-services.json';
 import webJSON from '@/data/web-services.json';
+import projectsJSON from '@/data/projects.json'; 
 
 export async function checkServiceExistence(serviceID:string):Promise<boolean> {
   const serviceCategory = location.pathname.includes('marketing-digital') ? 'Marketing' : 'Web';
@@ -32,6 +33,18 @@ export async function checkServiceExistenceV2(serviceId:string, serviceCategory:
 
   return new Promise<boolean>((resolve) => {
     if(serviceInfo !== undefined){
+      return resolve(true);
+    } else {
+      return resolve(false);
+    }
+  });
+};
+
+export async function checkProjectExistence(projectId:string):Promise<boolean> {
+  let projectInfo:ProjectInfo = projectsJSON.find(obj => {return obj.id === projectId}) as ProjectInfo;
+
+  return new Promise<boolean>((resolve) => {
+    if(projectInfo !== undefined){
       return resolve(true);
     } else {
       return resolve(false);

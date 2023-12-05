@@ -21,13 +21,14 @@ export function searchForURLParam(param:string):string | null {
     }
 }
 
-import { checkServiceExistence } from "@/composables/data-base";
-import modalInfo from "@/stores/serviceModal";
+import { checkServiceExistence, checkProjectExistence } from "@/composables/data-base";
+import serviceModalStore from "@/stores/serviceModal";
+import projectsModalStore from "@/stores/projectModal";
 
 export async function openServiceIDServiceModal(serviceID:string, serviceCategory:"Marketing" | "Web"):Promise<void> {
-  return new Promise(async (resolve) => {
+  return new Promise(async (resolve, reject) => {
     if(await checkServiceExistence(serviceID)){
-      const info = ref(modalInfo)
+      const info = ref(serviceModalStore);
       info.value.serviceID = serviceID;
       info.value.serviceCategory = serviceCategory;
       info.value.status = 'Show';
@@ -36,6 +37,20 @@ export async function openServiceIDServiceModal(serviceID:string, serviceCategor
     } else {
       alert('Desculpe, ocorreu um erro ao recuperar as informações sobre este serviço.');
       return resolve();
+    }
+  })
+}
+
+export async function openProjectModal(projectId:string):Promise<void> {
+  return new Promise<void>(async (resolve, reject) => {
+    if(await checkProjectExistence(projectId)){
+      const info = ref(projectsModalStore);
+      info.value.projectID = projectId;
+      info.value.status = 'Show';
+
+      return resolve();
+    } else {
+      return reject(`O projeto "${projectId}" não existe.`);
     }
   })
 }
