@@ -16,12 +16,12 @@
 
         <p v-for="paragraph in developmentText">{{ paragraph }}</p>
 
-        <img :src="require(`@/assets/projects/${projectHeader.id}/${images1And2[1]}.png`)" :alt="`Imagem do projeto ${projectHeader.title}`">
+        <img loading="lazy" :src="require(`@/assets/projects/${projectHeader.id}/${images1And2[1]}.png`)" :alt="`Imagem do projeto ${projectHeader.title}`">
 
         <p v-for="paragraph in conclusionText">{{ paragraph }}</p>
       </div>
 
-      <div class="relatedServices">
+      <div class="relatedServices" v-if="relatedServices">
         <h3>Serviços relacionados</h3>
         <p>Confira os serviços que foram contratados por este cliente para a realização do projeto.</p>
         <div>
@@ -29,6 +29,7 @@
         </div>
       </div>
 
+      <ServiceFooterNotes v-if="footerNotes" :-footer-notes="footerNotes" />
     </article>
 
   </dialog>
@@ -40,6 +41,7 @@ import { defineComponent, ref, onMounted } from 'vue';
 //Components
 import HeaderIcons from '../serviceModal/HeaderIcons.vue';
 import ServiceButton from '../ServiceButton.vue';
+import ServiceFooterNotes from '../serviceModal/ServiceFooterNotes.vue';
 
 //Composables
 import { toggleHTMLOverflowY } from '@/composables/general';
@@ -52,7 +54,7 @@ import projectsJSON from '@/data/projects.json';
 import projectModalInfo from '@/stores/projectModal';
 
 export default defineComponent({
-  components: { HeaderIcons, ServiceButton },
+  components: { HeaderIcons, ServiceButton, ServiceFooterNotes },
   setup() {
     const projectDialogEl = ref<HTMLDialogElement | null>(null);
     const modalInfo = ref(projectModalInfo);
@@ -64,6 +66,7 @@ export default defineComponent({
     const developmentText = ref<string[]>([""]);
     const conclusionText = ref<string[]>([""]);
     const relatedServices = ref<[NonNullable<ServiceInfo>,"Marketing" | "Web"][] | null>(null);
+    const footerNotes = ref<string[] | null>(null);
 
     onMounted(() => {
       if (!(projectDialogEl.value instanceof HTMLElement)) {
@@ -79,7 +82,10 @@ export default defineComponent({
       fillImages(projectInfo.image1, projectInfo.image2);
       fillDevelopmentText(projectInfo.developmentText);
       fillConclusionText(projectInfo.conclusionText);
-      fillRelatedServices(projectInfo.relatedServices.servicesID);
+      if(projectInfo.relatedServices){
+        fillRelatedServices(projectInfo.relatedServices.servicesID);
+      }
+      fillFooterNotes(projectInfo.footerNotes);
 
       toggleHTMLOverflowY();
       el.showModal();
@@ -131,6 +137,10 @@ export default defineComponent({
       })
     };
 
+    const fillFooterNotes = (footerNotesArray:string[]) => {
+      footerNotes.value = footerNotesArray;
+    }
+
     const closeModal = ():void => {
       if (projectDialogEl.value instanceof HTMLElement) {
         const el = projectDialogEl.value;
@@ -152,6 +162,7 @@ export default defineComponent({
       developmentText,
       conclusionText,
       relatedServices,
+      footerNotes,
       closeModal
     }
   }
@@ -162,6 +173,10 @@ export default defineComponent({
 div.content img {
   width: 100%;
   border-radius: 24px;
+}
+
+div.content img:nth-of-type(2) {
+  aspect-ratio: 1/1;
 }
 
 div.content p {

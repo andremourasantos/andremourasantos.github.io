@@ -33,7 +33,7 @@ declare global {
     conclusionText: string[],
     relatedServices: {
       servicesID: ["Marketing" | "Web",string][]
-    },
+    } | null,
     footerNotes:string[]
   } | undefined;
 }

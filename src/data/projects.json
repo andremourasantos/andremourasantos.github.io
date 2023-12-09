@@ -11,12 +11,12 @@
     "image1": "image-1",
     "developmentText": [
        "O Dr. André é um cliente há tempo e já contou com diversas atualizações no site ao longo dos mais de 2 anos de parceria. A mais recente sendo a reconstrução completa do site para adaptar-se a nova realidade de mudanças recorrentes de atendimento do Doutor.",
-       "A partir dessa necessidade, também observei a oportunidade de introduzir novos conceitos (como mobile-first) e aprimorar a acessibilidade, além da implementação de novas tencologias para incrementar também o desempenho e responsividade do site. Também foram feitas otimizações para o desempenho de campanhas de anúncios no Google Ads.",
+       "A partir dessa necessidade, também observei a oportunidade de introduzir novos conceitos (como mobile-first) e aprimorar a acessibilidade, além da implementação de novas tecnologias para incrementar também o desempenho e responsividade do site. Também foram feitas otimizações para o desempenho de campanhas de anúncios no Google Ads.",
        "Atualmente, com o projeto finalizado, o cliente conta com um site totalmente reformulado, construído a partir do público que o acessa e capaz de ser atualizado e modificado facilmente através do uso de um Banco de Dados. Melhorias constantes continuam a ser implementadas à medida que novas necessidades se apresentam."
     ],
     "image2": "image-2",
     "conclusionText": [
-       "Com este novo site, os pacientes do Dr. André podem encontrar informações essenciais para consultas mais facilmente, idenpendentemente da velocidade de sua conexão à internet ou dispositivo de acesso.",
+       "Com este novo site, os pacientes do Dr. André podem encontrar informações essenciais para consultas mais facilmente, independentemente da velocidade de sua conexão à internet ou dispositivo de acesso.",
        "Além disso, os relatórios automatizados mantém o cliente informado sobre o desempenho do site e das campanhas de anúncios realizadas, permitindo uma visão holística, obtendo insights sobre quais serviços e consultórios são os mais buscados e por quem, além de auxiliar na identificação de novas oportunidades de melhorias."
     ],
     "relatedServices": {
@@ -32,15 +32,17 @@
     "featuredImage": "image-1",
     "favicon": "favicon",
     "description": "O meu novo site profissional, adotando o neumorphism e as melhores práticas para manutenção.",
-    "introductionText": "A ideia de construir o meu site profissional veio lá em 2020, pouco tempo após ter começado a faculdade. O intuito inicial era promover a minha imagem profissional na internet para que, quando adentrasse o mercado de trabalho, pudesse me destacar para além do tradicional currículo em PDF ou da carta de apresentação em txt.",
+    "introductionText": "A ideia de construir o meu site profissional veio lá em 2020, pouco tempo após ter começado a faculdade. O intuito inicial era promover a minha imagem profissional na internet para que, quando adentrasse o mercado de trabalho, pudesse me destacar.",
     "image1": "image-1",
     "developmentText": [
        "Em meados de 2021 comecei a aprender os princípios do Front-End Dev, ou seja, HTML, CSS e JavaScript, com o fim de desenvolver novamente meu site, porém, dessa vez totalmente do zero, sem o auxílio de ferramentas de criação de sites. Dessa forma poderia ter controle total de como meu site é exibido, formatado e do desempenho do mesmo.",
-       "Em 2022, o site, agora em seu ápice de completude, é o foco de toda a comunicação profissional, estando presente no meu currículo e em todas as minhas comunicações online de cunho profissional, promovendo uma maneira rápida e fácil de conhecer mais sobre minhas habilidades e o meu perfil, sem sequer precisar inicar uma conversa."
+       "No começo de 2022, com as novas tecnologias que aprendi, consegui desenvolver um primeiro protótipo do meu novo site, com foco na minha apresentação como profissional de Marketing Digital, exibindo conteúdos como meu currículo, certificações, carta de apresentação, dentre outros.",
+       "Este primeiro protótipo lançado ao ar foi de muita importância para o meu desenvolvimento e ganho de confiança em minhas capacidades, além de ter auxiliado a me destacar dentro os demais candidatos em vagas que apliquei."
     ],
     "image2": "image-2",
     "conclusionText": [
-       "Por fim, no final de 2023..."
+       "Continuei por me interessar em desenvolvimento web, aprendo novas tecnologias, obtendo ideias de projetos e aplicando-as em protótipos e projetos de cliente. No final de 2023, resolvi refazer o meu site, mas dessa vez com o foco na oferta de serviços de freelancer, com o intuito de diversificar um pouco o meu trabalho.",
+       "Este novo site, que é o que você está vendo agora, foi desenvolvido com o ápice das minhas habilidades no momento, utilizando as tecnologias mais avançadas que pude dominar para a confecção de um produto simples e intuitivo, visualmente atraente, acessível e com bom desempenho. Tenho orgulho de apresentar ao mundo a minha criação e estarei sempre a procure de novas formas de otimização e novas funcionalidades úteis para a experiência do usuário."
     ],
     "relatedServices": {
       "servicesID": [["Web", "criacao-de-sites"], ["Web", "design-de-sites"], ["Web", "relatorios-web"]]
@@ -65,9 +67,7 @@
     "conclusionText": [
        "Atualmente, a lista de compras encontra-se ativa e funcional, com atualizações esporádicas no código, com foco em otimização, acessibilidade e também na adição de novas funcionalidades recebidas em feedback de amigos e colegas para os quais apresentei a lista de compras."
     ],
-    "relatedServices": {
-      "servicesID": [["Web", "criacao-de-sites"], ["Web", "design-de-sites"]]
-    },
+    "relatedServices": null,
     "footerNotes": ["Este projeto foi realizado no ano de 2023."]
   },
   {
@@ -85,11 +85,9 @@
     ],
     "image2": "image-2",
     "conclusionText": [
-       "Como características, as páginas contam com o chamado Painel Universal de Ajustes do Usuário (PUAU), que foi a minha primeira tentativa em criar um menu interativo e universal para que o usuário possa definir seus preferências e formas de utilização da ferramenta. Essa também foi minha primeira interação com importação de snippets HTML."
+       "Como características, as páginas contam com o chamado Painel Universal de Ajustes do Usuário (PUAU), que foi a minha primeira tentativa em criar um menu interativo e universal para que o usuário possa definir suas preferências e formas de utilização da ferramenta. Essa também foi minha primeira interação com importação de snippets HTML."
     ],
-    "relatedServices": {
-      "servicesID": [["Web", "criacao-de-sites"], ["Web", "design-de-sites"]]
-    },
+    "relatedServices": null,
     "footerNotes": ["Este projeto foi realizado no ano de 2022."]
   }
 ]
