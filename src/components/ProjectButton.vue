@@ -1,97 +1,72 @@
 <template>
-  <button :disabled="serviceTag === 'Indisponível'" :aria-label="serviceTitle" @click="handleClick(serviceId), emitGtmEvent(serviceId)">
-    <div id="tag" v-if="serviceTag !== undefined && serviceTag !== null" :class="{
-      newService: serviceTag === 'Novo' 
+  <button :aria-label="projectTitle" @click="openModal(projectId), emitGtmEvent(projectId)">
+    <div id="tag" v-if="projectTag !== undefined && projectTag !== null" :class="{
+      newService: projectTag === 'Novo' 
     }" aria-label="Estado do serviço">
-      <p>{{ serviceTag }}</p>
+      <p>{{ projectTag }}</p>
     </div>
-    <img :src="require(`@/assets/icons/${serviceImage}.png`)" :alt="`Imagem de ${serviceTitle}`">
+    <img :src="require(`@/assets/projects/${projectId}/${projectImage}.png`)" :alt="`Imagem de ${projectTitle}`">
     <div>
-      <h3>{{ serviceTitle }}</h3>
-      <p>{{ serviceDescription }}</p>
+      <h3>{{ projectTitle }}</h3>
+      <p>{{ projectDescription }}</p>
     </div>
   </button>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, ref } from 'vue';
 import { useGtm } from '@gtm-support/vue-gtm';
 
 //Composables
 import { openServiceIDServiceModal } from '@/composables/general';
-import router from '@/router';
+
+//Stores
+import projectModal from '@/stores/projectModal';
 
 export default defineComponent({
   props: {
-    'serviceImage': {
+    'projectImage': {
       required: true,
       type: String
     },
-    'serviceTitle': {
+    'projectTitle': {
       required: true,
       type: String
     },
-    'serviceDescription': {
+    'projectDescription': {
       required: true,
       type: String
     },
-    'serviceTag': {
+    'projectTag': {
       required: false,
-      type: String as () => "Novo" | "Indisponível" | null,
+      type: String as () => "Novo" | null,
     },
-    'serviceId': {
+    'projectId': {
       required: true,
       type: String
-    },
-    'serviceCategory': {
-      required: true,
-      type: String as () => 'Marketing' | 'Web'
-    },
-    'serviceButtonEnviroment': {
-      required: false,
-      default: 'Page',
-      type: String as () => 'Page' | 'Popup'
     }
   },
   setup(props) {
-    const gtm = useGtm()
+    const gtm = useGtm();
+    const modalStore = ref(projectModal);
 
-    const handleClick = (serviceId:string):void => {
-      switch (props.serviceButtonEnviroment) {
-        case 'Popup':
-          goToService(serviceId);
-          break;
-      
-        default:
-          openModal(serviceId);
-          break;
-      }
+    const openModal = (projectId:string):void => {
+      modalStore.value.status = 'Show';
+      modalStore.value.projectID = projectId;
+      // openServiceIDServiceModal(projectID);
     };
 
-    const goToService = (serviceId:string):void => {
-      const page = props.serviceCategory === 'Marketing' ? 'marketing' : 'webDev';
-      router.push({name: page, query:{
-        serviceID: serviceId,
-        'utm_source': 'website',
-        'utm_medium': 'projectModal'
-      }})
-    }
-
-    const openModal = (serviceId:string):void => {
-      openServiceIDServiceModal(serviceId, props.serviceCategory);
-    };
-
-    const emitGtmEvent = (serviceID:string) => {
-      gtm?.trackEvent({
-        event: 'service-button',
-        action: 'Click',
-        category: 'ServiceButton',
-        serviceid: serviceID
-      })
+    const emitGtmEvent = (projectID:string) => {
+      // gtm?.trackEvent({
+      //   event: 'project-button',
+      //   action: 'Click',
+      //   category: 'ServiceButton',
+      //   projectid: projectID
+      // })
     }
     
     return {
-      handleClick,
+      openModal,
       emitGtmEvent
     }
   },
@@ -102,11 +77,11 @@ export default defineComponent({
 <style scoped>
   button {
     position: relative;
-    display: grid;
-    grid-template-columns: 48px auto;
-    align-items: start;
-    justify-items: start;
-    column-gap: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-items: flex-start;
+    gap: 16px;
     height: fit-content;
     width: 100%;
     background-color: var(--colors-background);
@@ -114,7 +89,7 @@ export default defineComponent({
     text-align: left;
     border: none;
     border-radius: 16px;
-    padding: 16px;
+    padding: 24px;
     cursor: pointer;
     transition: 200ms;
   }
@@ -131,7 +106,9 @@ export default defineComponent({
 
   button img {
     height: fit-content;
-    width: 48px;
+    width: 100%;
+    border-radius: 8px;
+    aspect-ratio: 4/3;
   }
 
   h3 {
@@ -178,10 +155,6 @@ export default defineComponent({
 
     button:has(#tag) {
       padding: 36px 24px 24px 24px;
-    }
-
-    button img {
-      width: 56px;
     }
 
     h3 {

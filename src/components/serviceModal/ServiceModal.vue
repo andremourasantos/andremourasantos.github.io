@@ -1,9 +1,9 @@
 <template>
-  <dialog ref="dialogEl">
+  <dialog class="presentationPopup" ref="dialogEl">
     <HeaderIcons @closeModalButton="closeModal"/>
     <article>
       <div id="mainServiceInfo" v-if="serviceHeader !== null">
-        <img :src="require(`@/assets/icons/${serviceHeader.image}.png`)" :alt="`Imagem de ${serviceHeader.title}`">
+        <img :src="require(`@/assets/icons/${serviceHeader.image}.png`)" :alt="`Imagem de ${serviceHeader.title}`" height="80" width="80">
         <h2>{{ serviceHeader.title }}</h2>
         <p>{{ serviceHeader.description }}</p>
       </div>
@@ -166,38 +166,46 @@ export default defineComponent({
 })
 </script>
 
-
-<style scoped>
-  dialog {
+<style>
+  dialog.presentationPopup {
     border-radius: 24px;
     border: none;
     background-color: var(--colors-background);
-    /* box-shadow: var(--neumorphism-inner_shadow); */
     margin: auto 24px;
     padding: 24px;
     max-width: 520px;
   }
 
-  dialog > article {
+  dialog.presentationPopup > article {
     display: flex;
     flex-direction: column;
     gap: 32px;
   }
 
-  #mainServiceInfo img {
-    height: 80px;
-    width: fit-content;
+  dialog.presentationPopup > article > div:first-of-type > img {
     margin-bottom: 16px;
-    filter: drop-shadow(0px 0px 5px #00000015);
   }
 
-  h2 {
+  dialog.presentationPopup h2 {
     margin-bottom: 8px;
   }
 
-  h3 {
+  dialog.presentationPopup h3 {
     font-size: 18px;
     margin-bottom: 4px;
+  }
+
+  @media screen and (min-width: 425px) {
+    dialog.presentationPopup {
+      padding: 24px 36px;
+      margin: auto;
+    }
+  }
+</style>
+
+<style scoped>
+  #mainServiceInfo img {
+    filter: drop-shadow(0px 0px 5px #00000015);
   }
 
   #detailedServiceInfo {
@@ -207,11 +215,6 @@ export default defineComponent({
   }
 
   @media screen and (min-width: 425px) {
-    dialog {
-      padding: 24px 36px;
-      margin: auto;
-    }
-
     #sideServiceInfo > div {
       display: flex;
       flex-direction: row;

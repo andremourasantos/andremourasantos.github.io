@@ -1,9 +1,9 @@
 <template>
-  <button :aria-label="`Navegar para página de ${ButtonTitle}`" :title="`Navegar para página de ${ButtonTitle}`">
-    <img :src="require(`@/assets/icons/${ButtonImage}.png`)" height="48" width="48" :alt="`Imagem de representação da página de ${ButtonTitle}`">
+  <button :aria-label="`Navegar para página de ${buttonTitle}`" :title="`Navegar para página de ${buttonTitle}`">
+    <img :src="require(`@/assets/icons/${buttonImage}.png`)" height="48" width="48" :alt="`Imagem de representação da página de ${buttonTitle}`">
     <div>
-      <h2>{{ ButtonTitle }}</h2>
-      <p>{{ ButtonDescription }}</p>
+      <h2>{{ buttonTitle }}</h2>
+      <p>{{ buttonDescription }}</p>
     </div>
   </button>
 </template>
@@ -13,15 +13,15 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   props: {
-    'ButtonTitle': {
+    'buttonTitle': {
       required: true,
       type: String
     },
-    'ButtonDescription': {
+    'buttonDescription': {
       required: true,
       type: String
     },
-    'ButtonImage': {
+    'buttonImage': {
       required: true,
       type: String
     }

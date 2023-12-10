@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
 import HomeView from '../views/HomeView.vue';
 import WebDev from '../views/WebDev.vue';
+import Portfolio from '../views/Portfolio.vue';
 import Marketing from '../views/Marketing.vue';
 import PrivacyPolicy from '../views/PrivacyPolicy.vue';
 
@@ -21,6 +22,12 @@ const routes: Array<RouteRecordRaw> = [
     name: 'webDev',
     meta: {title: 'Desenvolvimento Web'},
     component: WebDev
+  },
+  {
+    path: '/portfolio',
+    name: 'portfolio',
+    meta: {title: 'Meus projetos'},
+    component: Portfolio
   },
   {
     path: '/marketing-digital',

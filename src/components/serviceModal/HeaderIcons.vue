@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button aria-label="Compartilhar" title="Compartilhar" @click="shareService">
+    <button aria-label="Compartilhar" title="Compartilhar" @click="handleShare">
       <PhShareNetwork/>
     </button>
     <button aria-label="Fechar" title="Fechar" @click="$emit('closeModalButton')">
@@ -15,38 +15,76 @@ import { useGtm } from "@gtm-support/vue-gtm";
 import { PhShareNetwork, PhXCircle } from '@phosphor-icons/vue';
 
 //Stores
-import serviceModalnfo from "@/stores/serviceModal";
+import serviceModalInfo from "@/stores/serviceModal";
+import projectModalInfo from "@/stores/projectModal";
 
 export default defineComponent({
   components: {PhShareNetwork, PhXCircle},
-  setup() {
+  props: {
+    modalType: {
+      required: false,
+      default: 'Service',
+      type: String as () => 'Service' | 'Project'
+    }
+  },
+  emit: ['closeModalButton'],
+  setup(props) {
     const gtm = useGtm();
 
-    const modalInfo = ref(serviceModalnfo)
+    const serviceModal = ref(serviceModalInfo);
+    const projectModal = ref(projectModalInfo);
 
     const shareService = async () => {
       try {
-        await navigator.clipboard.writeText(`https://${location.host + location.pathname}?serviceID=${modalInfo.value.serviceID}&utm_source=website&utm_medium=serviceModal&utm_campaign=${modalInfo.value.serviceID}`);
+        await navigator.clipboard.writeText(`https://${location.host + location.pathname}?serviceID=${serviceModal.value.serviceID}&utm_source=website&utm_medium=serviceModal&utm_campaign=${serviceModal.value.serviceID}`);
 
-        emitGtmEvent();
+        emitGtmShareServiceEvent();
         alert('Link copiado para sua área de transferência!');
       } catch (error) {
         alert(`Ocorreu um erro ao copiar o link: ${error}`);
       }
     };
 
-    const emitGtmEvent = () => {
+    const shareProject = async () => {
+      try {
+        await navigator.clipboard.writeText(`https://${location.host + location.pathname}?projectID=${projectModal.value.projectID}&utm_source=website&utm_medium=projectModal&utm_campaign=${projectModal.value.projectID}`);
+
+        emitGtmShareProjectEvent();
+        alert('Link copiado para sua área de transferência!');
+
+      } catch (error) {
+        alert(`Ocorreu um erro ao copiar o link: ${error}`);
+      }
+    }
+
+    const handleShare = () => {
+      if(props.modalType === 'Service'){
+        shareService();
+      } else {
+        shareProject();
+      }
+    }
+
+    const emitGtmShareServiceEvent = () => {
       gtm?.trackEvent({
         event: 'share-service',
         action: 'Click',
         category: 'HeaderIcons',
-        serviceid: modalInfo.value.serviceID
+        serviceid: serviceModal.value.serviceID
+      })
+    }
+
+    const emitGtmShareProjectEvent = () => {
+      gtm?.trackEvent({
+        event: 'share-project',
+        action: 'Click',
+        category: 'HeaderIcons',
+        serviceid: projectModal.value.projectID
       })
     }
 
     return {
-      shareService,
-      emitGtmEvent
+      handleShare
     }
   },
 })
