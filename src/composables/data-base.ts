@@ -5,7 +5,7 @@ import projectsJSON from '@/data/projects.json';
 
 export async function checkServiceExistence(serviceID:string):Promise<boolean> {
   const serviceCategory = location.pathname.includes('marketing-digital') ? 'Marketing' : 'Web';
-  let serviceInfo:any;
+  let serviceInfo:ServiceInfo;
 
   if(serviceCategory === 'Marketing') {
     serviceInfo = marketingJSON.find(obj => {return obj.id == serviceID}) as ServiceInfo;
@@ -14,10 +14,10 @@ export async function checkServiceExistence(serviceID:string):Promise<boolean> {
   }
 
   return new Promise((resolve) => {
-    if(serviceInfo !== undefined){
-      return resolve(true);
-    } else {
+    if(serviceInfo === undefined || serviceInfo.status === 'Indisponível'){
       return resolve(false);
+    } else {
+      return resolve(true);
     }
   });
 };
@@ -32,10 +32,10 @@ export async function checkServiceExistenceV2(serviceId:string, serviceCategory:
   }
 
   return new Promise<boolean>((resolve) => {
-    if(serviceInfo !== undefined){
-      return resolve(true);
-    } else {
+    if(serviceInfo === undefined || serviceInfo.status === 'Indisponível'){
       return resolve(false);
+    } else {
+      return resolve(true);
     }
   });
 };
