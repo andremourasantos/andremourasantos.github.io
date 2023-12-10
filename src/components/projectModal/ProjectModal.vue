@@ -175,6 +175,10 @@ div.content img {
   border-radius: 24px;
 }
 
+div.content img:nth-of-type(1) {
+  aspect-ratio: 4/3;
+}
+
 div.content img:nth-of-type(2) {
   aspect-ratio: 1/1;
 }

@@ -108,6 +108,7 @@ export default defineComponent({
     height: fit-content;
     width: 100%;
     border-radius: 8px;
+    aspect-ratio: 4/3;
   }
 
   h3 {
