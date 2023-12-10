@@ -146,7 +146,7 @@ export default defineComponent({
 
   #tag {
     position: absolute;
-    background-color: #FF000099;
+    background-color: hsl(0 65% 50% / 1);
     box-shadow: var(--glass_effect-shadow);
     padding: 4px 8px;
     border-radius: 0px 10px 0px 10px;
@@ -156,7 +156,7 @@ export default defineComponent({
   }
 
   #tag.newService {
-    background-color: #0095ff;
+    background-color: hsl(205 100% 40% / 1);
   }
 
   #tag p {
