@@ -1,6 +1,6 @@
 <template>
   <dialog class="presentationPopup" ref="projectDialogEl">
-    <HeaderIcons :modal-type="'Project'" @closeModalButton="closeModal"/>
+    <HeaderIcons :modal-type="'Project'" @closeModalButton="closeModal" @viewLiveDeploy="handleViewLiveDeploy"/>
 
     <article v-if="projectHeader !== null">
       <div>
@@ -29,7 +29,7 @@
         </div>
       </div>
 
-      <ServiceFooterNotes v-if="footerNotes" :-footer-notes="footerNotes" />
+      <ServiceFooterNotes v-if="footerNotes" :FooterNotes="footerNotes" />
     </article>
 
   </dialog>
@@ -39,9 +39,9 @@
 import { defineComponent, ref, onMounted } from 'vue';
 
 //Components
-import HeaderIcons from '../serviceModal/HeaderIcons.vue';
+import HeaderIcons from '../commomModalEls/HeaderIcons.vue';
 import ServiceButton from '../ServiceButton.vue';
-import ServiceFooterNotes from '../serviceModal/ServiceFooterNotes.vue';
+import ServiceFooterNotes from '../commomModalEls/ServiceFooterNotes.vue';
 
 //Composables
 import { toggleHTMLOverflowY } from '@/composables/general';
@@ -67,6 +67,7 @@ export default defineComponent({
     const conclusionText = ref<string[]>([""]);
     const relatedServices = ref<[NonNullable<ServiceInfo>,"Marketing" | "Web"][] | null>(null);
     const footerNotes = ref<string[] | null>(null);
+    const projectInfo = ref<ProjectInfo | null>(null);
 
     onMounted(() => {
       if (!(projectDialogEl.value instanceof HTMLElement)) {
@@ -75,17 +76,17 @@ export default defineComponent({
       };
 
       const el = projectDialogEl.value;
-      const projectInfo: ProjectInfo = projectsJSON.find(obj => { return obj.id === modalInfo.value.projectID }) as NonNullable<ProjectInfo>;
+      projectInfo.value = projectsJSON.find(obj => { return obj.id === modalInfo.value.projectID }) as NonNullable<ProjectInfo>;
 
-      fillProjectHeader(projectInfo);
-      fillIntroduction(projectInfo.introductionText);
-      fillImages(projectInfo.image1, projectInfo.image2);
-      fillDevelopmentText(projectInfo.developmentText);
-      fillConclusionText(projectInfo.conclusionText);
-      if(projectInfo.relatedServices){
-        fillRelatedServices(projectInfo.relatedServices.servicesID);
+      fillProjectHeader(projectInfo.value);
+      fillIntroduction(projectInfo.value.introductionText);
+      fillImages(projectInfo.value.image1, projectInfo.value.image2);
+      fillDevelopmentText(projectInfo.value.developmentText);
+      fillConclusionText(projectInfo.value.conclusionText);
+      if(projectInfo.value.relatedServices){
+        fillRelatedServices(projectInfo.value.relatedServices.servicesID);
       }
-      fillFooterNotes(projectInfo.footerNotes);
+      fillFooterNotes(projectInfo.value.footerNotes);
 
       toggleHTMLOverflowY();
       el.showModal();
@@ -154,6 +155,12 @@ export default defineComponent({
       toggleHTMLOverflowY();
     };
 
+    const handleViewLiveDeploy = ():void => {
+      if(projectInfo.value === null){return}
+
+      window.open(projectInfo.value?.liveDeployURL);
+    }
+
     return {
       projectDialogEl,
       projectHeader,
@@ -163,7 +170,8 @@ export default defineComponent({
       conclusionText,
       relatedServices,
       footerNotes,
-      closeModal
+      closeModal,
+      handleViewLiveDeploy
     }
   }
 })

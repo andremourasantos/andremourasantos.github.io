@@ -1,5 +1,8 @@
 <template>
   <div>
+    <button aria-label="Visualizar projeto" title="Visualizar projeto" @click="$emit('viewLiveDeploy')">
+      <PhArrowSquareOut/>
+    </button>
     <button aria-label="Compartilhar" title="Compartilhar" @click="handleShare">
       <PhShareNetwork/>
     </button>
@@ -12,14 +15,14 @@
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
 import { useGtm } from "@gtm-support/vue-gtm";
-import { PhShareNetwork, PhXCircle } from '@phosphor-icons/vue';
+import { PhShareNetwork, PhXCircle, PhArrowSquareOut, PhGithubLogo } from '@phosphor-icons/vue';
 
 //Stores
 import serviceModalInfo from "@/stores/serviceModal";
 import projectModalInfo from "@/stores/projectModal";
 
 export default defineComponent({
-  components: {PhShareNetwork, PhXCircle},
+  components: {PhShareNetwork, PhXCircle, PhArrowSquareOut, PhGithubLogo},
   props: {
     modalType: {
       required: false,
@@ -27,7 +30,7 @@ export default defineComponent({
       type: String as () => 'Service' | 'Project'
     }
   },
-  emit: ['closeModalButton'],
+  emit: ['closeModalButton', 'viewLiveDeploy', 'viewGitHubRepository'],
   setup(props) {
     const gtm = useGtm();
 

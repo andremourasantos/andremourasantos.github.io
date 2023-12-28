@@ -22,10 +22,12 @@ declare global {
     id:string,
     status:null | "Novo",
     group:"Featured" | "Prototype",
-    title:string,
     featuredImage:string,
     favicon:string,
+    title:string,
     description:string,
+    liveDeployURL:string,
+    githubRepositoryURL:string | null,
     introductionText:string,
     image1:string
     developmentText:string[],

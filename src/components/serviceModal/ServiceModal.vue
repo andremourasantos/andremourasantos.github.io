@@ -39,12 +39,12 @@
 import { defineComponent, ref, onMounted } from 'vue';
 
 //Components
-import HeaderIcons from './HeaderIcons.vue';
+import HeaderIcons from '../commomModalEls/HeaderIcons.vue';
 import TabelOfBenefits from './TabelOfBenefits.vue';
 import BenefitDescription from './BenefitDescription.vue';
 import SideServiceInfo from './SideServiceInfo.vue';
 import ContactButton from './ContactButton.vue';
-import FooterNotes from './ServiceFooterNotes.vue';
+import FooterNotes from '../commomModalEls/ServiceFooterNotes.vue';
 
 //Composables
 import { toggleHTMLOverflowY } from "@/composables/general";
