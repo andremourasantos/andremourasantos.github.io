@@ -17,9 +17,6 @@
 import { defineComponent, ref } from 'vue';
 import { useGtm } from '@gtm-support/vue-gtm';
 
-//Composables
-import { openServiceIDServiceModal } from '@/composables/general';
-
 //Stores
 import projectModal from '@/stores/projectModal';
 
@@ -53,17 +50,16 @@ export default defineComponent({
     const openModal = (projectId:string):void => {
       modalStore.value.status = 'Show';
       modalStore.value.projectID = projectId;
-      // openServiceIDServiceModal(projectID);
     };
 
-    const emitGtmEvent = (projectID:string) => {
-      // gtm?.trackEvent({
-      //   event: 'project-button',
-      //   action: 'Click',
-      //   category: 'ServiceButton',
-      //   projectid: projectID
-      // })
-    }
+    const emitGtmEvent = (projectId:string) => {
+      gtm?.trackEvent({
+        event: 'project-button',
+        action: 'click',
+        category: 'ProjectButton',
+        projectID: projectId
+      })
+    };
     
     return {
       openModal,

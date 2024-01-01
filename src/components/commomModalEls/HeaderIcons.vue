@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button aria-label="Visualizar projeto" title="Visualizar projeto" @click="$emit('viewLiveDeploy')">
+    <button v-if="modalType === 'Project'" aria-label="Visualizar projeto" title="Visualizar projeto" @click="handleViewProject">
       <PhArrowSquareOut/>
     </button>
     <button aria-label="Compartilhar" title="Compartilhar" @click="handleShare">
@@ -31,7 +31,7 @@ export default defineComponent({
     }
   },
   emit: ['closeModalButton', 'viewLiveDeploy', 'viewGitHubRepository'],
-  setup(props) {
+  setup(props, { emit }) {
     const gtm = useGtm();
 
     const serviceModal = ref(serviceModalInfo);
@@ -41,7 +41,7 @@ export default defineComponent({
       try {
         await navigator.clipboard.writeText(`https://${location.host + location.pathname}?serviceID=${serviceModal.value.serviceID}&utm_source=website&utm_medium=serviceModal&utm_campaign=${serviceModal.value.serviceID}`);
 
-        emitGtmShareServiceEvent();
+        emitGTMShareEvent();
         alert('Link copiado para sua área de transferência!');
       } catch (error) {
         alert(`Ocorreu um erro ao copiar o link: ${error}`);
@@ -52,7 +52,7 @@ export default defineComponent({
       try {
         await navigator.clipboard.writeText(`https://${location.host + location.pathname}?projectID=${projectModal.value.projectID}&utm_source=website&utm_medium=projectModal&utm_campaign=${projectModal.value.projectID}`);
 
-        emitGtmShareProjectEvent();
+        emitGTMShareEvent();
         alert('Link copiado para sua área de transferência!');
 
       } catch (error) {
@@ -61,33 +61,49 @@ export default defineComponent({
     }
 
     const handleShare = () => {
-      if(props.modalType === 'Service'){
-        shareService();
-      } else {
+      if(props.modalType === 'Project'){
         shareProject();
+      } else {
+        shareService();
       }
     }
 
-    const emitGtmShareServiceEvent = () => {
-      gtm?.trackEvent({
-        event: 'share-service',
-        action: 'Click',
-        category: 'HeaderIcons',
-        serviceid: serviceModal.value.serviceID
-      })
+    const emitGTMShareEvent = () => {
+      switch (props.modalType) {
+        case 'Project':
+          gtm?.trackEvent({
+            event: 'share-project',
+            action: 'click',
+            category: 'HeaderIcons',
+            projectID: projectModal.value.projectID
+          })
+          break;
+      
+        default:
+          gtm?.trackEvent({
+            event: 'share-service',
+            action: 'click',
+            category: 'HeaderIcons',
+            serviceID: serviceModal.value.serviceID
+          })
+          break;
+      }
     }
 
-    const emitGtmShareProjectEvent = () => {
+    const handleViewProject = () => {
+      emit('viewLiveDeploy');
+
       gtm?.trackEvent({
-        event: 'share-project',
-        action: 'Click',
+        event: 'view-project',
+        action: 'click',
         category: 'HeaderIcons',
-        serviceid: projectModal.value.projectID
+        projectID: projectModal.value.projectID
       })
     }
 
     return {
-      handleShare
+      handleShare,
+      handleViewProject
     }
   },
 })

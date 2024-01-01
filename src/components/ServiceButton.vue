@@ -81,12 +81,12 @@ export default defineComponent({
       openServiceIDServiceModal(serviceId, props.serviceCategory);
     };
 
-    const emitGtmEvent = (serviceID:string) => {
+    const emitGtmEvent = (serviceId:string) => {
       gtm?.trackEvent({
         event: 'service-button',
-        action: 'Click',
+        action: 'click',
         category: 'ServiceButton',
-        serviceid: serviceID
+        serviceID: serviceId
       })
     }
     
