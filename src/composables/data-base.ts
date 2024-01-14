@@ -3,7 +3,7 @@ import marketingJSON from '@/data/mkt-services.json';
 import webJSON from '@/data/web-services.json';
 import projectsJSON from '@/data/projects.json'; 
 
-export async function checkServiceExistence(serviceID:string):Promise<boolean> {
+export async function checkServiceExistence(serviceID:string):Promise<"exists" | "does_not" | "unavailable"> {
   const serviceCategory = location.pathname.includes('marketing-digital') ? 'Marketing' : 'Web';
   let serviceInfo:ServiceInfo;
 
@@ -14,15 +14,17 @@ export async function checkServiceExistence(serviceID:string):Promise<boolean> {
   }
 
   return new Promise((resolve) => {
-    if(serviceInfo === undefined || serviceInfo.status === 'Indisponível'){
-      return resolve(false);
+    if(serviceInfo === undefined){
+      return resolve('does_not');
+    } else if (serviceInfo.status === 'Indisponível') {
+      return resolve('unavailable');
     } else {
-      return resolve(true);
+      return resolve('exists');
     }
   });
 };
 
-export async function checkServiceExistenceV2(serviceId:string, serviceCategory:"Marketing" | "Web"):Promise<boolean> {
+export async function checkServiceExistenceV2(serviceId:string, serviceCategory:"Marketing" | "Web"):Promise<"exists" | "does_not" | "unavailable"> {
   let serviceInfo:ServiceInfo;
 
   if(serviceCategory === 'Marketing') {
@@ -31,11 +33,13 @@ export async function checkServiceExistenceV2(serviceId:string, serviceCategory:
     serviceInfo = webJSON.find(obj => {return obj.id == serviceId}) as ServiceInfo;
   }
 
-  return new Promise<boolean>((resolve) => {
-    if(serviceInfo === undefined || serviceInfo.status === 'Indisponível'){
-      return resolve(false);
+  return new Promise((resolve) => {
+    if(serviceInfo === undefined){
+      return resolve('does_not');
+    } else if (serviceInfo.status === 'Indisponível') {
+      return resolve('unavailable')
     } else {
-      return resolve(true);
+      return resolve('exists');
     }
   });
 };

@@ -3,7 +3,7 @@
     <img :src="require(`@/assets/icons/${SideInfoImage}.png`)" :alt="`Ícone de ${SideInfoImage}`" height="36" width="36">
     <div>
       <h4>{{ SideInfoTitle }}</h4>
-      <p v-if="SideInfoDescriptionType == 'Date'">Até {{ SideInfoDescription }} dias úteis.</p>
+      <p v-if="SideInfoDescriptionType == 'Date'">Por volta de {{ SideInfoDescription }} dias úteis.</p>
       <p v-if="SideInfoDescriptionType == 'Price'">A partir de {{ styledPriceNumber }}.</p>
       <p v-if="SideInfoDescriptionType == 'Custom'">{{ SideInfoDescription }}</p>
     </div>

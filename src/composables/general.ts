@@ -27,15 +27,24 @@ import projectsModalStore from "@/stores/projectModal";
 
 export async function openServiceIDServiceModal(serviceID:string, serviceCategory:"Marketing" | "Web"):Promise<void> {
   return new Promise(async (resolve, reject) => {
-    if(await checkServiceExistence(serviceID)){
+    if(await checkServiceExistence(serviceID) === 'exists'){
       const info = ref(serviceModalStore);
       info.value.serviceID = serviceID;
       info.value.serviceCategory = serviceCategory;
       info.value.status = 'Show';
 
       return resolve();
+    } else if (await checkServiceExistence(serviceID) === 'unavailable') {
+      setTimeout(() => {
+        alert('Desculpe, este serviço não está disponível no momento.');
+      }, 1000);
+
+      return resolve();
     } else {
-      alert('Desculpe, ocorreu um erro ao recuperar as informações sobre este serviço.');
+      setTimeout(() => {
+        alert('Desculpe, ocorreu um erro ao recuperar as informações sobre este serviço.');
+      }, 1000);
+      
       return resolve();
     }
   })

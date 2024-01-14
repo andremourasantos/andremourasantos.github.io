@@ -119,7 +119,7 @@ export default defineComponent({
 
     const fillRelatedServices = async (servicesArray: ["Marketing" | "Web", string][]):Promise<void> => {
       const filteredServices = await Promise.all(servicesArray.map(async (array) => {
-        if (await checkServiceExistenceV2(array[1], array[0]) === true) {
+        if (await checkServiceExistenceV2(array[1], array[0]) !== 'does_not') {
           return array;
         }
       }));
