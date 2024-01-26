@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <p>Criado por André Moura Santos, ©2023.<br><router-link :to="{name:'pp'}" title="Acessar política de privacidade" hreflang="pt-br">Política de Privacidade</router-link>.</p>
+    <p>Criado por André Moura Santos, ©2021-2024.<br><router-link :to="{name:'pp'}" title="Acessar política de privacidade" hreflang="pt-br">Política de Privacidade</router-link>.</p>
   </footer>
 </template>
 

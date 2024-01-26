@@ -6,21 +6,22 @@
     "group": "Combo",
     "title": "Serviço completo",
     "image": "estrela",
-    "description": "A solução tudo-em-um que você estava procurando.",
+    "description": "Obtenha todo o suporte que o seu negócio precisa para crescer na internet.",
     "introduction": [
-      "Introdução."
+      "Introdução.",
+      "Sites relacionados a apostas, lojas virtuais ou blogs não são produzidos."
     ],
     "tableOfBenefits": [
+      ["medalha", "A solução tudo-em-um que você estava procurando.", true],
+      ["medalha", "Execução de primeira, personalizada e humanizada.", true],
       ["medalha", "Item", true],
-      ["medalha", "Item", true],
-      ["medalha", "Item", true],
-      ["medalha", "Item", true],
-      ["medalha", "Item", true],
+      ["desconto", "Mais econômico do que adquirir os serviços separadamente.", true],
+      ["desconto", "Isenção de pagamentos recorrentes para relatórios personalizados por 3 meses.", true],
       ["desconto", "Preço reduzido para ONGs e ações sociais.", false]
     ],
     "serviceInfo": {
-      "deadline": ["calendario", "Data de entrega", 50],
-      "price": ["moeda", "Preço do serviço", 999]
+      "deadline": ["calendario", "Data de entrega", 37],
+      "price": ["moeda", "Preço do serviço", 999.90]
     },
     "footerNotes": [
       "Os serviços de hospedagem e banco de dados são fornecidos pelo Firebase, que conta com sua própria política de preços."
@@ -29,91 +30,62 @@
   {
     "id": "primeiros-passos",
     "show": true,
-    "status": "Novo",
+    "status": null,
     "group": "Combo",
     "title": "Primeiros passos",
     "image": "primeiros-passos",
-    "description": "Tire suas ideias do papel e leve-as a internet!",
+    "description": "Tire suas ideias do papel e leve-as à internet com um site novinho.",
     "introduction": [
-      "O combo de serviços Primeiros Passos é ideal para você que está procurando realizar um projeto, mas não tem uma base pronta para construir suas ideias ou apresentar seu negócio para o público.",
-      "Neste combo, você obtém os serviços de Design de sites, onde terá um design completo e pronto para produção criado especialmente para as necessidades do seu negócio, e o serviço de Criação de sites, para transformar o design recém aprovado em um produto completo e publicá-lo na internet!",
-      "Além desses serviços, também estão inclusas versões simples dos serviços de Consultoria (web) e Público-alvo, ambos para alinhar as expectativas e garantir que o projeto seja feito sob medida para as necessidades do seu negócio.",
+      "O combo de serviços Primeiros Passos é ideal para você que está procurando realizar um projeto, já tem um negócio rodando, mas não tem tempo ou precisa de ajuda para desenvolver as suas ideias e apresentar seu negócio para o público na internet.",
+      "Neste combo, você obtém os serviços de Design de sites, onde terá um design completo e pronto para produção, criado especialmente para as necessidades do seu negócio e pensado para diferenciá-lo da concorrência, e o serviço de Criação de sites, para transformar o design recém aprovado em um produto completo e publicá-lo na internet! Com essa dupla, você entra com uma ideia e sai com o produto final.",
+      "Além destes serviços, você também leva os serviços de Ferramentas de insights, para obtenção de informações valiosas sobre os visitantes do seu site, e Público-alvo, para entendermos quem é o público da sua empresa ou descobrirmos novos clientes em potencial, ambos para alinhar as expectativas e garantir que o projeto seja feito sob medida para as necessidades do seu negócio.",
       "Sites relacionados a apostas, lojas virtuais ou blogs não são produzidos."
     ],
     "tableOfBenefits": [
-      ["medalha", "Chegue com uma ideia, saia com um projeto completo.", true],
+      ["medalha", "Chegue com uma ideia, saia com um produto completo.", true],
+      ["medalha", "Acompanhamento personalizado do início ao fim do projeto.", true],
       ["medalha", "Obtenha prioridade na entrega do seu contrato.", true],
-      ["medalha", "Consultoria (web) simples incluída no pacote.", true],
-      ["medalha", "Público-alvo simples incluída no pacote.", true],
-      ["desconto", "Economize até R$ 400 com os serviços neste combo.", true],
+      ["medalha", "Todos os benefícios dos serviços citados inclusos.", true],
+      ["desconto", "Mais econômico do que adquirir os serviços separadamente.", true],
       ["desconto", "Preço reduzido para ONGs e ações sociais.", true]
     ],
     "serviceInfo": {
-      "deadline": ["calendario", "Data de entrega", 35],
-      "price": ["moeda", "Preço do serviço", 999]
-    },
-    "footerNotes": [
-      "Os serviços de hospedagem e banco de dados são fornecidos pelo Firebase, que conta com sua própria política de preços.",
-      "A economia de preço apresentada neste serviço foi calculada em outubro de 2023."
-    ]
-  },
-  {
-    "id": "criacao-de-sites",
-    "show": true,
-    "status": null,
-    "group": "Individual",
-    "title": "Criação de sites",
-    "image": "criacao-de-sites",
-    "description": "Um site criado a partir de um design completo para atender o seu negócio.",
-    "introduction": [
-      "Ter um site responsivo e acessível é um requirimento para qualquer negócio na atualidade que queira poder ser encontrado pelos seus clientes. Sendo a porta de entrada para o seu negócio, é importante que o seu site transpareça os principais aspectos da sua empresa, de forma simples e intuitiva.",
-      "Você não precisa começar com tudo, muito menos gastando horrores apenas para manter seu site no ar, basta já ter em mãos o design do seu site completo e pronto para produção. O importante é obter um site que o ajude a alavancar o seu negócio e a alcançar novos clientes com facilidade.",
-      "Seu site será indexado ao Google e outros buscadores, bem como contará com serviços como Google Analytics, Google Tag Manager e Google Ads, para que você possa obter as métricas de desempenho do seu site.",
-      "Sites relacionados a apostas, lojas virtuais ou blogs não são produzidos."
-      ],
-    "tableOfBenefits": [
-      ["medalha", "Comece pequeno e incremente seu site com o tempo.", true],
-      ["medalha", "Fácil manutenção das informações no site.", true],
-      ["medalha", "Código moderno, rápido e otimizado para SEO.", true],
-      ["medalha", "Possibilidade de atualização de informações em tempo real.", true],
-      ["medalha", "Hospedagem de até 10 GB grátis.", true],
-      ["desconto", "Preço reduzido para ONGs e ações sociais.", true]
-    ],
-    "serviceInfo": {
-      "deadline": ["calendario", "Data de entrega", 30],
-      "price": ["moeda", "Preço do serviço", 600]
+      "deadline": ["calendario", "Data de entrega", 32],
+      "price": ["moeda", "Preço do serviço", 699.90]
     },
     "footerNotes": [
       "Os serviços de hospedagem e banco de dados são fornecidos pelo Firebase, que conta com sua própria política de preços."
     ]
   },
   {
-    "id": "design-de-sites",
+    "id": "landing-page",
     "show": true,
-    "status": null,
-    "group": "Individual",
-    "title": "Design de sites",
-    "image": "design-de-sites",
-    "description": "Só tem uma ideia? Vamos transformá-la em um design pronto para produção.",
+    "status": "Novo",
+    "group": "Combo",
+    "title": "Landing Page",
+    "image": "landing-page",
+    "description": "Uma página focada para promover o seu produto ou serviço.",
     "introduction": [
-      "Está pensando em criar um site para a sua empresa ou já conta com um, mas quer atualizar a sua vitrine? Comece por aqui!",
-      "O design do site é o ponto de partida para a produção do seu site, é aqui que definiremos forma, cores, funcionalidades, interações e tudo mais que o seu site deve agregar, levando em consideração os principais aspectos da sua empresa e as funcionalidades esperados pelos seus clientes.",
-      "Com o design pronto, é possível apresentá-lo para um profissional de desenvolvimento web para que ele possa programá-lo. Sites relacionados a apostas ou lojas virtuais não são produzidos."
+      "Uma landing page é uma página separada criada com o objetivo específico de direcionar a atenção do visitante para uma ação desejada, como preencher um formulário, baixar um material ou entrar em contato. Ela é projetada de forma simples e direta, focando em uma oferta ou produto específico.",
+      "Para isso, neste combo você obtém os serviços de Design de sites (simples), garantindo um design que combine com seu site e apresente seu produto/serviço de maneira eficaz e com foco em conversão, o serviço de Criação de sites (simples), para tirar o design do papel e colocá-lo na internet, e você também leva o serviço de Ferramentas de insights, para obtenção de informações valiosas sobre os visitantes do seu site.",
+      "Com isso, você pode promover seu produto ou serviço de maneira a obter insights sobre conversões e a efetividade de campanhas de anúncios, parcerias e conteúdos, auxiliando na gestão financeira e facilitando a tomada de decisões sobre as suas ações de Marketing."
     ],
     "tableOfBenefits": [
-      ["medalha", "Tenha um design pronto para produção.", true],
-      ["medalha", "Trabalho com foco em acessibilidade e facilidade de uso.", true],
-      ["medalha", "Leiaute responsivo para telefones, tablets e computadores.", true],
-      ["medalha", "Escolha ativos entre mais de 10 milhões de arquivos de mídia.", true],
-      ["medalha", "Escolha entre os estilos de arte mais populares.", true],
-      ["desconto", "Preço reduzido para ONGs e ações sociais.", false]
+      ["medalha", "Página otimizada para acessibilidade, responsividade e conversão.", true],
+      ["medalha", "Pensada no seu público-alvo, suas necessidades e desejos.", true],
+      ["medalha", "Configurações do Google Analytics (GA4) e Google Tag Manager (GTM) inclusas.", true],
+      ["medalha", "Obtenha insights sobre a efetividade das suas ações de Marketing.", true],
+      ["medalha", "Possibilidade de conexão com serviços de CRM como RD Station Marketing.", true],
+      ["desconto", "Desconto na aquisição do serviço de Relatórios Personalizados.", true],
+      ["medalha", "Preço reduzido para ONGs e ações sociais.", false]
     ],
     "serviceInfo": {
-      "deadline": ["calendario", "Data de entrega", 20],
-      "price": ["moeda", "Preço do serviço", 400]
+      "deadline": ["calendario", "Data de entrega", 10],
+      "price": ["moeda", "Preço do serviço", 399.90]
     },
     "footerNotes": [
-      "Entre os 10 milhões de ativos estão inclusos fotos, vídeos, modelos 3D, ícones e ilustrações."
+      "Os serviços de hospedagem são fornecidos pelo Firebase, que conta com sua própria política de preços.",
+      "Com o serviço de Relatórios Personalizados (opcional) você obtém um relatório detalhado e feito sob medida para apresentar, de maneira simples, tudo o que você precisa saber sobre a sua landing page."
     ]
   },
   {
@@ -145,31 +117,121 @@
     ]
   },
   {
+    "id": "design-de-sites",
+    "show": true,
+    "status": null,
+    "group": "Individual",
+    "title": "Design de sites",
+    "image": "design-de-sites",
+    "description": "Só tem uma ideia? Vamos transformá-la em um design pronto para produção.",
+    "introduction": [
+      "Está pensando em criar um site para a sua empresa ou já conta com um, mas quer atualizar a sua vitrine? Comece por aqui!",
+      "O design do site é o ponto de partida para a produção do seu site, é aqui que definiremos forma, cores, funcionalidades, interações e tudo mais que o seu site deve agregar, levando em consideração os principais aspectos da sua empresa e as funcionalidades esperadas pelos seus clientes.",
+      "Diferencie-se da sua concorrência com um design moderno, funcionalidades úteis e uma navegação intuitiva pensada com o seu cliente ideal desde o início, para maximizar as chances de fechar novos negócios e estabelecer-se com firmeza no ambiente digital.",
+      "Com o design pronto, é possível apresentá-lo para um profissional de desenvolvimento web para que ele possa programá-lo. Sites relacionados a apostas ou lojas virtuais não são produzidos."
+    ],
+    "tableOfBenefits": [
+      ["medalha", "Tenha um design pronto para enviar à produção.", true],
+      ["medalha", "Trabalho com foco em acessibilidade e facilidade de uso.", true],
+      ["medalha", "Leiaute responsivo para telefones, tablets e computadores.", true],
+      ["medalha", "Mais de 10 milhões de ativos de mídia disponíveis para enriquecer o seu site.", true],
+      ["medalha", "Escolha entre os estilos de arte mais populares para a aparência do seu site.", true],
+      ["desconto", "Preço reduzido para ONGs e ações sociais.", false]
+    ],
+    "serviceInfo": {
+      "deadline": ["calendario", "Data de entrega", 10],
+      "price": ["moeda", "Preço do serviço", 299.90]
+    },
+    "footerNotes": [
+      "Entre os 10 milhões de ativos estão inclusos fotos, vídeos, modelos 3D, ícones e ilustrações."
+    ]
+  },
+  {
+    "id": "criacao-de-sites",
+    "show": true,
+    "status": null,
+    "group": "Individual",
+    "title": "Criação de sites",
+    "image": "criacao-de-sites",
+    "description": "Um site criado a partir de um design completo para atender o seu negócio.",
+    "introduction": [
+      "Ter um site responsivo e acessível é um requisito para qualquer negócio na atualidade que queira poder ser encontrado pelos seus clientes. Sendo a porta de entrada para o seu negócio, é importante que o seu site transpareça os principais aspectos da sua empresa, de forma simples e intuitiva.",
+      "Você não precisa começar com tudo, muito menos gastando horrores apenas para manter seu site no ar, basta já ter em mãos o design do seu site completo e pronto para produção. O importante é obter um site que o ajude a alavancar o seu negócio e a alcançar novos clientes com facilidade.",
+      "Tenha seu site indexado no Google em outros buscados e entregue a melhor experiência para os seus visitantes e potenciais clientes.",
+      "Sites relacionados a apostas, lojas virtuais ou blogs não são produzidos."
+      ],
+    "tableOfBenefits": [
+      ["medalha", "Comece pequeno e incremente seu site com o tempo.", true],
+      ["medalha", "Código moderno, rápido e otimizado para SEO.", true],
+      ["medalha", "Site modular para fácil adição de novas funcionalidades.", true],
+      ["medalha", "Fácil manutenção das informações no site.", true],
+      ["medalha", "Possibilidade de atualização de informações em tempo real.", true],
+      ["desconto", "Preço reduzido para ONGs e ações sociais.", true]
+    ],
+    "serviceInfo": {
+      "deadline": ["calendario", "Data de entrega", 22],
+      "price": ["moeda", "Preço do serviço", 599.90]
+    },
+    "footerNotes": [
+      "Os serviços de hospedagem e banco de dados são fornecidos pelo Firebase, que conta com sua própria política de preços."
+    ]
+  },
+  {
+    "id": "ferramentas-de-insights",
+    "show": true,
+    "status": "Novo",
+    "group": "Individual",
+    "title": "Ferramentas de insights",
+    "image": "grafico-de-pizza",
+    "description": "Obtenha informações valiosas sobre os visitantes do seu site.",
+    "introduction": [
+      "As ferramentas de insights são essenciais para qualquer site na internet, é através delas que você poderá obter informações sobre os acessos ao seu site, conversões em campanhas publicitárias e muitas outras informações sobre os seus visitantes, como, por exemplo, de onde eles vieram, quais as páginas mais acessadas, quais as interações mais comuns.",
+      "A partir dessas ferramentas de insights, você também poderá descobrir e analisar tendências dos visitantes do seu site e até mesmo começar a tomar ações assertivas e mensuráveis para impulsionar a sua presença online.",
+      "Serviços como Google Analytics (GA4), Google Tag Manager (GTM), Google Ads, Pixel da Meta e o Pixel do TikTok são exemplos de ferramentas para obter métricas de desempenho de suas campanhas publicitárias e desempenho do site.",
+      "Para tirar total proveito das ferramentas de insights instaladas em seu site, dê uma olhada no serviço de Relatórios Personalizados e obtenha também um painel sob medida para o seu negócio!"
+      ],
+    "tableOfBenefits": [
+      ["medalha", "Descubra de onde vêm os seus visitantes e quais os canais com maior engajamento.", true],
+      ["medalha", "Obtenha métricas importantes para avaliar o desempenho das suas campanhas publicitárias.", true],
+      ["medalha", "Fique por dentro de tendências de uso do seu site e páginas mais acessadas.", true],
+      ["medalha", "Configurações das contas no Google Tag Manager (GTM) e Google Analytics (GA4) incluso.", true],
+      ["medalha", "Definição de eventos e conversões (GA4 e GTM) incluso.", true],
+      ["desconto", "Preço reduzido para ONGs e ações sociais.", true]
+    ],
+    "serviceInfo": {
+      "deadline": ["calendario", "Data de entrega", 5],
+      "price": ["moeda", "Preço do serviço", 100]
+    },
+    "footerNotes": []
+  },
+  {
     "id": "relatorios-web",
     "show": true,
-    "status": "Indisponível",
+    "status": "Novo",
     "group": "Individual",
     "title": "Relatórios personalizados",
     "image": "relatorio-web",
-    "description": "Não fique no escuro quanto a eficácia do seu site, tenha um relatório detalhado.",
+    "description": "Não fique no escuro quanto à eficácia do seu site, tenha um relatório detalhado.",
     "introduction": [
-      "Com um site pronto e rodando, é imprescindível que você tenha acesso as principais métricas de sucesso relacionadas ao seu negócio à disposição para poder avaliar o desempenho das suas ações na internet.",
-      "A partir de um relatório detalhado, criado especialmente para as suas necessidades, você pode, facilmente, compreender se o seu site está em indo bem ou mal, de onde estão vindo os acessos, quem são essas pessoas e como interagem com o seu site. Assim, ficará mais fácil para você ou o seu time planejar ações, ou anúncios e obter o retorno sobre o desempenho das mesmas."
+      "Com um site pronto e rodando, é imprescindível que você tenha acesso às principais métricas de sucesso relacionadas ao seu negócio à disposição para poder avaliar o desempenho das suas ações na internet.",
+      "A partir de um relatório detalhado, criado especialmente para as suas necessidades, você pode, facilmente, compreender se o seu site está indo bem ou mal, de onde estão vindo os acessos, quem são essas pessoas e como interagem com o seu site. Assim, ficará mais fácil para você ou o seu time planejar ações, ou anúncios e obter o retorno sobre o desempenho das mesmas.",
+      "Escolha entre receber um relatório por e-mail com frequência semanal, quinzenal ou mensal (a partir de R$ 39,90/mês), optar pelo painel na internet atualizado em tempo real (a partir de R$ 59,90/mês) ou garantir os dois em um combo (a partir de R$ 79,90/mês)."
     ],
     "tableOfBenefits": [
-      ["medalha", "Painéis atualizados em tempo real.", true],
+      ["medalha", "Possibilidade de painéis atualizados em tempo real.", true],
+      ["medalha", "Possibilidade de envio de resumo mensal de desempenho.", true],
       ["medalha", "Linguagem acessível e sem jargões.", true],
-      ["medalha", "Envio de resumo mensal de desempenho.", true],
       ["medalha", "Métricas específicas para o site do seu negócio.", true],
       ["medalha", "Opções de contrato trimestral e semestral.", true],
       ["desconto", "Preço reduzido para ONGs e ações sociais.", false]
     ],
     "serviceInfo": {
-      "deadline": ["calendario", "Data de entrega", 14],
-      "price": ["moeda", "Preço do serviço", 999]
+      "deadline": ["calendario", "Data de entrega", 7],
+      "price": ["moeda", "Preço do serviço", 100]
     },
     "footerNotes": [
-      "A disponilibidade de painéis atualizados em tempo real está restrita a uma seleta soma de serviços do Google, como Google Ads e Analytics."
+      "A disponilibidade de painéis atualizados em tempo real está restrita a uma seleta soma de serviços do Google, como Google Ads e Analytics.",
+      "O preço do serviço e o pagamento mensal são diferentes. ONGs e ações sociais de pequeno porte são isentas do preço do serviço, porém não do pagamento mensal refernete a sua execução."
     ]
   }
 ]
