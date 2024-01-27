@@ -1,0 +1,52 @@
+[
+  {
+    "type": "Recomendação",
+    "source": "LinkedIn",
+    "author": {
+      "name": "Fillipe Neyl",
+      "job": "CEO em Agência WX"
+    },
+    "icon": "PhTrophy",
+    "text": [
+      "Pró-ativo, André busca, sugere e implementa soluções, com destaque para processos de organização para completar suas tarefas e entregar resultados aos clientes. Ele usa dados como guia para tomada de decisão, sem achismos, o que é excelente em sua atuação como Analista de Marketing em nossa equipe."
+    ]
+  },
+  {
+    "type": "Recomendação",
+    "source": "LinkedIn",
+    "author": {
+      "name": "Wedlin Lucas",
+      "job": "Designer em Agência WX"
+    },
+    "icon": "PhTrophy",
+    "text": [
+      "O André é um profissional extremamente competente, organizado e criativo. Sempre aberto a ideias e novas possibilidades.",
+      "Trabalhamos juntos há mais de um ano e sempre tivemos ótimos resultados com os clientes. Recomendo demais ;)"
+    ]
+  },
+  {
+    "type": "Recomendação",
+    "source": "LinkedIn",
+    "author": {
+      "name": "Humberto Santos",
+      "job": "CEO em Campos Dealer"
+    },
+    "icon": "PhTrophy",
+    "text": [
+      "Logo de cara, nas primeiras reuniões ele já entendeu a nossa necessidade e começamos a desenvolver projetos para melhorar nosso marketing, neste momento percebi que ele entende muito no que faz e também vem sempre com ótimas ideias, comprometido com o trabalho."
+    ]
+  },
+  {
+    "type": "Recomendação",
+    "source": "LinkedIn",
+    "author": {
+      "name": "Rafael Bretas",
+      "job": "CEO em Agência fog"
+    },
+    "icon": "PhTrophy",
+    "text": [
+      "O André é um profissional dedicado e atencioso, com ótimo conhecimento técnico e que trabalha bem em equipe para implantar soluções.",
+      "Curioso, perspicaz e em busca constante por aprendizado em sua área. Uma jornada de sucesso à frente."
+    ]
+  }
+]

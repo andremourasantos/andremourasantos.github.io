@@ -38,4 +38,15 @@ declare global {
     } | null,
     footerNotes:string[]
   } | undefined;
+
+  type PresentationCardInfo = {
+    type: "Recomendação" | "Desenvolvimento Web" | "Marketing Digital",
+    source: "LinkedIn" | "Cliente",
+    author: {
+      name:string,
+      job:string
+    } | null,
+    icon: "PhTrophy" | "PhStar" | "PhGlobeStand",
+    text:string[]
+  };
 }

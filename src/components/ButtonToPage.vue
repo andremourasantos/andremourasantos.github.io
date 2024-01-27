@@ -44,12 +44,18 @@ export default defineComponent({
     min-height: 100px;
     background: var(--colors-background);
     backdrop-filter: blur(50px);
-    box-shadow: var(--neumorphism-inner_shadow);
+    box-shadow: var(--neumorphism-out_shadow);
     text-align: left;
     padding: 24px;
     border: none;
     border-radius: 16px;
     cursor: pointer;
+  }
+
+  button:hover, button:focus {
+    transition: 200ms;
+    transform: scale(0.99);
+    box-shadow: var(--neumorphism-inner_shadow);
   }
 
   h2 {
