@@ -129,7 +129,7 @@
     ],
     "serviceInfo": {
       "deadline": ["calendario", "Data de entrega", 5],
-      "price": ["moeda", "Preço do serviço", 100]
+      "price": ["moeda", "Preço do serviço", 50]
     },
     "footerNotes": [
       ""
@@ -226,7 +226,7 @@
     "group": "Individual",
     "title": "Estratégia de anúncios",
     "image": "estrategia-de-anuncios",
-    "description": "Comece seus anúncios orientados por dados e focado em resultados tangíveis.",
+    "description": "Anúncios orientados por dados e focados em resultados tangíveis.",
     "introduction": [
       "Anunciar pode ser caro, e é por isso que a estratégia de anúncios se torna a peça fundamental que não só otimiza, mas também potencializa o sucesso das suas campanhas publicitárias. Ela direciona seu orçamento de publicidade de maneira inteligente, evitando gastos aleatórios e garantindo que cada centavo seja investido de forma estratégica e eficaz.",
       "Também mais do que simplesmente lançar anúncios, a análise de indicadores-chave se torna uma prática essencial. E é por isso que o documento integra métricas específicas a serem analisadas, para não apenas permitir a avaliação do sucesso de cada anúncio individualmente, mas também fornecer insights valiosos para ajustes em tempo real das suas campanhas."

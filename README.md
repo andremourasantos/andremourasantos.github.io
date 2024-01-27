@@ -21,18 +21,19 @@ _*Atualizado em outubro de 2023._
 
 ## O que aprendi com este projeto?
 
-- Uso e configuração básica do TypeScript, bem como a criação de tipos globais e validação de dados.
-- Uso da biblioteca `vue-gtm`, de [gtm-support](https://github.com/gtm-support/vue-gtm), para configuração e acompanhamento de eventos personalizados na aplicação.
-- Uso de Camadas de Dados (_Data Layers_) para transmitir dados de eventos a partir de interações com componentes.
 - Aplicação do _neumorphism_ em designs, com atenção à acessibilidade.
 - Criação de uma árvore de componentes do Vue para organizar o projeto.
 - Criação de uma árvore de lógica para facilitar a criação e manutenção dos códigos dos componentes.
+- Uso da biblioteca `vue-gtm`, de [gtm-support](https://github.com/gtm-support/vue-gtm), para configuração e acompanhamento de eventos personalizados na aplicação.
+- Uso de Camadas de Dados (_Data Layers_) para transmitir dados de eventos a partir de interações com componentes.
+- Uso de touch events para funcionalidades de "swipe" em carrosséis.
+- Uso e configuração básica do TypeScript, bem como a criação de tipos globais e validação de dados.
 
 ---
 
 ## Árvore de componentes e lógica
 
-_*Atualizado em outubro de 2023._
+_*Atualizado em janeiro de 2024._
 
 Veja abaixo a árvore de componentes do VueJs e também o fluxograma de lógica da aplicação, assim, você poderá ter um bom entendimento de como o projeto foi estruturado desde o começo para permitir uma fácil manutenção e adição de funcionalidades.
 

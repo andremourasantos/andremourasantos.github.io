@@ -15,7 +15,7 @@ import { PhCaretCircleDown } from '@phosphor-icons/vue';
 
 export default defineComponent({
   props: {
-    'FooterNotes': {
+    'footerNotes': {
       required: true,
       type: Array as () => string[]
     }
@@ -23,7 +23,7 @@ export default defineComponent({
   components: {PhCaretCircleDown},
   setup(props) {
     const notesDetails = ref<HTMLDetailsElement | null>(null);
-    const filteredFooterNotes = ref<string[]>(props.FooterNotes);
+    const filteredFooterNotes = ref<string[]>(props.footerNotes);
 
     onMounted(() => {
       const addAsterisks = async ():Promise<void> => {
@@ -39,7 +39,7 @@ export default defineComponent({
       }; addAsterisks();
     });
 
-    watch(() => props.FooterNotes, (newFooterNotes) => {
+    watch(() => props.footerNotes, (newFooterNotes) => {
       filteredFooterNotes.value = newFooterNotes.filter(entry => {return entry !== ""});
     });
 

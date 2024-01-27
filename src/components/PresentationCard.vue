@@ -49,6 +49,11 @@ export default defineComponent({
       
       switchActiveNavIndicator();
       switchActiveContent();
+
+      //Change content via interval feature
+      startswitchPresentationInfo = setInterval(() => {
+        switchPresentationInfo();
+      }, switchDelay);
     })
 
     onBeforeUnmount(() => {
@@ -119,13 +124,14 @@ export default defineComponent({
     };
 
     const changeContentViaSwipe = (e:TouchEvent):void => {
+      if(Math.abs(initialX.value - finalX.value) < 100){return};
       clearInterval(startswitchPresentationInfo);
 
       if(!((initialX.value - finalX.value) > 0)){
-        //Swipping Left-to-Right (show previous).
+        //Swipping Left-to-Right (show previous)
         presentationInfoIndex.value === 0 ? switchPresentationInfo(presentationInfoTotal.value) : switchPresentationInfo(presentationInfoIndex.value -= 1);
       } else {
-        //Swipping Right-to-Left (show next).
+        //Swipping Right-to-Left (show next)
         presentationInfoIndex.value === presentationInfoTotal.value ? switchPresentationInfo(0) : switchPresentationInfo(presentationInfoIndex.value += 1);
       }
 
@@ -133,11 +139,6 @@ export default defineComponent({
         switchPresentationInfo();
       }, switchDelay);
     };
-
-    //Change content via interval feature
-    startswitchPresentationInfo = setInterval(() => {
-      switchPresentationInfo();
-    }, switchDelay);
 
     return {
       recommendationsInfo,

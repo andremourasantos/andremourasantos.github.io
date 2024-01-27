@@ -1,12 +1,12 @@
 <template>
-  <PageTitle :PageTitle="'Meus projetos'" :PageDescription="'Veja uma coletânea dos meus projetos de Desenvolvimento Web aqui, com informações detalhadas sobre cada caso.'"/>
+  <PageTitle :page-title="'Meus projetos'" :page-description="'Veja uma coletânea dos meus projetos de Desenvolvimento Web aqui, com informações detalhadas sobre cada caso.'"/>
 
   <section id="servicesGroup">
-    <ServicesGroup :GroupTitle="'Projetos em destaque'" :GroupDescription="'Essas são os projetos que me dão orgulho, saiba mais sobre cada um deles.'">
+    <ServicesGroup :group-title="'Projetos em destaque'" :group-description="'Essas são os projetos que me dão orgulho, saiba mais sobre cada um deles.'">
       <ProjectButton v-for="item in featuredProjects" :project-title="item.title" :project-description="item.description" :project-image="item.featuredImage" :project-id="item.id" :project-tag="item.status"/>
     </ServicesGroup>
     
-    <ServicesGroup :GroupTitle="'Protótipos funcionais'" :GroupDescription="'Veja uma coletânea de protótipos de sites e teste suas funcionalidades.'">
+    <ServicesGroup :group-title="'Protótipos funcionais'" :group-description="'Veja uma coletânea de protótipos de sites e teste suas funcionalidades.'">
       <ProjectButton v-for="item in prototypesProjects" :project-title="item.title" :project-description="item.description" :project-image="item.featuredImage" :project-id="item.id" :project-tag="item.status"/>
     </ServicesGroup>
   </section>

@@ -1,14 +1,12 @@
 <template>
-  <PageTitle :PageTitle="'Criação de sites'" :PageDescription="'Desde a concepção ao produto final, ou apenas a etapa que precisar, confira os serviços fornecidos.'"/>
-
-  <ButtonToPage id="portfolioButton" :button-title="'Meus projetos'" :button-description="'Conheça os projetos que já realizei e os resultados obtidos.'" :button-image="'medalha'" @click="goToPortfolio"/>
+  <PageTitle :page-title="'Criação de sites'" :page-description="'Desde a concepção ao produto final, ou apenas a etapa que precisar.'"/>
 
   <section id="servicesGroup">
-    <ServicesGroup :GroupTitle="'Combos de serviços'" :GroupDescription="'Não sabe por onde começar, então você está no lugar certo!'">
+    <ServicesGroup :group-title="'Serviços tudo-em-um'" :group-description="'Precisa de um serviço completo? Veja as ofertas de serviços abaixo e confira mais detalhes.'">
       <ServiceButton v-for="entry in comboServices" :key="entry.id" :service-image="entry.image" :service-title="entry.title" :service-description="entry.description" :service-id="entry.id" :service-tag="entry.status" :service-category="'Web'"/>
     </ServicesGroup>
 
-    <ServicesGroup :GroupTitle="'Serviços oferecidos'" :GroupDescription="'Confira abaixo todos os serviços disponíveis, com detalhes.'">
+    <ServicesGroup :group-title="'Serviços oferecidos'" :group-description="'Está buscando apenas por um serviço em específico? Confira a seleção abaixo e saiba mais.'">
       <ServiceButton v-for="entry in individualServices" :key="entry.id" :service-image="entry.image" :service-title="entry.title" :service-description="entry.description" :service-id="entry.id" :service-tag="entry.status" :service-category="'Web'"/>
     </ServicesGroup>
   </section>
@@ -61,15 +59,4 @@ export default defineComponent({
 
 
 <style scoped>
-  #portfolioButton {
-    margin-top: 32px;
-    margin-inline: auto;
-    box-shadow: var(--neumorphism-out_shadow);
-    transition: all 250ms;
-  }
-
-  #portfolioButton:hover, #portfolioButton:active, #portfolioButton:focus {
-    transform: scale(0.99);
-    box-shadow: var(--neumorphism-inner_shadow);
-  }
 </style>

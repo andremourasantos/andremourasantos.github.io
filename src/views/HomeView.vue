@@ -1,13 +1,14 @@
 <template>
-  <PageTitle :PageTitle="'André Moura'" :PageDescription="'Profissional de Marketing e Desenvolvedor Web freelancer.'"/>
+  <PageTitle :page-title="'André Moura'" :page-description="'Profissional de Marketing e Desenvolvedor Web freelancer.'"/>
 
   <section>
     <PresentationCard/>
   </section>
 
   <section>
-    <ButtonToPage :button-title="'Desenvolvimento Web'" :button-description="'Criação de sites e landing pages responsivas e de fácil atualização.'" :button-image="'web-development'" @click="goToPage('webDev')"/>
-    <ButtonToPage :button-title="'Marketing Digital'" :button-description="'Público-alvo, personas, canais e estratégia de anúncios e conteúdos.'" :button-image="'digital-marketing'" @click="goToPage('marketing')"/>
+    <ButtonToPage :button-title="'Desenvolvimento Web'" :button-description="'Serviços para internet, como Web Design e Criação de sites.'" :button-image="'web-development'" @click="goToPage('webDev')"/>
+    <ButtonToPage :button-title="'Marketing Digital'" :button-description="'Produção e análise de estratégias para as redes sociais e anúncios.'" :button-image="'digital-marketing'" @click="goToPage('marketing')"/>
+    <ButtonToPage :button-title="'Portfólio'" :button-description="'Conheça os projetos que já realizei e os resultados obtidos.'" :button-image="'medalha'" @click="goToPage('portfolio')"/>
   </section>
 </template>
 
@@ -51,6 +52,7 @@ export default defineComponent({
   @media screen and (min-width: 425px) {
     section:nth-of-type(3) {
       flex-direction: row;
+      flex-wrap: wrap;
       justify-content: center;
       align-items: center;
     }

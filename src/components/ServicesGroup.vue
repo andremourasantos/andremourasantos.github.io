@@ -1,8 +1,8 @@
 <template>
   <section>
     <div>
-      <h2>{{ GroupTitle }}</h2>
-      <p>{{ GroupDescription }}</p>
+      <h2>{{ groupTitle }}</h2>
+      <p>{{ groupDescription }}</p>
     </div>
     <article>
       <slot>
@@ -17,11 +17,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   props: {
-    'GroupTitle': {
+    'groupTitle': {
       required: true,
       type: String
     },
-    'GroupDescription': {
+    'groupDescription': {
       required: true,
       type: String
     }

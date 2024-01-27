@@ -10,15 +10,15 @@
       <div id="detailedServiceInfo">
         <p v-for="(entry, index) in serviceIntroduction" :key="index"> {{ entry }}</p>
         <TabelOfBenefits>
-          <BenefitDescription v-for="entry in serviceBenefitsList" :BenefitText="entry[1]" :BenefitImage="entry[0]"/>
+          <BenefitDescription v-for="entry in serviceBenefitsList" :benefit-text="entry[1]" :benefit-image="entry[0]"/>
         </TabelOfBenefits>
       </div>
       <div id="sideServiceInfo">
         <h3>Informações do serviço</h3>
         <p>Veja as informações sobre prazos de entrega, formas de pagamento e valor do serviço.</p>
         <div>
-          <SideServiceInfo v-for="entry in serviceSideInfoList" :key="entry[0]" :SideInfoImage="entry[0]" :SideInfoTitle="entry[1]" :SideInfoDescription="entry[2]" :SideInfoDescriptionType="entry[0] == 'calendario' ? 'Date' : 'Price'"/>
-          <SideServiceInfo :SideInfoImage="'pagamento'" :SideInfoTitle="'Formas de pagamento'" :SideInfoDescription="'PIX e Cartão de Crédito.'" :SideInfoDescriptionType="'Custom'"/>
+          <SideServiceInfo v-for="entry in serviceSideInfoList" :key="entry[0]" :side-info-image="entry[0]" :side-info-title="entry[1]" :side-info-description="entry[2]" :side-info-description-type="entry[0] == 'calendario' ? 'Date' : 'Price'"/>
+          <SideServiceInfo :side-info-image="'pagamento'" :side-info-title="'Formas de pagamento'" :side-info-description="'PIX e Cartão de Crédito.'" :side-info-description-type="'Custom'"/>
         </div>
       </div>
       <div>
@@ -26,7 +26,7 @@
         <p>Converse diretamente comigo, disponível de Segunda a Sábado.</p>
         <ContactButton v-if="serviceHeader !== null" :service-name="serviceHeader.title"/>
       </div>
-      <FooterNotes :FooterNotes="serviceFooterNotes">
+      <FooterNotes :footer-notes="serviceFooterNotes">
         <p v-if="showONGsDiscount">O valor cobrado para organizações não governamentais (OGNs) ou ações sociais/comunitárias de pequeno porte pode ser combinado abaixo dessa faixa.</p>
         <p>Ao escolher o PIX como forma de pagamento, você ganha um desconto de 5% em cima do valor total. Pagamentos no Cartão de Crédito até 2x sem juros.</p>
         <p>Este contrato exige uma assinatura eletrônica. Você pode realizar essa ação gratuitamente através do site ou aplicativo do Gov.br.</p>

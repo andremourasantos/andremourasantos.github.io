@@ -1,11 +1,11 @@
 <template>
   <div class="sideServiceInfo">
-    <img :src="require(`@/assets/icons/${SideInfoImage}.png`)" :alt="`Ícone de ${SideInfoImage}`" height="36" width="36">
+    <img :src="require(`@/assets/icons/${sideInfoImage}.png`)" :alt="`Ícone de ${sideInfoImage}`" height="36" width="36">
     <div>
-      <h4>{{ SideInfoTitle }}</h4>
-      <p v-if="SideInfoDescriptionType == 'Date'">Por volta de {{ SideInfoDescription }} dias úteis.</p>
-      <p v-if="SideInfoDescriptionType == 'Price'">A partir de {{ styledPriceNumber }}.</p>
-      <p v-if="SideInfoDescriptionType == 'Custom'">{{ SideInfoDescription }}</p>
+      <h4>{{ sideInfoTitle }}</h4>
+      <p v-if="sideInfoDescriptionType == 'Date'">Por volta de {{ sideInfoDescription }} dias úteis.</p>
+      <p v-if="sideInfoDescriptionType == 'Price'">A partir de {{ styledPriceNumber }}.</p>
+      <p v-if="sideInfoDescriptionType == 'Custom'">{{ sideInfoDescription }}</p>
     </div>
   </div>
 </template>
@@ -15,19 +15,19 @@ import { defineComponent, ref } from 'vue'
 
 export default defineComponent({
   props: {
-    'SideInfoImage': {
+    'sideInfoImage': {
       required: true,
       type: String
     },
-    'SideInfoTitle': {
+    'sideInfoTitle': {
       required: true,
       type: String
     },
-    'SideInfoDescription': {
+    'sideInfoDescription': {
       required: true,
       type: [String, Number]
     },
-    'SideInfoDescriptionType': {
+    'sideInfoDescriptionType': {
       required: true,
       type: String as () => "Date" | "Price" | "Custom"
     }
@@ -35,8 +35,8 @@ export default defineComponent({
   setup(props) {
     const styledPriceNumber = ref<string>('0');
 
-    if(props.SideInfoDescriptionType === 'Price'){
-      styledPriceNumber.value = new Intl.NumberFormat('pt-br', {style: 'currency', currency: 'BRL'}).format(Number(props.SideInfoDescription));
+    if(props.sideInfoDescriptionType === 'Price'){
+      styledPriceNumber.value = new Intl.NumberFormat('pt-br', {style: 'currency', currency: 'BRL'}).format(Number(props.sideInfoDescription));
     }
 
     return {

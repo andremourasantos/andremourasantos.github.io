@@ -29,7 +29,7 @@
         </div>
       </div>
 
-      <ServiceFooterNotes v-if="footerNotes" :FooterNotes="footerNotes" />
+      <ServiceFooterNotes v-if="footerNotes" :footer-notes="footerNotes" />
     </article>
 
   </dialog>

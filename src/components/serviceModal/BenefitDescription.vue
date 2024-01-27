@@ -1,7 +1,7 @@
 <template>
   <li class="benefitDescription">
-    <img :src="require(`@/assets/icons/${BenefitImage}.png`)" :alt="`Ícone de ${BenefitImage}`" height="24" width="24">
-    <p>{{ BenefitText }}</p>
+    <img :src="require(`@/assets/icons/${benefitImage}.png`)" :alt="`Ícone de ${benefitImage}`" height="24" width="24">
+    <p>{{ benefitText }}</p>
   </li>
 </template>
 
@@ -10,12 +10,12 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   props: {
-    'BenefitImage': {
+    'benefitImage': {
       required: false,
       default: 'medalha',
       type: String
     },
-    'BenefitText': {
+    'benefitText': {
       required: true,
       type: String
     }

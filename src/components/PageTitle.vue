@@ -1,7 +1,7 @@
 <template>
   <section>
-    <h1>{{ PageTitle }}</h1>
-    <p>{{ PageDescription }}</p>
+    <h1>{{ pageTitle }}</h1>
+    <p>{{ pageDescription }}</p>
   </section>
 </template>
 
@@ -10,11 +10,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   props: {
-    'PageTitle': {
+    'pageTitle': {
       required: true,
       type: String
     },
-    'PageDescription': {
+    'pageDescription': {
       required: true,
       type: String
     }
