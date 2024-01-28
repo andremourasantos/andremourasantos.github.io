@@ -28,15 +28,15 @@
     ]
   },
   {
-    "id": "primeiro-site",
+    "id": "site-institucional",
     "show": true,
     "status": null,
     "group": "Tudo-em-um",
-    "title": "Primeiro site",
-    "image": "primeiros-passos",
+    "title": "Site institucional",
+    "image": "site-institucional",
     "description": "Tire suas ideias do papel e leve-as à internet com um site novinho.",
     "introduction": [
-      "Este é o serviço ideal para você que está procurando realizar um projeto e já tem um negócio rodando, mas não tem tempo ou precisa de ajuda para desenvolver as suas ideias e apresentar seu negócio para o público na internet.",
+      "Este é o serviço ideal para você que está procurando criar o site institucional para seu o negócio, ou atualizá-lo, mas não tem tempo ou precisa de ajuda para desenvolver as suas ideias e apresentar seu negócio para o público na internet.",
       "Neste combo, você obtém os serviços de Design de sites, onde terá um design completo e pronto para produção, criado especialmente para as necessidades do seu negócio e pensado para diferenciá-lo da concorrência, e o serviço de Criação de sites, para transformar o design recém aprovado em um produto completo e publicá-lo na internet! Com essa dupla, você entra com uma ideia e sai com o produto final.",
       "Além destes serviços, você também leva os serviços de Ferramentas de insights, para obtenção de informações valiosas sobre os visitantes do seu site, e Público-alvo, para entendermos quem é o público da sua empresa ou descobrirmos novos clientes em potencial, ambos para alinhar as expectativas e garantir que o projeto seja feito sob medida para as necessidades do seu negócio.",
       "Sites relacionados a apostas, lojas virtuais ou blogs não são produzidos."
@@ -51,10 +51,37 @@
     ],
     "serviceInfo": {
       "deadline": ["calendario", "Data de entrega", 32],
-      "price": ["moeda", "Preço do serviço", 699.90]
+      "price": ["moeda", "Preço do serviço", 599.90]
     },
     "footerNotes": [
       "Os serviços de hospedagem e banco de dados são fornecidos pelo Firebase, que conta com sua própria política de preços."
+    ]
+  },
+  {
+    "id": "criacao-de-portfolio",
+    "show": false,
+    "status": "Indisponível",
+    "group": "Tudo-em-um",
+    "title": "Criação de Portfólio",
+    "image": "landing-page",
+    "description": "Apresente seus projetos de maneira encantadora para os seus potenciais clientes.",
+    "introduction": [
+      "Introdução."
+    ],
+    "tableOfBenefits": [
+      ["medalha", "Item", true],
+      ["medalha", "Item", true],
+      ["medalha", "Item", true],
+      ["medalha", "Item", true],
+      ["medalha", "Item", true],
+      ["desconto", "Preço reduzido para ONGs e ações sociais.", false]
+    ],
+    "serviceInfo": {
+      "deadline": ["calendario", "Data de entrega", 10],
+      "price": ["moeda", "Preço do serviço", 399.90]
+    },
+    "footerNotes": [
+      ""
     ]
   },
   {
@@ -170,7 +197,7 @@
     ],
     "serviceInfo": {
       "deadline": ["calendario", "Data de entrega", 22],
-      "price": ["moeda", "Preço do serviço", 599.90]
+      "price": ["moeda", "Preço do serviço", 499.90]
     },
     "footerNotes": [
       "Os serviços de hospedagem e banco de dados são fornecidos pelo Firebase, que conta com sua própria política de preços."
