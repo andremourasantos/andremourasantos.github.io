@@ -1,6 +1,6 @@
 <template>
   <button :aria-label="`Navegar para página de ${buttonTitle}`" :title="`Navegar para página de ${buttonTitle}`">
-    <img :src="require(`@/assets/icons/${buttonImage}.png`)" height="48" width="48" :alt="`Imagem de representação da página de ${buttonTitle}`">
+    <img :src="getIconURL(buttonImage)" height="48" width="48" :alt="`Imagem de representação da página de ${buttonTitle}`">
     <div>
       <h2>{{ buttonTitle }}</h2>
       <p>{{ buttonDescription }}</p>
@@ -9,7 +9,9 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent } from 'vue';
+
+import { getIconURL } from '@/composables/general';
 
 export default defineComponent({
   props: {
@@ -26,8 +28,11 @@ export default defineComponent({
       type: String
     }
   },
-  setup(props) {
-    
+  setup() {
+
+    return {
+      getIconURL
+    }
   },
 })
 </script>

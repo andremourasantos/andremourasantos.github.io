@@ -1,5 +1,13 @@
 import { reactive, ref } from "vue";
 
+export function getIconURL(iconName:string):string {
+  return new URL(`/src/assets/icons/${iconName}.png`, import.meta.url).href;
+}
+
+export function getImageURL(path:string, imageName:string, imageFileType?:'png' | 'jpg' | 'webp'):string {
+  return new URL(`/src/assets/${path}/${imageName}.${imageFileType ? imageFileType : 'png'}`, import.meta.url).href;
+}
+
 export function toggleHTMLOverflowY():void {
   const htmlEl = document.querySelector('html') as HTMLHtmlElement;
   
@@ -26,7 +34,7 @@ import serviceModalStore from "@/stores/serviceModal";
 import projectsModalStore from "@/stores/projectModal";
 
 export async function openServiceIDServiceModal(serviceID:string, serviceCategory:"Marketing" | "Web"):Promise<void> {
-  return new Promise(async (resolve, reject) => {
+  return new Promise(async (resolve) => {
     if(await checkServiceExistence(serviceID) === 'exists'){
       const info = ref(serviceModalStore);
       info.value.serviceID = serviceID;

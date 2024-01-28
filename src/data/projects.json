@@ -22,7 +22,7 @@
        "Além disso, os relatórios automatizados mantém o cliente informado sobre o desempenho do site e das campanhas de anúncios realizadas, permitindo uma visão holística, obtendo insights sobre quais serviços e consultórios são os mais buscados e por quem, além de auxiliar na identificação de novas oportunidades de melhorias."
     ],
     "relatedServices": {
-      "servicesID": [["Web", "criacao-de-sites"], ["Web", "design-de-sites"], ["Web", "relatorios-web"], ["Marketing", "estrategia-de-anuncios"]]
+      "servicesID": [["Web", "site-institucional"], ["Web", "relatorios-web"], ["Marketing", "estrategia-de-anuncios"]]
     },
     "footerNotes": ["Este projeto foi realizado entre 2022 e 2023."]
   },

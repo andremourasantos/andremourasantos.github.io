@@ -1,12 +1,15 @@
 <template>
   <li class="benefitDescription">
-    <img :src="require(`@/assets/icons/${benefitImage}.png`)" :alt="`Ícone de ${benefitImage}`" height="24" width="24">
+    <img :src="getIconURL(benefitImage)" :alt="`Ícone de ${benefitImage}`" height="24" width="24">
     <p>{{ benefitText }}</p>
   </li>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent } from 'vue';
+
+//composables
+import { getIconURL } from '@/composables/general';
 
 export default defineComponent({
   props: {
@@ -20,8 +23,10 @@ export default defineComponent({
       type: String
     }
   },
-  setup(props) {
-    
+  setup() {
+    return {
+      getIconURL
+    }
   },
 })
 </script>

@@ -4,7 +4,7 @@
 
     <article v-if="projectHeader !== null">
       <div>
-        <img :src="require(`@/assets/projects/${projectHeader.id}/${projectHeader.favicon}.png`)" :alt="`Imagem do projeto ${projectHeader.title}`" height="80" width="80" style="border-radius: 100px;">
+        <img :src="getImageURL(`projects/${projectHeader.id}`, projectHeader.favicon)" :alt="`Imagem do projeto ${projectHeader.title}`" height="80" width="80" style="border-radius: 100px;">
         <h2>{{ projectHeader.title }}</h2>
         <p>{{ projectHeader.description }}</p>
       </div>
@@ -12,11 +12,11 @@
       <div class="content">
         <p>{{ introductionText }}</p>
 
-        <img :src="require(`@/assets/projects/${projectHeader.id}/${images1And2[0]}.png`)" :alt="`Imagem do projeto ${projectHeader.title}`">
+        <img :src="getImageURL(`projects/${projectHeader.id}`, images1And2[0])" :alt="`Imagem do projeto ${projectHeader.title}`">
 
         <p v-for="paragraph in developmentText">{{ paragraph }}</p>
 
-        <img loading="lazy" :src="require(`@/assets/projects/${projectHeader.id}/${images1And2[1]}.png`)" :alt="`Imagem do projeto ${projectHeader.title}`">
+        <img loading="lazy" :src="getImageURL(`projects/${projectHeader.id}`, images1And2[1])" :alt="`Imagem do projeto ${projectHeader.title}`">
 
         <p v-for="paragraph in conclusionText">{{ paragraph }}</p>
       </div>
@@ -38,19 +38,19 @@
 <script lang="ts">
 import { defineComponent, ref, onMounted } from 'vue';
 
-//Components
+//components
 import HeaderIcons from '../commomModalEls/HeaderIcons.vue';
 import ServiceButton from '../ServiceButton.vue';
 import ServiceFooterNotes from '../commomModalEls/ServiceFooterNotes.vue';
 
-//Composables
-import { toggleHTMLOverflowY } from '@/composables/general';
+//composables
+import { getImageURL, toggleHTMLOverflowY } from '@/composables/general';
 import { checkServiceExistenceV2, getServiceInfo } from '@/composables/data-base';
 
-//Data
+//data
 import projectsJSON from '@/data/projects.json';
 
-//Store
+//store
 import projectModalInfo from '@/stores/projectModal';
 
 export default defineComponent({
@@ -162,6 +162,7 @@ export default defineComponent({
     }
 
     return {
+      getImageURL,
       projectDialogEl,
       projectHeader,
       introductionText,

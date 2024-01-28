@@ -5,7 +5,7 @@
     }" aria-label="Estado do serviço">
       <p>{{ projectTag }}</p>
     </div>
-    <img :src="require(`@/assets/projects/${projectId}/${projectImage}.png`)" :alt="`Imagem de ${projectTitle}`">
+    <img :src="getImageURL(`projects/${projectId}`, projectImage)" :alt="`Imagem de ${projectTitle}`">
     <div>
       <h3>{{ projectTitle }}</h3>
       <p>{{ projectDescription }}</p>
@@ -17,7 +17,10 @@
 import { defineComponent, ref } from 'vue';
 import { useGtm } from '@gtm-support/vue-gtm';
 
-//Stores
+//composables
+import { getImageURL } from '@/composables/general';
+
+//stores
 import projectModal from '@/stores/projectModal';
 
 export default defineComponent({
@@ -43,7 +46,7 @@ export default defineComponent({
       type: String
     }
   },
-  setup(props) {
+  setup() {
     const gtm = useGtm();
     const modalStore = ref(projectModal);
 
@@ -62,6 +65,7 @@ export default defineComponent({
     };
     
     return {
+      getImageURL,
       openModal,
       emitGtmEvent
     }

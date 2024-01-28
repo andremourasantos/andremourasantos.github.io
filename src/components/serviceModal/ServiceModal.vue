@@ -3,7 +3,7 @@
     <HeaderIcons @closeModalButton="closeModal"/>
     <article>
       <div id="mainServiceInfo" v-if="serviceHeader !== null">
-        <img :src="require(`@/assets/icons/${serviceHeader.image}.png`)" :alt="`Imagem de ${serviceHeader.title}`" height="80" width="80">
+        <img :src="getIconURL(serviceHeader.image)" :alt="`Imagem de ${serviceHeader.title}`" height="80" width="80">
         <h2>{{ serviceHeader.title }}</h2>
         <p>{{ serviceHeader.description }}</p>
       </div>
@@ -38,7 +38,7 @@
 <script lang="ts">
 import { defineComponent, ref, onMounted } from 'vue';
 
-//Components
+//components
 import HeaderIcons from '../commomModalEls/HeaderIcons.vue';
 import TabelOfBenefits from './TabelOfBenefits.vue';
 import BenefitDescription from './BenefitDescription.vue';
@@ -46,10 +46,10 @@ import SideServiceInfo from './SideServiceInfo.vue';
 import ContactButton from './ContactButton.vue';
 import FooterNotes from '../commomModalEls/ServiceFooterNotes.vue';
 
-//Composables
-import { toggleHTMLOverflowY } from "@/composables/general";
+//composables
+import { getIconURL, toggleHTMLOverflowY } from "@/composables/general";
 
-//Stores
+//stores
 import serviceModalInfo from '@/stores/serviceModal';
 import marketingJSON from '@/data/mkt-services.json';
 import webJSON from '@/data/web-services.json';
@@ -120,12 +120,12 @@ export default defineComponent({
     const fillBenefitsTable = (benefitsArray:[string,string,boolean][]):void => {
       if(benefitsArray[benefitsArray.length - 1][2] !== true){showONGsDiscount.value = false};
       
-      const array:[string,string][] = Array.from(benefitsArray.filter(entry => {return entry[2] == true}).map((value, index) => {return [value[0],value[1]]}));
+      const array:[string,string][] = Array.from(benefitsArray.filter(entry => {return entry[2] == true}).map((value) => {return [value[0],value[1]]}));
       serviceBenefitsList.value = array;
     };
 
     const fillServiceSideInfoList = (infoArray:sideInfo):void => {
-      const array = Array.from(Object.entries(infoArray)).map((array,index) => {return array[1]}) as [string,string,number];
+      const array = Array.from(Object.entries(infoArray)).map((array) => {return array[1]}) as [string,string,number];
       serviceSideInfoList.value = array;
     };
 
@@ -151,6 +151,7 @@ export default defineComponent({
     };
 
     return {
+      getIconURL,
       dialogEl,
       modalInfo,
       serviceHeader,

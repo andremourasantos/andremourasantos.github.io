@@ -1,6 +1,6 @@
 <template>
   <div class="sideServiceInfo">
-    <img :src="require(`@/assets/icons/${sideInfoImage}.png`)" :alt="`Ícone de ${sideInfoImage}`" height="36" width="36">
+    <img :src="getIconURL(sideInfoImage)" :alt="`Ícone de ${sideInfoImage}`" height="36" width="36">
     <div>
       <h4>{{ sideInfoTitle }}</h4>
       <p v-if="sideInfoDescriptionType == 'Date'">Por volta de {{ sideInfoDescription }} dias úteis.</p>
@@ -11,7 +11,10 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue'
+import { defineComponent, ref } from 'vue';
+
+//composables
+import { getIconURL } from '@/composables/general';
 
 export default defineComponent({
   props: {
@@ -40,6 +43,7 @@ export default defineComponent({
     }
 
     return {
+      getIconURL,
       styledPriceNumber
     }
   },

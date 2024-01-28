@@ -27,7 +27,7 @@ import { defineComponent, ref, onMounted, onBeforeUnmount } from 'vue';
 import { PhTrophy, PhStar, PhGlobeStand } from '@phosphor-icons/vue';
 
 //data
-import recommendationsJSON from '@/data/recommendations.json'; 
+import recommendationsJSON from '@/data/recommendations.json';
 
 export default defineComponent({
   name: 'PresentationCard',
@@ -61,7 +61,7 @@ export default defineComponent({
     })
 
     //Change content functions
-    let startswitchPresentationInfo:number;
+    let startswitchPresentationInfo:NodeJS.Timeout;
     let switchDelay:number = 10000;
 
     const switchPresentationInfo = (slideID?:number):void => {
