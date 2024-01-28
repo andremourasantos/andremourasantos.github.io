@@ -9,12 +9,12 @@ Esse repositório guarda os arquivos do novo site desenvolvi, que pode ser acess
 _*Atualizado em outubro de 2023._
 
 <div align="center">
-  <img height="48" title="HTML5" src="./public/imagens/html5.png">
-  <img height="48" title="CSS3" src="./public/imagens/css3.png">
-  <img height="48" title="JavaScript" src="./public/imagens/js.png">
-  <img height="48" title="TypeScript" src="./public/imagens/ts.png">
-  <img height="48" title="VueJS 3" src="./public/imagens/vuejs.png">
-  <img height="48" title="Firebase Hosting" src="./public/imagens/firebase-hosting.png">
+  <img height="48" title="HTML5" src="data/imagens/html5.png">
+  <img height="48" title="CSS3" src="data/imagens/css3.png">
+  <img height="48" title="JavaScript" src="data/imagens/js.png">
+  <img height="48" title="TypeScript" src="data/imagens/ts.png">
+  <img height="48" title="VueJS 3" src="data/imagens/vuejs.png">
+  <img height="48" title="Firebase Hosting" src="data/imagens/firebase-hosting.png">
 </div>
 
 ---
@@ -37,17 +37,17 @@ _*Atualizado em janeiro de 2024._
 
 Veja abaixo a árvore de componentes do VueJs e também o fluxograma de lógica da aplicação, assim, você poderá ter um bom entendimento de como o projeto foi estruturado desde o começo para permitir uma fácil manutenção e adição de funcionalidades.
 
-<img title="Árvode de componentes do VueJS" src="./public/imagens/vuejs-tree.png">
-<img title="Fluxograma de lógica da aplicação" src="./public/imagens/logic-fluxogram.png">
+<img title="Árvode de componentes do VueJS" src="data/imagens/vuejs-tree.png">
+<img title="Fluxograma de lógica da aplicação" src="data/imagens/logic-fluxogram.png">
 
 ---
 
 ## Fotos do projeto
 
-_*Atualizado em outubro de 2023._
+_*Atualizado em janeiro de 2024._
 
-<img title="Fotos do site em sua estiliazção para telefone" src="./public/imagens/andremourasantos.com.br_(Samsung Galaxy A52s 5G).png">
-<img title="Fotos do site em sua estilização para computador" src="./public/imagens/andremourasantos.com.br_(Generic).png">
+<img title="Fotos do site em sua estiliazção para telefone" src="data/imagens/andremourasantos.com.br_(Samsung Galaxy A52s 5G).png">
+<img title="Fotos do site em sua estilização para computador" src="data/imagens/andremourasantos.com.br_(Generic).png">
 
 ---
 
@@ -57,5 +57,5 @@ _*Atualizado em outubro de 2023._
 
 O desempenho do site pode ser visto a partir de testes do [PageSpeed Insights ↗](https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fandremourasantos.com.br%2F).
 
-<img title="Resultados do teste do PageSpeed Insights para telefone" src="./public/imagens/pagespeed-insights-telefone.png">
-<img title="Resultados do teste do PageSpeed Insights para computador" src="./public/imagens/pagespeed-insights-computador.png">
+<img title="Resultados do teste do PageSpeed Insights para telefone" src="data/imagens/pagespeed-insights-telefone.png">
+<img title="Resultados do teste do PageSpeed Insights para computador" src="data/imagens/pagespeed-insights-computador.png">

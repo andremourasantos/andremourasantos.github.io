@@ -1,7 +1,7 @@
 [
   {
     "id": "servico-completo",
-    "show": true,
+    "show": false,
     "status": "Indisponível",
     "group": "Combo",
     "title": "Serviço completo",
@@ -28,7 +28,7 @@
   },
   {
     "id": "primeiros-passos",
-    "show": true,
+    "show": false,
     "status": "Indisponível",
     "group": "Combo",
     "title": "Primeiros passos",
@@ -51,60 +51,6 @@
     },
     "footerNotes": [
       "Os serviços de hospedagem e banco de dados são fornecidos pelo Firebase, que conta com sua própria política de preços."
-    ]
-  },
-  {
-    "id": "apresentacao-de-slides",
-    "show": false,
-    "status": "Indisponível",
-    "group": "Individual",
-    "title": "Apresentação de slides",
-    "image": "apresentacao-de-slides",
-    "description": "Transpareça profissionalismo e confiança com uma apresentação bem desenvolvida.",
-    "introduction": [
-      "Introdução."
-    ],
-    "tableOfBenefits": [
-      ["medalha", "Item", true],
-      ["medalha", "Item", true],
-      ["medalha", "Item", true],
-      ["medalha", "Item", true],
-      ["medalha", "Item", true],
-      ["desconto", "Preço reduzido para ONGs e ações sociais.", true]
-    ],
-    "serviceInfo": {
-      "deadline": ["calendario", "Data de entrega", 10],
-      "price": ["moeda", "Preço do serviço", 100]
-    },
-    "footerNotes": [
-      "Este serviço é realizado utilizando o Apresentações do Google (Google Slides), não o Microsoft PowerPoint (PowerPoint), contudo, você também receberá o arquivo em PDF."
-    ]
-  },
-  {
-    "id": "planilhas-de-marketing",
-    "show": false,
-    "status": "Indisponível",
-    "group": "Individual",
-    "title": "Planilhas avançadas",
-    "image": "planilhas-de-marketing",
-    "description": "Obtenha planilhas avançadas feitas sob-medida para o seu negócio.",
-    "introduction": [
-      "Introdução."
-    ],
-    "tableOfBenefits": [
-      ["medalha", "Item", true],
-      ["medalha", "Item", true],
-      ["medalha", "Item", true],
-      ["medalha", "Item", true],
-      ["medalha", "Item", true],
-      ["desconto", "Preço reduzido para ONGs e ações sociais.", true]
-    ],
-    "serviceInfo": {
-      "deadline": ["calendario", "Data de entrega", 5],
-      "price": ["moeda", "Preço do serviço", 100]
-    },
-    "footerNotes": [
-      "Este serviço é realizado utilizando o Planilhas do Google (Google Sheets/Apps Script), não o Microsoft Excel (Excel/VBA)."
     ]
   },
   {
@@ -248,10 +194,64 @@
     ]
   },
   {
+    "id": "apresentacao-de-slides",
+    "show": true,
+    "status": "Indisponível",
+    "group": "Ascensão",
+    "title": "Apresentação de slides",
+    "image": "apresentacao-de-slides",
+    "description": "Transpareça profissionalismo e confiança, sem estresse.",
+    "introduction": [
+      "Introdução."
+    ],
+    "tableOfBenefits": [
+      ["medalha", "Item", true],
+      ["medalha", "Item", true],
+      ["medalha", "Item", true],
+      ["medalha", "Item", true],
+      ["medalha", "Item", true],
+      ["desconto", "Preço reduzido para ONGs e ações sociais.", true]
+    ],
+    "serviceInfo": {
+      "deadline": ["calendario", "Data de entrega", 10],
+      "price": ["moeda", "Preço do serviço", 100]
+    },
+    "footerNotes": [
+      "Este serviço é realizado utilizando o Apresentações do Google (Google Slides), não o Microsoft PowerPoint (PowerPoint), contudo, você também receberá o arquivo em PDF."
+    ]
+  },
+  {
+    "id": "planilhas-de-marketing",
+    "show": true,
+    "status": "Indisponível",
+    "group": "Ascensão",
+    "title": "Planilhas avançadas",
+    "image": "planilhas-de-marketing",
+    "description": "Planilhas feitas sob-medida para o seu negócio.",
+    "introduction": [
+      "Introdução."
+    ],
+    "tableOfBenefits": [
+      ["medalha", "Item", true],
+      ["medalha", "Item", true],
+      ["medalha", "Item", true],
+      ["medalha", "Item", true],
+      ["medalha", "Item", true],
+      ["desconto", "Preço reduzido para ONGs e ações sociais.", true]
+    ],
+    "serviceInfo": {
+      "deadline": ["calendario", "Data de entrega", 5],
+      "price": ["moeda", "Preço do serviço", 100]
+    },
+    "footerNotes": [
+      "Este serviço é realizado utilizando o Planilhas do Google (Google Sheets/Apps Script), não o Microsoft Excel (Excel/VBA)."
+    ]
+  },
+  {
     "id": "gestao-de-anuncios",
     "show": true,
     "status": "Indisponível",
-    "group": "Individual",
+    "group": "Ascensão",
     "title": "Gestão de anúncios",
     "image": "gestao-de-anuncios",
     "description": "Gestão e gerenciamento de anúncios no Google e Meta Ads.",

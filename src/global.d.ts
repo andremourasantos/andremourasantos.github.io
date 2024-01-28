@@ -5,7 +5,7 @@ declare global {
     id:string,
     show:boolean,
     status:null | "Novo" | "Indisponível",
-    group:"Individual" | "Combo",
+    group:string,
     title:string,
     image:string,
     description:string,
@@ -17,6 +17,14 @@ declare global {
     },
     footerNotes:string[]
   } | undefined;
+
+  type ServiceInfoMKT = ServiceInfo & {
+    group: "Combo" | "Individual" | "Ascensão"
+  }
+
+  type ServiceInfoWEB = ServiceInfo & {
+    group: "Tudo-em-um" | "Individual"
+  }
 
   type ProjectInfo = {
     id:string,
@@ -40,7 +48,7 @@ declare global {
   } | undefined;
 
   type PresentationCardInfo = {
-    type: "Recomendação" | "Desenvolvimento Web" | "Marketing Digital",
+    type: "Recomendações" | "Desenvolvimento Web" | "Marketing Digital",
     source: "LinkedIn" | "Cliente",
     author: {
       name:string,

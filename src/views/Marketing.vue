@@ -1,22 +1,26 @@
 <template>
   <PageTitle :page-title="'Marketing Digital'" :page-description="'Tenha uma estratégia de Marketing confeccionada especificamente para as necessidades do seu negócio.'"/>
+
+  <PresentationCard id="presentationCard"/>
+
   <section id="servicesGroup">
-    <ServicesGroup :group-title="'Combos de serviços'" :group-description="'Economize tempo e dinheiro na hora de criar sua estratégia de Marketing.'">
+    <ServicesGroup v-if="comboServices.length !== 0" :group-title="'Combos de serviços'" :group-description="'Economize tempo e dinheiro na hora de criar sua estratégia de Marketing.'">
       <ServiceButton v-for="entry in comboServices" :key="entry.id" :service-image="entry.image" :service-title="entry.title" :service-description="entry.description" :service-id="entry.id" :service-tag="entry.status" :service-category="'Marketing'"/>
     </ServicesGroup>
     
-    <ServicesGroup :group-title="'Primeiros passos'" :group-description="'Você não precisa se sobrecarregar com o Marketing, vamos começar pequeno e desenvolver aos poucos.'">
+    <ServicesGroup v-if="individualServices.length !== 0" :group-title="'Primeiros passos'" :group-description="'Você não precisa se sobrecarregar com o Marketing, vamos começar pequeno e desenvolver aos poucos.'">
       <ServiceButton v-for="entry in individualServices" :key="entry.id" :service-image="entry.image" :service-title="entry.title" :service-description="entry.description" :service-id="entry.id" :service-tag="entry.status" :service-category="'Marketing'"/>
     </ServicesGroup>
 
-    <!-- <ServicesGroup :group-title="'Em ascensão'" :group-description="'Para você que já tem uma estratégia em andamento, vamos partir para a ação com estes serviços.'">
-      <ServiceButton v-for="entry in individualServices" :key="entry.id" :service-image="entry.image" :service-title="entry.title" :service-description="entry.description" :service-id="entry.id" :service-tag="entry.status" :service-category="'Marketing'"/>
-    </ServicesGroup> -->
+    <ServicesGroup v-if="ascensionServices.length !== 0" :group-title="'Em ascensão'" :group-description="'Para você que já tem uma estratégia em andamento, vamos subir o nível com estes serviços.'">
+      <ServiceButton v-for="entry in ascensionServices" :key="entry.id" :service-image="entry.image" :service-title="entry.title" :service-description="entry.description" :service-id="entry.id" :service-tag="entry.status" :service-category="'Marketing'"/>
+    </ServicesGroup>
   </section>
 </template>
 
 <script lang="ts">
 import { defineComponent, onMounted } from 'vue';
+import PresentationCard from '@/components/PresentationCard.vue';
 
 //Components
 import PageTitle from '@/components/PageTitle.vue';
@@ -30,12 +34,13 @@ import { filterServicesToShow, searchForURLParam, openServiceIDServiceModal } fr
 import servicesJSON from '@/data/mkt-services.json';
 
 export default defineComponent({
-  components: {PageTitle, ServicesGroup, ServiceButton},
+  components: {PageTitle, PresentationCard, ServicesGroup, ServiceButton},
   setup() {
-    let servicesToShow:NonNullable<ServiceInfo>[] = filterServicesToShow(servicesJSON as ServiceInfo[]);
+    let servicesToShow:NonNullable<ServiceInfoMKT>[] = filterServicesToShow(servicesJSON as ServiceInfo[]) as NonNullable<ServiceInfoMKT>[];
 
-    const individualServices:NonNullable<ServiceInfo>[] = servicesToShow.filter(entry => {return entry.group === 'Individual'});
-    const comboServices:NonNullable<ServiceInfo>[] = servicesToShow.filter(entry => {return entry.group === 'Combo'});
+    const comboServices = servicesToShow.filter(entry => {return entry.group === 'Combo'});
+    const individualServices = servicesToShow.filter(entry => {return entry.group === 'Individual'});
+    const ascensionServices = servicesToShow.filter(entry => {return entry.group === 'Ascensão'});
 
     onMounted(() => {
       const serviceIDURLParam = searchForURLParam('serviceID');
@@ -46,8 +51,9 @@ export default defineComponent({
     })
 
     return {
+      comboServices,
       individualServices,
-      comboServices
+      ascensionServices
     }
   },
 })
@@ -55,15 +61,9 @@ export default defineComponent({
 
 
 <style scoped>
-#gradient-center-left {
-  height: 718px !important;
-}
-
-#gradient-center-left img {
-  position: relative;
-  left: -150px;
-  top: -100px;
-  height: 850px;
-  width: 900px;
+#presentationCard {
+  margin-top: 64px;
+  margin-inline: auto;
+  max-width: 550px;
 }
 </style>

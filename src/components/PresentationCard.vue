@@ -5,13 +5,13 @@
         <component :is="item.icon" />
         <div>
           <h2>{{ item.type }}</h2>
-          <p v-if="item.type === 'Recomendação'">Via <a v-if="item.source === 'LinkedIn'" href="https://www.linkedin.com/in/andremourasantos/details/recommendations/?detailScreenTabIndex=0" target="_blank" rel="external nofollow noopener noreffer">{{ item.source }}</a><span v-if="item.source !== 'LinkedIn'">{{ item.source }}</span>.</p>
+          <p v-if="item.type === 'Recomendações'">Via <a v-if="item.source === 'LinkedIn'" href="https://www.linkedin.com/in/andremourasantos/details/recommendations/?detailScreenTabIndex=0" target="_blank" rel="external nofollow noopener noreffer">{{ item.source }}</a><span v-if="item.source !== 'LinkedIn'">{{ item.source }}</span>.</p>
         </div>
       </div>
 
       <div class="contentText">
         <p v-for="paragraph in item.text">"{{ paragraph }}"</p>
-        <p v-if="item.type === 'Recomendação' && item.author !== null" class="recommendationAuthor"><strong>{{ item.author.name }}</strong>, {{
+        <p v-if="item.type === 'Recomendações' && item.author !== null" class="recommendationAuthor"><strong>{{ item.author.name }}</strong>, {{
           item.author.job }}.</p>
       </div>
     </section>
@@ -115,7 +115,8 @@ export default defineComponent({
     const finalX = ref<number>(0);
 
     const touchingStart = (e:TouchEvent):void => {
-      e.preventDefault()
+      e.preventDefault();
+      clearInterval(startswitchPresentationInfo);
       initialX.value = e.touches[0].clientX;
     };
 
@@ -124,7 +125,13 @@ export default defineComponent({
     };
 
     const changeContentViaSwipe = (e:TouchEvent):void => {
-      if(Math.abs(initialX.value - finalX.value) < 100){return};
+      if(Math.abs(initialX.value - finalX.value) < 100){
+        startswitchPresentationInfo = setInterval(() => {
+          switchPresentationInfo();
+        }, switchDelay);
+
+        return;
+      };
       clearInterval(startswitchPresentationInfo);
 
       if(!((initialX.value - finalX.value) > 0)){
@@ -160,12 +167,18 @@ export default defineComponent({
     flex-direction: column;
     height: 320px;
     width: 100%;
-    max-width: 320px;
+    max-width: 600px;
     padding: 24px;
     border-radius: 24px;
     background-color: var(--colors-background);
     box-shadow: var(--neumorphism-inner_shadow);
   }
+
+    @media screen and (min-width: 425px) {
+      article {
+        height: 240px;
+      }
+    }
 
   .presentationCard {
     display: none;
@@ -197,10 +210,6 @@ export default defineComponent({
 
   .contentText p {
     margin-bottom: 8px;
-  }
-
-  .contentText p:nth-last-of-type(1) {
-    margin-bottom: 0px;
   }
   
   p.recommendationAuthor {
