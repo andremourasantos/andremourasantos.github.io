@@ -1,9 +1,9 @@
 <template>
   <button aria-label="Entrar em contato pelo WhatsApp" title="Entrar em contato pelo WhatsApp" @click="goToWhatsApp(), emitGtmEvent()">
-    <img src="@/assets/icons/aviao-de-papel.png" alt="Ícone de avião de papel" height="48" width="48">
+    <img src="@/assets/icons/whatsapp-logo.png" alt="Ícone de avião de papel" height="48" width="48">
     <div>
       <h4>Entre em contato</h4>
-      <p>Apresente suas ideias ou sane suas dúvidas pelo WhatsApp.</p>
+      <p>Vamos iniciar uma conversa pelo WhatsApp.</p>
     </div>
   </button>
 </template>
@@ -12,7 +12,8 @@
 import { defineComponent, ref } from 'vue';
 import { useGtm } from "@gtm-support/vue-gtm";
 
-//Stores
+//stores
+//@ts-ignore
 import serviceModalInfo from '@/stores/serviceModal';
 
 export default defineComponent({
@@ -27,18 +28,21 @@ export default defineComponent({
     const serviceInfo = ref(serviceModalInfo);
 
     const goToWhatsApp = ():void => {
-      const link = 'https://api.whatsapp.com/send/?phone=5541935009236&text=';
-      const message = `Olá, prazer!
-      
-Vi o serviço de *${props.serviceName.toLocaleLowerCase()}*, para ${serviceInfo.value.serviceCategory}, e gostaria de apresentar minha empresa:
-`;
+      const link:string = 'https://api.whatsapp.com/send/?phone=5541935009236&text=';
+      const message:Array<string[]> = [
+        ['Olá, prazer!'],
+        [`Vi o serviço de *${props.serviceName.toLocaleLowerCase()}*, para ${serviceInfo.value.serviceCategory}, e gostaria de saber mais sobre como funciona.`],
+        ['O que tenho em mente é:']
+      ]
 
-      window.open(link + encodeURIComponent(message), '_blank');
+      setTimeout(() => {
+        window.open(link + encodeURIComponent(message.join('\n\n')), '_blank');
+      }, 250);
     };
 
     const emitGtmEvent = () => {
       gtm?.trackEvent({
-        event: 'contact_button',
+        event: 'contact-button',
         action: 'Click',
         category: 'contactButton',
         serviceid: serviceInfo.value.serviceID,

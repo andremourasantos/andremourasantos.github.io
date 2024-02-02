@@ -5,7 +5,7 @@
         <component :is="item.icon" />
         <div>
           <h2>{{ item.type }}</h2>
-          <p v-if="item.type === 'Recomendações'">Via <a v-if="item.source === 'LinkedIn'" href="https://www.linkedin.com/in/andremourasantos/details/recommendations/?detailScreenTabIndex=0" target="_blank" rel="external nofollow noopener noreffer">{{ item.source }}</a><span v-if="item.source !== 'LinkedIn'">{{ item.source }}</span>.</p>
+          <p v-if="item.type === 'Recomendações'">Via <a v-if="item.source === 'LinkedIn'" href="https://www.linkedin.com/in/andremourasantos/details/recommendations/?detailScreenTabIndex=0" target="_blank" rel="external nofollow noopener noreffer" title="Visualizar recomendação no LinkedIn">{{ item.source }}</a><span v-if="item.source !== 'LinkedIn'">{{ item.source }}</span>.</p>
         </div>
       </div>
 
@@ -27,6 +27,7 @@ import { defineComponent, ref, onMounted, onBeforeUnmount } from 'vue';
 import { PhTrophy, PhStar, PhGlobeStand } from '@phosphor-icons/vue';
 
 //data
+//@ts-ignore
 import recommendationsJSON from '@/data/recommendations.json';
 
 export default defineComponent({

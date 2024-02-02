@@ -28,6 +28,18 @@
     "type": "Recomendações",
     "source": "LinkedIn",
     "author": {
+      "name": "Cássio Pisseti",
+      "job": "CEO em Engepoli"
+    },
+    "icon": "PhTrophy",
+    "text": [
+      "Profissional excelente e responsável, sou muito contente em trabalhar com o Andre [sic]."
+    ]
+  },
+  {
+    "type": "Recomendações",
+    "source": "LinkedIn",
+    "author": {
       "name": "Humberto Santos",
       "job": "CEO em Campos Dealer"
     },
