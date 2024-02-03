@@ -23,8 +23,12 @@
       </div>
       <div>
         <h3>Informações de contato</h3>
-        <p>Converse diretamente comigo, disponível de Segunda a Sábado.</p>
-        <ContactButton v-if="serviceHeader !== null" :service-name="serviceHeader.title"/>
+        <p>Entre em contato para apresentar a sua ideia e obter um orçamento para execução do seu projeto. Escolha dentre as opções abaixo para começar.</p>
+        <div id="contactInfo">
+          <ContactButton v-if="serviceHeader !== null" :service-name="serviceHeader.title" :button-icon="'whatsapp-logo'"/>
+          <ContactButton v-if="serviceHeader !== null" :service-name="serviceHeader.title" :button-icon="'email'"/>
+          <!-- <ContactButton v-if="serviceHeader !== null" :service-name="serviceHeader.title" :button-icon="'google-meet-logo'"/> -->
+        </div>
       </div>
       <FooterNotes :footer-notes="serviceFooterNotes">
         <p v-if="showONGsDiscount">O valor cobrado para organizações não governamentais (OGNs) ou ações sociais/comunitárias de pequeno porte pode ser combinado abaixo dessa faixa.</p>
@@ -213,6 +217,21 @@ export default defineComponent({
     display: flex;
     flex-direction: column;
     gap: 16px;
+  }
+
+  #contactInfo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 16px;
+  }
+
+  @media screen and (min-width: 425px) {
+    #contactInfo {
+      gap: 32px;
+    }
   }
 
   @media screen and (min-width: 425px) {

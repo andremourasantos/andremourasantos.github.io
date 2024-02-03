@@ -62,10 +62,6 @@ export default defineComponent({
     margin: 16px 0px;
   }
 
-  h4 {
-    margin-bottom: 2px;
-  }
-
   @media screen and (min-width: 425px) {
     .sideServiceInfo {
       flex-direction: column;
