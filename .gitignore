@@ -26,3 +26,5 @@ pnpm-debug.log*
 *.sln
 *.sw?
 .firebase/hosting.ZGlzdA.cache
+firestore.rules
+storage.rules
