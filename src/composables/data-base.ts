@@ -1,9 +1,14 @@
 import { app } from '@/firebase';
-import { getFirestore, connectFirestoreEmulator, doc, setDoc } from 'firebase/firestore';
+import { initializeFirestore, persistentMultipleTabManager, persistentLocalCache, connectFirestoreEmulator, doc, setDoc, serverTimestamp, collection, query, where, orderBy, getDocs, getDocsFromCache } from 'firebase/firestore';
 
 app;
-const db = getFirestore();
+const db = initializeFirestore(app, { 
+  localCache: persistentLocalCache({
+    tabManager: persistentMultipleTabManager()
+  }),
+ });
 
+// dev environment script
 if(import.meta.env.DEV){
   var sessionStorageKeyForEmulatorCheck:string = 'EmulatorsConnection';
   console.warn('Connecting with Firestore Emulator...');
@@ -47,7 +52,6 @@ async function testFirestoreEmulatorConnection() {
   })
 }
 
-// creating the collections for the emulators
 import recommendationsJSON from '@/data/recommendations.json';
 import marketingJSON from '@/data/mkt-services.json';
 import webJSON from '@/data/web-services.json';
@@ -95,14 +99,15 @@ async function createComplementaryServicesCollection(): Promise<void> {
         group: info.group,
         image: info.image,
         title: info.title,
-        description: info.description
+        description: info.description,
+        timeStamp: serverTimestamp()
       });
     };
 
     console.log('OK.');
   } catch (error) {
     console.error('Error while populating Marketing services:', error);
-    throw error; // Rethrow the error to handle it outside
+    throw error;
   }
 
   try {
@@ -119,14 +124,15 @@ async function createComplementaryServicesCollection(): Promise<void> {
         group: info.group,
         image: info.image,
         title: info.title,
-        description: info.description
+        description: info.description,
+        timeStamp: serverTimestamp()
       });
     };
 
     console.log('OK.');
   } catch (error) {
     console.error('Error while populating Web services:', error);
-    throw error; // Rethrow the error to handle it outside
+    throw error;
   }
 }
 
@@ -197,9 +203,79 @@ async function createServicesCollection():Promise<void> {
 }
 
 // getting data from the cloud
- 
+function setCookieWithCacheToCloudSyncedDate():void {
+  var currentDate = new Date();
 
-// data
+  var expirationDate = new Date(currentDate.getTime() + 7 * 24 * 60 * 60 * 1000); // 7 days in milliseconds
+
+  var expiresUTC = expirationDate.toUTCString();
+
+  document.cookie = "cacheSyncedWithCloud=true; expires=" + expiresUTC + "; path=/";
+}
+
+function getCookieValue(cookieName:string):string | 'Not found' {
+  const cookies = document.cookie.split(';');
+
+  for (const entry of cookies) {
+    const cookie = entry.trim();
+
+    if(cookie.split('=')[0] === cookieName){
+      return cookie.split('=')[1];
+    }
+  }
+
+  return 'Not found';
+}
+
+function checkNeedToSyncCacheWithCloud():boolean {
+  if(getCookieValue('cacheSyncedWithCloud') === 'true'){
+    if(import.meta.env.DEV){
+      console.log('Cache already synced with Cloud.');
+    };
+
+    return false;
+  } else {
+    if(import.meta.env.DEV){
+      console.warn('Cache need to be synced with Cloud.');
+    };
+
+    return true;
+  }
+}
+
+export async function getPageInfoForServices(serviceCategory:ServiceCategory):Promise<TinyServiceInfo[]> {
+  const q = query(collection(db, `services/pageInfo/${serviceCategory}`), where('show', '==', true), orderBy("timeStamp", "asc"));
+
+  const cachedSnapshot = await getDocsFromCache(q);
+  const servicesArray:TinyServiceInfo[] = [];
+  
+  if(checkNeedToSyncCacheWithCloud() || cachedSnapshot.empty){
+    if(import.meta.env.DEV){console.log('Information fetched from the server.')}
+
+    const snapshot = await getDocs(q);
+
+    snapshot.forEach(doc => {
+      // doc.data() is never undefined for query doc snapshots
+      const docData = doc.data() as TinyServiceInfo;
+  
+      servicesArray.push({id: doc.id, ...docData});
+    });
+    
+    setCookieWithCacheToCloudSyncedDate();
+  } else {
+    if(import.meta.env.DEV){console.log('Information fetched from cache.')}
+
+    cachedSnapshot.forEach(doc => {
+      const docData = doc.data() as TinyServiceInfo;
+  
+      servicesArray.push({id: doc.id, ...docData});
+    })
+  }
+
+  return servicesArray;
+}
+
+// old code
 export async function checkServiceExistence(serviceID:string):Promise<"exists" | "does_not" | "unavailable"> {
   const serviceCategory = location.pathname.includes('marketing-digital') ? 'Marketing' : 'Web';
   let serviceInfo:ServiceInfo;

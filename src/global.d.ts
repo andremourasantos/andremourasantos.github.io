@@ -1,6 +1,8 @@
 export {}
 
 declare global {
+  type ServiceCategory = "marketing" | "web";
+
   type ServiceInfo = {
     id:string,
     show:boolean,
@@ -23,6 +25,24 @@ declare global {
   }
 
   type ServiceInfoWEB = ServiceInfo & {
+    group: "Tudo-em-um" | "Individual"
+  }
+
+  type TinyServiceInfo = {
+    id:string,
+    show:boolean,
+    status:null | "Novo" | "Indisponível",
+    group:string,
+    image:string,
+    title:string,
+    description:string,
+  }
+
+  type TinyServiceInfoMKT = TinyServiceInfo & {
+    group: "Combo" | "Individual" | "Ascensão"
+  }
+
+  type TinyServiceInfoWEB = TinyServiceInfo & {
     group: "Tudo-em-um" | "Individual"
   }
 

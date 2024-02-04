@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section ref="section">
     <div>
       <h2>{{ groupTitle }}</h2>
       <p>{{ groupDescription }}</p>
@@ -13,7 +13,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, onMounted, ref, watch } from 'vue'
 
 export default defineComponent({
   props: {
@@ -24,11 +24,31 @@ export default defineComponent({
     'groupDescription': {
       required: true,
       type: String
-    }
+    },
+    'componentStatus': {
+      required: true,
+      type: String as () => 'Loading' | 'Loaded'
+    } 
   },
   setup(props) {
-    
-  },
+    const section = ref<HTMLElement | null>();
+
+    onMounted(() => {
+      if(props.componentStatus === 'Loading'){
+        section.value.classList.add('loading');
+      }
+    })
+
+    watch(() => props.componentStatus, (newValue) => {
+      if(newValue === 'Loaded'){
+        section.value.classList.remove('loading');
+      }
+    })
+
+    return {
+      section
+    }
+  }
 })
 </script>
 
@@ -43,6 +63,10 @@ export default defineComponent({
     padding: 32px 24px 24px 24px;
     background-color: var(--colors-background);
     box-shadow: var(--neumorphism-inner_shadow);
+  }
+
+  .loading * {
+    font-family: var(--font-loading);
   }
 
   h2 {
