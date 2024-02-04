@@ -15,11 +15,11 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import router from '@/router';
 import { useGtm } from '@gtm-support/vue-gtm';
 
-//composables
-import { getIconURL, openServiceIDServiceModal } from '@/composables/general';
-import router from '@/router';
+// composables
+import { getIconURL, openServiceModal } from '@/composables/general';
 
 export default defineComponent({
   props: {
@@ -45,7 +45,7 @@ export default defineComponent({
     },
     'serviceCategory': {
       required: true,
-      type: String as () => 'Marketing' | 'Web'
+      type: String as () => ServiceCategory
     },
     'serviceButtonEnviroment': {
       required: false,
@@ -63,13 +63,13 @@ export default defineComponent({
           break;
       
         default:
-          openModal(serviceId);
+          openModal();
           break;
       }
     };
 
     const goToService = (serviceId:string):void => {
-      const page = props.serviceCategory === 'Marketing' ? 'marketing' : 'webDev';
+      const page = props.serviceCategory === 'marketing' ? 'marketing' : 'webDev';
       router.push({name: page, query:{
         serviceID: serviceId,
         'utm_source': 'website',
@@ -77,8 +77,8 @@ export default defineComponent({
       }})
     }
 
-    const openModal = (serviceId:string):void => {
-      openServiceIDServiceModal(serviceId, props.serviceCategory);
+    const openModal = ():void => {
+      openServiceModal(props.serviceId, props.serviceCategory);
     };
 
     const emitGtmEvent = (serviceId:string) => {

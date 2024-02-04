@@ -22,7 +22,7 @@
        "Além disso, os relatórios automatizados mantém o cliente informado sobre o desempenho do site e das campanhas de anúncios realizadas, permitindo uma visão holística, obtendo insights sobre quais serviços e consultórios são os mais buscados e por quem, além de auxiliar na identificação de novas oportunidades de melhorias."
     ],
     "relatedServices": {
-      "servicesID": [["Web", "site-institucional"], ["Web", "relatorios-web"], ["Marketing", "estrategia-de-anuncios"]]
+      "servicesID": [["web", "site-institucional"], ["web", "relatorios-web"], ["marketing", "estrategia-de-anuncios"]]
     },
     "footerNotes": ["Este projeto foi realizado entre 2022 e 2023."]
   },
@@ -49,7 +49,7 @@
        "Este novo site, que é o que você está vendo agora, foi desenvolvido com o ápice das minhas habilidades no momento, utilizando as tecnologias mais avançadas que pude dominar para a confecção de um produto simples e intuitivo, visualmente atraente, acessível e com bom desempenho. Tenho orgulho de apresentar ao mundo a minha criação e estarei sempre a procure de novas formas de otimização e novas funcionalidades úteis para a experiência do usuário."
     ],
     "relatedServices": {
-      "servicesID": [["Web", "criacao-de-sites"], ["Web", "design-de-sites"], ["Web", "relatorios-web"]]
+      "servicesID": [["web", "criacao-de-sites"], ["web", "design-de-sites"], ["web", "relatorios-web"]]
     },
     "footerNotes": ["Este projeto se iniciou em 2021 e permanece ativo."]
   },

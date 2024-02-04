@@ -5,6 +5,7 @@
       <p>{{ groupDescription }}</p>
     </div>
     <article>
+      <FlippingLoader v-if="componentStatus === 'Loading'"/>
       <slot>
 
       </slot>
@@ -13,9 +14,13 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, ref, watch } from 'vue'
+import { defineComponent, onMounted, ref, watch } from 'vue';
+
+// components
+import FlippingLoader from '@/components/FlippingLoader.vue';
 
 export default defineComponent({
+  components: {FlippingLoader},
   props: {
     'groupTitle': {
       required: true,
@@ -26,8 +31,9 @@ export default defineComponent({
       type: String
     },
     'componentStatus': {
-      required: true,
-      type: String as () => 'Loading' | 'Loaded'
+      required: false,
+      type: String as () => 'Loading' | 'Loaded',
+      default: 'Loaded'
     } 
   },
   setup(props) {
@@ -67,6 +73,7 @@ export default defineComponent({
 
   .loading * {
     font-family: var(--font-loading);
+    color: var(--font_color-loading);
   }
 
   h2 {
@@ -80,6 +87,7 @@ export default defineComponent({
   section > article {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 24px;
   }
 

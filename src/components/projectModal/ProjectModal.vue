@@ -45,7 +45,7 @@ import ServiceFooterNotes from '../commomModalEls/ServiceFooterNotes.vue';
 
 //composables
 import { getImageURL, toggleHTMLOverflowY } from '@/composables/general';
-import { checkServiceExistenceV2, getServiceInfo } from '@/composables/data-base';
+import { checkServiceExistenceV3, getPageInfoForIndividualService } from '@/composables/data-base';
 
 //data
 import projectsJSON from '@/data/projects.json';
@@ -65,7 +65,7 @@ export default defineComponent({
     const images1And2 = ref<[string, string]>(["", ""]);
     const developmentText = ref<string[]>([""]);
     const conclusionText = ref<string[]>([""]);
-    const relatedServices = ref<[NonNullable<ServiceInfo>,"Marketing" | "Web"][] | null>(null);
+    const relatedServices = ref<[NonNullable<TinyServiceInfo>, ServiceCategory][] | null>(null);
     const footerNotes = ref<string[] | null>(null);
     const projectInfo = ref<ProjectInfo | null>(null);
 
@@ -117,23 +117,23 @@ export default defineComponent({
       conclusionText.value = text;
     };
 
-    const fillRelatedServices = async (servicesArray: ["Marketing" | "Web", string][]):Promise<void> => {
+    const fillRelatedServices = async (servicesArray: [ServiceCategory, string][]):Promise<void> => {
       const filteredServices = await Promise.all(servicesArray.map(async (array) => {
-        if (await checkServiceExistenceV2(array[1], array[0]) !== 'does_not') {
+        if (await checkServiceExistenceV3(array[1], array[0]) !== 'does_not') {
           return array;
         }
       }));
 
-      const servicesToShow = filteredServices.filter(Boolean) as ["Marketing" | "Web", string][];
+      const servicesToShow = filteredServices.filter(Boolean) as [ServiceCategory, string][];
 
       relatedServices.value = [];
-      servicesToShow.forEach((service) => {
-        getServiceInfo(service[1], service[0])
+      servicesToShow.forEach(async (service) => {
+        await getPageInfoForIndividualService(service[0], service[1])
           .then(res => {
-            relatedServices.value?.push([res as NonNullable<ServiceInfo>, service[0]]);
+            relatedServices.value.push([res as NonNullable<TinyServiceInfo>, service[0]])
           })
           .catch(error => {
-            console.error(error);
+            console.log(error);
           })
       })
     };

@@ -12,6 +12,27 @@ declare global {
     image:string,
     description:string,
     introduction:string[],
+    tableOfBenefits:ServiceTableOfBenefits[],
+    serviceInfo: {
+      deadline:[string,string,number],
+      price:[string,string,number]
+    },
+    footerNotes:string[]
+  } | undefined;
+
+  type ServiceTableOfBenefits = {
+    col1: string; col2: string; col3: boolean
+  }
+
+  type ServiceInfoJSON = {
+    id:string,
+    show:boolean,
+    status:null | "Novo" | "Indisponível",
+    group:string,
+    title:string,
+    image:string,
+    description:string,
+    introduction:string[],
     tableOfBenefits:[string,string,boolean][],
     serviceInfo: {
       deadline:[string,string,number],
@@ -62,7 +83,7 @@ declare global {
     image2:string,
     conclusionText: string[],
     relatedServices: {
-      servicesID: ["Marketing" | "Web",string][]
+      servicesID: [ServiceCategory,string][]
     } | null,
     footerNotes:string[]
   } | undefined;

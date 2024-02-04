@@ -1,12 +1,12 @@
 import { app } from '@/firebase';
-import { initializeFirestore, persistentMultipleTabManager, persistentLocalCache, connectFirestoreEmulator, doc, setDoc, serverTimestamp, collection, query, where, orderBy, getDocs, getDocsFromCache } from 'firebase/firestore';
+import { initializeFirestore, persistentMultipleTabManager, persistentLocalCache, connectFirestoreEmulator, doc, setDoc, serverTimestamp, collection, query, where, orderBy, getDocs, getDocsFromCache, getDoc, getDocFromCache } from 'firebase/firestore';
 
 app;
 const db = initializeFirestore(app, { 
   localCache: persistentLocalCache({
     tabManager: persistentMultipleTabManager()
   }),
- });
+})
 
 // dev environment script
 if(import.meta.env.DEV){
@@ -15,7 +15,10 @@ if(import.meta.env.DEV){
   connectFirestoreEmulator(db, '0.0.0.0', 8080);
   testFirestoreEmulatorConnection();
 }
-
+/**
+ * Checks if the current session indicates an emulator connection is true.
+ * @returns {boolean} Returns true if the emulator session connection is true, otherwise returns false.
+ */
 function checkIfEmulatorSessionConnectionIsTrue():boolean {
   if(sessionStorage.getItem(sessionStorageKeyForEmulatorCheck) === 'true') {
     return true;
@@ -24,6 +27,12 @@ function checkIfEmulatorSessionConnectionIsTrue():boolean {
   }
 }
 
+/**
+ * Tests the connection to the Firestore Emulator.
+ * If the emulator session connection is already marked as true, logs a message indicating the connection is already OK.
+ * If not, attempts to establish a connection to the Firestore Emulator, sets the session connection to true upon success,
+ * and creates required collections on the emulator.
+ */
 async function testFirestoreEmulatorConnection() {
   if(checkIfEmulatorSessionConnectionIsTrue()){
     return console.log('Connection with Firestore Emulator already marked as Ok.');
@@ -57,6 +66,10 @@ import marketingJSON from '@/data/mkt-services.json';
 import webJSON from '@/data/web-services.json';
 import projectsJSON from '@/data/projects.json';
 
+/**
+ * Creates the recommendations collection in Firestore based on the data provided in the recommendationsJSON object.
+ * @returns {Promise<void>} Returns a promise that resolves when the collection creation is complete.
+ */
 async function createRecommendationsCollection():Promise<void> {
   console.warn('Creating recommendations collection...');
 
@@ -79,6 +92,10 @@ async function createRecommendationsCollection():Promise<void> {
   })
 }
 
+/**
+ * Creates the complementary services collection in Firestore based on the data provided in the marketingJSON and webJSON objects.
+ * @returns {Promise<void>} Returns a promise that resolves when the collection creation and population are complete.
+ */
 async function createComplementaryServicesCollection(): Promise<void> {
   console.warn('Creating complementary services collection...');
 
@@ -89,7 +106,7 @@ async function createComplementaryServicesCollection(): Promise<void> {
     console.warn('Populating with Marketing related services...');
 
     for (const [index, entry] of Object.entries(marketingJSON)) {
-      const info: ServiceInfoMKT = entry as ServiceInfoMKT;
+      const info: ServiceInfoJSON = entry as ServiceInfoJSON;
 
       const ref = doc(db, docRefPath + 'marketing', entry.id);
       await setDoc(ref, {
@@ -114,7 +131,7 @@ async function createComplementaryServicesCollection(): Promise<void> {
     console.warn('Populating with Web related services...');
 
     for (const [index, entry] of Object.entries(webJSON)) {
-      const info: ServiceInfoWEB = entry as ServiceInfoWEB;
+      const info: ServiceInfoJSON = entry as ServiceInfoJSON;
 
       const ref = doc(db, docRefPath + 'web', entry.id);
       await setDoc(ref, {
@@ -136,6 +153,10 @@ async function createComplementaryServicesCollection(): Promise<void> {
   }
 }
 
+/**
+ * Creates the services collection in Firestore based on the data provided in the marketingJSON and webJSON objects.
+ * @returns {Promise<void>} Returns a promise that resolves when the collection creation and population are complete.
+ */
 async function createServicesCollection():Promise<void> {
   console.warn('Creating services collection...');
 
@@ -144,7 +165,7 @@ async function createServicesCollection():Promise<void> {
 
   console.warn('Populating with Marketing related services...');
   for (const [index, entry] of Object.entries(marketingJSON)) {
-    const info:ServiceInfoMKT = entry as ServiceInfoMKT;
+    const info:ServiceInfoJSON = entry as ServiceInfoJSON;
 
     // flatten tableOfBenefits
     const flattenedTableOfBenefits = info.tableOfBenefits.map(([col1, col2, col3]) => ({ col1, col2, col3 }));
@@ -172,7 +193,7 @@ async function createServicesCollection():Promise<void> {
 
   console.warn('Populating with Web related services...');
   for (const [index, entry] of Object.entries(webJSON)) {
-    const info:ServiceInfoWEB = entry as ServiceInfoWEB;
+    const info:ServiceInfoJSON = entry as ServiceInfoJSON;
 
     // flatten tableOfBenefits
     const flattenedTableOfBenefits = info.tableOfBenefits.map(([col1, col2, col3]) => ({ col1, col2, col3 }));
@@ -203,6 +224,11 @@ async function createServicesCollection():Promise<void> {
 }
 
 // getting data from the cloud
+/**
+ * Sets a cookie to mark the cache as synced with the cloud, with an expiration date set to 7 days from the current date.
+ * The cookie will be valid across the entire website.
+ * @returns {void} This function does not return anything.
+ */
 function setCookieWithCacheToCloudSyncedDate():void {
   var currentDate = new Date();
 
@@ -213,6 +239,11 @@ function setCookieWithCacheToCloudSyncedDate():void {
   document.cookie = "cacheSyncedWithCloud=true; expires=" + expiresUTC + "; path=/";
 }
 
+/**
+ * Retrieves the value of the specified cookie by its name.
+ * @param {string} cookieName - The name of the cookie to retrieve.
+ * @returns {string | 'Not found'} Returns the value of the cookie if found, otherwise returns 'Not found'.
+ */
 function getCookieValue(cookieName:string):string | 'Not found' {
   const cookies = document.cookie.split(';');
 
@@ -227,6 +258,10 @@ function getCookieValue(cookieName:string):string | 'Not found' {
   return 'Not found';
 }
 
+/**
+ * Checks if there is a need to synchronize the cache with the cloud by examining the value of the 'cacheSyncedWithCloud' cookie.
+ * @returns {boolean} Returns true if the cache needs to be synced with the cloud, otherwise returns false.
+ */
 function checkNeedToSyncCacheWithCloud():boolean {
   if(getCookieValue('cacheSyncedWithCloud') === 'true'){
     if(import.meta.env.DEV){
@@ -243,6 +278,11 @@ function checkNeedToSyncCacheWithCloud():boolean {
   }
 }
 
+/**
+ * Retrieves page information for services of the specified service category.
+ * @param {ServiceCategory} serviceCategory - The category of services to retrieve page information for.
+ * @returns {Promise<TinyServiceInfo[]>} Returns a promise that resolves with an array of TinyServiceInfo objects representing the page information for the services.
+ */
 export async function getPageInfoForServices(serviceCategory:ServiceCategory):Promise<TinyServiceInfo[]> {
   const q = query(collection(db, `services/pageInfo/${serviceCategory}`), where('show', '==', true), orderBy("timeStamp", "asc"));
 
@@ -275,48 +315,112 @@ export async function getPageInfoForServices(serviceCategory:ServiceCategory):Pr
   return servicesArray;
 }
 
-// old code
-export async function checkServiceExistence(serviceID:string):Promise<"exists" | "does_not" | "unavailable"> {
-  const serviceCategory = location.pathname.includes('marketing-digital') ? 'Marketing' : 'Web';
-  let serviceInfo:ServiceInfo;
+/**
+ * Retrieves page information for an individual service of the specified service category.
+ * @param {ServiceCategory} serviceCategory - The category of the service to retrieve page information for.
+ * @param {string} serviceID - The ID of the individual service to retrieve page information for.
+ * @returns {Promise<TinyServiceInfo>} Returns a promise that resolves with a TinyServiceInfo object representing the page information for the individual service.
+ */
+export async function getPageInfoForIndividualService(serviceCategory:ServiceCategory, serviceID:string):Promise<TinyServiceInfo> {
+  const docRef = doc(db, `services/pageInfo/${serviceCategory}`, serviceID);
+  let cachedVersionExists:boolean;
+  let serviceInfo:TinyServiceInfo;
+    
+  try {
+    const cachedSnapshot = await getDocFromCache(docRef);
 
-  if(serviceCategory === 'Marketing') {
-    serviceInfo = marketingJSON.find(obj => {return obj.id == serviceID}) as ServiceInfo;
+    if(cachedSnapshot.data() === undefined){
+      cachedVersionExists = false;
+      throw new Error()
+    } else {
+      serviceInfo = cachedSnapshot.data() as TinyServiceInfo;
+      cachedVersionExists = true;
+    }
+  } catch (error) {
+    const snapshot = await getDoc(docRef);
+
+    serviceInfo = snapshot.data() as TinyServiceInfo;
+  }
+  
+  return serviceInfo;
+}
+
+// getting data for the modal
+/**
+ * Checks the existence and availability of a service based on its ID and category.
+ * @param {string} serviceID - The ID of the service to check.
+ * @param {ServiceCategory} serviceCategory - The category of the service to check.
+ * @returns {Promise<"exists" | "does_not" | "unavailable">} Returns a promise that resolves with a string indicating the existence and availability status of the service.
+ */
+export async function checkServiceExistenceV3(serviceID:string, serviceCategory:ServiceCategory):Promise<"exists" | "does_not" | "unavailable"> {
+  let serviceInfo:ServiceInfo;
+  const docRef = doc(db, `services/pageInfo/${serviceCategory}`, serviceID);
+
+  const cachedSnapshot = await getDocFromCache(docRef);
+  
+  if(checkNeedToSyncCacheWithCloud() || cachedSnapshot.data() === undefined){
+    const cloudSnapshot = await getDoc(docRef);
+
+    serviceInfo = cloudSnapshot.data() as ServiceInfo;
   } else {
-    serviceInfo = webJSON.find(obj => {return obj.id == serviceID}) as ServiceInfo;
+    serviceInfo = cachedSnapshot.data() as ServiceInfo;
   }
 
-  return new Promise((resolve) => {
+  return new Promise(resolve => {
     if(serviceInfo === undefined){
+      alert('Desculpe, ocorreu um erro ao recuperar as informações sobre este serviço.');
       return resolve('does_not');
     } else if (serviceInfo.status === 'Indisponível') {
+      alert('Desculpe, este serviço não está disponível no momento.');
       return resolve('unavailable');
     } else {
       return resolve('exists');
     }
-  });
-};
+  })
+}
 
-export async function checkServiceExistenceV2(serviceId:string, serviceCategory:"Marketing" | "Web"):Promise<"exists" | "does_not" | "unavailable"> {
+/**
+ * Retrieves modal information for services of the specified service category and service ID.
+ * @param {ServiceCategory} serviceCategory - The category of the service to retrieve modal information for.
+ * @param {string} serviceID - The ID of the service to retrieve modal information for.
+ * @returns {Promise<ServiceInfo>} Returns a promise that resolves with a ServiceInfo object representing the modal information for the service.
+ */
+export async function getModalInfoForServices(serviceCategory:ServiceCategory, serviceID:string):Promise<ServiceInfo> {
+  const docRef = doc(db, `services/modalInfo/${serviceCategory}`, serviceID);
+
+  let cachedVersionExists:boolean;
   let serviceInfo:ServiceInfo;
 
-  if(serviceCategory === 'Marketing') {
-    serviceInfo = marketingJSON.find(obj => {return obj.id == serviceId}) as ServiceInfo;
-  } else {
-    serviceInfo = webJSON.find(obj => {return obj.id == serviceId}) as ServiceInfo;
+  try {
+    const cachedSnapshot = await getDocFromCache(docRef);
+    
+    if(cachedSnapshot.data() === undefined){throw new Error()}
+
+    serviceInfo = cachedSnapshot.data() as ServiceInfo;
+    cachedVersionExists = true;
+  } catch (error) {
+    cachedVersionExists = false;
   }
 
-  return new Promise((resolve) => {
-    if(serviceInfo === undefined){
-      return resolve('does_not');
-    } else if (serviceInfo.status === 'Indisponível') {
-      return resolve('unavailable')
-    } else {
-      return resolve('exists');
-    }
-  });
-};
+  if(!cachedVersionExists){
+    const snapshot = await getDoc(docRef);
 
+    serviceInfo = snapshot.data() as ServiceInfo;
+  }
+
+  if(import.meta.env.DEV){
+    console.log('Cached version of modal exists: ', cachedVersionExists);
+  }
+
+  return serviceInfo;
+}
+
+// offline code
+/**
+ * Checks the existence of a project based on its ID.
+ * @param {string} projectId - The ID of the project to check.
+ * @returns {Promise<boolean>} Returns a promise that resolves with a boolean value indicating whether the project exists.
+ */
 export async function checkProjectExistence(projectId:string):Promise<boolean> {
   let projectInfo:ProjectInfo = projectsJSON.find(obj => {return obj.id === projectId}) as ProjectInfo;
 
@@ -327,22 +431,4 @@ export async function checkProjectExistence(projectId:string):Promise<boolean> {
       return resolve(false);
     }
   });
-};
-
-export async function getServiceInfo(serviceId:string, serviceCategory:"Marketing" | "Web"):Promise<ServiceInfo> {
-  let serviceInfo:ServiceInfo | undefined;
-
-  if(serviceCategory === 'Marketing') {
-    serviceInfo = marketingJSON.find(obj => {return obj.id == serviceId}) as ServiceInfo;
-  } else {
-    serviceInfo = webJSON.find(obj => {return obj.id == serviceId}) as ServiceInfo;
-  }
-
-  return new Promise<ServiceInfo>((resolve, reject) => {
-    if(serviceInfo !== undefined){
-      return resolve(serviceInfo);
-    } else {
-      return reject('Serviço não encontrado');
-    }
-  })
-};
+}
