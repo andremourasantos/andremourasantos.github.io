@@ -27,7 +27,6 @@ import { defineComponent, ref, onMounted, onBeforeUnmount } from 'vue';
 import { PhTrophy, PhStar, PhGlobeStand } from '@phosphor-icons/vue';
 
 //data
-//@ts-ignore
 import recommendationsJSON from '@/data/recommendations.json';
 
 export default defineComponent({

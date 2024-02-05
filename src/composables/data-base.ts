@@ -1,5 +1,5 @@
 import { app } from '@/firebase';
-import { initializeFirestore, persistentMultipleTabManager, persistentLocalCache, connectFirestoreEmulator, doc, setDoc, serverTimestamp, collection, query, where, orderBy, getDocs, getDocsFromCache, getDoc, getDocFromCache } from 'firebase/firestore';
+import { initializeFirestore, persistentMultipleTabManager, persistentLocalCache, connectFirestoreEmulator, doc, setDoc, serverTimestamp, collection, query, where, orderBy, getDocs, getDocsFromCache, getDoc, getDocFromCache, Timestamp } from 'firebase/firestore';
 
 app;
 const db = initializeFirestore(app, { 
@@ -151,6 +151,11 @@ async function createComplementaryServicesCollection(): Promise<void> {
     console.error('Error while populating Web services:', error);
     throw error;
   }
+
+  const docRef = doc(db, 'services', 'pageInfo');
+  await setDoc(docRef, {
+    lastUpdate: serverTimestamp()
+  });
 }
 
 /**
@@ -224,49 +229,47 @@ async function createServicesCollection():Promise<void> {
 }
 
 // getting data from the cloud
-/**
- * Sets a cookie to mark the cache as synced with the cloud, with an expiration date set to 7 days from the current date.
- * The cookie will be valid across the entire website.
- * @returns {void} This function does not return anything.
- */
-function setCookieWithCacheToCloudSyncedDate():void {
-  var currentDate = new Date();
+async function getLastCloudUpdate():Promise<Number> {
+  const docRef = doc(db, 'services', 'pageInfo');
 
-  var expirationDate = new Date(currentDate.getTime() + 7 * 24 * 60 * 60 * 1000); // 7 days in milliseconds
+  const info = await getDoc(docRef);
+  const lastUpdate = info.data().lastUpdate.seconds as Number;
 
-  var expiresUTC = expirationDate.toUTCString();
-
-  document.cookie = "cacheSyncedWithCloud=true; expires=" + expiresUTC + "; path=/";
+  return lastUpdate;
 }
 
 /**
- * Retrieves the value of the specified cookie by its name.
- * @param {string} cookieName - The name of the cookie to retrieve.
- * @returns {string | 'Not found'} Returns the value of the cookie if found, otherwise returns 'Not found'.
+ * Saves the timestamp of the last cloud update on the local storage.
+ * This function relies on the getLastCloudUpdate function to retrieve the timestamp.
+ * @returns {Promise<void>} A promise that resolves when the last cloud update is saved to local storage.
  */
-function getCookieValue(cookieName:string):string | 'Not found' {
-  const cookies = document.cookie.split(';');
+async function saveLastCloudUpdateOnLocalStorage():Promise<void> {
+  const lastCloudUpdate = await getLastCloudUpdate();
 
-  for (const entry of cookies) {
-    const cookie = entry.trim();
-
-    if(cookie.split('=')[0] === cookieName){
-      return cookie.split('=')[1];
-    }
-  }
-
-  return 'Not found';
+  localStorage.setItem('lastCacheSyncedWithCloud', lastCloudUpdate.toString());
 }
 
 /**
- * Checks if there is a need to synchronize the cache with the cloud by examining the value of the 'cacheSyncedWithCloud' cookie.
+ * Retrieves the timestamp of the last cloud update from local storage.
+ * @returns {number} The timestamp of the last cloud update.
+ */
+function getLastCloudUpdateOnClient():Number {
+  return Number(localStorage.getItem('lastCacheSyncedWithCloud'));
+}
+
+/**
+ * Checks if there is a need to synchronize the cache with the cloud by examining the value of the 'lastCacheSyncedWithCloud' localStorage value and comparing it to the lastUpdate property on the pageInfo doc on the services collection.
  * @returns {boolean} Returns true if the cache needs to be synced with the cloud, otherwise returns false.
  */
-function checkNeedToSyncCacheWithCloud():boolean {
-  if(getCookieValue('cacheSyncedWithCloud') === 'true'){
+export async function isCacheSyncedWithCloud():Promise<boolean> {
+  const lastCloudUpdate = await getLastCloudUpdate();
+
+  if(getLastCloudUpdateOnClient() === lastCloudUpdate){
     if(import.meta.env.DEV){
       console.log('Cache already synced with Cloud.');
     };
+
+    localStorage.setItem('needToSyncCache', 'false');
 
     return false;
   } else {
@@ -274,7 +277,17 @@ function checkNeedToSyncCacheWithCloud():boolean {
       console.warn('Cache need to be synced with Cloud.');
     };
 
+    localStorage.setItem('needToSyncCache', 'true');
+
     return true;
+  }
+}
+
+function checkNeedToSyncCache():boolean {
+  if(localStorage.getItem('needToSyncCache') === 'true') {
+    return true;
+  } else {
+    return false;
   }
 }
 
@@ -289,7 +302,7 @@ export async function getPageInfoForServices(serviceCategory:ServiceCategory):Pr
   const cachedSnapshot = await getDocsFromCache(q);
   const servicesArray:TinyServiceInfo[] = [];
   
-  if(checkNeedToSyncCacheWithCloud() || cachedSnapshot.empty){
+  if(checkNeedToSyncCache() || cachedSnapshot.empty){
     if(import.meta.env.DEV){console.log('Information fetched from the server.')}
 
     const snapshot = await getDocs(q);
@@ -301,7 +314,7 @@ export async function getPageInfoForServices(serviceCategory:ServiceCategory):Pr
       servicesArray.push({id: doc.id, ...docData});
     });
     
-    setCookieWithCacheToCloudSyncedDate();
+    await saveLastCloudUpdateOnLocalStorage();
   } else {
     if(import.meta.env.DEV){console.log('Information fetched from cache.')}
 
@@ -349,16 +362,21 @@ export async function getPageInfoForIndividualService(serviceCategory:ServiceCat
 /**
  * Checks the existence and availability of a service based on its ID and category.
  * @param {string} serviceID - The ID of the service to check.
- * @param {ServiceCategory} serviceCategory - The category of the service to check.
+ * @param {ServiceCategory} serviceCategory - The category of the service.
  * @returns {Promise<"exists" | "does_not" | "unavailable">} Returns a promise that resolves with a string indicating the existence and availability status of the service.
  */
 export async function checkServiceExistenceV3(serviceID:string, serviceCategory:ServiceCategory):Promise<"exists" | "does_not" | "unavailable"> {
   let serviceInfo:ServiceInfo;
   const docRef = doc(db, `services/pageInfo/${serviceCategory}`, serviceID);
+  let cachedSnapshot;
 
-  const cachedSnapshot = await getDocFromCache(docRef);
+  try {
+    cachedSnapshot = await getDocFromCache(docRef);
+  } catch (error) {
+    return 'does_not';
+  }
   
-  if(checkNeedToSyncCacheWithCloud() || cachedSnapshot.data() === undefined){
+  if(checkNeedToSyncCache() || cachedSnapshot.data() === undefined){
     const cloudSnapshot = await getDoc(docRef);
 
     serviceInfo = cloudSnapshot.data() as ServiceInfo;
@@ -368,10 +386,8 @@ export async function checkServiceExistenceV3(serviceID:string, serviceCategory:
 
   return new Promise(resolve => {
     if(serviceInfo === undefined){
-      alert('Desculpe, ocorreu um erro ao recuperar as informações sobre este serviço.');
       return resolve('does_not');
     } else if (serviceInfo.status === 'Indisponível') {
-      alert('Desculpe, este serviço não está disponível no momento.');
       return resolve('unavailable');
     } else {
       return resolve('exists');

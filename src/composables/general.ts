@@ -57,17 +57,25 @@ import projectsModalStore from "@/stores/projectModal";
  */
 export async function openServiceModal(serviceID:string, serviceCategory:ServiceCategory):Promise<void> {
   return new Promise(async (resolve) => {
-    const serviceStatus = await checkServiceExistenceV3(serviceID, serviceCategory);
-
-    if(serviceStatus === 'exists'){
-      const infoStored = ref(serviceModalStore);
-
-      infoStored.value.serviceID = serviceID;
-      infoStored.value.serviceCategory = serviceCategory;
-      infoStored.value.status = 'Show';
-  
-      return resolve();
-    }
+    checkServiceExistenceV3(serviceID, serviceCategory)
+      .then(serviceStatus => {
+        if(serviceStatus === 'exists'){
+          const infoStored = ref(serviceModalStore);
+    
+          infoStored.value.serviceID = serviceID;
+          infoStored.value.serviceCategory = serviceCategory;
+          infoStored.value.status = 'Show';
+      
+          return resolve();
+        } else if (serviceStatus === 'does_not') {
+          alert('O serviço solicitado não existe.');
+        } else if (serviceStatus === 'unavailable') {
+          alert('Desculpe, este serviço não está disponível no momento.');
+        }
+      })
+      .catch(error => {
+        console.error(error);
+      })
   })
 }
 
