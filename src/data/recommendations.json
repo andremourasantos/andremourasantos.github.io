@@ -52,6 +52,19 @@
     "type": "Recomendações",
     "source": "LinkedIn",
     "author": {
+      "name": "Myckael Henrique",
+      "job": "Comercial em Campos Dealer"
+    },
+    "icon": "PhTrophy",
+    "text": [
+      "No tempo em que trabalhamos juntos, sempre esteve disposto a ajudar a nossa equipe com ideias, sugestões e qualquer melhoria que pudesse ajudar a alavancar nosso negócio.",
+      "A comunicação com o André sempre foi um ponto forte na parceria."
+    ]
+  },
+  {
+    "type": "Recomendações",
+    "source": "LinkedIn",
+    "author": {
       "name": "Rafael Bretas",
       "job": "CEO em Agência fog"
     },
