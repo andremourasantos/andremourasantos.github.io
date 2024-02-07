@@ -5,7 +5,7 @@
   :title="`Entrar em contato via ${buttonIcon === 'whatsapp-logo' ? 'WhatsApp' : buttonIcon === 'email' ? 'email' : buttonIcon === 'google-meet-logo' ? 'agendamento de chamada de vídeo' : ''}`"
 
   @click="handleClick(), emitGtmEvent()">
-    <img :src="getIconURL(buttonIcon)" alt="Ícone de avião de papel" height="36" width="36">
+    <img :src="getIconURL(buttonIcon)" loading="lazy" alt="Ícone de avião de papel" height="36" width="36">
     <div v-if="buttonIcon === 'whatsapp-logo'">
       <h4>Bate-papo</h4>
       <p>Vamos iniciar uma conversa pelo WhatsApp.</p>

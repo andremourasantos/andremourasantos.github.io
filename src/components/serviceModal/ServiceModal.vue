@@ -3,7 +3,7 @@
     <HeaderIcons @closeModalButton="closeModal"/>
     <article>
       <div id="mainServiceInfo" v-if="serviceHeader !== null">
-        <img :src="getIconURL(serviceHeader.image)" :alt="`Imagem de ${serviceHeader.title}`" height="80" width="80">
+        <img :src="serviceHeader.image" :alt="`Imagem de ${serviceHeader.title}`" height="80" width="80">
         <h2>{{ serviceHeader.title }}</h2>
         <p>{{ serviceHeader.description }}</p>
       </div>
@@ -55,7 +55,7 @@ import ContactButton from './ContactButton.vue';
 import FooterNotes from '../commomModalEls/ServiceFooterNotes.vue';
 
 // composables
-import { getIconURL, toggleHTMLOverflowY } from "@/composables/general";
+import { toggleHTMLOverflowY } from "@/composables/general";
 import { getModalInfoForServices } from '@/composables/data-base';
 
 // stores
@@ -150,7 +150,6 @@ export default defineComponent({
 
     return {
       serviceInfo,
-      getIconURL,
       dialogEl,
       modalInfo,
       serviceHeader,

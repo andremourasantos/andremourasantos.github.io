@@ -5,7 +5,7 @@
     }" aria-label="Estado do serviço">
       <p>{{ serviceTag }}</p>
     </div>
-    <img :src="getIconURL(serviceImage)" :alt="`Imagem de ${serviceTitle}`">
+    <img :src="serviceImage" :alt="`Imagem de ${serviceTitle}`">
     <div>
       <h3>{{ serviceTitle }}</h3>
       <p>{{ serviceDescription }}</p>
@@ -19,7 +19,7 @@ import router from '@/router';
 import { useGtm } from '@gtm-support/vue-gtm';
 
 // composables
-import { getIconURL, openServiceModal } from '@/composables/general';
+import { openServiceModal } from '@/composables/general';
 
 export default defineComponent({
   props: {
@@ -91,7 +91,6 @@ export default defineComponent({
     }
     
     return {
-      getIconURL,
       handleClick,
       emitGtmEvent
     }

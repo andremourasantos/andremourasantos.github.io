@@ -50,7 +50,7 @@ async function testFirestoreEmulatorConnection() {
     sessionStorage.setItem(sessionStorageKeyForEmulatorCheck, 'true');
 
     // create collections on emulator
-    await createRecommendationsCollection();
+    // await createRecommendationsCollection();
     await createComplementaryServicesCollection()
       .catch(error => {return console.error(error)})
     await createServicesCollection();
@@ -65,32 +65,33 @@ import recommendationsJSON from '@/data/recommendations.json';
 import marketingJSON from '@/data/mkt-services.json';
 import webJSON from '@/data/web-services.json';
 import projectsJSON from '@/data/projects.json';
+import { getIconURLFromStorage } from './storage';
 
 /**
  * Creates the recommendations collection in Firestore based on the data provided in the recommendationsJSON object.
  * @returns {Promise<void>} Returns a promise that resolves when the collection creation is complete.
  */
-async function createRecommendationsCollection():Promise<void> {
-  console.warn('Creating recommendations collection...');
+// async function createRecommendationsCollection():Promise<void> {
+//   console.warn('Creating recommendations collection...');
 
-  for (const [index, entry] of Object.entries(recommendationsJSON)) {
-    const info:PresentationCardInfo = entry as PresentationCardInfo;
+//   for (const [index, entry] of Object.entries(recommendationsJSON)) {
+//     const info:PresentationCardInfo = entry as PresentationCardInfo;
 
-    const ref = doc(db, 'recommendations', info.author.name);
-    await setDoc(ref, {
-      type: info.type,
-      source: info.source,
-      author: info.author,
-      icon: info.icon,
-      text: info.text
-    });
-  };
+//     const ref = doc(db, 'recommendations', info.author.name);
+//     await setDoc(ref, {
+//       type: info.type,
+//       source: info.source,
+//       author: info.author,
+//       icon: info.icon,
+//       text: info.text
+//     });
+//   };
 
-  return new Promise((resolve) => {
-    console.log('OK.');
-    return resolve();
-  })
-}
+//   return new Promise((resolve) => {
+//     console.log('OK.');
+//     return resolve();
+//   })
+// }
 
 /**
  * Creates the complementary services collection in Firestore based on the data provided in the marketingJSON and webJSON objects.
@@ -114,7 +115,7 @@ async function createComplementaryServicesCollection(): Promise<void> {
         show: info.show,
         status: info.status,
         group: info.group,
-        image: info.image,
+        image: await getIconURLFromStorage(info.image),
         title: info.title,
         description: info.description,
         timeStamp: serverTimestamp()
@@ -139,7 +140,7 @@ async function createComplementaryServicesCollection(): Promise<void> {
         show: info.show,
         status: info.status,
         group: info.group,
-        image: info.image,
+        image: await getIconURLFromStorage(info.image),
         title: info.title,
         description: info.description,
         timeStamp: serverTimestamp()
@@ -181,7 +182,7 @@ async function createServicesCollection():Promise<void> {
       show: info.show,
       status: info.status,
       group: info.group,
-      image: info.image,
+      image: await getIconURLFromStorage(info.image),
       title: info.title,
       description: info.description,
       introduction: info.introduction,
@@ -209,7 +210,7 @@ async function createServicesCollection():Promise<void> {
       show: info.show,
       status: info.status,
       group: info.group,
-      image: info.image,
+      image: await getIconURLFromStorage(info.image),
       title: info.title,
       description: info.description,
       introduction: info.introduction,
@@ -247,6 +248,7 @@ async function saveLastCloudUpdateOnLocalStorage():Promise<void> {
   const lastCloudUpdate = await getLastCloudUpdate();
 
   localStorage.setItem('lastCacheSyncedWithCloud', lastCloudUpdate.toString());
+  localStorage.setItem('needToSyncCache', 'false');
 }
 
 /**
@@ -342,7 +344,7 @@ export async function getPageInfoForIndividualService(serviceCategory:ServiceCat
   try {
     const cachedSnapshot = await getDocFromCache(docRef);
 
-    if(cachedSnapshot.data() === undefined){
+    if(checkNeedToSyncCache() || cachedSnapshot.data() === undefined){
       cachedVersionExists = false;
       throw new Error()
     } else {
@@ -353,6 +355,8 @@ export async function getPageInfoForIndividualService(serviceCategory:ServiceCat
     const snapshot = await getDoc(docRef);
 
     serviceInfo = snapshot.data() as TinyServiceInfo;
+
+    await saveLastCloudUpdateOnLocalStorage();
   }
   
   return serviceInfo;
@@ -380,6 +384,8 @@ export async function checkServiceExistenceV3(serviceID:string, serviceCategory:
     const cloudSnapshot = await getDoc(docRef);
 
     serviceInfo = cloudSnapshot.data() as ServiceInfo;
+
+    await saveLastCloudUpdateOnLocalStorage();
   } else {
     serviceInfo = cachedSnapshot.data() as ServiceInfo;
   }
@@ -409,8 +415,8 @@ export async function getModalInfoForServices(serviceCategory:ServiceCategory, s
 
   try {
     const cachedSnapshot = await getDocFromCache(docRef);
-    
-    if(cachedSnapshot.data() === undefined){throw new Error()}
+
+    if(checkNeedToSyncCache() || cachedSnapshot.data() === undefined){throw new Error()};
 
     serviceInfo = cachedSnapshot.data() as ServiceInfo;
     cachedVersionExists = true;
