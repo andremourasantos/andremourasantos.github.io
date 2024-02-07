@@ -1,5 +1,5 @@
 import { app } from '@/firebase';
-import { initializeFirestore, persistentMultipleTabManager, persistentLocalCache, connectFirestoreEmulator, doc, setDoc, serverTimestamp, collection, query, where, orderBy, getDocs, getDocsFromCache, getDoc, getDocFromCache, Timestamp } from 'firebase/firestore';
+import { initializeFirestore, persistentMultipleTabManager, persistentLocalCache, connectFirestoreEmulator, doc, setDoc, collection, query, where, orderBy, getDocs, getDocsFromCache, getDoc, getDocFromCache, Timestamp } from 'firebase/firestore';
 
 app;
 const db = initializeFirestore(app, { 
@@ -49,183 +49,10 @@ async function testFirestoreEmulatorConnection() {
 
     sessionStorage.setItem(sessionStorageKeyForEmulatorCheck, 'true');
 
-    // create collections on emulator
-    // await createRecommendationsCollection();
-    await createComplementaryServicesCollection()
-      .catch(error => {return console.error(error)})
-    await createServicesCollection();
     console.log('All good to go!');
   })
   .catch(error => {
     console.error('Firestore Emulator connection was unsuccessufull due to:', error);
-  })
-}
-
-import recommendationsJSON from '@/data/recommendations.json';
-import marketingJSON from '@/data/mkt-services.json';
-import webJSON from '@/data/web-services.json';
-import projectsJSON from '@/data/projects.json';
-import { getIconURLFromStorage } from './storage';
-
-/**
- * Creates the recommendations collection in Firestore based on the data provided in the recommendationsJSON object.
- * @returns {Promise<void>} Returns a promise that resolves when the collection creation is complete.
- */
-// async function createRecommendationsCollection():Promise<void> {
-//   console.warn('Creating recommendations collection...');
-
-//   for (const [index, entry] of Object.entries(recommendationsJSON)) {
-//     const info:PresentationCardInfo = entry as PresentationCardInfo;
-
-//     const ref = doc(db, 'recommendations', info.author.name);
-//     await setDoc(ref, {
-//       type: info.type,
-//       source: info.source,
-//       author: info.author,
-//       icon: info.icon,
-//       text: info.text
-//     });
-//   };
-
-//   return new Promise((resolve) => {
-//     console.log('OK.');
-//     return resolve();
-//   })
-// }
-
-/**
- * Creates the complementary services collection in Firestore based on the data provided in the marketingJSON and webJSON objects.
- * @returns {Promise<void>} Returns a promise that resolves when the collection creation and population are complete.
- */
-async function createComplementaryServicesCollection(): Promise<void> {
-  console.warn('Creating complementary services collection...');
-
-  const docCategory: string = 'pageInfo';
-  const docRefPath: string = `services/${docCategory}/`;
-
-  try {
-    console.warn('Populating with Marketing related services...');
-
-    for (const [index, entry] of Object.entries(marketingJSON)) {
-      const info: ServiceInfoJSON = entry as ServiceInfoJSON;
-
-      const ref = doc(db, docRefPath + 'marketing', entry.id);
-      await setDoc(ref, {
-        id: info.id,
-        show: info.show,
-        status: info.status,
-        group: info.group,
-        image: await getIconURLFromStorage(info.image),
-        title: info.title,
-        description: info.description,
-        timeStamp: serverTimestamp()
-      });
-    };
-
-    console.log('OK.');
-  } catch (error) {
-    console.error('Error while populating Marketing services:', error);
-    throw error;
-  }
-
-  try {
-    console.warn('Populating with Web related services...');
-
-    for (const [index, entry] of Object.entries(webJSON)) {
-      const info: ServiceInfoJSON = entry as ServiceInfoJSON;
-
-      const ref = doc(db, docRefPath + 'web', entry.id);
-      await setDoc(ref, {
-        id: info.id,
-        show: info.show,
-        status: info.status,
-        group: info.group,
-        image: await getIconURLFromStorage(info.image),
-        title: info.title,
-        description: info.description,
-        timeStamp: serverTimestamp()
-      });
-    };
-
-    console.log('OK.');
-  } catch (error) {
-    console.error('Error while populating Web services:', error);
-    throw error;
-  }
-
-  const docRef = doc(db, 'services', 'pageInfo');
-  await setDoc(docRef, {
-    lastUpdate: serverTimestamp()
-  });
-}
-
-/**
- * Creates the services collection in Firestore based on the data provided in the marketingJSON and webJSON objects.
- * @returns {Promise<void>} Returns a promise that resolves when the collection creation and population are complete.
- */
-async function createServicesCollection():Promise<void> {
-  console.warn('Creating services collection...');
-
-  const docCategory:string = 'modalInfo';
-  const docRefPath:string = `services/${docCategory}/`;
-
-  console.warn('Populating with Marketing related services...');
-  for (const [index, entry] of Object.entries(marketingJSON)) {
-    const info:ServiceInfoJSON = entry as ServiceInfoJSON;
-
-    // flatten tableOfBenefits
-    const flattenedTableOfBenefits = info.tableOfBenefits.map(([col1, col2, col3]) => ({ col1, col2, col3 }));
-
-    const ref = doc(db, docRefPath + 'marketing', entry.id);
-    await setDoc(ref, {
-      id: info.id,
-      show: info.show,
-      status: info.status,
-      group: info.group,
-      image: await getIconURLFromStorage(info.image),
-      title: info.title,
-      description: info.description,
-      introduction: info.introduction,
-      tableOfBenefits: flattenedTableOfBenefits,
-      serviceInfo: {
-        deadline: info.serviceInfo.deadline,
-        price: info.serviceInfo.price
-      },
-      footerNotes: info.footerNotes
-    });
-  };
-
-  console.log('OK.');
-
-  console.warn('Populating with Web related services...');
-  for (const [index, entry] of Object.entries(webJSON)) {
-    const info:ServiceInfoJSON = entry as ServiceInfoJSON;
-
-    // flatten tableOfBenefits
-    const flattenedTableOfBenefits = info.tableOfBenefits.map(([col1, col2, col3]) => ({ col1, col2, col3 }));
-
-    const ref = doc(db, docRefPath + 'web', entry.id);
-    await setDoc(ref, {
-      id: info.id,
-      show: info.show,
-      status: info.status,
-      group: info.group,
-      image: await getIconURLFromStorage(info.image),
-      title: info.title,
-      description: info.description,
-      introduction: info.introduction,
-      tableOfBenefits: flattenedTableOfBenefits,
-      serviceInfo: {
-        deadline: info.serviceInfo.deadline,
-        price: info.serviceInfo.price
-      },
-      footerNotes: info.footerNotes
-    });
-  };
-
-  return new Promise((resolve) => {
-    console.log('OK.');
-    return resolve();
   })
 }
 
@@ -438,6 +265,8 @@ export async function getModalInfoForServices(serviceCategory:ServiceCategory, s
 }
 
 // offline code
+import projectsJSON from '@/data/projects.json';
+
 /**
  * Checks the existence of a project based on its ID.
  * @param {string} projectId - The ID of the project to check.

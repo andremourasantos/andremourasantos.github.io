@@ -1,12 +1,12 @@
 {
   "name": "andremourasantos.github.io",
-  "version": "1.5.4",
+  "version": "1.5.5",
   "private": true,
   "type": "module",
   "scripts": {
     "dev": "vite --host",
-    "firebase": "firebase emulators:start",
-    "upload-icons": "node ./upload-icons.js",
+    "initialize-emulators": "firebase emulators:start",
+    "populate-emulators": "node ./scripts/populate-emulators.js",
     "build": "vite build",
     "serve": "vite preview"
   },

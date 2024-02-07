@@ -1,5 +1,5 @@
 import { app } from '@/firebase';
-import { connectStorageEmulator, getStorage, ref, uploadBytes, getDownloadURL } from 'firebase/storage';
+import { connectStorageEmulator, getStorage, ref, getDownloadURL } from 'firebase/storage';
 
 const storage = getStorage();
 
@@ -9,6 +9,11 @@ if(import.meta.env.DEV){
   connectStorageEmulator(storage, '0.0.0.0', 9199);
 }
 
+/**
+ * Retrieves the download URL for a specific icon from Firebase Storage.
+ * @param {string} iconName - The name of the icon.
+ * @returns {Promise<string>} Returns a promise that resolves with the download URL of the specified icon.
+ */
 export async function getIconURLFromStorage(iconName:string):Promise<string> {
   const iconRef = ref(storage, `icons/${iconName}.png`);
   const path = await getDownloadURL(iconRef);
