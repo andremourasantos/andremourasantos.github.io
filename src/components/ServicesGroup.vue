@@ -5,8 +5,10 @@
       <p>{{ groupDescription }}</p>
     </div>
     <article>
-      <FlippingLoader v-if="componentStatus === 'Loading'"/>
-      <slot>
+      <slot v-if="componentStatus === 'Loading'">
+        <ServiceButton v-for="entry in numberOfSkeletons" :key="entry" :service-image="'loading'" :service-title="'Carregando'" :service-description="'Aguarde, as informações sobre este serviço estão sendo recolhidas.'" :service-id="entry + ''" :service-category="'web'" :service-button-loading-status="'Loading'"/>
+      </slot>
+      <slot v-if="componentStatus === 'Loaded'">
 
       </slot>
     </article>
@@ -14,13 +16,17 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, ref, watch } from 'vue';
+import { defineComponent, onBeforeMount, onMounted, ref, watch } from 'vue';
 
 // components
+import ServiceButton from './ServiceButton.vue';
 import FlippingLoader from '@/components/FlippingLoader.vue';
 
+// composables
+import { getNumberOfSkeletonsForServiceGroup } from '@/composables/general';
+
 export default defineComponent({
-  components: {FlippingLoader},
+  components: {ServiceButton, FlippingLoader},
   props: {
     'groupTitle': {
       required: true,
@@ -34,10 +40,29 @@ export default defineComponent({
       required: false,
       type: String as () => 'Loading' | 'Loaded',
       default: 'Loaded'
-    } 
+    },
+    'skeletonGroupName': {
+      required: false,
+      type: String
+    },
+    'groupCategory': {
+      required: true,
+      type: String as () => ServiceCategory
+    }
   },
   setup(props) {
     const section = ref<HTMLElement | null>();
+    const numberOfSkeletons = ref<number>(5);
+
+    onBeforeMount(() => {
+      const numberOfSkeletonsFromLocalStorage = getNumberOfSkeletonsForServiceGroup(props.groupCategory, props.skeletonGroupName);
+      
+      if(numberOfSkeletonsFromLocalStorage === 0 || numberOfSkeletonsFromLocalStorage > 7) {
+        numberOfSkeletons.value = 5
+      } else {
+        numberOfSkeletons.value = numberOfSkeletonsFromLocalStorage
+      }
+    })
 
     onMounted(() => {
       if(props.componentStatus === 'Loading'){
@@ -52,7 +77,8 @@ export default defineComponent({
     })
 
     return {
-      section
+      section,
+      numberOfSkeletons
     }
   }
 })
@@ -69,11 +95,6 @@ export default defineComponent({
     padding: 32px 24px 24px 24px;
     background-color: var(--colors-background);
     box-shadow: var(--neumorphism-inner_shadow);
-  }
-
-  .loading * {
-    font-family: var(--font-loading);
-    color: var(--font_color-loading);
   }
 
   h2 {

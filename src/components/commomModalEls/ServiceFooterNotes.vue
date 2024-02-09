@@ -26,6 +26,8 @@ export default defineComponent({
     const filteredFooterNotes = ref<string[]>(props.footerNotes);
 
     onMounted(() => {
+      filteredFooterNotes.value = props.footerNotes.filter(entry => {return entry !== ""});
+
       const addAsterisks = async ():Promise<void> => {
         let arrayOfParagraphs:ChildNode[];
         if(!(notesDetails.value instanceof HTMLElement)){return};
@@ -37,10 +39,6 @@ export default defineComponent({
 
         return;
       }; addAsterisks();
-    });
-
-    watch(() => props.footerNotes, (newFooterNotes) => {
-      filteredFooterNotes.value = newFooterNotes.filter(entry => {return entry !== ""});
     });
 
     //Phosphor Icons settings

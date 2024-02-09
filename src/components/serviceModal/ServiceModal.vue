@@ -34,7 +34,7 @@
         </div>
       </div>
 
-      <FooterNotes :footer-notes="serviceFooterNotes">
+      <FooterNotes v-if="serviceInfo" :footer-notes="serviceFooterNotes">
         <p v-if="showONGsDiscount">O valor cobrado para organizações não governamentais (OGNs) ou ações sociais/comunitárias de pequeno porte pode ser combinado abaixo dessa faixa.</p>
         <p>Ao escolher o PIX como forma de pagamento, você ganha um desconto de 5% em cima do valor total. Pagamentos no Cartão de Crédito até 2x sem juros.</p>
         <p>Este contrato exige uma assinatura eletrônica. Você pode realizar essa ação gratuitamente através do site ou aplicativo do Gov.br.</p>

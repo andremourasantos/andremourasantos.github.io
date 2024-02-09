@@ -1,11 +1,17 @@
 <template>
-  <button :disabled="serviceTag === 'Indisponível'" :aria-label="serviceTitle" @click="handleClick(serviceId), emitGtmEvent(serviceId)">
+  <button :class="{
+    loading: serviceButtonLoadingStatus === 'Loading'
+  }" :disabled="serviceButtonLoadingStatus === 'Loading' || serviceTag === 'Indisponível'" :aria-label="serviceTitle" @click="handleClick(serviceId), emitGtmEvent(serviceId)">
+    
     <div id="tag" v-if="serviceTag !== undefined && serviceTag !== null" :class="{
       newService: serviceTag === 'Novo' 
     }" aria-label="Estado do serviço">
       <p>{{ serviceTag }}</p>
     </div>
-    <img :src="serviceImage" :alt="`Imagem de ${serviceTitle}`">
+
+    <div v-if="serviceButtonLoadingStatus === 'Loading'" class="img"></div>
+    <img v-if="serviceButtonLoadingStatus === 'Loaded'" class="img" :src="serviceImage" :alt="`Imagem de ${serviceTitle}`">
+    
     <div>
       <h3>{{ serviceTitle }}</h3>
       <p>{{ serviceDescription }}</p>
@@ -51,6 +57,11 @@ export default defineComponent({
       required: false,
       default: 'Page',
       type: String as () => 'Page' | 'Popup'
+    },
+    'serviceButtonLoadingStatus': {
+      required: false,
+      default: 'Loaded',
+      type: String as () => 'Loading' | 'Loaded'
     }
   },
   setup(props) {
@@ -119,6 +130,11 @@ export default defineComponent({
     transition: 200ms;
   }
 
+  button.loading * {
+    font-family: var(--font-loading);
+    animation: ease-in-out loading 1s infinite;
+  }
+
   button:hover:not(:disabled), button:focus {
     transition: 200ms;
     transform: scale(0.99);
@@ -133,6 +149,19 @@ export default defineComponent({
     height: fit-content;
     width: 48px;
   }
+
+  div.img {
+    height: 48px;
+    width: 48px;
+    background-color: hsl(0, 0%, 63%);
+    border-radius: 8px;
+  }
+
+    @keyframes loading {
+      0% {opacity: 1;}
+      50% {opacity: 0.5;}
+      100% {opacity: 1;}
+    }
 
   h3 {
     font-size: 16px;

@@ -97,3 +97,11 @@ export async function openProjectModal(projectId:string):Promise<void> {
     }
   })
 }
+
+export function setNumberOfSkeletonsForServiceGroup(serviceCategory:ServiceCategory, groupName:string, numberOfSkeletons:number):void {
+  return localStorage.setItem(`skeletonsFor${serviceCategory === 'marketing' ? 'Marketing' : 'Web'}-${groupName}`, numberOfSkeletons.toString());
+}
+
+export function getNumberOfSkeletonsForServiceGroup(serviceCategory:ServiceCategory, groupName:string):number {
+  return Number(localStorage.getItem(`skeletonsFor${serviceCategory === 'marketing' ? 'Marketing' : 'Web'}-${groupName}`));
+}
