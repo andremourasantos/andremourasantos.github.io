@@ -1,5 +1,5 @@
 import { app } from '@/firebase';
-import { initializeFirestore, persistentMultipleTabManager, persistentLocalCache, connectFirestoreEmulator, doc, setDoc, collection, query, where, orderBy, getDocs, getDocsFromCache, getDoc, getDocFromCache, Timestamp } from 'firebase/firestore';
+import { initializeFirestore, persistentMultipleTabManager, persistentLocalCache, connectFirestoreEmulator, doc, setDoc, collection, query, where, orderBy, getDocs, getDocsFromCache, getDoc, getDocFromCache, Timestamp, DocumentData } from 'firebase/firestore';
 
 app;
 const db = initializeFirestore(app, { 
@@ -57,48 +57,104 @@ async function testFirestoreEmulatorConnection() {
 }
 
 // getting data from the cloud
-async function getLastCloudUpdate():Promise<Number> {
+/**
+ * Retrieves the timestamp of the last cloud update for a specific service category.
+ *
+ * @param {ServiceCategory} serviceCategory - The category of the service ('marketing' or 'web').
+ * @returns {Promise<Number>} A promise that resolves to the timestamp of the last update.
+ * @throws {Error} If there is an issue retrieving the document or if the service category is invalid.
+ */
+async function getLastCloudUpdate(serviceCategory:ServiceCategory):Promise<Number> {
   const docRef = doc(db, 'services', 'pageInfo');
-
   const info = await getDoc(docRef);
-  const lastUpdate = info.data().lastUpdate.seconds as Number;
+  let lastUpdate:Number;
+
+  if(serviceCategory === 'marketing') {
+    lastUpdate = info.data().lastMarketingUpdate.seconds as Number;
+  } else {
+    lastUpdate = info.data().lastWebUpdate.seconds as Number;
+  }
 
   return lastUpdate;
 }
 
 /**
- * Saves the timestamp of the last cloud update on the local storage.
- * This function relies on the getLastCloudUpdate function to retrieve the timestamp.
- * @returns {Promise<void>} A promise that resolves when the last cloud update is saved to local storage.
+ * Saves the timestamp of the last cloud update for a specific service category in the local storage.
+ *
+ * @param {ServiceCategory} serviceCategory - The category of the service ('marketing' or 'web').
+ * @returns {Promise<void>} A promise that resolves once the timestamp is saved in the local storage.
  */
-async function saveLastCloudUpdateOnLocalStorage():Promise<void> {
-  const lastCloudUpdate = await getLastCloudUpdate();
+async function saveLastCloudUpdateOnLocalStorage(serviceCategory:ServiceCategory):Promise<void> {
+  const lastCloudUpdate = await getLastCloudUpdate(serviceCategory);
+  const cacheName = serviceCategory === 'marketing' ? 'Marketing' : 'Web';
 
-  localStorage.setItem('lastCacheSyncedWithCloud', lastCloudUpdate.toString());
-  localStorage.setItem('needToSyncCache', 'false');
+  localStorage.setItem(`last${cacheName}CacheSyncedWithCloud`, lastCloudUpdate.toString());
+  updateNeedToSyncCacheOnSessionStorage(serviceCategory, false);
+}
+
+/**
+ * Updates the status of whether the cache for a specific service category needs to be synced with the session storage.
+ *
+ * @param {ServiceCategory} serviceCategory - The category of the service ('marketing' or 'web').
+ * @param {boolean} status - The status indicating whether the cache needs to be synced.
+ * @returns {void}
+ */
+function updateNeedToSyncCacheOnSessionStorage(serviceCategory:ServiceCategory, status:boolean):void {
+  const cacheName = serviceCategory === 'marketing' ? 'Marketing' : 'Web';
+
+  sessionStorage.setItem(`needToSync${cacheName}Cache`, status.toString());
+}
+
+/**
+ * Retrieves the status indicating whether the cache for a specific service category needs to be synced.
+ *
+ * @param {ServiceCategory} serviceCategory - The category of the service ('marketing' or 'web').
+ * @returns {boolean} True if the cache needs to be synced, false otherwise.
+ */
+function getNeedToSyncCache(serviceCategory:ServiceCategory):boolean {
+  const cacheName = serviceCategory === 'marketing' ? 'Marketing' : 'Web';
+  const storage = sessionStorage.getItem(`needToSync${cacheName}Cache`);
+
+  if(storage === null || storage === 'true'){
+    return true;
+  } else {
+    return false;
+  }
 }
 
 /**
  * Retrieves the timestamp of the last cloud update from local storage.
  * @returns {number} The timestamp of the last cloud update.
  */
-function getLastCloudUpdateOnClient():Number {
-  return Number(localStorage.getItem('lastCacheSyncedWithCloud'));
+function getLastCloudUpdateOnClient(serviceCategory:ServiceCategory):Number {
+  const cacheName = serviceCategory === 'marketing' ? 'Marketing' : 'Web';
+
+  return Number(localStorage.getItem(`last${cacheName}CacheSyncedWithCloud`));
 }
 
 /**
- * Checks if there is a need to synchronize the cache with the cloud by examining the value of the 'lastCacheSyncedWithCloud' localStorage value and comparing it to the lastUpdate property on the pageInfo doc on the services collection.
- * @returns {boolean} Returns true if the cache needs to be synced with the cloud, otherwise returns false.
+ * Checks if the cache for a specific service category is synchronized with the cloud.
+ *
+ * @param {ServiceCategory} serviceCategory - The category of the service ('marketing' or 'web').
+ * @returns {Promise<boolean>} A promise that resolves to true if the cache needs to be synced with the cloud, otherwise false.
  */
-export async function isCacheSyncedWithCloud():Promise<boolean> {
-  const lastCloudUpdate = await getLastCloudUpdate();
+export async function isCacheSyncedWithCloud(serviceCategory:ServiceCategory):Promise<boolean> {
+  if(getNeedToSyncCache(serviceCategory) === false){
+    if(import.meta.env.DEV){
+      console.warn("Cache already checked on this session, therefore it wouldn't be checked again.")
+    }
 
-  if(getLastCloudUpdateOnClient() === lastCloudUpdate){
+    return false;
+  }
+
+  const lastCloudUpdate = await getLastCloudUpdate(serviceCategory);
+
+  if(getLastCloudUpdateOnClient(serviceCategory) === lastCloudUpdate){
     if(import.meta.env.DEV){
       console.log('Cache already synced with Cloud.');
     };
 
-    localStorage.setItem('needToSyncCache', 'false');
+    updateNeedToSyncCacheOnSessionStorage(serviceCategory, false);
 
     return false;
   } else {
@@ -106,14 +162,20 @@ export async function isCacheSyncedWithCloud():Promise<boolean> {
       console.warn('Cache need to be synced with Cloud.');
     };
 
-    localStorage.setItem('needToSyncCache', 'true');
+    updateNeedToSyncCacheOnSessionStorage(serviceCategory, true);
 
     return true;
   }
 }
 
-function checkNeedToSyncCache():boolean {
-  if(localStorage.getItem('needToSyncCache') === 'true') {
+/**
+ * Checks if the cache for a specific service category needs to be synced.
+ *
+ * @param {ServiceCategory} serviceCategory - The category of the service ('marketing' or 'web').
+ * @returns {boolean} True if the cache needs to be synced, false otherwise.
+ */
+function checkNeedToSyncCache(serviceCategory:ServiceCategory):boolean {
+  if(getNeedToSyncCache(serviceCategory)) {
     return true;
   } else {
     return false;
@@ -131,7 +193,7 @@ export async function getPageInfoForServices(serviceCategory:ServiceCategory):Pr
   const cachedSnapshot = await getDocsFromCache(q);
   const servicesArray:TinyServiceInfo[] = [];
   
-  if(checkNeedToSyncCache() || cachedSnapshot.empty){
+  if(checkNeedToSyncCache(serviceCategory) || cachedSnapshot.empty){
     if(import.meta.env.DEV){console.log('Information fetched from the server.')}
 
     const snapshot = await getDocs(q);
@@ -143,7 +205,7 @@ export async function getPageInfoForServices(serviceCategory:ServiceCategory):Pr
       servicesArray.push({id: doc.id, ...docData});
     });
     
-    await saveLastCloudUpdateOnLocalStorage();
+    await saveLastCloudUpdateOnLocalStorage(serviceCategory);
   } else {
     if(import.meta.env.DEV){console.log('Information fetched from cache.')}
 
@@ -171,7 +233,7 @@ export async function getPageInfoForIndividualService(serviceCategory:ServiceCat
   try {
     const cachedSnapshot = await getDocFromCache(docRef);
 
-    if(checkNeedToSyncCache() || cachedSnapshot.data() === undefined){
+    if(checkNeedToSyncCache(serviceCategory) || cachedSnapshot.data() === undefined){
       cachedVersionExists = false;
       throw new Error()
     } else {
@@ -183,7 +245,7 @@ export async function getPageInfoForIndividualService(serviceCategory:ServiceCat
 
     serviceInfo = snapshot.data() as TinyServiceInfo;
 
-    await saveLastCloudUpdateOnLocalStorage();
+    await saveLastCloudUpdateOnLocalStorage(serviceCategory);
   }
   
   return serviceInfo;
@@ -199,7 +261,7 @@ export async function getPageInfoForIndividualService(serviceCategory:ServiceCat
 export async function checkServiceExistenceV3(serviceID:string, serviceCategory:ServiceCategory):Promise<"exists" | "does_not" | "unavailable"> {
   let serviceInfo:ServiceInfo;
   const docRef = doc(db, `services/pageInfo/${serviceCategory}`, serviceID);
-  let cachedSnapshot;
+  let cachedSnapshot:DocumentData;
 
   try {
     cachedSnapshot = await getDocFromCache(docRef);
@@ -207,12 +269,12 @@ export async function checkServiceExistenceV3(serviceID:string, serviceCategory:
     return 'does_not';
   }
   
-  if(checkNeedToSyncCache() || cachedSnapshot.data() === undefined){
+  if(checkNeedToSyncCache(serviceCategory) || cachedSnapshot.data() === undefined){
     const cloudSnapshot = await getDoc(docRef);
 
     serviceInfo = cloudSnapshot.data() as ServiceInfo;
 
-    await saveLastCloudUpdateOnLocalStorage();
+    await saveLastCloudUpdateOnLocalStorage(serviceCategory);
   } else {
     serviceInfo = cachedSnapshot.data() as ServiceInfo;
   }
@@ -243,7 +305,7 @@ export async function getModalInfoForServices(serviceCategory:ServiceCategory, s
   try {
     const cachedSnapshot = await getDocFromCache(docRef);
 
-    if(checkNeedToSyncCache() || cachedSnapshot.data() === undefined){throw new Error()};
+    if(checkNeedToSyncCache(serviceCategory) || cachedSnapshot.data() === undefined){throw new Error()};
 
     serviceInfo = cachedSnapshot.data() as ServiceInfo;
     cachedVersionExists = true;

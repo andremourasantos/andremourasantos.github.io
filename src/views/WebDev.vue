@@ -26,7 +26,7 @@ import ServiceButton from '@/components/ServiceButton.vue';
 
 // composables
 import { openServiceModal, searchForURLParam, setNumberOfSkeletonsForServiceGroup } from "@/composables/general";
-import { getPageInfoForServices } from '@/composables/data-base';
+import { getPageInfoForServices, isCacheSyncedWithCloud } from '@/composables/data-base';
 
 export default defineComponent({
   components: {PageTitle, ServicesGroup, ServiceButton},
@@ -47,6 +47,7 @@ export default defineComponent({
     const individualServices = ref<TinyServiceInfoWEB[] | null>();
 
     onBeforeMount(async () => {
+      await isCacheSyncedWithCloud('web');
       serviceData.value = await getPageInfoForServices('web') as TinyServiceInfoWEB[];
     })
 

@@ -20,9 +20,6 @@ import Header from '@/components/Header.vue';
 import ServiceModal from './components/serviceModal/ServiceModal.vue';
 import Footer from '@/components/Footer.vue';
 
-// composables
-import { isCacheSyncedWithCloud } from '@/composables/data-base';
-
 // stores
 import serviceModalInfo from './stores/serviceModal';
 
@@ -40,10 +37,6 @@ export default defineComponent({
       provide("size", 32);
     }
     provide("weight", "fill");
-
-    onBeforeMount(async () => {
-      await isCacheSyncedWithCloud();
-    })
 
     return {
       showModal

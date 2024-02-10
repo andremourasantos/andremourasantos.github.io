@@ -168,7 +168,8 @@ async function createComplementaryServicesCollection() {
 
   const docRef = doc(db, 'services', 'pageInfo');
   await setDoc(docRef, {
-    lastUpdate: serverTimestamp()
+    lastWebUpdate: serverTimestamp(),
+    lastMarketingUpdate: serverTimestamp()
   });
 
   return;

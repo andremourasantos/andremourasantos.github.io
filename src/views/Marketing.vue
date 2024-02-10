@@ -29,7 +29,7 @@ import ServiceButton from '@/components/ServiceButton.vue';
 
 // composables
 import { searchForURLParam, openServiceModal, setNumberOfSkeletonsForServiceGroup } from "@/composables/general";
-import { getPageInfoForServices } from '@/composables/data-base';
+import { getPageInfoForServices, isCacheSyncedWithCloud } from '@/composables/data-base';
 
 export default defineComponent({
   components: {PageTitle, PresentationCard, ServicesGroup, ServiceButton},
@@ -54,6 +54,7 @@ export default defineComponent({
     const ascensionServices = ref<TinyServiceInfoMKT[] | null>();
 
     onBeforeMount(async () => {
+      await isCacheSyncedWithCloud('marketing');
       serviceData.value = await getPageInfoForServices('marketing') as TinyServiceInfoMKT[];
     })
 
