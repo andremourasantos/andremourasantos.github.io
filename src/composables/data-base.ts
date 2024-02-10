@@ -189,6 +189,7 @@ function checkNeedToSyncCache(serviceCategory:ServiceCategory):boolean {
  */
 export async function getPageInfoForServices(serviceCategory:ServiceCategory):Promise<TinyServiceInfo[]> {
   const q = query(collection(db, `services/pageInfo/${serviceCategory}`), where('show', '==', true), orderBy("timeStamp", "asc"));
+  const qModal = query(collection(db, `services/modalInfo/${serviceCategory}`));
 
   const cachedSnapshot = await getDocsFromCache(q);
   const servicesArray:TinyServiceInfo[] = [];
@@ -197,6 +198,7 @@ export async function getPageInfoForServices(serviceCategory:ServiceCategory):Pr
     if(import.meta.env.DEV){console.log('Information fetched from the server.')}
 
     const snapshot = await getDocs(q);
+    const snapshotModalInfo = await getDocs(qModal);
 
     snapshot.forEach(doc => {
       // doc.data() is never undefined for query doc snapshots
@@ -244,8 +246,6 @@ export async function getPageInfoForIndividualService(serviceCategory:ServiceCat
     const snapshot = await getDoc(docRef);
 
     serviceInfo = snapshot.data() as TinyServiceInfo;
-
-    await saveLastCloudUpdateOnLocalStorage(serviceCategory);
   }
   
   return serviceInfo;
@@ -273,8 +273,6 @@ export async function checkServiceExistenceV3(serviceID:string, serviceCategory:
     const cloudSnapshot = await getDoc(docRef);
 
     serviceInfo = cloudSnapshot.data() as ServiceInfo;
-
-    await saveLastCloudUpdateOnLocalStorage(serviceCategory);
   } else {
     serviceInfo = cachedSnapshot.data() as ServiceInfo;
   }

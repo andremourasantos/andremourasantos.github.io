@@ -195,12 +195,6 @@ async function createServicesCollection() {
     const ref = doc(db, docRefPath + 'marketing', entry.id);
     await setDoc(ref, {
       id: info.id,
-      show: info.show,
-      status: info.status,
-      group: info.group,
-      image: await getIconURLFromStorage(info.image),
-      title: info.title,
-      description: info.description,
       introduction: info.introduction,
       tableOfBenefits: flattenedTableOfBenefits,
       serviceInfo: {
@@ -223,12 +217,6 @@ async function createServicesCollection() {
     const ref = doc(db, docRefPath + 'web', entry.id);
     await setDoc(ref, {
       id: info.id,
-      show: info.show,
-      status: info.status,
-      group: info.group,
-      image: await getIconURLFromStorage(info.image),
-      title: info.title,
-      description: info.description,
       introduction: info.introduction,
       tableOfBenefits: flattenedTableOfBenefits,
       serviceInfo: {

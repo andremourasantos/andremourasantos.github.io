@@ -34,7 +34,7 @@
         </div>
       </div>
 
-      <FooterNotes v-if="serviceInfo" :footer-notes="serviceFooterNotes">
+      <FooterNotes v-if="serviceDetailedInfo" :footer-notes="serviceFooterNotes">
         <p v-if="showONGsDiscount">O valor cobrado para organizações não governamentais (OGNs) ou ações sociais/comunitárias de pequeno porte pode ser combinado abaixo dessa faixa.</p>
         <p>Ao escolher o PIX como forma de pagamento, você ganha um desconto de 5% em cima do valor total. Pagamentos no Cartão de Crédito até 2x sem juros.</p>
         <p>Este contrato exige uma assinatura eletrônica. Você pode realizar essa ação gratuitamente através do site ou aplicativo do Gov.br.</p>
@@ -56,7 +56,7 @@ import FooterNotes from '../commomModalEls/ServiceFooterNotes.vue';
 
 // composables
 import { toggleHTMLOverflowY } from "@/composables/general";
-import { getModalInfoForServices } from '@/composables/data-base';
+import { getModalInfoForServices, getPageInfoForIndividualService } from '@/composables/data-base';
 
 // stores
 import serviceModalInfo from '@/stores/serviceModal';
@@ -65,7 +65,8 @@ export default defineComponent({
   components: {HeaderIcons, TabelOfBenefits, BenefitDescription, SideServiceInfo, ContactButton, FooterNotes},
   setup() {
     const dialogEl = ref<HTMLDialogElement | null>(null);
-    const serviceInfo = ref<ServiceInfo | null>(null);
+    const serviceDetailedInfo = ref<ServiceInfo | null>(null);
+    const serviceBasicInfo = ref<TinyServiceInfo | null>(null);
     const modalInfo = ref(serviceModalInfo);
 
     const serviceHeader = ref<{title:string, description:string, image:string} | null>(null);
@@ -82,15 +83,16 @@ export default defineComponent({
     const serviceSideInfoList = ref<sideInfo | [string,string,number] | null>(null);
 
     onBeforeMount(async () => {
-      serviceInfo.value = await getModalInfoForServices(modalInfo.value.serviceCategory, modalInfo.value.serviceID);
+      serviceBasicInfo.value = await getPageInfoForIndividualService(modalInfo.value.serviceCategory, modalInfo.value.serviceID);
+      serviceDetailedInfo.value = await getModalInfoForServices(modalInfo.value.serviceCategory, modalInfo.value.serviceID);
     })
 
-    watch(serviceInfo, () => {
-      fillHeader(serviceInfo.value.title,serviceInfo.value.description, serviceInfo.value.image);
-      fillIntroduction(serviceInfo.value.introduction);
-      fillBenefitsTable(serviceInfo.value.tableOfBenefits);
-      fillServiceSideInfoList(serviceInfo.value.serviceInfo);
-      fillServiceFooterNotes(serviceInfo.value.footerNotes);
+    watch(serviceDetailedInfo, () => {
+      fillHeader(serviceBasicInfo.value.title, serviceBasicInfo.value.description, serviceBasicInfo.value.image);
+      fillIntroduction(serviceDetailedInfo.value.introduction);
+      fillBenefitsTable(serviceDetailedInfo.value.tableOfBenefits);
+      fillServiceSideInfoList(serviceDetailedInfo.value.serviceInfo);
+      fillServiceFooterNotes(serviceDetailedInfo.value.footerNotes);
     })
 
     onMounted(()=>{
@@ -149,7 +151,7 @@ export default defineComponent({
     };
 
     return {
-      serviceInfo,
+      serviceDetailedInfo,
       dialogEl,
       modalInfo,
       serviceHeader,
