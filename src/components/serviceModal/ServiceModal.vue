@@ -1,14 +1,31 @@
 <template>
   <dialog class="presentationPopup" ref="dialogEl">
     <HeaderIcons @closeModalButton="closeModal"/>
-    <article>
-      <div id="mainServiceInfo" v-if="serviceHeader !== null">
+    <article v-if="isLoading === true" class="loadingSkeleton">
+      <div class="mainServiceInfo" v-if="isLoading === true">
+        <div class="skeletonIcon"></div>
+        <h2>Lorem, ipsum dolor.</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, distinctio.</p>
+      </div>
+
+      <div class="detailedServiceInfo" v-if="isLoading === true">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus velit quidem soluta ea dolore culpa laboriosam repellat at sapiente incidunt? Aut optio explicabo, eum architecto beatae ipsa culpa aliquam ipsam, modi minima, magnam neque porro suscipit quis harum quia. Ratione nobis et blanditiis provident natus magnam deserunt non commodi dolore.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus velit quidem soluta ea dolore culpa laboriosam repellat at sapiente incidunt? Aut optio explicabo, eum architecto beatae ipsa culpa aliquam ipsam, modi minima, magnam neque porro suscipit quis harum quia. Ratione nobis et blanditiis provident natus magnam deserunt non commodi dolore.</p>
+
+        <TabelOfBenefits>
+          <BenefitDescription v-for="entry in 5" :benefit-text="'Carregando benefícios deste serviço.'" :benefit-image="'loading'"/>
+        </TabelOfBenefits>
+      </div>
+    </article>
+
+    <article v-if="isLoading === false">
+      <div class="mainServiceInfo" v-if="serviceHeader !== null">
         <img :src="serviceHeader.image" :alt="`Imagem de ${serviceHeader.title}`" height="80" width="80">
         <h2>{{ serviceHeader.title }}</h2>
         <p>{{ serviceHeader.description }}</p>
       </div>
 
-      <div id="detailedServiceInfo">
+      <div class="detailedServiceInfo">
         <p v-for="(entry, index) in serviceIntroduction" :key="index"> {{ entry }}</p>
         <TabelOfBenefits>
           <BenefitDescription v-for="entry in serviceBenefitsList" :benefit-text="entry[1]" :benefit-image="entry[0]"/>
@@ -69,6 +86,8 @@ export default defineComponent({
     const serviceBasicInfo = ref<TinyServiceInfo | null>(null);
     const modalInfo = ref(serviceModalInfo);
 
+    const isLoading = ref<boolean>(true);
+
     const serviceHeader = ref<{title:string, description:string, image:string} | null>(null);
     const serviceIntroduction = ref<string[] | null>(null);
     const serviceBenefitsList = ref<[string,string][] | null>(null);
@@ -85,6 +104,8 @@ export default defineComponent({
     onBeforeMount(async () => {
       serviceBasicInfo.value = await getPageInfoForIndividualService(modalInfo.value.serviceCategory, modalInfo.value.serviceID);
       serviceDetailedInfo.value = await getModalInfoForServices(modalInfo.value.serviceCategory, modalInfo.value.serviceID);
+      
+      isLoading.value = false;
     })
 
     watch(serviceDetailedInfo, () => {
@@ -153,6 +174,7 @@ export default defineComponent({
     return {
       serviceDetailedInfo,
       dialogEl,
+      isLoading,
       modalInfo,
       serviceHeader,
       serviceIntroduction,
@@ -204,14 +226,22 @@ export default defineComponent({
 </style>
 
 <style scoped>
-  #mainServiceInfo img {
+  @import '../../assets/styles/loading.css';
+  
+  .mainServiceInfo img {
     filter: drop-shadow(0px 0px 5px #00000015);
   }
 
-  #detailedServiceInfo {
+  .detailedServiceInfo {
     display: flex;
     flex-direction: column;
     gap: 16px;
+  }
+
+  .loadingSkeleton .skeletonIcon {
+    height: 80px;
+    width: 80px;
+    margin-bottom: 16px;
   }
 
   #contactInfo {

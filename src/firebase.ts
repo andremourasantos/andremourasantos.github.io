@@ -1,5 +1,6 @@
 //Firebase
 import { initializeApp } from "firebase/app";
+import { initializeAppCheck, ReCaptchaV3Provider } from "firebase/app-check";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAneNAD2jfP63gmC9rlvn2TLF8livxpYxo",
@@ -12,5 +13,13 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
+if(import.meta.env.PROD){
+  const appCheck = initializeAppCheck(app, {
+    provider: new ReCaptchaV3Provider('6Lescm4pAAAAACbd1jjcFPPb-AEbQJ5ouVeLy-1n'),
+    isTokenAutoRefreshEnabled: true
+  });
+} else {
+  console.warn("As the application is on DEV environment, AppCheck wasn't initialized.");
+}
 
 export { app };

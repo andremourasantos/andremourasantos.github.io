@@ -1,6 +1,6 @@
 <template>
   <button :class="{
-    loading: serviceButtonLoadingStatus === 'Loading'
+    loadingSkeleton: serviceButtonLoadingStatus === 'Loading'
   }" :disabled="serviceButtonLoadingStatus === 'Loading' || serviceTag === 'Indisponível'" :aria-label="serviceTitle" @click="handleClick(serviceId), emitGtmEvent(serviceId)">
     
     <div id="tag" v-if="serviceTag !== undefined && serviceTag !== null" :class="{
@@ -9,7 +9,7 @@
       <p>{{ serviceTag }}</p>
     </div>
 
-    <div v-if="serviceButtonLoadingStatus === 'Loading'" class="img"></div>
+    <div v-if="serviceButtonLoadingStatus === 'Loading'" class="skeletonIcon"></div>
     <img v-if="serviceButtonLoadingStatus === 'Loaded'" class="img" :src="serviceImage" :alt="`Imagem de ${serviceTitle}`">
     
     <div>
@@ -111,6 +111,8 @@ export default defineComponent({
 
 
 <style scoped>
+  @import '../assets/styles/loading.css';
+
   button {
     position: relative;
     display: grid;
@@ -130,11 +132,6 @@ export default defineComponent({
     transition: 200ms;
   }
 
-  button.loading * {
-    font-family: var(--font-loading);
-    animation: ease-in-out loading 1s infinite;
-  }
-
   button:hover:not(:disabled), button:focus {
     transition: 200ms;
     transform: scale(0.99);
@@ -150,18 +147,11 @@ export default defineComponent({
     width: 48px;
   }
 
-  div.img {
+  div.skeletonIcon {
     height: 48px;
     width: 48px;
-    background-color: hsl(0, 0%, 63%);
-    border-radius: 8px;
+    aspect-ratio: 1/1;
   }
-
-    @keyframes loading {
-      0% {opacity: 1;}
-      50% {opacity: 0.5;}
-      100% {opacity: 1;}
-    }
 
   h3 {
     font-size: 16px;

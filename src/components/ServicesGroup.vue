@@ -46,7 +46,6 @@ export default defineComponent({
       type: String
     },
     'groupCategory': {
-      required: true,
       type: String as () => ServiceCategory
     }
   },
@@ -55,6 +54,8 @@ export default defineComponent({
     const numberOfSkeletons = ref<number>(5);
 
     onBeforeMount(() => {
+      if(props.groupCategory === null){return};
+
       const numberOfSkeletonsFromLocalStorage = getNumberOfSkeletonsForServiceGroup(props.groupCategory, props.skeletonGroupName);
       
       if(numberOfSkeletonsFromLocalStorage === 0 || numberOfSkeletonsFromLocalStorage > 7) {
