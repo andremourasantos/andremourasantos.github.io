@@ -28,6 +28,7 @@ connectFirestoreEmulator(db, '0.0.0.0', 8080);
  * @returns {Promise<void>} Returns a promise that resolves when all tasks are complete.
  */
 async function main() {
+  await createRecommendationsCollection();
   await uploadAllIconsToStorage();
   await createComplementaryServicesCollection();
   await createServicesCollection();
@@ -84,27 +85,30 @@ import webJSON from '../src/data/web-services.json' assert { type: 'json' };
  * Creates the recommendations collection in Firestore based on the data provided in the recommendationsJSON object.
  * @returns {Promise<void>} Returns a promise that resolves when the collection creation is complete.
  */
-// async function createRecommendationsCollection():Promise<void> {
-//   console.warn('Creating recommendations collection...');
+async function createRecommendationsCollection() {
+  console.warn('Creating recommendations collection...');
 
-//   for (const [index, entry] of Object.entries(recommendationsJSON)) {
-//     const info:PresentationCardInfo = entry as PresentationCardInfo;
+  for (const [index, entry] of Object.entries(recommendationsJSON)) {
+    const info = entry; // as RecommendationsCard
 
-//     const ref = doc(db, 'recommendations', info.author.name);
-//     await setDoc(ref, {
-//       type: info.type,
-//       source: info.source,
-//       author: info.author,
-//       icon: info.icon,
-//       text: info.text
-//     });
-//   };
+    const id = info.author.name.normalize('NFKD').replace(/[\u0300-\u036f]/g, "").replace(' ', '-').toLocaleLowerCase();
 
-//   return new Promise((resolve) => {
-//     console.log('OK.');
-//     return resolve();
-//   })
-// }
+    const ref = doc(db, 'recommendations', id);
+    await setDoc(ref, {
+      order: info.order,
+      type: info.type,
+      source: info.source,
+      author: info.author,
+      icon: info.icon,
+      text: info.text
+    });
+  };
+
+  return new Promise((resolve) => {
+    console.log('OK.');
+    return resolve();
+  })
+}
 
 /**
  * Creates and populates the complementary services collection in Firestore based on provided JSON data.

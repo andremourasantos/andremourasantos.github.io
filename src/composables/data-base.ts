@@ -56,7 +56,7 @@ async function testFirestoreEmulatorConnection() {
   })
 }
 
-// getting data from the cloud
+// getting data from the cloud for the services
 /**
  * Retrieves the timestamp of the last cloud update for a specific service category.
  *
@@ -198,7 +198,9 @@ export async function getPageInfoForServices(serviceCategory:ServiceCategory):Pr
     if(import.meta.env.DEV){console.log('Information fetched from the server.')}
 
     const snapshot = await getDocs(q);
-    const snapshotModalInfo = await getDocs(qModal);
+    
+    // update the modal cache for this specific service.
+    await getDocs(qModal);
 
     snapshot.forEach(doc => {
       // doc.data() is never undefined for query doc snapshots
@@ -251,7 +253,7 @@ export async function getPageInfoForIndividualService(serviceCategory:ServiceCat
   return serviceInfo;
 }
 
-// getting data for the modal
+// getting data for the services modal
 /**
  * Checks the existence and availability of a service based on its ID and category.
  * @param {string} serviceID - The ID of the service to check.
@@ -324,7 +326,7 @@ export async function getModalInfoForServices(serviceCategory:ServiceCategory, s
   return serviceInfo;
 }
 
-// offline code
+// offline code for the services
 import projectsJSON from '@/data/projects.json';
 
 /**
@@ -342,4 +344,39 @@ export async function checkProjectExistence(projectId:string):Promise<boolean> {
       return resolve(false);
     }
   });
+}
+
+// getting data for the recommendations
+import { setNumberOfSkeletonsForNavIndicatorOnRecommendationsCard } from './general';
+export async function getRecommendationsFromCloud():Promise<RecommendationsCard[]> {
+  const q = query(collection(db, 'recommendations'), orderBy('order', 'asc'));
+
+  let recommendationsArray:RecommendationsCard[] = [];
+  let infoToUse;
+  const cachedSnapshot = await getDocsFromCache(q);
+
+  if(checkNeedToSyncCache('marketing') && checkNeedToSyncCache('web') || cachedSnapshot.empty){
+    if(import.meta.env.DEV){
+      console.log('Recommendations fetched from the server.');
+    }
+
+    const serverSnapshot = await getDocs(q);
+    infoToUse = serverSnapshot;
+  } else {
+    if(import.meta.env.DEV){
+      console.log('Recommendations fetched from the cache.');
+    }
+
+    infoToUse = cachedSnapshot;
+  }
+
+  infoToUse.forEach(doc => {
+    const docData = doc.data() as RecommendationsCard;
+    
+    recommendationsArray.push({id: doc.id, ...docData});
+  })
+
+  setNumberOfSkeletonsForNavIndicatorOnRecommendationsCard(recommendationsArray.length);
+
+  return recommendationsArray;
 }

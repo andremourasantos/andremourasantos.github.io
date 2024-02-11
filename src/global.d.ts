@@ -88,14 +88,15 @@ declare global {
     footerNotes:string[]
   } | undefined;
 
-  type PresentationCardInfo = {
-    type: "Recomendações" | "Desenvolvimento Web" | "Marketing Digital",
-    source: "LinkedIn" | "Cliente",
+  type RecommendationsCard = {
+    id:string,
+    order:number,
+    source: "LinkedIn" | "Outro",
     author: {
       name:string,
       job:string
-    } | null,
-    icon: "PhTrophy" | "PhStar" | "PhGlobeStand",
+    },
+    icon: "PhTrophy",
     text:string[]
   };
 }

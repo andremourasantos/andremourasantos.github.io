@@ -1,7 +1,9 @@
 <template>
   <PageTitle :page-title="'Marketing Digital'" :page-description="'Tenha uma estratégia de Marketing confeccionada especificamente para as necessidades do seu negócio.'"/>
 
-  <PresentationCard id="presentationCard"/>
+  <div class="recommendationsCard">
+    <RecommendationsCard/>
+  </div>
 
   <section id="servicesGroup">    
     <!-- <ServicesGroup v-if="!comboServices || comboServices.length !== 0" :component-status="fetchingData ? 'Loading' : 'Loaded'" :group-title="'Combos de serviços'" :group-description="'Economize tempo e dinheiro na hora de criar sua estratégia de Marketing.'" :group-category="'marketing'" :skeleton-group-name="skeletonsInfo.group1.name">
@@ -20,7 +22,7 @@
 
 <script lang="ts">
 import { defineComponent, ref, watch, onBeforeMount, onMounted } from 'vue';
-import PresentationCard from '@/components/PresentationCard.vue';
+import RecommendationsCard from '@/components/RecommendationsCard.vue';
 
 // components
 import PageTitle from '@/components/PageTitle.vue';
@@ -32,7 +34,7 @@ import { searchForURLParam, openServiceModal, setNumberOfSkeletonsForServiceGrou
 import { getPageInfoForServices, isCacheSyncedWithCloud } from '@/composables/data-base';
 
 export default defineComponent({
-  components: {PageTitle, PresentationCard, ServicesGroup, ServiceButton},
+  components: {PageTitle, RecommendationsCard, ServicesGroup, ServiceButton},
   setup() {
     const serviceData = ref<TinyServiceInfoMKT[] | null>();
     const fetchingData = ref<boolean>(true);
@@ -93,7 +95,7 @@ export default defineComponent({
 
 
 <style scoped>
-#presentationCard {
+.recommendationsCard {
   margin-top: 64px;
   margin-inline: auto;
   max-width: 550px;

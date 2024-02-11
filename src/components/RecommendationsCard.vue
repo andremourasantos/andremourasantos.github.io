@@ -1,52 +1,98 @@
 <template>
-  <article>
-    <section v-for="item in recommendationsInfo" ref="content" class="presentationCard" @touchstart="touchingStart($event)" @touchmove="touchingMoving" @touchend="changeContentViaSwipe($event)">
+  <article v-if="isLoading">
+    <section class="recommendationsCard loadingSkeleton">
       <div class="header">
-        <component :is="item.icon" />
+        <div class="skeletonIcon icon"></div>
         <div>
-          <h2>{{ item.type }}</h2>
-          <p v-if="item.type === 'Recomendações'">Via <a v-if="item.source === 'LinkedIn'" href="https://www.linkedin.com/in/andremourasantos/details/recommendations/?detailScreenTabIndex=0" target="_blank" rel="external nofollow noopener noreffer" title="Visualizar recomendação no LinkedIn">{{ item.source }}</a><span v-if="item.source !== 'LinkedIn'">{{ item.source }}</span>.</p>
+          <h2>Carregando...</h2>
+          <p>Carregando...</p>
+        </div>
+      </div>
+
+      <div class="contentText">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, minima.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo pariatur ut accusantium molestias rerum aut.</p>
+        <p class="recommendationAuthor"><strong>Lorem</strong>, ipsum...</p>
+      </div>
+    </section>
+
+    <div class="nav" ref="navIndicators">
+      <div v-for="(item, index) in numberOfNavIndicatorsSkeletons" class="nav_indicator"></div>
+    </div>
+  </article>
+  
+  <article v-if="!isLoading">
+    <section v-for="item in recommendationsInfo" ref="content" class="recommendationsCard" @touchstart="touchingStart($event)" @touchmove="touchingMoving" @touchend="changeContentViaSwipe($event)">
+      <div class="header">
+        <component class="icon" :is="item.icon" />
+        <div>
+          <h2>Recomendação</h2>
+          <p>Via <a v-if="item.source === 'LinkedIn'" href="https://www.linkedin.com/in/andremourasantos/details/recommendations/?detailScreenTabIndex=0" target="_blank" rel="external nofollow noopener noreffer" title="Visualizar recomendação no LinkedIn">{{ item.source }}</a><span v-if="item.source !== 'LinkedIn'">{{ item.source }}</span>.</p>
         </div>
       </div>
 
       <div class="contentText">
         <p v-for="paragraph in item.text">"{{ paragraph }}"</p>
-        <p v-if="item.type === 'Recomendações' && item.author !== null" class="recommendationAuthor"><strong>{{ item.author.name }}</strong>, {{
+        <p class="recommendationAuthor"><strong>{{ item.author.name }}</strong>, {{
           item.author.job }}.</p>
       </div>
     </section>
 
-    <div id="nav" ref="navIndicators">
+    <div class="nav" ref="navIndicators">
       <div v-for="(item, index) in recommendationsInfo" class="nav_indicator" @click="changeContentViaNavIndicator($event)" :title="`Slide ${index + 1} de ${indicatorsArray?.length}`"></div>
     </div>
   </article>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, onMounted, onBeforeUnmount } from 'vue';
-import { PhTrophy, PhStar, PhGlobeStand } from '@phosphor-icons/vue';
+import { defineComponent, ref, onBeforeUnmount, onBeforeMount, watch, onMounted } from 'vue';
+import { PhTrophy } from '@phosphor-icons/vue';
 
-//data
-import recommendationsJSON from '@/data/recommendations.json';
+// composables
+import { getRecommendationsFromCloud } from '@/composables/data-base';
+import { getNumberOfSkeletonsForNavIndicatorOnRecommendationsCard } from '@/composables/general';
 
 export default defineComponent({
-  name: 'PresentationCard',
-  components: {PhTrophy, PhStar, PhGlobeStand},
+  name: 'RecommendationsCard',
+  components: {PhTrophy},
   setup () {
-    const recommendationsInfo = ref<PresentationCardInfo[]>(recommendationsJSON as PresentationCardInfo[]);
+    const isLoading = ref<boolean>(true);
+    const recommendationsInfo = ref<RecommendationsCard[] | null>(null);
+    const numberOfNavIndicatorsSkeletons = ref<number>(6);
     const presentationInfoIndex = ref<number>(0);
-    const presentationInfoTotal = ref<number>(recommendationsJSON.length - 1);
+    const presentationInfoTotal = ref<number>(0);
 
     //el refs
     const content = ref<HTMLElement[] | null>(null);
     const navIndicators = ref<HTMLDivElement | null>(null);
     const indicatorsArray = ref<HTMLDivElement[] | null>(null);
 
+    onBeforeMount(async () => {
+      await getRecommendationsFromCloud()
+        .then(res => {
+          isLoading.value = false;
+          recommendationsInfo.value = res;
+          presentationInfoTotal.value = res.length - 1;
+        });
+      
+      const navIndicatorSkeletons:number = getNumberOfSkeletonsForNavIndicatorOnRecommendationsCard();
+
+      if(navIndicatorSkeletons <= 7) {
+        numberOfNavIndicatorsSkeletons.value = navIndicatorSkeletons;
+      } else {
+        numberOfNavIndicatorsSkeletons.value = 6;
+      }
+    })
+
     onMounted(() => {
+      
+    })
+
+    watch(content, () => {
       if(navIndicators.value !== null){
         indicatorsArray.value = Array.from(navIndicators.value.childNodes).filter((el) => {return el.nodeName === 'DIV'}) as HTMLDivElement[];
       };
-      
+
       switchActiveNavIndicator();
       switchActiveContent();
 
@@ -125,7 +171,7 @@ export default defineComponent({
     };
 
     const changeContentViaSwipe = (e:TouchEvent):void => {
-      if(Math.abs(initialX.value - finalX.value) < 100){
+      if(Math.abs(initialX.value - finalX.value) < 50){
         startswitchPresentationInfo = setInterval(() => {
           switchPresentationInfo();
         }, switchDelay);
@@ -148,6 +194,8 @@ export default defineComponent({
     };
 
     return {
+      isLoading,
+      numberOfNavIndicatorsSkeletons,
       recommendationsInfo,
       content,
       navIndicators,
@@ -162,6 +210,17 @@ export default defineComponent({
 </script>
 
 <style scoped>
+  @import '../assets/styles/loading.css';
+
+  .loadingSkeleton {
+    display: flex !important;
+  }
+  
+  .skeletonIcon {
+    height: 36px;
+    width: 36px;
+  }
+
   article {
     display: flex;
     flex-direction: column;
@@ -178,9 +237,14 @@ export default defineComponent({
       article {
         height: 240px;
       }
+
+      .skeletonIcon {
+        height: 32px;
+        width: 32px;
+      }
     }
 
-  .presentationCard {
+  .recommendationsCard {
     display: none;
     flex-direction: column;
     overflow: hidden;
@@ -193,6 +257,10 @@ export default defineComponent({
     justify-content: flex-start;
     gap: 8px;
     margin-bottom: 16px;
+  }
+
+  .header .icon {
+    aspect-ratio: 1/1;
   }
 
   .header h2 {
@@ -226,7 +294,7 @@ export default defineComponent({
     100% {}
   }
 
-  #nav {
+  .nav {
     display: flex;
     align-items: center;
     justify-content: center;

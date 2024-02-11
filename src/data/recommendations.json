@@ -1,6 +1,6 @@
 [
   {
-    "type": "Recomendações",
+    "order": 0,
     "source": "LinkedIn",
     "author": {
       "name": "Fillipe Neyl",
@@ -12,7 +12,7 @@
     ]
   },
   {
-    "type": "Recomendações",
+    "order": 2,
     "source": "LinkedIn",
     "author": {
       "name": "Wedlin Lucas",
@@ -25,7 +25,7 @@
     ]
   },
   {
-    "type": "Recomendações",
+    "order": 3,
     "source": "LinkedIn",
     "author": {
       "name": "Cássio Pisseti",
@@ -37,7 +37,7 @@
     ]
   },
   {
-    "type": "Recomendações",
+    "order": 4,
     "source": "LinkedIn",
     "author": {
       "name": "Humberto Santos",
@@ -49,7 +49,20 @@
     ]
   },
   {
-    "type": "Recomendações",
+    "order": 5,
+    "source": "LinkedIn",
+    "author": {
+      "name": "Myckael Henrique",
+      "job": "Comercial em Campos Dealer"
+    },
+    "icon": "PhTrophy",
+    "text": [
+      "No tempo em que trabalhamos juntos, sempre esteve disposto a ajudar a nossa equipe com ideias, sugestões e qualquer melhoria que pudesse ajudar a alavancar nosso negócio.",
+      "A comunicação com o André sempre foi um ponto forte na parceria."
+    ]
+  },
+  {
+    "order": 6,
     "source": "LinkedIn",
     "author": {
       "name": "Rafael Bretas",

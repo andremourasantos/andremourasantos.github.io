@@ -105,3 +105,11 @@ export function setNumberOfSkeletonsForServiceGroup(serviceCategory:ServiceCateg
 export function getNumberOfSkeletonsForServiceGroup(serviceCategory:ServiceCategory, groupName:string):number {
   return Number(localStorage.getItem(`skeletonsFor${serviceCategory === 'marketing' ? 'Marketing' : 'Web'}-${groupName}`));
 }
+
+export function setNumberOfSkeletonsForNavIndicatorOnRecommendationsCard(numberOfSkeletons:number):void {
+  return localStorage.setItem('skeletonsForNavIndicatorOnRecommendationsCard', numberOfSkeletons.toString());
+}
+
+export function getNumberOfSkeletonsForNavIndicatorOnRecommendationsCard():number {
+  return Number(localStorage.getItem('skeletonsForNavIndicatorOnRecommendationsCard'));
+}
