@@ -267,16 +267,29 @@ export async function checkServiceExistenceV3(serviceID:string, serviceCategory:
 
   try {
     cachedSnapshot = await getDocFromCache(docRef);
-  } catch (error) {
-    return 'does_not';
-  }
-  
-  if(checkNeedToSyncCache(serviceCategory) || cachedSnapshot.data() === undefined){
-    const cloudSnapshot = await getDoc(docRef);
 
-    serviceInfo = cloudSnapshot.data() as ServiceInfo;
-  } else {
     serviceInfo = cachedSnapshot.data() as ServiceInfo;
+    
+    if(import.meta.env.DEV) {
+      console.log('Cached data does exists for this service: ' + serviceID)
+    }
+  } catch (error) {
+    if(import.meta.env.DEV) {
+      console.log("Cached data doesn't exists for this service: " + serviceID)
+    }
+  } finally {
+    if(checkNeedToSyncCache(serviceCategory)){
+      if(import.meta.env.DEV) {
+        console.log('Need to update information checked. Update is needed.')
+      }
+
+      const cloudSnapshot = await getDoc(docRef);
+      serviceInfo = cloudSnapshot.data() as ServiceInfo;
+    } else {
+      if(import.meta.env.DEV) {
+        console.log('Need to update information checked. Already up to date.')
+      }
+    }
   }
 
   return new Promise(resolve => {

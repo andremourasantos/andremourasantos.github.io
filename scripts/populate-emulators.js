@@ -28,8 +28,8 @@ connectFirestoreEmulator(db, '0.0.0.0', 8080);
  * @returns {Promise<void>} Returns a promise that resolves when all tasks are complete.
  */
 async function main() {
-  await createRecommendationsCollection();
   await uploadAllIconsToStorage();
+  await createRecommendationsCollection();
   await createComplementaryServicesCollection();
   await createServicesCollection();
   return console.log('All good to go!');
@@ -44,7 +44,6 @@ async function uploadAllIconsToStorage() {
   const currentFilePath = new URL(import.meta.url).pathname;
   const currentDir = path.dirname(currentFilePath);
   const iconsFolder = path.join(currentDir, "..", "src", "assets", "icons");
-
   const icons = fs.readdirSync(iconsFolder);
 
   try {
@@ -96,7 +95,6 @@ async function createRecommendationsCollection() {
     const ref = doc(db, 'recommendations', id);
     await setDoc(ref, {
       order: info.order,
-      type: info.type,
       source: info.source,
       author: info.author,
       icon: info.icon,
