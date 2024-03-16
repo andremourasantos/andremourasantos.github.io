@@ -6,7 +6,7 @@ const storage = getStorage();
 // dev environment script
 if(import.meta.env.DEV){
   console.warn('Connecting with Storage Emulator...');
-  connectStorageEmulator(storage, '0.0.0.0', 9199);
+  connectStorageEmulator(storage, '127.0.0.1', 9199);
 }
 
 /**

@@ -20,8 +20,8 @@ const storage = getStorage();
 const db = getFirestore(app);
 
 // dev environment script
-connectStorageEmulator(storage, '0.0.0.0', 9199);
-connectFirestoreEmulator(db, '0.0.0.0', 8080);
+connectStorageEmulator(storage, '127.0.0.1', 9199);
+connectFirestoreEmulator(db, '127.0.0.1', 8080);
 
 /**
  * Main function to execute various tasks, including uploadAllIconsToStorage, createComplementaryServicesCollection and createServicesCollection.
@@ -43,7 +43,7 @@ async function uploadAllIconsToStorage() {
   //@ts-ignore
   const currentFilePath = new URL(import.meta.url).pathname;
   const currentDir = path.dirname(currentFilePath);
-  const iconsFolder = path.join(currentDir, "..", "src", "assets", "icons");
+  const iconsFolder = path.join("src", "assets", "icons");
   const icons = fs.readdirSync(iconsFolder);
 
   try {

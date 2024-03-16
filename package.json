@@ -1,6 +1,6 @@
 {
   "name": "andremourasantos.github.io",
-  "version": "1.5.11",
+  "version": "1.5.12",
   "private": true,
   "type": "module",
   "scripts": {
@@ -14,8 +14,8 @@
   "dependencies": {
     "@gtm-support/vue-gtm": "^2.2.0",
     "@phosphor-icons/vue": "^2.1.6",
-    "firebase": "^10.7.1",
-    "firebase-tools": "^13.0.2",
+    "firebase": "^10.8.1",
+    "firebase-tools": "^13.4.1",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3"
   },

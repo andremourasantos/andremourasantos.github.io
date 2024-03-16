@@ -12,7 +12,7 @@ const db = initializeFirestore(app, {
 if(import.meta.env.DEV){
   var sessionStorageKeyForEmulatorCheck:string = 'EmulatorsConnection';
   console.warn('Connecting with Firestore Emulator...');
-  connectFirestoreEmulator(db, '0.0.0.0', 8080);
+  connectFirestoreEmulator(db, '127.0.0.1', 8080);
   testFirestoreEmulatorConnection();
 }
 /**
