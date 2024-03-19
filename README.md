@@ -6,7 +6,7 @@ Esse repositório guarda os arquivos do novo site desenvolvi, que pode ser acess
 
 ## Tecnologias usadas
 
-_*Atualizado em outubro de 2023._
+_*Atualizado em fevereiro de 2024._
 
 <div align="center">
   <img height="48" title="HTML5" src="data/imagens/html5.png">
@@ -14,7 +14,11 @@ _*Atualizado em outubro de 2023._
   <img height="48" title="JavaScript" src="data/imagens/js.png">
   <img height="48" title="TypeScript" src="data/imagens/ts.png">
   <img height="48" title="VueJS 3" src="data/imagens/vuejs.png">
+  <img height="48" title="Vite" src="data/imagens/vite.png">
   <img height="48" title="Firebase Hosting" src="data/imagens/firebase-hosting.png">
+  <img height="48" title="Firebase Firestore" src="data/imagens/firebase-firestore.png">
+  <img height="48" title="Firebase Storage" src="data/imagens/firebase-storage.png">
+  <img height="48" title="Firebase AppCheck" src="data/imagens/firebase-appcheck.png">
 </div>
 
 ---
@@ -28,17 +32,25 @@ _*Atualizado em outubro de 2023._
 - Uso de Camadas de Dados (_Data Layers_) para transmitir dados de eventos a partir de interações com componentes.
 - Uso de touch events para funcionalidades de "swipe" em carrosséis.
 - Uso e configuração básica do TypeScript, bem como a criação de tipos globais e validação de dados.
+- Controle de cache do Firestore para otimização de requisições ao servidor.
 
 ---
 
 ## Árvore de componentes e lógica
 
-_*Atualizado em janeiro de 2024._
+_*Atualizado em fevereiro de 2024._
 
 Veja abaixo a árvore de componentes do VueJs e também o fluxograma de lógica da aplicação, assim, você poderá ter um bom entendimento de como o projeto foi estruturado desde o começo para permitir uma fácil manutenção e adição de funcionalidades.
 
+### Árvore de componentes da aplicação
+
 <img title="Árvode de componentes do VueJS" src="data/imagens/vuejs-tree.png">
-<img title="Fluxograma de lógica da aplicação" src="data/imagens/logic-fluxogram.png">
+
+### Fluxograma das views Marketing e WebDev
+<img title="Fluxograma de lógica da aplicação" src="data/imagens/database-fluxogram.png">
+
+### Fluxograma da view Portfolio
+
 
 ---
 

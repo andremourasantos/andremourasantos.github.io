@@ -2,7 +2,7 @@
   <PageTitle :page-title="'André Moura'" :page-description="'Profissional de Marketing e Desenvolvedor Web freelancer.'"/>
 
   <section>
-    <PresentationCard/>
+    <RecommendationsCard/>
   </section>
 
   <section>
@@ -18,11 +18,11 @@ import router from '@/router';
 
 //Components
 import PageTitle from '@/components/PageTitle.vue';
-import PresentationCard from '@/components/PresentationCard.vue';
+import RecommendationsCard from '@/components/RecommendationsCard.vue';
 import ButtonToPage from '@/components/ButtonToPage.vue';
 
 export default defineComponent({
-  components: {PageTitle, PresentationCard, ButtonToPage},
+  components: {PageTitle, RecommendationsCard, ButtonToPage},
   setup() {
     function goToPage(routeName:string) {
       return router.push({name: routeName});

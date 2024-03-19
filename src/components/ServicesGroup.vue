@@ -1,11 +1,14 @@
 <template>
-  <section>
+  <section ref="section">
     <div>
       <h2>{{ groupTitle }}</h2>
       <p>{{ groupDescription }}</p>
     </div>
     <article>
-      <slot>
+      <slot v-if="componentStatus === 'Loading'">
+        <ServiceButton v-for="entry in numberOfSkeletons" :key="entry" :service-image="'loading'" :service-title="'Carregando'" :service-description="'Aguarde, as informações sobre este serviço estão sendo recolhidas.'" :service-id="entry + ''" :service-category="'web'" :service-button-loading-status="'Loading'"/>
+      </slot>
+      <slot v-if="componentStatus === 'Loaded'">
 
       </slot>
     </article>
@@ -13,9 +16,17 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, onBeforeMount, onMounted, ref, watch } from 'vue';
+
+// components
+import ServiceButton from './ServiceButton.vue';
+import FlippingLoader from '@/components/FlippingLoader.vue';
+
+// composables
+import { getNumberOfSkeletonsForServiceGroup } from '@/composables/general';
 
 export default defineComponent({
+  components: {ServiceButton, FlippingLoader},
   props: {
     'groupTitle': {
       required: true,
@@ -24,11 +35,53 @@ export default defineComponent({
     'groupDescription': {
       required: true,
       type: String
+    },
+    'componentStatus': {
+      required: false,
+      type: String as () => 'Loading' | 'Loaded',
+      default: 'Loaded'
+    },
+    'skeletonGroupName': {
+      required: false,
+      type: String
+    },
+    'groupCategory': {
+      type: String as () => ServiceCategory
     }
   },
   setup(props) {
-    
-  },
+    const section = ref<HTMLElement | null>();
+    const numberOfSkeletons = ref<number>(5);
+
+    onBeforeMount(() => {
+      if(props.groupCategory === null){return};
+
+      const numberOfSkeletonsFromLocalStorage = getNumberOfSkeletonsForServiceGroup(props.groupCategory, props.skeletonGroupName);
+      
+      if(numberOfSkeletonsFromLocalStorage === 0 || numberOfSkeletonsFromLocalStorage > 7) {
+        numberOfSkeletons.value = 5
+      } else {
+        numberOfSkeletons.value = numberOfSkeletonsFromLocalStorage
+      }
+    })
+
+    onMounted(() => {
+      if(props.componentStatus === 'Loading'){
+        section.value.classList.add('loading');
+      }
+    })
+
+    watch(() => props.componentStatus, (newValue) => {
+      if(newValue === 'Loaded'){
+        section.value.classList.remove('loading');
+      }
+    })
+
+    return {
+      section,
+      numberOfSkeletons
+    }
+  }
 })
 </script>
 
@@ -56,6 +109,7 @@ export default defineComponent({
   section > article {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 24px;
   }
 

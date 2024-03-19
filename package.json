@@ -1,18 +1,21 @@
 {
   "name": "andremourasantos.github.io",
-  "version": "1.4.3",
+  "version": "1.5.12",
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
+    "initialize-emulators": "firebase emulators:start",
+    "populate-emulators": "node ./scripts/populate-emulators.js",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "deploy-preview-channel": "firebase hosting:channel:deploy preview"
   },
   "dependencies": {
     "@gtm-support/vue-gtm": "^2.2.0",
     "@phosphor-icons/vue": "^2.1.6",
-    "firebase": "^10.7.1",
-    "firebase-tools": "^13.0.2",
+    "firebase": "^10.8.1",
+    "firebase-tools": "^13.4.1",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3"
   },

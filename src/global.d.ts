@@ -1,7 +1,30 @@
 export {}
 
 declare global {
+  type ServiceCategory = "marketing" | "web";
+
   type ServiceInfo = {
+    id:string,
+    show:boolean,
+    status:null | "Novo" | "Indisponível",
+    group:string,
+    title:string,
+    image:string,
+    description:string,
+    introduction:string[],
+    tableOfBenefits:ServiceTableOfBenefits[],
+    serviceInfo: {
+      deadline:[string,string,number],
+      price:[string,string,number]
+    },
+    footerNotes:string[]
+  } | undefined;
+
+  type ServiceTableOfBenefits = {
+    col1: string; col2: string; col3: boolean
+  }
+
+  type ServiceInfoJSON = {
     id:string,
     show:boolean,
     status:null | "Novo" | "Indisponível",
@@ -26,6 +49,24 @@ declare global {
     group: "Tudo-em-um" | "Individual"
   }
 
+  type TinyServiceInfo = {
+    id:string,
+    show:boolean,
+    status:null | "Novo" | "Indisponível",
+    group:string,
+    image:string,
+    title:string,
+    description:string,
+  }
+
+  type TinyServiceInfoMKT = TinyServiceInfo & {
+    group: "Combo" | "Individual" | "Ascensão"
+  }
+
+  type TinyServiceInfoWEB = TinyServiceInfo & {
+    group: "Tudo-em-um" | "Individual"
+  }
+
   type ProjectInfo = {
     id:string,
     status:null | "Novo",
@@ -42,19 +83,20 @@ declare global {
     image2:string,
     conclusionText: string[],
     relatedServices: {
-      servicesID: ["Marketing" | "Web",string][]
+      servicesID: [ServiceCategory,string][]
     } | null,
     footerNotes:string[]
   } | undefined;
 
-  type PresentationCardInfo = {
-    type: "Recomendações" | "Desenvolvimento Web" | "Marketing Digital",
-    source: "LinkedIn" | "Cliente",
+  type RecommendationsCard = {
+    id:string,
+    order:number,
+    source: "LinkedIn" | "Outro",
     author: {
       name:string,
       job:string
-    } | null,
-    icon: "PhTrophy" | "PhStar" | "PhGlobeStand",
+    },
+    icon: "PhTrophy",
     text:string[]
   };
 }

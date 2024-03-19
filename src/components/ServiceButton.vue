@@ -1,11 +1,17 @@
 <template>
-  <button :disabled="serviceTag === 'Indisponível'" :aria-label="serviceTitle" @click="handleClick(serviceId), emitGtmEvent(serviceId)">
+  <button :class="{
+    loadingSkeleton: serviceButtonLoadingStatus === 'Loading'
+  }" :disabled="serviceButtonLoadingStatus === 'Loading' || serviceTag === 'Indisponível'" :aria-label="serviceTitle" @click="handleClick(serviceId), emitGtmEvent(serviceId)">
+    
     <div id="tag" v-if="serviceTag !== undefined && serviceTag !== null" :class="{
       newService: serviceTag === 'Novo' 
     }" aria-label="Estado do serviço">
       <p>{{ serviceTag }}</p>
     </div>
-    <img :src="getIconURL(serviceImage)" :alt="`Imagem de ${serviceTitle}`">
+
+    <div v-if="serviceButtonLoadingStatus === 'Loading'" class="skeletonIcon"></div>
+    <img v-if="serviceButtonLoadingStatus === 'Loaded'" class="img" :src="serviceImage" :alt="`Imagem de ${serviceTitle}`">
+    
     <div>
       <h3>{{ serviceTitle }}</h3>
       <p>{{ serviceDescription }}</p>
@@ -15,11 +21,11 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import router from '@/router';
 import { useGtm } from '@gtm-support/vue-gtm';
 
-//composables
-import { getIconURL, openServiceIDServiceModal } from '@/composables/general';
-import router from '@/router';
+// composables
+import { openServiceModal } from '@/composables/general';
 
 export default defineComponent({
   props: {
@@ -45,12 +51,17 @@ export default defineComponent({
     },
     'serviceCategory': {
       required: true,
-      type: String as () => 'Marketing' | 'Web'
+      type: String as () => ServiceCategory
     },
     'serviceButtonEnviroment': {
       required: false,
       default: 'Page',
       type: String as () => 'Page' | 'Popup'
+    },
+    'serviceButtonLoadingStatus': {
+      required: false,
+      default: 'Loaded',
+      type: String as () => 'Loading' | 'Loaded'
     }
   },
   setup(props) {
@@ -63,13 +74,13 @@ export default defineComponent({
           break;
       
         default:
-          openModal(serviceId);
+          openModal();
           break;
       }
     };
 
     const goToService = (serviceId:string):void => {
-      const page = props.serviceCategory === 'Marketing' ? 'marketing' : 'webDev';
+      const page = props.serviceCategory === 'marketing' ? 'marketing' : 'webDev';
       router.push({name: page, query:{
         serviceID: serviceId,
         'utm_source': 'website',
@@ -77,8 +88,8 @@ export default defineComponent({
       }})
     }
 
-    const openModal = (serviceId:string):void => {
-      openServiceIDServiceModal(serviceId, props.serviceCategory);
+    const openModal = ():void => {
+      openServiceModal(props.serviceId, props.serviceCategory);
     };
 
     const emitGtmEvent = (serviceId:string) => {
@@ -91,7 +102,6 @@ export default defineComponent({
     }
     
     return {
-      getIconURL,
       handleClick,
       emitGtmEvent
     }
@@ -101,6 +111,8 @@ export default defineComponent({
 
 
 <style scoped>
+  @import '../assets/styles/loading.css';
+
   button {
     position: relative;
     display: grid;
@@ -133,6 +145,12 @@ export default defineComponent({
   button img {
     height: fit-content;
     width: 48px;
+  }
+
+  div.skeletonIcon {
+    height: 48px;
+    width: 48px;
+    aspect-ratio: 1/1;
   }
 
   h3 {

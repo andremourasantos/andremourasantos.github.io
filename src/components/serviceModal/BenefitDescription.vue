@@ -1,6 +1,7 @@
 <template>
   <li class="benefitDescription">
-    <img :src="getIconURL(benefitImage)" :alt="`Ícone de ${benefitImage}`" height="24" width="24">
+    <div v-if="benefitImage === 'loading'" class="skeletonIcon"></div>
+    <img v-if="benefitImage !== 'loading'" :src="getIconURL(benefitImage)" :alt="`Ícone de ${benefitImage}`" height="24" width="24">
     <p>{{ benefitText }}</p>
   </li>
 </template>
@@ -33,11 +34,19 @@ export default defineComponent({
 
 
 <style scoped>
+  @import '../../assets/styles/loading.css';
+
   li {
     display: flex;
     width: 100%;
     padding-bottom: 8px;
     gap: 8px;
     border-bottom: 2px solid #00000030;
+  }
+
+  .skeletonIcon {
+    height: 24px;
+    width: 24px;
+    aspect-ratio: 1/1;
   }
 </style>
