@@ -195,7 +195,7 @@ export default defineComponent({
     background-color: var(--colors-background);
     margin: auto 24px;
     padding: 24px;
-    max-width: 520px;
+    max-width: 540px;
   }
 
   dialog.presentationPopup > article {
