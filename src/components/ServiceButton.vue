@@ -145,6 +145,7 @@ export default defineComponent({
   button img {
     height: fit-content;
     width: 48px;
+    aspect-ratio: 1/1;
   }
 
   div.skeletonIcon {

@@ -70,6 +70,14 @@ export default defineComponent({
     cursor: pointer;
   }
 
+  details > summary {
+   list-style: none;
+  }
+  
+  details > summary::-webkit-details-marker {
+    display: none;
+  }
+
   details[open] summary {
     padding-bottom: 4px;
     border-bottom: 2px solid #00000030;
