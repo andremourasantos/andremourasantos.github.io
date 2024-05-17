@@ -10,7 +10,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, computed, onMounted, provide, onBeforeMount } from 'vue';
+import { defineComponent, ref, computed, onMounted, provide, onBeforeMount, watch } from 'vue';
 
 // firebase
 import { app } from '@/firebase';
@@ -28,6 +28,28 @@ export default defineComponent({
   setup() {
     const modalInfo = ref(serviceModalInfo);
     const showModal = computed(() => modalInfo.value.status === 'Show');
+    const currentColorScheme = ref<'light' | 'dark'>('light');
+
+    const toggleColorScheme = () => {
+      currentColorScheme.value === 'light' ? currentColorScheme.value = 'dark' : currentColorScheme.value = 'light';
+    }
+
+    provide("colorScheme", {
+      currentColorScheme,
+      toggleColorScheme
+    })
+
+    watch(currentColorScheme, (newValue) => {
+      switch (newValue) {
+        case 'dark':
+          provide("color", "#FFFFFF");
+          break;
+      
+        default:
+          provide("color", "#333333");
+          break;
+      }
+    })
 
     //Phosphor Icons settings
     provide("color", "#333333");

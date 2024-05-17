@@ -12,7 +12,7 @@
     ]
   },
   {
-    "order": 2,
+    "order": 1,
     "source": "LinkedIn",
     "author": {
       "name": "Wedlin Lucas",
@@ -25,7 +25,7 @@
     ]
   },
   {
-    "order": 3,
+    "order": 2,
     "source": "LinkedIn",
     "author": {
       "name": "Cássio Pisseti",
@@ -37,7 +37,7 @@
     ]
   },
   {
-    "order": 4,
+    "order": 3,
     "source": "LinkedIn",
     "author": {
       "name": "Humberto Santos",
@@ -46,6 +46,19 @@
     "icon": "PhTrophy",
     "text": [
       "Logo de cara, nas primeiras reuniões ele já entendeu a nossa necessidade e começamos a desenvolver projetos para melhorar nosso marketing, neste momento percebi que ele entende muito no que faz e também vem sempre com ótimas ideias, comprometido com o trabalho."
+    ]
+  },
+  {
+    "order": 4,
+    "source": "LinkedIn",
+    "author": {
+      "name": "Myckael Henrique",
+      "job": "Comercial em Campos Dealer"
+    },
+    "icon": "PhTrophy",
+    "text": [
+      "No tempo em que trabalhamos juntos, sempre esteve disposto a ajudar a nossa equipe com ideias, sugestões e qualquer melhoria que pudesse ajudar a alavancar nosso negócio.",
+      "A comunicação com o André sempre foi um ponto forte na parceria."
     ]
   },
   {
@@ -63,18 +76,6 @@
   },
   {
     "order": 6,
-    "source": "LinkedIn",
-    "author": {
-      "name": "Myckael Henrique",
-      "job": "Comercial em Campos Dealer"
-    },
-    "icon": "PhTrophy",
-    "text": [
-      "No tempo em que trabalhamos juntos, sempre esteve disposto a ajudar a nossa equipe com ideias, sugestões e qualquer melhoria que pudesse ajudar a alavancar nosso negócio.",
-      "A comunicação com o André sempre foi um ponto forte na parceria."
-    ]
-  },
-  {
     "type": "Recomendações",
     "source": "LinkedIn",
     "author": {
