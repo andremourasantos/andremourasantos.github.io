@@ -113,3 +113,13 @@ export function setNumberOfSkeletonsForNavIndicatorOnRecommendationsCard(numberO
 export function getNumberOfSkeletonsForNavIndicatorOnRecommendationsCard():number {
   return Number(localStorage.getItem('skeletonsForNavIndicatorOnRecommendationsCard'));
 }
+
+export function toggleDarkModeClass():void {
+  const app = document.body;
+
+  if(app.classList.contains('dark-mode')){
+    app.classList.remove('dark-mode');
+  } else {
+    app.classList.add('dark-mode');
+  }
+}
