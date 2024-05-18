@@ -43,7 +43,7 @@ async function uploadAllIconsToStorage() {
   //@ts-ignore
   const currentFilePath = new URL(import.meta.url).pathname;
   const currentDir = path.dirname(currentFilePath);
-  const iconsFolder = path.join("src", "assets", "icons");
+  const iconsFolder = path.join("scripts", "icons");
   const icons = fs.readdirSync(iconsFolder);
 
   try {

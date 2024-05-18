@@ -1,16 +1,16 @@
 {
   "name": "andremourasantos.github.io",
-  "version": "1.6.4",
+  "version": "1.6.5",
   
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite --host",
     "initialize-emulators": "firebase emulators:start",
     "populate-emulators": "node ./scripts/populate-emulators.js",
+    "dev": "vite --host",
     "build": "vite build",
     "serve": "vite preview",
-    "deploy-preview-channel": "firebase hosting:channel:deploy preview",
+    "deploy-to-preview-channel": "firebase hosting:channel:deploy preview",
     "deploy-to-production": "firebase deploy --only hosting"
   },
   "dependencies": {

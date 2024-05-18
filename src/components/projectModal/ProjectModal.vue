@@ -90,6 +90,16 @@ export default defineComponent({
 
       toggleHTMLOverflowY();
       el.showModal();
+
+      const observer = new MutationObserver((mutationList, observer) => {
+        for(let mutation of mutationList){
+          if (mutation.type === 'attributes' && mutation.attributeName === 'open') {
+            el.hasAttribute('open') ? '' : closeModal();
+          }
+        }
+      });
+
+      observer.observe(el, {attributes:true});
     })
 
     const fillProjectHeader = (projectInfo: NonNullable<ProjectInfo>):void => {

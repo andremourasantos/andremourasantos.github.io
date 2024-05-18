@@ -114,7 +114,7 @@ export default defineComponent({
       fillBenefitsTable(serviceDetailedInfo.value.tableOfBenefits);
       fillServiceSideInfoList(serviceDetailedInfo.value.serviceInfo);
       fillServiceFooterNotes(serviceDetailedInfo.value.footerNotes);
-    })
+    });
 
     onMounted(()=>{
       if(!(dialogEl.value instanceof HTMLElement)){
@@ -127,6 +127,16 @@ export default defineComponent({
       el.scrollTo(0,0);
 
       toggleHTMLOverflowY();
+
+      const observer = new MutationObserver((mutationList, observer) => {
+        for(let mutation of mutationList){
+          if (mutation.type === 'attributes' && mutation.attributeName === 'open') {
+            el.hasAttribute('open') ? '' : closeModal();
+          }
+        }
+      });
+
+      observer.observe(el, {attributes:true});
     });
 
     const fillHeader = (title:string, description:string, image:string):void => {
@@ -156,7 +166,7 @@ export default defineComponent({
 
     const fillServiceFooterNotes = (footerNotes:string[]):void => {
       serviceFooterNotes.value = footerNotes;
-    }
+    };
 
     const closeModal = ():void => {
       if(dialogEl.value instanceof HTMLElement){
