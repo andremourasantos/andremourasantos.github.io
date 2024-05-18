@@ -1,7 +1,7 @@
 <template>
   <Header/>
   <main>
-    <router-view :key="forecedRerenderByChangedColorScheme" />
+    <router-view/>
   </main>
   <Transition name="serviceModal">
     <ServiceModal v-if="showModal === true"/>
@@ -32,7 +32,6 @@ export default defineComponent({
     const modalInfo = ref(serviceModalInfo);
     const showModal = computed(() => modalInfo.value.status === 'Show');
     const currentColorScheme = ref<PreferredColorScheme>('light');
-    const forecedRerenderByChangedColorScheme = ref<number>(0);
 
     onBeforeMount(() => {
       currentColorScheme.value = getPreferredColorScheme();
@@ -61,10 +60,6 @@ export default defineComponent({
       toggleColorScheme
     })
 
-    watch(currentColorScheme, () => {
-      forecedRerenderByChangedColorScheme.value += 1;
-    })
-
     //Phosphor Icons settings
     if(window.innerWidth > 425){
       provide("size", 36);
@@ -74,8 +69,7 @@ export default defineComponent({
     provide("weight", "fill");
 
     return {
-      showModal,
-      forecedRerenderByChangedColorScheme
+      showModal
     }
   },
 })

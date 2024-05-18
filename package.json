@@ -1,6 +1,6 @@
 {
   "name": "andremourasantos.github.io",
-  "version": "1.6.3",
+  "version": "1.6.4",
   
   "private": true,
   "type": "module",
@@ -10,7 +10,8 @@
     "populate-emulators": "node ./scripts/populate-emulators.js",
     "build": "vite build",
     "serve": "vite preview",
-    "deploy-preview-channel": "firebase hosting:channel:deploy preview"
+    "deploy-preview-channel": "firebase hosting:channel:deploy preview",
+    "deploy-to-production": "firebase deploy --only hosting"
   },
   "dependencies": {
     "@gtm-support/vue-gtm": "^2.2.0",

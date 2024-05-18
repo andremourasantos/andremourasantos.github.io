@@ -6,13 +6,10 @@
     <a aria-label="Navegar para LinkedIn de André Moura Santos" title="Navegar para LinkedIn de André Moura Santos" href="https://br.linkedin.com/in/andremourasantos" target="_blank" rel="external nofollow noopener noreffer author">
       <PhLinkedinLogo/>
     </a>
-    <button @click="changeColorScheme" :title="`Alternar aparência da página, atual: ${currentColorSchemeName === 'light' ? 'clara' : 'escura'}`">
+    <button @click="changeColorScheme" :title="`Alternar aparência da página, atual: ${currentColorSchemeName === 'light' ? 'clara' : 'escura'}`" :aria-label="`Alternar aparência da página, atual: ${currentColorSchemeName === 'light' ? 'clara' : 'escura'}`">
       <span v-show="currentColorSchemeName === 'light'"><PhMoon/></span>
       <span v-show="currentColorSchemeName === 'dark'"><PhSun/></span>
     </button>
-    <!-- <a aria-label="Navegar para GitHub de André Moura Santos" title="Navegar para GitHub de André Moura Santos" href="https://github.com/andremourasantos" target="_blank" rel="external nofollow noopener noreffer">
-      <PhGithubLogo/>
-    </a> -->
   </header>
 </template>
 
