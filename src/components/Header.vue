@@ -7,8 +7,8 @@
       <PhLinkedinLogo/>
     </a>
     <button @click="changeColorScheme">
-      <span v-show="isCurrentThemeLight"><PhMoon/></span>
-      <span v-show="!isCurrentThemeLight"><PhSun/></span>
+      <span v-show="currentColorSchemeName === 'light'"><PhMoon/></span>
+      <span v-show="currentColorSchemeName === 'dark'"><PhSun/></span>
     </button>
     <!-- <a aria-label="Navegar para GitHub de André Moura Santos" title="Navegar para GitHub de André Moura Santos" href="https://github.com/andremourasantos" target="_blank" rel="external nofollow noopener noreffer">
       <PhGithubLogo/>
@@ -17,7 +17,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, inject } from 'vue';
+import { defineComponent, ref, inject, onMounted } from 'vue';
 import router from '@/router';
 
 //Icons
@@ -27,18 +27,17 @@ export default defineComponent({
   components: {PhHouse, PhLinkedinLogo, PhGithubLogo, PhMoon, PhSun},
   setup() {
     const {currentColorScheme, toggleColorScheme} = inject('colorScheme');
-    const isCurrentThemeLight = ref<boolean>(true);
+    const currentColorSchemeName = ref<PreferredColorScheme>(currentColorScheme);
 
     const changeColorScheme = () => {
       toggleColorScheme();
-      isCurrentThemeLight.value = !isCurrentThemeLight.value;
     }
 
     function goToPage(routeName:string) {
       return router.push({name: routeName});
     }
     return {
-      isCurrentThemeLight,
+      currentColorSchemeName,
       changeColorScheme,
       goToPage,
     }

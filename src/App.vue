@@ -21,7 +21,7 @@ import ServiceModal from './components/serviceModal/ServiceModal.vue';
 import Footer from '@/components/Footer.vue';
 
 //composables
-import { toggleDarkModeClass } from './composables/general';
+import { toggleDarkModeClass, getPreferredColorScheme } from './composables/general';
 
 // stores
 import serviceModalInfo from './stores/serviceModal';
@@ -31,12 +31,29 @@ export default defineComponent({
   setup() {
     const modalInfo = ref(serviceModalInfo);
     const showModal = computed(() => modalInfo.value.status === 'Show');
-    const currentColorScheme = ref<'light' | 'dark'>('light');
+    const currentColorScheme = ref<PreferredColorScheme>('light');
     const forecedRerenderByChangedColorScheme = ref<number>(0);
 
-    const toggleColorScheme = () => {
-      currentColorScheme.value === 'light' ? currentColorScheme.value = 'dark' : currentColorScheme.value = 'light';
-      toggleDarkModeClass();
+    onBeforeMount(() => {
+      currentColorScheme.value = getPreferredColorScheme();
+      toggleColorScheme(currentColorScheme.value);
+    })
+
+    const toggleColorScheme = (schemeToSet?:PreferredColorScheme) => {
+      if(schemeToSet) {
+        switch (schemeToSet) {
+          case 'dark':
+            return toggleDarkModeClass();
+            break;
+        
+          default:
+            return
+            break;
+        }
+      } else {
+        currentColorScheme.value === 'light' ? currentColorScheme.value = 'dark' : currentColorScheme.value = 'light';
+        toggleDarkModeClass();
+      }
     }
 
     provide("colorScheme", {
@@ -44,17 +61,7 @@ export default defineComponent({
       toggleColorScheme
     })
 
-    watch(currentColorScheme, (newValue) => {
-      switch (newValue) {
-        case 'dark':
-          provide("color", "#FFFFFF");
-          break;
-      
-        default:
-          provide("color", "#333333");
-          break;
-      };
-
+    watch(currentColorScheme, () => {
       forecedRerenderByChangedColorScheme.value += 1;
     })
 
@@ -91,7 +98,7 @@ export default defineComponent({
 
   /*COLORS*/
   --colors-background: #f5f5f5;
-  --colors-icons: #333333;
+  --colors-icons: var(--font_color-paragraph);
 
   /*EFFECTS*/
   --glass_effect-color: #FFFFFF35;
@@ -107,7 +114,6 @@ export default defineComponent({
 
   /* Dark Mode Colors */
   --colors-background: #333333;
-  --colors-icons: #fefefe;
 
   /* Dark Mode Effects */
   --neumorphism-inner_shadow: inset 5px 5px 10px #262626, inset -5px -5px 10px #404040;
