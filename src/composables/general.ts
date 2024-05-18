@@ -113,3 +113,40 @@ export function setNumberOfSkeletonsForNavIndicatorOnRecommendationsCard(numberO
 export function getNumberOfSkeletonsForNavIndicatorOnRecommendationsCard():number {
   return Number(localStorage.getItem('skeletonsForNavIndicatorOnRecommendationsCard'));
 }
+
+export function toggleDarkModeClass():void {
+  const app = document.body;
+  let colorScheme:PreferredColorScheme;
+
+  if(app.classList.contains('dark-mode')){
+    app.classList.remove('dark-mode');
+    colorScheme = 'light';
+  } else {
+    app.classList.add('dark-mode');
+    colorScheme = 'dark';
+  };
+
+  savePreferredColorScheme(colorScheme);
+}
+
+function savePreferredColorScheme(colorSchemeName:PreferredColorScheme):void {
+  localStorage.setItem('preferredColorScheme', colorSchemeName);
+}
+
+export function getPreferredColorScheme():PreferredColorScheme {
+  const savedColorScheme = localStorage.getItem('preferredColorScheme') as PreferredColorScheme;
+  let colorSchemeName:PreferredColorScheme = savedColorScheme;
+
+  switch (colorSchemeName) {
+    case 'dark':
+      colorSchemeName = 'dark';
+      break;
+  
+    default:
+      colorSchemeName = 'light';
+      break;
+  };
+
+  savePreferredColorScheme(colorSchemeName);
+  return colorSchemeName;
+}

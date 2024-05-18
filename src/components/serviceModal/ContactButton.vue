@@ -111,7 +111,7 @@ export default defineComponent({
     width: 100%;
     height: fit-content;
     min-height: 100px;
-    background: #FFFFFF35;
+    background: var(--colors-background);
     backdrop-filter: blur(50px);
     box-shadow: var(--neumorphism-out_shadow);
     text-align: left;

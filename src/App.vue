@@ -1,7 +1,7 @@
 <template>
   <Header/>
   <main>
-    <router-view/>
+    <router-view :key="forecedRerenderByChangedColorScheme" />
   </main>
   <Transition name="serviceModal">
     <ServiceModal v-if="showModal === true"/>
@@ -10,7 +10,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, computed, onMounted, provide, onBeforeMount } from 'vue';
+import { defineComponent, ref, computed, onMounted, provide, onBeforeMount, watch } from 'vue';
 
 // firebase
 import { app } from '@/firebase';
@@ -20,6 +20,9 @@ import Header from '@/components/Header.vue';
 import ServiceModal from './components/serviceModal/ServiceModal.vue';
 import Footer from '@/components/Footer.vue';
 
+//composables
+import { toggleDarkModeClass, getPreferredColorScheme } from './composables/general';
+
 // stores
 import serviceModalInfo from './stores/serviceModal';
 
@@ -28,9 +31,41 @@ export default defineComponent({
   setup() {
     const modalInfo = ref(serviceModalInfo);
     const showModal = computed(() => modalInfo.value.status === 'Show');
+    const currentColorScheme = ref<PreferredColorScheme>('light');
+    const forecedRerenderByChangedColorScheme = ref<number>(0);
+
+    onBeforeMount(() => {
+      currentColorScheme.value = getPreferredColorScheme();
+      toggleColorScheme(currentColorScheme.value);
+    })
+
+    const toggleColorScheme = (schemeToSet?:PreferredColorScheme) => {
+      if(schemeToSet) {
+        switch (schemeToSet) {
+          case 'dark':
+            return toggleDarkModeClass();
+            break;
+        
+          default:
+            return
+            break;
+        }
+      } else {
+        currentColorScheme.value === 'light' ? currentColorScheme.value = 'dark' : currentColorScheme.value = 'light';
+        toggleDarkModeClass();
+      }
+    }
+
+    provide("colorScheme", {
+      currentColorScheme,
+      toggleColorScheme
+    })
+
+    watch(currentColorScheme, () => {
+      forecedRerenderByChangedColorScheme.value += 1;
+    })
 
     //Phosphor Icons settings
-    provide("color", "#333333");
     if(window.innerWidth > 425){
       provide("size", 36);
     } else {
@@ -39,7 +74,8 @@ export default defineComponent({
     provide("weight", "fill");
 
     return {
-      showModal
+      showModal,
+      forecedRerenderByChangedColorScheme
     }
   },
 })
@@ -58,11 +94,11 @@ export default defineComponent({
   --font-loading: 'Flow Circular', cursive;
   --font_color-title: #333333;
   --font_color-paragraph: #4a4a4a;
-  --font_color-loading: #4a4a4a;
+  --font_color-loading: var(--font_color-paragraph);
 
   /*COLORS*/
   --colors-background: #f5f5f5;
-  --colors-icons: #333333;
+  --colors-icons: var(--font_color-paragraph);
 
   /*EFFECTS*/
   --glass_effect-color: #FFFFFF35;
@@ -70,6 +106,20 @@ export default defineComponent({
   --neumorphism-inner_shadow: inset 5px 5px 10px #d0d0d0, inset -5px -5px 10px #FFFFFF;
   --neumorphism-out_shadow: -5px -5px 10px #FFFFFF, 5px 5px 10px #d0d0d0;
 }
+
+.dark-mode {
+  /* Dark Mode Variables */
+  --font_color-title: #ebebeb;
+  --font_color-paragraph: #cccccc;
+
+  /* Dark Mode Colors */
+  --colors-background: #333333;
+
+  /* Dark Mode Effects */
+  --neumorphism-inner_shadow: inset 5px 5px 10px #262626, inset -5px -5px 10px #404040;
+  --neumorphism-out_shadow: -5px -5px 10px #404040, 5px 5px 10px #262626;
+}
+
 
 * {margin:0; padding:0; font-family: var(--font-paragraph); color: var(--font_color-paragraph); box-sizing: border-box;}
 

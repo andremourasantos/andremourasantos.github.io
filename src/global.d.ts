@@ -99,4 +99,6 @@ declare global {
     icon: "PhTrophy",
     text:string[]
   };
+
+  type PreferredColorScheme = 'light' | 'dark';
 }
