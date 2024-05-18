@@ -6,7 +6,7 @@
     <a aria-label="Navegar para LinkedIn de André Moura Santos" title="Navegar para LinkedIn de André Moura Santos" href="https://br.linkedin.com/in/andremourasantos" target="_blank" rel="external nofollow noopener noreffer author">
       <PhLinkedinLogo/>
     </a>
-    <button @click="changeColorScheme">
+    <button @click="changeColorScheme" :title="`Alternar aparência da página, atual: ${currentColorSchemeName === 'light' ? 'clara' : 'escura'}`">
       <span v-show="currentColorSchemeName === 'light'"><PhMoon/></span>
       <span v-show="currentColorSchemeName === 'dark'"><PhSun/></span>
     </button>
