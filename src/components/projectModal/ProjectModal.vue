@@ -36,7 +36,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, onMounted } from 'vue';
+import { defineComponent, ref, onMounted, onBeforeUnmount } from 'vue';
 
 //components
 import HeaderIcons from '../commomModalEls/HeaderIcons.vue';
@@ -91,15 +91,19 @@ export default defineComponent({
       toggleHTMLOverflowY();
       el.showModal();
 
-      const observer = new MutationObserver((mutationList, observer) => {
-        for(let mutation of mutationList){
-          if (mutation.type === 'attributes' && mutation.attributeName === 'open') {
-            el.hasAttribute('open') ? '' : closeModal();
-          }
-        }
-      });
-
       observer.observe(el, {attributes:true});
+    })
+
+    const observer = new MutationObserver((mutationList, observer) => {
+      for(let mutation of mutationList){
+        if (mutation.type === 'attributes' && mutation.attributeName === 'open') {
+          projectDialogEl.value?.hasAttribute('open') ? '' : closeModal();
+        }
+      }
+    });
+
+    onBeforeUnmount(() => {
+      observer.disconnect()
     })
 
     const fillProjectHeader = (projectInfo: NonNullable<ProjectInfo>):void => {
