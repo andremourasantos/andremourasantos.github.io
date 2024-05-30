@@ -1,5 +1,61 @@
 [
   {
+    "id": "planilha-criador-de-utms",
+    "status": "Novo",
+    "group": "Featured",
+    "liveDeployURL": "https://docs.google.com/spreadsheets/d/1cFzBMUsTDFfMZQt-2u0paDxYeLouGz_iwSWTHfwaHNg/edit?usp=sharing",
+    "githubRepositoryURL": null,
+    "title": "Criador de UTMs",
+    "featuredImage": "image-1",
+    "favicon": "favicon",
+    "description": "Parametrize suas URLs e obtenha insights sobre suas campanhas.",
+    "introductionText": "A planilha para criação de links com UTMs oferece uma solução acessível e eficaz para profissionais de marketing digital que buscam otimizar o rastreamento de campanhas tanto online quanto links offline (QR Codes ou outros).",
+    "image1": "image-1",
+    "developmentText": [
+       "Com UTMs incorporados às URLs, você pode identificar facilmente a origem do tráfego e analisar o comportamento dos visitantes, fornecendo insights valiosos para ajustar e melhorar as estratégias de marketing.",
+       "A planilha simplifica significativamente a organização dos parâmetros de UTMs, tornando fácil a correta utilização desses elementos essenciais para o rastreamento de campanhas de marketing digital.",
+       "Além disso, ela conta explicações detalhadas sobre cada termo UTM, sendo uma ferramenta acessível e educativa para iniciantes e profissionais experientes.",
+       "Essa organização eficiente dos parâmetros não apenas poupa tempo, mas também reduz erros na implementação, garantindo que as campanhas sejam rastreadas de forma precisa e eficaz."
+    ],
+    "image2": "image-2",
+    "conclusionText": [
+       "Você também pode integrar o rastreamento das UTMs criadas com a ajuda desta com ferramentas com o Google Analytics 4 (GA4) e o Google Ads, obtendo insights abrangentes sobre o comportamento dos usuários e o retorno sobre o investimento de suas campanhas publicitárias.",
+       "Sua disponibilidade pública garante que qualquer pessoa possa se beneficiar dessa funcionalidade, independentemente do nível de experiência em marketing digital."
+    ],
+    "relatedServices": {
+      "servicesID": [["marketing", "planilhas-de-marketing"]]
+    },
+    "footerNotes": null
+  },
+  {
+    "id": "planilha-calendario-de-datas-comemorativas",
+    "status": "Novo",
+    "group": "Featured",
+    "liveDeployURL": "https://github.com/andremourasantos/calendario-de-datas-comemorativas",
+    "githubRepositoryURL": null,
+    "title": "Calendário de Datas Comemorativas",
+    "featuredImage": "image-1",
+    "favicon": "favicon",
+    "description": "Crie e mantenha um calendário para diversos clientes facilmente.",
+    "introductionText": "Com a ferramenta de Calendário de Datas Comemorativas para o Google Sheets é possível criar calendários, editar e adicionar datas, inserir observações pertinentes para cada data e organizá-las facilmente com filtros!",
+    "image1": "image-1",
+    "developmentText": [
+       "Esta ferramenta para o Google Sheets, uma ferramenta baseada em Apps Script, oferece uma solução eficaz para organizar e manter datas importantes para múltiplos clientes.",
+       "Sua interface intuitiva e funcionalidades úteis permitem criar, editar e adicionar observações pertinentes para cada data de forma fácil e eficiente.",
+       "Além disso, a capacidade de compartilhamento e a consistência no layout e nas informações contribuem significativamente para a produtividade e colaboração entre colegas de trabalho.",
+       "A possibilidade de exportar o calendário como PDF também é uma vantagem adicional, tornando-o ideal para compartilhamento e distribuição para o cliente."
+    ],
+    "image2": "image-2",
+    "conclusionText": [
+       "Como ajuda adicional, também há um repositório com instruções sobre a melhor forma de usar a ferramenta e um passo a passo sobre como instalar a solução em uma nova planilha do Google Sheets.",
+       "No entanto, é importante notar que um conhecimento básico de JavaScript pode ser necessário para realizar personalizações específicas no código, oferecendo ainda mais flexibilidade para atender às necessidades individuais de cada usuário."
+    ],
+    "relatedServices": {
+      "servicesID": [["marketing", "planilhas-de-marketing"]]
+    },
+    "footerNotes": null
+  },
+  {
     "id": "dr-andre",
     "status": null,
     "group": "Featured",
@@ -28,7 +84,7 @@
   },
   {
     "id": "andremourasantos",
-    "status": "Novo",
+    "status": null,
     "group": "Featured",
     "liveDeployURL": "https://andremourasantos.com.br/",
     "githubRepositoryURL": "https://github.com/andremourasantos/andremourasantos.github.io/",
@@ -80,7 +136,7 @@
   },
   {
     "id": "lista-de-compras",
-    "status": "Novo",
+    "status": null,
     "group": "Prototype",
     "liveDeployURL": "https://lista-de-compras.andremourasantos.com.br/",
     "githubRepositoryURL": "https://github.com/andremourasantos/lista-de-compras/",
