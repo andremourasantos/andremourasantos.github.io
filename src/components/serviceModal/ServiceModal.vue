@@ -47,7 +47,7 @@
         <div id="contactInfo">
           <ContactButton v-if="serviceHeader !== null" :service-name="serviceHeader.title" :button-icon="'whatsapp-logo'"/>
           <ContactButton v-if="serviceHeader !== null" :service-name="serviceHeader.title" :button-icon="'email'"/>
-          <!-- <ContactButton v-if="serviceHeader !== null" :service-name="serviceHeader.title" :button-icon="'google-meet-logo'"/> -->
+          <ContactButton v-if="serviceHeader !== null" :service-name="serviceHeader.title" :button-icon="'google-meet-logo'"/>
         </div>
       </div>
 
@@ -109,6 +109,7 @@ export default defineComponent({
     })
 
     watch(serviceDetailedInfo, () => {
+      if(!serviceBasicInfo.value || !serviceDetailedInfo.value){return}
       fillHeader(serviceBasicInfo.value.title, serviceBasicInfo.value.description, serviceBasicInfo.value.image);
       fillIntroduction(serviceDetailedInfo.value.introduction);
       fillBenefitsTable(serviceDetailedInfo.value.tableOfBenefits);

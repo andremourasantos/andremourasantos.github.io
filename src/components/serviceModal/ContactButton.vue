@@ -1,14 +1,14 @@
 <template>
   <button
-  :arial-label="`Entrar em contato via ${buttonIcon === 'whatsapp-logo' ? 'WhatsApp' : buttonIcon === 'email' ? 'email' : buttonIcon === 'google-meet-logo' ? 'agendamento chamada de vídeo' : ''}`"
+  :arial-label="`Entrar em contato por ${buttonIcon === 'whatsapp-logo' ? 'WhatsApp' : buttonIcon === 'email' ? 'email' : buttonIcon === 'google-meet-logo' ? 'agendamento chamada de vídeo' : ''}`"
 
-  :title="`Entrar em contato via ${buttonIcon === 'whatsapp-logo' ? 'WhatsApp' : buttonIcon === 'email' ? 'email' : buttonIcon === 'google-meet-logo' ? 'agendamento de chamada de vídeo' : ''}`"
+  :title="`Entrar em contato por ${buttonIcon === 'whatsapp-logo' ? 'WhatsApp' : buttonIcon === 'email' ? 'email' : buttonIcon === 'google-meet-logo' ? 'agendamento de chamada de vídeo' : ''}`"
 
-  @click="handleClick(), emitGtmEvent()">
+  @click="handleClick(), emitGtmEvent(buttonIcon === 'whatsapp-logo' ? 'whatsapp' : buttonIcon === 'email' ? 'email' : buttonIcon === 'google-meet-logo' ? 'google-meet' : 'desconhecido')">
     <img :src="getIconURL(buttonIcon)" loading="lazy" alt="Ícone de avião de papel" height="36" width="36">
     <div v-if="buttonIcon === 'whatsapp-logo'">
       <h4>Bate-papo</h4>
-      <p>Vamos iniciar uma conversa pelo WhatsApp.</p>
+      <p>Inicie uma conversa rápida pelo WhatsApp.</p>
     </div>
     <div v-if="buttonIcon === 'email'">
       <h4>Email</h4>
@@ -16,7 +16,7 @@
     </div>
     <div v-if="buttonIcon === 'google-meet-logo'">
       <h4>Chamada de vídeo</h4>
-      <p>Vamos conversar tête-à-tête sobre a sua ideia.</p>
+      <p>Agende uma conversa no melhor horário.</p>
     </div>
   </button>
 </template>
@@ -53,7 +53,7 @@ export default defineComponent({
         } else if (props.buttonIcon === 'email'){
           goToEmail();
         } else if (props.buttonIcon === 'google-meet-logo'){
-          return
+          goToGoogleMeet();
         }
       }, 250);
     };
@@ -81,12 +81,17 @@ export default defineComponent({
       window.open(`mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message.join('\n\n'))}`, '_blank');
     };
 
-    const emitGtmEvent = () => {
+    const goToGoogleMeet = ():void => {
+      window.open('https://calendar.app.google/1e9JVEgznYMqmcry9', '_blank');
+    }
+
+    const emitGtmEvent = (contactType:'whatsapp' | 'email' | 'google-meet' | 'desconhecido') => {
       gtm?.trackEvent({
         event: 'contact-button',
         action: 'Click',
         category: 'contactButton',
         serviceid: serviceInfo.value.serviceID,
+        contactType: contactType
       })
     };
 
