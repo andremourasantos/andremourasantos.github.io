@@ -38,6 +38,8 @@ export default defineComponent({
     flex-wrap: nowrap;
     gap: 32px;
     padding: 64px 0px 0px 0px;
+    max-width: 550px;
+    margin-inline: auto;
   }
 
   .pp-entry-title {

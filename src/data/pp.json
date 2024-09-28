@@ -1,7 +1,7 @@
 [
   {
     "title": "Informações gerais",
-    "description": "Última atualização em 12/10/2023.",
+    "description": "Última atualização em 28/09/2024.",
     "content": [
       "Esta política de privacidade é estabelecida para cumprir as disposições da Lei Geral de Proteção de Dados (LGPD) e fornecer transparência sobre a coleta e o uso de informações pessoais neste site.",
       "Ao continuar a usar este site, os usuários concordam com a coleta de informações pessoais genéricas. Essas informações são utilizadas para analisar a origem dos acessos, compreender quem visita o site e avaliar a eficácia de eventuais campanhas publicitárias realizadas pelo responsável."
@@ -13,6 +13,7 @@
     "content": [
       "Este site coleta uma variedade de informações pessoais para melhorar a experiência do usuário e avaliar a eficácia do conteúdo. Os tipos de dados coletados incluem, mas não se limitam a: Idade; Gênero; Interesses; Dados de navegação e interação no site; Dados de dispositivos; Fonte de tráfego; Localização geográfica (país, cidade).",
       "Esses dados são coletados principalmente por meio de ferramentas de análise, como Google Analytics e Google Ads, que utilizam códigos de rastreamento e cookies. Essas tecnologias permitem a análise do comportamento dos usuários, a origem do tráfego e outros padrões de navegação. Além disso, essas informações são fundamentais para avaliar a eficácia de eventuais campanhas publicitárias e aprimorar a experiência do usuário.",
+      "Fazemos parceria com o Microsoft Clarity e o Microsoft Advertising para capturar como você usa e interage com nosso site por meio de métricas comportamentais, mapas de calor e replay de sessões, a fim de melhorar e promover nossos produtos/serviços. Os dados de uso do site são capturados utilizando cookies de primeira e terceira parte e outras tecnologias de rastreamento para determinar a popularidade de produtos/serviços e atividades online. Além disso, usamos essas informações para otimização do site, prevenção de fraudes/segurança e publicidade. Para mais informações sobre como a Microsoft coleta e utiliza seus dados, visite a Declaração de Privacidade da Microsoft.",
       "Os usuários podem gerenciar as configurações de cookies e preferências de rastreamento diretamente em seus navegadores."
     ]
   },
@@ -38,6 +39,7 @@
     "description": "Veja como e com quem seus dados são compartilhados.",
     "content": [
       "Os dados coletados neste site podem ser compartilhados com serviços de terceiros, como o Google Analytics e Google Ads, que contam com suas próprias políticas de privacidade de configurações. É recomendado ao usuário conferir tais informações em https://myadcenter.google.com/",
+      "Acesse também a Declaração de Privacidade da Microsoft em https://www.microsoft.com/pt-BR/privacy/privacystatement",
       "Os dados coletados podem ser transferidos para servidores do Google localizados fora do Brasil, como nos Estados Unidos, por exemplo. Essa transferência pode ser necessária para o processamento e aprimoramento dos serviços fornecidos por terceiros. O Google Analytics e Google Ads asseguram que, ao realizar tais transferências, medidas adequadas são tomadas para garantir a proteção dos dados, conforme exigido pelas leis aplicáveis."
     ]
   },
