@@ -3,10 +3,12 @@
     loadingSkeleton: serviceButtonLoadingStatus === 'Loading'
   }" :disabled="serviceButtonLoadingStatus === 'Loading' || serviceTag === 'Indisponível'" :aria-label="serviceTitle" @click="handleClick(serviceId), emitGtmEvent(serviceId)">
     
-    <div id="tag" v-if="serviceTag !== undefined && serviceTag !== null" :class="{
-      newService: serviceTag === 'Novo' 
+    <div v-if="serviceTag !== undefined && serviceTag !== null" :class="{
+      tag: true,
+      newService: serviceTag === 'Novo',
+      adService: serviceTag === 'Ad'
     }" aria-label="Estado do serviço">
-      <p>{{ serviceTag }}</p>
+      <p>{{ serviceTag === 'Ad' ? 'Recomendado para você' : serviceTag }}</p>
     </div>
 
     <div v-if="serviceButtonLoadingStatus === 'Loading'" class="skeletonIcon"></div>
@@ -43,7 +45,7 @@ export default defineComponent({
     },
     'serviceTag': {
       required: false,
-      type: String as () => "Novo" | "Indisponível" | null,
+      type: String as () => "Novo" | "Indisponível" | "Ad" | null,
     },
     'serviceId': {
       required: true,
@@ -164,7 +166,7 @@ export default defineComponent({
     font-size: 16px;
   }
 
-  #tag {
+  .tag {
     position: absolute;
     background-color: hsl(0 65% 50% / 1);
     box-shadow: var(--glass_effect-shadow);
@@ -175,11 +177,31 @@ export default defineComponent({
     user-select: none;
   }
 
-  #tag.newService {
+  .tag.newService {
     background-color: hsl(205 100% 40% / 1);
   }
 
-  #tag p {
+  .tag.adService {
+    background-color: hsl(155, 100%, 40%) !important;
+  }
+
+  button:has(.tag.adService){
+    padding: 26px 16px 16px 16px;
+    animation: adService 1s ease-in-out infinite;
+    border: 2px solid hsl(155, 100%, 40%);
+  }
+
+  button:has(.tag.adService):hover{
+    animation: none;
+  }
+
+  @keyframes adService {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.05);}
+    100% {transform: scale(1);}
+  }
+
+  .tag p {
     color: white;
     font-size: 14px;
   }

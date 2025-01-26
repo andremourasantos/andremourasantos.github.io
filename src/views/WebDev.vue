@@ -25,7 +25,7 @@ import ServicesGroup from '@/components/ServicesGroup.vue';
 import ServiceButton from '@/components/ServiceButton.vue';
 
 // composables
-import { openServiceModal, searchForURLParam, setNumberOfSkeletonsForServiceGroup } from "@/composables/general";
+import { openServiceModal, highligthAdService, searchForURLParam, setNumberOfSkeletonsForServiceGroup } from "@/composables/general";
 import { getPageInfoForServices, isCacheSyncedWithCloud } from '@/composables/data-base';
 
 export default defineComponent({
@@ -52,14 +52,28 @@ export default defineComponent({
     })
 
     watch(serviceData, () => {
+      if(!serviceData.value){return};
       fetchingData.value = false;
 
       comboServices.value = serviceData.value.filter(entry => {return entry.group === 'Tudo-em-um'});
       setNumberOfSkeletonsForServiceGroup('web', skeletonsInfo.value.group1.name, comboServices.value.length);
+      modifyTagForAdService(comboServices.value);
 
       individualServices.value = serviceData.value.filter(entry => {return entry.group === 'Individual'});
       setNumberOfSkeletonsForServiceGroup('web', skeletonsInfo.value.group2.name, individualServices.value.length);
+      modifyTagForAdService(individualServices.value);
     })
+
+    const modifyTagForAdService = (list:TinyServiceInfo[]):void => {
+      const serviceToHighlight:string|null = highligthAdService();
+      if(serviceToHighlight === null){return};
+
+      list.forEach(service => {
+        if(service.id === serviceToHighlight){
+          service.status = 'Ad';
+        }
+      });
+    }
 
     onMounted(() => {
       const serviceIDURLParam = searchForURLParam('serviceID');

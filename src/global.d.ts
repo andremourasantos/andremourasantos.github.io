@@ -6,7 +6,7 @@ declare global {
   type ServiceInfo = {
     id:string,
     show:boolean,
-    status:null | "Novo" | "Indisponível",
+    status:TypeOfStatuses,
     group:string,
     title:string,
     image:string,
@@ -24,10 +24,12 @@ declare global {
     col1: string; col2: string; col3: boolean
   }
 
+  type TypeOfStatuses = null | "Novo" | "Indisponível" | "Ad"
+
   type ServiceInfoJSON = {
     id:string,
     show:boolean,
-    status:null | "Novo" | "Indisponível",
+    status:TypeOfStatuses,
     group:string,
     title:string,
     image:string,
@@ -52,7 +54,7 @@ declare global {
   type TinyServiceInfo = {
     id:string,
     show:boolean,
-    status:null | "Novo" | "Indisponível",
+    status:TypeOfStatuses,
     group:string,
     image:string,
     title:string,

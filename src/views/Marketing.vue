@@ -21,7 +21,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, watch, onBeforeMount, onMounted } from 'vue';
+import { defineComponent, ref, watch, onBeforeMount, onMounted, ObjectHTMLAttributes } from 'vue';
 import RecommendationsCard from '@/components/RecommendationsCard.vue';
 
 // components
@@ -30,7 +30,7 @@ import ServicesGroup from '@/components/ServicesGroup.vue';
 import ServiceButton from '@/components/ServiceButton.vue';
 
 // composables
-import { searchForURLParam, openServiceModal, setNumberOfSkeletonsForServiceGroup } from "@/composables/general";
+import { searchForURLParam, highligthAdService, openServiceModal, setNumberOfSkeletonsForServiceGroup } from "@/composables/general";
 import { getPageInfoForServices, isCacheSyncedWithCloud } from '@/composables/data-base';
 
 export default defineComponent({
@@ -61,18 +61,32 @@ export default defineComponent({
     })
 
     watch(serviceData, () => {
+      if(!serviceData.value){return};
       fetchingData.value = false;
       
       comboServices.value = serviceData.value.filter(entry => {return entry.group === 'Combo'});
       setNumberOfSkeletonsForServiceGroup('marketing', skeletonsInfo.value.group1.name, comboServices.value.length);
+      modifyTagForAdService(comboServices.value);
 
       individualServices.value = serviceData.value.filter(entry => {return entry.group === 'Individual'});
       setNumberOfSkeletonsForServiceGroup('marketing', skeletonsInfo.value.group2.name, individualServices.value.length);
+      modifyTagForAdService(individualServices.value);
 
       ascensionServices.value = serviceData.value.filter(entry => {return entry.group === 'Ascensão'});
       setNumberOfSkeletonsForServiceGroup('marketing', skeletonsInfo.value.group3.name, ascensionServices.value.length);
-
+      modifyTagForAdService(ascensionServices.value);
     })
+
+    const modifyTagForAdService = (list:TinyServiceInfoMKT[]):void => {
+      const serviceToHighlight:string|null = highligthAdService();
+      if(serviceToHighlight === null){return};
+
+      list.forEach(service => {
+        if(service.id === serviceToHighlight){
+          service.status = 'Ad';
+        }
+      });
+    }
 
     onMounted(() => {
       const serviceIDURLParam = searchForURLParam('serviceID');

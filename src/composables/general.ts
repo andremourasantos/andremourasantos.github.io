@@ -150,3 +150,11 @@ export function getPreferredColorScheme():PreferredColorScheme {
   savePreferredColorScheme(colorSchemeName);
   return colorSchemeName;
 }
+
+export function highligthAdService():string | null {
+  if(searchForURLParam('utm_medium') !== 'cpc'){return null}
+  if(searchForURLParam('utm_term') === null){return null}
+  const serviceToHighlight:string = searchForURLParam('utm_term');
+
+  return serviceToHighlight;
+}

@@ -26,28 +26,29 @@
       </div>
 
       <div class="detailedServiceInfo">
-        <p v-for="(entry, index) in serviceIntroduction" :key="index"> {{ entry }}</p>
         <TabelOfBenefits>
           <BenefitDescription v-for="entry in serviceBenefitsList" :benefit-text="entry[1]" :benefit-image="entry[0]"/>
         </TabelOfBenefits>
-      </div>
-
-      <div id="sideServiceInfo">
-        <h3>Informações do serviço</h3>
-        <p>Veja as informações sobre prazos de entrega, formas de pagamento e valor do serviço.</p>
-        <div>
-          <SideServiceInfo v-for="entry in serviceSideInfoList" :key="entry[0]" :side-info-image="entry[0]" :side-info-title="entry[1]" :side-info-description="entry[2]" :side-info-description-type="entry[0] == 'calendario' ? 'Date' : 'Price'"/>
-          <SideServiceInfo :side-info-image="'pagamento'" :side-info-title="'Formas de pagamento'" :side-info-description="'PIX e Cartão de Crédito.'" :side-info-description-type="'Custom'"/>
-        </div>
+        <p v-for="(entry, index) in serviceIntroduction" :key="index"> {{ entry }}</p>
+        
       </div>
 
       <div>
         <h3>Informações de contato</h3>
-        <p>Entre em contato para apresentar a sua ideia e obter um orçamento para execução do seu projeto. Escolha dentre as opções abaixo para começar.</p>
+        <p>Tire a sua ideia do papel: escolha dentre as opções abaixo para começar uma conversa sem compromisso!</p>
         <div id="contactInfo">
           <ContactButton v-if="serviceHeader !== null" :service-name="serviceHeader.title" :button-icon="'whatsapp-logo'"/>
           <ContactButton v-if="serviceHeader !== null" :service-name="serviceHeader.title" :button-icon="'email'"/>
           <ContactButton v-if="serviceHeader !== null" :service-name="serviceHeader.title" :button-icon="'google-meet-logo'"/>
+        </div>
+      </div>
+
+      <div id="sideServiceInfo">
+        <h3>Informações do serviço</h3>
+        <p>Veja as informações sobre prazos de entrega, formas de pagamento e preço médio do serviço. Todos negociáveis!</p>
+        <div>
+          <SideServiceInfo v-for="entry in serviceSideInfoList" :key="entry[0]" :side-info-image="entry[0]" :side-info-title="entry[1]" :side-info-description="entry[2]" :side-info-description-type="entry[0] == 'calendario' ? 'Date' : 'Price'"/>
+          <SideServiceInfo :side-info-image="'pagamento'" :side-info-title="'Formas de pagamento'" :side-info-description="'PIX e Cartão de Crédito.'" :side-info-description-type="'Custom'"/>
         </div>
       </div>
 
