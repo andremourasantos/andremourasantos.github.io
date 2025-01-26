@@ -106,12 +106,3 @@ export default defineComponent({
   },
 })
 </script>
-
-
-<style scoped>
-.recommendationsCard {
-  margin-top: 64px;
-  margin-inline: auto;
-  max-width: 550px;
-}
-</style>

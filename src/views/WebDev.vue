@@ -1,6 +1,10 @@
 <template>
   <PageTitle :page-title="'Criação de sites'" :page-description="'Desde a concepção ao produto final, ou apenas a etapa que precisar.'"/>
 
+  <div class="recommendationsCard">
+    <RecommendationsCard />
+  </div>
+
   <section id="servicesGroup">
     <ServicesGroup v-if="!comboServices || comboServices.length !== 0" :component-status="fetchingData ? 'Loading' : 'Loaded'" :group-title="'Serviços tudo-em-um'" :group-description="'Precisa de um serviço completo? Veja as ofertas de serviços abaixo e confira mais detalhes.'" :skeleton-group-name="skeletonsInfo.group1.name" :group-category="'web'">
       <ServiceButton v-for="entry in comboServices" :key="entry.id" :service-image="entry.image" :service-title="entry.title" :service-description="entry.description" :service-id="entry.id" :service-tag="entry.status" :service-category="'web'"/>
@@ -23,13 +27,14 @@ import { defineComponent, ref, watch, onBeforeMount, onMounted } from 'vue';
 import PageTitle from '@/components/PageTitle.vue';
 import ServicesGroup from '@/components/ServicesGroup.vue';
 import ServiceButton from '@/components/ServiceButton.vue';
+import RecommendationsCard from '@/components/RecommendationsCard.vue';
 
 // composables
 import { openServiceModal, highligthAdService, searchForURLParam, setNumberOfSkeletonsForServiceGroup } from "@/composables/general";
 import { getPageInfoForServices, isCacheSyncedWithCloud } from '@/composables/data-base';
 
 export default defineComponent({
-  components: {PageTitle, ServicesGroup, ServiceButton},
+  components: {PageTitle, ServicesGroup, ServiceButton, RecommendationsCard},
   setup() {
     const serviceData = ref<TinyServiceInfoWEB[] | null>();
     const fetchingData = ref<boolean>(true);

@@ -1,6 +1,10 @@
 <template>
   <PageTitle :page-title="'Meus projetos'" :page-description="'Veja uma coletânea dos meus projetos de Desenvolvimento Web aqui, com informações detalhadas sobre cada caso.'"/>
 
+  <div class="recommendationsCard">
+    <RecommendationsCard />
+  </div>
+
   <section id="servicesGroup">
     <ServicesGroup :group-title="'Projetos em destaque'" :group-description="'Essas são os projetos que me dão orgulho, saiba mais sobre cada um deles.'">
       <ProjectButton v-for="item in featuredProjects" :project-title="item.title" :project-description="item.description" :project-image="item.featuredImage" :project-id="item.id" :project-tag="item.status"/>
@@ -27,6 +31,7 @@ import PageTitle from '@/components/PageTitle.vue';
 import ServicesGroup from '@/components/ServicesGroup.vue';
 import ProjectButton from '@/components/ProjectButton.vue';
 import ProjectModal from '@/components/projectModal/ProjectModal.vue';
+import RecommendationsCard from '@/components/RecommendationsCard.vue';
 
 //data
 import projectsJSON from '@/data/projects.json';
@@ -35,7 +40,7 @@ import projectsJSON from '@/data/projects.json';
 import projectModal from '@/stores/projectModal';
 
 export default defineComponent({
-  components: {PageTitle, ServicesGroup, ProjectButton, ProjectModal},
+  components: {PageTitle, ServicesGroup, ProjectButton, ProjectModal, RecommendationsCard},
   setup () {
     const modalStore = ref(projectModal);
 

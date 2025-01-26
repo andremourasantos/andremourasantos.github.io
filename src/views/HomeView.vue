@@ -70,4 +70,11 @@ export default defineComponent({
     flex-direction: column;
     flex-grow: 1;
   }
+
+  div.recommendationsCard {
+    margin-inline: auto;
+    margin-top: 64px;
+    margin-inline: auto;
+    max-width: 550px;
+  }
 </style>
