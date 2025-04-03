@@ -76,9 +76,11 @@ async function getIconURLFromStorage(iconName) {
 }
 
 // information to add to the database
-import recommendationsJSON from '../src/data/recommendations.json' assert { type: 'json' };
-import marketingJSON from '../src/data/mkt-services.json' assert { type: 'json' };
-import webJSON from '../src/data/web-services.json' assert { type: 'json' };
+import { readFileSync } from 'fs';
+
+const recommendationsJSON = JSON.parse(readFileSync(new URL('../src/data/recommendations.json', import.meta.url)));
+const marketingJSON = JSON.parse(readFileSync(new URL('../src/data/mkt-services.json', import.meta.url)));
+const webJSON = JSON.parse(readFileSync(new URL('../src/data/web-services.json', import.meta.url)));
 
 /**
  * Creates the recommendations collection in Firestore based on the data provided in the recommendationsJSON object.

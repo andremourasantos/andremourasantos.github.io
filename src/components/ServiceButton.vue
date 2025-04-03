@@ -140,7 +140,7 @@ export default defineComponent({
     box-shadow: var(--neumorphism-inner_shadow);
   }
 
-  button:has(#tag) {
+  button:has(.tag) {
     padding: 24px 16px;
   }
 
