@@ -3,14 +3,19 @@
     <div>
       <h1>{{title}}</h1>
       <p>{{subtitle}}</p>
+      <Button size="L" icon-name="ChevronDown"/>
     </div>
   </section>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent } from 'vue';
+import Button from './Button.vue';
 
 export default defineComponent({
+  components: {
+    Button
+  },
   props: {
     title: {
       type: String,
@@ -55,7 +60,8 @@ export default defineComponent({
     flex-direction: column;
     gap: var(--padding_02x);
     text-align: center;
-  }
+    align-items: center;
+}
 
   h1 {
     font-size: 48px;
@@ -63,5 +69,6 @@ export default defineComponent({
 
   p {
     font-size: 24px;
+    margin-bottom: 24px;
   }
 </style>
