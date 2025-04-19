@@ -1,6 +1,8 @@
 <template>
   <Header/>
-  <RouterView/>
+  <main>
+    <RouterView/>
+  </main>
   <Footer/>
 </template>
 
@@ -18,6 +20,13 @@ export default defineComponent({
   }
 })
 </script>
+
+<style>
+ body {
+  max-width: 1584px;
+  margin-inline: auto;
+ }
+</style>
 
 <style scoped>
 

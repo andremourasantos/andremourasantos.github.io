@@ -11,7 +11,7 @@
           <ul>
             <li><router-link :to="{name: 'home'}">Página inicial</router-link></li>
             <li><router-link :to="{name: 'work'}">Trabalhos</router-link></li>
-            <li><router-link :to="{name: 'portfolio'}">Portfolio</router-link></li>
+            <li><router-link :to="{name: 'portfolio'}">Portfólio</router-link></li>
           </ul>
         </div>
         <div>
@@ -56,6 +56,8 @@ export default defineComponent({
     justify-items: center;
     background-color: #F5F5F5;
     padding: var(--padding_8x) 0 var(--padding_8x) 0;
+    box-shadow: 0px 0px 0px 100vw #F5F5F5;
+    clip-path: inset(0 -100vw 0 -100vw);
   }
 
   footer > section {

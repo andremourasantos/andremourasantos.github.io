@@ -4,7 +4,7 @@
     <nav>
       <router-link :to="{name: 'home'}">Início</router-link>
       <router-link :to="{name: 'work'}">Trabalhos</router-link>
-      <router-link :to="{name: 'portfolio'}">Portfolio</router-link>
+      <router-link :to="{name: 'portfolio'}">Portfólio</router-link>
     </nav>
   </header>
 </template>
@@ -30,6 +30,8 @@ export default defineComponent({
     position: sticky;
     top: 0px;
     background-color: var(--colors_background);
+    box-shadow: 0px 0px 0px 100vw var(--colors_background);
+    clip-path: inset(0 -100vw 0 -100vw);
   }
 
   .title {
