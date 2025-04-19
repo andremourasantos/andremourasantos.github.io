@@ -1,9 +1,10 @@
 <template>
-  <component :is="name" :size="size" absoluteStrokeWidth :color="color" stroke-width="2" v-if="name !== 'WhatsApp' && name !== 'Facebook' && name !== 'Instagram' && name !== 'Twitter'" />
+  <component :is="name" :size="size" absoluteStrokeWidth :color="color" stroke-width="2" v-if="!isSocialMediaIcon" />
+  <img v-if="isSocialMediaIcon" :src="imagePath" :alt="`Ícone de ${name}`" :height="size">
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, ref, computed } from 'vue';
 import { ChevronDown, ExternalLink, Mail } from "lucide-vue-next";
 
 export default defineComponent({
@@ -25,10 +26,25 @@ export default defineComponent({
   components: {
     ChevronDown
   },
-  setup () {
-    
+  setup (props) {
+    const socialMedias = ref(['WhatsApp', 'Facebook', 'Instagram', 'Twitter']);
 
-    return {}
+    const isSocialMediaIcon = computed(() => {
+      if (socialMedias.value.includes(props.name)) {
+        return true;
+      } else {
+        return false;
+      }
+    });
+
+    const imagePath = computed(() => {
+      return `../src/assets/social_media_logos/${props.name}.svg`;
+    });
+
+    return {
+      isSocialMediaIcon,
+      imagePath
+    }
   }
 })
 </script>

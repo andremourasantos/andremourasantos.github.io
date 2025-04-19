@@ -1,12 +1,12 @@
 <template>
-  <button @click="handleClick" :class="[`size_${size}`, { 'hasIcon': iconName ? true : false }]">
+  <button :class="[`size_${size}`, { 'hasIcon': iconName ? true : false }]">
     {{ text }}
     <div v-if="iconName"><Icon :name="iconName" :size="size !== 'L' ? 14 : 16"/></div>
   </button>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, computed } from 'vue';
 import Icon from './Icon.vue';
 
 export default defineComponent({
@@ -34,17 +34,13 @@ export default defineComponent({
       type: String as () => IconName
     }
   },
-  emits: ['click'],
   setup (props, { emit }) {
-    const handleClick = () => {
-      if (!props.disabled) {
-        emit('click');
-        console.log(1)
-      }
-    }
-
+    const imagePath = computed(() => {
+      return `../src/assets/social_media_logos/${props.iconName}.svg`;
+    });
+    
     return {
-      handleClick
+      imagePath
     }
   }
 })

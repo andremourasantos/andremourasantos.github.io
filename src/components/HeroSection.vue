@@ -3,7 +3,7 @@
     <div>
       <h1>{{title}}</h1>
       <p>{{subtitle}}</p>
-      <Button size="L" icon-name="ChevronDown"/>
+      <Button size="L" icon-name="ChevronDown" @click="scrollToContent"/>
     </div>
   </section>
 </template>
@@ -27,9 +27,16 @@ export default defineComponent({
     }
   },
   setup () {
-    
+    const scrollToContent = () => {
+      const content = document.getElementById('content')
+      if (content) {
+        content.scrollIntoView({ behavior: 'smooth' })
+      }
+    }
 
-    return {}
+    return {
+      scrollToContent
+    }
   }
 })
 </script>
