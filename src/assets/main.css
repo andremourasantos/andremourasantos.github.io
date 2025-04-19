@@ -1,5 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Flow+Circular&family=Lexend:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  /*FONTS*/
+  --font_title: 'Lexend';
+  --font_paragraph: 'Poppins';
+  --font_loading: 'Flow Circular';
+
+  /*COLORS*/
+  --colors_background: white;
+  --colors_accent: black;
+  --colors_title: #141414;
+  --colors_paragraph: #1F1F1F;
+  --colors_hero-gradient: white;
+
+  /*PADDINGS*/
+  --padding_04x: 2px;
+  --padding_02x: 4px;
+  --padding_1x: 8px;
+  --padding_2x: 16px;
+  --padding_3x: 24px;
+  --padding_4x: 32px;
+  --padding_5x: 40px;
+  --padding_6x: 48px;
+  --padding_8x: 64px;
+  --padding_10x: 80px;
+
+  /*BODY MARGIN*/
+  --body-margin_x-large: 16px;
+  --body-margin_large: 16px;
+  --body-margin_medium: 16px;
+  --body-margin_small: 0px;
+
+  /*BODY WIDTH*/
+  --body-width_x-large: 1312px;
+  --body-width_large: 1056px;
+  --body-width_medium: 672px;
+  --body-width_small: 320px;
+}
+
 * {
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
+  font-family: var(--font_paragraph);
+  color: var(--colors_paragraph);
+  list-style-position: inside;
+}
+
+html {
+  margin-inline: var(--body-margin_x-large);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font_title);
+  font-weight: bold;
+  color: var(--colors_title);
 }
