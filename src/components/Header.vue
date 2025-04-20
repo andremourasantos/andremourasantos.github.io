@@ -32,6 +32,11 @@ export default defineComponent({
     background-color: var(--colors_background);
     box-shadow: 0px 0px 0px 100vw var(--colors_background);
     clip-path: inset(0 -100vw 0 -100vw);
+    z-index: 999;
+  }
+
+  header > a {
+    width: fit-content;
   }
 
   .title {

@@ -1,5 +1,5 @@
 <template>
-  <HeroSection :title="heroTitleRef" :subtitle="heroSubtitleRef"/>
+  <HeroSection :title="heroTitleRef" :subtitle="heroSubtitleRef" :image-name="heroImageRef"/>
   <div id="content" class="articleContainer">
     <aside>
       <div>
@@ -35,6 +35,7 @@ export default defineComponent({
     const route = useRoute();
     const heroTitleRef = ref<string>('');
     const heroSubtitleRef = ref<string>('');
+    const heroImageRef = ref<string>('');
     const htmlContent = ref<string>('');
     const toc = ref<HTMLElement | null>(null);
 
@@ -45,12 +46,17 @@ export default defineComponent({
 
       const title = doc.querySelector('h1');
       const subtitle = doc.querySelector('p');
+      const coverImage = doc.querySelector('img');
 
       heroTitleRef.value = title?.innerHTML || '';
       heroSubtitleRef.value = subtitle?.innerHTML || '';
-
+      if(coverImage && !coverImage.getAttribute('src')?.includes('http')){
+        heroImageRef.value = coverImage.getAttribute('src') as string;
+      }
+      
       title?.remove();
       subtitle?.remove();
+      coverImage?.remove();
 
       const headings = doc.querySelectorAll('h2, h3');
       headings.forEach((head) => {
@@ -97,6 +103,7 @@ export default defineComponent({
     return {
       heroTitleRef,
       heroSubtitleRef,
+      heroImageRef,
       htmlContent,
       toc
     }

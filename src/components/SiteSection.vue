@@ -5,12 +5,12 @@
       <p>{{ description }}</p>
       <div class="slot"><slot></slot></div>
     </div>
-    <img src="../assets/photos/test.png" alt="">
+    <img :src="imagePath" :alt="imageAltText">
   </section>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { computed, defineComponent } from 'vue';
 
 export default defineComponent({
   props: {
@@ -28,17 +28,22 @@ export default defineComponent({
     },
     imageName: {
       type: String,
-      required: false
+      default: 'test',
+      required: true
     },
     imageAltText: {
       type: String,
       required: false
     }
   },
-  setup () {
-    
+  setup (props) {
+    const imagePath = computed(() => {
+      return `../src/assets/photos/${props.imageName}.jpg`;
+    })
 
-    return {}
+    return {
+      imagePath
+    }
   }
 })
 </script>
@@ -69,6 +74,7 @@ export default defineComponent({
     aspect-ratio: 4/3;
     object-fit: cover;
     grid-area: col2;
+    filter: saturate(0.5);
   }
 
   .RTL {

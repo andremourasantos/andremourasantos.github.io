@@ -1,5 +1,6 @@
 <template>
-  <section>
+  <section :class="{'imageBckg': imageName}">
+    <img v-if="imageName" :src="imagePath" :alt="imageName"/>
     <div>
       <h1>{{title}}</h1>
       <p>{{subtitle}}</p>
@@ -9,7 +10,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, computed } from 'vue';
 import Button from './Button.vue';
 
 export default defineComponent({
@@ -24,9 +25,16 @@ export default defineComponent({
     subtitle: {
       type: String,
       required: true
+    },
+    imageName: {
+      type: String,
     }
   },
-  setup () {
+  setup (props) {
+    const imagePath = computed(() => {
+      return props.imageName ? `../src/assets/photos/${props.imageName}.jpg` : ''
+    })
+
     const scrollToContent = () => {
       const content = document.getElementById('content')
       if (content) {
@@ -35,7 +43,8 @@ export default defineComponent({
     }
 
     return {
-      scrollToContent
+      scrollToContent,
+      imagePath
     }
   }
 })
@@ -49,6 +58,14 @@ export default defineComponent({
     background: transparent;
   }
 
+  section.imageBckg * {
+    color: var(--colors_background);
+  }
+
+  section.imageBckg::before {
+    background: none;
+  }
+
   section::before {
     content: '';
     position: absolute;
@@ -60,7 +77,21 @@ export default defineComponent({
     z-index: -1;
   }
 
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: blur(0px) saturate(0.3) brightness(0.5);
+  }
+
   section > div {
+    position: relative;
     margin: auto;
     max-width: 640px;
     display: flex;
@@ -68,7 +99,7 @@ export default defineComponent({
     gap: var(--padding_02x);
     text-align: center;
     align-items: center;
-}
+  }
 
   h1 {
     font-size: 48px;
