@@ -33,6 +33,10 @@ export default defineComponent({
       type: String,
       default: '',
       required: true
+    },
+    pathFolder: {
+      type: String as () => 'trabalhos' | 'portfolio',
+      required: false
     }
   },
   setup (props) {
@@ -41,7 +45,11 @@ export default defineComponent({
     })
 
     const path = computed(() => {
-      return useKebabConverter(props.title)
+      if (!props.pathFolder) {
+        return useKebabConverter(props.title)
+      } else {
+        return `/${props.pathFolder}/${useKebabConverter(props.title)}`
+      }
     })
 
     return {

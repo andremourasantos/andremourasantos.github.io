@@ -1,3 +1,6 @@
+# Política de Privacidade
+Este site com funcionalidades de terceiros e coleta informações sobre a sua sessão. Confira mais aqui.
+
 ## Informações gerais
 _Última atualização em 28/09/2024._
 

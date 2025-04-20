@@ -58,5 +58,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a:has(button) {
+  display: block;
   text-decoration: none;
+  width: fit-content;
 }

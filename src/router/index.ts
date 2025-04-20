@@ -1,4 +1,4 @@
-import { createWebHistory, createRouter } from 'vue-router'
+import { createWebHistory, createRouter } from 'vue-router';
 
 import HomeView from '../views/Home.vue';
 import WorksView from '../views/Works.vue';
@@ -75,8 +75,6 @@ const routes = [
       next({ name: 'home' });
     }
   }, props: (route) => ({
-    heroTitle: 'Política de Privacidade',
-    heroSubtitle: 'Este site com funcionalidades de terceiros e coleta informações sobre a sua sessão. Confira mais aqui.',
     articleText: route.params.articleText
   }) }
 ]

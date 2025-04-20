@@ -1,5 +1,5 @@
 <template>
-  <HeroSection :title="heroTitle" :subtitle="heroSubtitle"/>
+  <HeroSection :title="heroTitleRef" :subtitle="heroSubtitleRef"/>
   <div id="content" class="articleContainer">
     <aside>
       <div>
@@ -13,72 +13,90 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, ref, watch } from 'vue';
+import { defineComponent, ref, watch, onMounted } from 'vue';
+import { marked } from 'marked';
+import { useKebabConverter } from "@/composables/kebabConverter";
 import HeroSection from '@/components/HeroSection.vue';
 import SocialMediaShareBar from '@/components/SocialMediaShareBar.vue';
-
-import { marked } from 'marked';
-
-import { useKebabConverter } from "@/composables/kebabConverter";
+import { useRoute } from 'vue-router';
 
 export default defineComponent({
   components: {
     HeroSection,
     SocialMediaShareBar
   },
-  props:{
-    heroTitle: {
-      type: String,
-      required: true
-    },
-    heroSubtitle: {
-      type: String,
-      required: true
-    },
+  props: {
     articleText: {
       type: String,
       required: true
     }
   },
-  setup (props) {
+  setup(props) {
+    const route = useRoute();
+    const heroTitleRef = ref<string>('');
+    const heroSubtitleRef = ref<string>('');
     const htmlContent = ref<string>('');
     const toc = ref<HTMLElement | null>(null);
 
-    onMounted(async () => {
-      let tempHmltContent = await marked(props.articleText);
+    const generateContent = async (text: string) => {
+      let tempHtmlContent = await marked(text);
       const parser = new DOMParser();
+      const doc = parser.parseFromString(tempHtmlContent, 'text/html');
 
-      const doc = parser.parseFromString(tempHmltContent, 'text/html');
+      const title = doc.querySelector('h1');
+      const subtitle = doc.querySelector('p');
+
+      heroTitleRef.value = title?.innerHTML || '';
+      heroSubtitleRef.value = subtitle?.innerHTML || '';
+
+      title?.remove();
+      subtitle?.remove();
+
       const headings = doc.querySelectorAll('h2, h3');
-
       headings.forEach((head) => {
         const id = useKebabConverter(head.innerHTML);
         head.setAttribute('id', id);
-      })
+      });
 
       htmlContent.value = doc.body.innerHTML;
-    })
+    }
 
-    watch(htmlContent, (newValue) => {
+    const generateToc = (content: string) => {
       const parser = new DOMParser();
-      const doc = parser.parseFromString(newValue, 'text/html');
+      const doc = parser.parseFromString(content, 'text/html');
       const headings = doc.querySelectorAll('h2');
+      if (toc.value) toc.value.innerHTML = '';
 
-      let list:HTMLElement[] = [];
-
-      const tocList = headings.forEach((head) => {
+      headings.forEach((head) => {
         const id = head.getAttribute('id');
+        if (!id) return;
+
         const li = document.createElement('li');
         const link = document.createElement('a');
         link.innerText = head.innerHTML;
         link.setAttribute('href', `#${id}`);
         li.appendChild(link);
         toc.value?.appendChild(li);
-        list.push(li);
-      })
-    })
+      });
+    }
+
+    onMounted(async () => {
+      await generateContent(props.articleText);
+      generateToc(htmlContent.value);
+    });
+
+    watch(() => props.articleText, async (newArticleText) => {
+      await generateContent(newArticleText);
+      generateToc(htmlContent.value);
+    });
+
+    watch(htmlContent, (newHtmlContent) => {
+      generateToc(newHtmlContent);
+    });
 
     return {
+      heroTitleRef,
+      heroSubtitleRef,
       htmlContent,
       toc
     }

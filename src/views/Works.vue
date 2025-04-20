@@ -24,13 +24,13 @@
   </ContentHolder>
 
   <ContentHolder orientation="grid">
-    <GridCard title="Title" description="Description." image="test"/>
-    <GridCard title="Title" description="Description." image="test"/>
-    <GridCard title="Title" description="Description." image="test"/>
-    <GridCard title="Title" description="Description." image="test"/>
-    <GridCard title="Title" description="Description." image="test"/>
-    <GridCard title="Title" description="Description." image="test"/>
-    <GridCard title="Title" description="Description." image="test"/>
+    <GridCard path-folder="trabalhos" title="Title" description="Description." image="test"/>
+    <GridCard path-folder="trabalhos" title="Title" description="Description." image="test"/>
+    <GridCard path-folder="trabalhos" title="Title" description="Description." image="test"/>
+    <GridCard path-folder="trabalhos" title="Title" description="Description." image="test"/>
+    <GridCard path-folder="trabalhos" title="Title" description="Description." image="test"/>
+    <GridCard path-folder="trabalhos" title="Title" description="Description." image="test"/>
+    <GridCard path-folder="trabalhos" title="Title" description="Description." image="test"/>
   </ContentHolder>
 </template>
 
