@@ -1,9 +1,10 @@
 <template>
   <div>
-    <Button text="none" icon-name="WhatsApp" size="L"/>
-    <Button text="none" icon-name="Facebook" size="L"/>
-    <Button text="none" icon-name="Instagram" size="L"/>
-    <Button text="none" icon-name="Twitter" size="L"/>
+    <Button text="none" icon-name="WhatsApp" size="M"/>
+    <Button text="none" icon-name="Facebook" size="M"/>
+    <Button text="none" icon-name="Instagram" size="M"/>
+    <Button text="none" icon-name="Twitter" size="M"/>
+    <Button text="none" icon-name="Link" size="M"/>
   </div>
 </template>
 

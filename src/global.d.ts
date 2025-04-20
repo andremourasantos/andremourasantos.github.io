@@ -1,5 +1,5 @@
 export {}
 
 declare global {
-  type IconName = 'ChevronDown' | 'ExternalLink' | 'Mail' | 'WhatsApp' | 'Facebook' | 'Instagram' | 'Twitter';
+  type IconName = 'ChevronDown' | 'ExternalLink' | 'Link' | 'WhatsApp' | 'Facebook' | 'Instagram' | 'Twitter';
 }

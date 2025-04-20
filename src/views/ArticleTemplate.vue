@@ -3,12 +3,7 @@
   <div id="content" class="articleContainer">
     <aside>
       <div>
-        <ol>
-          <li><a href="#introduction">Introducción</a></li>
-          <li><a href="#section1">Sección 1</a></li>
-          <li><a href="#section2">Sección 2</a></li>
-          <li><a href="#section3">Sección 3</a></li>
-          <li><a href="#conclusion">Conclusión</a></li>
+        <ol ref="toc" class="toc">
         </ol>
       </div>
       <SocialMediaShareBar/>
@@ -18,11 +13,13 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, ref } from 'vue';
+import { defineComponent, onMounted, ref, watch } from 'vue';
 import HeroSection from '@/components/HeroSection.vue';
 import SocialMediaShareBar from '@/components/SocialMediaShareBar.vue';
 
 import { marked } from 'marked';
+
+import { useKebabConverter } from "@/composables/kebabConverter";
 
 export default defineComponent({
   components: {
@@ -45,13 +42,45 @@ export default defineComponent({
   },
   setup (props) {
     const htmlContent = ref<string>('');
+    const toc = ref<HTMLElement | null>(null);
 
     onMounted(async () => {
-      htmlContent.value = await marked(props.articleText);
+      let tempHmltContent = await marked(props.articleText);
+      const parser = new DOMParser();
+
+      const doc = parser.parseFromString(tempHmltContent, 'text/html');
+      const headings = doc.querySelectorAll('h2, h3');
+
+      headings.forEach((head) => {
+        const id = useKebabConverter(head.innerHTML);
+        head.setAttribute('id', id);
+      })
+
+      htmlContent.value = doc.body.innerHTML;
+    })
+
+    watch(htmlContent, (newValue) => {
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(newValue, 'text/html');
+      const headings = doc.querySelectorAll('h2');
+
+      let list:HTMLElement[] = [];
+
+      const tocList = headings.forEach((head) => {
+        const id = head.getAttribute('id');
+        const li = document.createElement('li');
+        const link = document.createElement('a');
+        link.innerText = head.innerHTML;
+        link.setAttribute('href', `#${id}`);
+        li.appendChild(link);
+        toc.value?.appendChild(li);
+        list.push(li);
+      })
     })
 
     return {
-      htmlContent
+      htmlContent,
+      toc
     }
   }
 })
@@ -75,6 +104,18 @@ export default defineComponent({
     grid-template-columns: 480px 1fr;
     gap: var(--padding_10x);
     padding: var(--padding_10x) 0px;
+  }
+
+  .toc {
+    line-height: 32px;
+  }
+
+  :deep(.toc a) {
+    text-decoration: none;
+  }
+
+  :deep(.toc a):hover {
+    text-decoration: underline;
   }
 
   article {
