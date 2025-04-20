@@ -32,7 +32,7 @@ export default defineComponent({
   },
   setup (props) {
     const imagePath = computed(() => {
-      return props.imageName ? `../src/assets/photos/${props.imageName}.jpg` : ''
+      return props.imageName ? new URL(`../assets/photos/${props.imageName}.jpg`, import.meta.url).href : '';
     })
 
     const scrollToContent = () => {

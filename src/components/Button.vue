@@ -35,13 +35,9 @@ export default defineComponent({
     }
   },
   setup (props, { emit }) {
-    const imagePath = computed(() => {
-      return `../src/assets/social_media_logos/${props.iconName}.svg`;
-    });
     
-    return {
-      imagePath
-    }
+    
+    return {}
   }
 })
 </script>

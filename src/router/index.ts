@@ -8,16 +8,6 @@ import PortfolioDesignView from '@/views/portfolio/Design.vue';
 import PortfolioAutomationView from '@/views/portfolio/Automation.vue';
 import ArticleTemplateView from '@/views/ArticleTemplate.vue';
 
-async function getPostPaths() {
-  const postModules = import.meta.glob('@/posts/*.md');
-  return Object.keys(postModules).map(path => {
-    const parts = path.split('/');
-    const filename = parts[parts.length - 1];
-    const slug = filename.replace('.md', '');
-    return `/portfolio/${slug}`;
-  });
-}
-
 async function loadMarkdownPost(folder:string, slug:string) {
   try {
     const post = await import(`@/posts/${folder}/${slug}.md?raw`);
@@ -91,5 +81,5 @@ const router = createRouter({
   },
 })
 
-export { router, getPostPaths }
+export { router }
 export default router

@@ -41,7 +41,7 @@ export default defineComponent({
   },
   setup (props) {
     const imagePath = computed(() => {
-      return `../src/assets/photos/${props.image}.jpg`;
+      return new URL(`../assets/photos/${props.image}.jpg`, import.meta.url).href;
     })
 
     const path = computed(() => {

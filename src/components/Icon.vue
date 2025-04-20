@@ -40,7 +40,7 @@ export default defineComponent({
     });
 
     const imagePath = computed(() => {
-      return `../src/assets/social_media_logos/${props.name}.svg`;
+      return new URL(`../assets/social_media_logos/${props.name}.svg`, import.meta.url).href;
     });
 
     return {
