@@ -70,6 +70,7 @@ export default defineComponent({
     color: var(--colors_background);
     box-shadow: none;
     cursor: pointer;
+    border: none;
   }
 
   button.size_M {

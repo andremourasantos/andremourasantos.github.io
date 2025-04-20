@@ -1,5 +1,5 @@
 <template>
-  <div id="content" :class="orientation">
+  <div :id="id" class="contentHolder" :class="orientation">
     <slot></slot>
   </div>
 </template>
@@ -12,6 +12,10 @@ export default defineComponent({
     orientation: {
       type: String as () => 'column' | 'grid',
       default: 'column'
+    },
+    id: {
+      type: String,
+      default: 'content'
     }
   },
   setup () {
@@ -23,7 +27,7 @@ export default defineComponent({
 </script>
 
 <style scoped>
-  #content {
+  .contentHolder {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -31,7 +35,7 @@ export default defineComponent({
     padding: var(--padding_10x) 0px;
   }
 
-  #content.grid {
+  .grid {
     flex-direction: row;
     gap: var(--padding_5x);
     flex-wrap: wrap;

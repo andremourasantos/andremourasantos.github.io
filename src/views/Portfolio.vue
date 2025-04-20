@@ -3,15 +3,15 @@
 
   <ContentHolder>
     <SiteSection title="Programação" description="Confira projetos de programação, incluindo sites, APIs e projetos pessoais. Todos os projetos apresentados contam com código disponível no GitHub. Aproveite para copiar algumas ideias ou ver outras formas de solucionar um problema. Caso tenha interesse em algum projeto, você pode entrar em contato.">
-      <Button size="M"/>
+      <RouterLink :to="{name: 'portfolio-programming'}"><Button size="M"/></RouterLink>
     </SiteSection>
 
     <SiteSection orientation="RTL" title="Automação" description="Confira alguns fluxos com I.A. para automatizar a produção de textos, alterações em sistemas como Google Drive, CRMs, WhatsApp ou YouTube. Nesta categoria, apresento algumas ideias de fluxos no Make.com, mas elas podem ser adaptadas para outras plataformas como N8N facilmente.">
-      <Button size="M"/>
+      <RouterLink :to="{name: 'portfolio-automation'}"><Button size="M"/></RouterLink>
     </SiteSection>
 
     <SiteSection title="Design" description="Confira meus projetos de design, como protótipos de sites, aplicativos ou sistemas web, além de alguns esboços de artes (de verdade, não I.A.). Caso tenha interesse em algum design ou aplicativo, você pode entrar em contato ou acessar a visualização no Figma.">
-      <Button size="M"/>
+      <RouterLink :to="{name: 'portfolio-design'}"><Button size="M"/></RouterLink>
     </SiteSection>
   </ContentHolder>
 </template>
