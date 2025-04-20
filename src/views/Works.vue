@@ -21,7 +21,17 @@
     <SiteSection title="Disseminação de know-how entre times e equipes" description="Veja como organizei os diversos conhecimentos de trabalho de uma empresa com mais de 10 times em uma única Base de Conhecimento, para agilizar o treinamento e rampagem de novos funcionários.">
       <Button size="M"/>
     </SiteSection>
-  </ContentHolder>  
+  </ContentHolder>
+
+  <ContentHolder orientation="grid">
+    <GridCard title="Title" description="Description." image="test"/>
+    <GridCard title="Title" description="Description." image="test"/>
+    <GridCard title="Title" description="Description." image="test"/>
+    <GridCard title="Title" description="Description." image="test"/>
+    <GridCard title="Title" description="Description." image="test"/>
+    <GridCard title="Title" description="Description." image="test"/>
+    <GridCard title="Title" description="Description." image="test"/>
+  </ContentHolder>
 </template>
 
 <script lang="ts">
@@ -30,13 +40,15 @@ import HeroSection from '@/components/HeroSection.vue';
 import SiteSection from '@/components/SiteSection.vue';
 import Button from '@/components/Button.vue';
 import ContentHolder from '@/components/ContentHolder.vue';
+import GridCard from '@/components/GridCard.vue';
 
 export default defineComponent({
   components: {
     HeroSection,
     SiteSection,
     Button,
-    ContentHolder
+    ContentHolder,
+    GridCard
   },
   setup () {
     
