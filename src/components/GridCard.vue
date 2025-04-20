@@ -4,7 +4,7 @@
     <div class="text-content">
       <h3>{{ title }}</h3>
       <p>{{ description }}</p>
-      <Button/>
+      <RouterLink :to="{ path: `${path}` }"><Button/></RouterLink>
     </div>
   </div>
 </template>
@@ -12,6 +12,7 @@
 <script lang="ts">
 import { defineComponent, computed } from 'vue';
 import Button from './Button.vue';
+import { useKebabConverter } from "@/composables/kebabConverter";
 
 export default defineComponent({
   components: {
@@ -39,8 +40,13 @@ export default defineComponent({
       return `../src/assets/photos/${props.image}.jpg`;
     })
 
+    const path = computed(() => {
+      return useKebabConverter(props.title)
+    })
+
     return {
-      imagePath
+      imagePath,
+      path
     }
   }
 })

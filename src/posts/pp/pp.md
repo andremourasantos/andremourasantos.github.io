@@ -39,8 +39,6 @@ Os cookies utilizados neste site são principalmente cookies persistentes, que p
 
 Os usuários têm a opção de gerenciar suas preferências de cookies diretamente por meio das configurações de seus navegadores. Essas configurações permitem aos usuários aceitar, recusar ou excluir cookies conforme desejado. Os usuários também têm o direito de desativar os cookies através das configurações de seus navegadores.
 
-![image](https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fwww.josephharveyangeles.com%2Fstatics%2Fimages%2Fblogs%2F2019%2Fvue-markdown-blog%2Ffoo.png)
-
 ## Compartilhamento de dados
 _Veja como e com quem seus dados são compartilhados._
 

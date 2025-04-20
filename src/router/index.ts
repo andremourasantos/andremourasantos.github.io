@@ -1,11 +1,11 @@
-import { createMemoryHistory, createRouter, createWebHistory } from 'vue-router'
+import { createWebHistory, createRouter } from 'vue-router'
 
 import HomeView from '../views/Home.vue';
 import WorksView from '../views/Works.vue';
 import PortfolioView from '@/views/Portfolio.vue';
-import PortfolioProgrammingView from '@/views/Portfolio/Programming.vue';
-import PortfolioDesignView from '@/views/Portfolio/Design.vue';
-import PortfolioAutomationView from '@/views/Portfolio/Automation.vue';
+import PortfolioProgrammingView from '@/views/portfolio/Programming.vue';
+import PortfolioDesignView from '@/views/portfolio/Design.vue';
+import PortfolioAutomationView from '@/views/portfolio/Automation.vue';
 import ArticleTemplateView from '@/views/ArticleTemplate.vue';
 
 async function getPostPaths() {
@@ -21,7 +21,6 @@ async function getPostPaths() {
 async function loadMarkdownPost(folder:string, slug:string) {
   try {
     const post = await import(`@/posts/${folder}/${slug}.md?raw`);
-    console.log(0,post.default);
     return post.default;
   } catch (error) {
     console.error('Erro ao carregar o post:', error);
@@ -32,6 +31,23 @@ async function loadMarkdownPost(folder:string, slug:string) {
 const routes = [
   { path: '/', name: 'home', component: HomeView },
   { path: '/trabalhos', name: 'work', component: WorksView },
+  { path: '/trabalhos/:slug', name: 'work-article', component: ArticleTemplateView, beforeEnter: async (to, from, next) => {
+    try {
+      const { slug } = to.params;
+      const articleText = await loadMarkdownPost('work', slug);
+      to.params.articleText = articleText;
+      next();
+    } catch (error) {
+      console.error('Erro ao carregar o artigo:', error);
+      next({ name: 'work' });
+    }
+  }, props: (route) => {
+    return {
+      heroTitle: 'Trabalhos',
+      heroSubtitle: 'Aqui estão alguns dos meus trabalhos mais recentes.',
+      articleText: route.params.articleText
+    }
+  }},
   { path: '/portfolio', name: 'portfolio', component: PortfolioView },
   { path: '/portfolio/programacao', name: 'portfolio-programming', component: PortfolioProgrammingView },
   { path: '/portfolio/automacao', name: 'portfolio-automation', component: PortfolioAutomationView },
@@ -68,8 +84,12 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(),
   routes,
-  scrollBehavior() {
-    return { top: 0 }
+  scrollBehavior(to, from) {
+    if(to.path === from.path) {
+      return {}
+    } else {
+      return { top: 0 }
+    }
   },
 })
 

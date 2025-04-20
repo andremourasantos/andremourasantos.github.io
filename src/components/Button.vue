@@ -1,6 +1,6 @@
 <template>
   <button :class="[`size_${size}`, { 'hasIcon': iconName ? true : false }]">
-    {{ text }}
+    <span v-if="text !== 'none'">{{ text }}</span>
     <div v-if="iconName"><Icon :name="iconName" :size="size !== 'L' ? 14 : 16"/></div>
   </button>
 </template>
@@ -65,12 +65,15 @@ export default defineComponent({
     align-items: center;
     padding: 0px var(--padding_8x) 0px var(--padding_2x);
     color: var(--colors_text);
-    font-size: 14px;
     background-color: var(--colors_accent);
-    color: var(--colors_background);
     box-shadow: none;
     cursor: pointer;
     border: none;
+  }
+
+  button span {
+    font-size: 14px;
+    color: var(--colors_background);
   }
 
   button.size_M {
@@ -79,6 +82,9 @@ export default defineComponent({
 
   button.size_L {
     height: 48px;
-    font-size: 16px;;
+  }
+
+  button.size_L span {
+    font-size: 16px;
   }
 </style>
