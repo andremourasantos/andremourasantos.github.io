@@ -49,7 +49,8 @@ export default defineComponent({
 <style scoped>
   .card {
     min-width: 288px;
-    max-width: 400px;
+    max-width: 501px;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     border: 1px solid var(--colors_accent);

@@ -12,7 +12,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import PortfolioPage from '@/components/PortfolioPage.vue';
+import PortfolioPage from '@/views/Portfolio/PageTemplate.vue';
 import GridCard from '@/components/GridCard.vue';
 
 export default defineComponent({

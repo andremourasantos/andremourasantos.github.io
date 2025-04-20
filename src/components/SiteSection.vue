@@ -25,7 +25,6 @@ export default defineComponent({
     orientation: {
       type: String as () => 'LTR' | 'RTL',
       default: 'LTR',
-      required: true,
     },
     imageName: {
       type: String,

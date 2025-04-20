@@ -2,7 +2,7 @@
   <HeroSection :title="heroTitle" :subtitle="heroSubtitle"/>
   <ContentHolder>
     <SiteSection :title="siteSectionTitle" :description="siteSectionSubtitle" :image-name="siteSectionImage" :image-alt-text="siteSectionImage">
-      <Button @click="srollToSection('projects')" text="Continuar" icon-name="ChevronDown"/>
+      <Button @click="srollToSection('projects')" text="Continuar" icon-name="ChevronDown" size="M"/>
     </SiteSection>
     <ContentHolder orientation="grid" id="projects">
       <slot></slot>
@@ -13,10 +13,10 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import HeroSection from '@/components/HeroSection.vue';
-import ContentHolder from './ContentHolder.vue';
+import ContentHolder from '@/components/ContentHolder.vue';
 import SiteSection from '@/components/SiteSection.vue';
-import Button from './Button.vue';
-import GridCard from './GridCard.vue';
+import Button from '@/components/Button.vue';
+import GridCard from '@/components/GridCard.vue';
 
 export default defineComponent({
   components: {
