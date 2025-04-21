@@ -1,5 +1,5 @@
 <template>
-  <HeroSection title="Prazer, André aqui!" subtitle="Crescimento data-driven para sua empresa."/>
+  <HeroSection title="Prazer, André aqui!" subtitle="Trabalho com Growth Marketing, crescimento data-driven e automações de processos."/>
   
   <ContentHolder>
     <SiteSection title="Minha carreira profissional" description="O profissional de Marketing Digital com foco em Growth Marketing, ajudando Pequenas e Médias Empresas a crescer de forma sustentável por meio de estratégias data-driven." image-name="stephen-phillips-hostreviews-co-uk-shr_Xn8S8QU-unsplash">

@@ -6,7 +6,7 @@
         <ol ref="toc" class="toc">
         </ol>
       </div>
-      <SocialMediaShareBar/>
+      <SocialMediaShareBar v-if="showMediaShareBar"/>
     </aside>
     <article v-html="htmlContent"></article>
   </div>
@@ -29,6 +29,10 @@ export default defineComponent({
     articleText: {
       type: String,
       required: true
+    },
+    showMediaShareBar: {
+      type: Boolean,
+      default: true
     }
   },
   setup(props) {
@@ -133,6 +137,7 @@ export default defineComponent({
 
   .toc {
     line-height: 32px;
+    font-size: 20px;
   }
 
   :deep(.toc a) {
@@ -156,11 +161,16 @@ export default defineComponent({
 
   :deep(article h3) {
     font-size: 24px;
+    margin-top: var(--padding_2x);
     margin-bottom: var(--padding_02x);
   }
 
-  :deep(article p), :deep(article ul) {
+  :deep(article p), :deep(article ul), :deep(article ol li) {
     margin-bottom: var(--padding_2x);
+  }
+
+  :deep(article ul li), :deep(article ol li) {
+    margin-left: var(--padding_4x);
   }
 
   :deep(article img) {

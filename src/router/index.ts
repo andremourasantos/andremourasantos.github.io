@@ -65,7 +65,8 @@ const routes = [
       next({ name: 'home' });
     }
   }, props: (route) => ({
-    articleText: route.params.articleText
+    articleText: route.params.articleText,
+    showMediaShareBar: false
   }) }
 ]
 

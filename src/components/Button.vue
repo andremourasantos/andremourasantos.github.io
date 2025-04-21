@@ -1,5 +1,5 @@
 <template>
-  <button :class="[`size_${size}`, { 'hasIcon': iconName ? true : false }]">
+  <button :class="[`size_${size}`, { 'hasIcon': iconName ? true : false }]" @click="handleClick" :disabled="disabled">
     <span v-if="text !== 'none'">{{ text }}</span>
     <div v-if="iconName"><Icon :name="iconName" :size="size !== 'L' ? 14 : 16"/></div>
   </button>
@@ -34,10 +34,17 @@ export default defineComponent({
       type: String as () => IconName
     }
   },
+  emits: ['btnClick'],
   setup (props, { emit }) {
+    const handleClick = () => {
+      if(!props.disabled) {
+        emit('btnClick')
+      };
+    }
     
-    
-    return {}
+    return {
+      handleClick
+    }
   }
 })
 </script>

@@ -5,14 +5,19 @@
       <router-link :to="{name: 'home'}">Início</router-link>
       <router-link :to="{name: 'work'}">Trabalhos</router-link>
       <router-link :to="{name: 'portfolio'}">Portfólio</router-link>
+      <Button text="Contato" icon-name="WhatsApp"/>
     </nav>
   </header>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import Button from './Button.vue';
 
 export default defineComponent({
+  components: {
+    Button
+  },
   setup () {
     
 

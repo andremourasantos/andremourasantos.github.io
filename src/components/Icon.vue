@@ -29,7 +29,7 @@ export default defineComponent({
     Link
   },
   setup (props) {
-    const socialMedias = ref(['WhatsApp', 'Facebook', 'Instagram', 'Twitter']);
+    const socialMedias = ref(['WhatsApp', 'Facebook', 'LinkedIn', 'Twitter']);
 
     const isSocialMediaIcon = computed(() => {
       if (socialMedias.value.includes(props.name)) {
