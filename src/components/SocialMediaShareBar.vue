@@ -20,7 +20,7 @@ export default defineComponent({
     const handleClick = (btnType:'WhatsApp' | 'Facebook' | 'LinkedIn' | 'Twitter' | 'Link') => {
       const url = window.location.href;
       let shareUrl = '';
-      let utms = `?utm_source=share&utm_medium=${btnType.toLocaleLowerCase()}&utm_campaign=share_button_article`;
+      let utms = `?utm_source=share&utm_medium=${btnType.toLocaleLowerCase()}&utm_campaign=share_button`;
 
       switch (btnType) {
         case 'WhatsApp':

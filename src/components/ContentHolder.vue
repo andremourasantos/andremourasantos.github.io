@@ -39,6 +39,6 @@ export default defineComponent({
     flex-direction: row;
     gap: var(--padding_5x);
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
   }
 </style>

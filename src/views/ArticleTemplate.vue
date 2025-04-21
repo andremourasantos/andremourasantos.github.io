@@ -136,10 +136,11 @@ export default defineComponent({
   }
 
   .toc {
-    line-height: 32px;
-    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding_1x);
+    font-size: 16px;
   }
-
   :deep(.toc a) {
     text-decoration: none;
   }
@@ -154,23 +155,38 @@ export default defineComponent({
   }
 
   :deep(article h2) {
-    font-size: 32px;
+    font-size: 24px;
     margin-top: var(--padding_4x);
     margin-bottom: var(--padding_02x);
   }
 
   :deep(article h3) {
-    font-size: 24px;
+    font-size: 20px;
     margin-top: var(--padding_2x);
     margin-bottom: var(--padding_02x);
   }
 
-  :deep(article p), :deep(article ul), :deep(article ol li) {
+  :deep(article p) {
     margin-bottom: var(--padding_2x);
+  }
+
+  :deep(article ul), :deep(article ol) {
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding_2x);
   }
 
   :deep(article ul li), :deep(article ol li) {
     margin-left: var(--padding_4x);
+  }
+
+  :deep(article li ul), :deep(article li ol) {
+    gap: var(--padding_1x);
+    margin-top: var(--padding_1x);
+  }
+
+  :deep(hr) {
+    display: none;
   }
 
   :deep(article img) {

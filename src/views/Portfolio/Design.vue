@@ -5,6 +5,7 @@
     <GridCard title="Proposita" description="Description." image="test"/>
     <GridCard title="Meu site profissional" description="O meu novo site profissional, adotando o neumorphism e as melhores práticas para manutenção." image="test"/>
     <GridCard title="Site do Dr. André" description="Um site, no estilo aplicativo de telefone, para um oftalmologista conhecido de Porto Velho, RO." image="test"/>
+    <GridCard title="Rebranding da Business School da Universidade Positivo" description="Para auxiliar e orientar o desenvolvimento do projeto, a professora e pesquisadora Fabiana Mariutti, foi convidada." image="test"/>
     <GridCard title="Aplicativo de delivery" description="Description." image="test"/>
     <GridCard title="Currículo no Figma" description="Description." image="test"/> 
   </PortfolioPage>
