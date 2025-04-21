@@ -5,6 +5,13 @@
   --font_title: 'Lexend';
   --font_paragraph: 'Poppins';
   --font_loading: 'Flow Circular';
+  --font-size_display: 48px;
+  --font-size_x-large: 40px;
+  --font-size_large: 32px;
+  --font-size_medium: 24px;
+  --font-size_small: 20px;
+  --font-size_default: 16px;
+  --font-size_x-small: 14px;
 
   /*COLORS*/
   --colors_background: white;
@@ -47,6 +54,10 @@
   list-style-position: inside;
 }
 
+p {
+  font-size: var(--font-size_default);
+}
+
 html {
   margin-inline: var(--body-margin_x-large);
 }
@@ -61,4 +72,28 @@ a:has(button) {
   display: block;
   text-decoration: none;
   width: fit-content;
+}
+
+@media screen and (max-width: 672px) {
+  :root {
+    /*FONTS*/
+    --font-size_display: 32px;
+    --font-size_x-large: 32px;
+    --font-size_large: 24px;
+    --font-size_medium: 20px;
+    --font-size_small: 16px;
+    --font-size_x-small: 12px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  :root {
+    /*FONTS*/
+    --font-size_display: 28px;
+    --font-size_x-large: 28px;
+    --font-size_large: 20px;
+    --font-size_medium: 16px;
+    --font-size_small: 16px;
+    --font-size_x-small: 12px;
+  }
 }

@@ -36,9 +36,21 @@ export default defineComponent({
   }
 
   .grid {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: var(--padding_5x);
-    flex-wrap: wrap;
     justify-content: flex-start;
+  }
+
+  @media screen and (max-width: 1056px) {
+    .grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media screen and (max-width: 672px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
   }
 </style>

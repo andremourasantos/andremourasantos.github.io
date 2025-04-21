@@ -107,4 +107,21 @@ export default defineComponent({
   .links li:last-of-type {
     margin-bottom: 0;
   }
+
+  @media screen and (max-width: 1056px) {
+    footer section {
+      grid-template-columns: 1fr;
+      gap: var(--padding_5x);
+    }
+
+    .links {
+      justify-content: flex-start;
+    }
+  }
+
+  @media screen and (max-width: 672px) {
+    .links {
+      flex-direction: column;
+    }
+  }
 </style>

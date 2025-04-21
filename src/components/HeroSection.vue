@@ -102,11 +102,11 @@ export default defineComponent({
   }
 
   h1 {
-    font-size: 48px;
+    font-size: var(--font-size_display);
   }
 
   p {
-    font-size: 24px;
+    font-size: var(--font-size_medium);
     margin-bottom: 24px;
   }
 </style>

@@ -69,4 +69,14 @@ export default defineComponent({
   nav > a.router-link-active {
     font-weight: bold;
   }
+
+  @media screen and (max-width: 672px) {
+    header {
+      grid-template-columns: 2fr 1fr;
+    }
+
+    nav {
+      display: none;
+    }
+  }
 </style>

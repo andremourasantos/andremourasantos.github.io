@@ -120,7 +120,7 @@ export default defineComponent({
     height: fit-content;
     width: 100%;
     position: sticky;
-    top: 96px;
+    top: 80px;
     display: flex;
     flex-direction: column;
     gap: var(--padding_2x);
@@ -194,5 +194,28 @@ export default defineComponent({
     aspect-ratio: 16/9;
     object-fit: cover;
     object-position: center;
+  }
+
+  @media screen and (max-width: 1312px) {
+    .articleContainer {
+      grid-template-columns: 400px 1fr;
+    }
+  }
+
+  @media screen and (max-width: 1056px) {
+    .articleContainer {
+      grid-template-columns: 320px 1fr;
+      gap: var(--padding_5x);
+    }
+  }
+
+  @media screen and (max-width: 672px) {
+    aside {
+      display: none;
+    }
+
+    .articleContainer {
+      grid-template-columns: 1fr;
+    }
   }
 </style>

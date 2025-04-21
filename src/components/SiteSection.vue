@@ -65,7 +65,7 @@ export default defineComponent({
 
   h2 {
     margin-bottom: var(--padding_04x);
-    font-size: 32px;
+    font-size: var(--font-size_large);
   }
 
   img {
@@ -77,19 +77,40 @@ export default defineComponent({
     filter: saturate(0.5);
   }
 
-  .RTL {
-    grid-template-columns: 1fr 540px;
-  }
+  @media screen and (min-width: 1057px) {
+    .RTL {
+      grid-template-columns: 1fr 540px;
+    }
 
-  .RTL div {
-    grid-area: col2;
-  }
+    .RTL div {
+      grid-area: col2;
+    }
 
-  .RTL img {
-    grid-area: col1;
+    .RTL img {
+      grid-area: col1;
+    }
   }
 
   .slot {
     margin-top: var(--padding_3x);
+  }
+
+  @media screen and (max-width: 1056px) {
+    section {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 1fr;
+      grid-template-areas:
+        "col2"
+        "col1";
+      gap: var(--padding_2x);
+    }
+
+    div {
+      width: 100%;
+    }
+
+    h2 {
+      margin-bottom: var(--padding_02x);
+    }
   }
 </style>

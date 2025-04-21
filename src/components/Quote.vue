@@ -43,13 +43,13 @@ export default defineComponent({
     font-style: italic;
     font-family: var(--font_title);
     font-weight: 200;
-    font-size: 32px;
+    font-size: var(--font-size_large);
     color: var(--colors_title);
   }
 
   p {
     margin-top: var(--padding_2x);
-    font-size: 20px;
+    font-size: var(--font-size_small);
   }
 
   p * {
@@ -58,5 +58,11 @@ export default defineComponent({
 
   p:last-of-type > span {
     font-weight: 300;
+  }
+
+  @media screen and (max-width: 672px) {
+    div {
+      width: 100%;
+    }
   }
 </style>

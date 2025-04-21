@@ -36,7 +36,7 @@ import HeroSection from '@/components/HeroSection.vue';
 import SiteSection from '@/components/SiteSection.vue';
 import Button from '@/components/Button.vue';
 import ContentHolder from '@/components/ContentHolder.vue';
-import Quote from '@/components/quote.vue';
+import Quote from '@/components/Quote.vue';
 
 export default defineComponent({
   components: {
