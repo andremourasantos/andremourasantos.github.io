@@ -5,9 +5,15 @@
 
 <script lang="ts">
 import { defineComponent, ref, computed } from 'vue';
-import { ChevronDown, ExternalLink, Link } from "lucide-vue-next";
+import { ChevronDown, ExternalLink, Link, Menu } from "lucide-vue-next";
 
 export default defineComponent({
+  components: {
+    ChevronDown,
+    ExternalLink,
+    Link,
+    Menu
+  },
   props: {
     size: {
       type: Number as () => 14 | 16,
@@ -22,11 +28,6 @@ export default defineComponent({
       type: String,
       default: 'white'
     }
-  },
-  components: {
-    ChevronDown,
-    ExternalLink,
-    Link
   },
   setup (props) {
     const socialMedias = ref(['WhatsApp', 'Facebook', 'LinkedIn', 'Twitter']);

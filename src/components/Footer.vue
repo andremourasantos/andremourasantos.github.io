@@ -120,6 +120,10 @@ export default defineComponent({
   }
 
   @media screen and (max-width: 672px) {
+    footer {
+      grid-template-rows: 1fr auto;
+    }
+
     .links {
       flex-direction: column;
     }

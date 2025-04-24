@@ -16,13 +16,13 @@
 
     <Quote quote="O André é um profissional dedicado e atencioso, com ótimo conhecimento técnico e que trabalha bem em equipe para implantar soluções" authorName="Rafael Bretas" author-work="CEO em Agência fog"/>
 
-    <SiteSection title="Automação de trabalho operacional repetitivo" description="Veja como automatizei diversos fluxos de trabalho, economizando 40 horas por mês com trabalho de baixo valor agregado, a partir de Automação de Processos Inteligentes (SPAs), Inteligência Artificial (IA) e plataformas No-code.">
+    <SiteSection orientation="RTL" title="Automação de trabalho operacional repetitivo" description="Veja como automatizei diversos fluxos de trabalho, economizando 40 horas por mês com trabalho de baixo valor agregado, a partir de Automação de Processos Inteligentes (SPAs), Inteligência Artificial (IA) e plataformas No-code.">
       <Button size="M"/>
     </SiteSection>    
 
     <Quote quote="O André é um profissional extremamente competente, organizado e criativo. Trabalhamos juntos há mais de um ano e sempre tivemos ótimos resultados com os clientes" authorName="Wedlin Lucas" author-work="Designer em Agência WX"/>
 
-    <SiteSection orientation="RTL" title="Implementação de I.A. nos processos de trabalho" description="Veja como implementamos o uso de LLMs nos processos de um escritório de advocacia, em que os detalhes ditam o sucesso ou fracasso de uma ação, além de incentivar o uso e aprimoramento contínuo.">
+    <SiteSection title="Implementação de I.A. nos processos de trabalho" description="Veja como implementamos o uso de LLMs nos processos de um escritório de advocacia, em que os detalhes ditam o sucesso ou fracasso de uma ação, além de incentivar o uso e aprimoramento contínuo.">
       <Button size="M"/>
     </SiteSection>
 
@@ -34,13 +34,9 @@
   </ContentHolder>
 
   <ContentHolder orientation="grid">
-    <GridCard path-folder="trabalhos" title="Title" description="Description." image="test"/>
-    <GridCard path-folder="trabalhos" title="Title" description="Description." image="test"/>
-    <GridCard path-folder="trabalhos" title="Title" description="Description." image="test"/>
-    <GridCard path-folder="trabalhos" title="Title" description="Description." image="test"/>
-    <GridCard path-folder="trabalhos" title="Title" description="Description." image="test"/>
-    <GridCard path-folder="trabalhos" title="Title" description="Description." image="test"/>
-    <GridCard path-folder="trabalhos" title="Title" description="Description." image="test"/>
+    <GridCard path-folder="trabalhos" title="Em breve..." description="Logo mais atualizarei esta seção do site com mais novidades." image="test"/>
+    <GridCard path-folder="trabalhos" title="Em breve..." description="Logo mais atualizarei esta seção do site com mais novidades." image="test"/>
+    <GridCard path-folder="trabalhos" title="Em breve..." description="Logo mais atualizarei esta seção do site com mais novidades." image="test"/>
   </ContentHolder>
 </template>
 

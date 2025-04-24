@@ -62,6 +62,15 @@ export default defineComponent({
       subtitle?.remove();
       coverImage?.remove();
 
+      const links = doc.querySelectorAll('a');
+      links.forEach((link) => {
+        const href = link.getAttribute('href');
+        if(href && !href.includes(window.location.origin) && !href.startsWith('/')) {
+          link.setAttribute('target', '_blank');
+          link.setAttribute('rel', 'noopener');
+        };
+      })
+
       const headings = doc.querySelectorAll('h2, h3');
       headings.forEach((head) => {
         const id = useKebabConverter(head.innerHTML);
@@ -166,8 +175,25 @@ export default defineComponent({
     margin-bottom: var(--padding_02x);
   }
 
+  :deep(article *:not(ul, ol, blockquote) + h2) {
+    margin-top: var(--padding_2x);
+  }
+
+  :deep(article *:not(ul, ol, blockquote) + h3) {
+    margin-top: 0px;
+  }
+
   :deep(article p) {
     margin-bottom: var(--padding_2x);
+  }
+
+  :deep(article blockquote p) {
+    margin: 0px;
+  }
+
+  :deep(article blockquote) {
+    background-color: #f5f5f5;
+    padding: var(--padding_2x) var(--padding_4x);
   }
 
   :deep(article ul), :deep(article ol) {
@@ -183,6 +209,10 @@ export default defineComponent({
   :deep(article li ul), :deep(article li ol) {
     gap: var(--padding_1x);
     margin-top: var(--padding_1x);
+  }
+
+  :deep(article ul + *:not(h2, h3)), :deep(article ol + *:not(h2, h3)) {
+    margin-top: var(--padding_2x);
   }
 
   :deep(hr) {

@@ -5,7 +5,11 @@
       <router-link :to="{name: 'home'}">Início</router-link>
       <router-link :to="{name: 'work'}">Trabalhos</router-link>
       <router-link :to="{name: 'portfolio'}">Portfólio</router-link>
-      <Button text="Contato" icon-name="WhatsApp"/>
+      <a href="https://api.whatsapp.com/send/?phone=5541935009236&text=Oi%2C%20gostaria%20de%20entrar%20em%20contato%20para%20apresentar%20meu%20projeto" target="_blank"><Button text="Contato" icon-name="WhatsApp"/></a>
+      <div class="mobileNav">
+        <Button icon-name="WhatsApp" text="none"/>
+        <Button icon-name="Menu" text="none"/>
+      </div>
     </nav>
   </header>
 </template>
@@ -50,11 +54,15 @@ export default defineComponent({
     text-decoration: none;
   }
 
-  nav {
+  nav, .mobileNav {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     gap: var(--padding_2x);
+  }
+
+  .mobileNav {
+    display: none;
   }
 
   nav > a {
@@ -72,11 +80,15 @@ export default defineComponent({
 
   @media screen and (max-width: 672px) {
     header {
-      grid-template-columns: 2fr 1fr;
+      grid-template-columns: 1fr 1fr;
     }
 
-    nav {
+    nav a {
       display: none;
+    }
+
+    .mobileNav {
+      display: flex;
     }
   }
 </style>

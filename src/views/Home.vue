@@ -25,7 +25,7 @@
     <Quote quote="No tempo em que trabalhamos juntos, sempre esteve disposto a ajudar a nossa equipe com ideias, sugestões e qualquer melhoria que pudesse ajudar a alavancar nosso negócio. A comunicação com o André sempre foi um ponto forte na parceria" authorName="Myckael Henrique" author-work="Comercial em Campos Dealer"/>
 
     <SiteSection title="Entre em contato" description="Com experiência no trabalho com KPIs, OKRs, SEO técnico, SEM e implementação de ferramentas de automação, meu objetivo é impulsionar o crescimento e a eficiência dos negócios." orientation="RTL" image-name="mourizal-zativa-bNBl5cHclMA-unsplash">
-      <Button text="Fale comigo" icon-name="WhatsApp" size="M"/>
+      <a href="https://api.whatsapp.com/send/?phone=5541935009236&text=Oi%2C%20gostaria%20de%20entrar%20em%20contato%20para%20apresentar%20meu%20projeto" target="_blank"><Button text="Fale comigo" icon-name="WhatsApp" size="M"/></a>
     </SiteSection>
   </ContentHolder>
 </template>

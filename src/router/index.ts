@@ -67,15 +67,15 @@ const routes = [
   }, props: (route) => ({
     articleText: route.params.articleText,
     showMediaShareBar: false
-  }) }
+  })}
 ]
 
 const router = createRouter({
   history: createWebHistory(),
   routes,
-  scrollBehavior(to, from) {
-    if(to.path === from.path) {
-      return {}
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition;
     } else {
       return { top: 0 }
     }
