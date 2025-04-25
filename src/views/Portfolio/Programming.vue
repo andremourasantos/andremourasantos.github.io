@@ -1,6 +1,6 @@
 <template>
   <PortfolioPage hero-title="Projetos de programação" hero-subtitle="Aprecie alguns dos meus trabalhos e aproveite para copiar algumas ideias para sua empresa." site-section-title="Programação" site-section-subtitle="Confira projetos de programação, incluindo sites, APIs e projetos pessoais. Todos os projetos apresentados contam com código disponível no GitHub. Aproveite para copiar algumas ideias ou ver outras formas de solucionar um problema. Caso tenha interesse em algum projeto, você pode entrar em contato." site-section-image="mika-baumeister-J5yoGZLdpSI-unsplash">
-    <GridCard v-for="bits in articlesBits" :title="bits.title" :description="bits.description" :image="bits.image"/>
+    <GridCard v-for="bits in articlesBits" :title="bits.title" :description="bits.description" :image="bits.image" :key-path="bits.key"/>
   </PortfolioPage>
 </template>
 

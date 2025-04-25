@@ -5,7 +5,7 @@ const getAllKeys = ():string[] => {
   return keys;
 }
 
-export const getFrontmatterFromText = (text:string):Frontmatter|null => {
+export const getFrontmatterFromText = (text:string, keyString?:string):Frontmatter|null => {
   const regex = /title: (.*?)\r?\ndescription: (.*?)\r?\nimage: (.*?)\r?\ndate: (.*?)\r?\ntags: (.*?)\r?\n---/;
   const match = text.match(regex);
 
@@ -23,7 +23,13 @@ export const getFrontmatterFromText = (text:string):Frontmatter|null => {
     tags = tagsString.split(',').map((tag: string) => tag.trim().replace(/'/g, '') as ArticleTags);
   };
 
-  return { title, description, image, date, tags };
+  let key:string = '';
+
+  if(keyString){
+    key = keyString.replace('.md', '').replace('../posts', '');
+  }
+
+  return { title, description, image, date, tags, key };
 }
 
 const getArticleFrontmatter = async (keys: string[]): Promise<Frontmatter[]> => {
@@ -32,7 +38,7 @@ const getArticleFrontmatter = async (keys: string[]): Promise<Frontmatter[]> => 
       const file = await import(key + '?raw');
       const content = file.default;
 
-      return getFrontmatterFromText(content);
+      return getFrontmatterFromText(content, key);
     })
   ).then((results) => results.filter((result) => result !== null) as Frontmatter[]);
 };

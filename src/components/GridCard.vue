@@ -4,7 +4,7 @@
     <div class="text-content">
       <h3>{{ title }}</h3>
       <p>{{ description }}</p>
-      <RouterLink :to="{ path: `${path}` }"><Button/></RouterLink>
+      <RouterLink :to="{ path: `${keyPath}` }"><Button/></RouterLink>
     </div>
   </div>
 </template>
@@ -34,27 +34,20 @@ export default defineComponent({
       default: '',
       required: true
     },
-    pathFolder: {
-      type: String as () => 'trabalhos' | 'portfolio',
+    keyPath: {
+      type: String,
+      default: '/',
       required: false
     }
   },
   setup (props) {
     const imagePath = computed(() => {
+      if(!props.image){return ''}
       return new URL(`../assets/photos/${props.image}.jpg`, import.meta.url).href;
     })
 
-    const path = computed(() => {
-      if (!props.pathFolder) {
-        return useKebabConverter(props.title)
-      } else {
-        return `/${props.pathFolder}/${useKebabConverter(props.title)}`
-      }
-    })
-
     return {
-      imagePath,
-      path
+      imagePath
     }
   }
 })
