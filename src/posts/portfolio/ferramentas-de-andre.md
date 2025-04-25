@@ -1,5 +1,10 @@
-# Ferramentas de André
-Estes aplicativos foram pensados para serem intuitivos e cumprir o seu papel de maneira não menos que excepcional.
+---
+title: Ferramentas de André
+description: Estes aplicativos foram pensados para serem intuitivos e cumprir o seu papel de maneira não menos que excepcional.
+image: test
+date: 2025-04-24
+tags: programming
+---
 
 ## Introdução
 Nesta página você poderá ver todos os projetos que desenvolvi para aprimorar minhas habilidades com o desenvolvimento web. Todas as ferramentas são de livre acesso e sem anúncios. A ideia de criar o site veio a partir da minha necessidade de acessar certas ferramentas online, como criadores de link de WhatsApp, mas acabar descontente com o desempenho, layout ou práticas abusivas que encontrei.

@@ -16,6 +16,7 @@
 import { defineComponent, ref, watch, onMounted } from 'vue';
 import { marked } from 'marked';
 import { useKebabConverter } from "@/composables/kebabConverter";
+import { getFrontmatterFromText } from '@/composables/getBlogContent';
 import HeroSection from '@/components/HeroSection.vue';
 import SocialMediaShareBar from '@/components/SocialMediaShareBar.vue';
 import { useRoute } from 'vue-router';
@@ -44,23 +45,23 @@ export default defineComponent({
     const toc = ref<HTMLElement | null>(null);
 
     const generateContent = async (text: string) => {
-      let tempHtmlContent = await marked(text);
+      const frontmatter = getFrontmatterFromText(text);
+
+      const content = text.replace(/---[\s\S]*?---/, '');
+
+      let tempHtmlContent = await marked(content);
       const parser = new DOMParser();
       const doc = parser.parseFromString(tempHtmlContent, 'text/html');
 
-      const title = doc.querySelector('h1');
-      const subtitle = doc.querySelector('p');
-      const coverImage = doc.querySelector('img');
+      const title = frontmatter?.title;
+      const subtitle = frontmatter?.description;
+      const coverImage = frontmatter?.image;
 
-      heroTitleRef.value = title?.innerHTML || '';
-      heroSubtitleRef.value = subtitle?.innerHTML || '';
-      if(coverImage && !coverImage.getAttribute('src')?.includes('http')){
-        heroImageRef.value = coverImage.getAttribute('src') as string;
+      heroTitleRef.value = title || '';
+      heroSubtitleRef.value = subtitle || '';
+      if(coverImage){
+        heroImageRef.value = coverImage as string;
       }
-      
-      title?.remove();
-      subtitle?.remove();
-      coverImage?.remove();
 
       const links = doc.querySelectorAll('a');
       links.forEach((link) => {

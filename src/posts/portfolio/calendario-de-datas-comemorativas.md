@@ -1,7 +1,10 @@
-# Calendário de Datas comemorativas
-Planeje, crie e engaje: como otimizar seu Marketing com um calendário de datas comemorativas.
-
-![](towfiqu-barbhuiya-bwOAixLG0uc-unsplash)
+---
+title: Calendário de Datas comemorativas
+description: Planeje, crie e engaje: como otimizar seu Marketing com um calendário de datas comemorativas.
+image: towfiqu-barbhuiya-bwOAixLG0uc-unsplash
+date: 2025-04-24
+tags: programming
+---
 
 Você já se sentiu sobrecarregado com a rotina de prazos apertados, criação de conteúdo constante e a pressão por resultados no Marketing digital? Se você é como muitos profissionais de Marketing, social media managers ou até mesmo um MEI, sabe que planejar o conteúdo para o ano todo pode parecer uma missão impossível. Posts de última hora, ideias repetitivas e a sensação de estar sempre apagando incêndio são desafios comuns.
 

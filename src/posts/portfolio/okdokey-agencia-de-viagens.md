@@ -1,5 +1,10 @@
-# OKDOKEY - Agência de viagens
-Uma demonstração de site responsivo para uma agência de viagens pequena.
+---
+title: OKDOKEY: Agência de viagens
+description: Uma demonstração de site responsivo para uma agência de viagens pequena.
+image: test
+date: 2025-04-24
+tags: design
+---
 
 ## Introdução
 Uma demonstração de site de agência de viagens fictícia, OKDOKEY, com personalidade forte, uma Hero Section chamativa e provas sociais diversas para apresentar a empresa.

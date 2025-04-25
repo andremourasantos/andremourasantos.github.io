@@ -1,5 +1,10 @@
-# Criador de UTMs
-Parametrize suas URLs e obtenha insights sobre suas campanhas.
+---
+title: Criador de UTMs
+description: Parametrize suas URLs e obtenha insights sobre suas campanhas.
+image: test
+date: 2025-04-24
+tags: programming
+---
 
 ## Introdução
 A planilha para criação de links com UTMs oferece uma solução acessível e eficaz para profissionais de marketing digital que buscam otimizar o rastreamento de campanhas tanto online quanto links offline (QR Codes ou outros).

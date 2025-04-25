@@ -1,5 +1,10 @@
-# Meu site profissional
-O meu novo site profissional, adotando o neumorphism e as melhores práticas para manutenção.
+---
+title: Meu site profissional
+description: O meu novo site profissional, adotando o neumorphism e as melhores práticas para manutenção.
+image: test
+date: 2025-04-24
+tags: design
+---
 
 ## Introdução
 A ideia de construir o meu site profissional veio lá em 2020, pouco tempo após ter começado a faculdade. O intuito inicial era promover a minha imagem profissional na internet para que, quando adentrasse o mercado de trabalho, pudesse me destacar.

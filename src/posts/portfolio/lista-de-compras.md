@@ -1,5 +1,10 @@
-# Lista de compras
-Projeto pessoal para aprender mais sobre o gerenciamento de bancos de dados e autenticação de usuários.
+---
+title: Lista de compras
+description: Projeto pessoal para aprender mais sobre o gerenciamento de bancos de dados e autenticação de usuários.
+image: test
+date: 2025-04-24
+tags: programming
+---
 
 ## Introdução
 Este projeto de lista de compras teve como principal objetivo desenvolver as minhas capacidades de criação e gerenciamento de bancos de dados e também para fortalecer meus conhecimentos de autenticação de usuários e gerenciamento de contas.

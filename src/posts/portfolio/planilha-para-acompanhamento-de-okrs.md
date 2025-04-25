@@ -1,5 +1,9 @@
-# Planilha para acompanhamento de OKRs
-Este site com funcionalidades de terceiros e coleta informações sobre a sua sessão. Confira mais aqui.
+---
+title: Planilha para acompanhamento de OKRs
+description: Uma planilha para auxiliar a sua equipe a acompanhar o andamento de OKRs e KPIs.
+image: test
+date: 2025-04-24
+tags: programming
+---
 
-## teste
-teste
+texto.

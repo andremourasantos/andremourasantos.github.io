@@ -1,5 +1,10 @@
-# Site do Dr. André
-Um site, no estilo aplicativo de telefone, para um oftalmologista conhecido de Porto Velho, RO.
+---
+title: Site do Dr. André
+description: Um site, no estilo aplicativo de telefone, para um oftalmologista conhecido de Porto Velho, RO.
+image: test
+date: 2025-04-24
+tags: design
+---
 
 ## Introdução
 O site procura facilitar o encontro das informações referentes ao Dr. André, como os exames oferecidos e consultórios, além de promover o contato direto com o seu WhatsApp para o agendamento de consultas particulares.

@@ -1,5 +1,10 @@
-# Projeto Kai
-Assistente de IA personalizado com interface mobile-first utilizando a API da DeepSeek e OpenAI.
+---
+title: Projeto Kai
+description: Assistente de IA personalizado com interface mobile-first utilizando a API da DeepSeek e OpenAI.
+image: test
+date: 2025-04-24
+tags: programming
+---
 
 ## Introdução
 O Projeto Kai é uma solução experimental que demonstra minha capacidade de desenvolvimento de assistentes de IA altamente personalizáveis. Utilizando a API deepseek-chat v3, criei um assistente inteligente com interface mobile-first que pode ser adaptado para diversas finalidades, desde atendimento virtual até gestão de tarefas personalizadas.
