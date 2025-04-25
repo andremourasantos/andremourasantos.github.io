@@ -1,8 +1,26 @@
-const getAllKeys = ():string[] => {
-  const files = import.meta.glob('../posts/portfolio/*.md', {eager: true});
-  const keys = Object.keys(files);
+const getAllKeys = (folder:'portfolio'|'posts'|'works'='portfolio'):string[] => {
+  let files:Record<string, unknown>;
+  let keys:string[] = [];
 
-  return keys;
+  switch (folder) {
+    case 'posts':
+      files = import.meta.glob('../posts/*.md', {eager: true});
+      keys = Object.keys(files);
+      return keys;
+      break;
+
+    case 'works':
+      files = import.meta.glob('../posts/works/*.md', {eager: true});
+      keys = Object.keys(files);
+      return keys;
+      break;
+  
+    default:
+      files = import.meta.glob('../posts/portfolio/*.md', {eager: true});
+      keys = Object.keys(files);
+      return keys;
+      break;
+  }
 }
 
 export const getFrontmatterFromText = (text:string, keyString?:string):Frontmatter|null => {
@@ -52,8 +70,8 @@ const filterArticlesByTag = (frontmatter:Frontmatter[], tag:ArticleTags) => {
   })
 }
 
-export const getArticlesByTag = async (tag:ArticleTags):Promise<Frontmatter[]> => {
-  const keys = getAllKeys();
+export const getArticlesByTag = async (folder:'portfolio'|'posts'|'works'='portfolio', tag:ArticleTags):Promise<Frontmatter[]> => {
+  const keys = getAllKeys(folder);
   const articles = await getArticleFrontmatter(keys);
   filterArticlesByTag(articles, tag);
   return articles.filter((bit) => bit.tags && bit.tags.includes(tag));

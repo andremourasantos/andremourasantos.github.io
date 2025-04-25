@@ -1,7 +1,10 @@
-# Política de Privacidade
-Este site com funcionalidades de terceiros e coleta informações sobre a sua sessão. Confira mais aqui.
-
-![](flyd-zAhAUSdRLJ8-unsplash)
+---
+title: Política de Privacidade
+description: Este site com funcionalidades de terceiros e coleta informações sobre a sua sessão. Confira mais aqui.
+image: flyd-zAhAUSdRLJ8-unsplash
+date: 2025-04-24
+tags: pp
+---
 
 ## Informações gerais
 _Última atualização em 28/09/2024._

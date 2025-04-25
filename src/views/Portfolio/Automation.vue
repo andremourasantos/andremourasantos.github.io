@@ -18,7 +18,7 @@ export default defineComponent({
   setup () {
     const articlesBits = ref<Frontmatter[]>([]);
     onMounted(async () => {
-      let articles = await getArticlesByTag('automation');
+      let articles = await getArticlesByTag('portfolio', 'automation');
       articles.sort((a, b) => {
         return a.date < b.date ? -1 : 1;
       });

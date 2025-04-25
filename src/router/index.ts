@@ -8,10 +8,20 @@ import PortfolioDesignView from '@/views/portfolio/Design.vue';
 import PortfolioAutomationView from '@/views/portfolio/Automation.vue';
 import ArticleTemplateView from '@/views/ArticleTemplate.vue';
 
-async function loadMarkdownPost(folder:string, slug:string) {
+async function loadMarkdownPost(folder:'portfolio'|'work'|'/'='portfolio', slug:string) {
   try {
-    const post = await import(`@/posts/${folder}/${slug}.md?raw`);
-    return post.default;
+    let post;
+    switch (folder) {
+      case '/':
+        post = await import(`@/posts/${slug}.md?raw`);
+        return post.default;
+        break;
+    
+      default:
+        post = await import(`@/posts/${folder}/${slug}.md?raw`);
+        return post.default;
+        break;
+    }
   } catch (error) {
     console.error('Erro ao carregar o post:', error);
     throw new Error('Post não encontrado');
@@ -57,7 +67,7 @@ const routes = [
   })},
   { path: '/politica-de-privacidade', name: 'pp', component: ArticleTemplateView, beforeEnter: async (to, from, next) => {
     try {
-      const articleText = await loadMarkdownPost('pp', 'pp');
+      const articleText = await loadMarkdownPost('/', 'pp');
       to.params.articleText = articleText;
       next();
     } catch (error) {
