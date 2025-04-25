@@ -2,7 +2,7 @@
 title: Site da VEGA I.T.
 description: Description.
 image: test
-date: 2025-04-24
+date: 2024-10-28
 tags: design
 ---
 

@@ -2,7 +2,7 @@
 title: Ferramentas de André
 description: Estes aplicativos foram pensados para serem intuitivos e cumprir o seu papel de maneira não menos que excepcional.
 image: test
-date: 2025-04-24
+date: 2023-01-15
 tags: programming
 ---
 

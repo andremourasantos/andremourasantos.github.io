@@ -2,7 +2,7 @@
 title: Currículo no Figma
 description: Description.
 image: test
-date: 2025-04-24
+date: 2024-01-19
 tags: design
 ---
 

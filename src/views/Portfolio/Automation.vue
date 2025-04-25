@@ -20,7 +20,7 @@ export default defineComponent({
     onMounted(async () => {
       let articles = await getArticlesByTag('portfolio', 'automation');
       articles.sort((a, b) => {
-        return a.date < b.date ? -1 : 1;
+        return a.date > b.date ? -1 : 1;
       });
 
       articlesBits.value = articles;

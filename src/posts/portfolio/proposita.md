@@ -2,7 +2,7 @@
 title: Proposita
 description: Description.
 image: test
-date: 2025-04-24
+date: 2024-10-20
 tags: design
 ---
 

@@ -2,7 +2,7 @@
 title: Lista de compras
 description: Projeto pessoal para aprender mais sobre o gerenciamento de bancos de dados e autenticação de usuários.
 image: test
-date: 2025-04-24
+date: 2024-01-07
 tags: programming
 ---
 

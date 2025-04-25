@@ -2,7 +2,7 @@
 title: Calendário de Datas comemorativas
 description: Planeje, crie e engaje: como otimizar seu Marketing com um calendário de datas comemorativas.
 image: towfiqu-barbhuiya-bwOAixLG0uc-unsplash
-date: 2025-04-24
+date: 2024-01-03
 tags: programming
 ---
 

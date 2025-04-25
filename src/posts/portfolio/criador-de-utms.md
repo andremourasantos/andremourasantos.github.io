@@ -2,7 +2,7 @@
 title: Criador de UTMs
 description: Parametrize suas URLs e obtenha insights sobre suas campanhas.
 image: test
-date: 2025-04-24
+date: 2024-01-13
 tags: programming
 ---
 

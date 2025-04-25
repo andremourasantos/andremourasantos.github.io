@@ -2,7 +2,7 @@
 title: Projeto Kai
 description: Assistente de IA personalizado com interface mobile-first utilizando a API da DeepSeek e OpenAI.
 image: test
-date: 2025-04-24
+date: 2025-02-20
 tags: programming
 ---
 
