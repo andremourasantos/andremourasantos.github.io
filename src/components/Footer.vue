@@ -3,7 +3,7 @@
     <section>
       <div>
         <router-link :to="{name: 'home'}" class="title">André S.</router-link>
-        <p>O profissional de Marketing Digital com foco em Growth Marketing, ajudando Pequenas e Médias Empresas a crescer de forma sustentável por meio de estratégias data-driven.</p>
+        <p>O profissional de Growth Marketing com método para dar rumo ao crescimento do seu negócio.</p>
       </div>
       <div class="links">
         <div>
@@ -25,7 +25,7 @@
           <p>Outros</p>
           <ul>
             <li><router-link :to="{name: 'pp'}">Política de Privacidade</router-link></li>
-            <li><a href="https://drive.google.com/uc?export=download&id=1EJv_E5uhfrejo767NsfOq_7fjo3uj3_v" download="Curriculo de André Moura Santos.pdf" target="_blank">Baixar currículo</a></li>
+            <li><a href="https://drive.google.com/uc?export=download&id=1EJv_E5uhfrejo767NsfOq_7fjo3uj3_v" download="Curriculo de André Moura Santos.pdf" target="_blank">Baixe meu currículo</a></li>
           </ul>
         </div>
       </div>

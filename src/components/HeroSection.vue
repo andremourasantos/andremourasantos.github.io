@@ -4,7 +4,8 @@
     <div>
       <h1>{{title}}</h1>
       <p>{{subtitle}}</p>
-      <Button size="L" icon-name="ChevronDown" @click="scrollToContent"/>
+      <Button v-if="!btnLinkPath" size="L" :text="btnText" :icon-name="btnIcon" @click="scrollToContent"/>
+      <RouterLink v-if="btnLinkPath" :to="btnLinkPath"><Button size="L" :text="btnText" :icon-name="btnIcon"/></RouterLink>
     </div>
   </section>
 </template>
@@ -28,6 +29,17 @@ export default defineComponent({
     },
     imageName: {
       type: String,
+    },
+    btnText: {
+      type: String,
+      default: 'Saiba mais'
+    },
+    btnIcon: {
+      type: String as () => IconName,
+      default: 'ChevronDown'
+    },
+    btnLinkPath: {
+      type: String
     }
   },
   setup (props) {

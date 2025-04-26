@@ -2,10 +2,10 @@
   <section :class="orientation">
     <div>
       <h2>{{ title }}</h2>
-      <p>{{ description }}</p>
+      <p v-html="description"></p>
       <div class="slot"><slot></slot></div>
     </div>
-    <img :src="imagePath" :alt="imageAltText">
+    <img :src="imagePath" :alt="imageAltText" :class="{ saturated: imageSaturate }"/>
   </section>
 </template>
 
@@ -34,6 +34,10 @@ export default defineComponent({
     imageAltText: {
       type: String,
       required: false
+    },
+    imageSaturate: {
+      type: Boolean,
+      default: true
     }
   },
   setup (props) {
@@ -74,6 +78,9 @@ export default defineComponent({
     aspect-ratio: 4/3;
     object-fit: cover;
     grid-area: col2;
+  }
+
+  img.saturated {
     filter: saturate(0.5);
   }
 

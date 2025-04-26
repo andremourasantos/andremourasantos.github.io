@@ -12,7 +12,6 @@
 <script lang="ts">
 import { defineComponent, computed } from 'vue';
 import Button from './Button.vue';
-import { useKebabConverter } from "@/composables/kebabConverter";
 
 export default defineComponent({
   components: {

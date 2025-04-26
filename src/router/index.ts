@@ -7,6 +7,7 @@ import PortfolioProgrammingView from '@/views/portfolio/Programming.vue';
 import PortfolioDesignView from '@/views/portfolio/Design.vue';
 import PortfolioAutomationView from '@/views/portfolio/Automation.vue';
 import ArticleTemplateView from '@/views/ArticleTemplate.vue';
+import NotFound from '@/views/NotFound.vue';
 
 async function loadMarkdownPost(folder:'portfolio'|'work'|'/'='portfolio', slug:string) {
   try {
@@ -77,7 +78,8 @@ const routes = [
   }, props: (route) => ({
     articleText: route.params.articleText,
     showMediaShareBar: false
-  })}
+  })},
+  { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
 ]
 
 const router = createRouter({

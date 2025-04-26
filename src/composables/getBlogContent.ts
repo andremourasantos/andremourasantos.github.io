@@ -53,7 +53,7 @@ export const getFrontmatterFromText = (text:string, keyString?:string):Frontmatt
 const getArticleFrontmatter = async (keys: string[]): Promise<Frontmatter[]> => {
   return Promise.all(
     keys.map(async (key) => {
-      const file = await import(key + '?raw');
+      const file = await import(key + '?raw' /* @vite-ignore */);
       const content = file.default;
 
       return getFrontmatterFromText(content, key);

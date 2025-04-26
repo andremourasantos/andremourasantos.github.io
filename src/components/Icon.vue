@@ -5,14 +5,15 @@
 
 <script lang="ts">
 import { defineComponent, ref, computed } from 'vue';
-import { ChevronDown, ExternalLink, Link, Menu } from "lucide-vue-next";
+import { ChevronDown, ExternalLink, Link, Menu, Undo2 } from "lucide-vue-next";
 
 export default defineComponent({
   components: {
     ChevronDown,
     ExternalLink,
     Link,
-    Menu
+    Menu,
+    Undo2
   },
   props: {
     size: {
