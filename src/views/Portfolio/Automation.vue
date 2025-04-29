@@ -1,5 +1,5 @@
 <template>
-  <PortfolioPage hero-title="Projetos de automação" hero-subtitle="Aprecie alguns dos meus trabalhos e aproveite para copiar algumas ideias para sua empresa." site-section-title="Automação" site-section-subtitle="Confira alguns fluxos com I.A. para automatizar a produção de textos, alterações em sistemas como Google Drive, CRMs, WhatsApp ou YouTube. Nesta categoria, apresento algumas ideias de fluxos no Make.com, mas elas podem ser adaptadas para outras plataformas como N8N facilmente." site-section-image="alvaro-reyes-qWwpHwip31M-unsplash">
+  <PortfolioPage hero-title="Projetos de automação" hero-subtitle="Veja como se livrar do trabalho repetitivo e tornar a sua operação mais dinâmica." site-section-title="Eliminando tarefas repetitivas" site-section-subtitle="Quanto maior fica a sua operação, mais e mais tarefas são necessárias, como preencher formulários, atualizar o CRM, modificar uma planilha ou criar documentos padrão.<br><br>Aqui você pode encontrar algumas soluções para liberar o seu tempo dessas atividades de baixo valor agregado para o cliente." site-section-image="alvaro-reyes-qWwpHwip31M-unsplash">
     <GridCard v-for="bits in articlesBits" :title="bits.title" :description="bits.description" :image="bits.image" :key-path="bits.key"/>
   </PortfolioPage>
 </template>

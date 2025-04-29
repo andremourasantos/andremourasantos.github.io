@@ -1,6 +1,6 @@
 ---
-title: Site do Dr. André
-description: Um site, no estilo aplicativo de telefone, para um oftalmologista conhecido de Porto Velho, RO.
+title: Site para oftalmologista
+description: Pensado para aumento da presença digital e exposição dos serviços prestados nas diferentes clínicas.
 image: test
 date: 2024-01-29
 tags: design

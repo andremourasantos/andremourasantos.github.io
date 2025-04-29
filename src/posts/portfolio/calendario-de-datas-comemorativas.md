@@ -1,6 +1,6 @@
 ---
 title: Calendário de Datas comemorativas
-description: Planeje, crie e engaje: como otimizar seu Marketing com um calendário de datas comemorativas.
+description: Tome controle das suas ações de Inbound Marketing planejando-as com antecedência.
 image: towfiqu-barbhuiya-bwOAixLG0uc-unsplash
 date: 2024-01-03
 tags: programming

@@ -1,19 +1,19 @@
 <template>
-  <HeroSection title="Portfólio" subtitle="Aprecie alguns dos meus trabalhos e aproveite para copiar algumas ideias para sua empresa."/>
+  <HeroSection title="Portfólio" subtitle="Ideias e projetos que você pode usar de inspiração ou adaptar para utilizar na sua operação."/>
 
   <ContentHolder>
 
     <Quote quote="Tive o privilégio de trabalhar ao lado do André e testemunhar sua incrível capacidade de lidar com múltiplas responsabilidades ao mesmo tempo" author-name="Caroline Cunha" author-work="CS em VEGA I.T"/>
 
-    <SiteSection title="Programação" description="Confira projetos de programação, incluindo sites, APIs e projetos pessoais. Todos os projetos apresentados contam com código disponível no GitHub.<br><br>Aproveite para copiar algumas ideias ou ver outras formas de solucionar um problema. Caso tenha interesse em algum projeto, você pode entrar em contato." image-name="mika-baumeister-J5yoGZLdpSI-unsplash">
+    <SiteSection title="Programação" description="Confira sites, apps e projetos pessoais, abrangendo linguagens como JavaScript e seus supersets, como TypeScript e Google Apps Script, além de frameworks, como Vue e Nuxt.<br><br>Sinta-se à vontade para conferir os códigos utilizados e tomar de inspiração para as suas próximas criações! Caso goste de algum projeto e queira utilizá-lo, saiba que estão sob licença MIT." image-name="mika-baumeister-J5yoGZLdpSI-unsplash">
       <RouterLink :to="{name: 'portfolio-programming'}"><Button size="M"/></RouterLink>
     </SiteSection>
 
-    <SiteSection orientation="RTL" title="Automação" description="Confira alguns fluxos com I.A. para automatizar a produção de textos, alterações em sistemas como Google Drive, CRMs, WhatsApp ou YouTube.<br><br>Nesta categoria, apresento algumas ideias de fluxos no Make.com, mas elas podem ser adaptadas para outras plataformas como N8N facilmente." image-name="alvaro-reyes-qWwpHwip31M-unsplash">
+    <SiteSection orientation="RTL" title="Automação" description="Precisa de ajuda para automatizar criação de documentos, atualização de planilhas ou tarefas e preenchimento de campos no CRM? Aqui é o lugar.<br><br>Todos os projetos apresentados contam com as <em>blueprints</em> dos respectivos softwares utilizados para rápida interação." image-name="alvaro-reyes-qWwpHwip31M-unsplash">
       <RouterLink :to="{name: 'portfolio-automation'}"><Button size="M"/></RouterLink>
     </SiteSection>
 
-    <SiteSection title="Design" description="Confira meus projetos de design, como protótipos de sites, aplicativos ou sistemas web, além de alguns esboços de artes (de verdade, não I.A.).<br><br>Caso tenha interesse em algum design ou aplicativo, você pode entrar em contato ou acessar a visualização no Figma." image-name="tirza-van-dijk-o1SKqmgSDbg-unsplash">
+    <SiteSection title="Design" description="Guardo um grande apreço por design gráfico e aqui disponibilizo alguns protótipos de sites, aplicativos e sistemas Web para sua inspiração.<br><br>Alguns projetos contam com link de visualização no Figma para que você possa fazer um <em>test-drive</em> nos designs." image-name="tirza-van-dijk-o1SKqmgSDbg-unsplash">
       <RouterLink :to="{name: 'portfolio-design'}"><Button size="M"/></RouterLink>
     </SiteSection>
   </ContentHolder>

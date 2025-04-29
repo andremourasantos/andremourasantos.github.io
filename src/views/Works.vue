@@ -18,17 +18,17 @@
 
     <SiteSection orientation="RTL" title="Automação de trabalho operacional repetitivo" description="Veja como automatizei diversos fluxos de trabalho, economizando 40 horas por mês com trabalho de baixo valor agregado, a partir de Automação de Processos Inteligentes (SPAs), Inteligência Artificial (IA) e plataformas No-code.">
       <Button size="M"/>
-    </SiteSection>    
+    </SiteSection>
+    
+    <Quote quote="Profissional excelente e responsável, sou muito contente em trabalhar com o André" authorName="Cássio Pisseti" author-work="CEO em Engepoli"/>
 
-    <Quote quote="O André é um profissional extremamente competente, organizado e criativo. Trabalhamos juntos há mais de um ano e sempre tivemos ótimos resultados com os clientes" authorName="Wedlin Lucas" author-work="Designer em Agência WX"/>
+    <!-- <Quote quote="O André é um profissional extremamente competente, organizado e criativo. Trabalhamos juntos há mais de um ano e sempre tivemos ótimos resultados com os clientes" authorName="Wedlin Lucas" author-work="Designer em Agência WX"/> -->
 
-    <SiteSection title="Implementação de I.A. nos processos de trabalho" description="Veja como implementamos o uso de LLMs nos processos de um escritório de advocacia, em que os detalhes ditam o sucesso ou fracasso de uma ação, além de incentivar o uso e aprimoramento contínuo.">
+    <!-- <SiteSection title="Implementação de I.A. nos processos de trabalho" description="Veja como implementamos o uso de LLMs nos processos de um escritório de advocacia, em que os detalhes ditam o sucesso ou fracasso de uma ação, além de incentivar o uso e aprimoramento contínuo.">
       <Button size="M"/>
     </SiteSection>
 
-    <Quote quote="Profissional excelente e responsável, sou muito contente em trabalhar com o André" authorName="Cássio Pisseti" author-work="CEO em Engepoli"/>
-
-    <!-- <SiteSection title="Disseminação de know-how entre times e equipes" description="Veja como organizei os diversos conhecimentos de trabalho de uma empresa com mais de 10 times em uma única Base de Conhecimento, para agilizar o treinamento e rampagem de novos funcionários.">
+    <SiteSection title="Disseminação de know-how entre times e equipes" description="Veja como organizei os diversos conhecimentos de trabalho de uma empresa com mais de 10 times em uma única Base de Conhecimento, para agilizar o treinamento e rampagem de novos funcionários.">
       <Button size="M"/>
     </SiteSection> -->
   </ContentHolder>

@@ -1,12 +1,37 @@
 ---
-title: Ferramentas de André
-description: Estes aplicativos foram pensados para serem intuitivos e cumprir o seu papel de maneira não menos que excepcional.
+title: Gerador de link para WhatsApp
+description: Aprimore a experiência do seu cliente usando a API oficial do WhatsApp, de graça e sem anúncios.
 image: test
-date: 2023-01-15
+date: 2022-09-04
 tags: programming
 ---
 
-## Introdução
+Introdução.
+
+## O problema com as ferramentas populares e anúncios nos links
+
+Texto.
+
+## O que esses sites populares realmente fazem é apenas um wrap da API oficial
+
+Texto.
+
+## A experiência do cleinte
+
+Texto.
+
+## Apresentação da minha ferramenta
+
+Texto.
+
+## Outras ferramentas que desenvolvi
+
+Texto.
+
+## Contribuições para o projeto
+
+Texto.
+
 Nesta página você poderá ver todos os projetos que desenvolvi para aprimorar minhas habilidades com o desenvolvimento web. Todas as ferramentas são de livre acesso e sem anúncios. A ideia de criar o site veio a partir da minha necessidade de acessar certas ferramentas online, como criadores de link de WhatsApp, mas acabar descontente com o desempenho, layout ou práticas abusivas que encontrei.
 
 ![](https://andremourasantos.com.br/assets/image-1-TSLi7_Dy.png)

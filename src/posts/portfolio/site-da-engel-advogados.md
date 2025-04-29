@@ -1,6 +1,6 @@
 ---
 title: Site da Engel Advogados
-description: Description.
+description: Releitura do site, focando na modernização da marca para refletir autoridade e responsabilidade.
 image: test
 date: 2025-04-24
 tags: design

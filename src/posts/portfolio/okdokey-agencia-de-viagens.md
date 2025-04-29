@@ -1,6 +1,6 @@
 ---
 title: OKDOKEY: Agência de viagens
-description: Uma demonstração de site responsivo para uma agência de viagens pequena.
+description: Demonstração de site responsivo para uma agência de viagens moderna.
 image: test
 date: 2024-02-25
 tags: design

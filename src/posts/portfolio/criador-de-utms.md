@@ -1,6 +1,6 @@
 ---
 title: Criador de UTMs
-description: Parametrize suas URLs e obtenha insights sobre suas campanhas.
+description: Facilite a parametrização das suas URLs e obtenha insights sobre suas campanhas pagas e orgânicas.
 image: test
 date: 2024-01-13
 tags: programming

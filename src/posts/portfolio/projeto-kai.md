@@ -1,6 +1,6 @@
 ---
 title: Projeto Kai
-description: Assistente de IA personalizado com interface mobile-first utilizando a API da DeepSeek e OpenAI.
+description: Assistente de IA especializado para atividades do Marketing (MVP), como projeto de aprendizagem.
 image: test
 date: 2025-02-20
 tags: programming

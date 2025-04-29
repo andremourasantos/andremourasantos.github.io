@@ -1,8 +1,8 @@
 ---
-title: Meu site profissional
-description: O meu novo site profissional, adotando o neumorphism e as melhores práticas para manutenção.
+title: Meu site profissional (2023)
+description: Uma renovação completa, adotando um visual futurista e focado em serviços de freelancer.
 image: test
-date: 2025-05-03
+date: 2023-10-16
 tags: design
 ---
 

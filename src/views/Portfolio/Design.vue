@@ -1,5 +1,5 @@
 <template>
-  <PortfolioPage hero-title="Projetos de design" hero-subtitle="Aprecie alguns dos meus trabalhos e aproveite para copiar algumas ideias para sua empresa." site-section-title="Design" site-section-subtitle="Confira meus projetos de design, como protótipos de sites, aplicativos ou sistemas web, além de alguns esboços de artes (de verdade, não I.A.). Caso tenha interesse em algum design ou aplicativo, você pode entrar em contato ou acessar a visualização no Figma." site-section-image="tirza-van-dijk-o1SKqmgSDbg-unsplash">
+  <PortfolioPage hero-title="Projetos de design" hero-subtitle="Aprecie aqui alguns dos meus trabalhos ou use como inspiração para o seu próximo projeto." site-section-title="Problemas reais" site-section-subtitle='Assim como <a href="/portfolio/programacao">meus projetos de programação</a>, cada projeto foi criado pensando em solucionar um problema do mundo real que eu (ou um cliente) já experienciou.<br><br>Alguns projetos contam com links para um <em>teste-drive</em> nos designs, sinta-se à vontade para explorar.' site-section-image="tirza-van-dijk-o1SKqmgSDbg-unsplash">
     <GridCard v-for="bits in articlesBits" :title="bits.title" :description="bits.description" :image="bits.image" :keyPath="bits.key"/>
   </PortfolioPage>
 </template>
