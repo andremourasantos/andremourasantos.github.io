@@ -26,6 +26,7 @@ import SiteSection from '@/components/SiteSection.vue';
 import Button from '@/components/Button.vue';
 import ContentHolder from '@/components/ContentHolder.vue';
 import Quote from '@/components/Quote.vue';
+import { useSeoMeta } from "@unhead/vue";
 
 export default defineComponent({
   components: {
@@ -36,7 +37,10 @@ export default defineComponent({
     Quote
   },
   setup () {
-    
+    useSeoMeta({
+      title: 'Portfolio',
+      description: 'Ideias e projetos que você pode usar de inspiração ou adaptar para utilizar na sua operação: Sinta-se à vontade para conferir os projetos e saiba que estão todos sob licença MIT.',
+    });
 
     return {}
   }

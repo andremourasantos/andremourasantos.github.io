@@ -19,7 +19,8 @@ import { useKebabConverter } from "@/composables/kebabConverter";
 import { getFrontmatterFromText } from '@/composables/getBlogContent';
 import HeroSection from '@/components/HeroSection.vue';
 import SocialMediaShareBar from '@/components/SocialMediaShareBar.vue';
-import { useRoute } from 'vue-router';
+import { useSeoMeta } from "@unhead/vue";
+import { useSchemaOrg, defineArticle, definePerson } from "@unhead/schema-org/vue";
 
 export default defineComponent({
   components: {
@@ -37,7 +38,35 @@ export default defineComponent({
     }
   },
   setup(props) {
-    const route = useRoute();
+    useSeoMeta({
+      title: getFrontmatterFromText(props.articleText)?.title,
+      description: getFrontmatterFromText(props.articleText)?.description,
+      articleAuthor: ['André S.'],
+      articlePublishedTime: new Date(getFrontmatterFromText(props.articleText)?.date as string).toISOString(),
+      ogImage: {
+        url: import.meta.env.BASE_URL + 'src/assets/cover-photos/main.png',
+        alt: getFrontmatterFromText(props.articleText)?.title,
+      },
+    });
+
+    useSchemaOrg(
+      defineArticle({
+        headline: getFrontmatterFromText(props.articleText)?.title,
+        image: import.meta.env.BASE_URL + 'src/assets/cover-photos/main.png',
+        author: definePerson({
+          name: 'André Moura Santos',
+          url: 'https://andremourasantos.com.br',
+          image: 'https://avatars.githubusercontent.com/u/92397834?v=4',
+          sameAs: ['https://www.linkedin.com/in/andremourasantos/', 'https://github.com/andremourasantos/'],
+        }),
+        datePublished: new Date(getFrontmatterFromText(props.articleText)?.date as string).toISOString(),
+        inLanguage: 'pt-BR',
+        description: getFrontmatterFromText(props.articleText)?.description,
+        keywords: getFrontmatterFromText(props.articleText)?.tags,
+        wordCount: props.articleText.trim().split(/\s+/).length,
+      })
+    )
+
     const heroTitleRef = ref<string>('');
     const heroSubtitleRef = ref<string>('');
     const heroImageRef = ref<string>('');

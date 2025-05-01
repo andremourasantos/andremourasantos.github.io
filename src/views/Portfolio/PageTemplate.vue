@@ -17,6 +17,7 @@ import ContentHolder from '@/components/ContentHolder.vue';
 import SiteSection from '@/components/SiteSection.vue';
 import Button from '@/components/Button.vue';
 import GridCard from '@/components/GridCard.vue';
+import { useSeoMeta } from "@unhead/vue";
 
 export default defineComponent({
   components: {
@@ -49,6 +50,15 @@ export default defineComponent({
     },
   },
   setup (props) {
+    useSeoMeta({
+      title: props.heroTitle,
+      description: props.heroSubtitle,
+      ogImage: {
+        url: import.meta.env.BASE_URL + 'src/assets/cover-photos/main.png',
+        alt: props.siteSectionImage,
+      },
+    });
+
     const srollToSection = (elId:string) => {
       const element = document.getElementById(elId)
       if (element) {

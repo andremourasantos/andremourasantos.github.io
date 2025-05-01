@@ -41,6 +41,8 @@ import SiteSection from '@/components/SiteSection.vue';
 import Button from '@/components/Button.vue';
 import ContentHolder from '@/components/ContentHolder.vue';
 import Quote from '@/components/Quote.vue';
+import { useSchemaOrg } from '@unhead/schema-org/vue'
+import { defineWebPage } from '@unhead/schema-org';
 
 export default defineComponent({
   components: {
@@ -51,7 +53,15 @@ export default defineComponent({
     Quote
   },
   setup () {
-    
+    useSchemaOrg(
+      defineWebPage({
+        name: 'Growth Marketing | André S.',
+        description: 'Prazer, me chamo André e trabalho com Growth Marketing, automações de processos e Desenvolvimento Web. Sou o profissional de Marketing Digital com foco em Growth Marketing e experiência de trabalho em empresas de referência no Brasil e pelo mundo afora.',
+        url: 'https://andremourasantos.com.br',
+        image: 'https://avatars.githubusercontent.com/u/92397834?v=4',
+        sameAs: ['https://www.linkedin.com/in/andremourasantos/', 'https://github.com/andremourasantos/']
+      })
+    )
 
     return {}
   }

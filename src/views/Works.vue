@@ -48,6 +48,9 @@ import Button from '@/components/Button.vue';
 import ContentHolder from '@/components/ContentHolder.vue';
 import GridCard from '@/components/GridCard.vue';
 import Quote from '@/components/Quote.vue';
+import { useSeoMeta } from "@unhead/vue";
+import { useSchemaOrg } from '@unhead/schema-org/vue'
+import { defineWebPage } from '@unhead/schema-org';
 
 export default defineComponent({
   components: {
@@ -59,7 +62,20 @@ export default defineComponent({
     Quote
   },
   setup () {
-    
+    useSeoMeta({
+      title: 'Trabalhos',
+      description: 'Confira os problemas que já encontrei e como os solucionei: especializado em estratégias data-driven e crescimento sustentável, meu trabalho contribui substancialmente para o amadurecimento digital da sua empresa.',
+    });
+
+    useSchemaOrg(
+      defineWebPage({
+        name: 'Trabalhos | André S.',
+        description: 'Confira os problemas que já encontrei e como os solucionei: especializado em estratégias data-driven e crescimento sustentável, meu trabalho contribui substancialmente para o amadurecimento digital da sua empresa.',
+        url: import.meta.url,
+        image: 'https://avatars.githubusercontent.com/u/92397834?v=4',
+        sameAs: ['https://www.linkedin.com/in/andremourasantos/', 'https://github.com/andremourasantos/']
+      })
+    )
 
     return {}
   }

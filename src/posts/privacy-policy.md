@@ -2,8 +2,8 @@
 title: Política de Privacidade
 description: Este site com funcionalidades de terceiros e coleta informações sobre a sua sessão. Confira mais aqui.
 image: flyd-zAhAUSdRLJ8-unsplash
-date: 2025-04-24
-tags: pp
+date: 2024-09-28
+tags: privacy-policy
 ---
 
 ## Informações gerais

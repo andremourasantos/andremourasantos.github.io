@@ -68,7 +68,7 @@ const routes = [
   })},
   { path: '/politica-de-privacidade', name: 'pp', component: ArticleTemplateView, beforeEnter: async (to, from, next) => {
     try {
-      const articleText = await loadMarkdownPost('/', 'pp');
+      const articleText = await loadMarkdownPost('/', 'privacy-policy');
       to.params.articleText = articleText;
       next();
     } catch (error) {
