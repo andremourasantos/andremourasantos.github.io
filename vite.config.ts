@@ -17,7 +17,9 @@ export default defineConfig({
   },
   base: process.env.NODE_ENV === 'production' ? '/' : '/',
   server: {
-    port: 5500
+    port: 5500,
+    host: true,
+    open: true,
   },
   assetsInclude: ['**/*.md']
 })

@@ -226,6 +226,10 @@ export default defineComponent({
     padding: var(--padding_2x) var(--padding_4x);
   }
 
+  :deep(article blockquote + p) {
+    margin-top: var(--padding_2x);
+  }
+
   :deep(article ul), :deep(article ol) {
     display: flex;
     flex-direction: column;

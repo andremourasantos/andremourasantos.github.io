@@ -27,6 +27,8 @@ import Button from '@/components/Button.vue';
 import ContentHolder from '@/components/ContentHolder.vue';
 import Quote from '@/components/Quote.vue';
 import { useSeoMeta } from "@unhead/vue";
+import { useSchemaOrg } from '@unhead/schema-org/vue'
+import { defineWebPage } from '@unhead/schema-org';
 
 export default defineComponent({
   components: {
@@ -41,6 +43,16 @@ export default defineComponent({
       title: 'Portfolio',
       description: 'Ideias e projetos que você pode usar de inspiração ou adaptar para utilizar na sua operação: Sinta-se à vontade para conferir os projetos e saiba que estão todos sob licença MIT.',
     });
+
+    useSchemaOrg(
+      defineWebPage({
+        name: 'Portfolio | André S.',
+        description: 'Ideias e projetos que você pode usar de inspiração ou adaptar para utilizar na sua operação: Sinta-se à vontade para conferir os projetos e saiba que estão todos sob licença MIT.',
+        url: import.meta.url,
+        image: 'https://avatars.githubusercontent.com/u/92397834?v=4',
+        sameAs: ['https://www.linkedin.com/in/andremourasantos/', 'https://github.com/andremourasantos/']
+      })
+    )
 
     return {}
   }

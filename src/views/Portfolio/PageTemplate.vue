@@ -18,6 +18,8 @@ import SiteSection from '@/components/SiteSection.vue';
 import Button from '@/components/Button.vue';
 import GridCard from '@/components/GridCard.vue';
 import { useSeoMeta } from "@unhead/vue";
+import { useSchemaOrg } from '@unhead/schema-org/vue'
+import { defineWebPage } from '@unhead/schema-org';
 
 export default defineComponent({
   components: {
@@ -58,6 +60,16 @@ export default defineComponent({
         alt: props.siteSectionImage,
       },
     });
+
+    useSchemaOrg(
+      defineWebPage({
+        name: props.heroTitle + ' | André S.',
+        description: props.heroSubtitle,
+        url: import.meta.url,
+        image: 'https://avatars.githubusercontent.com/u/92397834?v=4',
+        sameAs: ['https://www.linkedin.com/in/andremourasantos/', 'https://github.com/andremourasantos/']
+      })
+    )
 
     const srollToSection = (elId:string) => {
       const element = document.getElementById(elId)
