@@ -226,6 +226,12 @@ export default defineComponent({
     padding: var(--padding_2x) var(--padding_4x);
   }
 
+  :deep(a::after) {
+    content: ' ↗';
+    font-size: 16px;
+    color: inherit;
+  }
+
   :deep(article blockquote + p) {
     margin-top: var(--padding_2x);
   }

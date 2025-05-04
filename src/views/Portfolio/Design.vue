@@ -1,5 +1,5 @@
 <template>
-  <PortfolioPage hero-title="Projetos de design" hero-subtitle="Aprecie aqui alguns dos meus trabalhos ou use como inspiração para o seu próximo projeto." site-section-title="Problemas reais" site-section-subtitle='Assim como <a href="/portfolio/programacao">meus projetos de programação</a>, cada projeto foi criado pensando em solucionar um problema do mundo real que eu (ou um cliente) já experienciou.<br><br>Alguns projetos contam com links para um <em>teste-drive</em> nos designs, sinta-se à vontade para explorar.' site-section-image="tirza-van-dijk-o1SKqmgSDbg-unsplash">
+  <PortfolioPage hero-title="Projetos de design" hero-subtitle="Aprecie aqui alguns dos meus trabalhos ou use como inspiração para o seu próximo projeto." site-section-title="Resolvendo problemas reais" site-section-subtitle='Assim como <a href="/portfolio/programacao">meus projetos de programação</a>, cada projeto foi criado pensando em solucionar um problema do mundo real que eu (ou um cliente) já experienciou.<br><br>Alguns projetos contam com links para um <em>teste-drive</em> nos designs, sinta-se à vontade para explorar.' site-section-image="tirza-van-dijk-o1SKqmgSDbg-unsplash">
     <GridCard v-for="bits in articlesBits" :title="bits.title" :description="bits.description" :image="bits.image" :keyPath="bits.key"/>
   </PortfolioPage>
 </template>

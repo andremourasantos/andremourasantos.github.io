@@ -4,7 +4,7 @@
     <div class="text-content">
       <h3>{{ title }}</h3>
       <p>{{ description }}</p>
-      <RouterLink :to="{ path: `${keyPath}` }"><Button/></RouterLink>
+      <RouterLink :to="{ path: `${keyPath}` }"><Button :text="btnText"/></RouterLink>
     </div>
   </div>
 </template>
@@ -37,7 +37,12 @@ export default defineComponent({
       type: String,
       default: '/',
       required: false
-    }
+    },
+    btnText: {
+      type: String,
+      default: 'Ler mais',
+      required: false
+    },
   },
   setup (props) {
     const imagePath = computed(() => {

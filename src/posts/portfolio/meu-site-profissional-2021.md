@@ -6,7 +6,20 @@ date: 2021-11-10
 tags: design
 ---
 
+Até hoje me lembro de como esse projeto impactou a minha autoconfiança.
+
+Como um recém-formado, eu ainda estava inseguro sobre as minhas habilidades (aquela ansiedade de "começar a vida adulta", sabe?).
+
+Mas esse projeto logo se tornou um diferencial em processos seletivos, demonstrando proatividade e um conjunto de habilidades que iam além do convencional para um recém-formado na minha área (Marketing).
+
+Era a prova tangível do meu aprendizado e dedicação.
+
+E, assim, meu fascínio pelo desenvolvimento web continuou a crescer.
+
+Esse era um momento de empolgação, pois pela primeira vez eu estava construindo algo verdadeiramente meu: uma verdadeira expressão de como eu me vejo (e quero ser visto) no mercado de trabalho.
+
 ## Introdução
+
 A ideia de construir o meu site profissional veio lá em 2020, pouco tempo após ter começado a faculdade. O intuito inicial era promover a minha imagem profissional na internet para que, quando adentrasse o mercado de trabalho, pudesse me destacar.
 
 ![](https://andremourasantos.com.br/assets/image-1-wUR_c4Fp.png)
