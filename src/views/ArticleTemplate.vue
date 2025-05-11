@@ -191,6 +191,7 @@ export default defineComponent({
   article {
     display: flex;
     flex-direction: column;
+    min-width: 0;
   }
 
   :deep(article h2) {
@@ -226,10 +227,38 @@ export default defineComponent({
     padding: var(--padding_2x) var(--padding_4x);
   }
 
-  :deep(a::after) {
-    content: ' ↗';
+  :deep(article a::after) {
+    content: url('/src/assets/svgs/external-link.svg');
+    height: 14px;
+    width: 14px;
+    display: inline-block;
+    margin-left: var(--padding_02x);
+  }
+
+  :deep(pre) {
+    background-color: #f5f5f5;
+    padding: var(--padding_2x) var(--padding_4x);
+    overflow-x: auto;
+    border: 1px solid #000000;
+    margin-bottom: 16px;
+  }
+
+  :deep(pre > code) {
+    font-family: monospace;
     font-size: 16px;
-    color: inherit;
+    overflow-x: scroll;
+  }
+
+  :deep(code:not(pre)) {
+    background-color: #f5f5f5;
+    padding: var(--padding_02x) var(--padding_1x);
+    font-family: monospace;
+    font-size: 16px;
+  }
+
+  :deep(blockquote code:not(pre)){
+    border: 1px solid #000000;
+    background-color: transparent;
   }
 
   :deep(article blockquote + p) {
