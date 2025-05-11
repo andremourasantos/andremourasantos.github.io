@@ -1,16 +1,41 @@
 ---
-import './assets/main.css'
+import DefaultLayout from '../layout/Default.astro';
+import HeroSection from '../components/HeroSection.astro';
+import ContentHolder from '../components/ContentHolder.astro';
+import Quote from '../components/Quote.astro';
+import SiteSection from '../components/SiteSection.astro';
+import Button from '../components/Button.astro';
 ---
+<DefaultLayout title='Página Inicial' description='oi'>
+  <HeroSection heroTitle='Prazer, André aqui!' heroSubtitle='Trabalho com Growth Marketing, automações de processos e Desenvolvimento Web.'/>
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+  <ContentHolder id=content orientation=column>
+    <Quote quoteText='Recomendo o André sem reservas para qualquer oportunidade que exija competências em marketing digital, analytics e gestão de dados. Tenho plena confiança de que ele continuará a superar expectativas e agregar valor em qualquer projeto ou organização' quoteAuthor='Bruno Malvezzi' quouteAuthorWork='Gerente de projetos em Hotel Trianon Paulista'/>
+
+    <SiteSection title='Minha carreira' description='O profissional de Marketing Digital com foco em Growth Marketing e experiência de trabalho em empresas de referência no Brasil e pelo mundo afora.<br><br>Especializado em estratégias data-driven e crescimento sustentável, meu trabalho contribui substancialmente para o amadurecimento digital da sua empresa.' imageName='carreira-de-andre-moura-santos' imageAltText='Diagrama em formato de linha do tempo horizontal, representando a evolução da carreira profissional de André Moura Santos. Começando à esquerda com um círculo contendo o logo da Universidade Positivo, seguido por uma conexão que leva a um círculo com o logo da Agência fog, abaixo da qual se lê Agência fog - Marketing e publicidade. A linha continua para a direita, conectando-se a um círculo com o logo da Agência WX, com a descrição abaixo Agência WX - Marketing e publicidade. A linha prossegue até um círculo com o logo da VEGA I.T., acompanhado da descrição VEGA I.T. - SaaS. Finalmente, à direita, a linha termina em um círculo com o logo da Engel Advogados, com a descrição Engel Advogados - Advocacia.' imageSaturate={false}>
+      <a href="/trabalhos"><Button btnSize="M"/></a>
+    </SiteSection>
+
+    <Quote quoteText='Logo de cara, nas primeiras reuniões, ele já entendeu a nossa necessidade e começamos a desenvolver projetos para melhorar nosso marketing, neste momento percebi que ele entende muito do que faz e também vem sempre com ótimas ideias, comprometido com o trabalho' quoteAuthor='Humberto Santos' quouteAuthorWork='CEO em Campos Dealer'/>
+
+    <SiteSection title='Profissional com método' description='Trabalho com Growth Marketing desde a concepção de estratégias, designs e Landing Pages até veiculação de anúncios e análise de dados e interações dos usuários.<br><br>Possuo conhecimentos avançados em CRMs, Gestão de Tráfego Pago, automação de tarefas com IA, Desenvolvimento Web e ferramentas analíticas.' orientation='RTL' imageName='habilidades-e-conhecimentos-2' imageAltText='Diagrama de rede com quatro seções principais: Anúncios (Google Ads, Meta Ads, TikTok Ads), Desenvolvimento Web (Visual Studio Code, Figma, Firebase, Vue.js), Análise de dados (Google Analytics 4, Microsoft Clarity e Google Looker Studio), e Automação (Make, antigo Integromat, Google Sheets, Google Gemini e ChatGPT), interconectadas para ilustrar um fluxo de trabalho integrado de Growth Marketing e Desenvolvimento Web.' imageSaturate={false}>
+      <a href="/trabalhos"><Button btnSize="M"/></a>
+    </SiteSection>
+
+    <Quote quoteText='Pró-ativo, André busca, sugere e implementa soluções, com destaque para processos de organização para completar suas tarefas e entregar resultados aos clientes. Ele usa dados como guia para tomada de decisão, sem achismos, o que é excelente em sua atuação como Analista de Marketing em nossa equipe' quoteAuthor='Fillipe Neyl' quouteAuthorWork='CEO em Agência WX'/>
+
+    <SiteSection title='Confira meu portfólio' description='"Dividir para multiplicar". Essa frase resume bem a minha forma de pensar, agir e trabalhar: buscando diferentes pontos de vista, promovendo a colaboração e trabalho em equipe.<br><br>Aqui eu deixo disponível, sob licença MIT, algumas ideias e projetos prontos que você pode usar de inspiração ou adaptar para utilizar na sua operação.' imageName='minhas-ideias' imageSaturate={false} imageAltText='Diagrama colaborativo com uma lâmpada central conectada a ícones de projetos (automação, programação) e pessoas, representando a divisão e multiplicação de ideias.'>
+      <a href="/portfolio"><Button btnSize="M"/></a>
+    </SiteSection>
+
+    <Quote quoteText='No tempo em que trabalhamos juntos, sempre esteve disposto a ajudar a nossa equipe com ideias, sugestões e qualquer melhoria que pudesse ajudar a alavancar nosso negócio. A comunicação com o André sempre foi um ponto forte na parceria' quoteAuthor='Myckael Henrique' quouteAuthorWork='Comercial em Campos Dealer'/>
+
+    <SiteSection title='Entre em contato' description='Quer solidificar o seu Marketing Digital e fortalecer a presença digital da sua empresa e seus produtos? Entre em contato comigo pelo e vamos conversar!<br><br>Para contratações freelancer, por favor, forneça as informações gerais do seu projeto de antemão para agilizar a análise do caso.' orientation='RTL' imageName='informacoes-de-contato' imageSaturate={false} imageAltText='Diagrama radial com uma foto de André Moura Santos no centro, representando um ponto de contato central. Quatro logos de plataformas digitais circundam a foto e estão conectados a ela: WhatsApp , Google Meet (videoconferências), Gmail (e-mail) e LinkedIn (rede profissional). O diagrama ilustra as diversas maneiras de entrar em contato com André Moura Santos através dos diferentes canais digitais para comunicação.'>
+      <a href="https://api.whatsapp.com/send/?phone=5541935009236&text=Oi%2C%20gostaria%20de%20entrar%20em%20contato%20para%20apresentar%20meu%20projeto" target="_blank"><Button btnText="Fale comigo" btnIcon="WhatsApp" btnSize="M"/></a>
+    </SiteSection>
+  </ContentHolder>
+</DefaultLayout>
+
+<script>
+
+</script>

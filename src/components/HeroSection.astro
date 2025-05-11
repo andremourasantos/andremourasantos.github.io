@@ -1,0 +1,99 @@
+---
+import Button from './Button.astro';
+
+interface Props {
+  heroTitle:string;
+  heroSubtitle:string;
+  heroImage?:string;
+  heroBtnText?:string;
+  heroBtnIcon?:IconName;
+  heroBtnLinkPath?:string;
+}
+
+const imagePath = () => {
+  return Astro.props.heroImage ? new URL(`../assets/photos/${Astro.props.heroImage}.jpg`, import.meta.url).href : '';
+}
+
+const { heroTitle, heroSubtitle, heroImage, heroBtnText, heroBtnIcon, heroBtnLinkPath } = Astro.props;
+---
+
+<section class:list={heroImage ? 'imageBackg' : ''}>
+  {heroImage ? <img src={imagePath()}> : ''}
+  <div>
+    <h1>{heroTitle}</h1>
+    <p>{heroSubtitle}</p>
+    <Button btnSize="L" id="btnHero"/>
+  </div>
+</section>
+
+<script>
+  function scrollToContent() {
+    const content = document.getElementById('content')
+      if (content) {
+        content.scrollIntoView({ behavior: 'smooth' })
+      }
+  };
+
+  document.getElementById('btnHero')?.addEventListener("click", scrollToContent);
+</script>
+
+<style>
+  section {
+    height: calc(100vh - var(--padding_8x));
+    display: grid;
+    align-items: center;
+    background: transparent;
+  }
+
+  section.imageBckg * {
+    color: var(--colors_background);
+  }
+
+  section.imageBckg::before {
+    background: none;
+  }
+
+  section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(var(--colors_background) 10%, #D5FFF3, #ECEBFF, var(--colors_background) 90%);
+    z-index: -1;
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: blur(0px) saturate(0.3) brightness(0.5);
+  }
+
+  section > div {
+    position: relative;
+    margin: auto;
+    max-width: 640px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding_02x);
+    text-align: center;
+    align-items: center;
+  }
+
+  h1 {
+    font-size: var(--font-size_display);
+  }
+
+  p {
+    font-size: var(--font-size_medium);
+    margin-bottom: 24px;
+  }
+</style>

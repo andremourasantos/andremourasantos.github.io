@@ -1,0 +1,14 @@
+---
+interface Props {
+  iconSize?:14|16;
+  iconName:IconName;
+  iconColor?:string;
+}
+
+const { iconSize, iconName, iconColor } = Astro.props;
+
+import { ChevronDown, ExternalLink, Icon as IconType, Link, Menu, Undo2 } from "@lucide/astro";
+
+---
+
+<icon/>
