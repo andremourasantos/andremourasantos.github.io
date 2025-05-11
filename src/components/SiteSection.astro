@@ -5,7 +5,7 @@ interface Props {
   title:string,
   description:string,
   orientation?:'LTR'|'RTL',
-  imageName:string,
+  imageName?:string,
   imageAltText:string,
   imageSaturate?:boolean
 }
@@ -16,7 +16,7 @@ let imagePath;
 try {
   imagePath = await import(`../assets/photos/${imageName}.jpg`).then((res) => {return res.default.src});
 } catch (error) {
-  imagePath = 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Test-Logo.svg/783px-Test-Logo.svg.png';
+  imagePath = await import(`../assets/photos/test.jpg`).then((res) => {return res.default.src});
 }
 
 ---

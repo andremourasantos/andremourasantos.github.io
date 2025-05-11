@@ -22,7 +22,7 @@ import Icon from './Icon.astro';
   }
 
   {btnIcon ?
-    <Icon iconName={btnIcon}/> :
+    <Icon iconName={btnIcon} iconSize={btnSize === "L" ? 16 : 14}/> :
     ''
   }
 </button>

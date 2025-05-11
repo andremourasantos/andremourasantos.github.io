@@ -1,14 +1,16 @@
 ---
 interface Props {
   iconSize?:14|16;
-  iconName:IconName;
+  iconName?:IconName;
   iconColor?:string;
 }
 
-const { iconSize, iconName, iconColor } = Astro.props;
+const { iconSize = 14, iconName, iconColor } = Astro.props;
 
-import { ChevronDown, ExternalLink, Icon as IconType, Link, Menu, Undo2 } from "@lucide/astro";
+import { Icon as IconType, ChevronDown, ExternalLink, Link, Menu, Undo2 } from "@lucide/astro";
+
+let IconComponent: typeof IconType = ChevronDown;
 
 ---
 
-<icon/>
+<IconComponent color="white" size={iconSize}/>
