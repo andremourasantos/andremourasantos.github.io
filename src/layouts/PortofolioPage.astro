@@ -1,0 +1,29 @@
+---
+import Default from "./Default.astro";
+import HeroSection from "../components/HeroSection.astro";
+import ContentHolder from '../components/ContentHolder.astro';
+import SiteSection from '../components/SiteSection.astro';
+import Button from "../components/Button.astro";
+
+interface Props {
+  heroTitle:string,
+  heroSubtitle:string,
+  sectionTitle:string,
+  sectionDescription:string,
+  sectionImage:string
+}
+
+const { heroTitle, heroSubtitle, sectionTitle, sectionDescription, sectionImage } = Astro.props;
+---
+
+<Default title={heroTitle} description={heroSubtitle}>
+  <HeroSection heroTitle={heroTitle} heroSubtitle={heroSubtitle}/>
+  <ContentHolder orientation="column" id="content">
+    <SiteSection title={sectionTitle} description={sectionDescription} imageName={sectionImage} imageAltText="">
+      <Button btnSize="M" btnText="Ver projetos" btnIcon="ChevronDown"/>
+    </SiteSection>
+  </ContentHolder>
+  <ContentHolder orientation="grid" id="projects">
+    <slot/>
+  </ContentHolder>
+</Default>

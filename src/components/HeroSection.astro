@@ -14,7 +14,7 @@ const imagePath = () => {
   return Astro.props.heroImage ? new URL(`../assets/photos/${Astro.props.heroImage}.jpg`, import.meta.url).href : '';
 }
 
-const { heroTitle, heroSubtitle, heroImage, heroBtnText, heroBtnIcon, heroBtnLinkPath } = Astro.props;
+const { heroTitle, heroSubtitle, heroImage, heroBtnText, heroBtnIcon = "ChevronDown", heroBtnLinkPath } = Astro.props;
 ---
 
 <section class:list={heroImage ? 'imageBackg' : ''}>

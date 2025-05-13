@@ -1,0 +1,18 @@
+---
+import { getCollection } from "astro:content";
+import PortofolioPage from "../../layouts/PortofolioPage.astro";
+import ProjectCard from "../../components/ProjectCard.astro";
+
+const posts = await getCollection('portfolio', ({data}) => {return data.tags.includes('programação')});
+
+const sortedPosts = posts.sort((a, b) => {
+  return new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime();
+})
+---
+<PortofolioPage heroTitle="Projetos de programação" heroSubtitle="Caso goste de algum projeto e queira utilizá-lo, saiba que estão sob licença MIT." sectionTitle="Tirando ideias do papel" sectionDescription=`Tenho uma paixão pela liberdade (e dor de cabeça) de desenvolver sistemas por conta própria, desde de o <a href="/portfolio/design">design</a> até a aplicação conceitos e ideias livremente e, com sorte, posso acabar inspirando você a buscar criar suas próprias soluções também!<br><br>Cada projeto conta uma história. Os respectivos links para os repositórios no GitHub também estão disponíveis.` sectionImage="mika-baumeister-J5yoGZLdpSI-unsplash">
+  {
+    sortedPosts.map(post => {
+      return <ProjectCard title={post.data.title} description={post.data.description} imageName={post.data.imageName} link={post.id}/>
+    })
+  }
+</PortofolioPage>

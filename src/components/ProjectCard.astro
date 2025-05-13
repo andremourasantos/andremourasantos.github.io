@@ -1,0 +1,51 @@
+---
+import Button from "./Button.astro";
+
+interface Props {
+  title:string,
+  description:string,
+  imageName:string,
+  link:string
+}
+
+const { title, description, imageName, link } = Astro.props;
+
+let imagePath;
+try {
+  imagePath = await import(`../assets/photos/${imageName}.jpg`).then((res) => {return res.default.src});
+} catch (error) {
+  imagePath = await import(`../assets/photos/test.jpg`).then((res) => {return res.default.src});
+}
+---
+<div class="card">
+  <img src={imagePath} alt={imagePath}>
+  <div class="content">
+    <h3>{title}</h3>
+    <p>{description}</p>
+    <a href={link} rel="next"><Button btnSize="S" btnText="Ler mais"/></a>
+  </div>
+</div>
+
+<style>
+  .card {
+    min-width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--colors_accent);
+  }
+
+  img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+  }
+
+  .content {
+    padding: var(--padding_2x);
+  }
+
+  .content p {
+    margin-bottom: var(--padding_2x);
+  }
+</style>
