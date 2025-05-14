@@ -1,0 +1,73 @@
+---
+import Button from "./Button.astro";
+---
+<div id="socialMediaAsideBarContainer">
+  <Button id="btnShareWhatsApp" btnSize="M" btnText="none" btnIcon="WhatsApp"/>
+  <Button id="btnShareLinkedIn" btnSize="M" btnText="none" btnIcon="LinkedIn"/>
+  <Button id="btnShareFacebook" btnSize="M" btnText="none" btnIcon="Facebook"/>
+  <Button id="btnShareTwitter" btnSize="M" btnText="none" btnIcon="Twitter"/>
+  <Button id="btnShareDirectLink" btnSize="M" btnText="none" btnIcon="Link"/>
+</div>
+
+<script>
+  function shareArticle(medium:string) {
+    const path:string = 'https://' + location.host + location.pathname + '/';
+    const utms:string = `?utm_source=share&utm_medium=${medium.toLocaleLowerCase()}&utm_campaign=share_button`;
+    let shareUrl:string;
+
+    switch (medium) {
+      case 'WhatsApp':
+        shareUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(path + utms)}`;
+        break;
+
+      case 'Facebook':
+        shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(path + utms)}`;
+        break;
+
+      case 'LinkedIn':
+        shareUrl = `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(path + utms)}`;
+        break;
+
+      case 'Twitter':
+        shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(path + utms)}`;
+        break;
+
+      default:
+        navigator.clipboard.writeText(path+utms);
+        alert('Link copiado para área de transferência!');
+        return;
+      }
+
+    window.open(shareUrl, '_blank');
+  }
+
+  document.querySelectorAll('[id^="btnShare"]').forEach(btn => {
+    return btn.addEventListener('click', () => {shareArticle(btn.id.replace('btnShare',''))})
+  })
+</script>
+
+<style>
+  div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--padding_2x);
+  }
+</style>
+
+<style is:global>
+  #socialMediaAsideBarContainer > button:nth-of-type(1) {
+    background-color: #25D366;
+  }
+
+  #socialMediaAsideBarContainer > button:nth-of-type(2) {
+    background-color: #1877F2;
+  }
+
+  #socialMediaAsideBarContainer > button:nth-of-type(3) {
+    background-color: #0073B1;
+  }
+
+  #socialMediaAsideBarContainer > button:nth-of-type(4) {
+    background-color: #1D9BF0;
+  }
+</style>

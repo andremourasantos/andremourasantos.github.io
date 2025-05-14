@@ -1,26 +1,33 @@
 ---
 import Default from "./Default.astro";
 import HeroSection from "../components/HeroSection.astro";
+import SocialMediaAsideBar from "../components/SocialMediaAsideBar.astro";
 
 interface Props {
   title:string,
   description:string,
   heroTitle:string,
   heroSubtitle:string,
-  heroImage:string
+  heroImage:string,
+  contentHeaders:{depth:number,slug:string,text:string}[]
 }
 
-const { title, description, heroTitle, heroSubtitle, heroImage } = Astro.props;
+const { title, description, heroTitle, heroSubtitle, heroImage, contentHeaders } = Astro.props;
 ---
 <Default title={title} description={description}>
-  <HeroSection heroTitle={heroTitle} heroSubtitle={heroSubtitle} heroImage={heroImage}/>
+  <HeroSection heroTitle={heroTitle} heroSubtitle={heroSubtitle} heroImage={heroImage} heroBtnText='Ler mais'/>
   <div id="content" class="article-container">
     <aside>
       <div>
         <ol id="toc">
+          {contentHeaders.map(item => {
+            if(item.depth !== 2){return}
+
+            return <li><a href={`#${item.slug}`}>{item.text}</a></li>
+          })}
         </ol>
       </div>
-      <div>socialmediabar</div>
+      <SocialMediaAsideBar/>
     </aside>
     <article><slot/></article>
   </div>

@@ -17,6 +17,7 @@ export async function getStaticPaths(): Promise<{ params: { slug: string } }[]> 
 const { slug } = Astro.params;
 
 let post = await getEntry('portfolio', slug);
+let contentHeaders = await getCollection('portfolio', (data) => {return data.id === slug});
 
 if (!post) {
   return Astro.redirect('/404');
@@ -25,6 +26,6 @@ if (!post) {
 const { Content, headings, remarkPluginFrontmatter } = await render(post);
 ---
 
-<Article title={post.data.title} description={post.data.description} heroTitle={post.data.title} heroSubtitle={post.data.description} heroImage={post.data.imageName}>
+<Article title={post.data.title} description={post.data.description} heroTitle={post.data.title} heroSubtitle={post.data.description} heroImage={post.data.imageName} contentHeaders={headings}>
   <Content/>
 </Article>

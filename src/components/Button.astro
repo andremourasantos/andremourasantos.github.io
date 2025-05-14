@@ -1,29 +1,28 @@
 ---
+import Icon from "./Icon.astro";
+
 interface Props {
   id?:string;
   btnText?:string;
-  btnSize:'S' | 'M' | 'L';
+  btnSize:"S" | "M" | "L";
   btnDisabled?:boolean;
   btnIcon?:IconName;
 }
 
 const { id, btnText, btnSize, btnDisabled, btnIcon } = Astro.props;
-
-import Icon from './Icon.astro';
 ---
 <button id={id} class:list={[
-  btnIcon ? 'hasIcon' : '',
-  btnSize === 'L' ? 'size_L' : '',
-  btnSize === 'M' ? 'size_M' : ''
+  btnIcon ? "hasIcon" : "",
+  btnSize === "L" ? "size_L" : "",
+  btnSize === "M" ? "size_M" : ""
 ]}>
-  {btnText ?
-    <span>{btnText}</span>
-    : <span>Saiba mais</span>
+  {!btnText ? <span>Saiba mais</span>
+    : btnText === "none" ? "" : <span>{btnText}</span>
   }
 
   {btnIcon ?
     <Icon iconName={btnIcon} iconSize={btnSize === "L" ? 16 : 14}/> :
-    ''
+    ""
   }
 </button>
 
