@@ -49,7 +49,7 @@ Essas "etiquetas" são compostas por cinco parâmetros:
 
 Ao adicionar esses parâmetros na sua URL, você explicita algumas informações importantes sobre a interação do usuário com o link, por exemplo:
 
-```
+```md
 https://sualoja.com.br/tenis-addidas/?utm_source=ig&utm_medium=stories&utm_campaign=bf25&utm_content=33_off
 ```
 

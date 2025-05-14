@@ -8,5 +8,10 @@ export default defineConfig({
   integrations: [vue()],
   server: {
     open: true
+  },
+  markdown: {
+    shikiConfig: {
+      theme: 'github-dark'
+    }
   }
 });

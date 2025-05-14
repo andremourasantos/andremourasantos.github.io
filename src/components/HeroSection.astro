@@ -10,15 +10,18 @@ interface Props {
   heroBtnLinkPath?:string;
 }
 
-const imagePath = () => {
-  return Astro.props.heroImage ? new URL(`../assets/photos/${Astro.props.heroImage}.jpg`, import.meta.url).href : '';
-}
-
 const { heroTitle, heroSubtitle, heroImage, heroBtnText, heroBtnIcon = "ChevronDown", heroBtnLinkPath } = Astro.props;
+
+let imagePath;
+try {
+  imagePath = await import(`../assets/photos/${heroImage}.jpg`).then((res) => {return res.default.src});
+} catch (error) {
+  imagePath = await import(`../assets/photos/test.jpg`).then((res) => {return res.default.src});
+}
 ---
 
 <section class:list={heroImage ? 'imageBackg' : ''}>
-  {heroImage ? <img src={imagePath()}> : ''}
+  {heroImage ? <img src={imagePath}/> : ''}
   <div>
     <h1>{heroTitle}</h1>
     <p>{heroSubtitle}</p>
@@ -45,11 +48,11 @@ const { heroTitle, heroSubtitle, heroImage, heroBtnText, heroBtnIcon = "ChevronD
     background: transparent;
   }
 
-  section.imageBckg * {
+  section.imageBackg * {
     color: var(--colors_background);
   }
 
-  section.imageBckg::before {
+  section.imageBackg::before {
     background: none;
   }
 

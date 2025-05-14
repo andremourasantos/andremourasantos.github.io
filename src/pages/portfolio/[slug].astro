@@ -1,0 +1,30 @@
+---
+import { getCollection, getEntry, render } from "astro:content";
+import Article from "../../layouts/Article.astro";
+
+export async function getStaticPaths(): Promise<{ params: { slug: string } }[]> {
+  let posts = await getCollection('portfolio');
+
+  let urlSlugs = Array.from(posts, (item) => {return item.id});
+  
+  return urlSlugs.map((id) => {
+    return {
+      params: {slug: id}
+    }
+  });
+}
+
+const { slug } = Astro.params;
+
+let post = await getEntry('portfolio', slug);
+
+if (!post) {
+  return Astro.redirect('/404');
+}
+
+const { Content, headings, remarkPluginFrontmatter } = await render(post);
+---
+
+<Article title={post.data.title} description={post.data.description} heroTitle={post.data.title} heroSubtitle={post.data.description} heroImage={post.data.imageName}>
+  <Content/>
+</Article>

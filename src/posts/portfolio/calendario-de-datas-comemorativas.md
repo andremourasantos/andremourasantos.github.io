@@ -102,7 +102,12 @@ Acompanhe o passo a passo com as instruções por escrito abaixo:
 1. Crie um novo documento no [Google Sheets](https://sheets.new);
     - Caso queira utilizar em um documento já existente, pule para o próximo passo.
 2. No menu superior, clique em "Extensões", depois, clique em "Apps Script";
-3. Na nova aba, você deve encontrar o Apps Script aberto já com o seguinte código:  
+3. Na nova aba, você deve encontrar o Apps Script aberto já com o seguinte código:
+    ```js
+    function myFunction() {
+    
+    }
+    ```
 4. Nomeie o projeto com o nome que preferir;
     * Exemplo: "Calendário de Datas Comemorativas".
 5. Copie o código de *main.js* para o editor do projeto;
