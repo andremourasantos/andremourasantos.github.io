@@ -16,7 +16,9 @@ const sortedPosts = posts.sort((a, b) => {
       return <ProjectCard title={post.data.title} description={post.data.description} imageName={post.data.imageName} link={post.id} isDraft={post.data.isDraft}/>
     }) :
     sortedPosts.map(post => {
-      post.data.isDraft ? '' : <ProjectCard title={post.data.title} description={post.data.description} imageName={post.data.imageName} link={post.id} isDraft={post.data.isDraft}/>
+      if(!post.data.isDraft) {
+        return <ProjectCard title={post.data.title} description={post.data.description} imageName={post.data.imageName} link={post.id} isDraft={post.data.isDraft}/>
+      }
     })
   }
 </PortofolioPage>

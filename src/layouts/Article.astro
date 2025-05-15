@@ -40,34 +40,6 @@ const { title, description, heroTitle, heroSubtitle, heroImage, contentHeaders }
       link.setAttribute('rel', 'noopener');
     });
   });
-
-  // function scrollHeaderIntoView(e:Event) {
-  //   if(!e){return};
-  //   const anchorEl:HTMLElement = e.target as HTMLElement;
-  //   const headerId:string = anchorEl.getAttribute('href')!.substring(1);
-    
-  //   const headerEl:HTMLElement = document.getElementById(headerId) as HTMLElement;
-  //   const headerElPosition = headerEl.getBoundingClientRect();
-  //   const headerElRelativePosition = headerElPosition.top + window.scrollY;
-  //   const offset = 80;
-
-  //   window.scroll({
-  //     behavior: 'smooth',
-  //     top: headerElRelativePosition - offset
-  //   });
-
-  //   const newUrl = location.href.split('?')[1] ? window.location.pathname + window.location.search + '#' + headerId + location.href.split('?')[1] : window.location.pathname + window.location.search + '#' + headerId;
-  //   history.replaceState(null, '', newUrl);
-  // }
-
-  // (function() {
-  //   document.querySelectorAll('#toc a').forEach(link => {
-  //     link.addEventListener('click', (e) => {
-  //       e.preventDefault();
-  //       scrollHeaderIntoView(e)
-  //     })
-  //   })
-  // })()
 </script>
 
 <style is:global>

@@ -34,7 +34,7 @@ Desde o primeiro olhar, a intenção foi prender a atenção.
 
 A **Hero Section** foi desenhada para ser imediatamente chamativa, utilizando imagens vibrantes e mensagens claras que convidam o visitante a explorar.
 
-![Foto apresentando o mockup do site na visualização de Desktop e Mobile, lado a lado.](/src/assets/photos/okdokey-agencia-de-viagens_mockup-hero-section.png)
+![Foto apresentando o mockup do site na visualização de Desktop e Mobile, lado a lado.](../../assets/photos/okdokey-agencia-de-viagens_mockup-hero-section.png)
 
 Todo site foi pensado em uma agência que ofertava *rolês* de salto de paraquedas, já que me senti bem inspirado depois dessa experiência (*recomendo a todos!*).
 
@@ -54,7 +54,7 @@ Assim como as redes sociais são apenas uma parte do negócio, e não o negócio
 
 Para que uma agência de viagens prospere online, ela precisa de inteligência por trás da operação, e a demonstração da OKDOKEY inclui a possibilidade de integração com ferramentas poderosas de captura e análise de dados, como **Google Analytics** e **Pixel da Meta**.
 
-![Diagrama ilustrando o fluxo de informações de diversas plataformas online para um site de agência de viagens chamado 'OKDOKEY' e, posteriormente, para canais de interação com o usuário. À esquerda, um agrupamento de logos de plataformas de anúncios e redes sociais (Google Ads, WhatsApp, TikTok, Facebook, Instagram, Google, Bing, Meta) está conectado ao centro da imagem, onde um smartphone exibe a site da agência de viagens OKDOKEY. À direita do smartphone, este está conectado a um nó central com o avatar de uma pessoa (representando um cliente), que por sua vez se conecta a ícones de localização (mapa), chat (conversação) e telefone (chamada), refletindo as informações que são possíveis de coletar do usuário.](/src/assets/photos/okdokey-agencia-de-viagens_coleta-de-informacoes.png)
+![Diagrama ilustrando o fluxo de informações de diversas plataformas online para um site de agência de viagens chamado 'OKDOKEY' e, posteriormente, para canais de interação com o usuário. À esquerda, um agrupamento de logos de plataformas de anúncios e redes sociais (Google Ads, WhatsApp, TikTok, Facebook, Instagram, Google, Bing, Meta) está conectado ao centro da imagem, onde um smartphone exibe a site da agência de viagens OKDOKEY. À direita do smartphone, este está conectado a um nó central com o avatar de uma pessoa (representando um cliente), que por sua vez se conecta a ícones de localização (mapa), chat (conversação) e telefone (chamada), refletindo as informações que são possíveis de coletar do usuário.](../../assets/photos/okdokey-agencia-de-viagens_coleta-de-informacoes.png)
 
 Isso permite que a agência entenda o comportamento dos seus visitantes, descubra de onde eles vêm, quais páginas visitam e quais ações realizam.
 
@@ -74,7 +74,7 @@ Com um site próprio, a situação muda radicalmente: ele se torna seu *hub* dig
 
 Independentemente de onde um visitante venha (seja do Instagram, TikTok, Google, ou a partir de um link do WhatsApp), você pode rastrear essa visita: e isso abre um leque enorme de possibilidades de remarketing.
 
-![Diagrama com um smartphone central exibindo o site da agência de viagens 'OKDOKEY'. O smartphone atua como um hub, conectando-se a logos de diversas plataformas de mídia social e publicidade à esquerda (WhatsApp, TikTok, Instagram e Facebook) e à direita (Google Ads, Meta Ads, Pesquisa do Google e Pesquisa do Bing). As linhas conectando o smartphone a essas plataformas ilustram como um site próprio pode centralizar o tráfego proveniente de diferentes canais online, permitindo o rastreamento de visitantes independentemente de sua origem.](/src/assets/photos/okdokey-agencia-de-viagens_hub.png)
+![Diagrama com um smartphone central exibindo o site da agência de viagens 'OKDOKEY'. O smartphone atua como um hub, conectando-se a logos de diversas plataformas de mídia social e publicidade à esquerda (WhatsApp, TikTok, Instagram e Facebook) e à direita (Google Ads, Meta Ads, Pesquisa do Google e Pesquisa do Bing). As linhas conectando o smartphone a essas plataformas ilustram como um site próprio pode centralizar o tráfego proveniente de diferentes canais online, permitindo o rastreamento de visitantes independentemente de sua origem.](../../assets/photos/okdokey-agencia-de-viagens_hub.png)
 
 Você pode, por exemplo, mostrar um anúncio no TikTok para alguém que visitou a página de pacotes no seu site, mesmo que ele tenha chegado lá pelo Google e não te siga no Instagram.
 
@@ -86,7 +86,7 @@ E essa capacidade de "seguir" o potencial cliente por diversas plataformas signi
 
 A automação de marketing, exemplificada pela possibilidade de integração com ferramentas como RD Station, Bitrix24, Pipedrive ou similares, é outro componente vital.
 
-![Diagrama que ilustra um fluxo de captação e conversão de leads para uma agência de viagens online chamada OKDOKEY, exibida em um smartphone à esquerda. O smartphone mostra um formulário de inscrição para uma newsletter. Uma linha conecta o formulário a um ícone de pessoa (representando um lead), que por sua vez se conecta a um ícone de e-mail (comunicação). O e-mail está ligado a um ícone de um vendedor, que então se conecta a um nó central com um avião decolando (representando ofertas de viagens), uma mão com moedas (representando formas de pagamento) e um cupom de desconto (representando promoções). Desse nó central, partem conexões para um ícone de aperto de mãos (representando o fechamento de negócio).](/src/assets/photos/okdokey-agencia-de-viagens_crm.png)
+![Diagrama que ilustra um fluxo de captação e conversão de leads para uma agência de viagens online chamada OKDOKEY, exibida em um smartphone à esquerda. O smartphone mostra um formulário de inscrição para uma newsletter. Uma linha conecta o formulário a um ícone de pessoa (representando um lead), que por sua vez se conecta a um ícone de e-mail (comunicação). O e-mail está ligado a um ícone de um vendedor, que então se conecta a um nó central com um avião decolando (representando ofertas de viagens), uma mão com moedas (representando formas de pagamento) e um cupom de desconto (representando promoções). Desse nó central, partem conexões para um ícone de aperto de mãos (representando o fechamento de negócio).](../../assets/photos/okdokey-agencia-de-viagens_crm.png)
 
 Ao capturar leads através de formulários ou inscrições na newsletter, você pode nutrir esses contatos com informações relevantes, ofertas personalizadas e até registrar a jornada desse cliente no CRM.
 
@@ -102,7 +102,7 @@ E para manter todo o conteúdo, especialmente os pacotes de viagem (ou "rolês",
 
 Conectar o site a um banco de dados significa que as informações sobre destinos, preços, datas e detalhes dos pacotes podem ser atualizadas de forma rápida e centralizada, a partir de qualquer dispositivo com acesso.
 
-![Diagrama ilustrando o processo de atualização de conteúdo de um site de viagens conectado a um banco de dados. À esquerda, um smartphone rotulado como Antes exibe a tela de um pacote de Salto de paraquedas. Uma linha conecta este smartphone a um fluxo central que passa por um ícone de pessoa rotulado como Pessoa autorizada, seguido por um ícone de servidores rotulado como Atualização no servidor e, finalmente, um ícone de globo terrestre rotulado como Site. Do ícone do site, uma linha se conecta a um smartphone à direita, rotulado como Depois, que exibe, ao invés de um pacto de Salto de paraquedas, agora exibe um pacote de Bungee jumping. O diagrama visualiza como uma pessoa autorizada pode atualizar informações no banco de dados, refletindo-se na mudança de conteúdo exibido no site.](/src/assets/photos/okdokey-agencia-de-viagens_banco-de-dados.png)
+![Diagrama ilustrando o processo de atualização de conteúdo de um site de viagens conectado a um banco de dados. À esquerda, um smartphone rotulado como Antes exibe a tela de um pacote de Salto de paraquedas. Uma linha conecta este smartphone a um fluxo central que passa por um ícone de pessoa rotulado como Pessoa autorizada, seguido por um ícone de servidores rotulado como Atualização no servidor e, finalmente, um ícone de globo terrestre rotulado como Site. Do ícone do site, uma linha se conecta a um smartphone à direita, rotulado como Depois, que exibe, ao invés de um pacto de Salto de paraquedas, agora exibe um pacote de Bungee jumping. O diagrama visualiza como uma pessoa autorizada pode atualizar informações no banco de dados, refletindo-se na mudança de conteúdo exibido no site.](../../assets/photos/okdokey-agencia-de-viagens_banco-de-dados.png)
 
 Isso elimina a necessidade de mexer no código do site ou ter de fazer uma postagem nas redes a cada pequena mudança.
 

@@ -2,6 +2,7 @@
 import { defineConfig } from 'astro/config';
 
 import vue from '@astrojs/vue';
+import { experimental_AstroContainer } from 'astro/container';
 
 // https://astro.build/config
 export default defineConfig({
@@ -14,5 +15,17 @@ export default defineConfig({
     shikiConfig: {
       theme: 'github-dark'
     }
-  }
+  },
+  experimental: {
+    responsiveImages: true
+  },
+  image: {
+    experimentalLayout: 'fixed',
+    service: {
+      entrypoint: 'astro/assets/services/sharp',
+      config: {
+        removeHTMLSizeAttributes: true,
+      }
+    },
+  },
 });

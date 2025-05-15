@@ -7,7 +7,7 @@ interface Props {
   iconColor?:string;
 }
 
-const { iconSize = 14, iconName, iconColor } = Astro.props;
+const { iconSize = 14, iconName, iconColor = 'white' } = Astro.props;
 
 async function importCustomSVG(iconName:IconName) {
   return await import(`../assets/svgs/${iconName}.svg`).then((res) => {return res.default.src})

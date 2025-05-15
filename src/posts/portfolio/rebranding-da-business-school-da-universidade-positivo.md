@@ -34,7 +34,7 @@ A equipe formada era composta por [André Santos](/) (eu), [Mayara Cardoso](http
 
 Para nos guiar nesta nossa jornada, a professora, e pesquisadora de Marcas, [Fabiana Mariutti](https://www.linkedin.com/in/fabiana-gondim-mariutti-34305426) foi convidada para se juntar à equipe, dando assim início aos trabalhos, em meados de março do mesmo ano.
 
-![Diagrama hierárquico ilustrando a equipe de projeto. No topo, uma foto de Prof. Dr. Luiz Pinheiro, identificado como Coordenador da Business School. Abaixo e centralizada, conectada a ele, está uma foto de Prof. Dra. Fabiana Mariutti, descrita como pesquisadora de pós-doutorado. Dela partem conexões para cinco fotos de estudantes dispostas horizontalmente na parte inferior: André S. (aluno), Victor B. (aluno), William C. (aluno), Pedro V. (aluno) e Mayara C. (aluna). O diagrama visualiza a estrutura da equipe, com a professora Fabiana Mariutti liderando o grupo de estudantes.](/src/assets/photos/rebranding-da-business-school_participantes.png)
+![Diagrama hierárquico ilustrando a equipe de projeto. No topo, uma foto de Prof. Dr. Luiz Pinheiro, identificado como Coordenador da Business School. Abaixo e centralizada, conectada a ele, está uma foto de Prof. Dra. Fabiana Mariutti, descrita como pesquisadora de pós-doutorado. Dela partem conexões para cinco fotos de estudantes dispostas horizontalmente na parte inferior: André S. (aluno), Victor B. (aluno), William C. (aluno), Pedro V. (aluno) e Mayara C. (aluna). O diagrama visualiza a estrutura da equipe, com a professora Fabiana Mariutti liderando o grupo de estudantes.](../../assets/photos/rebranding-da-business-school_participantes.png)
 
 ## Brainstorming
 
@@ -49,7 +49,7 @@ Essas foram algumas das perguntas que fundamentaram todo nosso projeto de rebran
 
 Com isso, conseguimos desenvolver diversas variações, com a ideia inicial sendo unir a imagem de um quadro negro com a logo da nova Business School.
 
-![A imagem exibe um processo de design de identidade visual para a 'Business School' da Universidade Positivo. Começando com a ideia conceitual de unir o logo da universidade a um quadro-negro, a imagem centraliza-se na exploração de diferentes paletas de cores em tons de azul e verde-azulado, apresentando múltiplas variações do texto' Business School' aplicado a fundos coloridos, acompanhadas de seus respectivos códigos hexadecimais. A disposição dos painéis sugere uma progressão do conceito inicial para a experimentação e apresentação de opções de identidade visual para a instituição.](/src/assets//photos/rebranding-da-business-school_brainstorming.png)
+![A imagem exibe um processo de design de identidade visual para a 'Business School' da Universidade Positivo. Começando com a ideia conceitual de unir o logo da universidade a um quadro-negro, a imagem centraliza-se na exploração de diferentes paletas de cores em tons de azul e verde-azulado, apresentando múltiplas variações do texto' Business School' aplicado a fundos coloridos, acompanhadas de seus respectivos códigos hexadecimais. A disposição dos painéis sugere uma progressão do conceito inicial para a experimentação e apresentação de opções de identidade visual para a instituição.](../../assets/photos/rebranding-da-business-school_brainstorming.png)
 
 ## A ideia do filho prodígio
 
@@ -63,7 +63,7 @@ A partir dessa ideia principal, após mais algumas interações, trouxemos uma r
 
 E assim chegamos a alguns fortes candidatos:
 
-![André Santos, Victor Bessa e Willian Carlberg em uma troca de ideias sobre os logos candidatos a serem enviados para coordenação da Business School da Unviersidade Positivo, no projeto de Rebranding da Business School realizado em 2021.](/src/assets/photos/rebranding-da-business-school.jpg)
+![André Santos, Victor Bessa e Willian Carlberg em uma troca de ideias sobre os logos candidatos a serem enviados para coordenação da Business School da Unviersidade Positivo, no projeto de Rebranding da Business School realizado em 2021.](../../assets/photos/rebranding-da-business-school.jpg)
 
 ## Rodadas de pitch
 
@@ -73,7 +73,7 @@ Tivemos duas apresentações principais, momentos de aprendizado intenso em que 
 
 Das várias ideias apresentadas, duas foram selecionadas, uma mais conservadora, remetendo ao quadro negro (que há décadas representa o ambiente de sala de aula) e uma mais progressiva, minimalista e mais abastrata:
 
-![Fotos das variações finalistas do projeto de rebranding da Business School da Universidade Positivo, em 2021. À esquerda, a logo utilizada internamente, que faz lembrança à ideia inicial de um quadro negro. À direita, a logo mais progressiva e minimalista.](/src/assets/photos/rebranding-da-business-school_logo-final.png)
+![Fotos das variações finalistas do projeto de rebranding da Business School da Universidade Positivo, em 2021. À esquerda, a logo utilizada internamente, que faz lembrança à ideia inicial de um quadro negro. À direita, a logo mais progressiva e minimalista.](../../assets/photos/rebranding-da-business-school_logo-final.png)
 
 Tínhamos a chance real de ver nosso projeto implementado e trabalhamos nos refinamentos das duas opções escolhidas, nos preparando para a apresentação final.
 
@@ -83,7 +83,7 @@ No final de julho tivemos a audiência final, composta por todo o corpo docente 
 
 E na decisão final, tivemos uma surpresa: ambas as opções foram escolhidas. Uma (a circular) seria utilizada externamente, em comunicações externas como anúncios e redes sociais, enquanto a outra (a retangular) seria usada internamente.
 
-![Captura de tela de uma postagem do Instagram da conta bsupositivo de 2021. A legenda informa sobre um encontro presencial com representantes de turmas da Business School (BSUP) para planejamento para 2022, mencionando o Projeto Liderança ABRH, Projeto de Rebranding da Business School da Universidade Positivo e Demandas das Turmas. Na foto estão a Professora Dra. Fabiana Mariutti, Victor Bessa e Willian Carlberg.](/src/assets/photos/rebranding-da-business-school_apresentacao-final.jpg)
+![Captura de tela de uma postagem do Instagram da conta bsupositivo de 2021. A legenda informa sobre um encontro presencial com representantes de turmas da Business School (BSUP) para planejamento para 2022, mencionando o Projeto Liderança ABRH, Projeto de Rebranding da Business School da Universidade Positivo e Demandas das Turmas. Na foto estão a Professora Dra. Fabiana Mariutti, Victor Bessa e Willian Carlberg.](../../assets/photos/rebranding-da-business-school_apresentacao-final.jpg)
 
 Essa flexibilidade mostrou a força dos conceitos que conseguimos criar com cada uma das propostas. Foi um reconhecimento enorme do nosso trabalho.
 
@@ -95,7 +95,7 @@ O projeto não só transformou a marca da Business School, como também valorizo
 
 Fico honrado em ser reconhecido devido ao meu engajamento no projeto com a definição de atividades e atenção aos prazos, organização de todos os arquivos da empreitada e pela minha comunicação com os pares.
 
-![Certificado de Destaque emitido pela Universidade Positivo, com borda decorativa azul e branca. O texto central informa que o estudante André Moura Santos recebeu reconhecimento pela sua distinção no projeto extracurricular LOGOMARCA BSUP, ocorrido de maio a julho de 2021. O certificado está assinado por Prof. Dr. Luiz Pinheiro, Coordenador da Business School (BSUP) da Universidade Positivo, e datado de 30 de novembro de 2021.](/src/assets/photos/rebranding-da-business-school_certificado-de-destaque.jpg)
+![Certificado de Destaque emitido pela Universidade Positivo, com borda decorativa azul e branca. O texto central informa que o estudante André Moura Santos recebeu reconhecimento pela sua distinção no projeto extracurricular LOGOMARCA BSUP, ocorrido de maio a julho de 2021. O certificado está assinado por Prof. Dr. Luiz Pinheiro, Coordenador da Business School (BSUP) da Universidade Positivo, e datado de 30 de novembro de 2021.](../../assets/photos/rebranding-da-business-school_certificado-de-destaque.jpg)
 
 ## Um legado de inovação e colaboração
 

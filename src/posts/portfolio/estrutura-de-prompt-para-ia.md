@@ -399,9 +399,7 @@ Você está criando um briefing que se tornará um artigo no blog de André Mour
 </modelo>
 ```
 
-Agora, para utilizar o prompt, podemos salvar como um [Gem](https://gemini.google.com/gems/view) (do [Gemini](https://gemini.google.com/)), por exemplo, e conversar com ele sempre que precisarmos de um novo briefing:
-
-![salvando o prompt como um Gem]()
+Agora, para utilizar o prompt, podemos salvar como um [Gem](https://gemini.google.com/gems/view) (do [Gemini](https://gemini.google.com/)), por exemplo, e conversar com ele sempre que precisarmos de um novo briefing.
 
 E como instruímos a I.A. com **Variáveis**, na hora de iniciar uma conversa, podemos inserir algo como:
 

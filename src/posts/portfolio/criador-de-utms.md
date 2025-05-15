@@ -34,7 +34,7 @@ Pense neles como etiquetas que você cola em cada link que distribui por aí.
 
 E elas funcionam tanto para o universo digital (com tráfego pago e Inbound Marketing) quanto para elementos físicos, como QR Codes ou até tags NFC!
 
-![Diagrama com um smartphone central exibindo o site da agência de viagens 'OKDOKEY'. O smartphone atua como um hub, conectando-se a logos de diversas plataformas de mídia social e publicidade à esquerda (WhatsApp, TikTok, Instagram e Facebook) e à direita (Google Ads, Meta Ads, Pesquisa do Google e Pesquisa do Bing). As linhas conectando o smartphone a essas plataformas ilustram como um site próprio pode centralizar o tráfego proveniente de diferentes canais online, permitindo o rastreamento de visitantes independentemente de sua origem.](/src/assets/photos/okdokey-agencia-de-viagens_hub.png)
+![Diagrama com um smartphone central exibindo o site da agência de viagens 'OKDOKEY'. O smartphone atua como um hub, conectando-se a logos de diversas plataformas de mídia social e publicidade à esquerda (WhatsApp, TikTok, Instagram e Facebook) e à direita (Google Ads, Meta Ads, Pesquisa do Google e Pesquisa do Bing). As linhas conectando o smartphone a essas plataformas ilustram como um site próprio pode centralizar o tráfego proveniente de diferentes canais online, permitindo o rastreamento de visitantes independentemente de sua origem.](../../assets/photos/okdokey-agencia-de-viagens_hub.png)
 
 > Essa foto, por sinal, é de um estudo de caso que fiz sobre a [importância de sites para negócios digitais](/portfolio/okdokey-agencia-de-viagens), caso queira conferir.
 
@@ -113,7 +113,7 @@ Isso mesmo: com os UTMs, você pode dizer exatamente de onde vieram tanto os lea
 
 Assim, se os SDRs começarem a comentar sobre muitos leads desqualificados, você pode descobrir precisamente de onde esses leads chegaram e, por exemplo, desativar as camapnhas **sem que isso afete a chega de leads qualificados**.
 
-![](/src/assets/photos/criador-de-utms-midia_paga.png)
+![](../../assets/photos/criador-de-utms-midia_paga.png)
 
 Além disso, com UTMs, você pode identificar as fontes e campanhas de melhor performance e realocar seu orçamento para o que realmente funciona, otimizando os investimentos com anúncios.
 
@@ -139,7 +139,7 @@ Imagine só, no seu próximo relatório de marketing, você apresentando que, po
 
 Além disso, se você tiver um CRM bem configurado, poderá ainda dizer o quanto esses leads avançaram no funil e quantos fecharam negócio, além do valor desses negócios.
 
-![](/src/assets/photos/criador-de-utms-midia_organica.png)
+![](../../assets/photos/criador-de-utms-midia_organica.png)
 
 Percebe o **poder** que isso traz?
 

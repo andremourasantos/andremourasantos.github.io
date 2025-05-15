@@ -66,7 +66,7 @@ Implementei o conceito "mobile-first", recomendada pelo Google para melhor index
 
 Esse detalhe foi crucial para o site do Doutor, já que mais de 70% dos seus acessos viam de dispositivos móveis.
 
-![A imagem mostra três telas de um aplicativo ou site otimizado para dispositivos móveis (Layout mobile-first) para um oftalmologista. As telas exibem informações sobre exames, consultas e agendamento, com uma barra de navegação inferior para facilitar o uso com uma mão. À direita, os benefícios do design mobile-first são listados, como desempenho rápido e otimização para celulares, destacando a prioridade da experiência em dispositivos móveis.](/src/assets/photos/site-para-oftalmologista_mobile-first.png)
+![A imagem mostra três telas de um aplicativo ou site otimizado para dispositivos móveis (Layout mobile-first) para um oftalmologista. As telas exibem informações sobre exames, consultas e agendamento, com uma barra de navegação inferior para facilitar o uso com uma mão. À direita, os benefícios do design mobile-first são listados, como desempenho rápido e otimização para celulares, destacando a prioridade da experiência em dispositivos móveis.](../../assets/photos/site-para-oftalmologista_mobile-first.png)
 
 A performance também foi um fator-chave.
 
@@ -88,7 +88,7 @@ E, para tal, implementei diversas funcionalidades para garantir a acessibilidade
 * Baixa quantidade de animações;
 * Entre outras.
 
-![A imagem exibe elementos de design focados em acessibilidade visual. À esquerda, amostras de cores verde e preta com códigos hexadecimais e exemplos da letra Aa demonstram considerações de contraste. À direita, a tipografia Atkinson Hyperlegible é destacada, com informações sobre suporte a idiomas e estilos, além de exemplos visuais da fonte em diferentes apresentações de nitidez. A imagem como um todo sugere uma ênfase na legibilidade e no contraste de cores para garantir a acessibilidade do conteúdo textual.](/src/assets/photos/site-para-oftalmologista_identidade-visual.png)
+![A imagem exibe elementos de design focados em acessibilidade visual. À esquerda, amostras de cores verde e preta com códigos hexadecimais e exemplos da letra Aa demonstram considerações de contraste. À direita, a tipografia Atkinson Hyperlegible é destacada, com informações sobre suporte a idiomas e estilos, além de exemplos visuais da fonte em diferentes apresentações de nitidez. A imagem como um todo sugere uma ênfase na legibilidade e no contraste de cores para garantir a acessibilidade do conteúdo textual.](../../assets/photos/site-para-oftalmologista_identidade-visual.png)
 
 Cada detalhe foi pensado para remover barreiras e garantir que qualquer paciente pudesse encontrar as informações de que precisava, independentemente de suas condições.
 
@@ -102,7 +102,7 @@ Os pacientes passaram a encontrar as informações essenciais com muito mais fac
 
 A estrutura flexível, construída com o uso de um Banco de Dados, permitiu que as atualizações sobre serviços e locais de atendimento fossem feitas de forma rápida e descomplicada, até mesmo pelo telefone, adaptando-se às necessidades do Doutor.
 
-![Mockup apresentando o site do oftalmologista em duas versões, Desktop e Mobile.](/src/assets/photos/site-para-oftalmologista_mockup.jpg)
+![Mockup apresentando o site do oftalmologista em duas versões, Desktop e Mobile.](../../assets/photos/site-para-oftalmologista_mockup.jpg)
 
 Além disso, a implementação de um relatório automatizado forneceu ao Dr. André insights valiosos sobre o comportamento de seus pacientes no site, como:
 * Como os pacientes o encontraram na pesquisa do Google?
