@@ -60,6 +60,7 @@ p {
 
 html {
   margin-inline: var(--body-margin_x-large);
+  scroll-behavior: smooth;
 }
 
 body {
