@@ -1,10 +1,18 @@
 ---
+import { getCollection } from "astro:content";
 import DefaultLayout from '../layouts/Default.astro';
 import HeroSection from '../components/HeroSection.astro';
 import ContentHolder from '../components/ContentHolder.astro';
 import Quote from '../components/Quote.astro';
 import SiteSection from '../components/SiteSection.astro';
 import Button from '../components/Button.astro';
+import ProjectCard from "../components/ProjectCard.astro";
+
+const posts = await getCollection('works', ({data}) => {return data.tags.includes('trabalho')});
+
+const sortedPosts = posts.sort((a, b) => {
+  return new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime();
+})
 ---
 
 <DefaultLayout title='Trabalhos' description='Confira os problemas que já encontrei e como os solucionei: especializado em estratégias data-driven e crescimento sustentável, meu trabalho contribui substancialmente para o amadurecimento digital da sua empresa.'>
@@ -30,5 +38,16 @@ import Button from '../components/Button.astro';
     </SiteSection>
 
     <Quote quoteText='Profissional excelente e responsável, sou muito contente em trabalhar com o André' quoteAuthor='Cássio Pisseti' quouteAuthorWork='CEO em Engepoli'/>
+  </ContentHolder>
+  <ContentHolder id="trabalhos" orientation="grid">
+    {
+    import.meta.env.DEV ?
+    sortedPosts.map(post => {
+      return <ProjectCard title={post.data.title} description={post.data.description} imageName={post.data.imageName} link={post.id} isDraft={post.data.isDraft}/>
+    }) :
+    sortedPosts.map(post => {
+      post.data.isDraft ? '' : <ProjectCard title={post.data.title} description={post.data.description} imageName={post.data.imageName} link={post.id} isDraft={post.data.isDraft}/>
+    })
+  }
   </ContentHolder>
 </DefaultLayout>

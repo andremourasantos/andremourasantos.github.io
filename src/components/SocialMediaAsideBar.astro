@@ -4,7 +4,7 @@ import Button from "./Button.astro";
 <div id="socialMediaAsideBarContainer">
   <Button id="btnShareWhatsApp" btnSize="M" btnText="none" btnIcon="WhatsApp"/>
   <Button id="btnShareLinkedIn" btnSize="M" btnText="none" btnIcon="LinkedIn"/>
-  <Button id="btnShareFacebook" btnSize="M" btnText="none" btnIcon="Facebook"/>
+  <!-- <Button id="btnShareFacebook" btnSize="M" btnText="none" btnIcon="Facebook"/> -->
   <Button id="btnShareTwitter" btnSize="M" btnText="none" btnIcon="Twitter"/>
   <Button id="btnShareDirectLink" btnSize="M" btnText="none" btnIcon="Link"/>
 </div>
@@ -33,8 +33,13 @@ import Button from "./Button.astro";
         break;
 
       default:
-        navigator.clipboard.writeText(path+utms);
-        alert('Link copiado para área de transferência!');
+        try {
+          navigator.clipboard.writeText(path+utms);
+          alert('Link copiado para área de transferência!');
+        } catch (error) {
+          alert('Ocorreu um erro ao copiar o link para sua área de transferência.');
+        };
+        
         return;
       }
 
@@ -55,19 +60,19 @@ import Button from "./Button.astro";
 </style>
 
 <style is:global>
-  #socialMediaAsideBarContainer > button:nth-of-type(1) {
+  #btnShareWhatsApp {
     background-color: #25D366;
   }
 
-  #socialMediaAsideBarContainer > button:nth-of-type(2) {
+  #btnShareLinkedIn {
     background-color: #1877F2;
   }
 
-  #socialMediaAsideBarContainer > button:nth-of-type(3) {
+  #btnShareFacebook {
     background-color: #0073B1;
   }
 
-  #socialMediaAsideBarContainer > button:nth-of-type(4) {
+  #btnShareTwitter {
     background-color: #1D9BF0;
   }
 </style>

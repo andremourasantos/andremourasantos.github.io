@@ -7,7 +7,8 @@ import vue from '@astrojs/vue';
 export default defineConfig({
   integrations: [vue()],
   server: {
-    open: true
+    open: true,
+    host: true,
   },
   markdown: {
     shikiConfig: {

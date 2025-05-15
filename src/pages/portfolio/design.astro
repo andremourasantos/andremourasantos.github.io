@@ -11,8 +11,12 @@ const sortedPosts = posts.sort((a, b) => {
 ---
 <PortofolioPage heroTitle="Projetos de design" heroSubtitle="Aprecie aqui alguns dos meus trabalhos ou use como inspiração para o seu próximo projeto." sectionTitle="Resolvendo problemas reais" sectionDescription=`Assim como <a href="/portfolio/programacao">meus projetos de programação</a>, cada projeto foi criado pensando em solucionar um problema do mundo real que eu (ou um cliente) já experienciou.<br><br>Alguns projetos contam com links para um <em>teste-drive</em> nos designs, sinta-se à vontade para explorar.` sectionImage="tirza-van-dijk-o1SKqmgSDbg-unsplash">
   {
+    import.meta.env.DEV ?
     sortedPosts.map(post => {
-      return <ProjectCard title={post.data.title} description={post.data.description} imageName={post.data.imageName} link={post.id}/>
+      return <ProjectCard title={post.data.title} description={post.data.description} imageName={post.data.imageName} link={post.id} isDraft={post.data.isDraft}/>
+    }) :
+    sortedPosts.map(post => {
+      post.data.isDraft ? '' : <ProjectCard title={post.data.title} description={post.data.description} imageName={post.data.imageName} link={post.id} isDraft={post.data.isDraft}/>
     })
   }
 </PortofolioPage>

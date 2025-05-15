@@ -1,9 +1,11 @@
 ---
-title: Reduzindo o CAC em 60% em três meses
-description: Identificando gargalos na operação e aumentando a eficácia dos investimentos em anúncios.
-image: test
-date: 2025-04-24
-tags: work
+isDraft: false
+title: "Reduzindo o CAC em 60% em três meses"
+description: "Identificando gargalos na operação e aumentando a eficácia dos investimentos em anúncios."
+imageName: "test"
+pubDate: 2025-04-24
+updatedDate: 2024-09-28
+tags: ["trabalho", "roas"]
 ---
 
 Texto.
