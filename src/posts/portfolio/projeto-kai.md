@@ -1,5 +1,5 @@
 ---
-isDraft: false
+isDraft: true
 title: "Projeto Kai"
 description: "Assistente de IA especializado para atividades do Marketing (MVP), como projeto de aprendizagem."
 imageName: "test"

@@ -1,5 +1,5 @@
 ---
-isDraft: false
+isDraft: true
 title: "Meu site profissional (2025)"
 description: "Uma reconstrução focada na apresentação das minhas qualificações e projetos realizados ao longo do tempo."
 imageName: "test"

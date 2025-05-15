@@ -1,5 +1,5 @@
 ---
-isDraft: false
+isDraft: true
 title: "Fluxo para planejamento de LIVES/Webinares"
 description: "Passo a passo para planejar e conduzir LIVES e como usar a I.A. para auxiliar."
 imageName: "test"

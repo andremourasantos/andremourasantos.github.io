@@ -1,5 +1,5 @@
 ---
-isDraft: false
+isDraft: true
 title: "Site da VEGA I.T."
 description: "Releitura do site, focando na construção de autoridade e exposição da relação entre diversos produtos SaaS."
 imageName: "test"

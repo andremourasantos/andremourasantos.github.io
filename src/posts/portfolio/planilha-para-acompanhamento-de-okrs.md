@@ -1,5 +1,5 @@
 ---
-isDraft: false
+isDraft: true
 title: "Planilha para acompanhamento de OKRs"
 description: "Auxilie a sua equipe na implementação e acompanhamento de KPIs e OKRs."
 imageName: "test"

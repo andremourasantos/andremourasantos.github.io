@@ -1,5 +1,5 @@
 ---
-isDraft: false
+isDraft: true
 title: "Criador de propostas de contratos"
 description: "Aplicativo Web para vendedores rapidamente criarem propostas visualmente atraentes em instantes."
 imageName: "test"

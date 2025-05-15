@@ -1,5 +1,5 @@
 ---
-isDraft: false
+isDraft: true
 title: "Estrutura de PROMPT para IA"
 description: "Aprenda a criar prompts para maximizar a eficiência da IA em fluxos de trabalho e tarefas repetitivas."
 imageName: "test"

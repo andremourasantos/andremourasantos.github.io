@@ -1,5 +1,5 @@
 ---
-isDraft: false
+isDraft: true
 title: "Aplicativo de delivery"
 description: "Atacando o dilema da dependência de plataformas de terceiros e a fidelização de clientes."
 imageName: "rowan-freeman-clYlmCaQbzY-unsplash"

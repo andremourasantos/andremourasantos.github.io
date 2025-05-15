@@ -1,5 +1,5 @@
 ---
-isDraft: false
+isDraft: true
 title: "Automação de trabalho operacional repetitivo"
 description: "Como economizar mais de 40 horas por mês com trabalho de baixo valor agregado."
 imageName: "test"

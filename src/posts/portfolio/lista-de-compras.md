@@ -1,5 +1,5 @@
 ---
-isDraft: false
+isDraft: true
 title: "Lista de compras"
 description: "MVP para aprendizagem sobre gerenciamento de bancos de dados e autenticação de usuários."
 imageName: "test"

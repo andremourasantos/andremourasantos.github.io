@@ -1,5 +1,5 @@
 ---
-isDraft: false
+isDraft: true
 title: "Relatórios de Ads no Google Looker Studio"
 description: "Crie relatórios dinâmicos e atualizados automaticamente para mostrar seu trabalho com anúncios."
 imageName: "test"
