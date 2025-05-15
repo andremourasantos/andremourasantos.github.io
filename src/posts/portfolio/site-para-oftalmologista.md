@@ -1,9 +1,11 @@
 ---
-title: Site para oftalmologista
-description: Pensado para aumento da presença digital e exposição dos serviços prestados nas diferentes clínicas.
-image: eyes-on-st-albans-05vKkmynZ2A-unsplash
-date: 2022-02-08
-tags: design
+isDraft: false
+title: "Site para oftalmologista"
+description: "Pensado para aumento da presença digital e exposição dos serviços prestados nas diferentes clínicas."
+imageName: "eyes-on-st-albans-05vKkmynZ2A-unsplash"
+pubDate: 2022-02-08
+updatedDate: 2025-05-01
+tags: ["design"]
 ---
 
 Todo projeto de web design começa com um desafio.

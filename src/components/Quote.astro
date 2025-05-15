@@ -1,0 +1,49 @@
+---
+interface Props {
+  quoteText:string,
+  quoteAuthor:string,
+  quouteAuthorWork:string
+}
+
+const { quoteText, quoteAuthor, quouteAuthorWork } = Astro.props;
+---
+<div>
+  <q>{quoteText}</q>
+  <p><strong>{quoteAuthor}</strong><span>, {quouteAuthorWork}.</span></p>
+</div>
+
+<style>
+  div {
+    width: 80%;
+    padding: var(--padding_10x) var(--padding_2x);
+    text-align: center;
+    margin-inline: auto;
+  }
+
+  q {
+    font-style: italic;
+    font-family: var(--font_title);
+    font-weight: 200;
+    font-size: var(--font-size_large);
+    color: var(--colors_title);
+  }
+
+  p {
+    margin-top: var(--padding_2x);
+    font-size: var(--font-size_small);
+  }
+
+  p * {
+    font-family: var(--font_title);
+  }
+
+  p:last-of-type > span {
+    font-weight: 300;
+  }
+
+  @media screen and (max-width: 672px) {
+    div {
+      width: 100%;
+    }
+  }
+</style>

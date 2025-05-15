@@ -1,9 +1,11 @@
 ---
-title: Meu site profissional (2023)
-description: Uma reconstrução completa de como eu me apresento para o mercado de trabalho.
-image: cytonn-photography-n95VMLxqM2I-unsplash
-date: 2023-10-16
-tags: design
+isDraft: false
+title: "Meu site profissional (2023)"
+description: "Uma reconstrução completa de como eu me apresento para o mercado de trabalho."
+imageName: "cytonn-photography-n95VMLxqM2I-unsplash"
+pubDate: 2023-10-16
+updatedDate: 2025-05-01
+tags: ["design"]
 ---
 
 Todo profissional busca formas de se destacar no mercado e apresentar suas habilidades de maneira eficaz.

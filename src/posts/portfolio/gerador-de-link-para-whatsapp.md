@@ -1,9 +1,11 @@
 ---
-title: Gerador de link para WhatsApp
-description: Aprimore a experiência do seu cliente usando a API oficial do WhatsApp, de graça e sem anúncios.
-image: lonely-blue-z3jCMSm4Rrc-unsplash
-date: 2022-09-04
-tags: programming
+isDraft: false
+title: "Gerador de link para WhatsApp"
+description: "Aprimore a experiência do seu cliente usando a API oficial do WhatsApp, de graça e sem anúncios."
+imageName: "lonely-blue-z3jCMSm4Rrc-unsplash"
+pubDate: 2022-09-04
+updatedDate: 2025-05-01
+tags: ["programação"]
 ---
 
 Não é novidade que o WhatsApp se tornou o principal canal de comunicação no Brasil.

@@ -1,0 +1,100 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+  title:string,
+  description:string,
+  orientation?:'LTR'|'RTL',
+  imageName?:string,
+  imageAltText:string,
+  imageSaturate?:boolean
+}
+
+const { title, description, orientation = 'LTR', imageName = 'test', imageAltText, imageSaturate = true } = Astro.props;
+
+let imagePath;
+try {
+  imagePath = await import(`../assets/photos/${imageName}.jpg`).then((res) => {return res.default.src});
+} catch (error) {
+  imagePath = await import(`../assets/photos/test.jpg`).then((res) => {return res.default.src});
+}
+
+---
+<section class:list={orientation}>
+  <div>
+    <h2>{title}</h2>
+    <p set:html={description}></p>
+    <div class="slot"><slot/></div>
+  </div>
+  <img src={imagePath} alt={imageAltText} class:list={imageSaturate ? 'saturated' : ''}>
+</section>
+
+<style>
+  section {
+    display: grid;
+    grid-template-columns: 540px 1fr;
+    grid-template-areas: "col1 col2";
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--padding_10x);
+  }
+
+  div {
+    width: 540px;
+    grid-area: col1;
+  }
+
+  h2 {
+    margin-bottom: var(--padding_04x);
+    font-size: var(--font-size_large);
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    grid-area: col2;
+  }
+
+  img.saturated {
+    filter: saturate(0.5);
+  }
+
+  @media screen and (min-width: 1057px) {
+    .RTL {
+      grid-template-columns: 1fr 540px;
+    }
+
+    .RTL div {
+      grid-area: col2;
+    }
+
+    .RTL img {
+      grid-area: col1;
+    }
+  }
+
+  .slot {
+    margin-top: var(--padding_3x);
+  }
+
+  @media screen and (max-width: 1056px) {
+    section {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 1fr;
+      grid-template-areas:
+        "col2"
+        "col1";
+      gap: var(--padding_2x);
+    }
+
+    div {
+      width: 100%;
+    }
+
+    h2 {
+      margin-bottom: var(--padding_02x);
+    }
+  }
+</style>

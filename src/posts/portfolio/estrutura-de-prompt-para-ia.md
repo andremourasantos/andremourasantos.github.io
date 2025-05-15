@@ -1,9 +1,11 @@
 ---
-title: Estrutura de PROMPT para IA
-description: Aprenda a criar prompts para maximizar a eficiência da IA em fluxos de trabalho e tarefas repetitivas.
-image: test
-date: 2025-04-24
-tags: automation
+isDraft: false
+title: "Estrutura de PROMPT para IA"
+description: "Aprenda a criar prompts para maximizar a eficiência da IA em fluxos de trabalho e tarefas repetitivas."
+imageName: "test"
+pubDate: 2025-04-24
+updatedDate: 2025-05-01
+tags: ["automação"]
 ---
 
 Usar a Inteligência Artificial (IA) no trabalho não é mais algo "novo" ou "experimental", mas sim uma realidade em quase todo ambiente de trabalho moderno.
@@ -42,7 +44,7 @@ Agora que já sabemos sobre o que vamos refletir, é hora de começar.
 
 Vamos pensar em uma interação básica que você pode ter com a IA, como, por exemplo, pedir para que ela *escreva um e-mail*:
 
-```
+```md
 Escreva um email para o Pablo sobre a nossa última conversa: [texto da conversa]
 ```
 
@@ -84,7 +86,7 @@ Nesse caso, vamos incluir um delimitador de *pontos-chave da conversa*: assim a 
 
 Algo como:
 
-```
+```md
 Escreva um email para o Pablo sobre a nossa conversa. Inclua os seguintes pontos que discutimos:
 <pontos-discutidos>
 [Lista de pontos-chave da conversa]
@@ -132,7 +134,7 @@ Por exemplo, vamos adicionar algumas variáveis para que a IA seja capaz de escr
 
 Adicionando essas informações, e **refinando** o nosso prompt, nós chegamos em:
 
-```
+```md
 Escreva um email de {tipo} para {nome} com base na nossa conversa.
 
 O objetivo deste email é {objetivo}.
@@ -154,7 +156,7 @@ A partir daqui, já podemos salvar esse prompt como um [GPT](https://help.openai
 
 Agora, quando quisermos falar com a IA, vamos apenas precisar enviar informações como:
 
-```
+```md
 {nome}: Taiane
 {tipo}: follow-up
 {objetivo}: agradecer pelo networking no evento X
@@ -166,7 +168,7 @@ E a resposta já vai sair prontinha do forno!
 
 A IA vai interpretar a sua questão preenchendo os campos de variáveis no prompt, algo como:
 
-```
+```md
 Escreva um email de {follow-up} para {Taiane} com base na nossa conversa.
 
 O objetivo deste email é {agradecer pelo networking no evento X}.
@@ -213,7 +215,7 @@ Isso vai nos ajudar a dar um direcionamento na forma de "pensar" que ela vai ter
 
 Como neste caso estamos criando um prompt para nos ajudar com a criação de briefings de artigo, vamos utilizar a seguinte Persona:
 
-```
+```md
 # PERSONA
 Você é um redator de blog de tecnologia e design com amplo conhecimento em storytelling.
 ```
@@ -236,7 +238,7 @@ E, para te ajudar, eu separei algumas dicas:
 * Forneça apenas uma instrução por linha.
 * Atenção para que a última ação sempre seja o **Objetivo**.
 
-```
+```md
 # ROTEIRO
 1. Analise as informações de {tema}.
 2. Analise as informações de {descrição}.
@@ -255,7 +257,7 @@ Ele permite que a gente defina exatamente o que é esperado da IA, ajudando a ev
 
 Por isso, vamos focar em definir uma meta simples e objetiva, algo como:
 
-```
+```md
 # OBJETIVO
 Criar um briefing para a posterior produção de um artigo para o blog pessoal.
 ```
@@ -276,7 +278,7 @@ Então, o que eu vou fazer é inserir um **Delimitador** e, dentro dele, escreve
 
 Algo como:
 
-```
+```md
 # MODELO
 Siga a estrutura de <modelo> para produção do briefing.
 ```
@@ -287,7 +289,7 @@ Assim, a gente evita poluir muito as instruções e torna a leitura mais fácil.
 
 Agora, mais abaixo no nosso prompt, eu vou inserir o delimitar `modelo` com as seguintes frases:
 
-```
+```md
 [... restante do prompt]
 
 <modelo>
@@ -319,7 +321,7 @@ Como estamos criando um prompt bem objetivo, vamos inserir um contexto pequeno: 
 
 No nosso exemplo, eu vou detalhar *como* o briefing será usado:
 
-```
+```md
 # PANORAMA
 Você está criando um briefing que será usado para produzir um artigo no blog de André S., um profissional de Growth Marketing com habilidades em desenvolvimento web e automação de processos.
 ```
@@ -345,7 +347,7 @@ Para resolver esses detalhes menores, ao invés de voltar lá em cima e alterar 
 
 Além disso, também podemos usar essa parte final do nosso prompt para fornecer algumas orientações extras, como por exemplo:
 
-```
+```md
 # TRANSFORMAR
 - Sua resposta deve ser em Markdown.
 - Substitua os textos entre "[]" em <modelo> pela sua resposta.
@@ -364,7 +366,7 @@ E com isso, senhoras e senhores, podemos enfim juntar todas essas peças e ter o
 
 Vamos ver como ficou:
 
-```
+```md
 # PERSONA
 Você é um redator de blog de tecnologia e design com amplo conhecimento em storytelling.
 
@@ -403,7 +405,7 @@ Agora, para utilizar o prompt, podemos salvar como um [Gem](https://gemini.googl
 
 E como instruímos a I.A. com **Variáveis**, na hora de iniciar uma conversa, podemos inserir algo como:
 
-```
+```md
 {tema}: Estruturando um PROMPT para uso na IA.
 {descrição}: Artigo ensinando a criar prompts para maximizar a eficiência da IA em fluxos de trabalho e tarefas repetitivas.
 {ideiasChave}: A importância do prompt, Atributos de um bom prompt, Criando um prompt.

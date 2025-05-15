@@ -1,9 +1,11 @@
 ---
-title: Criador de UTMs
-description: Facilite a parametrização das suas URLs e obtenha insights sobre suas campanhas pagas e orgânicas.
-image: 1981-digital-bMWHu8wU1Vk-unsplash
-date: 2024-01-13
-tags: programming
+isDraft: false
+title: "Criador de UTMs"
+description: "Facilite a parametrização das suas URLs e obtenha insights sobre suas campanhas pagas e orgânicas."
+imageName: "1981-digital-bMWHu8wU1Vk-unsplash"
+pubDate: 2024-01-13
+updatedDate: 2025-05-01
+tags: ["programação"]
 ---
 
 Imagine a seguinte cena: você investe tempo, energia e recursos em diversas ações de marketing.
@@ -47,7 +49,7 @@ Essas "etiquetas" são compostas por cinco parâmetros:
 
 Ao adicionar esses parâmetros na sua URL, você explicita algumas informações importantes sobre a interação do usuário com o link, por exemplo:
 
-```
+```md
 https://sualoja.com.br/tenis-addidas/?utm_source=ig&utm_medium=stories&utm_campaign=bf25&utm_content=33_off
 ```
 

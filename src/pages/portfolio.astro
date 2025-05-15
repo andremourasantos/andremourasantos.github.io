@@ -1,0 +1,29 @@
+---
+import DefaultLayout from '../layouts/Default.astro';
+import HeroSection from '../components/HeroSection.astro';
+import ContentHolder from '../components/ContentHolder.astro';
+import Quote from '../components/Quote.astro';
+import SiteSection from '../components/SiteSection.astro';
+import Button from '../components/Button.astro';
+---
+
+<DefaultLayout title='Portfólio' description='Ideias e projetos que você pode usar de inspiração ou adaptar para utilizar na sua operação: Sinta-se à vontade para conferir os projetos e saiba que estão todos sob licença MIT.'>
+  <HeroSection heroTitle='Portfólio' heroSubtitle='Ideias e projetos que você pode usar de inspiração ou adaptar para utilizar na sua operação.' heroBtnIcon="ChevronDown"/>
+
+  <ContentHolder id=content orientation=column>
+    <Quote quoteText='Tive o privilégio de trabalhar ao lado do André e testemunhar sua incrível capacidade de lidar com múltiplas responsabilidades ao mesmo tempo' quoteAuthor='Caroline Cunha' quouteAuthorWork='CS em VEGA I.T'/>
+
+    <SiteSection title='Programação' description='Confira sites, apps e projetos pessoais, abrangendo linguagens como JavaScript e seus supersets, como TypeScript e Google Apps Script, além de frameworks, como Vue e Astro.<br><br>Sinta-se à vontade para conferir os códigos utilizados e tomar de inspiração para as suas próximas criações! Caso goste de algum projeto e queira utilizá-lo, saiba que estão sob licença MIT.' imageName='mika-baumeister-J5yoGZLdpSI-unsplash' imageAltText=''>
+      <a href="/portfolio/programacao"><Button btnSize="M"/></a>
+    </SiteSection>
+
+    <SiteSection orientation='RTL' title='Automação' description='Precisa de ajuda para automatizar criação de documentos, atualização de planilhas ou tarefas e preenchimento de campos no CRM? Aqui é o lugar.<br><br>Todos os projetos apresentados contam com as <em>blueprints</em> dos respectivos softwares utilizados para rápida interação.' imageName='alvaro-reyes-qWwpHwip31M-unsplash' imageAltText=''>
+      <a href="/portfolio/automacao"><Button btnSize="M"/></a>
+    </SiteSection>
+
+    <SiteSection title='Design' description='Guardo um grande apreço por design gráfico e aqui disponibilizo alguns protótipos de sites, aplicativos e sistemas Web para sua inspiração.<br><br>Alguns projetos contam com link de visualização no Figma para que você possa fazer um <em>test-drive</em> nos designs.' imageName='tirza-van-dijk-o1SKqmgSDbg-unsplash' imageAltText=''>
+      <a href="/portfolio/design"><Button btnSize="M"/></a>
+    </SiteSection>
+  </ContentHolder>
+
+</DefaultLayout>

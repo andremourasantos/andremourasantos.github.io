@@ -1,9 +1,11 @@
 ---
-title: Aplicativo de delivery
-description: Atacando o dilema da dependência de plataformas de terceiros e a fidelização de clientes.
-image: rowan-freeman-clYlmCaQbzY-unsplash
-date: 2023-12-30
-tags: design
+isDraft: false
+title: "Aplicativo de delivery"
+description: "Atacando o dilema da dependência de plataformas de terceiros e a fidelização de clientes."
+imageName: "rowan-freeman-clYlmCaQbzY-unsplash"
+pubDate: 2023-12-30
+updatedDate: 2025-05-12
+tags: ["design"]
 ---
 
 Estar no Ifood tornou-se mandatório para quem busca visibilidade e volume de pedidos no mercado de delivery.

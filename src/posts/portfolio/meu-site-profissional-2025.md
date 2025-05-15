@@ -1,9 +1,11 @@
 ---
-title: Meu site profissional (2025)
-description: Uma reconstrução focada na apresentação das minhas qualificações e projetos realizados ao longo do tempo.
-image: test
-date: 2025-05-03
-tags: design
+isDraft: false
+title: "Meu site profissional (2025)"
+description: "Uma reconstrução focada na apresentação das minhas qualificações e projetos realizados ao longo do tempo."
+imageName: "test"
+pubDate: 2025-05-03
+updatedDate: 2025-05-01
+tags: ["design"]
 ---
 
 ## Introdução

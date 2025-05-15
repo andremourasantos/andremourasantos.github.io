@@ -1,0 +1,34 @@
+---
+import DefaultLayout from '../layouts/Default.astro';
+import HeroSection from '../components/HeroSection.astro';
+import ContentHolder from '../components/ContentHolder.astro';
+import Quote from '../components/Quote.astro';
+import SiteSection from '../components/SiteSection.astro';
+import Button from '../components/Button.astro';
+---
+
+<DefaultLayout title='Trabalhos' description='Confira os problemas que já encontrei e como os solucionei: especializado em estratégias data-driven e crescimento sustentável, meu trabalho contribui substancialmente para o amadurecimento digital da sua empresa.'>
+  <HeroSection heroTitle='Meu impacto' heroSubtitle='Confira os problemas que já encontrei e como solucionei eles.' heroBtnIcon="ChevronDown"/>
+
+  <ContentHolder id=content orientation=column>
+    <Quote quoteText='Recomendo-o com entusiasmo a qualquer organização que busque um profissional de marketing completo. André é um profissional extremamente dedicado, paciente e engajado. Possui profundo entendimento sobre estratégias de growth, o conceito de máquina de vendas' quoteAuthor='Cleverson Marques' quouteAuthorWork='Executivo de vendas em VEGA I.T'/>
+
+    <SiteSection orientation='RTL' title='Reduzindo o CAC em 60% em três meses' description='Entenda o processo de diminuição de um CAC de R$ 540 para R$ 313 em apenas três meses a partir da internalização dos trabalhos do Marketing e produção de conteúdo.' imageAltText=''>
+      <a href="/trabalhos/reduzindo-o-cac-em-60-em-tres-meses"><Button btnSize="M" btnText="Ler mais"/></a>
+    </SiteSection>
+
+    <Quote quoteText='O André é o tipo de profissional que entrega tudo o que promete e ainda vai além. Extremamente competente, dedicado e atencioso, ele sempre encontra soluções criativas e eficazes para qualquer desafio. Se tem alguém que realmente faz a diferença, esse alguém é ele' quoteAuthor='Pablo Ricardo' quouteAuthorWork='Gestor de Tráfego em WorkUp Digital'/>
+
+    <SiteSection title='Obtendo ROAS de campanhas publicitárias' description='Veja o processo para obter o Retorno Sobre o Investimento em Anúncios (ROAS) em uma empresa com mais de R$ 120 mil de investimento anual com anúncios, permitindo a otimização dos recursos e esforço da empresa.' imageAltText=''>
+      <a href="/trabalhos/obtendo-o-roas-de-campanhas-publicitarias"><Button btnSize="M" btnText="Ler mais"/></a>
+    </SiteSection>
+
+    <Quote quoteText='O André é um profissional dedicado e atencioso, com ótimo conhecimento técnico e que trabalha bem em equipe para implantar soluções' quoteAuthor='Rafael Bretas' quouteAuthorWork='CEO em Agência fog'/>
+
+    <SiteSection orientation='RTL' title='Automação de trabalho operacional repetitivo' description='Veja como automatizei diversos fluxos de trabalho, economizando 40 horas por mês com trabalho de baixo valor agregado, a partir de Automação de Processos Inteligentes (SPAs), Inteligência Artificial (IA) e plataformas No-code.' imageAltText=''>
+      <a href="/trabalhos/automacao-de-trabalho-operacional-repetitivo"><Button btnSize="M" btnText="Ler mais"/></a>
+    </SiteSection>
+
+    <Quote quoteText='Profissional excelente e responsável, sou muito contente em trabalhar com o André' quoteAuthor='Cássio Pisseti' quouteAuthorWork='CEO em Engepoli'/>
+  </ContentHolder>
+</DefaultLayout>

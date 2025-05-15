@@ -1,9 +1,11 @@
 ---
-title: Política de Privacidade
-description: Este site com funcionalidades de terceiros e coleta informações sobre a sua sessão. Confira mais aqui.
-image: flyd-zAhAUSdRLJ8-unsplash
-date: 2024-09-28
-tags: privacy-policy
+isDraft: false
+title: "Política de Privacidade"
+description: "Este site com funcionalidades de terceiros e coleta informações sobre a sua sessão. Confira mais aqui."
+imageName: "flyd-zAhAUSdRLJ8-unsplash"
+pubDate: 2024-09-28
+updatedDate: 2024-09-28
+tags: ["política de privacidade"]
 ---
 
 ## Informações gerais

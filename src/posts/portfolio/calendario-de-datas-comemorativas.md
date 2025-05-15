@@ -1,10 +1,13 @@
 ---
-title: Calendário de Datas comemorativas
-description: Tome controle das suas ações de Inbound Marketing planejando-as com antecedência.
-image: towfiqu-barbhuiya-bwOAixLG0uc-unsplash
-date: 2024-01-03
-tags: programming
+isDraft: false
+title: "Calendário de Datas comemorativas"
+description: "Tome controle das suas ações de Inbound Marketing planejando-as com antecedência."
+imageName: "towfiqu-barbhuiya-bwOAixLG0uc-unsplash"
+pubDate: 2024-01-03
+updatedDate: 2025-05-01
+tags: ["programação"]
 ---
+
 
 Você já se sentiu sobrecarregado com a rotina de prazos apertados, criação de conteúdo constante e a pressão por resultados no Marketing digital? Se você é como muitos profissionais de Marketing, social media managers ou até mesmo um MEI, sabe que planejar o conteúdo para o ano todo pode parecer uma missão impossível. Posts de última hora, ideias repetitivas e a sensação de estar sempre apagando incêndio são desafios comuns.
 
@@ -99,7 +102,12 @@ Acompanhe o passo a passo com as instruções por escrito abaixo:
 1. Crie um novo documento no [Google Sheets](https://sheets.new);
     - Caso queira utilizar em um documento já existente, pule para o próximo passo.
 2. No menu superior, clique em "Extensões", depois, clique em "Apps Script";
-3. Na nova aba, você deve encontrar o Apps Script aberto já com o seguinte código:  
+3. Na nova aba, você deve encontrar o Apps Script aberto já com o seguinte código:
+    ```js
+    function myFunction() {
+    
+    }
+    ```
 4. Nomeie o projeto com o nome que preferir;
     * Exemplo: "Calendário de Datas Comemorativas".
 5. Copie o código de *main.js* para o editor do projeto;

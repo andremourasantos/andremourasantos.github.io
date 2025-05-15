@@ -1,0 +1,18 @@
+---
+import { getCollection } from "astro:content";
+import PortofolioPage from "../../layouts/PortofolioPage.astro";
+import ProjectCard from "../../components/ProjectCard.astro";
+
+const posts = await getCollection('portfolio', ({data}) => {return data.tags.includes('automação')});
+
+const sortedPosts = posts.sort((a, b) => {
+  return new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime();
+})
+---
+<PortofolioPage heroTitle="Projetos de automação" heroSubtitle="Veja como se livrar do trabalho repetitivo e tornar a sua operação mais dinâmica." sectionTitle="Eliminando tarefas repetitivas" sectionDescription=`Quanto maior fica a sua operação, mais e mais tarefas são necessárias, como preencher formulários, atualizar o CRM, modificar uma planilha ou criar documentos padrão.<br><br>Aqui você pode encontrar algumas ideias para liberar o seu tempo dessas atividades de baixo valor agregado para o cliente.<br><br>Caso queira soluções prontas, veja <a href="/portfolio/programacao">meus projetos de programação</a>.` sectionImage="alvaro-reyes-qWwpHwip31M-unsplash">
+  {
+    sortedPosts.map(post => {
+      return <ProjectCard title={post.data.title} description={post.data.description} imageName={post.data.imageName} link={post.id}/>
+    })
+  }
+</PortofolioPage>

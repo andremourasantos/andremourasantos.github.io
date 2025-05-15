@@ -1,0 +1,32 @@
+---
+import { Icon as IconType, ChevronDown, ExternalLink, Link, Menu, Undo2 } from "@lucide/astro";
+
+interface Props {
+  iconSize?:14|16;
+  iconName?:IconName;
+  iconColor?:string;
+}
+
+const { iconSize = 14, iconName, iconColor } = Astro.props;
+
+async function importCustomSVG(iconName:IconName) {
+  return await import(`../assets/svgs/${iconName}.svg`).then((res) => {return res.default.src})
+}
+
+const iconMap:Record<IconName, typeof IconType> = {
+  "ChevronDown": ChevronDown,
+  "ExternalLink": ExternalLink,
+  "Facebook": await importCustomSVG("Facebook"),
+  "Link": Link,
+  "LinkedIn": await importCustomSVG("LinkedIn"),
+  "Menu": Menu,
+  "Twitter": await importCustomSVG("Twitter"),
+  "Undo2": Undo2,
+  "WhatsApp": await importCustomSVG("WhatsApp"),
+};
+
+const IconComponentToRender = iconName ? iconMap[iconName] : "ChevronDown";
+
+---
+
+{(iconName !== "Facebook" && iconName !== "LinkedIn" && iconName !== "Twitter" && iconName !== "WhatsApp") ? <IconComponentToRender color={iconColor} size={iconSize}/> : <img src={await importCustomSVG(iconName)} height={iconSize} width={iconSize}/>}

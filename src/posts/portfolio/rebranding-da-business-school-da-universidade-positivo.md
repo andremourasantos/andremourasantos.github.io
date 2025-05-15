@@ -1,9 +1,11 @@
 ---
-title: Rebranding da Business School da Universidade Positivo
-description: Para auxiliar e orientar no desenvolvimento do projeto, a professora Dra. Fabiana Mariutti, foi convidada.
-image: dom-fou-YRMWVcdyhmI-unsplash
-date: 2021-09-25
-tags: design
+isDraft: false
+title: "Rebranding da Business School da Universidade Positivo"
+description: "Para auxiliar e orientar no desenvolvimento do projeto, a professora Dra. Fabiana Mariutti, foi convidada."
+imageName: "dom-fou-YRMWVcdyhmI-unsplash"
+pubDate: 2021-09-25
+updatedDate: 2025-05-01
+tags: ["design"]
 ---
 
 Em Março de 2021, o professor Luiz Pinheiro, à época, coordenador da Business School da Universidade Positivo, propôs para a nossa turma um desafio inusitado (e nunca realizado na faculdade).

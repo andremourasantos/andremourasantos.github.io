@@ -60,6 +60,12 @@ p {
 
 html {
   margin-inline: var(--body-margin_x-large);
+  scroll-behavior: smooth;
+}
+
+body {
+  max-width: 1584px;
+  margin-inline: auto;
 }
 
 h1, h2, h3, h4, h5, h6 {

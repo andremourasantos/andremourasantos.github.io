@@ -1,9 +1,11 @@
 ---
-title: Meu site profissional (2021)
-description: A primeira versão totalmente indepentende de plataformas de terceiros do meu site.
-image: test
-date: 2021-11-10
-tags: design
+isDraft: false
+title: "Meu site profissional (2021)"
+description: "A primeira versão totalmente indepentende de plataformas de terceiros do meu site."
+imageName: "test"
+pubDate: 2021-11-10
+updatedDate: 2025-05-01
+tags: ["design"]
 ---
 
 Até hoje me lembro de como esse projeto impactou a minha autoconfiança.

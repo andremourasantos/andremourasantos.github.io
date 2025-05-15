@@ -1,9 +1,11 @@
 ---
-title: OKDOKEY: agência de viagens
-description: Demonstração de site responsivo para uma agência de viagens moderna.
-image: okdokey-agencia-de-viagens_hero-section
-date: 2023-12-25
-tags: design
+isDraft: false
+title: "OKDOKEY: agência de viagens"
+description: "Demonstração de site responsivo para uma agência de viagens moderna."
+imageName: "okdokey-agencia-de-viagens_hero-section"
+pubDate: 2023-12-25
+updatedDate: 2025-05-01
+tags: ["design"]
 ---
 
 O mercado de turismo está em constante movimento, e agora, com a queda das restrições da pandemia, de volta em alta.

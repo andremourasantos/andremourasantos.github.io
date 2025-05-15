@@ -1,9 +1,11 @@
 ---
-title: Lista de compras
-description: MVP para aprendizagem sobre gerenciamento de bancos de dados e autenticação de usuários.
-image: test
-date: 2024-01-07
-tags: programming
+isDraft: false
+title: "Lista de compras"
+description: "MVP para aprendizagem sobre gerenciamento de bancos de dados e autenticação de usuários."
+imageName: "test"
+pubDate: 2024-01-07
+updatedDate: 2025-05-01
+tags: ["programação"]
 ---
 
 ## Introdução

@@ -1,0 +1,70 @@
+---
+import Icon from "./Icon.astro";
+
+interface Props {
+  id?:string;
+  btnText?:string;
+  btnSize:"S" | "M" | "L";
+  btnDisabled?:boolean;
+  btnIcon?:IconName;
+}
+
+const { id, btnText, btnSize, btnDisabled, btnIcon } = Astro.props;
+---
+<button id={id} class:list={[
+  btnIcon ? "hasIcon" : "",
+  btnSize === "L" ? "size_L" : "",
+  btnSize === "M" ? "size_M" : ""
+]}>
+  {!btnText ? <span>Saiba mais</span>
+    : btnText === "none" ? "" : <span>{btnText}</span>
+  }
+
+  {btnIcon ?
+    <Icon iconName={btnIcon} iconSize={btnSize === "L" ? 16 : 14}/> :
+    ""
+  }
+</button>
+
+<style>
+  button.hasIcon {
+    gap: 32px;
+    padding-right: var(--padding_2x);
+  }
+
+  button div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  button {
+    width: fit-content;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    padding: 0px var(--padding_8x) 0px var(--padding_2x);
+    color: var(--colors_text);
+    background-color: var(--colors_accent);
+    box-shadow: none;
+    cursor: pointer;
+    border: none;
+  }
+
+  button span {
+    font-size: 14px;
+    color: var(--colors_background);
+  }
+
+  button.size_M {
+    height: 40px;
+  }
+
+  button.size_L {
+    height: 48px;
+  }
+
+  button.size_L span {
+    font-size: 16px;
+  }
+</style>
