@@ -11,6 +11,16 @@ import Button from "./Button.astro"
   </nav>
 </header>
 
+<script>
+  document.querySelectorAll('nav a').forEach(link => {
+    if(link.getAttribute('href')! === '/' && location.pathname === '/'){
+      link.classList.add('activeLink');
+    } else if(link.getAttribute('href')! !== '/' && location.pathname.includes(link.getAttribute('href')!)){
+      link.classList.add('activeLink');
+    }
+  })
+</script>
+
 <style>
   header {
     height: 64px;
@@ -51,11 +61,11 @@ import Button from "./Button.astro"
     color: inherit;
   }
 
-  nav > a:hover:not(.router-link-active) {
+  nav > a:hover:not(.activeLink) {
     text-decoration: underline;
   }
 
-  nav > a.router-link-active {
+  nav > a.activeLink {
     font-weight: bold;
   }
 

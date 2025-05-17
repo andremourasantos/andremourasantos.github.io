@@ -2,23 +2,30 @@
 import Default from "./Default.astro";
 import HeroSection from "../components/HeroSection.astro";
 import SocialMediaAsideBar from "../components/SocialMediaAsideBar.astro";
+import ArticleInfo from "../components/ArticleInfo.astro";
 
 interface Props {
   title:string,
   description:string,
+  authorName?:string,
+  pubDate:Date,
+  updatedDate:Date,
   heroTitle:string,
   heroSubtitle:string,
   heroImage:string,
   contentHeaders:{depth:number,slug:string,text:string}[]
 }
 
-const { title, description, heroTitle, heroSubtitle, heroImage, contentHeaders } = Astro.props;
+const { title, description, heroTitle, heroSubtitle, heroImage, contentHeaders, authorName, pubDate, updatedDate } = Astro.props;
 ---
 <Default title={title} description={description}>
-  <HeroSection heroTitle={heroTitle} heroSubtitle={heroSubtitle} heroImage={heroImage} heroBtnText='Ler mais'/>
+  <HeroSection heroTitle={heroTitle} heroSubtitle={heroSubtitle} heroImage={heroImage} heroBtnText='Ler mais'>
+    <ArticleInfo authorName={authorName} pubDate={pubDate}/>
+  </HeroSection>
   <div id="content" class="article-container">
     <aside>
       <div>
+        <p style="margin-bottom: 8px;"><strong>Neste artigo:</strong></p>
         <ol id="toc">
           {contentHeaders.map(item => {
             if(item.depth !== 2){return}
@@ -29,7 +36,12 @@ const { title, description, heroTitle, heroSubtitle, heroImage, contentHeaders }
       </div>
       <SocialMediaAsideBar/>
     </aside>
-    <article><slot/></article>
+    <article>
+      {
+        new Date(pubDate).toString() !== new Date(updatedDate).toString() ? <blockquote id="updateNote">Este artigo foi atualizado em {new Date(updatedDate).toLocaleDateString()}.</blockquote> : ''
+      }
+      <slot/>
+    </article>
   </div>
 </Default>
 

@@ -3,13 +3,12 @@ isDraft: false
 title: "Política de Privacidade"
 description: "Este site com funcionalidades de terceiros e coleta informações sobre a sua sessão. Confira mais aqui."
 imageName: "flyd-zAhAUSdRLJ8-unsplash"
-pubDate: 2024-09-28
+pubDate: 2023-10-12
 updatedDate: 2024-09-28
 tags: ["política de privacidade"]
 ---
 
 ## Informações gerais
-_Última atualização em 28/09/2024._
 
 Esta política de privacidade é estabelecida para cumprir as disposições da Lei Geral de Proteção de Dados (LGPD) e fornecer transparência sobre a coleta e o uso de informações pessoais neste site.
 

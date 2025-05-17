@@ -4,7 +4,7 @@ title: "Reduzindo o CAC em 60% em três meses"
 description: "Identificando gargalos na operação e aumentando a eficácia dos investimentos em anúncios."
 imageName: "test"
 pubDate: 2025-04-24
-updatedDate: 2024-09-28
+updatedDate: 2025-04-24
 tags: ["trabalho", "roas"]
 ---
 
@@ -52,7 +52,7 @@ Texto + ações como [traqueamento de eventos e conversões no site, parametriza
 
 ### Auxílio da IA
 
-Texto + [estrutura de prompt para IA no trabalho](/portfolio/estrutura-de-prompt-para-ia), [produção de artigos para blogs](/portfolio/producao-textual-para-blog-com-ia), [produção de roteiros para vídeos](/portfolio/producao-textual-para-videos-com-ia).
+Texto + [estrutura de prompt para IA no trabalho](/portfolio/estrutura-de-prompt-para-ia), [produção de artigos para blogs](/portfolio/producao-textual-para-blog-com-ia), [produção de roteiros para vídeos](/portfolio/producao-de-roteiros-para-videos-no-youtube-com-ia).
 
 ## Resultados obtidos
 

@@ -25,7 +25,6 @@ if (!post) {
 
 const { Content, headings, remarkPluginFrontmatter } = await render(post);
 ---
-
-<Article title={post.data.title} description={post.data.description} heroTitle={post.data.title} heroSubtitle={post.data.description} heroImage={post.data.imageName} contentHeaders={headings}>
+<Article title={post.data.title} description={post.data.description} heroTitle={post.data.title} heroSubtitle={post.data.description} heroImage={post.data.imageName} contentHeaders={headings} authorName={"André S."} pubDate={post.data.pubDate} updatedDate={post.data.updatedDate}>
   <Content/>
 </Article>

@@ -1,0 +1,36 @@
+---
+import Icon from "./Icon.astro";
+
+interface Props {
+  authorName?:string,
+  pubDate:Date
+}
+
+const { authorName, pubDate } = Astro.props;
+---
+<div id="articleInfo">
+  {
+    authorName !== undefined ? <div id="author" title="Nome do autor"><Icon iconName="SquareUser" iconSize={16}/><p>{authorName}</p></div> : ''
+  }
+  <div id="pubDate" title="Data de publicação">
+    <Icon iconName="CalendarFold" iconSize={16}/><p>{new Date(pubDate).toLocaleDateString()}</p>
+  </div>
+</div>
+
+<style>
+  #articleInfo {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 24px;
+  }
+
+  #articleInfo > div {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+
+  #articleInfo p {
+    color: white;
+  }
+</style>

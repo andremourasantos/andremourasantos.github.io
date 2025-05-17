@@ -1,8 +1,7 @@
 ---
-import { render } from 'astro:content';
 import Article from "../layouts/Article.astro";
 import * as pp from '../posts/privacy-policy.md';
 ---
-<Article title={pp.frontmatter.title} description={pp.frontmatter.description} heroTitle={pp.frontmatter.title} heroSubtitle={pp.frontmatter.description} heroImage={pp.frontmatter.imageName} contentHeaders={pp.getHeadings()}>
+<Article title={pp.frontmatter.title} description={pp.frontmatter.description} heroTitle={pp.frontmatter.title} heroSubtitle={pp.frontmatter.description} heroImage={pp.frontmatter.imageName} contentHeaders={pp.getHeadings()} pubDate={pp.frontmatter.pubDate} updatedDate={pp.frontmatter.updatedDate}>
   <Fragment set:html={pp.compiledContent()}/>
 </Article>

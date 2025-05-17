@@ -36,7 +36,7 @@ E a palavra-chave aqui é **consistência**.
 
 Com um prompt bem definido, é possível não só guiar o ChatGPT, por exemplo, corretamente pelas nossas instruções, como também possibilita a criação de agentes de IA e até mesmo a inserção da IA em fluxos de trabalho automatizados.
 
-> Por sinal, foi assim que eu utilizei a IA para alguns projetos de automação no trabalho, como a [produção de artigos para blogs](/portfolio/producao-textual-para-blog-com-ia) e a [produção de roteiros para vídeos](/portfolio/producao-textual-para-videos-com-ia).
+> Por sinal, foi assim que eu utilizei a IA para alguns projetos de automação no trabalho, como a [produção de artigos para blogs](/portfolio/producao-textual-para-blog-com-ia) e a [produção de roteiros para vídeos](/portfolio/producao-de-roteiros-para-videos-no-youtube-com-ia).
 
 ## Atributos de um bom prompt
 
@@ -360,7 +360,7 @@ Ainda no `<modelo>`, como eu espero uma resposta mais detalhada, além das instr
 
 > Além disso, ninguém gosta do batalhão de emojis que a I.A. invoca, então eu tentei inibir esse comportamento também.
 
-### Resultado final
+## Resultado final
 
 E com isso, senhoras e senhores, podemos enfim juntar todas essas peças e ter o nosso **prompt básico de criação de briefings**!
 
@@ -425,4 +425,4 @@ Uma outra vantagem do Gemini é que você não precisa pagar para utilizar os Ge
 
 ## Finalização
 
-Texto + aplicar conceitos em [produção de artigos para blogs](/portfolio/producao-textual-para-blog-com-ia), [produção de roteiros para vídeos](/portfolio/producao-textual-para-videos-com-ia) ou [planejamento e condução de LIVES para o YouTube](/portfolio/fluxo-para-planejamento-de-lives-webinares). Também é possível usar para criar [assistentes de IA especializados](/portfolio/projeto-kai) e até mesmo auxiliar na [criação de UTMs para links](/portfolio/criador-de-utms).
+Texto + aplicar conceitos em [produção de artigos para blogs](/portfolio/producao-textual-para-blog-com-ia), [produção de roteiros para vídeos](/portfolio/producao-de-roteiros-para-videos-no-youtube-com-ia) ou [planejamento e condução de LIVES para o YouTube](/portfolio/fluxo-para-planejamento-de-lives-webinares). Também é possível usar para criar [assistentes de IA especializados](/portfolio/projeto-kai) e até mesmo auxiliar na [criação de UTMs para links](/portfolio/criador-de-utms).

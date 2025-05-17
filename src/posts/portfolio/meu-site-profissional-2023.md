@@ -5,7 +5,7 @@ description: "Uma reconstrução completa de como eu me apresento para o mercado
 imageName: "cytonn-photography-n95VMLxqM2I-unsplash"
 pubDate: 2023-10-16
 updatedDate: 2025-05-01
-tags: ["design"]
+tags: ["design", "programação"]
 ---
 
 Todo profissional busca formas de se destacar no mercado e apresentar suas habilidades de maneira eficaz.

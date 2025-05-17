@@ -5,7 +5,7 @@ description: "Tome controle das suas ações de Inbound Marketing planejando-as 
 imageName: "towfiqu-barbhuiya-bwOAixLG0uc-unsplash"
 pubDate: 2024-01-03
 updatedDate: 2025-05-01
-tags: ["programação"]
+tags: ["programação", "automação"]
 ---
 
 

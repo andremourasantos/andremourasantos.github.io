@@ -5,7 +5,7 @@ description: "Facilite a parametrização das suas URLs e obtenha insights sobre
 imageName: "1981-digital-bMWHu8wU1Vk-unsplash"
 pubDate: 2024-01-13
 updatedDate: 2025-05-01
-tags: ["programação"]
+tags: ["automação"]
 ---
 
 Imagine a seguinte cena: você investe tempo, energia e recursos em diversas ações de marketing.
@@ -187,4 +187,4 @@ Eu recomendo você a começar pequeno: padronize seus links das redes sociais pr
 
 E para te dar um empurrãozinho nesse caminho, a planilha está aí para simplificar a sua jornada!
 
-> Se você achou interessante o meu trabalho, recomendo conferir essa [planilha de acompanhamento de OKRs](/portfolio/planilha-para-acompanhamento-de-okrs) — que também é excelente para principiantes no assunto.
+> Se você achou interessante o meu trabalho, recomendo conferir esse [calendário de datas comemorativas](/portfolio/calendario-de-datas-comemorativas) — que é excelente para iniciantes no Inbound Marketing.

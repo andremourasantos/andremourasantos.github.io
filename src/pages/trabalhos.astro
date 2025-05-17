@@ -43,11 +43,11 @@ const sortedPosts = posts.sort((a, b) => {
     {
     import.meta.env.DEV ?
     sortedPosts.map(post => {
-      return <ProjectCard title={post.data.title} description={post.data.description} imageName={post.data.imageName} link={post.id} isDraft={post.data.isDraft}/>
+      return <ProjectCard title={post.data.title} description={post.data.description} imageName={post.data.imageName} link={`/trabalhos/${post.id}`} isDraft={post.data.isDraft}/>
     }) :
     sortedPosts.map(post => {
       if(!post.data.isDraft) {
-        return <ProjectCard title={post.data.title} description={post.data.description} imageName={post.data.imageName} link={post.id} isDraft={post.data.isDraft}/>  
+        return <ProjectCard title={post.data.title} description={post.data.description} imageName={post.data.imageName} link={`/trabalhos/${post.id}`} isDraft={post.data.isDraft}/>  
       }
     })
   }
