@@ -1,9 +1,14 @@
 ---
-import { getCollection, getEntry, render } from "astro:content";
+import { getCollection, getEntry, render, type CollectionEntry } from "astro:content";
 import Article from "../../layouts/Article.astro";
 
 export async function getStaticPaths(): Promise<{ params: { slug: string } }[]> {
-  let posts = await getCollection('works');
+  let posts:CollectionEntry<'works'>[];
+  if(import.meta.env.ENV){
+    posts = await getCollection('works');
+  } else {
+    posts = await getCollection('works', (post) => {return !post.data.isDraft});
+  }
 
   let urlSlugs = Array.from(posts, (item) => {return item.id});
   
