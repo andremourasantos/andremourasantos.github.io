@@ -1,7 +1,7 @@
 ---
 isDraft: false
 title: "Política de Privacidade"
-description: "Este site com funcionalidades de terceiros e coleta informações sobre a sua sessão. Confira mais aqui."
+description: "Sua privacidade é importante, este site coleta informações da sua sessão. Saiba mais aqui."
 imageName: "flyd-zAhAUSdRLJ8-unsplash"
 pubDate: 2023-10-12
 updatedDate: 2024-09-28
