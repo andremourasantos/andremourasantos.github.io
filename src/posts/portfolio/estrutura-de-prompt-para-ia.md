@@ -1,10 +1,10 @@
 ---
-isDraft: true
+isDraft: false
 title: "Estrutura de PROMPT para IA"
 description: "Aprenda a criar prompts para maximizar a eficiência da IA em fluxos de trabalho e tarefas repetitivas."
 imageName: "test"
-pubDate: 2025-04-24
-updatedDate: 2025-05-01
+pubDate: 2025-05-17
+updatedDate: 2025-05-17
 tags: ["automação"]
 ---
 
@@ -28,7 +28,7 @@ E aqui neste artigo, eu vou compartilhar uma técnica para construção de promp
 
 Antes de tudo, é importante definirmos exatamente do que estamos falando.
 
-*Prompt engineering* é o processo de, cuidadosa — e às vezes até dolorosamente —, produzir instruções (prompts) para orientar um LLM a retornar uma determinada resposta.
+*Prompt engineering* é o processo de, cuidadosa — e às vezes até dolorosamente —, produzir instruções (prompts) para orientar um LLM a responder você de uma determinada forma.
 
 Portanto, o que vamos refletir é sobre como comunicar instruções de maneira efetiva para que a IA possa, **consistentemente**, responder da forma como queremos.
 
@@ -36,7 +36,7 @@ E a palavra-chave aqui é **consistência**.
 
 Com um prompt bem definido, é possível não só guiar o ChatGPT, por exemplo, corretamente pelas nossas instruções, como também possibilita a criação de agentes de IA e até mesmo a inserção da IA em fluxos de trabalho automatizados.
 
-> Por sinal, foi assim que eu utilizei a IA para alguns projetos de automação no trabalho, como a [produção de artigos para blogs](/portfolio/producao-textual-para-blog-com-ia) e a [produção de roteiros para vídeos](/portfolio/producao-de-roteiros-para-videos-no-youtube-com-ia).
+<!-- > Por sinal, foi assim que eu utilizei a IA para alguns projetos de automação no trabalho, como a [produção de artigos para blogs](/portfolio/producao-textual-para-blog-com-ia) e a [produção de roteiros para vídeos](/portfolio/producao-de-roteiros-para-videos-no-youtube-com-ia). -->
 
 ## Atributos de um bom prompt
 
@@ -190,22 +190,65 @@ Mas se você sentir que ainda precisa refinar muito as respostas fornecidas pela
 
 ### Definindo um modelo de resposta
 
-Texto.
+Um **modelo de resposta** nada mais é do que um guia direto de como a IA deve formular a resposta para a sua questão.
+
+E nós utilizamos e vemos modelos assim todos os dias em outras ferramentas.
+
+Seja como um modelo de briefing no Google Docs, um documento de orçamento ou um modelo de newsletter.
+
+Modelos ajudam não só a salvar tempo com tarefas repetitivas, como também guiam a nossa forma de trabalhar.
+
+E podemos usar essa mesma lógica para as respostas que queremos obter da IA.
+
+Continuando com o nosso exemplo do e-mail para o Pablo, podemos incluir no prompt um modelo como:
+
+```md
+<modelo>
+Assunto: Follow-up da nossa conversa sobre [Assunto Principal]
+
+Olá, {nome},
+
+Primeiramente, gostaria de [analise o texto do {objetivo} e complete essa senteça].
+
+Escrevo para dar seguimento à nossa conversa sobre [analise os {pontos-chave} e determine o mais importante].
+
+Gostaria de reforçar os seguintes pontos que discutimos:
+[lista com os demais {pontos-chave}]
+
+Peço que salve minhas informações de contato:
+- Telefone: (41) 9.0000-0000
+- LinkedIn: https://www.linkedin.com/in/meulinkedin
+
+Abraços,
+André
+</modelo>
+```
+
+Perceba que eu não só utilizei **delimitadores**, para marcar claramento o que é o modelo, como também inclui **variáveis** e, além disso, ainda instruções sobre como formatar a resposta **DENTRO** do próprio modelo.
+
+Com um modelo assim, a IA terá uma estrutura clara para seguir ao gerar o e-mail, garantindo que todos os elementos importantes estejam **sempre** presentes em um **formato consistente**.
+
+Além disso, torna o seu uso bem flexível, o que, no nosso caso, ajuda a tornar o e-mail mais dinâmico.
+
+E agora que você já sabe sobre o uso de delimitadores, variáveis e a importância de definir um modelo, vamos seguir para criar um prompt completo de verdade — pronto para ser usado em fluxos de trabalho e automação de processos!
 
 ## Como criar um bom prompt
 
-Texto.
+Criar um prompt eficaz é como mapear o passo a passo de como executar uma tarefa.
 
-[Os quatro pilares do prompt]
+Quanto mais claras e precisas forem suas instruções, melhor será o resultado.
 
-[
-  * Quem é?
-  * Como trabalha?
-  * O que faz?
-  * Como faz?
-]
+E para construir prompts que realmente funcionam, podemos seguir uma estrutura baseada em quatro pilares essenciais:
+* **Quem é?**: define a persona ou o papel que a IA deve assumir;
+* **Como trabalha?**: descreve o passo a passo que a IA deve seguir para executar a tarefa;
+* **O que faz?**: estabelece o objetivo final da interação;
+* **Como faz?**: detalha o formato e quaisquer outros detalhes para a resposta.
 
-[criar ia de briefing]
+Com base nesses pilares, podemos criar um prompt robusto.
+
+E como já informamos o Pablo sobre a nossa intenção de continuarmos a conversa mais tarde, vamos seguir para outro exemplo.
+
+Vamos criar um prompt para nos auxiliar com a produção de briefings para artigos de um blog!
 
 ### Persona
 
@@ -220,7 +263,11 @@ Como neste caso estamos criando um prompt para nos ajudar com a criação de bri
 Você é um redator de blog de tecnologia e design com amplo conhecimento em storytelling.
 ```
 
-Pronto! Agora ela já sabe *"Quem é?"*.
+Pronto! Bem simples assim mesmo.
+
+Aqui só precisamos definir o "universo" que a IA vai estar.
+
+Agora ela já sabe *"Quem é?"*.
 
 Partiremos então para o *"Como trabalha?"*.
 
@@ -411,6 +458,9 @@ E como instruímos a I.A. com **Variáveis**, na hora de iniciar uma conversa, p
 
 E a I.A. vai imediatamente começar a produzir o briefing, sem enrolação!
 
+Ah, e como os *inputs* serão sempre os mesmos e a repsosta também está padronizada, [incluir esse prompt em um fluxo automatizado](/portfolio/producao-textual-para-blog-com-ia) se torna ainda mais fácil!
+
+
 ## Selecionando a IA adequada para o trabalho
 
 Agora que já temos um prompt em mãos, precisamos descobrir qual a melhor I.A. para o serviço.
@@ -423,6 +473,12 @@ No meu caso, eu preferi usar o Gemini, mais especificamente o modelo 2.5 Flash (
 
 Uma outra vantagem do Gemini é que você não precisa pagar para utilizar os Gems (equivalente a um GPT no ChatGPT), então fica mais acessível de para criar e utilizar os prompts por lá também.
 
-## Finalização
+## Conclusão
 
-Texto + aplicar conceitos em [produção de artigos para blogs](/portfolio/producao-textual-para-blog-com-ia), [produção de roteiros para vídeos](/portfolio/producao-de-roteiros-para-videos-no-youtube-com-ia) ou [planejamento e condução de LIVES para o YouTube](/portfolio/fluxo-para-planejamento-de-lives-webinares). Também é possível usar para criar [assistentes de IA especializados](/portfolio/projeto-kai) e até mesmo auxiliar na [criação de UTMs para links](/portfolio/criador-de-utms).
+Dominar a estrutura de prompts com **delimitadores**, **variáveis** e **modelos** é um divisor de águas na interação com IAs.
+
+Eu particularmente uso essa estrutura sempre que preciso automatizar uma tarefa com IA, é uma daquelas coisas que, depois que você aprende, não tem como viver sem.
+
+Agora, a bola está com você: pratique, experimente e veja na prática como esses conceitos transformam o uso da IA no seu dia a dia!
+
+E se quiser ir além e integrar a IA de forma mais profunda nos seus processos, [fale comigo](https://api.whatsapp.com/send/?phone=5541935009236&text=Oi%2C%20gostaria%20de%20entrar%20em%20contato%20para%20apresentar%20meu%20projeto) e vamos discutir um projeto!

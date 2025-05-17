@@ -196,6 +196,15 @@ const { title, description, heroTitle, heroSubtitle, heroImage, contentHeaders, 
     object-position: center;
   }
 
+  iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+  }
+
+  iframe + p  {
+    margin-top: var(--padding_2x);
+  }
+
   @media screen and (max-width: 1312px) {
     .article-container {
       grid-template-columns: 400px 1fr;
@@ -216,6 +225,10 @@ const { title, description, heroTitle, heroSubtitle, heroImage, contentHeaders, 
 
     .article-container {
       grid-template-columns: 1fr;
+    }
+
+    iframe {
+      aspect-ratio: 1/1;
     }
   }
 </style>

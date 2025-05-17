@@ -1,10 +1,10 @@
 ---
-isDraft: true
+isDraft: false
 title: "Projeto Kai"
 description: "Assistente de IA especializado para atividades do Marketing (MVP), como projeto de aprendizagem."
 imageName: "test"
 pubDate: 2025-02-20
-updatedDate: 2025-05-01
+updatedDate: 2025-05-17
 tags: ["programação"]
 ---
 
@@ -73,6 +73,10 @@ Por isso, para começar implementar as requisições e capturar as respostas, eu
 
 E, apesar de parecer que adicionei etapas a mais no processo, tudo andou bem rápido, já que eram tarefas bem pequenas e que me ajudaram a ganhar momento.
 
+Com isso, em pouco tempo já tinha em mãos um protótipo para poder trabalhar!
+
+<iframe class="LinkedIn" src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7289344185239822336?collapsed=1" frameborder="0" allowfullscreen="" title="Publicação incorporada"></iframe>
+
 Paciência e persistência foram chaves aqui.
 
 ## Criação de um roadmap
@@ -100,8 +104,8 @@ Com isso, o projeto ficou dividido em:
 
 Esse foco em funcionalidades também também significou deixar o design de lado por um momento e me concentrar na lógica por trás do sistema.
 
-Com isso a interface construída foi simples e funcionava tanto no computador quanto no telefone:
-![](https://andremourasantos.com.br/assets/image-1-79CNRKHL.png)
+Mas isso não significa que não dei uma incrementada no visual enquanto trabalhava no cerne da ideia:
+![](../../assets/photos/projeto-kai-mockups.png)
 
 Essa mentalidade me permitiu avançar rapidamente e ter algo funcional em mãos para testar em pouquíssimo tempo.
 
@@ -139,7 +143,7 @@ Entender como instrui a IA realmente faz toda diferença na qualidade dos result
 
 Eu até cheguei a fazer um pequeno vídeo apresentando as novidades que consegui desenvolver no projeto, olha só:
 
-<iframe  src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7297280051954249728?collapsed=1"  frameborder="0"  allowfullscreen=""  title="Publicação incorporada"></iframe>
+<iframe class="LinkedIn" src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7297280051954249728?collapsed=1" frameborder="0"  allowfullscreen="" title="Publicação incorporada"></iframe>
 
 Para conseguir me aprofundar e organizar esse conhecimento, eu desenvolvi uma estrutura própria para a criação de prompts junto com conhecimentos de um curso de prompts para IA que fiz.
 
@@ -197,4 +201,4 @@ Não precisa ser algo grandioso.
 
 Identifique a menor parte funcional da sua ideia, escolha uma ferramenta acessível (existem muitas APIs de IA com planos gratuitos ou de baixo custo para experimentação — hoje em dia eu particularmente recomendaria o [Gemini](https://aistudio.google.com/)) e coloque a mão na massa!
 
-Se você tem uma ideia para um assistente de IA personalizado para suas necessidades, entre em contato e vamos conversar sobre como tirar sua ideia do papel.
+Se você tem uma ideia para um assistente de IA personalizado para suas necessidades, [entre em contato](https://api.whatsapp.com/send/?phone=5541935009236&text=Oi%2C%20gostaria%20de%20entrar%20em%20contato%20para%20apresentar%20meu%20projeto) e vamos conversar sobre como tirar a sua ideia do papel.

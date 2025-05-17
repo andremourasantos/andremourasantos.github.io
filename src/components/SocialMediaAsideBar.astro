@@ -12,7 +12,7 @@ import Button from "./Button.astro";
 <script>
   function shareArticle(medium:string) {
     const path:string = 'https://' + location.host + location.pathname + '/';
-    const utms:string = `?utm_source=share&utm_medium=${medium.toLocaleLowerCase()}&utm_campaign=share_button`;
+    const utms:string = `?utm_source=share&utm_medium=${medium.toLocaleLowerCase()}`;
     let shareUrl:string;
 
     switch (medium) {

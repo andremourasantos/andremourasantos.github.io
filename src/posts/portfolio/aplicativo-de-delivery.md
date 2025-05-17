@@ -1,10 +1,10 @@
 ---
-isDraft: true
+isDraft: false
 title: "Aplicativo de delivery"
 description: "Atacando o dilema da dependência de plataformas de terceiros e a fidelização de clientes."
 imageName: "rowan-freeman-clYlmCaQbzY-unsplash"
 pubDate: 2023-12-30
-updatedDate: 2025-05-12
+updatedDate: 2025-05-17
 tags: ["design"]
 ---
 
@@ -32,7 +32,7 @@ E eu não estou falando de campanhas genéricas no WhatsApp ou publicações nas
 
 Eu estou falando de um canal de vendas próprio: como um site ou um aplicativo web progressivo (PWA).
 
-![mockup original](/)
+![Mockup de aplicativo de delivery de pizza em dois smartphones.](../../assets/photos/aplicativo-de-delivery_mockup.png)
 
 ### As vantagens de um canal de vendas próprio
 
@@ -45,8 +45,6 @@ O custo incial pode até ser um pouco maior, mas ela está pensando a **longo pr
 Um PWA permite que o cliente "instale" o seu site no celular dele, funcionando de forma muito semelhante a um aplicativo, como o próprio Ifood, mas sem a necessidade de baixar pela loja de apps.
 
 Isso proporciona uma experiência de usuário fluida, rápida e que ainda permite o envio de notificações push – um canal direto e poderoso de comunicação para promoções e novidades.
-
-![Mockup de telefone com app de pizzaria, do lado do Ifood, com notificação push](/)
 
 Com um PWA, você pode estar presente diretamente na tela inicial do telefone do seu cliente, **do lado** do app do Ifood, não mais dentro dele, criando um canal direto mais lucrativo para vendas.
 
@@ -76,7 +74,7 @@ Com campanhas segmentadas no Google Ads ou nas redes sociais, por exemplo, você
 
 Isso, além de aumentar drasticamente o tamanho do público ao qual tem acesso, diversifica os seus canais de aquisição de clientes, tornado o seu negócio mais resiliente.
 
-![Mockup anúncios levando para pizzaria](/)
+![Mockup de um aplicativo de delivery de pizza em um smartphone centralizado, conectado visualmente a ícones de diversas plataformas como WhatsApp, TikTok, Instagram, Facebook, Google Ads, Meta, Google e Bing, ilustrando como o tráfego dessas fontes pode ser direcionado para o aplicativo próprio do negócio.](../../assets/photos/aplicativo-de-delivery_anuncios.png)
 
 Assim, você pode não somente pensar em estratégias de **remarketing**, como também tem um maior controle sobre o **Custo por Aquisição de Cliente (CAC)**, uma vez que você está no controle da maioria das variáveis.
 
@@ -84,7 +82,9 @@ Assim, você pode não somente pensar em estratégias de **remarketing**, como t
 
 Com um canal de vendas próprio, você ainda recupera o controle sobre os dados dos seus clientes.
 
-Nome, endereço, WhatsApp... — todas essas informações se tornam acessíveis (respeitando, é claro, a LGPD).
+Nome, endereço, WhatsApp... — todas essas informações se tornam acessíveis (respeitando a LGPD, é claro).
+
+![Mockup de um aplicativo de delivery de pizza em um smartphone, conectado a um conjunto de ícones de plataformas de aquisição de tráfego (como Google Ads, redes sociais, etc.) à esquerda, e a ícones que representam o relacionamento direto com o cliente (como perfil, chat e telefone) à direita, ilustrando o fluxo de atração e a capacidade de comunicação direta com o cliente através do canal próprio.](../../assets/photos/aplicativo-de-delivery_relacionamento-com-cliente.png)
 
 E esse acesso direto permite que você vá muito além da simples entrega de um pedido:
 * Você pode implementar programas de fidelidade;
@@ -107,8 +107,10 @@ No entanto, o objetivo primário passa a ser direcionar a maior parte dos esfor�
 
 Tranformando a loja no Ifood em uma **fonte adicional** de receita, e não *toda fonte de receita*.
 
+![Mockup de um aplicativo de delivery de pizza em um smartphone centralizado, conectado visualmente a ícones de diversas plataformas de tráfego (Google Ads, Instagram, Facebook, TikTok) à esquerda e ao logo do Ifood à direita, ilustrando uma estratégia híbrida onde o negócio conta com multiplas fontes de receita ao invés de uma única fonte (Ifood).](../../assets/photos/aplicativo-de-delivery-abordagem_hibrida.png)
+
 Essa visão de longo prazo foca na construção de uma base de clientes e de um canal de vendas que pertencem ao negócio, garantindo maior autonomia, lucratividade e a capacidade de adaptação em um mercado em constante mudança.
 
 É um passo essencial para quem busca não apenas sobreviver, mas prosperar no setor de delivery.
 
-Quer discutir como uma solução própria pode liberar seu negócio da dependência e impulsionar seu crescimento? Entre em contato.
+Quer discutir como uma solução própria pode liberar seu negócio da dependência e impulsionar seu crescimento? [Vamos conversar pelo WhatsApp](https://api.whatsapp.com/send/?phone=5541935009236&text=Oi%2C%20gostaria%20de%20entrar%20em%20contato%20para%20apresentar%20meu%20projeto), sem compromisso!
