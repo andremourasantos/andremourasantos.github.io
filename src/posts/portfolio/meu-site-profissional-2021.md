@@ -5,7 +5,7 @@ description: "A primeira versão totalmente indepentende de plataformas de terce
 imageName: "test"
 pubDate: 2021-11-10
 updatedDate: 2025-05-01
-tags: ["design", "programação"]
+tags: ["design"]
 ---
 
 Até hoje me lembro de como esse projeto impactou a minha autoconfiança.

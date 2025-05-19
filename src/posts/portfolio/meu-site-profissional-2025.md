@@ -5,7 +5,7 @@ description: "Uma reconstrução focada na apresentação das minhas qualificaç
 imageName: "test"
 pubDate: 2025-05-03
 updatedDate: 2025-05-03
-tags: ["design", "programação"]
+tags: ["design"]
 ---
 
 ## Introdução

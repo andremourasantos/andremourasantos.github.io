@@ -9,7 +9,7 @@ const sortedPosts = posts.sort((a, b) => {
   return new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime();
 })
 ---
-<PortofolioPage heroTitle="Projetos de automação" heroSubtitle="Veja como se livrar do trabalho repetitivo e tornar a sua operação mais dinâmica." sectionTitle="Eliminando tarefas repetitivas" sectionDescription=`Quanto maior fica a sua operação, mais e mais tarefas são necessárias, como preencher formulários, atualizar o CRM, modificar uma planilha ou criar documentos padrão.<br><br>Aqui você pode encontrar algumas ideias para liberar o seu tempo dessas atividades de baixo valor agregado para o cliente.<br><br>Caso queira soluções prontas, veja <a href="/portfolio/programacao">meus projetos de programação</a>.` sectionImage="alvaro-reyes-qWwpHwip31M-unsplash">
+<PortofolioPage heroTitle="Projetos de automação" heroSubtitle="Eliminando o trabalho repetitivo para aumentar a produtividade." sectionTitle="Eliminando tarefas repetitivas" sectionDescription=`Quanto maior fica a sua operação, mais e mais tarefas são necessárias, como preencher formulários, atualizar o CRM, modificar uma planilha ou criar documentos padrão.<br><br>Aqui você pode encontrar algumas ideias para liberar o seu tempo dessas atividades de baixo valor agregado para o cliente.<br><br>Caso queira soluções prontas, veja <a href="/portfolio/programacao">meus projetos de programação</a>.` sectionImage="alvaro-reyes-qWwpHwip31M-unsplash">
   {
     import.meta.env.DEV ?
     sortedPosts.map(post => {
