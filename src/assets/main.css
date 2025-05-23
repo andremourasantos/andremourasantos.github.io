@@ -1,24 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Flow+Circular&family=Lexend:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&family=Bebas+Neue&family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
 
 :root {
   /*FONTS*/
-  --font_title: 'Lexend';
-  --font_paragraph: 'Poppins';
-  --font_loading: 'Flow Circular';
+  --font_title: 'Figtree';
+  --font_paragraph: 'Atkinson Hyperlegible Next';
+  --font_quote: 'Bebas Neue';
   --font-size_display: 48px;
   --font-size_x-large: 40px;
   --font-size_large: 32px;
   --font-size_medium: 24px;
   --font-size_small: 20px;
-  --font-size_default: 16px;
-  --font-size_x-small: 14px;
+  --font-size_default: 18px;
+  --font-size_x-small: 16px;
+
+  /*BACKGROUND*/
+  --square-unit: var(--padding_2x);
+  --offset-unit: calc(var(--square-unit) / 2);
+  --dot-color: #F5F5F5;
 
   /*COLORS*/
-  --colors_background: white;
-  --colors_accent: black;
-  --colors_title: #141414;
-  --colors_paragraph: #1F1F1F;
-  --colors_hero-gradient: white;
+  --colors-page_background: #FFFFFF;
+  --colors-accent: hsl(248, 100%, 72%);
+  --colors-accent_dark: hsl(248, 100%, 67%);
+  --colors-accent_darker: hsl(248, 100%, 62%);
+  --colors-accent_contrast: hsl(249, 53%, 21%);
+  --colors-accent_contrast_dark: hsl(249, 53%, 16%);
+  --colors-accent_contrast_darker: hsl(249, 53%, 11%);
+  --colors-title: #141414;
+  --colors-paragraph: #1F1F1F;
+  --colors-hero-gradient: white;
+  --colors-border_line_color: #CCCCCC;
 
   /*PADDINGS*/
   --padding_04x: 2px;
@@ -50,8 +61,12 @@
   margin: 0px;
   box-sizing: border-box;
   font-family: var(--font_paragraph);
-  color: var(--colors_paragraph);
+  color: var(--colors-paragraph);
   list-style-position: inside;
+}
+
+ol, ul {
+  font-size: var(--font-size_default);
 }
 
 p {
@@ -69,14 +84,14 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font_title);
+  font-family: var(--font-title);
   font-weight: bold;
-  color: var(--colors_title);
+  color: var(--colors-title);
 }
 
 a:has(button) {
   display: block;
-  text-decoration: none;
+  text-decoration: none !important;
   width: fit-content;
 }
 

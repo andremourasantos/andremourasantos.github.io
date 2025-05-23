@@ -32,7 +32,7 @@ try {
 <style>
   section {
     display: grid;
-    grid-template-columns: 540px 1fr;
+    grid-template-columns: 600px 1fr;
     grid-template-areas: "col1 col2";
     align-items: center;
     justify-content: space-between;
@@ -40,7 +40,7 @@ try {
   }
 
   div {
-    width: 540px;
+    width: 100%;
     grid-area: col1;
   }
 
@@ -61,17 +61,29 @@ try {
     filter: saturate(0.5);
   }
 
-  @media screen and (min-width: 1057px) {
-    .RTL {
-      grid-template-columns: 1fr 540px;
+  section.RTL {
+    grid-template-columns: 1fr 600px;
+  }
+
+  .RTL div {
+    grid-area: col2;
+  }
+
+  .RTL img {
+    grid-area: col1;
+  }
+
+  @media screen and (max-width: 1057px) {
+    section.RTL {
+      grid-template-columns: 1fr;
     }
 
     .RTL div {
-      grid-area: col2;
+      grid-area: col1;
     }
 
     .RTL img {
-      grid-area: col1;
+      grid-area: col2;
     }
   }
 

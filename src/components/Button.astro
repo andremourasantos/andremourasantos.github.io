@@ -44,16 +44,27 @@ const { id, btnText, btnSize, btnDisabled, btnIcon } = Astro.props;
     display: flex;
     align-items: center;
     padding: 0px var(--padding_8x) 0px var(--padding_2x);
-    color: var(--colors_text);
-    background-color: var(--colors_accent);
+    color: white;
+    background-color: var(--colors-accent);
     box-shadow: none;
     cursor: pointer;
     border: none;
+    outline: 2px solid transparent;
+    outline-offset: 1px;
+  }
+
+  button:hover {
+    background-color: var(--colors-accent_dark);
+  }
+
+  button:active, button:focus {
+    background-color: var(--colors-accent_darker);
+    outline: 2px solid var(--colors-accent);
   }
 
   button span {
     font-size: 14px;
-    color: var(--colors_background);
+    color: white;
   }
 
   button.size_M {

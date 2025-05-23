@@ -20,7 +20,7 @@ try {
 }
 ---
 
-<section class:list={heroImage ? 'imageBackg' : ''}>
+<section class="heroSection" class:list={heroImage ? 'imageBackg' : ''}>
   {heroImage ? <img src={imagePath}/> : ''}
   <div>
     <h1>{heroTitle}</h1>
@@ -41,16 +41,38 @@ try {
   document.getElementById('btnHero')?.addEventListener("click", scrollToContent);
 </script>
 
+<style is:global>
+  .heroSection:not(.imageBackg) button {
+    background-color: var(--colors-accent_contrast);
+  }
+  .heroSection:not(.imageBackg) button:hover {
+    background-color: var(--colors-accent_contrast_dark);
+  }
+  .heroSection:not(.imageBackg) button:focus, .heroSection:not(.imageBackg) button:active {
+    background-color: var(--colors-accent_contrast_darker);
+    outline: 2px solid var(--colors-accent_contrast);
+  }
+</style>
+
 <style>
   section {
     height: calc(100vh - var(--padding_8x));
     display: grid;
     align-items: center;
-    background: transparent;
+  }
+
+  section::after {
+    position: absolute;
+    content: '';
+    inset: 0 0 0 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(45deg, #6FA3FF, #836FFF, #CB6FFF);
+    z-index: -2;
   }
 
   section.imageBackg * {
-    color: var(--colors_background);
+    color: var(--colors-page_background);
   }
 
   section.imageBackg::before {
@@ -60,20 +82,23 @@ try {
   section::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(var(--colors_background) 10%, #D5FFF3, #ECEBFF, var(--colors_background) 90%);
-    z-index: -1;
+    inset: 0 0 0 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+      linear-gradient(45deg, var(--dot-color) 25%, transparent 25%),
+      linear-gradient(-45deg, var(--dot-color) 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, var(--dot-color) 25%),
+      linear-gradient(-45deg, transparent 75%, var(--dot-color) 25%);
+    background-size: var(--square-unit) var(--square-unit);
+    background-position: 0 0, var(--offset-unit) 0, var(--offset-unit) calc(-1 * var(--offset-unit)), 0px var(--offset-unit);
+    filter: opacity(0.05);
+    overflow: hidden;
   }
 
   img {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0 0 0 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -94,10 +119,18 @@ try {
 
   h1 {
     font-size: var(--font-size_display);
+    color: white;
   }
 
   p {
     font-size: var(--font-size_medium);
     margin-bottom: 24px;
+    color: white;
+  }
+
+  @media screen and (max-width: 672px) {
+    section::before {
+      filter: opacity(0.025);
+    }
   }
 </style>
