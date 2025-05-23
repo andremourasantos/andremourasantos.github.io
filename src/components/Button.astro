@@ -7,21 +7,23 @@ interface Props {
   btnSize:"S" | "M" | "L";
   btnDisabled?:boolean;
   btnIcon?:IconName;
+  btnType?:"primary" | "secondary" | "tertiary"|"hero";
 }
 
-const { id, btnText, btnSize, btnDisabled, btnIcon } = Astro.props;
+const { id, btnText, btnSize, btnDisabled, btnIcon, btnType } = Astro.props;
 ---
-<button id={id} class:list={[
+<button disabled={btnDisabled} id={id} class:list={[
   btnIcon ? "hasIcon" : "",
   btnSize === "L" ? "size_L" : "",
-  btnSize === "M" ? "size_M" : ""
+  btnSize === "M" ? "size_M" : "",
+  btnType
 ]}>
   {!btnText ? <span>Saiba mais</span>
     : btnText === "none" ? "" : <span>{btnText}</span>
   }
 
   {btnIcon ?
-    <Icon iconName={btnIcon} iconSize={btnSize === "L" ? 16 : 14}/> :
+    <Icon iconName={btnIcon} iconSize={btnSize === "L" ? 16 : 14} iconColor={btnDisabled ? '#8D8D8D' : btnType === "tertiary" ? "#9370FF" : "white"}/> :
     ""
   }
 </button>
@@ -38,33 +40,77 @@ const { id, btnText, btnSize, btnDisabled, btnIcon } = Astro.props;
     justify-content: center;
   }
 
+  button:disabled {
+    cursor: not-allowed;
+    background-color: var(--colors-button_background_disabled) !important;
+  }
+
+  button:disabled span {
+    color: var(--colors-button_text_disabled) !important;
+  }
+
   button {
     width: fit-content;
     height: 32px;
     display: flex;
     align-items: center;
     padding: 0px var(--padding_8x) 0px var(--padding_2x);
-    color: white;
-    background-color: var(--colors-accent);
+    background-color: var(--colors-button_background);
     box-shadow: none;
     cursor: pointer;
     border: none;
     outline: 2px solid transparent;
-    outline-offset: 1px;
   }
 
-  button:hover {
+  button:hover:not(:disabled) {
     background-color: var(--colors-accent_dark);
   }
 
-  button:active, button:focus {
+  button:active:not(:disabled), button:focus:not(:disabled) {
     background-color: var(--colors-accent_darker);
     outline: 2px solid var(--colors-accent);
+    box-shadow:
+      inset 1px 1px white,
+      inset -1px -1px white;
+  }
+
+  button.secondary {
+    background-color: var(--colors-button_background_secondary);
+  }
+
+  button.secondary:hover:not(:disabled) {
+    background-color: var(--colors-button_background_secondary_dark);
+  }
+
+  button.secondary:active:not(:disabled), button.secondary:focus:not(:disabled) {
+    background-color: var(--colors-button_background_secondary_darker);
+  }
+
+  button.tertiary {
+    background-color: var(--colors-button_background_tertiary);
+    border: 1px solid var(--colors-button_background);
+  }
+
+  button.tertiary:not(:hover) span {
+    color: var(--colors-button_background);
+  }
+
+  button.hero {
+    background-color: var(--colors-button_background_hero);
+  }
+
+  button.hero:hover:not(:disabled) {
+    background-color: var(--colors-button_background_hero_hover);
+  }
+
+  button.hero:active:not(:disabled), button.hero:focus:not(:disabled) {
+    background-color: var(--colors-button_background_hero_active);
+    outline: 2px solid var(--colors-button_background_hero);
   }
 
   button span {
     font-size: 14px;
-    color: white;
+    color: var(--colors-button_text);
   }
 
   button.size_M {

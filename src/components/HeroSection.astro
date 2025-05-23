@@ -26,7 +26,7 @@ try {
     <h1>{heroTitle}</h1>
     <p>{heroSubtitle}</p>
     <slot/>
-    <Button btnSize="L" id="btnHero" btnIcon={heroBtnIcon} btnText={heroBtnText}/>
+    <Button btnSize="L" id="btnHero" btnIcon={heroBtnIcon} btnText={heroBtnText} btnType={heroImage ? "primary" : "hero"}/>
   </div>
 </section>
 
@@ -40,19 +40,6 @@ try {
 
   document.getElementById('btnHero')?.addEventListener("click", scrollToContent);
 </script>
-
-<style is:global>
-  .heroSection:not(.imageBackg) button {
-    background-color: var(--colors-accent_contrast);
-  }
-  .heroSection:not(.imageBackg) button:hover {
-    background-color: var(--colors-accent_contrast_dark);
-  }
-  .heroSection:not(.imageBackg) button:focus, .heroSection:not(.imageBackg) button:active {
-    background-color: var(--colors-accent_contrast_darker);
-    outline: 2px solid var(--colors-accent_contrast);
-  }
-</style>
 
 <style>
   section {

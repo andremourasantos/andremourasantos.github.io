@@ -22,14 +22,27 @@
   --colors-page_background: #FFFFFF;
   --colors-accent: hsl(248, 100%, 72%);
   --colors-accent_dark: hsl(248, 100%, 67%);
-  --colors-accent_darker: hsl(248, 100%, 62%);
+  --colors-accent_darker: hsl(248, 100%, 57%);
   --colors-accent_contrast: hsl(249, 53%, 21%);
   --colors-accent_contrast_dark: hsl(249, 53%, 16%);
   --colors-accent_contrast_darker: hsl(249, 53%, 11%);
   --colors-title: #141414;
   --colors-paragraph: #1F1F1F;
   --colors-hero-gradient: white;
-  --colors-border_line_color: #CCCCCC;
+  --colors-border_line_color: hsl(0, 0%, 80%);
+
+  /*BUTTON*/
+  --colors-button_background: var(--colors-accent);
+  --colors-button_background_secondary: hsl(0, 0%, 22%);
+  --colors-button_background_secondary_dark: hsl(0, 0%, 32%);
+  --colors-button_background_secondary_darker: hsl(0, 0%, 42%);
+  --colors-button_background_hero: hsl(249, 53%, 21%);
+  --colors-button_background_hero_hover: hsl(249, 53%, 31%);
+  --colors-button_background_hero_active: hsl(249, 53%, 51%);
+  --colors-button_background_tertiary: transparent;
+  --colors-button_background_disabled: #C6C6C6;
+  --colors-button_text: var(--colors-page_background);
+  --colors-button_text_disabled: #8D8D8D;
 
   /*PADDINGS*/
   --padding_04x: 2px;
