@@ -1,5 +1,5 @@
 ---
-import { Icon as IconType, ChevronDown, ExternalLink, Link, Menu, Undo2, CalendarFold, SquareUser, Info } from "@lucide/astro";
+import { Icon as IconType, ChevronDown, ExternalLink, Link, Menu, Undo2, CalendarFold, SquareUser, Info, MessageSquareShare, X, BellPlus } from "@lucide/astro";
 
 interface Props {
   iconSize?:14|16;
@@ -26,10 +26,12 @@ const iconMap:Record<IconName, typeof IconType> = {
   "CalendarFold": CalendarFold,
   "SquareUser": SquareUser,
   "Info": Info,
+  "MessageSquareShare": MessageSquareShare,
+  "X": X,
+  "BellPlus": BellPlus
 };
 
 const IconComponentToRender = iconName ? iconMap[iconName] : "ChevronDown";
-
 ---
 
 {(iconName !== "Facebook" && iconName !== "LinkedIn" && iconName !== "Twitter" && iconName !== "WhatsApp") ? <IconComponentToRender color={iconColor} size={iconSize}/> : <img src={await importCustomSVG(iconName)} height={iconSize} width={iconSize}/>}

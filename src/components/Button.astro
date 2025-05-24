@@ -28,6 +28,12 @@ const { id, btnText, btnSize, btnDisabled, btnIcon, btnType } = Astro.props;
   }
 </button>
 
+<style is:global>
+  button.tertiary:hover > svg, button.tertiary:focus > svg {
+    stroke: white;
+  }
+</style>
+
 <style>
   button.hasIcon {
     gap: 32px;
