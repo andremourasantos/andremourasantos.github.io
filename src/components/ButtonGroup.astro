@@ -1,0 +1,111 @@
+---
+import Button from "./Button.astro";
+
+interface Props {
+  groupTemplate?:"commingSoonArticle",
+  groupTemplateFirstBtnId?:string,
+  groupTemplateSecondBtnId?:string,
+  groupTemplateThirdBtnId?:string,
+  groupTemplateBtnSize?:ButtonSize,
+  groupOrientation:"row"|"column"|"rowAdaptable",
+  groupOrientationRowToColumnAdaptable?:boolean,
+  groupBtnQuantity:2|3
+}
+
+const { groupTemplate, groupTemplateBtnSize, groupTemplateFirstBtnId, groupTemplateSecondBtnId, groupTemplateThirdBtnId, groupOrientation, groupOrientationRowToColumnAdaptable, groupBtnQuantity } = Astro.props;
+---
+<div class={`btnGroup ${groupOrientation} qtn${groupBtnQuantity}`}>
+  {!groupTemplate ? <slot/> : ''}
+  {
+    (groupTemplate === "commingSoonArticle" && groupTemplateBtnSize)?
+    <Button id={groupTemplateFirstBtnId} btnSize={groupTemplateBtnSize} btnText="Ler mais" btnType="primary" btnDisabled={true}/>
+    <Button id={groupTemplateSecondBtnId} btnSize={groupTemplateBtnSize} btnText="Notificar-me" btnType="tertiary"/>
+    : ""
+  }
+</div>
+
+<script>
+  
+
+  let notifyMeBtn = Array.from(document.querySelectorAll(".btnGroup button")).filter(btn => {
+    if(btn.innerHTML.includes("Notificar-me")){
+      return btn;
+    };
+  });
+
+  async function subscribeToArticleRelease(articleId:string) {
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    let email = window.prompt('Insira seu endereço de e-mail para receber uma notificação quando o artigo ficar pronto:\n\nE-mail:');
+
+    if(!emailRegex.test(email!) || !email){
+      return alert("Algo não parece certo...\nConfira o e-mail inserido e tente novamente.");
+    }
+
+    let confirm = window.confirm("Você receberá apenas a notificação referente a este artigo, nada mais. Caso queria saber quando outros artigos forem ao ar, é necessário que se cadastre individualmente em cada um deles.\n\nVocê pode conferir como seu e-mail é tratado na Política de Privacidade.");
+    if(confirm === false){
+      return alert("Ok, nada foi feito.")
+    }
+
+    try {
+      const register = await fetch(`${import.meta.env.PUBLIC_WEBHOOK}?email=${encodeURI(email)}&articleId=${encodeURI(articleId)}`);
+      if(!register.ok) {
+        throw new Error();
+      }
+    } catch (error) {
+      return alert("Ocorreu um erro ao registrar o seu interesse, por favor, tente novamente.");
+    }
+
+    return alert("Seu e-mail foi cadastrado com sucesso! Fico feliz que tenha se interessado.\n\nVocê será um dois primeiros a saber quando o artigo for ao ar.");
+  }
+
+  notifyMeBtn.forEach(btn => {
+    btn.addEventListener("click", () => {
+      subscribeToArticleRelease(btn.id)
+    })
+  })
+</script>
+
+<style is:global>
+  div.btnGroup button {
+    width: 100%;
+  }
+</style>
+
+<style>
+  div {
+    display: grid;
+    gap: 1px;
+    width: fit-content;
+    height: fit-content;
+  }
+
+  div.row.qtn2, div.rowAdaptable.qtn2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  div.row.qtn3, div.rowAdaptable.qtn3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  div.column.qtn2 {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  div.column.qtn3 {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  @media screen and (max-width: 320px) {
+    div.rowAdaptable.qtn2 {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, 1fr);
+    }
+
+    div.rowAdaptable.qtn3 {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, 1fr);
+    }
+  }
+</style>

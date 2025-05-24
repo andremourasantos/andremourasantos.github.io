@@ -4,7 +4,7 @@ import Icon from "./Icon.astro";
 interface Props {
   id?:string;
   btnText?:string;
-  btnSize:"S" | "M" | "L";
+  btnSize:ButtonSize;
   btnDisabled?:boolean;
   btnIcon?:IconName;
   btnType?:"primary" | "secondary" | "tertiary"|"hero";
@@ -78,6 +78,7 @@ const { id, btnText, btnSize, btnDisabled, btnIcon, btnType } = Astro.props;
     box-shadow:
       inset 1px 1px white,
       inset -1px -1px white;
+    outline-offset: 0px;
   }
 
   button.secondary {
@@ -94,7 +95,8 @@ const { id, btnText, btnSize, btnDisabled, btnIcon, btnType } = Astro.props;
 
   button.tertiary {
     background-color: var(--colors-button_background_tertiary);
-    border: 1px solid var(--colors-button_background);
+    outline: 1px solid var(--colors-button_background);
+    outline-offset: -1px;
   }
 
   button.tertiary:not(:hover) span {
@@ -112,6 +114,10 @@ const { id, btnText, btnSize, btnDisabled, btnIcon, btnType } = Astro.props;
   button.hero:active:not(:disabled), button.hero:focus:not(:disabled) {
     background-color: var(--colors-button_background_hero_active);
     outline: 2px solid var(--colors-button_background_hero);
+  }
+
+  button:active:not(:disabled) span, button:focus:not(:disabled) span {
+    color: var(--colors-button_text);
   }
 
   button span {

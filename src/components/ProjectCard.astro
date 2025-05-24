@@ -1,15 +1,17 @@
 ---
 import Button from "./Button.astro";
+import ButtonGroup from "./ButtonGroup.astro";
 
 interface Props {
   title:string,
   description:string,
   imageName:string,
+  postId:string,
   link:string,
   isDraft:boolean
 }
 
-const { title, description, imageName, link, isDraft } = Astro.props;
+const { title, description, imageName, postId, link, isDraft } = Astro.props;
 
 let imagePath;
 try {
@@ -21,9 +23,14 @@ try {
 <div class="card" class:list={isDraft ? 'isDraftContent' : ''}>
   <img src={imagePath} alt={imagePath}>
   <div class="content">
-    <h3>{title}</h3>
+    <h3>{title} {isDraft ? " (em breve)" : ""}</h3>
     <p>{description}</p>
-    <a href={link} rel="next"><Button btnSize="S" btnText="Ler mais" btnType="tertiary"/></a>
+    {
+      isDraft ?
+      <ButtonGroup groupTemplate="commingSoonArticle" groupTemplateBtnSize="S" groupTemplateSecondBtnId={postId} groupOrientation="rowAdaptable" groupBtnQuantity={2}/>
+      :
+      <a href={link} rel="next"><Button btnSize="S" btnText="Ler mais" btnType="tertiary"/></a>
+    }
   </div>
 </div>
 
@@ -42,9 +49,7 @@ try {
     object-fit: cover;
   }
 
-  .isDraftContent {
-    background: #ffcc00 !important;
-  }
+  
 
   .content {
     padding: var(--padding_2x);
