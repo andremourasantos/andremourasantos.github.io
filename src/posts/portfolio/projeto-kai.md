@@ -2,7 +2,7 @@
 isDraft: false
 title: "Projeto Kai"
 description: "Assistente de IA especializado para atividades do Marketing (MVP), como projeto de aprendizagem."
-imageName: "test"
+imageName: "rui-xu-XabW1JtTJ3M-unsplash"
 pubDate: 2025-02-20
 updatedDate: 2025-05-17
 tags: ["programação"]

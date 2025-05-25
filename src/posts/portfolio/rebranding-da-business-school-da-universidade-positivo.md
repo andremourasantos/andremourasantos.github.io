@@ -2,7 +2,7 @@
 isDraft: false
 title: "Rebranding da Business School da Universidade Positivo"
 description: "Para auxiliar e orientar no desenvolvimento do projeto, a professora Dra. Fabiana Mariutti, foi convidada."
-imageName: "dom-fou-YRMWVcdyhmI-unsplash"
+imageName: "Whisk_a77fb29f4a"
 pubDate: 2021-09-25
 updatedDate: 2025-05-01
 tags: ["design"]

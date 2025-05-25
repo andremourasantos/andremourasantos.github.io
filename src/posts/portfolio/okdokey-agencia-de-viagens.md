@@ -2,7 +2,7 @@
 isDraft: false
 title: "OKDOKEY: agência de viagens"
 description: "Demonstração de site responsivo para uma agência de viagens moderna."
-imageName: "okdokey-agencia-de-viagens_hero-section"
+imageName: "Whisk_b53da27474"
 pubDate: 2023-12-25
 updatedDate: 2025-05-01
 tags: ["design"]

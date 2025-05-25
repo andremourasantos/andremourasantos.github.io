@@ -2,7 +2,7 @@
 isDraft: false
 title: "Gerador de link para WhatsApp"
 description: "Aprimore a experiência do seu cliente usando a API oficial do WhatsApp, de graça e sem anúncios."
-imageName: "lonely-blue-z3jCMSm4Rrc-unsplash"
+imageName: "Whisk_fe9fc08543"
 pubDate: 2022-09-04
 updatedDate: 2025-05-01
 tags: ["programação"]

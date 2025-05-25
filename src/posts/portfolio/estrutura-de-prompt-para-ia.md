@@ -2,7 +2,7 @@
 isDraft: false
 title: "Estrutura de PROMPT para IA"
 description: "Aprenda a criar prompts para maximizar a eficiência da IA em fluxos de trabalho e tarefas repetitivas."
-imageName: "test"
+imageName: "Whisk_11a9aff5eb"
 pubDate: 2025-05-17
 updatedDate: 2025-05-17
 tags: ["automação"]
