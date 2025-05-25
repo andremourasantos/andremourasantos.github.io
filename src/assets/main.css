@@ -115,8 +115,8 @@ a:has(button) {
     --font-size_x-large: 32px;
     --font-size_large: 24px;
     --font-size_medium: 20px;
-    --font-size_small: 16px;
-    --font-size_x-small: 12px;
+    --font-size_small: 18px;
+    --font-size_x-small: 14px;
   }
 }
 
@@ -126,8 +126,8 @@ a:has(button) {
     --font-size_display: 28px;
     --font-size_x-large: 28px;
     --font-size_large: 20px;
-    --font-size_medium: 16px;
-    --font-size_small: 16px;
-    --font-size_x-small: 12px;
+    --font-size_medium: 18px;
+    --font-size_small: 18px;
+    --font-size_x-small: 14px;
   }
 }

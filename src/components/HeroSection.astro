@@ -5,12 +5,12 @@ interface Props {
   heroTitle:string;
   heroSubtitle:string;
   heroImage?:string;
+  heroCustomButtons?:boolean,
   heroBtnText?:string;
   heroBtnIcon?:IconName;
-  heroBtnLinkPath?:string;
 }
 
-const { heroTitle, heroSubtitle, heroImage, heroBtnText, heroBtnIcon = "ChevronDown", heroBtnLinkPath } = Astro.props;
+const { heroTitle, heroSubtitle, heroImage, heroCustomButtons, heroBtnText, heroBtnIcon = "ChevronDown" } = Astro.props;
 
 let imagePath;
 try {
@@ -26,7 +26,11 @@ try {
     <h1>{heroTitle}</h1>
     <p>{heroSubtitle}</p>
     <slot/>
-    <Button btnSize="L" id="btnHero" btnIcon={heroBtnIcon} btnText={heroBtnText} btnType={heroImage ? "primary" : "hero"}/>
+    {
+      !heroCustomButtons ?
+      <Button btnSize="L" id="btnHero" btnIcon={heroBtnIcon} btnText={heroBtnText} btnType={heroImage ? "primary" : "hero"}/>
+      : ""
+    }
   </div>
 </section>
 

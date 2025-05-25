@@ -8,10 +8,8 @@ interface Props {
 const { quoteText, quoteAuthor, quouteAuthorWork } = Astro.props;
 ---
 <div class="quote-container">
-  <div>
-    <q>{quoteText}</q>
-    <p><strong>{quoteAuthor}</strong><span>, {quouteAuthorWork}.</span></p>
-  </div>
+  <q>{quoteText}</q>
+  <p><strong>{quoteAuthor}</strong><span>, {quouteAuthorWork}.</span></p>
 </div>
 
 <style>
@@ -40,7 +38,7 @@ const { quoteText, quoteAuthor, quouteAuthorWork } = Astro.props;
       linear-gradient(-45deg, transparent 75%, var(--dot-color) 25%);
     background-size: var(--square-unit) var(--square-unit);
     background-position: 0 0, var(--offset-unit) 0, var(--offset-unit) calc(-1 * var(--offset-unit)), 0px var(--offset-unit);
-    filter: opacity(0.25);
+    filter: opacity(0.5);
     z-index: -1;
   }
 
