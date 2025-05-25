@@ -1,0 +1,16 @@
+---
+import ButtonGroup from "./ButtonGroup.astro";
+import Button from "./Button.astro";
+
+interface Props {
+  btnSize:ButtonSize,
+  articleId:string,
+  articleTitle:string
+}
+
+const { btnSize, articleId, articleTitle } = Astro.props;
+---
+<ButtonGroup groupOrientation="rowAdaptable" groupBtnQuantity={2}>
+  <Button btnSize={btnSize} btnText="Ler mais" btnType="primary" btnDisabled={true}/>
+  <Button id={articleId} data-article-title={articleTitle} btnSize={btnSize} btnText="Notifique-me" btnType="tertiary"/>
+</ButtonGroup>

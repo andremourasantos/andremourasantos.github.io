@@ -1,5 +1,6 @@
 ---
 import Button from "./Button.astro";
+import ComingSoonButtonArticleGroup from "./ComingSoonButtonArticleGroup.astro";
 import ButtonGroup from "./ButtonGroup.astro";
 
 interface Props {
@@ -21,13 +22,17 @@ try {
 }
 ---
 <div class="card" class:list={isDraft ? 'isDraftContent' : ''}>
-  <img src={imagePath} alt={imagePath}>
+  {
+    !isDraft ? <img src={imagePath} alt={imagePath}>
+    :
+    <div class="isDraft">&gt; Em breve &lt;</div>
+  }
   <div class="content">
     <h3>{title} {isDraft ? " (em breve)" : ""}</h3>
     <p>{description}</p>
     {
       isDraft ?
-      <ButtonGroup groupTemplate="commingSoonArticle" groupTemplateBtnSize="S" groupTemplateSecondBtnId={postId} groupOrientation="rowAdaptable" groupBtnQuantity={2}/>
+      <ComingSoonButtonArticleGroup btnSize="S" articleId={postId} articleTitle={title}/>
       :
       <a href={link} rel="next"><Button btnSize="S" btnText="Ler mais" btnType="tertiary"/></a>
     }
@@ -43,13 +48,19 @@ try {
     border: 1px solid var(--colors-border_line_color);
   }
 
-  img {
+  img, .isDraft {
     width: 100%;
     aspect-ratio: 16/9;
     object-fit: cover;
   }
 
-  
+  .isDraft {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid var(--colors-border_line_color);
+    background-color: #F5F5F5;
+  }
 
   .content {
     padding: var(--padding_2x);
