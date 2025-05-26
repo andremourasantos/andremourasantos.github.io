@@ -12,5 +12,5 @@ const { btnSize, articleId, articleTitle } = Astro.props;
 ---
 <ButtonGroup groupOrientation="rowAdaptable" groupBtnQuantity={2}>
   <Button btnSize={btnSize} btnText="Ler mais" btnType="primary" btnDisabled={true}/>
-  <Button id={articleId} data-article-title={articleTitle} btnSize={btnSize} btnText="Notifique-me" btnType="tertiary"/>
+  <Button id={articleId} data-article-title={articleTitle} data-btn="subscribeToNewsletter" btnSize={btnSize} btnText="Me avise" btnType="tertiary"/>
 </ButtonGroup>

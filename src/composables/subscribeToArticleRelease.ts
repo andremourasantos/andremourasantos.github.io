@@ -1,8 +1,5 @@
-async function subscribeToArticleRelease(articleId:string, articleTitle:string) {
-  const btn = document.getElementById(articleId);
-
-  if(!btn){return};
-  
+async function subscribeToArticleRelease(event:Event, articleId:string, articleTitle:string) {
+  const targetButton = event.currentTarget as HTMLButtonElement;
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   let email = window.prompt(`Insira seu endereço de e-mail para receber uma notificação quando o artigo "${articleTitle}" ficar pronto!\n\nE-mail:`);
 
@@ -23,23 +20,52 @@ async function subscribeToArticleRelease(articleId:string, articleTitle:string) 
       throw new Error();
     }
   } catch (error) {
-    btn.removeAttribute("disabled");
     return alert("Ocorreu um erro ao registrar o seu interesse, por favor, tente novamente.");
   }
+
+  targetButton.disabled = true;
+  saveArticleSubscriptionToLocalStorage(articleId);
   
   return alert("Seu e-mail foi cadastrado com sucesso! Fico feliz que tenha se interessado.\n\nVocê será um dois primeiros a saber quando o artigo for ao ar.");
 }
 
+const subscriptions = localStorage.getItem("articleSubscriptions");
+
+function saveArticleSubscriptionToLocalStorage(articleId:string) {
+  if(subscriptions) {
+    const subscriptionsArray = subscriptions.split(",");
+    subscriptionsArray.push(articleId);
+    localStorage.setItem("articleSubscriptions", subscriptionsArray.toString());
+  } else {
+    localStorage.setItem("articleSubscriptions", articleId);
+  }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
-  let notifyMeBtn = Array.from(document.querySelectorAll(".btnGroup button")).filter(btn => {
-    if(btn.innerHTML.includes("Notifique-me")){
+  let notifyMeBtn = Array.from(document.querySelectorAll("button")).filter(btn => {
+    if(btn.dataset.btn === "subscribeToNewsletter"){
       return btn;
     };
   });
 
-  notifyMeBtn.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      subscribeToArticleRelease(btn.id, (btn as HTMLElement).dataset.articleTitle || "");
+  if(subscriptions) {
+    const subscriptionsArray = subscriptions.split(",");
+    notifyMeBtn.forEach((btn) => {
+      const btnEl = btn as HTMLButtonElement;
+      subscriptionsArray.forEach(sub => {
+        if(btnEl.id === sub){
+          btnEl.disabled = true;
+        };
+      })
     })
+  };
+
+  notifyMeBtn.forEach((btn) => {
+    const btnEl = btn as HTMLButtonElement;
+    if(!btnEl.disabled){
+      btnEl.addEventListener("click", (event) => {
+        subscribeToArticleRelease(event, btnEl.id || "geral", btnEl.dataset.articleTitle || "Geral");
+      });
+    };
   });
 });

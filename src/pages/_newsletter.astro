@@ -13,25 +13,27 @@ import Quote from "../components/Quote.astro";
     <Quote quoteText='Recomendo o André sem reservas para qualquer oportunidade que exija competências em marketing digital, analytics e gestão de dados. Tenho plena confiança de que ele continuará a superar expectativas e agregar valor em qualquer projeto ou organização' quoteAuthor='Bruno Malvezzi' quouteAuthorWork='Gerente de projetos em Hotel Trianon Paulista'/>
 
     <SiteSection title="Pensada para profisisonais da área" description="Quibusdam ullam porro doloribus aut tempore, eos tenetur inventore, incidunt nisi cumque omnis, quam cupiditate quaerat quo eaque enim itaque? Pariatur illo et, aspernatur saepe earum culpa ea molestiae quam." imageAltText="s">
-      <Button btnSize="M" btnIcon="BellPlus" btnText="Notifique-me"/>
+      <Button btnSize="M" btnIcon="BellPlus" data-btn="subscribeToNewsletter" btnText="Notifique-me"/>
     </SiteSection>
 
     <Quote quoteText='Recomendo o André sem reservas para qualquer oportunidade que exija competências em marketing digital, analytics e gestão de dados. Tenho plena confiança de que ele continuará a superar expectativas e agregar valor em qualquer projeto ou organização' quoteAuthor='Bruno Malvezzi' quouteAuthorWork='Gerente de projetos em Hotel Trianon Paulista'/>
 
     <SiteSection title="Insights para o seu negócio" description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit quasi fugiat quod autem necessitatibus. Sapiente eos reiciendis quo at numquam." imageAltText="s" orientation="RTL">
-      <Button btnSize="M" btnIcon="BellPlus" btnText="Notifique-me"/>
+      <Button btnSize="M" btnIcon="BellPlus" data-btn="subscribeToNewsletter" btnText="Notifique-me"/>
     </SiteSection>
 
     <Quote quoteText='Recomendo o André sem reservas para qualquer oportunidade que exija competências em marketing digital, analytics e gestão de dados. Tenho plena confiança de que ele continuará a superar expectativas e agregar valor em qualquer projeto ou organização' quoteAuthor='Bruno Malvezzi' quouteAuthorWork='Gerente de projetos em Hotel Trianon Paulista'/>
 
     <SiteSection title="Ferramentas para empresas e freelancers" description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit quasi fugiat quod autem necessitatibus. Sapiente eos reiciendis quo at numquam." imageAltText="s">
-      <Button btnSize="M" btnIcon="BellPlus" btnText="Notifique-me"/>
+      <Button btnSize="M" btnIcon="BellPlus" data-btn="subscribeToNewsletter" btnText="Notifique-me"/>
     </SiteSection>
 
     <Quote quoteText='Recomendo o André sem reservas para qualquer oportunidade que exija competências em marketing digital, analytics e gestão de dados. Tenho plena confiança de que ele continuará a superar expectativas e agregar valor em qualquer projeto ou organização' quoteAuthor='Bruno Malvezzi' quouteAuthorWork='Gerente de projetos em Hotel Trianon Paulista'/>
 
     <SiteSection title="Atualizações periódicas" description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit quasi fugiat quod autem necessitatibus. Sapiente eos reiciendis quo at numquam." imageAltText="s" orientation="RTL">
-      <Button btnSize="M" btnIcon="BellPlus" btnText="Notifique-me"/>
+      <Button btnSize="M" btnIcon="BellPlus" data-btn="subscribeToNewsletter" btnText="Notifique-me"/>
     </SiteSection>
   </ContentHolder>
 </Default>
+
+<script src="../composables/subscribeToArticleRelease.ts"></script>
