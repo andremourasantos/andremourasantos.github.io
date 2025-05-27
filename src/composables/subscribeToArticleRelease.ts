@@ -1,5 +1,6 @@
 async function subscribeToArticleRelease(event:Event, articleId:string, articleTitle:string) {
   const targetButton = event.currentTarget as HTMLButtonElement;
+  const loadingStateButton = document.querySelector(`[data-btn-article-id="${articleId}"][data-btn="loadingSubscribToNewsletter"]`) as HTMLButtonElement;
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   let email = window.prompt(`Insira seu endereço de e-mail para receber uma notificação quando o artigo "${articleTitle}" ficar pronto!\n\nE-mail:`);
 
@@ -8,6 +9,9 @@ async function subscribeToArticleRelease(event:Event, articleId:string, articleT
   } else if (!emailRegex.test(email)){
     return alert("Algo não parece certo...\nConfira o e-mail inserido e tente novamente.");
   }
+
+  targetButton.style.display = "none";
+  loadingStateButton.style.display = "flex";
 
   let confirm = window.confirm(`Você receberá apenas a notificação referente a este artigo. Caso queria saber quando outros artigos forem ao ar, é necessário que se cadastre individualmente em cada um deles.\n\nAo confirmar o seu cadastro, você concorda em receber emails esporádicos sobre novidades por aqui.\nVocê pode conferir como seu e-mail é tratado na Política de Privacidade.`);
   if(confirm === false){
@@ -20,11 +24,15 @@ async function subscribeToArticleRelease(event:Event, articleId:string, articleT
       throw new Error();
     }
   } catch (error) {
+    targetButton.style.display = "flex";
+    loadingStateButton.style.display = "none";
     return alert("Ocorreu um erro ao registrar o seu interesse, por favor, tente novamente.");
   }
 
+  loadingStateButton.style.display = "none";
   targetButton.disabled = true;
   saveArticleSubscriptionToLocalStorage(articleId);
+  dispatchSubscriptionEvent(articleId);
   
   return alert("Seu e-mail foi cadastrado com sucesso! Fico feliz que tenha se interessado.\n\nVocê será um dois primeiros a saber quando o artigo for ao ar.");
 }
@@ -41,6 +49,11 @@ function saveArticleSubscriptionToLocalStorage(articleId:string) {
   }
 }
 
+function dispatchSubscriptionEvent(articleId:string) {
+  const myEvent = new Event('subscribedTo-' + articleId);
+  document.dispatchEvent(myEvent);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   let notifyMeBtn = Array.from(document.querySelectorAll("button")).filter(btn => {
     if(btn.dataset.btn === "subscribeToNewsletter"){
@@ -54,6 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const btnEl = btn as HTMLButtonElement;
       subscriptionsArray.forEach(sub => {
         if(btnEl.id === sub){
+          dispatchSubscriptionEvent(sub);
           btnEl.disabled = true;
         };
       })

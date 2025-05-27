@@ -1,5 +1,5 @@
 ---
-import { Icon as IconType, ChevronDown, ExternalLink, Link, Menu, Undo2, CalendarFold, SquareUser, Info, MessageSquareShare, X, BellPlus } from "@lucide/astro";
+import { Icon as IconType, ChevronDown, ExternalLink, Link, Menu, Undo2, CalendarFold, SquareUser, Info, MessageSquareShare, X, BellPlus, Check, LoaderCircle } from "@lucide/astro";
 
 interface Props {
   iconSize?:14|16;
@@ -28,7 +28,9 @@ const iconMap:Record<IconName, typeof IconType> = {
   "Info": Info,
   "MessageSquareShare": MessageSquareShare,
   "X": X,
-  "BellPlus": BellPlus
+  "BellPlus": BellPlus,
+  "Check": Check,
+  "LoaderCircle": LoaderCircle
 };
 
 const IconComponentToRender = iconName ? iconMap[iconName] : "ChevronDown";

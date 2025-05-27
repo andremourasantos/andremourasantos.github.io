@@ -29,7 +29,7 @@ const { id, btnText, btnSize, btnDisabled, btnIcon, btnType, ...attrs } = Astro.
 </button>
 
 <style is:global>
-  button.tertiary:hover > svg, button.tertiary:focus > svg {
+  button.tertiary:hover:not(:disabled) > svg, button.tertiary:focus:not(:disabled) > svg {
     stroke: white;
   }
 </style>
@@ -136,5 +136,18 @@ const { id, btnText, btnSize, btnDisabled, btnIcon, btnType, ...attrs } = Astro.
 
   button.size_L span {
     font-size: 16px;
+  }
+</style>
+
+<!--ANIMATIONS-->
+<style is:global>
+  button[data-animation="loading"] > svg {
+    animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
   }
 </style>

@@ -12,5 +12,33 @@ const { btnSize, articleId, articleTitle } = Astro.props;
 ---
 <ButtonGroup groupOrientation="rowAdaptable" groupBtnQuantity={2}>
   <Button btnSize={btnSize} btnText="Ler mais" btnType="primary" btnDisabled={true}/>
-  <Button id={articleId} data-article-title={articleTitle} data-btn="subscribeToNewsletter" btnSize={btnSize} btnText="Me avise" btnType="tertiary"/>
+  <Button id={articleId} data-article-title={articleTitle} data-btn-article-id={articleId} data-btn="subscribeToNewsletter" btnSize={btnSize} btnText="Me avise" btnType="tertiary"/>
+  <Button data-article-title={articleTitle} data-btn-article-id={articleId} data-btn="subscribedToNewsletter" btnSize={btnSize} btnText="Me avise" btnIcon="Check" btnType="tertiary" btnDisabled={true}/>
+  <Button data-article-title={articleTitle} data-btn-article-id={articleId} data-btn="loadingSubscribToNewsletter" data-animation="loading" btnSize={btnSize} btnText="Me avise" btnIcon="LoaderCircle" btnType="tertiary" btnDisabled={true}/>
 </ButtonGroup>
+
+<script define:vars={{ articleId: articleId }} type="module">
+  const notiButton = document.querySelectorAll(`[data-btn-article-id="${articleId}"][data-btn="subscribeToNewsletter"]`);
+  const notiOkButton = document.querySelectorAll(`[data-btn-article-id="${articleId}"][data-btn="subscribedToNewsletter"]`);
+
+  document.addEventListener(`subscribedTo-${articleId}`, () => {
+    if(notiButton.length !== 0 && notiOkButton.length !== 0){
+      console.log(1)
+      notiButton.forEach(btn => {
+        btn.style.display = "none";
+      })
+
+      notiOkButton.forEach(btn => {
+        btn.style.display = "flex";
+      })
+    } else {
+      console.log(2)
+    }
+  });
+</script>
+
+<style>
+  button[data-btn="subscribedToNewsletter"], button[data-btn="loadingSubscribToNewsletter"] {
+    display: none;
+  }
+</style>
