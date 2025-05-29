@@ -52,7 +52,7 @@ Texto.
 
 ### Parametrização dos links
 
-Texto + [utilização de UTMs](/portfolio/criador-de-utms).
+Texto + [utilização de UTMs](/portfolio/traqueamento-de-leads-a-partir-de-utms).
 
 ### Rastreamento de leads no CRM
 

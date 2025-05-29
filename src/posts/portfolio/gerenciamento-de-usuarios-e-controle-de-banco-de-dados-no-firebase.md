@@ -1,7 +1,7 @@
 ---
 isDraft: true
-title: "Lista de compras"
-description: "MVP para aprendizagem sobre gerenciamento de bancos de dados e autenticação de usuários."
+title: "Gerenciamento de usuários e Banco de Dados no Google Firebase"
+description: "MVP para aprendizagem das funcionalidades do Google Cloud Platform (GCP) através do Firebase JS SDK v9."
 imageName: "test"
 pubDate: 2024-01-07
 updatedDate: 2025-05-01

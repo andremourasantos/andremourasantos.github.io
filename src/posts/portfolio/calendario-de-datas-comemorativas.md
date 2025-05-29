@@ -1,6 +1,6 @@
 ---
 isDraft: true
-title: "Calendário de Datas comemorativas"
+title: "Calendário de Datas Comemorativas"
 description: "Tome controle das suas ações de Inbound Marketing planejando-as com antecedência."
 imageName: "towfiqu-barbhuiya-bwOAixLG0uc-unsplash"
 pubDate: 2024-01-03
@@ -140,7 +140,7 @@ Um calendário de datas comemorativas é uma peça fundamental de qualquer estra
 * **Automação de Marketing:** utilize o Calendário em conjunto ferramentas de automação de Marketing, como RD Station Marketing ou Make.com, para enviar e-mails personalizados, criar fluxos de nutrição e otimizar suas campanhas com base em datas comemorativas.
 * **Análise de dados:** use ferramentas de análise de dados, como Google Analytics ou Meta Business Suite, para monitorar o desempenho dos seus posts e campanhas e identificar oportunidades de melhoria.
 * **SEO:** otimize seu conteúdo de blog para os mecanismos de busca, usando palavras-chave relevantes para cada data comemorativa e planeja os artigos com antecedência.
-* **Tráfego pago:** use as datas comemorativas para criar campanhas de tráfego pago segmentadas e direcionadas ao seu público-alvo. Aqui é importante não se esquecer de [utilizar UTMs](criador-de-utms)!
+* **Tráfego pago:** use as datas comemorativas para criar campanhas de tráfego pago segmentadas e direcionadas ao seu público-alvo. Aqui é importante não se esquecer de [utilizar UTMs](/portfolio/traqueamento-de-leads-a-partir-de-utms)!
 
 ##   Domine o Calendário, Domine seu Marketing
 Um calendário de datas comemorativas é muito mais do que uma simples ferramenta de organização. É um guia estratégico que te permite planejar, criar, engajar e alcançar resultados reais no seu Marketing de conteúdo.

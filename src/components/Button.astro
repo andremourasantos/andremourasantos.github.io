@@ -23,7 +23,7 @@ const { id, btnText, btnSize, btnDisabled, btnIcon, btnType, ...attrs } = Astro.
   }
 
   {btnIcon ?
-    <Icon iconName={btnIcon} iconSize={btnSize === "L" ? 16 : 14} iconColor={btnDisabled ? '#8D8D8D' : btnType === "tertiary" ? "#9370FF" : "white"}/> :
+    <Icon iconName={btnIcon} iconSize={16} iconColor={btnDisabled ? '#8D8D8D' : btnType === "tertiary" ? "#9370FF" : "white"}/> :
     ""
   }
 </button>

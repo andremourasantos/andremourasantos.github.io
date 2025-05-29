@@ -1,7 +1,7 @@
 ---
 isDraft: true
 title: "Meu site profissional (2023)"
-description: "Uma reconstrução completa de como eu me apresento para o mercado de trabalho."
+description: "Explorando o mercado de freelancer e  experimentando estilos visuais disruptivos no Web Design."
 imageName: "cytonn-photography-n95VMLxqM2I-unsplash"
 pubDate: 2023-10-16
 updatedDate: 2025-05-01
@@ -64,7 +64,7 @@ A mudança mais aparente entre os sites é claramente a identidade visual.
 
 Para o novo visual, apliquei conceitos de *neumorphism*, buscando um visual moderno e minimalista.
 
-Também não deixei de lado a acessibilidade na Web ([que aprendi com outros projetos](/portfolio/site-para-oftalmologista)) para garantir que o site fosse utilizável por todos.
+Também não deixei de lado a acessibilidade na Web ([que aprendi com outros projetos](/portfolio/acessibilidade-em-primeiro-lugar-site-para-oftalmologista)) para garantir que o site fosse utilizável por todos.
 
 [PRIMEIRO SITE: IDENTIDADE MAIS GENÉRICA]
 

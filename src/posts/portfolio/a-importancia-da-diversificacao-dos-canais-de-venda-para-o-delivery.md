@@ -1,6 +1,6 @@
 ---
 isDraft: false
-title: "Aplicativo de delivery"
+title: "A importância da diversificação dos canias de venda para o Delivery"
 description: "Atacando o dilema da dependência de plataformas de terceiros e a fidelização de clientes."
 imageName: "Whisk_ec9b40cc48"
 pubDate: 2023-12-30

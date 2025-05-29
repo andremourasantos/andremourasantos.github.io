@@ -117,8 +117,8 @@ O [gerador de link do WhatsApp](https://apps.andremourasantos.com/link-de-whatsa
 
 A partir dessa ideia de criar soluções simples para os problemas do meu dia a dia como profissional de marketing, continuei desenvolvendo várias outras ferramentas, como:
 * Um [Calendário de Datas Comemorativas](/portfolio/calendario-de-datas-comemorativas) para uso em projetos de Inbound Marketing;
-* Um [Criador de UTMs](/portfolio/criador-de-utms) para auxiliar na parametrização e rastreamento dos usuários, e;
-* O [Projeto Kai](/portfolio/projeto-kai), um assistente de IA especializado para atividades do Marketing. 
+* Um [Criador de UTMs](/portfolio/traqueamento-de-leads-a-partir-de-utms) para auxiliar na parametrização e rastreamento dos usuários, e;
+* O [Projeto Kai](/portfolio/assistente-de-ia-para-marketing-digital-projeto-kai), um assistente de IA especializado para atividades do Marketing. 
 
 Fora esses, ainda tenho muitos outros projetos disponíveis para conferir, desde projetos de [design](/portfolio/design) a [automação de processos com IA](/portfolio/automacao).
 

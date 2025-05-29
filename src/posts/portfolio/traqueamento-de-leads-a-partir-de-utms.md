@@ -1,7 +1,7 @@
 ---
 isDraft: false
-title: "Criador de UTMs"
-description: "Facilite a parametrização das suas URLs e obtenha insights sobre suas campanhas pagas e orgânicas."
+title: "Traqueamento de leads a partir de UTMs"
+description: "Aprenda a parametrizar suas URLs e obtenha insights robustos sobre leads pagos e orgânicos facilmente."
 imageName: "1981-digital-bMWHu8wU1Vk-unsplash"
 pubDate: 2024-01-13
 updatedDate: 2025-05-01
@@ -36,7 +36,7 @@ E elas funcionam tanto para o universo digital (com tráfego pago e Inbound Mark
 
 ![Diagrama com um smartphone central exibindo o site da agência de viagens 'OKDOKEY'. O smartphone atua como um hub, conectando-se a logos de diversas plataformas de mídia social e publicidade à esquerda (WhatsApp, TikTok, Instagram e Facebook) e à direita (Google Ads, Meta Ads, Pesquisa do Google e Pesquisa do Bing). As linhas conectando o smartphone a essas plataformas ilustram como um site próprio pode centralizar o tráfego proveniente de diferentes canais online, permitindo o rastreamento de visitantes independentemente de sua origem.](../../assets/photos/okdokey-agencia-de-viagens_hub.png)
 
-> Essa foto, por sinal, é de um estudo de caso que fiz sobre a [importância de sites para negócios digitais](/portfolio/okdokey-agencia-de-viagens), caso queira conferir.
+> Essa foto, por sinal, é de um estudo de caso que fiz sobre a [como transmitir autoridade para o seu negócio na internet](/portfolio/como-atrair-e-fidelizar-clientes-a-partir-do-seu-site), caso queira conferir.
 
 Essas "etiquetas" são compostas por cinco parâmetros:
 * `utm_source`: indica a origem do tráfego (ex.: *google, facebook, newsletter, panfleto*);

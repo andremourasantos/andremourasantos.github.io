@@ -1,7 +1,7 @@
 ---
 isDraft: false
-title: "OKDOKEY: agência de viagens"
-description: "Demonstração de site responsivo para uma agência de viagens moderna."
+title: "Como atrair e fidelizar clientes a partir do seu site"
+description: "Estudo de caso a partir da OKDOKEY, uma agência de viagens e esportes radicais moderna."
 imageName: "Whisk_b53da27474"
 pubDate: 2023-12-25
 updatedDate: 2025-05-01
