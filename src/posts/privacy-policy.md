@@ -1,10 +1,10 @@
 ---
 isDraft: false
 title: "Política de Privacidade"
-description: "Sua privacidade é importante, este site coleta informações da sua sessão. Saiba mais aqui."
+description: "Este site pode coletar informações sobre a sua sessão e dados pessoais. Saiba como são tratadas aqui."
 imageName: "flyd-zAhAUSdRLJ8-unsplash"
 pubDate: 2023-10-12
-updatedDate: 2024-09-28
+updatedDate: 2025-05-31
 tags: ["política de privacidade"]
 ---
 
@@ -26,6 +26,9 @@ Este site coleta uma variedade de informações pessoais para melhorar a experi�
 - Fonte de tráfego;
 - Localização geográfica (país, cidade).
 
+Outras informações pessoais podem ser coletadas, quando fornecidas explicitamente, como:
+- Endereço de e-mail.
+
 Esses dados são coletados principalmente por meio de ferramentas de análise, como Google Analytics e Google Ads, que utilizam códigos de rastreamento e cookies. Essas tecnologias permitem a análise do comportamento dos usuários, a origem do tráfego e outros padrões de navegação. Além disso, essas informações são fundamentais para avaliar a eficácia de eventuais campanhas publicitárias e aprimorar a experiência do usuário.
 
 Fazemos parceria com o Microsoft Clarity e o Microsoft Advertising para capturar como você usa e interage com nosso site por meio de métricas comportamentais, mapas de calor e replay de sessões, a fim de melhorar e promover nossos produtos/serviços. Os dados de uso do site são capturados utilizando cookies de primeira e terceira parte e outras tecnologias de rastreamento para determinar a popularidade de produtos/serviços e atividades online. Além disso, usamos essas informações para otimização do site, prevenção de fraudes/segurança e publicidade. Para mais informações sobre como a Microsoft coleta e utiliza seus dados, visite a [Declaração de Privacidade da Microsoft](https://www.microsoft.com/privacy/privacystatement).
@@ -36,6 +39,8 @@ Os usuários podem gerenciar as configurações de cookies e preferências de ra
 _Veja para quê os dados coletados são usados e a base legal para seu uso._
 
 Os dados pessoais mencionados anteriormente são coletados com o objetivo de analisar o desempenho deste site e avaliar a eficácia de campanhas publicitárias. As principais finalidades incluem, mas não se limitam a: Análise do tráfego e comportamento do usuário; Aprimoramento da experiência do usuário; Avaliação da eficácia de campanhas publicitárias.
+
+Enviar e-mails com notícias, artigos, promoções e outras informações que acreditamos ser do seu interesse, caso você tenha se inscrito em nossa newsletter. Você pode cancelar sua inscrição a qualquer momento.
 
 A coleta e processamento desses dados baseiam-se no consentimento do usuário. Ao navegar neste site, o usuário concorda com a coleta de dados anonimizados para as finalidades mencionadas anteriormente.
 
