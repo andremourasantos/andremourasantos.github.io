@@ -10,10 +10,12 @@ import Button from "./Button.astro";
 </div>
 
 <script>
+  import dataLayerEventPush from "../composables/dataLayer";
+
   function shareArticle(medium:string) {
     const path:string = 'https://' + location.host + location.pathname + '/';
     const utms:string = `?utm_source=share&utm_medium=${medium.toLocaleLowerCase()}`;
-    let shareUrl:string;
+    let shareUrl: string | undefined = undefined;
 
     switch (medium) {
       case 'WhatsApp':
@@ -39,11 +41,17 @@ import Button from "./Button.astro";
         } catch (error) {
           alert('Ocorreu um erro ao copiar o link para sua área de transferência.');
         };
-        
-        return;
-      }
+        break;
+    };
 
-    window.open(shareUrl, '_blank');
+    dataLayerEventPush('artigo-compartilhado', {
+      'articleId': location.pathname.split('/',3)[2],
+      'shareTool': medium
+    });
+
+    if (shareUrl) {
+      window.open(shareUrl, '_blank');
+    };
   }
 
   document.querySelectorAll('[id^="btnShare"]').forEach(btn => {

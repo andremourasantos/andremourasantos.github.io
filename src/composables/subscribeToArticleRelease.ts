@@ -1,3 +1,5 @@
+import dataLayerEventPush from "./dataLayer";
+
 async function subscribeToArticleRelease(event:Event, articleId:string, articleTitle:string) {
   const targetButton = Array.from(document.querySelectorAll(`[data-btn-article-id="${articleId}"][data-btn="subscribeToNewsletter"]`)) as HTMLButtonElement[];
   const loadingStateButton = Array.from(document.querySelectorAll(`[data-btn-article-id="${articleId}"][data-btn="loadingSubscribeToNewsletter"]`)) as HTMLButtonElement[];
@@ -29,6 +31,8 @@ async function subscribeToArticleRelease(event:Event, articleId:string, articleT
     loadingStateButton.forEach(btn => {btn.style.display = "none"});
     return alert("Ocorreu um erro ao registrar o seu interesse, por favor, tente novamente.");
   }
+
+  dataLayerEventPush('cadastro_newsletter', {'articleId': articleId});
 
   loadingStateButton.forEach(btn => {btn.style.display = "none"});
   targetButton.forEach(btn => {btn.disabled = true});
