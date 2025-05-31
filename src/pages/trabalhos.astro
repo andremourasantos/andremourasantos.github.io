@@ -7,6 +7,7 @@ import Quote from '../components/Quote.astro';
 import SiteSection from '../components/SiteSection.astro';
 import ProjectCard from "../components/ProjectCard.astro";
 import ComingSoonButtonArticleGroup from "../components/ComingSoonButtonArticleGroup.astro";
+import NewsletterForm from "../components/Forms/NewsletterForm.astro";
 
 const posts = await getCollection('works', ({data}) => {return data.tags.includes('trabalho')});
 
@@ -45,6 +46,9 @@ const sortedPosts = posts.sort((a, b) => {
         return <ProjectCard title={post.data.title} description={post.data.description} imageName={post.data.imageName} link={`/trabalhos/${post.id}`} isDraft={post.data.isDraft} postId={post.id}/>
       })
     }
+  </ContentHolder>
+  <ContentHolder id="" orientation="column">
+    <NewsletterForm orientation="LTR"/>
   </ContentHolder>
 </DefaultLayout>
 

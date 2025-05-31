@@ -30,6 +30,7 @@
   --colors-paragraph: #1F1F1F;
   --colors-hero-gradient: white;
   --colors-border_line_color: hsl(0, 0%, 80%);
+  --colors-border_line_color_lighter: hsl(0, 0%, 95%);
 
   /*BUTTON*/
   --colors-button_background: var(--colors-accent);
@@ -106,6 +107,10 @@ a:has(button) {
   display: block;
   text-decoration: none !important;
   width: fit-content;
+}
+
+.contentHolder + .contentHolder {
+  padding-top: 0px !important;
 }
 
 @media screen and (max-width: 672px) {
