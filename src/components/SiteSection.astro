@@ -26,7 +26,7 @@ try {
     <p set:html={description}></p>
     <div class="slot"><slot/></div>
   </div>
-  <img src={imagePath} alt={imageAltText} class:list={imageSaturate ? 'saturated' : ''}>
+  <img src={imagePath} alt={imageAltText} class:list={imageSaturate ? 'saturated' : ''} loading="lazy">
 </section>
 
 <style>

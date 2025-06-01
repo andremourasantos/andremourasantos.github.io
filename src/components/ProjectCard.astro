@@ -23,7 +23,7 @@ try {
 ---
 <div class="card" class:list={isDraft ? 'isDraftContent' : ''}>
   {
-    !isDraft ? <img src={imagePath} alt={imagePath}>
+    !isDraft ? <img src={imagePath} alt={imagePath} loading="lazy">
     :
     <div class="isDraft">&gt; Em breve &lt;</div>
   }

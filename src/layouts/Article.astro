@@ -18,7 +18,7 @@ interface Props {
 
 const { title, description, heroTitle, heroSubtitle, heroImage, contentHeaders, authorName, pubDate, updatedDate } = Astro.props;
 ---
-<Default title={title} description={description}>
+<Default title={title} description={description} imageName={heroImage} pageType="article" pubDate={new Date(pubDate)} updatedDate={new Date(updatedDate)}>
   <HeroSection heroTitle={heroTitle} heroSubtitle={heroSubtitle} heroImage={heroImage} heroBtnText='Ler mais'>
     <ArticleInfo authorName={authorName} pubDate={pubDate}/>
   </HeroSection>

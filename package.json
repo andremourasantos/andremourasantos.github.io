@@ -4,7 +4,8 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build:test": "cross-env PUBLIC_SITE_URL=https://andremourasantos-2c83a--test-channel-r3b8t814.web.app astro build",
+    "build:prod": "cross-env PUBLIC_SITE_URL=https://andremourasantos.com.br astro build",
     "preview": "astro preview",
     "emulators": "firebase emulators:start",
     "deploy preview": "firebase hosting:channel:deploy test-channel",
@@ -16,5 +17,8 @@
     "astro": "^5.7.12",
     "firebase": "^11.8.1",
     "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
   }
 }
