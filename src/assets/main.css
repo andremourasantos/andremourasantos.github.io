@@ -1,10 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&family=Bebas+Neue&family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('/fonts/Atkinson_Hyperlegible_Next/AtkinsonHyperlegibleNext-VariableFont_wght.ttf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Figtree';
+  src: url('/fonts/Figtree/Figtree-VariableFont_wght.ttf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('/fonts/Bebas_Neue/BebasNeue-Regular.ttf');
+  font-display: swap;
+}
 
 :root {
   /*FONTS*/
-  --font_title: 'Figtree';
-  --font_paragraph: 'Atkinson Hyperlegible Next';
-  --font_quote: 'Bebas Neue';
+  --font_title: 'Figtree', sans-serif;
+  --font_paragraph: 'Atkinson Hyperlegible Next', sans-serif;
+  --font_quote: 'Bebas Neue', serif;
   --font-size_display: 48px;
   --font-size_x-large: 40px;
   --font-size_large: 32px;
@@ -98,7 +114,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-title);
+  font-family: var(--font_title);
   font-weight: bold;
   color: var(--colors-title);
 }
