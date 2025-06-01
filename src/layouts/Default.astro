@@ -29,8 +29,8 @@ const absolutePageUrl = `${SITE_URL}${Astro.url.pathname}`;
 
 <html lang="pt-br">
   <head>
-    <meta charset="utf-8" />
     <!--STANDARD TAGS-->
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content={description}>
     <meta name="generator" content={Astro.generator} />
@@ -53,17 +53,21 @@ const absolutePageUrl = `${SITE_URL}${Astro.url.pathname}`;
     <link rel="preload" href="/fonts/Atkinson_Hyperlegible_Next/AtkinsonHyperlegibleNext-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
     <link rel="preload" href="/fonts/Figtree/Figtree-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
 
+    <!--MISCELLANEOUS -->
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
     <title>{title} | André S.</title>
-    <!-- Google Tag Manager -->
+    <!--SCRIPTS-->
+    <!--GTM-->
     <script async>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-PWVNLHS');</script>
-    <!-- End Google Tag Manager -->
+    <!--GTM-->
   </head>
   <body>
     <Header/>
     <slot/>
     <Footer/>
-    <!-- Google Tag Manager (noscript) -->
+    <!--GTM-->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PWVNLHS" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+    <!--GTM-->
   </body>
 </html>

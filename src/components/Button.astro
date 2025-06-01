@@ -7,12 +7,13 @@ interface Props {
   btnSize:ButtonSize;
   btnDisabled?:boolean;
   btnIcon?:IconName;
-  btnType?:"primary" | "secondary" | "tertiary"|"hero"
+  btnType?:"primary" | "secondary" | "tertiary"|"hero",
+  title?:string
 }
 
-const { id, btnText, btnSize, btnDisabled, btnIcon, btnType, ...attrs } = Astro.props;
+const { id, btnText, btnSize, btnDisabled, btnIcon, btnType, title, ...attrs } = Astro.props;
 ---
-<button disabled={btnDisabled} id={id} class:list={[
+<button title={title} disabled={btnDisabled} id={id} class:list={[
   btnIcon ? "hasIcon" : "",
   btnSize === "L" ? "size_L" : "",
   btnSize === "M" ? "size_M" : "",

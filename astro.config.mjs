@@ -4,9 +4,12 @@ import { defineConfig } from 'astro/config';
 import vue from '@astrojs/vue';
 import { experimental_AstroContainer } from 'astro/container';
 
+import sitemap from '@astrojs/sitemap';
+
 // https://astro.build/config
 export default defineConfig({
-  integrations: [vue()],
+  site: 'https://andremourasantos.com.br',
+  integrations: [vue(), sitemap()],
   server: {
     open: true,
     host: true,

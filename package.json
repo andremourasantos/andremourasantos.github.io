@@ -5,13 +5,14 @@
   "scripts": {
     "dev": "astro dev",
     "build:test": "cross-env PUBLIC_SITE_URL=https://andremourasantos-2c83a--test-channel-r3b8t814.web.app astro build",
-    "build:prod": "cross-env PUBLIC_SITE_URL=https://andremourasantos.com.br astro build",
+    "build:prod:deploy": "cross-env PUBLIC_SITE_URL=https://andremourasantos.com.br astro build firebase hosting deploy",
     "preview": "astro preview",
     "emulators": "firebase emulators:start",
     "deploy preview": "firebase hosting:channel:deploy test-channel",
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/sitemap": "^3.4.0",
     "@astrojs/vue": "^5.0.13",
     "@lucide/astro": "^0.509.0",
     "astro": "^5.7.12",
