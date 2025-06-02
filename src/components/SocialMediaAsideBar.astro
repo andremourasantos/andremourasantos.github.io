@@ -1,0 +1,86 @@
+---
+import Button from "./Button.astro";
+---
+<div id="socialMediaAsideBarContainer">
+  <Button id="btnShareWhatsApp" btnSize="M" btnText="none" btnIcon="WhatsApp" btnType="secondary"/>
+  <Button id="btnShareLinkedIn" btnSize="M" btnText="none" btnIcon="LinkedIn" btnType="secondary"/>
+  <!-- <Button id="btnShareFacebook" btnSize="M" btnText="none" btnIcon="Facebook"/> -->
+  <Button id="btnShareTwitter" btnSize="M" btnText="none" btnIcon="Twitter" btnType="secondary"/>
+  <Button id="btnShareDirectLink" btnSize="M" btnText="none" btnIcon="Link" btnType="secondary"/>
+</div>
+
+<script>
+  import dataLayerEventPush from "../composables/dataLayer";
+
+  function shareArticle(medium:string) {
+    const path:string = 'https://' + location.host + location.pathname + '/';
+    const utms:string = `?utm_source=share&utm_medium=${medium.toLocaleLowerCase()}`;
+    let shareUrl: string | undefined = undefined;
+
+    switch (medium) {
+      case 'WhatsApp':
+        shareUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(path + utms)}`;
+        break;
+
+      case 'Facebook':
+        shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(path + utms)}`;
+        break;
+
+      case 'LinkedIn':
+        shareUrl = `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(path + utms)}`;
+        break;
+
+      case 'Twitter':
+        shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(path + utms)}`;
+        break;
+
+      default:
+        try {
+          navigator.clipboard.writeText(path+utms);
+          alert('Link copiado para área de transferência!');
+        } catch (error) {
+          alert('Ocorreu um erro ao copiar o link para sua área de transferência.');
+        };
+        break;
+    };
+
+    dataLayerEventPush('artigo-compartilhado', {
+      'articleId': location.pathname.split('/',3)[2],
+      'shareTool': medium
+    });
+
+    if (shareUrl) {
+      window.open(shareUrl, '_blank');
+    };
+  }
+
+  document.querySelectorAll('[id^="btnShare"]').forEach(btn => {
+    return btn.addEventListener('click', () => {shareArticle(btn.id.replace('btnShare',''))})
+  })
+</script>
+
+<style>
+  div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--padding_2x);
+  }
+</style>
+
+<style is:global>
+  #btnShareWhatsApp {
+    background-color: #25D366;
+  }
+
+  #btnShareLinkedIn {
+    background-color: #1877F2;
+  }
+
+  #btnShareFacebook {
+    background-color: #0073B1;
+  }
+
+  #btnShareTwitter {
+    background-color: #1D9BF0;
+  }
+</style>

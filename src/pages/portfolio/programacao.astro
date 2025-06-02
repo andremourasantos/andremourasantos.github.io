@@ -1,0 +1,20 @@
+---
+import { getCollection } from "astro:content";
+import PortofolioPage from "../../layouts/PortofolioPage.astro";
+import ProjectCard from "../../components/ProjectCard.astro";
+
+const posts = await getCollection('portfolio', ({data}) => {return data.tags.includes('programação')});
+
+const sortedPosts = posts.sort((a, b) => {
+  return new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime();
+})
+---
+<PortofolioPage heroTitle="Projetos de programação" heroSubtitle="Compartilhando projetos para incorporar na sua operação." sectionTitle="Tirando ideias do papel" sectionDescription=`A gente sempre acaba precisando de uma ferramentas que parece não existir no mercado né? Mas ao invés de recorrer às planilhas, eu resolvi desenvolver algumas por conta própria.<br><br>E para ajudar outros profissionais da área, fiz esse repositório para compartilhar tanto os erros quanto os acertos.` sectionImage="mika-baumeister-J5yoGZLdpSI-unsplash">
+  {
+    sortedPosts.map(post => {
+      return <ProjectCard title={post.data.title} description={post.data.description} imageName={post.data.imageName} link={"/portfolio/"+post.id} isDraft={post.data.isDraft} postId={post.id}/>
+    })
+  }
+</PortofolioPage>
+
+<script src="../../composables/subscribeToArticleRelease.ts"></script>

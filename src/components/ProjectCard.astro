@@ -1,0 +1,72 @@
+---
+import Button from "./Button.astro";
+import ComingSoonButtonArticleGroup from "./ComingSoonButtonArticleGroup.astro";
+import ButtonGroup from "./ButtonGroup.astro";
+
+interface Props {
+  title:string,
+  description:string,
+  imageName:string,
+  postId:string,
+  link:string,
+  isDraft:boolean
+}
+
+const { title, description, imageName, postId, link, isDraft } = Astro.props;
+
+let imagePath;
+try {
+  imagePath = await import(`../assets/photos/${imageName}.jpg`).then((res) => {return res.default.src});
+} catch (error) {
+  imagePath = await import(`../assets/photos/test.jpg`).then((res) => {return res.default.src});
+}
+---
+<div class="card" class:list={isDraft ? 'isDraftContent' : ''}>
+  {
+    !isDraft ? <img src={imagePath} alt={imagePath} loading="lazy">
+    :
+    <div class="isDraft">&gt; Em breve &lt;</div>
+  }
+  <div class="content">
+    <h3>{title} {isDraft ? " (em breve)" : ""}</h3>
+    <p>{description}</p>
+    {
+      isDraft ?
+      <ComingSoonButtonArticleGroup btnSize="S" articleId={postId} articleTitle={title}/>
+      :
+      <a href={link} rel="next"><Button btnSize="S" btnText="Ler mais" btnType="tertiary"/></a>
+    }
+  </div>
+</div>
+
+<style>
+  .card {
+    min-width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--colors-border_line_color);
+  }
+
+  img, .isDraft {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+  }
+
+  .isDraft {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid var(--colors-border_line_color);
+    background-color: #F5F5F5;
+  }
+
+  .content {
+    padding: var(--padding_2x);
+  }
+
+  .content p {
+    margin-bottom: var(--padding_2x);
+  }
+</style>

@@ -1,0 +1,154 @@
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('/fonts/Atkinson_Hyperlegible_Next/AtkinsonHyperlegibleNext-VariableFont_wght.ttf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Figtree';
+  src: url('/fonts/Figtree/Figtree-VariableFont_wght.ttf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('/fonts/Bebas_Neue/BebasNeue-Regular.ttf');
+  font-display: swap;
+}
+
+:root {
+  /*FONTS*/
+  --font_title: 'Figtree', sans-serif;
+  --font_paragraph: 'Atkinson Hyperlegible Next', sans-serif;
+  --font_quote: 'Bebas Neue', serif;
+  --font-size_display: 48px;
+  --font-size_x-large: 40px;
+  --font-size_large: 32px;
+  --font-size_medium: 24px;
+  --font-size_small: 20px;
+  --font-size_default: 18px;
+  --font-size_x-small: 16px;
+
+  /*BACKGROUND*/
+  --square-unit: var(--padding_2x);
+  --offset-unit: calc(var(--square-unit) / 2);
+  --dot-color: #F5F5F5;
+
+  /*COLORS*/
+  --colors-page_background: #FFFFFF;
+  --colors-accent: hsl(248, 100%, 72%);
+  --colors-accent_dark: hsl(248, 100%, 67%);
+  --colors-accent_darker: hsl(248, 100%, 57%);
+  --colors-accent_contrast: hsl(249, 53%, 21%);
+  --colors-accent_contrast_dark: hsl(249, 53%, 16%);
+  --colors-accent_contrast_darker: hsl(249, 53%, 11%);
+  --colors-title: #141414;
+  --colors-paragraph: #1F1F1F;
+  --colors-hero-gradient: white;
+  --colors-border_line_color: hsl(0, 0%, 80%);
+  --colors-border_line_color_lighter: hsl(0, 0%, 95%);
+
+  /*BUTTON*/
+  --colors-button_background: var(--colors-accent);
+  --colors-button_background_secondary: hsl(0, 0%, 22%);
+  --colors-button_background_secondary_dark: hsl(0, 0%, 32%);
+  --colors-button_background_secondary_darker: hsl(0, 0%, 42%);
+  --colors-button_background_hero: hsl(249, 53%, 21%);
+  --colors-button_background_hero_hover: hsl(249, 53%, 31%);
+  --colors-button_background_hero_active: hsl(249, 53%, 51%);
+  --colors-button_background_tertiary: transparent;
+  --colors-button_background_disabled: #C6C6C6;
+  --colors-button_text: var(--colors-page_background);
+  --colors-button_text_disabled: #8D8D8D;
+
+  /*PADDINGS*/
+  --padding_04x: 2px;
+  --padding_02x: 4px;
+  --padding_1x: 8px;
+  --padding_2x: 16px;
+  --padding_3x: 24px;
+  --padding_4x: 32px;
+  --padding_5x: 40px;
+  --padding_6x: 48px;
+  --padding_8x: 64px;
+  --padding_10x: 80px;
+
+  /*BODY MARGIN*/
+  --body-margin_x-large: 16px;
+  --body-margin_large: 16px;
+  --body-margin_medium: 16px;
+  --body-margin_small: 0px;
+
+  /*BODY WIDTH*/
+  --body-width_x-large: 1312px;
+  --body-width_large: 1056px;
+  --body-width_medium: 672px;
+  --body-width_small: 320px;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: var(--font_paragraph);
+  color: var(--colors-paragraph);
+  list-style-position: inside;
+}
+
+ol, ul {
+  font-size: var(--font-size_default);
+}
+
+p {
+  font-size: var(--font-size_default);
+}
+
+html {
+  margin-inline: var(--body-margin_x-large);
+  scroll-behavior: smooth;
+}
+
+body {
+  max-width: 1584px;
+  margin-inline: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font_title);
+  font-weight: bold;
+  color: var(--colors-title);
+}
+
+a:has(button) {
+  display: block;
+  text-decoration: none !important;
+  width: fit-content;
+}
+
+.contentHolder + .contentHolder {
+  padding-top: 0px !important;
+}
+
+@media screen and (max-width: 672px) {
+  :root {
+    /*FONTS*/
+    --font-size_display: 32px;
+    --font-size_x-large: 32px;
+    --font-size_large: 24px;
+    --font-size_medium: 20px;
+    --font-size_small: 18px;
+    --font-size_x-small: 14px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  :root {
+    /*FONTS*/
+    --font-size_display: 28px;
+    --font-size_x-large: 28px;
+    --font-size_large: 20px;
+    --font-size_medium: 18px;
+    --font-size_small: 18px;
+    --font-size_x-small: 14px;
+  }
+}

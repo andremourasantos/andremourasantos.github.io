@@ -1,0 +1,39 @@
+---
+import SiteSection from "../SiteSection.astro";
+import Button from "../Button.astro";
+
+interface Props {
+  orientation?:"RTL"|"LTR",
+}
+
+const { orientation = "RTL" } = Astro.props;
+---
+
+<SiteSection title="Receba atualizações sobre novos artigos" description='Por aqui eu estou sempre compartilho ideias e experiências que adquiri no meu <a href="/trabalhos" target="_blank">trabalho como Growth Marketer</a>, espero que elas te ajudem a crescer na área!<br><br>Caso queira ser um dos primeiros a saber quando um novo artigo for ao ar, inscreva-se na minha newsletter: pretendo manter uma frequência mensal de artigos.' imageName="kate-macate-xmddEHyCisc-unsplash" imageAltText="" orientation={orientation}>
+  <Button btnSize="M" btnText="Inscrever-me" data-btn-article-id="geral" data-btn="subscribeToNewsletter"/>
+  <Button btnSize="M" btnText="Inscrever-me" data-btn-article-id="geral" data-btn="subscribedToNewsletter" btnDisabled={true} btnIcon="Check"/>
+  <Button btnSize="M" btnText="Inscrever-me" data-btn-article-id="geral" data-btn="loadingSubscribeToNewsletter" btnDisabled={true} data-animation="loading" btnIcon="LoaderCircle"/>
+</SiteSection>
+
+<script define:vars={{ articleId: "geral" }} type="module">
+  const notiButton = document.querySelectorAll(`[data-btn-article-id="${articleId}"][data-btn="subscribeToNewsletter"]`);
+  const notiOkButton = document.querySelectorAll(`[data-btn-article-id="${articleId}"][data-btn="subscribedToNewsletter"]`);
+
+  document.addEventListener(`subscribedTo-${articleId}`, () => {
+    if(notiButton.length !== 0 && notiOkButton.length !== 0){
+      notiButton.forEach(btn => {
+        btn.style.display = "none";
+      })
+
+      notiOkButton.forEach(btn => {
+        btn.style.display = "flex";
+      })
+    }
+  });
+</script>
+
+<style>
+  button[data-btn="subscribedToNewsletter"], button[data-btn="loadingSubscribeToNewsletter"] {
+    display: none;
+  }
+</style>

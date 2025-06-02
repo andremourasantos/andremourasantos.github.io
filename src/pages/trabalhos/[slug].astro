@@ -1,0 +1,36 @@
+---
+import { getCollection, getEntry, render, type CollectionEntry } from "astro:content";
+import Article from "../../layouts/Article.astro";
+
+export async function getStaticPaths(): Promise<{ params: { slug: string } }[]> {
+  let posts:CollectionEntry<'works'>[];
+  if(import.meta.env.MODE === 'development'){
+    posts = await getCollection('works');
+  } else {
+    posts = await getCollection('works', (post) => {return !post.data.isDraft});
+  }
+
+  let urlSlugs = Array.from(posts, (item) => {return item.id});
+  
+  return urlSlugs.map((id) => {
+    return {
+      params: {slug: id}
+    }
+  });
+}
+
+const { slug } = Astro.params;
+
+let post = await getEntry('works', slug);
+let contentHeaders = await getCollection('works', (data) => {return data.id === slug});
+
+if (!post) {
+  throw new Error("Post not found.");
+}
+
+const { Content, headings, remarkPluginFrontmatter } = await render(post);
+---
+
+<Article title={post.data.title} description={post.data.description} heroTitle={post.data.title} heroSubtitle={post.data.description} heroImage={post.data.imageName} contentHeaders={headings} authorName={"André S."} pubDate={post.data.pubDate} updatedDate={post.data.updatedDate}>
+  <Content/>
+</Article>

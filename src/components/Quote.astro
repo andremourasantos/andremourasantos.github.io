@@ -1,0 +1,70 @@
+---
+interface Props {
+  quoteText:string,
+  quoteAuthor:string,
+  quouteAuthorWork:string
+}
+
+const { quoteText, quoteAuthor, quouteAuthorWork } = Astro.props;
+---
+<div class="quote-container">
+  <q>{quoteText}</q>
+  <p><strong>{quoteAuthor}</strong><span>, {quouteAuthorWork}.</span></p>
+</div>
+
+<style>
+  div {
+    width: 100%;
+    padding: var(--padding_10x) 0px;
+    text-align: center;
+    margin-inline: auto;
+  }
+
+  div.quote-container {
+    position: relative;
+  }
+
+  div::before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-image: 
+      linear-gradient(45deg, var(--dot-color) 25%, transparent 25%),
+      linear-gradient(-45deg, var(--dot-color) 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, var(--dot-color) 25%),
+      linear-gradient(-45deg, transparent 75%, var(--dot-color) 25%);
+    background-size: var(--square-unit) var(--square-unit);
+    background-position: 0 0, var(--offset-unit) 0, var(--offset-unit) calc(-1 * var(--offset-unit)), 0px var(--offset-unit);
+    filter: opacity(0.5);
+    z-index: -1;
+  }
+
+  q {
+    font-family: var(--font_quote);
+    font-weight: 200;
+    font-size: var(--font-size_x-large);
+    color: var(--colors-title);
+  }
+
+  p {
+    margin-top: var(--padding_2x);
+    font-size: var(--font-size_small);
+  }
+
+  p * {
+    font-family: var(--font_title);
+  }
+
+  p:last-of-type > span {
+    font-weight: 300;
+  }
+
+  @media screen and (max-width: 672px) {
+    div {
+      width: 100%;
+    }
+  }
+</style>

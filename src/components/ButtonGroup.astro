@@ -1,0 +1,56 @@
+---
+interface Props {
+  groupOrientation:"row"|"rowAdaptable"|"column",
+  groupBtnQuantity:2|3
+}
+
+const { groupOrientation, groupBtnQuantity } = Astro.props;
+---
+<div class={`btnGroup ${groupOrientation} qtn${groupBtnQuantity}`}>
+  <slot/>
+</div>
+
+<style is:global>
+  div.btnGroup button {
+    width: 100%;
+  }
+</style>
+
+<style>
+  div {
+    display: grid;
+    gap: 1px;
+    width: fit-content;
+    height: fit-content;
+  }
+
+  div.row.qtn2, div.rowAdaptable.qtn2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  div.row.qtn3, div.rowAdaptable.qtn3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  div.column.qtn2 {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  div.column.qtn3 {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  @media screen and (max-width: 320px) {
+    div.rowAdaptable.qtn2 {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, 1fr);
+    }
+
+    div.rowAdaptable.qtn3 {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, 1fr);
+    }
+  }
+</style>

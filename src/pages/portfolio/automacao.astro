@@ -1,0 +1,20 @@
+---
+import { getCollection } from "astro:content";
+import PortofolioPage from "../../layouts/PortofolioPage.astro";
+import ProjectCard from "../../components/ProjectCard.astro";
+
+const posts = await getCollection('portfolio', ({data}) => {return data.tags.includes('automação')});
+
+const sortedPosts = posts.sort((a, b) => {
+  return new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime();
+})
+---
+<PortofolioPage heroTitle="Projetos de automação" heroSubtitle="Eliminando o trabalho repetitivo para aumentar a produtividade." sectionTitle="Minimizando o trabalho moroso" sectionDescription=`No ambiente de trabalho, sempre tem aquelas chatas ou burocráticas, mas que <em>precisam ser feitas</em>. Além de serem morosas, elas tiram um tempo útil valioso do seu dia de trabalho.<br><br>Aqui, eu apresento algumas soluções que desenvolvi para agilizar a conclusão de atividades desse tipo.` sectionImage="alvaro-reyes-qWwpHwip31M-unsplash">
+  {
+    sortedPosts.map(post => {
+      return <ProjectCard title={post.data.title} description={post.data.description} imageName={post.data.imageName} link={"/portfolio/"+post.id} isDraft={post.data.isDraft} postId={post.id}/>
+    })
+  }
+</PortofolioPage>
+
+<script src="../../composables/subscribeToArticleRelease.ts"></script>

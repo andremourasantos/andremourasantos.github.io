@@ -1,0 +1,20 @@
+---
+import { getCollection } from "astro:content";
+import PortofolioPage from "../../layouts/PortofolioPage.astro";
+import ProjectCard from "../../components/ProjectCard.astro";
+
+const posts = await getCollection('portfolio', ({data}) => {return data.tags.includes('design')});
+
+const sortedPosts = posts.sort((a, b) => {
+  return new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime();
+})
+---
+<PortofolioPage heroTitle="Projetos de design" heroSubtitle="Abordando problemas complexos de maneira simples." sectionTitle="Resolvendo problemas reais" sectionDescription=`Assim como <a href="/portfolio/programacao">meus projetos de programação</a>, cada projeto foi criado pensando em solucionar um problema do mundo real que eu (ou um cliente) já experienciou.<br><br>Alguns projetos contam com links para um <em>teste-drive</em> nos designs, sinta-se à vontade para explorar.` sectionImage="tirza-van-dijk-o1SKqmgSDbg-unsplash">
+  {
+    sortedPosts.map(post => {
+      return <ProjectCard title={post.data.title} description={post.data.description} imageName={post.data.imageName} link={"/portfolio/"+post.id} isDraft={post.data.isDraft} postId={post.id}/>
+    })
+  }
+</PortofolioPage>
+
+<script src="../../composables/subscribeToArticleRelease.ts"></script>

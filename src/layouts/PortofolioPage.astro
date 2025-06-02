@@ -1,0 +1,45 @@
+---
+import Default from "./Default.astro";
+import HeroSection from "../components/HeroSection.astro";
+import ContentHolder from '../components/ContentHolder.astro';
+import SiteSection from '../components/SiteSection.astro';
+import Button from "../components/Button.astro";
+import NewsletterForm from "../components/Forms/NewsletterForm.astro";
+
+interface Props {
+  heroTitle:string,
+  heroSubtitle:string,
+  sectionTitle:string,
+  sectionDescription:string,
+  sectionImage:string
+}
+
+const { heroTitle, heroSubtitle, sectionTitle, sectionDescription, sectionImage } = Astro.props;
+---
+
+<Default title={heroTitle} description={heroSubtitle} pageType="webiste" imageName="portfolio">
+  <HeroSection heroTitle={heroTitle} heroSubtitle={heroSubtitle}/>
+  <ContentHolder orientation="column" id="content">
+    <SiteSection title={sectionTitle} description={sectionDescription} imageName={sectionImage} imageAltText="">
+      <Button id="scrollToProjectsBtn" btnSize="M" btnText="Ver projetos" btnIcon="ChevronDown" btnType="secondary"/>
+    </SiteSection>
+  </ContentHolder>
+  <ContentHolder orientation="grid" id="projects">
+    <slot/>
+  </ContentHolder>
+  <ContentHolder id="" orientation="column">
+    <NewsletterForm/>
+
+    <SiteSection title="Entre em contato" description="Quer solidificar o seu Marketing Digital e fortalecer a presença digital da sua empresa e seus produtos? Entre em contato comigo pelo WhatsApp e vamos conversar!<br><br>Para contratações freelancer, por favor, forneça as informações gerais do seu projeto de antemão para agilizar a análise do caso." imageName="informacoes-de-contato" imageAltText="" imageSaturate={false}>
+      <a href="https://api.whatsapp.com/send/?phone=5541935009236&text=Oi%2C%20gostaria%20de%20entrar%20em%20contato%20para%20apresentar%20meu%20projeto" target="_blank"><Button btnSize="M" btnText="Fale comigo" btnIcon="WhatsApp" btnType="primary"/></a>
+    </SiteSection>
+  </ContentHolder>
+</Default>
+
+<script>
+  function scrollToProjects() {
+    document.getElementById('projects')?.scrollIntoView({behavior: 'smooth'});
+  }
+
+  document.getElementById('scrollToProjectsBtn')?.addEventListener('click', scrollToProjects);
+</script>

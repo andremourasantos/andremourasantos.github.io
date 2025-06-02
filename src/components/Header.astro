@@ -1,0 +1,144 @@
+---
+import Button from "./Button.astro";
+---
+<header>
+  <a href="/" rel="prev" class="title">André S.</a>
+  <nav>
+    <a href="/">Início</a>
+    <a href="/trabalhos">Trabalhos</a>
+    <a href="/portfolio">Portfólio</a>
+    <a href="https://api.whatsapp.com/send/?phone=5541935009236&text=Oi%2C%20gostaria%20de%20entrar%20em%20contato%20para%20apresentar%20meu%20projeto" target="_blank" rel="external"><Button btnText="Contato" btnSize="S" btnIcon="MessageSquareShare" btnType="tertiary"/></a>
+    <div class="mobileNav">
+      <Button title="Abrir menu" id="mobileNavBtnClosed" btnIcon="Menu" btnText="none" btnSize="S" btnType="tertiary"/>
+      <Button title="Fechar menu" id="mobileNavBtnOpened" btnIcon="X" btnText="none" btnSize="S" btnType="tertiary"/>
+    </div>
+  </nav>
+</header>
+
+<dialog id="mobileNavMenu">
+  <a href="/">Início</a>
+  <a href="/trabalhos">Trabalhos</a>
+  <a href="/portfolio">Portfólio</a>
+  <a href="https://api.whatsapp.com/send/?phone=5541935009236&text=Oi%2C%20gostaria%20de%20entrar%20em%20contato%20para%20apresentar%20meu%20projeto" target="_blank" rel="external"><Button btnText="Contato" btnSize="L" btnIcon="MessageSquareShare" btnType="tertiary"/></a>
+</dialog>
+
+<script>
+  document.querySelectorAll('nav a, dialog a').forEach(link => {
+    if(link.getAttribute('href')! === '/' && location.pathname === '/'){
+      link.classList.add('activeLink');
+    } else if(link.getAttribute('href')! !== '/' && location.pathname.includes(link.getAttribute('href')!)){
+      link.classList.add('activeLink');
+    }
+  })
+
+  let mobileNavBtnClosed = document.getElementById("mobileNavBtnClosed");
+  let mobileNavBtnOpened = document.getElementById("mobileNavBtnOpened");
+  let mobileNavMenu = document.getElementById("mobileNavMenu");
+  let html = document.querySelector('html');
+
+  if(mobileNavBtnClosed && mobileNavBtnOpened && mobileNavMenu && html){
+    mobileNavBtnClosed.addEventListener("click", () => {
+      html.style.overflow = 'hidden';
+      mobileNavBtnClosed.style.display = "none";
+      mobileNavBtnOpened.style.display = "flex";
+      mobileNavBtnOpened.focus();
+      mobileNavMenu.style.display = "flex";
+    })
+
+    mobileNavBtnOpened.addEventListener("click", () => {
+      html.style.overflow = 'auto';
+      mobileNavBtnClosed.style.display = "flex";
+      mobileNavBtnClosed.focus();
+      mobileNavBtnOpened.style.display = "none";
+      mobileNavMenu.style.display = "none";
+    })
+  }
+</script>
+
+<style is:global>
+  #mobileNavBtnOpened {
+    display: none;
+  }
+</style>
+
+<style>
+  header {
+    height: 64px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    background-color: var(--colors-page_background);
+    box-shadow: 0px 0px 0px 100vw var(--colors-page_background);
+    clip-path: inset(0 -100vw 0 -100vw);
+    z-index: 999;
+  }
+
+  header > a {
+    width: fit-content;
+  }
+
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  nav, .mobileNav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: var(--padding_2x);
+  }
+
+  .mobileNav {
+    display: none;
+  }
+
+  #mobileNavMenu {
+    position: fixed;
+    z-index: 1;
+    border: none;
+    width: 100%;
+    height: calc(100% - 64px);
+    display: none;
+    flex-direction: column;
+    gap: 16px;
+    font-size: 24px;
+    align-items: center;
+    justify-content: center;
+    background-color: #F5F5F5;
+  }
+
+  #mobileNavMenu > a {
+    text-decoration: none;
+  }
+
+  nav > a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  nav > a:hover:not(.activeLink) {
+    text-decoration: underline;
+  }
+
+  nav > a.activeLink, dialog > a.activeLink {
+    font-weight: bold;
+  }
+
+  @media screen and (max-width: 672px) {
+    header {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    nav a {
+      display: none;
+    }
+
+    .mobileNav {
+      display: flex;
+    }
+  }
+</style>
