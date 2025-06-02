@@ -2,7 +2,7 @@
 isDraft: true
 title: "Reduzindo o CAC em 60% em três meses"
 description: "Identificando gargalos na operação e aumentando a eficácia dos investimentos em anúncios."
-imageName: "test"
+imageName: "Whisk_983e21f7b6"
 pubDate: 2025-04-24
 updatedDate: 2025-04-24
 tags: ["trabalho", "roas"]

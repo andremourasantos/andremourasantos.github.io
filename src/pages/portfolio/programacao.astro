@@ -9,7 +9,7 @@ const sortedPosts = posts.sort((a, b) => {
   return new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime();
 })
 ---
-<PortofolioPage heroTitle="Projetos de programação" heroSubtitle="Compartilhando projetos para incorporar na sua operação." sectionTitle="Tirando ideias do papel" sectionDescription=`Tenho uma paixão pela liberdade (e dor de cabeça) de desenvolver sistemas por conta própria, desde de o <a href="/portfolio/design" rel="next">design</a> até a aplicação <a href="/portfolio/automacao" rel="next">conceitos e ideias</a> livremente e, com sorte, posso acabar inspirando você a buscar criar suas próprias soluções também!<br><br>Cada projeto conta uma história. Os respectivos links para os repositórios no GitHub também estão disponíveis.` sectionImage="mika-baumeister-J5yoGZLdpSI-unsplash">
+<PortofolioPage heroTitle="Projetos de programação" heroSubtitle="Compartilhando projetos para incorporar na sua operação." sectionTitle="Tirando ideias do papel" sectionDescription=`A gente sempre acaba precisando de uma ferramentas que parece não existir no mercado né? Mas ao invés de recorrer às planilhas, eu resolvi desenvolver algumas por conta própria.<br><br>E para ajudar outros profissionais da área, fiz esse repositório para compartilhar tanto os erros quanto os acertos.` sectionImage="mika-baumeister-J5yoGZLdpSI-unsplash">
   {
     sortedPosts.map(post => {
       return <ProjectCard title={post.data.title} description={post.data.description} imageName={post.data.imageName} link={"/portfolio/"+post.id} isDraft={post.data.isDraft} postId={post.id}/>

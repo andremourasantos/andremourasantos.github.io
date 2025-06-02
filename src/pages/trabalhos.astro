@@ -8,6 +8,7 @@ import SiteSection from '../components/SiteSection.astro';
 import ProjectCard from "../components/ProjectCard.astro";
 import ComingSoonButtonArticleGroup from "../components/ComingSoonButtonArticleGroup.astro";
 import NewsletterForm from "../components/Forms/NewsletterForm.astro";
+import Button from "../components/Button.astro";
 
 const posts = await getCollection('works', ({data}) => {return data.tags.includes('trabalho')});
 
@@ -22,20 +23,20 @@ const sortedPosts = posts.sort((a, b) => {
   <ContentHolder id=content orientation=column>
     <Quote quoteText='Recomendo-o com entusiasmo a qualquer organização que busque um profissional de marketing completo. André é um profissional extremamente dedicado, paciente e engajado. Possui profundo entendimento sobre estratégias de growth, o conceito de máquina de vendas' quoteAuthor='Cleverson Marques' quouteAuthorWork='Executivo de vendas em VEGA I.T'/>
 
-    <SiteSection orientation='RTL' title='Reduzindo o CAC em 60% em três meses' description='Entenda o processo de diminuição de um CAC de R$ 540 para R$ 313 em apenas três meses a partir da internalização dos trabalhos do Marketing e produção de conteúdo.' imageAltText='' imageName="Whisk_983e21f7b6">
-      <ComingSoonButtonArticleGroup articleId="reduzindo-o-cac-em-60-em-tres-meses" articleTitle="Reduzindo o CAC em 60% em três meses" btnSize="M"/>
+    <SiteSection orientation="LTR" title={sortedPosts[sortedPosts.length-1].data.title} description={sortedPosts[sortedPosts.length-1].data.description} imageAltText='' imageName={sortedPosts[sortedPosts.length-1].data.imageName}>
+      <ComingSoonButtonArticleGroup articleId={sortedPosts[sortedPosts.length-1].id} articleTitle={sortedPosts[sortedPosts.length-1].data.title} btnSize="M"/>
     </SiteSection>
 
     <Quote quoteText='O André é o tipo de profissional que entrega tudo o que promete e ainda vai além. Extremamente competente, dedicado e atencioso, ele sempre encontra soluções criativas e eficazes para qualquer desafio. Se tem alguém que realmente faz a diferença, esse alguém é ele' quoteAuthor='Pablo Ricardo' quouteAuthorWork='Gestor de Tráfego em WorkUp Digital'/>
 
-    <SiteSection title='Obtendo ROAS de campanhas publicitárias' description='Veja o processo para obter o Retorno Sobre o Investimento em Anúncios (ROAS) em uma empresa com mais de R$ 120 mil de investimento anual com anúncios, permitindo a otimização dos recursos e esforço da empresa.' imageAltText='' imageName="john-FlPc9_VocJ4-unsplash">
-      <ComingSoonButtonArticleGroup articleId="obtendo-o-roas-de-campanhas-publicitarias" articleTitle="Obtendo ROAS de campanhas publicitárias" btnSize="M"/>
+    <SiteSection orientation="RTL" title={sortedPosts[sortedPosts.length-2].data.title} description={sortedPosts[sortedPosts.length-2].data.description} imageAltText='' imageName={sortedPosts[sortedPosts.length-2].data.imageName}>
+      <ComingSoonButtonArticleGroup articleId={sortedPosts[sortedPosts.length-2].id} articleTitle={sortedPosts[sortedPosts.length-2].data.title} btnSize="M"/>
     </SiteSection>
 
     <Quote quoteText='O André é um profissional dedicado e atencioso, com ótimo conhecimento técnico e que trabalha bem em equipe para implantar soluções' quoteAuthor='Rafael Bretas' quouteAuthorWork='CEO em Agência fog'/>
 
-    <SiteSection orientation='RTL' title='Automação de trabalho operacional repetitivo' description='Veja como automatizei diversos fluxos de trabalho, economizando 40 horas por mês com trabalho de baixo valor agregado, a partir de Automação de Processos Inteligentes (SPAs), Inteligência Artificial (IA) e plataformas No-code.' imageAltText='' imageName="Whisk_941fd709db">
-      <ComingSoonButtonArticleGroup articleId="automacao-de-trabalho-operacional-repetitivo" articleTitle="Automação de trabalho operacional repetitivo" btnSize="M"/>
+    <SiteSection orientation="LTR" title={sortedPosts[sortedPosts.length-3].data.title} description={sortedPosts[sortedPosts.length-3].data.description} imageAltText='' imageName={sortedPosts[sortedPosts.length-3].data.imageName}>
+      <ComingSoonButtonArticleGroup articleId={sortedPosts[sortedPosts.length-3].id} articleTitle={sortedPosts[sortedPosts.length-3].data.title} btnSize="M"/>
     </SiteSection>
 
     <Quote quoteText='Profissional excelente e responsável, sou muito contente em trabalhar com o André' quoteAuthor='Cássio Pisseti' quouteAuthorWork='CEO em Engepoli'/>
@@ -48,7 +49,10 @@ const sortedPosts = posts.sort((a, b) => {
     }
   </ContentHolder>
   <ContentHolder id="" orientation="column">
-    <NewsletterForm orientation="LTR"/>
+    <NewsletterForm orientation="RTL"/>
+    <SiteSection title='Entre em contato' description='Quer solidificar o seu Marketing Digital e fortalecer a presença digital da sua empresa e seus produtos? Entre em contato comigo pelo e vamos conversar!<br><br>Para contratações freelancer, por favor, forneça as informações gerais do seu projeto de antemão para agilizar a análise do caso.' orientation="LTR" imageName='informacoes-de-contato' imageSaturate={false} imageAltText='Diagrama radial com uma foto de André Moura Santos no centro, representando um ponto de contato central. Quatro logos de plataformas digitais circundam a foto e estão conectados a ela: WhatsApp , Google Meet (videoconferências), Gmail (e-mail) e LinkedIn (rede profissional). O diagrama ilustra as diversas maneiras de entrar em contato com André Moura Santos através dos diferentes canais digitais para comunicação.'>
+      <a href="https://api.whatsapp.com/send/?phone=5541935009236&text=Oi%2C%20gostaria%20de%20entrar%20em%20contato%20para%20apresentar%20meu%20projeto" target="_blank"><Button btnText="Fale comigo" btnIcon="WhatsApp" btnSize="M" btnType="primary"/></a>
+    </SiteSection>
   </ContentHolder>
 </DefaultLayout>
 

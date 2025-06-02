@@ -2,7 +2,7 @@
 isDraft: true
 title: "Automação de trabalho operacional repetitivo"
 description: "Como economizar mais de 40 horas por mês com trabalho de baixo valor agregado."
-imageName: "test"
+imageName: "Whisk_941fd709db"
 pubDate: 2025-04-24
 updatedDate: 2025-04-24
 tags: ["trabalho", "automação"]

@@ -2,7 +2,7 @@
 isDraft: true
 title: "Obtendo ROAS de campanhas publicitárias"
 description: "Veja o processo, e os benefícios, de se obter o retorno sobre os investimento com anúncios."
-imageName: "test"
+imageName: "john-FlPc9_VocJ4-unsplash"
 pubDate: 2025-04-24
 updatedDate: 2025-04-24
 tags: ["trabalho", "roas"]
