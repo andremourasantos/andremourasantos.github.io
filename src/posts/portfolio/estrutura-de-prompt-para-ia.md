@@ -458,7 +458,7 @@ E como instruímos a I.A. com **Variáveis**, na hora de iniciar uma conversa, p
 
 E a I.A. vai imediatamente começar a produzir o briefing, sem enrolação!
 
-Ah, e como os *inputs* serão sempre os mesmos e a repsosta também está padronizada, [incluir esse prompt em um fluxo automatizado](/portfolio/producao-textual-para-blog-com-ia) se torna ainda mais fácil!
+Ah, e como os *inputs* serão sempre os mesmos e a repsosta também está padronizada, [incluir esse prompt em um fluxo automatizado](/portfolio/automacao) se torna ainda mais fácil!
 
 
 ## Selecionando a IA adequada para o trabalho

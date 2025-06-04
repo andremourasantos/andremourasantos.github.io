@@ -3,6 +3,8 @@ import Default from "./Default.astro";
 import HeroSection from "../components/HeroSection.astro";
 import SocialMediaAsideBar from "../components/SocialMediaAsideBar.astro";
 import ArticleInfo from "../components/ArticleInfo.astro";
+import ContentHolder from "../components/ContentHolder.astro";
+import NewsletterForm from "../components/Forms/NewsletterForm.astro";
 
 interface Props {
   title:string,
@@ -34,7 +36,9 @@ const { title, description, heroTitle, heroSubtitle, heroImage, contentHeaders, 
           })}
         </ol>
       </div>
-      <SocialMediaAsideBar/>
+      {
+        title === "Política de Privacidade" ? "" : <SocialMediaAsideBar/>
+      }
     </aside>
     <article>
       {
@@ -43,7 +47,15 @@ const { title, description, heroTitle, heroSubtitle, heroImage, contentHeaders, 
       <slot/>
     </article>
   </div>
+  {
+    title === "Política de Privacidade" ? "" :
+    <ContentHolder id="" orientation="column">
+    <NewsletterForm/>
+  </ContentHolder> 
+  }
 </Default>
+
+<script src="../composables/subscribeToArticleRelease.ts"></script>
 
 <script>
   window.addEventListener('DOMContentLoaded', () => {
@@ -54,8 +66,8 @@ const { title, description, heroTitle, heroSubtitle, heroImage, contentHeaders, 
   });
 </script>
 
-<style is:global>
-  html {
+<style>
+  :global(html) {
     scroll-padding-top: 80px;
   }
 

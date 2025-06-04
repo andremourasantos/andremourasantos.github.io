@@ -173,7 +173,7 @@ E, por fim, e talvez o mais empolgante, a confirmação do potencial da personal
 
 Ver como a IA pode gerar resultados tão diferentes e direcionados apenas mudando a forma como "conversamos" com ela (através do prompt e configuração dos agentes) abriu um leque de possibilidades na minha mente sobre como usar IA de forma estratégica no Growth Marketing.
 
-Inclusive, já até fiz alguns artigos sobre como utilizei a IA para montar um [fluxo de produção de artigos](/portfolio/producao-textual-para-blog-com-ia) e um outro para [criação de roteiros para vídeos no YouTube](/portfolio/producao-de-roteiros-para-videos-no-youtube-com-ia).
+<!-- Inclusive, já até fiz alguns artigos sobre como utilizei a IA para montar um [fluxo de produção de artigos](/portfolio/producao-textual-para-blog-com-ia) e um outro para [criação de roteiros para vídeos no YouTube](/portfolio/producao-de-roteiros-para-videos-no-youtube-com-ia). -->
 
 ## O significado do nome Kai
 

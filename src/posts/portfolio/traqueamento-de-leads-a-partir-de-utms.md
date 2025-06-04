@@ -64,7 +64,7 @@ Com essas informações, ferramentas como o **Google Analytics 4** ou o **Gerenc
 
 As UTMs são tratadas como um **padrão universal na internet**.
 
-Portanto, você geralmente não precisa configurar nada nessas ferramentas para que elas capturem e usem essas informações em [relatórios](/portfolio/relatorios-de-ads-no-google-looker-studio).
+Portanto, você geralmente não precisa configurar nada nessas ferramentas para que elas capturem e usem essas informações em [relatórios](/portfolio/automacao).
 
 Basta que você comece a usá-los.
 
@@ -85,7 +85,7 @@ Essas são dicas simples, mas lembre-se: os UTMs são *"sensíveis"*.
 
 Uma letra capitalizada, um espaço incorreto ou um caractere diferente e subitamente o seu site agora tem *"fb"*, *"facebook"*, *"Facebook"* e *"face"* como origens de tráfego.
 
-Isso não só acaba com todo o propósito de facilitar o rastreio e a [obtenção de insights](/portfolio/relatorios-de-ads-no-google-looker-studio), como ainda dificulta a sua análise para determinar qual estratégia está funcionando.
+Isso não só acaba com todo o propósito de facilitar o rastreio e a [obtenção de insights](/portfolio/automacao), como ainda dificulta a sua análise para determinar qual estratégia está funcionando.
 
 ## Quais os benefícios de usar UTMs?
 
@@ -119,7 +119,7 @@ Além disso, com UTMs, você pode identificar as fontes e campanhas de melhor pe
 
 > Estamos falando aqui das campanhas com menor CAC (Custo por Aquisição de Cliente) e não das que geram o maior número de leads ou as que tem o menor CPL (Custo por Lead). É com essa otimização que profissionais distintos no mercado trabalham — fica a dica.
 
-Isso, por sua vez, incrementa o [ROAS](/trabalhos/obtendo-o-roas-de-campanhas-publicitarias) para o seu cliente, agregando valor ao seu trabalho com dados e citações precisas e fidedignas.
+Isso, por sua vez, incrementa o [ROAS](/trabalhos/) para o seu cliente, agregando valor ao seu trabalho com dados e citações precisas e fidedignas.
 
 ### Benefícios de uso na mídia orgânica
 
@@ -159,7 +159,7 @@ Essa bagunça pode levar a erros, inconsistências e, no fim das contas, todo o 
 
 E foi pensando nisso que eu desenvolvi uma planilha simples e prática justamente para simplificar esse processo.
 
-![](https://andremourasantos.com.br/assets/image-2-YnY4Z4FY.png)
+![](https://github.com/andremourasantos/andremourasantos.github.io/blob/b5eec52e414e46c333021760651d0b1b33ce7709/src/assets/projects/planilha-criador-de-utms/image-1.png?raw=true)
 
 Ela não é apenas uma ferramenta para gerar links com UTMs, mas também um guia para principiantes.
 
