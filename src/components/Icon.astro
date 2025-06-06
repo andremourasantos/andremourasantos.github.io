@@ -36,4 +36,4 @@ const iconMap:Record<IconName, typeof IconType> = {
 const IconComponentToRender = iconName ? iconMap[iconName] : "ChevronDown";
 ---
 
-{(iconName !== "Facebook" && iconName !== "LinkedIn" && iconName !== "Twitter" && iconName !== "WhatsApp") ? <IconComponentToRender color={iconColor} size={iconSize}/> : <img src={await importCustomSVG(iconName)} height={iconSize} width={iconSize} alt=`Ícone de ${iconName}`/>}
+{(iconName !== "Facebook" && iconName !== "LinkedIn" && iconName !== "Twitter" && iconName !== "WhatsApp") ? <IconComponentToRender color={iconColor} size={iconSize}/> : <img loading="lazy" src={await importCustomSVG(iconName)} height={iconSize} width={iconSize} alt=`Ícone de ${iconName}`/>}

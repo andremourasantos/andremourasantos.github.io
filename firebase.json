@@ -21,6 +21,17 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
+    ],
+    "headers": [
+      {
+        "source": "**/*",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=2592000, s-maxage=604800"
+          }
+        ]
+      }
     ]
   },
   "emulators": {
