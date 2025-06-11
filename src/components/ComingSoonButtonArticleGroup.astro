@@ -11,7 +11,7 @@ interface Props {
 const { btnSize, articleId, articleTitle } = Astro.props;
 ---
 <ButtonGroup groupOrientation="rowAdaptable" groupBtnQuantity={2}>
-  <Button btnSize={btnSize} btnText="Ler mais" btnType="primary" btnDisabled={true}/>
+  <Button btnSize={btnSize} btnText="Em breve" btnType="primary" btnDisabled={true}/>
   <Button data-article-title={articleTitle} data-btn-article-id={articleId} data-btn="subscribeToNewsletter" btnSize={btnSize} btnText="Me avise" btnType="tertiary"/>
   <Button data-article-title={articleTitle} data-btn-article-id={articleId} data-btn="subscribedToNewsletter" btnSize={btnSize} btnText="Me avise" btnIcon="Check" btnType="tertiary" btnDisabled={true}/>
   <Button data-article-title={articleTitle} data-btn-article-id={articleId} data-btn="loadingSubscribeToNewsletter" data-animation="loading" btnSize={btnSize} btnText="Me avise" btnIcon="LoaderCircle" btnType="tertiary" btnDisabled={true}/>
