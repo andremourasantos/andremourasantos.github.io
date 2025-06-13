@@ -65,7 +65,7 @@ const absolutePageUrl = `${SITE_URL}${Astro.url.pathname}`;
     <slot/>
     <Footer/>
 
-    <script>
+    { import.meta.env.MODE !== "development" ? <script>
       function loadGTM() {
         (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -86,6 +86,6 @@ const absolutePageUrl = `${SITE_URL}${Astro.url.pathname}`;
       }
 
       window.addEventListener("load", loadGTM);
-    </script>
+    </script>:"" }
   </body>
 </html>

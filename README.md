@@ -1,47 +1,51 @@
-# Astro Starter Kit: Minimal
+# Sobre o repositório
 
-```sh
-npm create astro@latest -- --template minimal
-```
+Este é o repositório do [meu site](https://andremourasantos.com.br/?utm_source=github&utm_medium=readme), por aqui você encontrará o todo código fonte do front-end do site.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+Para os curiosos de plantão, alguns artigos em produção podem estar disponíveis aqui também 👀
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+> A mais recente versão do meu site (2025) visa atualizar a minha imagem profissional e apresentar meus projetos e trabalhos com uma óptica menos técnica e mais prática.
 
-## 🚀 Project Structure
+## Tecnologias usadas
 
-Inside of your Astro project, you'll see the following folders and files:
+_*Atualizado em fevereiro de 2024._
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+<div align="center">
+  <img height="48" title="HTML5" src="readme/html5.png">
+  <img height="48" title="CSS3" src="readme/css3.png">
+  <img height="48" title="JavaScript" src="readme/js.png">
+  <img height="48" title="TypeScript" src="readme/ts.png">
+  <img height="48" title="Vite" src="readme/vite.png">
+  <img height="48" title="Astro" src="readme/astro.png">
+  <img height="48" title="Firebase Hosting" src="readme/firebase-hosting.png">
+</div>
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+---
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## O que aprendi com este projeto?
 
-Any static assets, like images, can be placed in the `public/` directory.
+- Utilização de frontmatter para classificação de documentos Markdown (permitindo a criação de blogs e portfólios).
+- Otimização técnica profunda para máximo desempenho no PageSpeed Insights.
+- Inserção de container GTM sem prejuízo de desempenho.
+- Otimização fina para melhoria do LCP.
+- Integração de Webhooks para funcionalidades como assinatura de newsletter.
+- Carregamento local de fontes para incremento da velocidade de carregamento.
 
-## 🧞 Commands
+---
 
-All commands are run from the root of the project, from a terminal:
+## Fotos do projeto
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+_*Atualizado em junho de 2025._
 
-## 👀 Want to learn more?
+<img title="Fotos do site no telefone" src="readme/screenshot-pc.png">
+<img title="Fotos do site no computador" src="readme/screenshot-mobile.png">
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+---
+
+## Desempenho do site
+
+_*Atualizado em outubro de 2023._
+
+O desempenho do site pode ser visto a partir de testes do [PageSpeed Insights ↗](https://pagespeed.web.dev/analysis/https-andremourasantos-com-br/fozqx4h0dd).
+
+<img title="Resultados do teste do PageSpeed Insights para telefone" src="readme/pagespeedinsights-mobile.png">
