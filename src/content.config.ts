@@ -1,4 +1,4 @@
-import { defineCollection, reference, z } from 'astro:content';
+import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
 
 const portfolio = defineCollection({
@@ -10,7 +10,7 @@ const portfolio = defineCollection({
     imageName: z.string(),
     pubDate: z.coerce.date(),
     updatedDate: z.coerce.date(),
-    tags: z.array(z.string())
+    tags: z.array(z.enum(['automação', 'design', 'programação'])),
   })
 });
 

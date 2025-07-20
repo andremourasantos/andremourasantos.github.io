@@ -39,13 +39,3 @@ _*Atualizado em junho de 2025._
 
 <img title="Fotos do site no telefone" src="readme/screenshot-pc.png">
 <img title="Fotos do site no computador" src="readme/screenshot-mobile.png">
-
----
-
-## Desempenho do site
-
-_*Atualizado em outubro de 2023._
-
-O desempenho do site pode ser visto a partir de testes do [PageSpeed Insights ↗](https://pagespeed.web.dev/analysis/https-andremourasantos-com-br/fozqx4h0dd).
-
-<img title="Resultados do teste do PageSpeed Insights para telefone" src="readme/pagespeedinsights-mobile.png">

@@ -1,10 +1,10 @@
 ---
-isDraft: true
+isDraft: false
 title: "Calendário para Inbound Marketing"
-description: "Planeje suas ações de Inbound Marketing para diversos clientes com facilidade."
-imageName: "towfiqu-barbhuiya-bwOAixLG0uc-unsplash"
+description: "Planeje suas ações de Inbound Marketing e Social Selling para diversos clientes com facilidade."
+imageName: "calendario-de-inbound-marketing"
 pubDate: 2024-01-03
-updatedDate: 2025-07-19
+updatedDate: 2025-07-20
 tags: ["programação", "automação"]
 ---
 
@@ -71,31 +71,69 @@ Ele se estende a qualquer data que possa ser estrategicamente trabalhada para cr
 
 ## Qual a importância do planejamento para o Marketing?
 
+Se você se identificou com a sensação de estar sempre "apagando incêndios", prazos apertados e a dificuldade de organizar a produção de conteúdo para múltiplos clientes, a resposta para muitos desses desafios reside em uma única palavra: **planejamento**.
+
+E eu sei que _você sabe_ que _eu sei_ que _você sabe_.
+
+Você está aqui pelo **como** conseguir se planejar, mas calma, já vamos chegar lá: só antes eu preciso que você realmente entenda a importância do planejamento para o sucesso das suas campanhas de Social Selling.
+
 Planejar não só reduz o estresse, mas também otimiza recursos e aumenta a eficácia das suas campanhas.
 
-Ao antecipar as datas, você ganha tempo para:
-* **Pesquisar tendências:** Entender o que seu público-alvo realmente quer e precisa.
-* **Criar conteúdo de qualidade**: Produzir materiais ricos, criativos e que geram valor.
-* **Segmentar sua audiência**: Direcionar a mensagem certa para a pessoa certa.
-* **Otimizar para SEO**: Garantir que seu conteúdo seja encontrado por quem busca.
-* **Testar e refinar**: Ajustar suas estratégias antes do "grande dia".
+No universo do Social Selling, em que a conexão direta e a construção de relacionamento são cruciais, uma estratégia bem pensada te ajuda a ganhar tempo e clareza para:
+* **Pesquisar tendências:** entender o que seu público-alvo realmente quer ou precisa.
+* **Criar conteúdo de qualidade**: produzir vídeos, criativos ou materiais voltados para essas tendências.
+* **Segmentar sua audiência**: direcionar ou adaptar a mensagem da data para o seu público-alvo.
+* **Produzir anúncios de apoio**: alcançar ainda mais pessoas na sua área.
+* **Testar e refinar**: ajustar as suas estratégias e quem sabe até testá-las antes do "grande dia".
+
+Mas o planejamento não é só organização de conteúdo e anúncios. Ele é também para alinhar todos os pontos de contato com o cliente, especialmente no **Social Selling**.
+
+Por exemplo, na hora de pensar no que fazer para a data, definir qual ação realizar (seja um desconto, venda de combos ou quem sabe um sorteio) e garantir que toda a equipe de vendas do esteja ciente e preparada para comunicar o benefício de forma concisa é um ponto crucial para o sucesso da campanha.
+
+Ponderar suas ações com antecedência também permite anteceder objeções que podem surgir e como apresentar a oferta em linha com a campanha de marketing, afiando o discurso do Comercial.
+
+Além disso, essa antecipação também permite assegurar que todas as frentes de comunicação estejam sincronizadas: sejam parcerias com influenciadores, anúncios pagos, e-mail marketing ou outras ações de **Inbound Marketing**.
+
+> Quando a Shopee faz o seu _Shopping Day_, é **só isso** que você vê. Todos os pontos de comunicação com cliente passam a mostrar a mesma mensagem.
+
+Por fim, e talvez um dos pontos mais estratégicos para o seu **relacionamento com o cliente** (como profissional de Marketing): planejar todas essas atividades de forma transparente mostra o imenso trabalho e esforço envolvidos para aproveitar bem uma data comemorativa.
+
+Seu cliente passa a ver o seu trabalho com outros olhos, entendendo a complexidade e a dedicação por trás dos resultados.
+
+Isso gera um engajamento muito maior com a estratégia e, caso algo não saia como o esperado, a conversa deixa de ser um _"é culpa sua"_ e se transforma em um _"e se tentarmos dessa forma da próxima vez?"_, solidificando a parceria e a confiança.
+
+E, com isso, você acaba construindo mais um pilar no relacionamento com os seus clientes.
 
 ## Como usar o Calendário para Inbound Marketing?
-O Calendário de Datas Comemorativas conta com diversas funções úteis e intuitivas para que você possa começar a trabalhar imediatamente após a configuração inicial!
 
-* **Geração automática do calendário:** esqueça as horas perdidas montando planilhas. O script cria o calendário completo em segundos, com todas as datas comemorativas do ano.
+E agora que você entendeu a profundidade e a complexidade que o planejamento estratégico exige para campanhas eficazes, especialmente no **Social Selling**, vamos para o: como colocar tudo isso em prática?
+
+Bom, é aí que o script de Calendário de Datas Comemorativas que criei pode se te ajudar, transformando a teoria em uma ferramenta simples e prática.
+
+Ele não foi feito para substituir (ou acrescentar) nenhuma das suas ferramentas de trabalho: ou invés disso, ele funciona como um simples script que pode ser **adicionado a qualquer planilha do Google Sheets** e está pronto para usar assim que instalado!
+
+Pensado, mas não limitado a profissionais que trabalham em agências de marketing, o script possui diversas funções que vão te ajudar a começar a organizar todo trabalho para os seus clientes.
+
+Dá uma olhada no que ele cuida para você:
+* **Geração automática do calendário:** esqueça as horas perdidas montando planilhas. O script cria o calendário completo em segundos, com todas as principais datas comemorativas do ano.
+    * Ainda é possível customizar essas datas para melhor lhe atender (requer conhecimento básico de _JavaScript_).
 * **Personalização total:** o calendário é gerado no Google Sheets, o que te dá total liberdade para personalizá-lo de acordo com as suas necessidades. Adicione colunas, edite as informações, crie filtros... As possibilidades são infinitas!
 * **Colunas essenciais para organização:**
-    * **Data:** a data exata da comemoração, para você não perder nenhum prazo.
-    * **Nome:** o nome da data comemorativa, para facilitar a identificação.
-    * **Tipo de publicação:** uma coluna onde você pode selecionar o tipo de conteúdo que será publicado (felicitação, promoção, conteúdo de blog, etc). Isso te ajuda a diversificar o conteúdo e manter o feed interessante.
-    * **Observações:** um espaço para você anotar ideias, links, referências e outras informações relevantes sobre cada postagem.
-* **Acesso gratuito e código aberto:** o script é disponibilizado gratuitamente no meu [repositório do GitHub](https://github.com/andremourasantos/calendario-de-datas-comemorativas/) com licença MIT. Isso significa que você pode usá-lo, modificá-lo e compartilhá-lo livremente.
+    * **Data:** data exata da comemoração, para você não perder nenhum prazo.
+    * **Nome:** o nome da data comemorativa, para facilitar a identificação e o contexto da sua estratégia.
+    * **Tipo de publicação:** uma coluna onde você pode selecionar o tipo de conteúdo que será publicado (promoção, conteúdo de blog, vídeo para Social Selling, etc). Isso te ajuda a diversificar o conteúdo, manter o feed interessante e garantir que a comunicação seja adequada ao canal.
+    * **Observações:** um espaço valioso para você anotar ideias, links, referências, rascunhos de roteiros, detalhes de parcerias com influenciadores e outras informações relevantes sobre cada postagem ou ação.
 
-Veja abaixo os primeiros passos:
+> Ah, só um lembrete: deletar as "colunas essenciais" pode fazer com que o script não funcione corretamente.
+
+Além de tudo isso, como o calendário é criado em uma planilha, você pode facilmente baixá-lo em PDF ou enviar um link para que seu cliente aprove de antemão todas as datas do ano!
+
+E para que você possa começar o quanto antes, o script é disponibilizado gratuitamente no meu [repositório do GitHub](https://github.com/andremourasantos/calendario-de-datas-comemorativas/) sob licença MIT. Isso significa que você pode usá-lo, modificá-lo e compartilhá-lo livremente, adaptando-o às suas necessidades e as dos seus clientes.
+
+Ainda em dúvida se é para você? Então veja abaixo algumas imagens do script em ação!
 
 ### Primeiro passo: adicionando um calendário
-Para começar, primeiramente precisamos criar um novo calendário (planilha) no documento! Mas você não precisa se preocupar, a ferramenta dá conta de todo o processo!
+Para começar, primeiramente precisamos criar um novo calendário (planilha) no documento. Mas você não precisa se preocupar, o script dá conta de todo o processo!
 
 ![GIF mostrando passo a passo para adicionar um novo calendário pela interface do Google Sheets via script do Calendário de Datas Comemorativas.](https://github.com/andremourasantos/calendario-de-datas-comemorativas/raw/main/instru%C3%A7%C3%B5es/criar-novo-calendario.gif)
 
@@ -114,11 +152,10 @@ Você também pode seguir as instruções abaixo:
 1.  No menu superior, clique em "Calendário";
 2.  Dentre as opções disponíveis, clique em "Adicionar data";
 3.  Uma nova linha será adicionada à tabela. Preencha-a com as informações necessárias;
-    * Evite adicionar uma linha manualmente, pois assim você terá de configurar as dimensões e funcionalidades.
-    * Atenção: certifique-se de que todas as datas estão no mesmo ano, caso contrário, a organização automática poderá não funcionar como esperado.
+    * Certifique-se de que todas as datas estão no mesmo ano, caso contrário, a organização automática poderá não funcionar como esperado.
 
 ### Terceiro passo: organizando as datas no calendário
-Por fim, com todas as datas adicionadas, podemos agora reorganizar o calendário, para que as datas sejam exibidas de maneira ascendente, isso facilita a visualização!
+Por fim, com todas as datas adicionadas, podemos agora reorganizar o calendário, para que as datas sejam exibidas de maneira ascendente, isso facilita a visualização e a priorização das atividades!
 
 ![GIF mostrando passo a passo para organizar todas as datas do calendário pela interface do Google Sheets via script do Calendário de Datas Comemorativas.](https://github.com/andremourasantos/calendario-de-datas-comemorativas/raw/main/instru%C3%A7%C3%B5es/organizar-datas.gif)
 
@@ -129,40 +166,42 @@ Você também pode seguir as instruções abaixo:
 
 >   Você também pode usar os filtros da primeira linha da planilha para filtrar ou ordenar a exibição da maneira que preferir.
 
-## Como instalar a ferramenta no seu Google Sheets?
+## Como instalar o código no seu Google Sheets?
 Esta ferramenta pode ser adicionada manualmente a um novo documento ou a um documento já existente de maneira simples!
 
 A ferramenta é composta por um único código de Apps Script (*main.js*), uma linguagem de programação feita para os serviços do Google, como a suíte do Google Workspace (Docs, Slides, Sheets e Forms).
 
 ![](https://github.com/andremourasantos/calendario-de-datas-comemorativas/raw/main/instru%C3%A7%C3%B5es/capa-passo-a-passo.png)
 
-Seguindo as instruções abaixo, você poderá começar a utilizar essa ferramenta em instantes:
+Seguindo as instruções abaixo, você poderá começar a utilizar essa ferramenta em instantes.
+
+> Você também pode [baixar o vídeo de ajuda](https://github.com/andremourasantos/calendario-de-datas-comemorativas/raw/refs/heads/main/instru%C3%A7%C3%B5es/passo-a-passo.webm) (que está disponível no [repositório](https://github.com/andremourasantos/calendario-de-datas-comemorativas/tree/main)), caso prefira.
 
 ### Passo a passo
 Acompanhe o passo a passo com as instruções por escrito abaixo:
 1. Crie um novo documento no [Google Sheets](https://sheets.new);
     - Caso queira utilizar em um documento já existente, pule para o próximo passo.
 2. No menu superior, clique em "Extensões", depois, clique em "Apps Script";
-3. Na nova aba, você deve encontrar o Apps Script aberto já com o seguinte código:
+3. Na nova aba, você deve encontrar o editor do Apps Script aberto já com o seguinte código:
     ```js
     function myFunction() {
     
     }
     ```
 4. Nomeie o projeto com o nome que preferir;
-    * Exemplo: "Calendário de Datas Comemorativas".
-5. Copie o código de *main.js* para o editor do projeto;
+    * Exemplo: "Calendário de Inbound Marketing 202X".
+5. Copie o código de *main.js* no repositório para o editor do projeto;
     * Use o atalho Ctrl + A para copiar todo o código e Ctrl + V para colar no editor do projeto.
 6. Clique em "Salvar projeto" (ou aperte Ctrl + S);
 7. Clique em "Executar" para executar a função *onOpen*.
 8. Você deve encontrar a seguinte mensagem: "Autorização obrigatória. O projeto requer sua permissão para acessar seus dados". Clique em "Revisar permissões";
 9. Na tela seguinte, faça login na sua conta do Google e prossiga;
 10. Na tela seguinte, você deve encontrar a seguinte mensagem: "O Google não verificou este app", clique em "Avançado" e, em seguida, "Acessar \[Nome do seu projeto] (não seguro)";
-    * Esta autorização é necessária, pois o código não foi enviado ao Google para aprovação e posterior publicação no Google Workspace Marketplace. Como você tem acesso ao código em sua íntegra, pode conferir todas as ações que são executadas e aferir sua legitimidade.
+    * Esta autorização é necessária, pois o código não é um app do Google Workspace Marketplace. Como você tem acesso ao código na íntegra, pode conferir todas as ações que são executadas e [aferir sua legitimidade](https://g.co/gemini/share/8f342febdb24).
     * Como "desenvolvedor", o Google está se referindo a você, veja o endereço de e-mail exibido.
     * Como "app", o Google está se referindo ao código disponibilizado no [repositório do projeto](https://github.com/andremourasantos/calendario-de-datas-comemorativas) (*main.js*).
 11. A seguir, confirme que o seu projeto tenha acesso às seguintes informações: "Ver, editar, criar e excluir todos os seus arquivos do Planilhas Google", clicando em "Permitir";
-    * Apesar dessa abrangência, o código irá apenas funcionar neste documento em específico que você criou. Essa é uma permissão genérica requerida automaticamente para execução do código.
+    * Apesar dessa abrangência, o código irá apenas funcionar neste documento em específico que você criou. Essa é uma permissão genérica, requerida automaticamente, para execução do código.
 12. Após isso, o "Registro de execução" deve apresentar dois logs, "Notificação: Execução iniciada" e "Notificação: Execução concluída";
 13. Volte ao documento para conferir que, na barra superior, um novo menu está disponível: "Calendário";
 14. Agora você já pode fechar o editor do projeto (aba do Apps Script).
@@ -173,6 +212,6 @@ Pronto, seu projeto está configurado corretamente e já pode ser utilizado!
 
 Com o script que eu desenvolvi, você tem em mãos uma solução poderosa, gratuita e fácil de usar.
 
-Você não precisa mais perder tempo com posts de última hora e conteúdo genérico!
+Você não precisa mais perder tempo com posts de última hora e um conteúdo genérico!
 
-E se você precisar de ajuda para implementar uma estratégia de Marketing digital completa e eficaz, pode contar comigo! [Vamos conversar](https://api.whatsapp.com/send/?phone=5541935009236&text=Oi%2C%20gostaria%20de%20entrar%20em%20contato%20para%20apresentar%20meu%20projeto) sobre como posso contribuir para o sucesso do seu negócio.
+E se você se vê na necessidade de implementar uma estratégia de Marketing digital completa para o seu negócio, ou precisa de um script personalizado só para você, pode contar comigo! [Vamos conversar](https://api.whatsapp.com/send/?phone=5541935009236&text=Oi%2C%20gostaria%20de%20entrar%20em%20contato%20para%20apresentar%20meu%20projeto) sobre como posso contribuir para o sucesso do seu negócio.
