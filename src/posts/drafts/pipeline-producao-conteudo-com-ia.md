@@ -1,10 +1,10 @@
 ---
 isDraft: true
-title: "Automação de trabalho operacional repetitivo"
-description: "Como economizei quase 40 horas de trabalho de baixo valor agregado, por mês, com automações."
+title: "Pipeline para produção de conteúdo com IA"
+description: "Projeto da FENALAW 2025. Usando IA para potencializar a produção de conteúdo em um escritório de advoacia."
 imageName: "Whisk_941fd709db"
-pubDate: 2025-04-24
-updatedDate: 2025-04-24
+pubDate: 2025-10-24
+updatedDate: 2025-10-24
 tags: ["trabalho", "automação"]
 ---
 

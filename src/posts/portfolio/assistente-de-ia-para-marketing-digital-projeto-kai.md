@@ -105,7 +105,7 @@ Com isso, o projeto ficou dividido em:
 Esse foco em funcionalidades também também significou deixar o design de lado por um momento e me concentrar na lógica por trás do sistema.
 
 Mas isso não significa que não dei uma incrementada no visual enquanto trabalhava no cerne da ideia:
-![](../../assets/photos/projeto-kai-mockups.png)
+![Mockup de interface de usuário do Agente do Kai, um assistente virtual de marketing digital, em um laptop e dois smartphones. No laptop, uma conversa exibe a saudação 'Olá, André!', seguida por uma introdução do Agente do Kai e opções de interação. Nos smartphones, telas com opções como Conversar, Landing Pages e outros temas relacionados a marketing digital.](../../assets/photos/projeto-kai-mockups.png)
 
 Essa mentalidade me permitiu avançar rapidamente e ter algo funcional em mãos para testar em pouquíssimo tempo.
 

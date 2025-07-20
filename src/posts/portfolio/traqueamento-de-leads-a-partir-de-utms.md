@@ -113,7 +113,7 @@ Isso mesmo: com os UTMs, você pode dizer exatamente de onde vieram tanto os lea
 
 Assim, se os SDRs começarem a comentar sobre muitos leads desqualificados, você pode descobrir precisamente de onde esses leads chegaram e, por exemplo, desativar as camapnhas **sem que isso afete a chega de leads qualificados**.
 
-![](../../assets/photos/criador-de-utms-midia_paga.png)
+![Diagrama hierárquico mostrando a performance de campanhas pagas. No nível superior, Plataforma, com logos do Google Ads, Meta (Facebook/Instagram) e TikTok. Abaixo, Conjunto e Anúncio. Há indicadores de qualificação (certo, aviso, erro) para cada elemento, separando Leads qualificados de Leads desqualificados, demonstrando como a performance pode variar em diferentes plataformas e níveis de campanha.](../../assets/photos/criador-de-utms-midia_paga.png)
 
 Além disso, com UTMs, você pode identificar as fontes e campanhas de melhor performance e realocar seu orçamento para o que realmente funciona, otimizando os investimentos com anúncios.
 
@@ -139,7 +139,7 @@ Imagine só, no seu próximo relatório de marketing, você apresentando que, po
 
 Além disso, se você tiver um CRM bem configurado, poderá ainda dizer o quanto esses leads avançaram no funil e quantos fecharam negócio, além do valor desses negócios.
 
-![](../../assets/photos/criador-de-utms-midia_organica.png)
+![Diagrama de fluxo de Inbound Marketing mostrando canais orgânicos como Instagram, Facebook, Google, TikTok e Bing levando a um Artigo X. O fluxo continua com as etapas de Lead Qualificado, Primeiro Contato, Oferta Realizada e Negócio Fechado, ilustrando a jornada do cliente e a capacidade de rastrear a performance de conteúdo orgânico.](../../assets/photos/criador-de-utms-midia_organica.png)
 
 Percebe o **poder** que isso traz?
 
@@ -159,7 +159,7 @@ Essa bagunça pode levar a erros, inconsistências e, no fim das contas, todo o 
 
 E foi pensando nisso que eu desenvolvi uma planilha simples e prática justamente para simplificar esse processo.
 
-![](https://github.com/andremourasantos/andremourasantos.github.io/blob/b5eec52e414e46c333021760651d0b1b33ce7709/src/assets/projects/planilha-criador-de-utms/image-1.png?raw=true)
+![Imagem de um notebook exibindo uma planilha do Google Sheets com a ferramenta Criador de UTMs, mostrando colunas para Fonte, utm_source, utm_medium, utm_campaign, utm_term, utm_content e URL. Ao lado, um smartphone com o logo do Google Sheets, simbolizando a facilidade de gerenciamento de links parametrizados.](https://github.com/andremourasantos/andremourasantos.github.io/blob/b5eec52e414e46c333021760651d0b1b33ce7709/src/assets/projects/planilha-criador-de-utms/image-1.png?raw=true)
 
 Ela não é apenas uma ferramenta para gerar links com UTMs, mas também um guia para principiantes.
 
