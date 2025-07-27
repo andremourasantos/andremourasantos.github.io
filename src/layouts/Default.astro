@@ -2,6 +2,7 @@
 import '../assets/main.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import ConversasionalForms from "../components/Forms/ConversasionalForms.vue";
 
 interface Props {
   title: string,
@@ -52,7 +53,6 @@ const absolutePageUrl = `${SITE_URL}${Astro.url.pathname}`;
     <!--CRITICAL FONTS-->
     <link rel="preload" href="/fonts/Atkinson_Hyperlegible_Next/AtkinsonHyperlegibleNext-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
     <link rel="preload" href="/fonts/Figtree/Figtree-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
-    <link rel="preload" href="/fonts/Bebas_Neue/BebasNeue-Regular.ttf" as="font" type="font/ttf" crossorigin>
 
     <!--MISCELLANEOUS -->
     <link rel="sitemap" href="/sitemap-index.xml" />
@@ -63,6 +63,7 @@ const absolutePageUrl = `${SITE_URL}${Astro.url.pathname}`;
   <body>
     <Header/>
     <slot/>
+    <!-- <ConversasionalForms client:only/> -->
     <Footer/>
 
     { import.meta.env.MODE !== "development" ? <script>

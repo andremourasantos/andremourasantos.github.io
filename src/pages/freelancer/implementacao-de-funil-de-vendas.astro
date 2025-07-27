@@ -1,0 +1,30 @@
+---
+import Default from "../../layouts/Default.astro";
+import HeroSection from "../../components/HeroSection.astro";
+import ContentHolder from "../../components/ContentHolder.astro";
+import ProjectCard from "../../components/ProjectCard.astro";
+import Quote from "../../components/Quote.astro";
+import SiteSection from "../../components/SiteSection.astro";
+import Button from "../../components/Button.astro";
+import ButtonGroup from "../../components/ButtonGroup.astro";
+---
+
+<Default pageType="webiste" title="Implementação de funil de vendas" description="teste">
+  <HeroSection heroTitle="Implementação de funil de vendas" heroSubtitle="Rastreamento avançado de leads no CRM (e WhatsApp!), automação de follow-ups e relatório de ROAS." heroImage="2148510518"></HeroSection>
+  <ContentHolder id="content" orientation="column">
+    <SiteSection title="Título 1" description="Descrição 1" imageAltText="teste"></SiteSection>
+    <ContentHolder id="principais-entregas" orientation="grid">
+      <ProjectCard description="teste" title="teste" isDraft={false} link="teste" imageName="tes" postId=""></ProjectCard>
+      <ProjectCard description="teste" title="teste" isDraft={false} link="teste" imageName="tes" postId=""></ProjectCard>
+      <ProjectCard description="teste" title="teste" isDraft={false} link="teste" imageName="tes" postId=""></ProjectCard>
+    </ContentHolder>
+    <SiteSection title="Título 2" description="Descrição 2" imageAltText="teste" orientation="RTL"></SiteSection>
+    <SiteSection title="Título 3" description="Descrição 3" imageAltText="teste"></SiteSection>
+    <ContentHolder id="principais-entregas" orientation="grid">
+      <ProjectCard description="teste" title="teste" isDraft={false} link="teste" imageName="tes" postId=""></ProjectCard>
+      <ProjectCard description="teste" title="teste" isDraft={false} link="teste" imageName="tes" postId=""></ProjectCard>
+      <ProjectCard description="teste" title="teste" isDraft={false} link="teste" imageName="tes" postId=""></ProjectCard>
+    </ContentHolder>
+    <SiteSection title="Título 4" description="Descrição 4" imageAltText="teste" orientation="RTL"></SiteSection>
+  </ContentHolder>
+</Default>
