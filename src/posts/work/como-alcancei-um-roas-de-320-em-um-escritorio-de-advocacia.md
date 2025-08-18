@@ -1,6 +1,6 @@
 ---
 isDraft: true
-title: "Como alcancei um ROAS de 1065% em um escritório de advocacia"
+title: "Como alcancei um ROAS de 320% em um escritório de advocacia"
 description: "Estudo de caso da gestão de anúncios de produtos jurídicos na Engel Advogados."
 imageName: "alexander-grey--8a5eJ1-mmQ-unsplash"
 pubDate: 2025-08-06
@@ -12,7 +12,7 @@ Toda história de sucesso tem um ponto de partida, e a nossa começa com a **Eng
 
 Fundado em 2008 pelo advogado [Julio Engel](https://www.linkedin.com/in/julioengel/), pioneiro na transformação digital de escritórios de advocacia. O escritório já conta com mais de 10 mil casos na Justiça, consolidando-se como uma referência em inovação e escala na advocacia.
 
-Hoje, com mais de 17 anos de histórias de sucesso, o escritório acumula mais de 1.400 avaliações cinco estrelas no Google e, mais recentemente, foi reconhecido como o *Melhor Escritório Contratualista* em 2024, pela ADVBOX, referência na área.
+Hoje, com mais de 17 anos de histórias de sucesso, o escritório acumula mais de 1.400 avaliações no Google e, mais recentemente, foi reconhecido como o *Melhor Escritório Contratualista* em 2024, pela ADVBOX, referência na área.
 
 Todas conquistas alcançadas a partir da visão de **Julio**, que, desde a fundação do escritório, já trabalhava a sua presença digital do seu negócio, começando com artigos de blog, publicações em redes sociais e, eventualmente, anúncios na internet.
 

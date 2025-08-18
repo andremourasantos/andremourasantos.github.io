@@ -1,12 +1,14 @@
 ---
-isDraft: true
+isDraft: false
 title: "Reduzindo em 100x o custo de produção de conteúdo com IA"
 description: "Como usei IA para potencializar a produção de conteúdo em um escritório de advocacia."
 imageName: "patrick-tomasso-Oaqk7qqNh_c-unsplash"
-pubDate: 2025-10-24
-updatedDate: 2025-10-24
+pubDate: 2025-07-31
+updatedDate: 2025-08-12
 tags: ["trabalho", "automação"]
 ---
+
+> Este projeto foi inscrito para o prêmio DNA+ da FENALAW 2025.
 
 No mundo do marketing digital, a eficiência é a chave para o sucesso.
 
@@ -68,7 +70,7 @@ Essa demora entre uma ideia e o produto final afetava também a capacidade do es
 
 Além disso, os custos dessa operação eram significativos para a balança financeira do escritório, já que, somente o prestador de serviço para produção textual custava em torno de **R$ 72 mil/ano**.
 
-## Quais foram as estratégias para abordar o problema?
+## Quais foram as estratégias implementadas para abordar o problema?
 
 A solução proposta para otimizar o tempo de produção de conteúdo e economizar em custos com prestadores de serviços foi uma abordagem multifacetada que consiste em **internalizar**, **diagnosticar** e **otimizar**.
 
@@ -133,72 +135,75 @@ Veja abaixo como foram adicionados os gatilhos e seu funcionamento:
 
 ### Implementação de Inteligência Artificial
 
-Por fim, a solução incluiu a implementação de inteligência artificial (IA) como um meio de dar um salto de agilidade ao processo.
+Por fim, a estratégia também incluia a implementação de inteligência artificial (IA) como um meio de dar um salto de agilidade ao processo.
 
-A proposta era utilizar a IA para auxiliar em gargalos como a criação da "Estratégia" e do "Briefing" , gerando todos os documentos necessários em cada fase, o que incluía a base da estratégia, o briefing completo, a redação do artigo, e o roteiro para gravação.
+A proposta era utilizar a IA para **auxiliar em atividades repetitivas** e que **poderiam ser realizadas de maneira programática**.
 
-## Como a solução foi implementada?
+E, durante a criação dos fluxos de trabalho especializados, identificamos oportunidades de inserir LLMs generativas como operadores no fluxo.
 
-A implementação começou com o desmembramento da pipeline monolítica em duas vertentes distintas e especializadas:
+> Testamos diversas IAs, como as famílias *DeepSeek*, *GPT-4o* e *Gemini 2.5*. Acabamos por escolher os modelos *2.5 Flash* e *2.5 Pro*, do *Gemini*, pela capacidade criativa e de [seguir os prompts consistentemente](/portfolio/estrutura-de-prompt-para-ia).
 
-1. Uma pipeline será dedicada exclusivamente à produção de artigos, com processos bem definidos para pesquisa, redação, revisão e publicação.
-1. A outra pipeline será inteiramente voltada para a produção de vídeos, abrangendo desde a concepção do roteiro, gravação, edição, pós-produção até a distribuição.
+Com a oportunidade ideal localizada e um objetivo claro, seguimos com a implementação gradual da IA para a criação dos **documentos de briefing**, tanto para os artigos de blog quanto para os roteiros de vídeos para o YouTube.
 
-Essa separação foi fundamental, pois permitiu que cada equipe desenvolvesse uma expertise específica, otimizando a alocação de recursos e melhorando a qualidade final de ambos os formatos de conteúdo.
+Os documento de briefing são o início de todo processo criativo, e, por isso, a utilização da IA deve ser cuidadosa: dá-se muito espaço e a IA alucina, restringe a liberdade e ela não entrega — é uma linha tênue.
 
-Para lidar com as tarefas repetitivas, foi utilizada uma plataforma low-code que se conectava ao nosso CRM por meio de Webhooks.
+> Com ajuda da plataforma no-code, também foi feita uma [integração que gerava as pastas e arquivos automaticamente no Google Drive do escritório e já os linkava ao respectivo card na pipeline](/portfolio/bitrix24-api-assistant-app-make-com) também.
 
-Essa ferramenta foi configurada para automatizar a gestão dos cards, a organização de arquivos e o controle das etapas do processo.
+E, após validação do funcionamento, extendemos o alcance da IA para também produzir os textos do blog por completo, seguindo essa mesma premissa de implementação gradual.
 
-> Essa mesma automação foi utilizada para sincronizar as pipelines internas com o sistema do prestador de serviço, eliminando a necessidade de preenchimento manual e garantindo que as informações estivessem sempre atualizadas em ambos os sistemas
+Veja o funcionamento dos fluxos de trabalho após implementação da IA:
+![](dsa)
 
-Posteriormente, a inteligência artificial foi integrada ao novo fluxo de trabalho para acelerar ainda mais a produção.
+Com isso, conseguimos um fluxo de trabalho em que a IA faz grande parte do processo e as pessoas responsáveis necessitam apenas de fornecer o direcionamento inicial e conferir as produções da LLM.
 
-A IA foi empregada para gerar todos os documentos textuais necessários, desde a criação da base da estratégia e do briefing completo, até a redação do artigo e a elaboração do roteiro de gravação.
+## Quais foram os resultados alcançados?
 
-Essa capacidade da IA de produzir os materiais de forma rápida reduziu drasticamente o tempo entre a concepção da ideia e o produto final, além de auxiliar na escalada das operações.
+Com a implementação de todas as estratégias, conseguimos resolver os desafios de **custo** e **demora** que antes travavam a produção de conteúdo, o principal canal de aquisição de clientes do escritório.
 
-E, em conjunto com outras automações, a IA conseguia criar pastas vinculadas aos cards do nosso CRM na nossa nuvem, com um sistema de nomenclatura padronizado e modelos para criação dos documentos que auxiliavam a IA a alucinar menos e produzir conteúdos de qualidade consistentemente.
+### Gigantesca diminuição nos custos operacionais
 
-> Além disso, assim que a IA finalizava um documento, uma notificação era enviada para o responsável pelo card diretamente em nosso CRM (ou seja, toda experiência do colaborador ficava centralizada dentro de um só lugar: o CRM).
+E o resultado mais impactante foi a **diminuição nos custos operacionais**:
+* A **internalização**, **reestruturação** e **automação** do processo permitiram o encerramento do contrato com o prestador de serviços de produção textual, que, sozinho, representava um custo anual de aproximadamente **R$ 72 mil**.
 
-Por fim, com a implementação de todas essas inovações, o escritório conseguiu internalizar com sucesso toda a produção de conteúdo, desde a concepção da ideia até o produto final.
+Este valor foi substituído por despesas operacionais mínimas, incluindo uma média de **R$ 60/mês** com a plataforma no-code de automação contratada (*Make.com*) e apenas **R$ 0,36/mês** com o provedor de IA (*Gemini*).
 
-Isso tornou possível o encerramento do contrato com o prestador de serviço, resultando em uma redução significativa de custos e maior controle sobre a qualidade e agilidade dos materiais produzidos.
+O sucesos na implementação resultou em uma redução de custos anual de mais de **100x** (ou, apenas **R$ 720/ano** em despesas operacionais), atingindo em cheio o objetivo inicial de "otimizar e economizar gastos com prestadores de serviços".
 
-Texto + [Bitrix24 API Assistant App (Make.com)](/portfolio/bitrix24-api-assistant-app-make-com).
+Com isso, conseguimos alcançar uma economia anual estimada (sistema + mão de obra) de mais de R$ 72 mil, com uma **economia em 5 anos de aproximadamente R$ 360 mil com a produção de conteúdo**.
 
-Texto + [estrutura de prompt para IA no trabalho](/portfolio/estrutura-de-prompt-para-ia), [produção de artigos para blogs](/portfolio/producao-textual-para-blog-com-ia), [produção de roteiros para vídeos](/portfolio/producao-de-roteiros-para-videos-no-youtube-com-ia).
+Isso, para escritórios de médio porte, que faturam até **R$ 1 milhão por ano**, representa uma **economia de 7,2% do faturamento anual**, que podem ser reinvestidos em outras áreas do escritório, como os [anúncios](como-alcancei-um-roas-de-1065-em-um-escritorio-de-advocacia).
 
-## Quais os resultados alcançados?
+> E, para escritórios menores, essa economia pode ser ainda mais representativa do faturamento total.
 
-Com a implementação da nova solução, os resultados alcançados superaram as expectativas e resolveram os desafios centrais de custo e demora que antes travavam a produção de conteúdo, o principal canal de aquisição de clientes do escritório.
-
-E o resultado mais impactante foi a drástica redução no tempo de produção:
-* O tempo médio entre a concepção de uma ideia e a entrega do produto final (artigo e roteiro), que antes era de 142 dias corridos, foi reduzido para uma média de apenas 17 dias (essa otimização representa um aumento de quase 12x na eficiência da produção!).
-
-Essa melhoria foi alcançada em etapas: a reestruturação do fluxo de trabalho reduziu o tempo inicial de 173 dias para 52 dias, e a posterior implementação da IA para gerar documentos como briefings, artigos e roteiros, diminuiu o tempo para a média final de 15 a 17 dias.
-
-A segunda grande vitória foi a substancial diminuição nos custos operacionais:
-* A reestruturação, internalização e automação do processo permitiram o encerramento do contrato com o prestador de serviços de produção textual, que representava um custo anual de aproximadamente R$ 72 mil.
-
-Este valor foi substituído por despesas operacionais mínimas, incluindo uma média de R$ 60/mês com a plataforma de automação e apenas R$ 0,36/mês com o provedor de IA.
-
-Essa troca resultou em uma redução de custos anual de mais de 100x (ou R$ 720/ano em despesas operacionais), atingindo em cheio o objetivo inicial de "economizar em custos com prestadores de serviços".
-
-Com isso, conseguimos alcançar uma economia anual estimada (sistema + mão de obra) de mais de R$ 72 mil, com uma economia em 5 anos de aproximadamente R$ 360 mil com a produção de conteúdo.
-
-Isso, para escritórios de médio porte, que faturam até R$ 1 milhão por ano, representa uma economia de 7,2% do faturamento total não gasto e que podem ser reinvestidos no Marketing e em outras áreas do escritório.
-
-Para escritórios menores, essa economia pode ser ainda mais representativa.
-
-Além dos ganhos de tempo e dinheiro, houve um impacto significativo nos recursos humanos:
+Além dos ganhos de tempo e dinheiro, houve um **impacto significativo no capital humanos**:
 * A automação de tarefas repetitivas, como a gestão de cards e tarefas no CRM e a criação de pastas e arquivos, aliviou a carga de trabalho da equipe interna.
 
-Isso diminuiu a quantidade de horas humanas alocadas em atividades de baixo valor e permitiu que os colaboradores se concentrassem em tarefas mais estratégicas, como a pesquisa de conteúdo e palavras-chave.
+[Essas automações diminuíram a quantidade de horas humanas alocadas em atividades de baixo valor](automacao-de-trabalho-operacional-repetitivo) e permitiram que os colaboradores se concentrassem em **tarefas mais estratégicas**, como a pesquisa de conteúdo e palavras-chave.
 
-Ao eliminar erros manuais e atrasos, a nova pipeline também permitiu que mais conteúdos fossem produzidos simultaneamente, escalando a capacidade de entrega e fortalecendo o principal canal de crescimento do escritório.
+### Drástica redução no tempo de produção
 
-Em resumo, com todas essas inovações implementadas, o escritório não só conseguiu internalizar a produção de conteúdo, mas também aprimorou a qualidade e escalou significativamente sua capacidade de entrega.
+A segunda grande vitória foi a **redução no tempo de produção**:
 
-Esse ganho de eficiência e a liberação de horas de trabalho permitiram também com que o analista contratado, inicialmente focado na produção de conteúdo, expandisse sua atuação para outras frentes estratégicas do escritório, como tráfego pago, automações no CRM e análise de dados. Isso demonstra o impacto positivo do projeto na produtividade geral da equipe interna, que agora pode se dedicar a tarefas estratégicas e iniciativas que geram ainda mais valor para o escritório.
+O **tempo médio** entre a concepção de uma ideia e a entrega do produto final (artigo/roteiro de vídeo), que antes era de **142 dias corridos**, foi reduzido para **apenas 15 dias**!
+
+> Essa otimização representa um aumento de quase **10x** na eficiência da produção.
+
+Essa melhoria foi alcançada em etapas:
+
+1. A **reestruturação do fluxo de trabalho reduziu** o tempo inicial de 173 dias para 52 dias (tornando o processo 3x mais eficiente);
+1. E a posterior **implementação da IA** para gerar documentos como briefings, artigos e roteiros, diminuiu o tempo para a média final de 15 a 17 dias (aumento de 3x na eficiência).
+
+> Como os conteúdos divulgados pela são de cunho jurídico, todos os textos, tanto o briefing como artigos e roteiros, passam pelo crivo das advogadas do escritório — uma etapa que não foi alterada.
+
+Ao eliminar erros manuais e atrasos, as novas pipelines também permitiram que **mais conteúdos fossem produzidos simultaneamente**, escalando a capacidade de entrega e fortalecendo o principal canal de aquisição de clientes do escritório.
+
+### Conclusão
+
+Com todas essas inovações implementadas, o escritório não só conseguiu **internalizar a produção de conteúdo**, como também **aprimorou a qualidade** e **escalou significativamente sua capacidade de entrega**.
+
+Esse ganho de eficiência, por consequência, gerou a liberação de horas de trabalho dos operadores, o que permitiu que o analista contratado expandisse sua atuação para outras frentes estratégicas do escritório — expandindo o aproveitamento do capital humano do escritório, como:
+  * Tráfego pago;
+  * Automações no CRM, e;
+  * Análise de dados;
+
+Isso demonstra o impacto positivo do projeto na **produtividade geral da equipe interna**, que agora pode se dedicar a **tarefas estratégicas** e iniciativas que **geram mais valor para o escritório**.

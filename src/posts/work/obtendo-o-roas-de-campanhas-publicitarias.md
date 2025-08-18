@@ -1,10 +1,10 @@
 ---
-isDraft: true
+isDraft: false
 title: "Obtendo ROAS de campanhas publicitárias"
 description: "Veja o processo, e os benefícios, de se obter o retorno sobre os investimentos com anúncios."
 imageName: "john-FlPc9_VocJ4-unsplash"
-pubDate: 2025-04-24
-updatedDate: 2025-04-24
+pubDate: 2025-06-20
+updatedDate: 2025-06-20
 tags: ["trabalho", "roas"]
 ---
 
@@ -20,102 +20,144 @@ Diferente de outras métricas que podem focar apenas no volume de vendas ou no c
 
 E não é só isso! O ROAS  também é uma prova indiscutível sobre o valor do seu trabalho enquanto gestor de tráfego pago, pois com ele você apresenta, por A + B, o retorno financeiro que o seu trabalho trouxe para a empresa.
 
-Mas mesmo sendo essencial, são poucas as agências que focam no ROAS (muitas vezes prefereindo o CPL) e menores são os números que empresas que compreendem o real impacto dessa métrica.
+Mas mesmo sendo essencial, são poucas as agências que focam no ROAS (muitas vezes preferem o CPL) e menores são os números das empresas que compreendem o real impacto dessa métrica.
 
-## Introdução ao cliente
+## Qual era o problema enfrentado?
 
-Nessa história de aquisição do ROAS, o cliente é a [Engel Advogados](https://engeladvogados.com.br/): um escritório de advocacia fundado em 2008 por [Julio Engel](https://www.linkedin.com/in/julioengel/), que conta com uma visão focada em números.
+Este case estuda a obtenção do ROAS nas campanhas publicitárias do escritório **Engel Advogados**.
 
-![Foto da capa do YouTube da Engel Advogados.](https://yt3.googleusercontent.com/ihCHOHCRFa-ZeDcvYvMuaop34RtyJaxhL-h0BU3xW2IyyJSewXCNLJJOVW3m46Vu_AXB4Tk_Ng=w1707-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj)
+Fundado em 2008 pelo advogado [Julio Engel](https://www.linkedin.com/in/julioengel/), pioneiro na transformação digital de escritórios de advocacia. O escritório já conta com mais de 10 mil casos na Justiça, consolidando-se como uma referência em inovação e escala na advocacia.
 
-[breve história do escritório, como se tornou focado no digital e experiência com agências de mkt]
+Hoje, com mais de 17 anos de histórias de sucesso, o escritório acumula mais de 1.400 avaliações no Google e, mais recentemente, foi reconhecido como o *Melhor Escritório Contratualista* em 2024, pela ADVBOX, referência na área.
 
-## Introdução ao problema
+E mesmo com o escritório fechando diversos contratos e tendo um entendimento de que certa parte era proveniente dos anúncios (seja de leads vindos de uma LP ou campanhas de mensagem no WhatsApp), **o quanto eles representavam de receita para o escritório era uma incógnita**.
 
-Apesar desse crescimento exponencial e de um invesetimento pesado em anúncios, o retorno que eles davam era dúbio.
+As contas de anúncios do escritório já passaram por várias agências, e, enquanto o desempenho era incrementado de uma transição para outra, nenhuma havia conseguido implementar um sistema para mensuração do ROAS.
 
-Mesmo com o escritório fechando diversos contratos e tendo um entendimento de que certa parte era proveniente dos anúncios (seja de leads vindos de uma LP ou campanhas de mensagem no WhatsApp), exatamente o quanto eles rendiam para o escritório era uma icógnita.
+Isso se torna ainda mais preocupante quando entendemos que o escritório investia pesado em anúncios: com uma **grande fatia do faturamento total anual** sendo revertida para o departamento de Marketing.
 
-As contas de anúncios do escritório passaram por várias agências, e, enquanto o desempenho era incrementada de uma transição para outra, um problema central, típico de agências, ainda estava presente: a ausência do [traqueamento dos leads via UTMs](/portfolio/traqueamento-de-leads-a-partir-de-utms).
+Para sanar esse problema, Julio introduziu um sistema para avaliação do CAC (Custo de Aquisição de Cliente) que se desmembrava para cada produto jurídico oferecido pelo escritório.
 
-O traqueamento de leads via UTMs, como [já expliquei em outro artigo](/portfolio/traqueamento-de-leads-a-partir-de-utms), é essencial para diversos fins e, um deles, é exatamente a obtenção do ROAS.
+Com isso, era possível obter uma ideia geral de como estavam as coisas. No entanto, dentro desse cálculo do CAC, eram incluídos diversos outros gastos não diretamente relacionados com os anúncios.
 
-Para sanar esse problema, Julio introduziu um sistema para avaliação do CAC (Custo de Aquisição de Cliente) de cada produto jurídico oferecido pelo escritório.
+![Diagrama simbolizando o CAC como resultado da soma de gastos com a gestão de uma empresa. Do lado esquerdo, estão ícones de CRM, uma mulher (representando uma funcionária), Meta Ads e WhatsApp, todos conectados por linhas ao centro (CAC). Do lado direito, estão ícones de um homem (represetnando um funcionário), Google Ads e um prédio de escritório, também conectados ao centro.](../../assets/photos/reduzindo-em-100x-o-custo-de-producao-de-conteudo-com-ia-foto-1.png)
 
-E dentro desse cálculo do CAC, estavam inclusos os gastos com as campanhas para os respectivos produtos, porém, esses gastos eram somados a diversos outros gastos não diretamente relacionados com os anúncios.
+O problema é que, com esse sistema, não se sabia quais campanhas estavam trazendo leads qualificados, quais não estavam, quais precisavam de ajuste, quais estavam boas e, o mais importante: qual o retorno de cada uma.
 
-![ilustração]()
+Além disso, o escritório não contava com uma forma de marcação assertiva dos Leads provenientes dos anúncios, o que impossibilitava até a mensuração da quantidade de oportunidades repassadas para o Comercial.
 
-Contudo, por mais que essa estratégia trouxesse uma visão geral do todo, muito importante para alinhamentos estratégicos como empresa, ela não era útil para diagnosticar problemas ou oportunidades no tráfego pago.
+## Quais os impactos da ausência do ROAS?
 
-> Isso por mais que pudesse servir como um indicador de que algo estava errado com os anúncios de determinado produto, já que caso os anúncios estivessem indo mal, isso seria refletido no número de contratos fechados e, consequentemente, no CAC.
+Sem a definição do ROAS, a alocação do orçamento para os anúncios era baseada em suposições que levavam em consideração dados escassos e pouco confiáveis.
 
-O problema é que, com esse sistema, não se sabia quais campanhas estavam trazendo leads qualificados, quais não estavam, qual merecia atenção, qual estava boa e, o mais importante: qual o retorno de cada uma.
+A ausência do ROAS também impactava no trabalho da gestão dos próprios anúncios, pois as agências se viam limitadas apenas pelas métricas disponíveis no gerenciador de anúncios para tomada de decisão.
 
-Além disso, não era possível distinguir todos leads de Ads de outros leads, o que tornava o cálculo pouco fidedígno para o fim de determinar o ROAS, já que leads orgânicos podiam ser contabilizados.
+> Lembre-se: as métricas do gerenciador **não representam o impacto dos anúncios no negócio**, elas são uma mera descrição do desempenho dos mesmos na respectiva plataforma.
 
-## Consequências do problema
+Isso gerava uma dificuldade em definir com exatidão quais eram os anúncios que realmente estavam gerando novos negócios e quais estavam apenas queimando o orçamento; o que gerava dificuldade na aprovação de orçamentos e aferição dos melhores canais de conversão era prejudicada pela incerteza do retorno gerado.
 
-A ausência do traqueamento dos leads via UTMs impacta diretamente na capacidade de determinação do ROAS, que, por sua vez, repercute em diversas áreas do tráfego pago.
+> Existia também a chance real de tirar dinheiro de uma campanha que estava rendendo ótimos Leads e colocar em outra que mal se pagava — e isso tudo sem saber: só sentiria a diferença no final do mês (e depois de muitas outras alterações), quando os números do Comercial fossem ser analisados.
 
-Alguns desses problemas você já deve conhecer, como dificuldade na definição de verbas para os anúncios e consequentemente estagnação precore do crescimento do negócio.
+Somando a isso, com o escritório em crescimento, a **Engel** investia pesado em diversas plataformas de anúncios, principalmente no **Google Ads** e **Meta Ads**.
 
-As áreas mais afetadas pela ausência do CAC para o tráfego pago são:
-* Planejamento financeiro;
-* Determinação de plataformas para veiculação de anúncios;
-* Determinação de melhores formas de veiculação, e;
-* Organização do investimento de tempo na gestão dos anúncios.
-
-Detalhamento dos impactos negativos de um ROAS baixo (ex: desperdício de verba, falta de visão holística da operação, estagnação do crescimento).
-
-### Em quais campanhas focar esforços?
-
-Sem essas informações, o planejamento financeiro para os gastos com tráfego pago era prejudicado, pois não haviam números concretos para conferir.
-
-Essa falta de números concretos também dificulta a gestão orçamentária: "como não sei se essa campanha está dando um bom retorno, como vou fazer uma gestão orçamentária eficiente?""
-
-Existe a chance real de eu tirar dinheiro de uma campanha que estava rendendo um ROAS excelente e colocar em outra que mal se pagava — e isso tudo sem saber: só sentiria a diferença no final do mês (e depois de muitas outras alterações).
-
-[continuar com problema de gestão orçamentária]
-
-### Qual melhor plataforma para obter clientes?
-
-Com o escritório em crescimento, a Engel investia pesado em diversas plataformas de anúncios, principalmente no **Google Ads** e **Meta Ads**.
-
-Contudo, com a ausência do traqueamento de leads de ads no CRM impedia a identificação exata de quais plataformas rendiam mais clientes, quais rendiam clientes com maior *ticket médio* e quais estavam apenas drenando dinheiro.
+Contudo, com a ausência do traqueamento de leads de anúncios no CRM impedia a identificação exata de quais plataformas rendiam mais clientes, quais rendiam clientes com maior *ticket médio* e quais estavam apenas drenando dinheiro.
 
 ![Diagrama hierárquico mostrando a performance de campanhas pagas. No nível superior, Plataforma, com logos do Google Ads, Meta (Facebook/Instagram) e TikTok. Abaixo, Conjunto e Anúncio. Há indicadores de qualificação (certo, aviso, erro) para cada elemento, separando Leads qualificados de Leads desqualificados, demonstrando como a performance pode variar em diferentes plataformas e níveis de campanha.](../../assets/photos/criador-de-utms-midia_paga.png)
 
-Além disso, diferentes estratégias de aquisição de leads resultam em diferentes tipos de leads e, sem um traqueamento adequado, não era possível saber o desempenho de cada uma.
+Além disso, diferentes estratégias de aquisição de leads resultam em diferentes tipos de leads e, sem um [traqueamento adequado](/portfolio/traqueamento-de-leads-a-partir-de-utms), não era possível saber o desempenho de cada uma.
 
-Imagina criar campanhas e não conseguir determinar se os leads que vão direto para o WhatsApp estão melhores do que os que passam pela LP, ou quem sabe se é melhor levar os leads para um artigo de blog e, por lá, eles convertem.
+Imagina criar campanhas e não conseguir determinar se os leads que estão chegando são bons ou não? São problemas graves, que dificultam encontrar a veia que sustenta o negócio.
 
-São problema graves, que dificultam encontrar a veia que sustenta o negócio e possibilitam uma chance real de tirar dinheiro de uma campanha que estava rendendo ótimos leads.
+## Qual foi a solução proposta?
 
-### Qual anúncio possuia menor CAC?
+Para atacar o problema de *"qual era efetivamente o retorno sobre os investimentos com anúncios na Engel?"*, foi proposta uma solução baseada em 3 etapas:
 
-Texto.
+1. Implementar o **rastreamento dos leads no CRM** via UTMs;
+1. **Identificar as métricas** a serem analisadas para determinação do ROAS, e;
+1. Criar um **painel para acompanhamento** dos Leads de anúncios.
 
-## Como o problema foi atacado
+Essa estratégia foi escolhida pela sua elasticidade: **cada etapa é independente uma da outra**, ou seja, era possível executá-las em paralelo.
 
-Explicação simplificada de como o processo de otimização de ROAS é conduzido: UTMs, Painel de Ads (Google Looker Studio) e integração com reportei + CRM Bitrix24.
+Isso permitiu acelerar a execução do projeto e auxiliou a estreitar as relações entre o Marketing e o Comercial na Engel; departamentos antes com objetivos bem distintos, mas que hoje contam com metas que se complementam.
 
-### Traqueamento de eventos e conversões
+Cada negócio possui sua forma de registrar receita, calcular oportunidades e abordar os clientes, e na Engel não era diferente.
 
-[introdução aos UTMs, definição e padronização de UTMs, aplicação nas campanhas]
+O escritório, pioneiro em atuação em escala de serviços jurídicos, possuía um **processo comercial bem definido e solidificado** — indispensável para o sucesso de um projeto como este.
 
-### Painel para acompanhamento dos anúncios
+O processo comercial (relevante para este case) do escritório pode ser simplificado em três etapas:
+1. Pipeline para **novos Leads**: onde era feita a classificação dos Leads e o envio das mensagens de primeiro contato.
+    * Aqui, identificamos que poderíamos utilizar as informações de origem dos Leads de anúncios para fazer a classificação dos Leads de forma automática, diminuindo o *leadtime* e o trabalho manual necessário.
+    * Também definimos que as informações das UTMs seriam salvas na entidade de Contato do CRM.
+1. Pipeline para **qualificação dos Leads**: após responder às mensagens de primeiro contato, o Lead seguia para a qualificação por um SDR.
+    * Com a marcação de leads de anúncios, conseguimos definir prioridade para o atendimento desses Leads, reduzindo ainda mais o *leadtime* e auxiliando os SDRs na identificação de oportunidades mais quentes dentro do CRM.
+    * Foi nesta etapa do processo que introduzimos a marcação de **Lead MQL** (*Marketing Qualified Lead*), para que o Comercial possa apontar a quantidade recebida de Leads qualificados provenientes de anúncios.
+        * Isso, por sua vez, também auxilia na gerência dos anúncios, permitindo identificar os anúncios que traziam a maior quantidade de Leads qualificados.
+1. Pipeline para **fechamento de contratos**: era nesta etapa que os SDRs avançavam com o Lead pelas etapas de obtenção de informações, oferta de serviço e assinatura do contrato.
+    * No processo de fechamento de contratos, há uma etapa referente ao **pagamento dos honorários iniciais** pelo Lead, essa métrica era recolhida para utilizarmos no ROAS.
 
-[Painel de Ads e como ele auxilia a identificar os melhores anúncios e plataformas a partir do uso das UTMs]
+Com isso, foi possível obter uma integração profunda de rastreamento dos Lead no CRM da Engel Advogados.
 
-### Rastreamento de leads no CRM
+> Com essa integração, de fato, era possível acompanhar o Lead desde o primeiro contato até o fim do seu processo judicial.
 
-[Integração para registro das UTMs de conversão no card do Lead no CRM, ao final, integração com Painel de Ads novamente para mostrar o retorno do investimento]
+Isso possibilitou que nós pudéssemos separar os dados dos Leads de anúncios de todos os outros, fornecendo uma luz sobre o impacto dos anúncios no faturamento do escritório.
 
-### Side effect: permitir rastramento da origem de leads qualificados e desqualificados
+Veja algumas das métricas que foram coletadas e compiladas para análise:
+* Quantidade de Leads de anúncios;
+* Quantidade de Leads MQL (Marketing Qualified Lead);
+* Porcentagem de Leads MQL do total de Leads;
+    * Esta métrica, analisando junto à quantidade de Leads de anúncios, possibilita uma visão holística sobre o desempenho dos anúncios e dos Leads de cada plataforma (Google Ads e Meta Ads).
+* Total de clientes que vieram de anúncios, e;
+* Honorários de entrada recebidos;
+    * Essa métrica seria utilizada para definição do retorno dos investimentos em anúncios.
 
-[Falar que, como um bônus dessa integração, também é possível acompanhar o caminho que os leads de cada anúncio seguem, facilitando a identificação de campanhas problemáticas]
+## Quais os resultados obtidos?
 
-## Resultados obtidos
+Este projeto foi um marco para Engel Advogados, pois, pela primeira vez, era possível determinar, de maneira objetiva, o impacto dos anúncios no faturamento da empresa.
 
-Apresentação dos resultados tangíveis alcançados e dos benefícios a longo prazo da otimização de ROAS.
+Com estes e outros dados, foi criado um painel, atualizado automaticamente com as informações do CRM, para acompanhamento do ROAS das campanhas de anúncio do escritório:
+
+![Painel de dados com o título Retorno sobre Investimento em Anúncios. Ele exibe um resumo geral com os números de Leads, MQLs, % MQL, Investimento em Anúncios, Honorários de entrada e Clientes, além de gráficos de barras mostrando o número de Leads por campanha, um gráfico de barras empilhadas com a fonte por campanha e um gráfico de pizza mostrando a fonte de Leads MQL.](../../assets/photos/reduzindo-em-100x-o-custo-de-producao-de-conteudo-com-ia-foto-2.png)
+
+### Benefícios para Diretoria
+
+O painel de ROAS foi projetado para proporcionar à Diretoria uma **visão holística e simplificada do desempenho dos anúncios**.
+
+Ele consolida dados complexos em gráficos de fácil interpretação, o que permite que a liderança tome decisões estratégicas **baseadas em informações concretas**. Evitando que a liderança perca tempo analisando dezenas de planilhas e relatórios complexos e pouco claros.
+
+Além disso, em vez de se basear em suposições, a Diretoria pode **alocar o orçamento de marketing com maior confiança**, direcionando os investimentos para os canais e campanhas que demonstram o **melhor retorno financeiro**.
+
+Com isso, a empresa deixa de "queimar" dinheiro em canais que não performam e passa a **investir de forma mais inteligente**.
+
+Por fim, com a obtenção do ROAS, a **previsibilidade financeira**, a base para um crescimento sustentável de qualquer negócio, é possível obter o **histórico** de faturamento e a **projeção de retorno** sobre o investimento.
+
+Munida dessas informações, a Diretoria pode planejar **metas de receita** e **expandir as operações com segurança**, sabendo exatamente o quanto os anúncios estão contribuindo para o faturamento.
+
+### Benefícios para o gestor de tráfego
+
+O painel de ROAS não é útil apenas para a Diretoria, mas também para o gestor de tráfego, que pode analisar o desempenho das campanhas de forma detalhada.
+
+Ao utilizar os filtros baseados nos valores das UTMs, ele pode responder a perguntas específicas e otimizar as campanhas de forma contínua.
+
+Com uma visão clara de quais anúncios geram leads qualificados (MQLs) e, mais importante, quais resultam em clientes pagantes, o gestor de tráfego pode refinar as estratégias de segmentação e criativos.
+
+Isso é possível através da utilização de filtros baseados nos valores das UTMs, como, por exemplo:
+
+*"Qual desempenho dos anúncios do Google Ads, para campanha do serviço X, no mês passado?"*
+
+Para responder a esta pergunta, um filtro pode ser aplicado no relatório para apresentar apenas as informações dos Leads criados no mês passado e têm como fonte o Google Ads.
+
+Isso permite a interrupção de campanhas que não estão se pagando e o aumento do investimento naquelas que trazem um retorno financeiro sólido.
+
+O resultado é uma gestão de tráfego melhor, com orçamentos melhor alocados e resultados previsíveis.
+
+### Conclusão
+
+Chegando ao fim deste case, vemos que a implementação do **painel do ROAS** na **Engel Advogados** foi um marco, transformando a gestão de Marketing do escritório.
+
+Pela primeira vez, o impacto financeiro direto dos anúncios no faturamento foi **determinado de forma objetiva**, eliminando as suposições que antes pesavam para a alocação de orçamento.
+
+E a **solução de três etapas** (rastreamento de leads via UTMs, identificação de métricas e criação de um painel de acompanhamento) integrou Marketing e Comercial, **otimizando o processo de ponta a ponta**, desde o primeiro contato até o fechamento do contrato.
+
+Além disso, o painel de ROAS não apenas oferece uma **visão clara para a Diretoria**, permitindo decisões estratégicas baseadas em dados concretos, como também **empodera o gestor de tráfego**, que pode otimizar campanhas com base na sua rentabilidade real.
+
+O resultado é uma **gestão de anúncios mais eficiente**, **previsível** e **lucrativa**, garantindo que o investimento em publicidade se traduza em crescimento sustentável para o negócio.
