@@ -1,0 +1,647 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36" version="28.1.0" pages="4">
+  <diagram name="Página-1" id="o3UmJjtEwh6-GWK11hz5">
+    <mxGraphModel dx="1783" dy="2209" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1280" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="NkzLWRfs3i3n8M_ULgXJ-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="h9-FSNYof3CjIcJh3NvQ-1" target="NkzLWRfs3i3n8M_ULgXJ-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NkzLWRfs3i3n8M_ULgXJ-58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="h9-FSNYof3CjIcJh3NvQ-1" target="NkzLWRfs3i3n8M_ULgXJ-56">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="h9-FSNYof3CjIcJh3NvQ-1" value="Geração da ideia&lt;div&gt;(Engel)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="40" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NkzLWRfs3i3n8M_ULgXJ-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="NkzLWRfs3i3n8M_ULgXJ-1" target="NkzLWRfs3i3n8M_ULgXJ-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NkzLWRfs3i3n8M_ULgXJ-1" value="Prestador 1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NkzLWRfs3i3n8M_ULgXJ-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="NkzLWRfs3i3n8M_ULgXJ-5" target="NkzLWRfs3i3n8M_ULgXJ-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NkzLWRfs3i3n8M_ULgXJ-5" value="Produção do briefing do artigo" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NkzLWRfs3i3n8M_ULgXJ-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="NkzLWRfs3i3n8M_ULgXJ-9" target="NkzLWRfs3i3n8M_ULgXJ-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NkzLWRfs3i3n8M_ULgXJ-23" value="Aprovado" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="NkzLWRfs3i3n8M_ULgXJ-13">
+          <mxGeometry x="-0.0786" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NkzLWRfs3i3n8M_ULgXJ-49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="NkzLWRfs3i3n8M_ULgXJ-9" target="NkzLWRfs3i3n8M_ULgXJ-5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="680" y="11" />
+              <mxPoint x="500" y="11" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NkzLWRfs3i3n8M_ULgXJ-50" value="Rejeitado" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="NkzLWRfs3i3n8M_ULgXJ-49">
+          <mxGeometry x="-0.0401" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NkzLWRfs3i3n8M_ULgXJ-9" value="aprovação" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="640" y="30.689999999999998" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="NkzLWRfs3i3n8M_ULgXJ-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="NkzLWRfs3i3n8M_ULgXJ-12" target="NkzLWRfs3i3n8M_ULgXJ-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NkzLWRfs3i3n8M_ULgXJ-12" value="Produção do texto do artigo" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="800" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NkzLWRfs3i3n8M_ULgXJ-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="NkzLWRfs3i3n8M_ULgXJ-15" target="NkzLWRfs3i3n8M_ULgXJ-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NkzLWRfs3i3n8M_ULgXJ-47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="NkzLWRfs3i3n8M_ULgXJ-15" target="NkzLWRfs3i3n8M_ULgXJ-30">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NkzLWRfs3i3n8M_ULgXJ-48" value="Aprovado" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="NkzLWRfs3i3n8M_ULgXJ-47">
+          <mxGeometry x="-0.7294" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NkzLWRfs3i3n8M_ULgXJ-51" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="NkzLWRfs3i3n8M_ULgXJ-15" target="NkzLWRfs3i3n8M_ULgXJ-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NkzLWRfs3i3n8M_ULgXJ-52" value="Rejeitado" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="NkzLWRfs3i3n8M_ULgXJ-51">
+          <mxGeometry x="-0.0428" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NkzLWRfs3i3n8M_ULgXJ-15" value="aprovação" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="30" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="NkzLWRfs3i3n8M_ULgXJ-17" value="Publicação do artigo" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1160" y="-30" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NkzLWRfs3i3n8M_ULgXJ-59" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="NkzLWRfs3i3n8M_ULgXJ-30" target="NkzLWRfs3i3n8M_ULgXJ-60">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="750" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NkzLWRfs3i3n8M_ULgXJ-30" value="Produção de roteiro para vídeo" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1160" y="110" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NkzLWRfs3i3n8M_ULgXJ-54" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="NkzLWRfs3i3n8M_ULgXJ-53" target="NkzLWRfs3i3n8M_ULgXJ-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NkzLWRfs3i3n8M_ULgXJ-55" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="NkzLWRfs3i3n8M_ULgXJ-53" target="NkzLWRfs3i3n8M_ULgXJ-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NkzLWRfs3i3n8M_ULgXJ-53" value="Aprovação por advogada" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;dashPattern=8 8;" vertex="1" parent="1">
+          <mxGeometry x="800" y="-90" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NkzLWRfs3i3n8M_ULgXJ-61" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="NkzLWRfs3i3n8M_ULgXJ-56" target="NkzLWRfs3i3n8M_ULgXJ-60">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NkzLWRfs3i3n8M_ULgXJ-56" value="Prestador 2" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NkzLWRfs3i3n8M_ULgXJ-60" value="Gravação de vídeos em estúdio" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="180" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="KZW3OWpUgXNHxa3WN_Vp" name="Página-2">
+    <mxGraphModel dx="2593" dy="2631" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1280" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="8bARcpagB9-sI07E2inZ-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="8bARcpagB9-sI07E2inZ-1" target="8bARcpagB9-sI07E2inZ-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-1" value="Ideias" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="8bARcpagB9-sI07E2inZ-2" target="8bARcpagB9-sI07E2inZ-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-2" value="Estratégia" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;" vertex="1" parent="1">
+          <mxGeometry x="240" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="8bARcpagB9-sI07E2inZ-4" target="8bARcpagB9-sI07E2inZ-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-4" value="Briefing" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="440" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="8bARcpagB9-sI07E2inZ-6" target="8bARcpagB9-sI07E2inZ-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-6" value="Briefing&lt;div&gt;(aprovação)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="640" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="8bARcpagB9-sI07E2inZ-8" target="8bARcpagB9-sI07E2inZ-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-8" value="Produção do artigo" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="840" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="8bARcpagB9-sI07E2inZ-10" target="8bARcpagB9-sI07E2inZ-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-10" value="Artigo&lt;div&gt;(aprovação)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="8bARcpagB9-sI07E2inZ-12" target="8bARcpagB9-sI07E2inZ-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-12" value="Link building" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;" vertex="1" parent="1">
+          <mxGeometry x="1240" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="8bARcpagB9-sI07E2inZ-14" target="8bARcpagB9-sI07E2inZ-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-14" value="Publicar no blog" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;" vertex="1" parent="1">
+          <mxGeometry x="1440" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-32" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="8bARcpagB9-sI07E2inZ-16" target="8bARcpagB9-sI07E2inZ-31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-16" value="Roteiro para vídeo" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="1640" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-18" value="&lt;font face=&quot;Atkinson Hyperlegible&quot; data-font-src=&quot;https://fonts.googleapis.com/css?family=Atkinson+Hyperlegible&quot; style=&quot;font-size: 24px;&quot;&gt;&lt;b style=&quot;&quot;&gt;Antes (média de 145 dias)&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="-10" width="920" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-34" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="8bARcpagB9-sI07E2inZ-31">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1560" y="210" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-31" value="Roteiro&lt;div&gt;(aprovação)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="1640" y="180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-41" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="8bARcpagB9-sI07E2inZ-38" target="8bARcpagB9-sI07E2inZ-40">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-38" value="Gravação do vídeo" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="1440" y="180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-43" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="8bARcpagB9-sI07E2inZ-40" target="8bARcpagB9-sI07E2inZ-42">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-40" value="Edição do vídeo" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="1240" y="180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-45" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="8bARcpagB9-sI07E2inZ-42" target="8bARcpagB9-sI07E2inZ-44">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-42" value="Recortes do vídeo" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-44" value="Publicar vídeos" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;" vertex="1" parent="1">
+          <mxGeometry x="840" y="180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-46" value="&lt;font face=&quot;Atkinson Hyperlegible&quot; data-font-src=&quot;https://fonts.googleapis.com/css?family=Atkinson+Hyperlegible&quot; style=&quot;font-size: 24px;&quot;&gt;&lt;b style=&quot;&quot;&gt;Depois&amp;nbsp;&lt;/b&gt;&lt;/font&gt;&lt;b style=&quot;font-family: &amp;quot;Atkinson Hyperlegible&amp;quot;; font-size: 24px;&quot;&gt;(média de 15 dias)&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="260" width="920" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-52" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="8bARcpagB9-sI07E2inZ-47">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="240" y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-47" value="Ideias" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;" vertex="1" parent="1">
+          <mxGeometry x="40" y="340" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-49" value="&lt;font face=&quot;Atkinson Hyperlegible&quot; data-font-src=&quot;https://fonts.googleapis.com/css?family=Atkinson+Hyperlegible&quot; style=&quot;font-size: 18px;&quot;&gt;&lt;b style=&quot;&quot;&gt;Produção de artigos&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="310" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-63" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="8bARcpagB9-sI07E2inZ-58" target="8bARcpagB9-sI07E2inZ-59">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-58" value="Briefing" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="240" y="340" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-64" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="8bARcpagB9-sI07E2inZ-59" target="8bARcpagB9-sI07E2inZ-60">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-59" value="Briefing&lt;div&gt;(aprovação)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="440" y="340" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-65" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="8bARcpagB9-sI07E2inZ-60" target="8bARcpagB9-sI07E2inZ-61">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-60" value="Produção do artigo" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="640" y="340" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-66" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="8bARcpagB9-sI07E2inZ-61" target="8bARcpagB9-sI07E2inZ-62">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-61" value="Artigo&lt;div&gt;(aprovação)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="840" y="340" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-62" value="Publicar no blog" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="340" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-67" value="&lt;font face=&quot;Atkinson Hyperlegible&quot; data-font-src=&quot;https://fonts.googleapis.com/css?family=Atkinson+Hyperlegible&quot; style=&quot;font-size: 18px;&quot;&gt;&lt;b style=&quot;&quot;&gt;Produção audiovisual&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="480" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-74" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="8bARcpagB9-sI07E2inZ-68" target="8bARcpagB9-sI07E2inZ-69">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-68" value="Ideias" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;" vertex="1" parent="1">
+          <mxGeometry x="40" y="510" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-75" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="8bARcpagB9-sI07E2inZ-69" target="8bARcpagB9-sI07E2inZ-70">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-69" value="Briefing de gravação" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="240" y="510" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-76" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="8bARcpagB9-sI07E2inZ-70" target="8bARcpagB9-sI07E2inZ-71">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-70" value="Briefing&lt;div&gt;(aprovação)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="440" y="510" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-77" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="8bARcpagB9-sI07E2inZ-71" target="8bARcpagB9-sI07E2inZ-72">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-71" value="Roteiro do vídeo" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="640" y="510" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-78" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="8bARcpagB9-sI07E2inZ-72" target="8bARcpagB9-sI07E2inZ-73">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-72" value="Roteiro&lt;div&gt;(aprovação)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="840" y="510" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-80" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="8bARcpagB9-sI07E2inZ-73" target="8bARcpagB9-sI07E2inZ-79">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-73" value="Gravação do vídeo" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="510" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-82" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="8bARcpagB9-sI07E2inZ-79" target="8bARcpagB9-sI07E2inZ-81">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-79" value="Edição do vídeo" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="1240" y="510" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-81" value="Publicar vídeos" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;" vertex="1" parent="1">
+          <mxGeometry x="1440" y="510" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-83" value="&lt;font style=&quot;font-size: 14px;&quot; data-font-src=&quot;https://fonts.googleapis.com/css?family=Atkinson+Hyperlegible&quot; face=&quot;Atkinson Hyperlegible&quot;&gt;IA: instantâneo&amp;nbsp;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="240" y="400" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-88" value="&lt;font face=&quot;Atkinson Hyperlegible&quot; data-font-src=&quot;https://fonts.googleapis.com/css?family=Atkinson+Hyperlegible&quot; style=&quot;font-size: 18px;&quot;&gt;&lt;b style=&quot;&quot;&gt;Legenda:&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="640" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-89" value="&lt;font style=&quot;font-size: 14px;&quot; data-font-src=&quot;https://fonts.googleapis.com/css?family=Atkinson+Hyperlegible&quot; face=&quot;Atkinson Hyperlegible&quot;&gt;Prestador de serviço&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="40" y="670" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-90" value="&lt;font style=&quot;font-size: 14px;&quot; data-font-src=&quot;https://fonts.googleapis.com/css?family=Atkinson+Hyperlegible&quot; face=&quot;Atkinson Hyperlegible&quot;&gt;Advogada da Engel&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="200" y="670" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-92" value="&lt;span style=&quot;font-family: &amp;quot;Atkinson Hyperlegible&amp;quot;; font-size: 14px;&quot;&gt;Prestador de serviço&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="520" y="670" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-93" value="&lt;font style=&quot;font-size: 14px;&quot; data-font-src=&quot;https://fonts.googleapis.com/css?family=Atkinson+Hyperlegible&quot; face=&quot;Atkinson Hyperlegible&quot;&gt;Prestador de serviço&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="360" y="670" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-94" value="&lt;span style=&quot;font-family: &amp;quot;Atkinson Hyperlegible&amp;quot;; font-size: 14px;&quot;&gt;Inteligência Artificial&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="680" y="670" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-95" value="&lt;font style=&quot;font-size: 14px;&quot; data-font-src=&quot;https://fonts.googleapis.com/css?family=Atkinson+Hyperlegible&quot; face=&quot;Atkinson Hyperlegible&quot;&gt;IA: instantâneo&amp;nbsp;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="640" y="400" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-96" value="&lt;font style=&quot;font-size: 14px;&quot; data-font-src=&quot;https://fonts.googleapis.com/css?family=Atkinson+Hyperlegible&quot; face=&quot;Atkinson Hyperlegible&quot;&gt;IA: instantâneo&amp;nbsp;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="640" y="570" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-97" value="&lt;font style=&quot;font-size: 14px;&quot; data-font-src=&quot;https://fonts.googleapis.com/css?family=Atkinson+Hyperlegible&quot; face=&quot;Atkinson Hyperlegible&quot;&gt;IA: instantâneo&amp;nbsp;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="240" y="570" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-98" value="&lt;font style=&quot;font-size: 14px;&quot; data-font-src=&quot;https://fonts.googleapis.com/css?family=Atkinson+Hyperlegible&quot; face=&quot;Atkinson Hyperlegible&quot;&gt;1 dia útil&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="460" y="570" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-99" value="&lt;font style=&quot;font-size: 14px;&quot; data-font-src=&quot;https://fonts.googleapis.com/css?family=Atkinson+Hyperlegible&quot; face=&quot;Atkinson Hyperlegible&quot;&gt;1 dia útil&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="860" y="570" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-101" value="&lt;font style=&quot;font-size: 14px;&quot; data-font-src=&quot;https://fonts.googleapis.com/css?family=Atkinson+Hyperlegible&quot; face=&quot;Atkinson Hyperlegible&quot;&gt;1 dia útil&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="860" y="400" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-102" value="&lt;font style=&quot;font-size: 14px;&quot; data-font-src=&quot;https://fonts.googleapis.com/css?family=Atkinson+Hyperlegible&quot; face=&quot;Atkinson Hyperlegible&quot;&gt;1 dia útil&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="460" y="400" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-103" value="&lt;font style=&quot;font-size: 14px;&quot; data-font-src=&quot;https://fonts.googleapis.com/css?family=Atkinson+Hyperlegible&quot; face=&quot;Atkinson Hyperlegible&quot;&gt;Trimestral&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1060" y="570" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-104" value="&lt;font style=&quot;font-size: 14px;&quot; data-font-src=&quot;https://fonts.googleapis.com/css?family=Atkinson+Hyperlegible&quot; face=&quot;Atkinson Hyperlegible&quot;&gt;3 dias úteis&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1250" y="570" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-105" value="&lt;font style=&quot;font-size: 14px;&quot; data-font-src=&quot;https://fonts.googleapis.com/css?family=Atkinson+Hyperlegible&quot; face=&quot;Atkinson Hyperlegible&quot;&gt;3 dias úteis&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1250" y="240" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-106" value="&lt;font style=&quot;font-size: 14px;&quot; data-font-src=&quot;https://fonts.googleapis.com/css?family=Atkinson+Hyperlegible&quot; face=&quot;Atkinson Hyperlegible&quot;&gt;Trimestral&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1460" y="240" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-107" value="&lt;font style=&quot;font-size: 14px;&quot; data-font-src=&quot;https://fonts.googleapis.com/css?family=Atkinson+Hyperlegible&quot; face=&quot;Atkinson Hyperlegible&quot;&gt;1 dia útil&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1660" y="240" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-108" value="&lt;font style=&quot;font-size: 14px;&quot; data-font-src=&quot;https://fonts.googleapis.com/css?family=Atkinson+Hyperlegible&quot; face=&quot;Atkinson Hyperlegible&quot;&gt;1 dia útil&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1060" y="100" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-109" value="&lt;font style=&quot;font-size: 14px;&quot; data-font-src=&quot;https://fonts.googleapis.com/css?family=Atkinson+Hyperlegible&quot; face=&quot;Atkinson Hyperlegible&quot;&gt;1 dia útil&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="660" y="100" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-110" value="&lt;font style=&quot;font-size: 14px;&quot; data-font-src=&quot;https://fonts.googleapis.com/css?family=Atkinson+Hyperlegible&quot; face=&quot;Atkinson Hyperlegible&quot;&gt;3 dias úteis&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="450" y="100" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-111" value="&lt;font style=&quot;font-size: 14px;&quot; data-font-src=&quot;https://fonts.googleapis.com/css?family=Atkinson+Hyperlegible&quot; face=&quot;Atkinson Hyperlegible&quot;&gt;5 dias úteis&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="850" y="100" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-112" value="&lt;font style=&quot;font-size: 14px;&quot; data-font-src=&quot;https://fonts.googleapis.com/css?family=Atkinson+Hyperlegible&quot; face=&quot;Atkinson Hyperlegible&quot;&gt;1 dia útil&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1260" y="100" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-113" value="&lt;font style=&quot;font-size: 14px;&quot; data-font-src=&quot;https://fonts.googleapis.com/css?family=Atkinson+Hyperlegible&quot; face=&quot;Atkinson Hyperlegible&quot;&gt;1 dia útil&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1460" y="100" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-114" value="&lt;font style=&quot;font-size: 14px;&quot; data-font-src=&quot;https://fonts.googleapis.com/css?family=Atkinson+Hyperlegible&quot; face=&quot;Atkinson Hyperlegible&quot;&gt;1 dia útil&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1660" y="100" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-115" value="&lt;font style=&quot;font-size: 14px;&quot; data-font-src=&quot;https://fonts.googleapis.com/css?family=Atkinson+Hyperlegible&quot; face=&quot;Atkinson Hyperlegible&quot;&gt;1 dia útil&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="860" y="240" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-116" value="&lt;font style=&quot;font-size: 14px;&quot; data-font-src=&quot;https://fonts.googleapis.com/css?family=Atkinson+Hyperlegible&quot; face=&quot;Atkinson Hyperlegible&quot;&gt;3 dias úteis&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="240" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-117" value="&lt;font style=&quot;font-size: 14px;&quot; data-font-src=&quot;https://fonts.googleapis.com/css?family=Atkinson+Hyperlegible&quot; face=&quot;Atkinson Hyperlegible&quot;&gt;1 dia útil&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1060" y="400" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-118" value="&lt;font style=&quot;font-size: 14px;&quot; data-font-src=&quot;https://fonts.googleapis.com/css?family=Atkinson+Hyperlegible&quot; face=&quot;Atkinson Hyperlegible&quot;&gt;1 dia útil&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1460" y="570" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8bARcpagB9-sI07E2inZ-119" value="&lt;font style=&quot;font-size: 14px;&quot; data-font-src=&quot;https://fonts.googleapis.com/css?family=Atkinson+Hyperlegible&quot; face=&quot;Atkinson Hyperlegible&quot;&gt;1 dia útil&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="260" y="100" width="80" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="xx2-oQVfRDbh6mXCl6lR" name="Página-3">
+    <mxGraphModel dx="1783" dy="929" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1280" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="c_daoIsvO4DPeU-f2SiL-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="c_daoIsvO4DPeU-f2SiL-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="240" y="70" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c_daoIsvO4DPeU-f2SiL-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;dashPattern=8 8;" edge="1" parent="1" source="c_daoIsvO4DPeU-f2SiL-2" target="c_daoIsvO4DPeU-f2SiL-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_daoIsvO4DPeU-f2SiL-2" value="Ideias" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c_daoIsvO4DPeU-f2SiL-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="c_daoIsvO4DPeU-f2SiL-4" target="c_daoIsvO4DPeU-f2SiL-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_daoIsvO4DPeU-f2SiL-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;dashPattern=8 8;" edge="1" parent="1" source="c_daoIsvO4DPeU-f2SiL-4" target="c_daoIsvO4DPeU-f2SiL-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_daoIsvO4DPeU-f2SiL-4" value="Briefing" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;" vertex="1" parent="1">
+          <mxGeometry x="240" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c_daoIsvO4DPeU-f2SiL-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="c_daoIsvO4DPeU-f2SiL-6" target="c_daoIsvO4DPeU-f2SiL-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_daoIsvO4DPeU-f2SiL-29" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;dashPattern=8 8;" edge="1" parent="1" source="c_daoIsvO4DPeU-f2SiL-6" target="c_daoIsvO4DPeU-f2SiL-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_daoIsvO4DPeU-f2SiL-6" value="Briefing&lt;div&gt;(aprovação)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;" vertex="1" parent="1">
+          <mxGeometry x="640" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c_daoIsvO4DPeU-f2SiL-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="c_daoIsvO4DPeU-f2SiL-8" target="c_daoIsvO4DPeU-f2SiL-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_daoIsvO4DPeU-f2SiL-31" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;dashPattern=8 8;" edge="1" parent="1" source="c_daoIsvO4DPeU-f2SiL-8">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="900" y="180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c_daoIsvO4DPeU-f2SiL-8" value="Produção do artigo" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;" vertex="1" parent="1">
+          <mxGeometry x="840" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c_daoIsvO4DPeU-f2SiL-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="c_daoIsvO4DPeU-f2SiL-10" target="c_daoIsvO4DPeU-f2SiL-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_daoIsvO4DPeU-f2SiL-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;dashPattern=8 8;" edge="1" parent="1" source="c_daoIsvO4DPeU-f2SiL-10" target="c_daoIsvO4DPeU-f2SiL-45">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_daoIsvO4DPeU-f2SiL-10" value="Artigo&lt;div&gt;(aprovação)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;" vertex="1" parent="1">
+          <mxGeometry x="1240" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c_daoIsvO4DPeU-f2SiL-11" value="Publicar no blog" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;" vertex="1" parent="1">
+          <mxGeometry x="1440" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c_daoIsvO4DPeU-f2SiL-12" value="Tarefa simples" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;" vertex="1" parent="1">
+          <mxGeometry x="40" y="180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c_daoIsvO4DPeU-f2SiL-17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" edge="1" parent="1" source="c_daoIsvO4DPeU-f2SiL-14" target="c_daoIsvO4DPeU-f2SiL-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_daoIsvO4DPeU-f2SiL-19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="c_daoIsvO4DPeU-f2SiL-14" target="c_daoIsvO4DPeU-f2SiL-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_daoIsvO4DPeU-f2SiL-14" value="Webhook" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;" vertex="1" parent="1">
+          <mxGeometry x="240" y="180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c_daoIsvO4DPeU-f2SiL-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" edge="1" parent="1" source="c_daoIsvO4DPeU-f2SiL-16" target="c_daoIsvO4DPeU-f2SiL-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_daoIsvO4DPeU-f2SiL-16" value="Cria pasta no Google Drive" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c_daoIsvO4DPeU-f2SiL-18" value="Tarefa para conferir briefing" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;" vertex="1" parent="1">
+          <mxGeometry x="240" y="320" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c_daoIsvO4DPeU-f2SiL-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" edge="1" parent="1" source="c_daoIsvO4DPeU-f2SiL-20" target="c_daoIsvO4DPeU-f2SiL-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_daoIsvO4DPeU-f2SiL-20" value="Recolhe sitemap para link building&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="320" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c_daoIsvO4DPeU-f2SiL-25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" edge="1" parent="1" source="c_daoIsvO4DPeU-f2SiL-22" target="c_daoIsvO4DPeU-f2SiL-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_daoIsvO4DPeU-f2SiL-22" value="IA produzi briefing" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="460" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c_daoIsvO4DPeU-f2SiL-27" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" edge="1" parent="1" source="c_daoIsvO4DPeU-f2SiL-24" target="c_daoIsvO4DPeU-f2SiL-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_daoIsvO4DPeU-f2SiL-24" value="Cria documento no Drive" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="600" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c_daoIsvO4DPeU-f2SiL-26" value="Atualiza card com link da pasta" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="740" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c_daoIsvO4DPeU-f2SiL-28" value="Tarefa para advogada" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;" vertex="1" parent="1">
+          <mxGeometry x="640" y="180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c_daoIsvO4DPeU-f2SiL-32" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" edge="1" parent="1" source="c_daoIsvO4DPeU-f2SiL-34" target="c_daoIsvO4DPeU-f2SiL-36">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_daoIsvO4DPeU-f2SiL-33" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="c_daoIsvO4DPeU-f2SiL-34" target="c_daoIsvO4DPeU-f2SiL-37">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_daoIsvO4DPeU-f2SiL-34" value="Webhook" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;" vertex="1" parent="1">
+          <mxGeometry x="840" y="180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c_daoIsvO4DPeU-f2SiL-35" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" edge="1" parent="1" source="c_daoIsvO4DPeU-f2SiL-36" target="c_daoIsvO4DPeU-f2SiL-39">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_daoIsvO4DPeU-f2SiL-36" value="IA produz artigo" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c_daoIsvO4DPeU-f2SiL-37" value="Tarefa para conferir artigo" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;" vertex="1" parent="1">
+          <mxGeometry x="840" y="320" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c_daoIsvO4DPeU-f2SiL-39" value="Cria documento no Drive" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="320" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c_daoIsvO4DPeU-f2SiL-45" value="Tarefa para advogada" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;" vertex="1" parent="1">
+          <mxGeometry x="1240" y="180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c_daoIsvO4DPeU-f2SiL-47" value="Tarefa para publicar blog" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;" vertex="1" parent="1">
+          <mxGeometry x="1440" y="180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c_daoIsvO4DPeU-f2SiL-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;dashPattern=8 8;" edge="1" target="c_daoIsvO4DPeU-f2SiL-47" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1500" y="100" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="Cópia do Página-3" id="eWg9K_E9N8mKSsjai9pH">
+    <mxGraphModel dx="2377" dy="1238" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1280" math="0" shadow="0">
+      <root>
+        <mxCell id="Xrbdmo_sprFlzJP4IM70-0" />
+        <mxCell id="Xrbdmo_sprFlzJP4IM70-1" parent="Xrbdmo_sprFlzJP4IM70-0" />
+        <mxCell id="Xrbdmo_sprFlzJP4IM70-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="Xrbdmo_sprFlzJP4IM70-1" source="Xrbdmo_sprFlzJP4IM70-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="240" y="70" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Xrbdmo_sprFlzJP4IM70-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;dashPattern=8 8;" edge="1" parent="Xrbdmo_sprFlzJP4IM70-1" source="Xrbdmo_sprFlzJP4IM70-4" target="Xrbdmo_sprFlzJP4IM70-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Xrbdmo_sprFlzJP4IM70-4" value="Ideias" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;" vertex="1" parent="Xrbdmo_sprFlzJP4IM70-1">
+          <mxGeometry x="40" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Xrbdmo_sprFlzJP4IM70-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;dashPattern=8 8;" edge="1" parent="Xrbdmo_sprFlzJP4IM70-1" source="Xrbdmo_sprFlzJP4IM70-7" target="Xrbdmo_sprFlzJP4IM70-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Xrbdmo_sprFlzJP4IM70-7" value="Briefing" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;" vertex="1" parent="Xrbdmo_sprFlzJP4IM70-1">
+          <mxGeometry x="240" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Xrbdmo_sprFlzJP4IM70-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="Xrbdmo_sprFlzJP4IM70-1" source="Xrbdmo_sprFlzJP4IM70-10" target="Xrbdmo_sprFlzJP4IM70-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Xrbdmo_sprFlzJP4IM70-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;dashPattern=8 8;" edge="1" parent="Xrbdmo_sprFlzJP4IM70-1" source="Xrbdmo_sprFlzJP4IM70-10" target="Xrbdmo_sprFlzJP4IM70-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Xrbdmo_sprFlzJP4IM70-10" value="Briefing&lt;div&gt;(aprovação)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;" vertex="1" parent="Xrbdmo_sprFlzJP4IM70-1">
+          <mxGeometry x="440" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Xrbdmo_sprFlzJP4IM70-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;dashPattern=8 8;" edge="1" parent="Xrbdmo_sprFlzJP4IM70-1" source="Xrbdmo_sprFlzJP4IM70-13">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="700" y="180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Xrbdmo_sprFlzJP4IM70-13" value="Produção do artigo" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;" vertex="1" parent="Xrbdmo_sprFlzJP4IM70-1">
+          <mxGeometry x="640" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Xrbdmo_sprFlzJP4IM70-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="Xrbdmo_sprFlzJP4IM70-1" source="Xrbdmo_sprFlzJP4IM70-16" target="Xrbdmo_sprFlzJP4IM70-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Xrbdmo_sprFlzJP4IM70-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;dashPattern=8 8;" edge="1" parent="Xrbdmo_sprFlzJP4IM70-1" source="Xrbdmo_sprFlzJP4IM70-16" target="Xrbdmo_sprFlzJP4IM70-40">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Xrbdmo_sprFlzJP4IM70-16" value="Artigo&lt;div&gt;(aprovação)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;" vertex="1" parent="Xrbdmo_sprFlzJP4IM70-1">
+          <mxGeometry x="840" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Xrbdmo_sprFlzJP4IM70-17" value="Publicar no blog" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;" vertex="1" parent="Xrbdmo_sprFlzJP4IM70-1">
+          <mxGeometry x="1040" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Xrbdmo_sprFlzJP4IM70-18" value="Tarefa simples" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;" vertex="1" parent="Xrbdmo_sprFlzJP4IM70-1">
+          <mxGeometry x="40" y="180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Xrbdmo_sprFlzJP4IM70-19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" edge="1" parent="Xrbdmo_sprFlzJP4IM70-1" source="Xrbdmo_sprFlzJP4IM70-21" target="Xrbdmo_sprFlzJP4IM70-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Xrbdmo_sprFlzJP4IM70-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="Xrbdmo_sprFlzJP4IM70-1" source="D8ymNoZEW_8CzeI96K-T-5" target="Xrbdmo_sprFlzJP4IM70-10">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1060" y="510" as="sourcePoint" />
+            <mxPoint x="640" y="629.9999999999998" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Xrbdmo_sprFlzJP4IM70-21" value="Webhook" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="Xrbdmo_sprFlzJP4IM70-1">
+          <mxGeometry x="240" y="180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Xrbdmo_sprFlzJP4IM70-22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" edge="1" parent="Xrbdmo_sprFlzJP4IM70-1" source="Xrbdmo_sprFlzJP4IM70-23" target="Xrbdmo_sprFlzJP4IM70-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Xrbdmo_sprFlzJP4IM70-23" value="Cria pasta no Google Drive" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;dashed=1;" vertex="1" parent="Xrbdmo_sprFlzJP4IM70-1">
+          <mxGeometry x="240" y="320" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Xrbdmo_sprFlzJP4IM70-25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" edge="1" parent="Xrbdmo_sprFlzJP4IM70-1" source="Xrbdmo_sprFlzJP4IM70-26" target="Xrbdmo_sprFlzJP4IM70-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Xrbdmo_sprFlzJP4IM70-26" value="Atualiza card com link da pasta" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;dashed=1;" vertex="1" parent="Xrbdmo_sprFlzJP4IM70-1">
+          <mxGeometry x="240" y="460" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="D8ymNoZEW_8CzeI96K-T-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" edge="1" parent="Xrbdmo_sprFlzJP4IM70-1" source="Xrbdmo_sprFlzJP4IM70-28" target="D8ymNoZEW_8CzeI96K-T-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Xrbdmo_sprFlzJP4IM70-28" value="Atualizada sistema do prestador" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;dashed=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="Xrbdmo_sprFlzJP4IM70-1">
+          <mxGeometry x="240" y="600" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Xrbdmo_sprFlzJP4IM70-32" value="Tarefa para advogada" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;" vertex="1" parent="Xrbdmo_sprFlzJP4IM70-1">
+          <mxGeometry x="440" y="180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Xrbdmo_sprFlzJP4IM70-33" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" edge="1" parent="Xrbdmo_sprFlzJP4IM70-1" source="Xrbdmo_sprFlzJP4IM70-35" target="Xrbdmo_sprFlzJP4IM70-37">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Xrbdmo_sprFlzJP4IM70-35" value="Webhook" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="Xrbdmo_sprFlzJP4IM70-1">
+          <mxGeometry x="640" y="180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="D8ymNoZEW_8CzeI96K-T-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" edge="1" parent="Xrbdmo_sprFlzJP4IM70-1" source="Xrbdmo_sprFlzJP4IM70-37" target="D8ymNoZEW_8CzeI96K-T-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Xrbdmo_sprFlzJP4IM70-37" value="Atualizada sistema do prestador" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;dashed=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="Xrbdmo_sprFlzJP4IM70-1">
+          <mxGeometry x="640" y="320" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Xrbdmo_sprFlzJP4IM70-40" value="Tarefa para advogada" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;" vertex="1" parent="Xrbdmo_sprFlzJP4IM70-1">
+          <mxGeometry x="840" y="180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Xrbdmo_sprFlzJP4IM70-41" value="Tarefa para publicar blog" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;" vertex="1" parent="Xrbdmo_sprFlzJP4IM70-1">
+          <mxGeometry x="1040" y="180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Xrbdmo_sprFlzJP4IM70-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;dashPattern=8 8;" edge="1" parent="Xrbdmo_sprFlzJP4IM70-1" target="Xrbdmo_sprFlzJP4IM70-41">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1100" y="100" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="D8ymNoZEW_8CzeI96K-T-5" value="Aguarda entrega do prestatador" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;dashed=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="Xrbdmo_sprFlzJP4IM70-1">
+          <mxGeometry x="240" y="720" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="D8ymNoZEW_8CzeI96K-T-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="Xrbdmo_sprFlzJP4IM70-1" source="D8ymNoZEW_8CzeI96K-T-11" target="Xrbdmo_sprFlzJP4IM70-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D8ymNoZEW_8CzeI96K-T-11" value="Aguarda entrega do prestatador" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Atkinson Hyperlegible;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAtkinson%2BHyperlegible;dashed=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="Xrbdmo_sprFlzJP4IM70-1">
+          <mxGeometry x="640" y="460" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

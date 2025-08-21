@@ -4,7 +4,7 @@ title: "Obtendo ROAS de campanhas publicitárias"
 description: "Veja o processo, e os benefícios, de se obter o retorno sobre os investimentos com anúncios."
 imageName: "john-FlPc9_VocJ4-unsplash"
 pubDate: 2025-06-20
-updatedDate: 2025-06-20
+updatedDate: 2025-08-18
 tags: ["trabalho", "roas"]
 ---
 
@@ -40,7 +40,7 @@ Para sanar esse problema, Julio introduziu um sistema para avaliação do CAC (C
 
 Com isso, era possível obter uma ideia geral de como estavam as coisas. No entanto, dentro desse cálculo do CAC, eram incluídos diversos outros gastos não diretamente relacionados com os anúncios.
 
-![Diagrama simbolizando o CAC como resultado da soma de gastos com a gestão de uma empresa. Do lado esquerdo, estão ícones de CRM, uma mulher (representando uma funcionária), Meta Ads e WhatsApp, todos conectados por linhas ao centro (CAC). Do lado direito, estão ícones de um homem (represetnando um funcionário), Google Ads e um prédio de escritório, também conectados ao centro.](../../assets/photos/reduzindo-em-100x-o-custo-de-producao-de-conteudo-com-ia-foto-1.png)
+![Diagrama simbolizando o CAC como resultado da soma de gastos com a gestão de uma empresa. Do lado esquerdo, estão ícones de CRM, uma mulher (representando uma funcionária), Meta Ads e WhatsApp, todos conectados por linhas ao centro (CAC). Do lado direito, estão ícones de um homem (represetnando um funcionário), Google Ads e um prédio de escritório, também conectados ao centro.](../../assets/photos/obtendo-o-roas-de-campanhas-publicitarias-foto-1.png)
 
 O problema é que, com esse sistema, não se sabia quais campanhas estavam trazendo leads qualificados, quais não estavam, quais precisavam de ajuste, quais estavam boas e, o mais importante: qual o retorno de cada uma.
 
@@ -86,14 +86,14 @@ O escritório, pioneiro em atuação em escala de serviços jurídicos, possuía
 
 O processo comercial (relevante para este case) do escritório pode ser simplificado em três etapas:
 1. Pipeline para **novos Leads**: onde era feita a classificação dos Leads e o envio das mensagens de primeiro contato.
-    * Aqui, identificamos que poderíamos utilizar as informações de origem dos Leads de anúncios para fazer a classificação dos Leads de forma automática, diminuindo o *leadtime* e o trabalho manual necessário.
-    * Também definimos que as informações das UTMs seriam salvas na entidade de Contato do CRM.
+    * Aqui, identificamos que poderíamos utilizar as informações de origem dos Leads de anúncios para fazer a classificação dos Leads de forma automática, diminuindo o *leadtime* e o trabalho manual necessário.
+    * Também definimos que as informações das UTMs seriam salvas na entidade de Contato do CRM.
 1. Pipeline para **qualificação dos Leads**: após responder às mensagens de primeiro contato, o Lead seguia para a qualificação por um SDR.
-    * Com a marcação de leads de anúncios, conseguimos definir prioridade para o atendimento desses Leads, reduzindo ainda mais o *leadtime* e auxiliando os SDRs na identificação de oportunidades mais quentes dentro do CRM.
-    * Foi nesta etapa do processo que introduzimos a marcação de **Lead MQL** (*Marketing Qualified Lead*), para que o Comercial possa apontar a quantidade recebida de Leads qualificados provenientes de anúncios.
-        * Isso, por sua vez, também auxilia na gerência dos anúncios, permitindo identificar os anúncios que traziam a maior quantidade de Leads qualificados.
+    * Com a marcação de leads de anúncios, conseguimos definir prioridade para o atendimento desses Leads, reduzindo ainda mais o *leadtime* e auxiliando os SDRs na identificação de oportunidades mais quentes dentro do CRM.
+    * Foi nesta etapa do processo que introduzimos a marcação de **Lead MQL** (*Marketing Qualified Lead*), para que o Comercial possa apontar a quantidade recebida de Leads qualificados provenientes de anúncios.
+        * Isso, por sua vez, também auxilia na gerência dos anúncios, permitindo identificar os anúncios que traziam a maior quantidade de Leads qualificados.
 1. Pipeline para **fechamento de contratos**: era nesta etapa que os SDRs avançavam com o Lead pelas etapas de obtenção de informações, oferta de serviço e assinatura do contrato.
-    * No processo de fechamento de contratos, há uma etapa referente ao **pagamento dos honorários iniciais** pelo Lead, essa métrica era recolhida para utilizarmos no ROAS.
+    * No processo de fechamento de contratos, há uma etapa referente ao **pagamento dos honorários iniciais** pelo Lead, essa métrica era recolhida para utilizarmos no ROAS.
 
 Com isso, foi possível obter uma integração profunda de rastreamento dos Lead no CRM da Engel Advogados.
 
@@ -105,10 +105,10 @@ Veja algumas das métricas que foram coletadas e compiladas para análise:
 * Quantidade de Leads de anúncios;
 * Quantidade de Leads MQL (Marketing Qualified Lead);
 * Porcentagem de Leads MQL do total de Leads;
-    * Esta métrica, analisando junto à quantidade de Leads de anúncios, possibilita uma visão holística sobre o desempenho dos anúncios e dos Leads de cada plataforma (Google Ads e Meta Ads).
+    * Esta métrica, analisando junto à quantidade de Leads de anúncios, possibilita uma visão holística sobre o desempenho dos anúncios e dos Leads de cada plataforma (Google Ads e Meta Ads).
 * Total de clientes que vieram de anúncios, e;
 * Honorários de entrada recebidos;
-    * Essa métrica seria utilizada para definição do retorno dos investimentos em anúncios.
+    * Essa métrica seria utilizada para definição do retorno dos investimentos em anúncios.
 
 ## Quais os resultados obtidos?
 
@@ -116,7 +116,7 @@ Este projeto foi um marco para Engel Advogados, pois, pela primeira vez, era pos
 
 Com estes e outros dados, foi criado um painel, atualizado automaticamente com as informações do CRM, para acompanhamento do ROAS das campanhas de anúncio do escritório:
 
-![Painel de dados com o título Retorno sobre Investimento em Anúncios. Ele exibe um resumo geral com os números de Leads, MQLs, % MQL, Investimento em Anúncios, Honorários de entrada e Clientes, além de gráficos de barras mostrando o número de Leads por campanha, um gráfico de barras empilhadas com a fonte por campanha e um gráfico de pizza mostrando a fonte de Leads MQL.](../../assets/photos/reduzindo-em-100x-o-custo-de-producao-de-conteudo-com-ia-foto-2.png)
+![Painel de dados com o título Retorno sobre Investimento em Anúncios. Ele exibe um resumo geral com os números de Leads, MQLs, % MQL, Investimento em Anúncios, Honorários de entrada e Clientes, além de gráficos de barras mostrando o número de Leads por campanha, um gráfico de barras empilhadas com a fonte por campanha e um gráfico de pizza mostrando a fonte de Leads MQL.](../../assets/photos/obtendo-o-roas-de-campanhas-publicitarias-foto-2.png)
 
 ### Benefícios para Diretoria
 
