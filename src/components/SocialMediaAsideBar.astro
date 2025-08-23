@@ -13,7 +13,7 @@ import Button from "./Button.astro";
   import dataLayerEventPush from "../composables/dataLayer";
 
   function shareArticle(medium:string) {
-    const path:string = 'https://' + location.host + location.pathname + '/';
+    const path:string = 'https://' + location.host + location.pathname;
     const utms:string = `?utm_source=share&utm_medium=${medium.toLocaleLowerCase()}`;
     let shareUrl: string | undefined = undefined;
 
