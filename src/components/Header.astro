@@ -43,14 +43,12 @@ import Button from "./Button.astro";
       html.style.overflow = 'hidden';
       mobileNavBtnClosed.style.display = "none";
       mobileNavBtnOpened.style.display = "flex";
-      mobileNavBtnOpened.focus();
       mobileNavMenu.style.display = "flex";
     })
 
     mobileNavBtnOpened.addEventListener("click", () => {
       html.style.overflow = 'auto';
       mobileNavBtnClosed.style.display = "flex";
-      mobileNavBtnClosed.focus();
       mobileNavBtnOpened.style.display = "none";
       mobileNavMenu.style.display = "none";
     })
