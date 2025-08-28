@@ -40,7 +40,7 @@ Para sanar esse problema, Julio introduziu um sistema para avaliação do CAC (C
 
 Com isso, era possível obter uma ideia geral de como estavam as coisas. No entanto, dentro desse cálculo do CAC, eram incluídos diversos outros gastos não diretamente relacionados com os anúncios.
 
-![Diagrama simbolizando o CAC como resultado da soma de gastos com a gestão de uma empresa. Do lado esquerdo, estão ícones de CRM, uma mulher (representando uma funcionária), Meta Ads e WhatsApp, todos conectados por linhas ao centro (CAC). Do lado direito, estão ícones de um homem (represetnando um funcionário), Google Ads e um prédio de escritório, também conectados ao centro.](../../assets/photos/obtendo-o-roas-de-campanhas-publicitarias-foto-1.png)
+![Diagrama simbolizando o CAC como resultado da soma de gastos com a gestão de uma empresa. Do lado esquerdo, estão ícones de CRM, uma mulher (representando uma funcionária), Meta Ads e WhatsApp, todos conectados por linhas ao centro (CAC). Do lado direito, estão ícones de um homem (represetnando um funcionário), Google Ads e um prédio de escritório, também conectados ao centro.](../../assets/photos/posts/obtendo-o-roas-de-campanhas-publicitarias-foto-1.png)
 
 O problema é que, com esse sistema, não se sabia quais campanhas estavam trazendo leads qualificados, quais não estavam, quais precisavam de ajuste, quais estavam boas e, o mais importante: qual o retorno de cada uma.
 
@@ -62,7 +62,7 @@ Somando a isso, com o escritório em crescimento, a **Engel** investia pesado em
 
 Contudo, com a ausência do traqueamento de leads de anúncios no CRM impedia a identificação exata de quais plataformas rendiam mais clientes, quais rendiam clientes com maior *ticket médio* e quais estavam apenas drenando dinheiro.
 
-![Diagrama hierárquico mostrando a performance de campanhas pagas. No nível superior, Plataforma, com logos do Google Ads, Meta (Facebook/Instagram) e TikTok. Abaixo, Conjunto e Anúncio. Há indicadores de qualificação (certo, aviso, erro) para cada elemento, separando Leads qualificados de Leads desqualificados, demonstrando como a performance pode variar em diferentes plataformas e níveis de campanha.](../../assets/photos/criador-de-utms-midia_paga.png)
+![Diagrama hierárquico mostrando a performance de campanhas pagas. No nível superior, Plataforma, com logos do Google Ads, Meta (Facebook/Instagram) e TikTok. Abaixo, Conjunto e Anúncio. Há indicadores de qualificação (certo, aviso, erro) para cada elemento, separando Leads qualificados de Leads desqualificados, demonstrando como a performance pode variar em diferentes plataformas e níveis de campanha.](../../assets/photos/posts/criador-de-utms-midia_paga.png)
 
 Além disso, diferentes estratégias de aquisição de leads resultam em diferentes tipos de leads e, sem um [traqueamento adequado](/portfolio/traqueamento-de-leads-a-partir-de-utms), não era possível saber o desempenho de cada uma.
 
@@ -116,7 +116,7 @@ Este projeto foi um marco para Engel Advogados, pois, pela primeira vez, era pos
 
 Com estes e outros dados, foi criado um painel, atualizado automaticamente com as informações do CRM, para acompanhamento do ROAS das campanhas de anúncio do escritório:
 
-![Painel de dados com o título Retorno sobre Investimento em Anúncios. Ele exibe um resumo geral com os números de Leads, MQLs, % MQL, Investimento em Anúncios, Honorários de entrada e Clientes, além de gráficos de barras mostrando o número de Leads por campanha, um gráfico de barras empilhadas com a fonte por campanha e um gráfico de pizza mostrando a fonte de Leads MQL.](../../assets/photos/obtendo-o-roas-de-campanhas-publicitarias-foto-2.png)
+![Painel de dados com o título Retorno sobre Investimento em Anúncios. Ele exibe um resumo geral com os números de Leads, MQLs, % MQL, Investimento em Anúncios, Honorários de entrada e Clientes, além de gráficos de barras mostrando o número de Leads por campanha, um gráfico de barras empilhadas com a fonte por campanha e um gráfico de pizza mostrando a fonte de Leads MQL.](../../assets/photos/posts/obtendo-o-roas-de-campanhas-publicitarias-foto-2.png)
 
 ### Benefícios para Diretoria
 

@@ -34,7 +34,7 @@ Pense neles como etiquetas que você cola em cada link que distribui por aí.
 
 E elas funcionam tanto para o universo digital (com tráfego pago e Inbound Marketing) quanto para elementos físicos, como QR Codes ou até tags NFC!
 
-![Diagrama com um smartphone central exibindo o site da agência de viagens 'OKDOKEY'. O smartphone atua como um hub, conectando-se a logos de diversas plataformas de mídia social e publicidade à esquerda (WhatsApp, TikTok, Instagram e Facebook) e à direita (Google Ads, Meta Ads, Pesquisa do Google e Pesquisa do Bing). As linhas conectando o smartphone a essas plataformas ilustram como um site próprio pode centralizar o tráfego proveniente de diferentes canais online, permitindo o rastreamento de visitantes independentemente de sua origem.](../../assets/photos/okdokey-agencia-de-viagens_hub.png)
+![Diagrama com um smartphone central exibindo o site da agência de viagens 'OKDOKEY'. O smartphone atua como um hub, conectando-se a logos de diversas plataformas de mídia social e publicidade à esquerda (WhatsApp, TikTok, Instagram e Facebook) e à direita (Google Ads, Meta Ads, Pesquisa do Google e Pesquisa do Bing). As linhas conectando o smartphone a essas plataformas ilustram como um site próprio pode centralizar o tráfego proveniente de diferentes canais online, permitindo o rastreamento de visitantes independentemente de sua origem.](../../assets/photos/posts/okdokey-agencia-de-viagens_hub.png)
 
 > Essa foto, por sinal, é de um estudo de caso que fiz sobre a [como transmitir autoridade para o seu negócio na internet](/portfolio/como-atrair-e-fidelizar-clientes-a-partir-do-seu-site), caso queira conferir.
 
@@ -113,7 +113,7 @@ Isso mesmo: com os UTMs, você pode dizer exatamente de onde vieram tanto os lea
 
 Assim, se os SDRs começarem a comentar sobre muitos leads desqualificados, você pode descobrir precisamente de onde esses leads chegaram e, por exemplo, desativar as camapnhas **sem que isso afete a chega de leads qualificados**.
 
-![Diagrama hierárquico mostrando a performance de campanhas pagas. No nível superior, Plataforma, com logos do Google Ads, Meta (Facebook/Instagram) e TikTok. Abaixo, Conjunto e Anúncio. Há indicadores de qualificação (certo, aviso, erro) para cada elemento, separando Leads qualificados de Leads desqualificados, demonstrando como a performance pode variar em diferentes plataformas e níveis de campanha.](../../assets/photos/criador-de-utms-midia_paga.png)
+![Diagrama hierárquico mostrando a performance de campanhas pagas. No nível superior, Plataforma, com logos do Google Ads, Meta (Facebook/Instagram) e TikTok. Abaixo, Conjunto e Anúncio. Há indicadores de qualificação (certo, aviso, erro) para cada elemento, separando Leads qualificados de Leads desqualificados, demonstrando como a performance pode variar em diferentes plataformas e níveis de campanha.](../../assets/photos/posts/criador-de-utms-midia_paga.png)
 
 Além disso, com UTMs, você pode identificar as fontes e campanhas de melhor performance e realocar seu orçamento para o que realmente funciona, otimizando os investimentos com anúncios.
 
@@ -139,7 +139,7 @@ Imagine só, no seu próximo relatório de marketing, você apresentando que, po
 
 Além disso, se você tiver um CRM bem configurado, poderá ainda dizer o quanto esses leads avançaram no funil e quantos fecharam negócio, além do valor desses negócios.
 
-![Diagrama de fluxo de Inbound Marketing mostrando canais orgânicos como Instagram, Facebook, Google, TikTok e Bing levando a um Artigo X. O fluxo continua com as etapas de Lead Qualificado, Primeiro Contato, Oferta Realizada e Negócio Fechado, ilustrando a jornada do cliente e a capacidade de rastrear a performance de conteúdo orgânico.](../../assets/photos/criador-de-utms-midia_organica.png)
+![Diagrama de fluxo de Inbound Marketing mostrando canais orgânicos como Instagram, Facebook, Google, TikTok e Bing levando a um Artigo X. O fluxo continua com as etapas de Lead Qualificado, Primeiro Contato, Oferta Realizada e Negócio Fechado, ilustrando a jornada do cliente e a capacidade de rastrear a performance de conteúdo orgânico.](../../assets/photos/posts/criador-de-utms-midia_organica.png)
 
 Percebe o **poder** que isso traz?
 

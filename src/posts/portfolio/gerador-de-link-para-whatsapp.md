@@ -83,7 +83,7 @@ Um link em um botão no meu site e eu estaria satisfeito: sem anúncios, sem pop
 
 E foi assim que, botando a mão na massa, fiz o meu próprio [gerador de link para WhatsApp](https://apps.andremourasantos.com/link-de-whatsapp/), uma ferramenta simples e funcional:
 
-![Mockup de um site em um tablet e um smartphone exibindo a ferramenta Link de WhatsApp. No tablet, a interface de criação de link com o campo para número de telefone e mensagem. No smartphone, a página de Ajustes da ferramenta, com opções para salvar dados da seção, sincronizar tema e tema do dispositivo.](../../assets/photos/gerador-de-link-para-whatsapp.png)
+![Mockup de um site em um tablet e um smartphone exibindo a ferramenta Link de WhatsApp. No tablet, a interface de criação de link com o campo para número de telefone e mensagem. No smartphone, a página de Ajustes da ferramenta, com opções para salvar dados da seção, sincronizar tema e tema do dispositivo.](../../assets/photos/posts/gerador-de-link-para-whatsapp.png)
 
 Ela faz o básico, mas faz **bem feito**, usando a forma como o próprio WhatsApp quer que esses links sejam criados.
 
