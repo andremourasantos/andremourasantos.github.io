@@ -5,12 +5,13 @@
   "scripts": {
     "dev": "astro dev",
     "build:test": "cross-env PUBLIC_SITE_URL=https://andremourasantos-2c83a--test-channel-r3b8t814.web.app astro build",
-    "build:test:deploy": "cross-env PUBLIC_SITE_URL=https://andremourasantos-2c83a--test-channel-r3b8t814.web.app astro build && firebase hosting:channel:deploy test-channel",
-    "build:prod:deploy": "cross-env PUBLIC_SITE_URL=https://andremourasantos.com.br astro build && firebase deploy --only hosting",
+    "build:test:deploy": "node --no-warnings --loader=ts-node/esm tests/check-images.ts &&  cross-env PUBLIC_SITE_URL=https://andremourasantos-2c83a--test-channel-r3b8t814.web.app astro build && firebase hosting:channel:deploy test-channel",
+    "build:prod:deploy": "node --no-warnings --loader=ts-node/esm tests/check-images.ts &&  cross-env PUBLIC_SITE_URL=https://andremourasantos.com.br astro build && firebase deploy --only hosting",
     "preview": "astro preview",
     "emulators": "firebase emulators:start",
     "deploy preview": "firebase hosting:channel:deploy test-channel",
-    "astro": "astro"
+    "astro": "astro",
+    "check-images": "node --no-warnings --loader=ts-node/esm tests/check-images.ts"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.4.0",
@@ -22,6 +23,7 @@
     "vue": "^3.5.13"
   },
   "devDependencies": {
-    "cross-env": "^7.0.3"
+    "cross-env": "^7.0.3",
+    "ts-node": "^10.9.2"
   }
 }

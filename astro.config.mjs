@@ -19,11 +19,9 @@ export default defineConfig({
       theme: 'github-dark'
     }
   },
-  experimental: {
-    responsiveImages: true
-  },
   image: {
-    experimentalLayout: 'fixed',
+    layout: 'fixed',
+    responsiveStyles: true,
     service: {
       entrypoint: 'astro/assets/services/sharp',
       config: {

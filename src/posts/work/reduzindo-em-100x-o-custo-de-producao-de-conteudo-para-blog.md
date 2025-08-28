@@ -46,7 +46,7 @@ O processo de produção de contéudo na Engel era **extenso** e **bem ramificad
 
 Como o escritório não contava com um agente de Marketing interno, o processo de produção de conteúdo consistia no trabalho conjunto entre a empresa e mais três prestadores de serviço:
 
-![Diagrama de fluxo que ilustra o processo de produção de conteúdo. O fluxo começa com Geração de ideia, segue para Produção do briefing, com o Prestador 1, e Aprovação do briefing. Então o fluxo se divide em duas direções: uma para a Produção do artigo, Prestador 1, Aprovação do Artigo e Publicação do artigo; a outra direção vai para a Produção do roteiro de vídeo, Prestador 1, Aprovação do Roteiro, Gravação dos Vídeos, Prestador 2, Edição dos Vídeos, Prestador 3 e Publicação no YouTube.](../../assets/photos/reduzindo-em-100x-o-custo-de-producao-de-conteudo-com-ia-foto-1.png)
+![Diagrama de fluxo que ilustra o processo de produção de conteúdo. O fluxo começa com Geração de ideia, segue para Produção do briefing, com o Prestador 1, e Aprovação do briefing. Então o fluxo se divide em duas direções: uma para a Produção do artigo, Prestador 1, Aprovação do Artigo e Publicação do artigo; a outra direção vai para a Produção do roteiro de vídeo, Prestador 1, Aprovação do Roteiro, Gravação dos Vídeos, Prestador 2, Edição dos Vídeos, Prestador 3 e Publicação no YouTube.](../../assets/photos/posts/reduzindo-em-100x-o-custo-de-producao-de-conteudo-com-ia-foto-1.png)
 
 > Essa é uma visão simplificada do fluxo de trabalho, que contava com impressionantes 16 etapas.
 
@@ -71,7 +71,7 @@ Pelos prazos fornecidos pelo prestador de serviço, de **3 dias úteis para prod
 
 Contudo, em consequência da forma como o fluxo de trabalho fora organizado, o tempo médio **real** experienciado era de impressionantes **142 dias corridos** (ou 101 dias úteis): quase **10x mais lento do que o previsto**.
 
-![Diagrama comparando expectativa e realidade em um processo. A seção Expectativa mostra um único ícone de calendário com o texto 16 dias corridos (~2 semanas) logo abaixo. A seção Realidade, por sua vez, exibe cinco ícones de calendário, com o texto 142 dias corridos (~5 meses) logo abaixo.](../../assets/photos/reduzindo-em-100x-o-custo-de-producao-de-conteudo-com-ia-foto-2.png)
+![Diagrama comparando expectativa e realidade em um processo. A seção Expectativa mostra um único ícone de calendário com o texto 16 dias corridos (~2 semanas) logo abaixo. A seção Realidade, por sua vez, exibe cinco ícones de calendário, com o texto 142 dias corridos (~5 meses) logo abaixo.](../../assets/photos/posts/reduzindo-em-100x-o-custo-de-producao-de-conteudo-com-ia-foto-2.png)
 
 Essa **demora entre uma ideia e o produto final** também afetava a capacidade do escritório em **abordar temas do momento**, já que, quando o artigo finalmente estivesse pronto, **as chances dele ainda ser relevante eram muito baixas**, pois o *boom* de interesse já havia passado.
 
@@ -109,7 +109,7 @@ Com essa abordagem, foi possível **criar POPs** (procedimentos operacionais pad
 
 Veja como ficou a nova pipeline para produção de artigos do blog, mais ágil, mais simples e mais objetiva:
 
-![Diagrama de fluxo simples com o título NOVA PIPELINE. Ele mostra uma sequência de seis etapas para a pipeline de produção de artigos: Ideia, Briefing, Aprovação, Artigo, Aprovação e Publicar. As etapas Briefing e Artigo estão identificadas como sendo realizadas por um Prestador de serviço.](../../assets/photos/reduzindo-em-100x-o-custo-de-producao-de-conteudo-com-ia-foto-3.png)
+![Diagrama de fluxo simples com o título NOVA PIPELINE. Ele mostra uma sequência de seis etapas para a pipeline de produção de artigos: Ideia, Briefing, Aprovação, Artigo, Aprovação e Publicar. As etapas Briefing e Artigo estão identificadas como sendo realizadas por um Prestador de serviço.](../../assets/photos/posts/reduzindo-em-100x-o-custo-de-producao-de-conteudo-com-ia-foto-3.png)
 
 > Das 16 etapas, a pipeline de produção de artigos (o foco deste case) agora contava com apenas 6, com a pipeline de produção de vídeos somando 7 etapas. 
 
@@ -123,7 +123,7 @@ Com os novos fluxos de trabalho devidamente padronizados e documentados, contrat
 
 E, a partir daí, foi possível criar automações específicas para **eliminação das atividades manuais repetitivas**, como a criação de pastas e documentos ou a sincronização entre os sistemas da Engel e seus prestadores — uma atividade que não só demandava muito tempo, como também era muito propensa a erros.
 
-![Diagrama apresentando as etapas e automações na pipeline de produção de artigos. No processo de Ideia, há uma tarefa de Tarefa de planejamento. Na etapa de Briefing, as tarefas são: Cria pasta no Drive, Libera acesso para o prestador, Atualiza sistema da Engel, Atualiza sistema do prestador e Aguarda entrega do prestador. A etapa de Aprovação tem a tarefa Tarefa para operador. Na etapa de Artigo, as tarefas são: Atualiza sistema do prestador e Aguarda entrega do prestador. A etapa seguinte de Aprovação tem a tarefa Tarefa para operador. Por fim, a etapa de Publicar tem a tarefa Tarefa para operador.](../../assets/photos/reduzindo-em-100x-o-custo-de-producao-de-conteudo-com-ia-foto-4.png)
+![Diagrama apresentando as etapas e automações na pipeline de produção de artigos. No processo de Ideia, há uma tarefa de Tarefa de planejamento. Na etapa de Briefing, as tarefas são: Cria pasta no Drive, Libera acesso para o prestador, Atualiza sistema da Engel, Atualiza sistema do prestador e Aguarda entrega do prestador. A etapa de Aprovação tem a tarefa Tarefa para operador. Na etapa de Artigo, as tarefas são: Atualiza sistema do prestador e Aguarda entrega do prestador. A etapa seguinte de Aprovação tem a tarefa Tarefa para operador. Por fim, a etapa de Publicar tem a tarefa Tarefa para operador.](../../assets/photos/posts/reduzindo-em-100x-o-custo-de-producao-de-conteudo-com-ia-foto-4.png)
 
 > Para se ter uma ideia, antes, quando uma entrega de Briefing ou Artigo era realizada, a Engel era comunicada via e-mail e, após isso, era necessário que o operador visse a mensagem para que, então, procurasse o respectivo card no sistema da Engel e alterasse a etapa manualmente.
 
@@ -149,7 +149,7 @@ E, após validação do funcionamento, extendemos o alcance da IA para **também
 
 Ao final da implementação da IA, obtivemos um fluxo de trabalho semelhante ao exemplificado abaixo:
 
-![Fluxograma apresentando funcionamento final da pipeline de produção de artigos. No processo de Ideia, há uma tarefa de Tarefa de planejamento. Na etapa de Briefing, as tarefas são: Cria pasta, Obtém sitemap, planeje, e Instruções, IA produz briefing, Cria documento na pasta e Tarefa para operador. Na etapa de Aprovação, a única tarefa é Tarefa para operador. Na etapa de Artigo, as tarefas são: Procura pasta no Drive, IA produz artigo, Cria documento na pasta e Tarefa para operador. A etapa seguinte de Aprovação tem a tarefa Tarefa para operador. Por fim, a etapa de Publicar tem a tarefa Tarefa para operador.](../../assets/photos/reduzindo-em-100x-o-custo-de-producao-de-conteudo-com-ia-foto-5.png)
+![Fluxograma apresentando funcionamento final da pipeline de produção de artigos. No processo de Ideia, há uma tarefa de Tarefa de planejamento. Na etapa de Briefing, as tarefas são: Cria pasta, Obtém sitemap, planeje, e Instruções, IA produz briefing, Cria documento na pasta e Tarefa para operador. Na etapa de Aprovação, a única tarefa é Tarefa para operador. Na etapa de Artigo, as tarefas são: Procura pasta no Drive, IA produz artigo, Cria documento na pasta e Tarefa para operador. A etapa seguinte de Aprovação tem a tarefa Tarefa para operador. Por fim, a etapa de Publicar tem a tarefa Tarefa para operador.](../../assets/photos/posts/reduzindo-em-100x-o-custo-de-producao-de-conteudo-com-ia-foto-5.png)
 
 Com isso, a IA atua como operador e faz grande parte do processo, com isso, o número de pessoas supervisionando o processo poderia ser reduzido e as pessoas responsáveis precisavam apenas fornecer o direcionamento inicial e, então, conferir as entregas da LLM.
 
@@ -166,7 +166,7 @@ Este valor foi substituído por despesas operacionais mínimas, incluindo uma m�
 
 O sucesos na implementação resultou em uma redução de custos anual de mais de **100x** (ou, apenas **R$ 720/ano** em despesas operacionais), atingindo em cheio o objetivo inicial de "otimizar e economizar gastos com prestadores de serviços".
 
-![Diagrama comparando a quantidade de clientes necessária para cobrir os custos de produção de conteúdo antes e depois de uma otimização. A seção Antes mostra uma grande quantidade de ícones de pessoas com o texto Mais de 130 clientes para pagar os gastos anuais com a produção de conteúdo. A seção Depois mostra apenas dois ícones de pessoas com o texto Apenas 2 clientes para pagar os gastos anuais com a produção de conteúdo.](../../assets/photos/reduzindo-em-100x-o-custo-de-producao-de-conteudo-com-ia-foto-6.png)
+![Diagrama comparando a quantidade de clientes necessária para cobrir os custos de produção de conteúdo antes e depois de uma otimização. A seção Antes mostra uma grande quantidade de ícones de pessoas com o texto Mais de 130 clientes para pagar os gastos anuais com a produção de conteúdo. A seção Depois mostra apenas dois ícones de pessoas com o texto Apenas 2 clientes para pagar os gastos anuais com a produção de conteúdo.](../../assets/photos/posts/reduzindo-em-100x-o-custo-de-producao-de-conteudo-com-ia-foto-6.png)
 
 Com isso, conseguimos alcançar uma economia anual estimada (sistema + mão de obra) de mais de R$ 72 mil, com uma **economia em 5 anos de aproximadamente R$ 360 mil com a produção de conteúdo**.
 
@@ -185,7 +185,7 @@ A segunda grande vitória foi a **redução no tempo de produção**:
 
 O **tempo médio** entre a concepção de uma ideia e a entrega do produto final (artigo/roteiro de vídeo), que antes era de **142 dias corridos**, foi reduzido para **apenas 15 dias**!
 
-![Diagrama comparativo com os títulos Antes e Depois. A seção Antes mostra cinco ícones de calendário com o texto 142 dias corridos (~5 meses). A seção Depois mostra um único ícone de calendário com o texto 15 dias corridos (~2 semanas).](../../assets/photos/reduzindo-em-100x-o-custo-de-producao-de-conteudo-com-ia-foto-7.png)
+![Diagrama comparativo com os títulos Antes e Depois. A seção Antes mostra cinco ícones de calendário com o texto 142 dias corridos (~5 meses). A seção Depois mostra um único ícone de calendário com o texto 15 dias corridos (~2 semanas).](../../assets/photos/posts/reduzindo-em-100x-o-custo-de-producao-de-conteudo-com-ia-foto-7.png)
 
 > Essa otimização representa um aumento de quase **10x** na eficiência da produção.
 
