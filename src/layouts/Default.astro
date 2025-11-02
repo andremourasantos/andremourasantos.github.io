@@ -2,7 +2,6 @@
 import '../assets/main.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import ConversasionalForms from "../components/Forms/ConversasionalForms.vue";
 
 interface Props {
   title: string,
@@ -68,7 +67,7 @@ const absolutePageUrl = `${SITE_URL}${Astro.url.pathname}`;
 
     { import.meta.env.MODE !== "development" ? <script>
       function loadGTM() {
-        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        (function(w:any,d:any,s:any,l:any,i:any){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
         j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);

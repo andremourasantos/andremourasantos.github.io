@@ -4,11 +4,11 @@ title: "Reduzindo em 100x o custo de produção de conteúdo para blog"
 description: "Como usei IA para potencializar a produção de conteúdo em um escritório de advocacia."
 imageName: "susan-q-yin-2JIvboGLeho-unsplash"
 pubDate: 2025-07-31
-updatedDate: 2025-08-22
+updatedDate: 2025-10-24
 tags: ["trabalho", "automação"]
 ---
 
-> Este projeto foi inscrito para o prêmio DNA+ da FENALAW 2025. O artigo apresenta alterações, em relação ao texto original, para fins didáticos.
+> Este projeto foi vencedor BRONZE na categoria Marketing do prêmio DNA+ da FENALAW 2025.
 
 No mundo do marketing digital, a eficiência é a chave para o sucesso.
 
@@ -201,6 +201,10 @@ Ao eliminar erros manuais e atrasos, as novas pipelines também permitiram que *
 ### Conclusão
 
 Com todas essas inovações implementadas, o escritório não só conseguiu **internalizar a produção de conteúdo**, como também **aprimorou a qualidade** e **escalou significativamente sua capacidade de entrega**.
+
+Além disso, com todas as inovações apresentadas aqui, o projeto obteve o reconhecimento BRONZE, na categoria Marketing, do prêmio NDA+ da FENALAW 2025, a maior jurídica da América Latina!
+
+![Prêmio BRONZE para o projeto 'Fluxo de Marketing com IA para produção de conteúdo que economiza 7,2% do faturamento anual.'](../../assets/photos/posts/reduzindo-em-100x-o-custo-de-producao-de-conteudo-com-ia-foto-12.jpg)
 
 Esse ganho de eficiência, por consequência, **liberou horas de trabalho dos operadores** em atividades de baixo valor agregado, o que permitiu que o especialista contratado expandisse sua atuação para **outras frentes estratégicas do escritório** — aumentado o aproveitamento do capital humano do escritório — como:
   * **Tráfego pago**, com a implementação do projeto para [obtenção do ROAS](/trabalhos/obtendo-o-roas-de-campanhas-publicitarias) das campanhas que rodavam no escritório;

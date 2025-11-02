@@ -15,7 +15,7 @@ const portfolio = defineCollection({
 });
 
 const works = defineCollection({
-  loader: glob({pattern: "**/*.md", base: "./src/posts/work"}),
+  loader: glob({pattern: ["**/*.md","**/*.mdx"], base: "./src/posts/work"}),
   schema: z.object({
     isDraft: z.boolean(),
     title: z.string(),

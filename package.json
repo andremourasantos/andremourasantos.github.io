@@ -1,7 +1,7 @@
 {
   "name": "andremourasantos.github.io",
   "type": "module",
-  "version": "3.1.7",
+  "version": "3.1.9",
   "scripts": {
     "dev": "astro dev",
     "build:test": "cross-env PUBLIC_SITE_URL=https://andremourasantos-2c83a--test-channel-r3b8t814.web.app astro build",
@@ -18,11 +18,12 @@
     "@astrojs/vue": "^5.0.13",
     "@lucide/astro": "^0.509.0",
     "astro": "^5.7.12",
-    "firebase": "^11.8.1",
+    "firebase": "^12.2.1",
     "lucide-vue-next": "^0.525.0",
     "vue": "^3.5.13"
   },
   "devDependencies": {
+    "@astrojs/mdx": "^4.3.9",
     "cross-env": "^7.0.3",
     "ts-node": "^10.9.2"
   }
