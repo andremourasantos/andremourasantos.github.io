@@ -4,7 +4,7 @@
   "version": "3.1.10",
   "scripts": {
     "dev": "astro dev",
-    "build:test": "cross-env PUBLIC_SITE_URL=https://andremourasantos-2c83a--test-channel-r3b8t814.web.app astro build",
+    "build:test": "node --no-warnings --loader=ts-node/esm tests/check-images.ts && cross-env PUBLIC_SITE_URL=https://andremourasantos-2c83a--test-channel-r3b8t814.web.app astro build",
     "build:test:deploy": "node --no-warnings --loader=ts-node/esm tests/check-images.ts &&  cross-env PUBLIC_SITE_URL=https://andremourasantos-2c83a--test-channel-r3b8t814.web.app astro build && firebase hosting:channel:deploy test-channel",
     "build:prod:deploy": "node --no-warnings --loader=ts-node/esm tests/check-images.ts &&  cross-env PUBLIC_SITE_URL=https://andremourasantos.com.br astro build && firebase deploy --only hosting",
     "preview": "astro preview",
