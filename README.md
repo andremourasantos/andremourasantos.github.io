@@ -8,7 +8,7 @@ Para os curiosos de plantão, alguns artigos em produção podem estar disponív
 
 ## Tecnologias usadas
 
-_*Atualizado em fevereiro de 2024._
+_*Atualizado em junho de 2025._
 
 <div align="center">
   <img height="48" title="HTML5" src="readme/html5.png">

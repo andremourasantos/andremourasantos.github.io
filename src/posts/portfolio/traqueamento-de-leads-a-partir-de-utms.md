@@ -187,4 +187,4 @@ Eu recomendo você a começar pequeno: padronize seus links das redes sociais pr
 
 E para te dar um empurrãozinho nesse caminho, a planilha está aí para simplificar a sua jornada!
 
-> Se você achou interessante o meu trabalho, recomendo conferir esse [calendário de datas comemorativas](/portfolio/calendario-de-datas-comemorativas) — que é excelente para iniciantes no Inbound Marketing.
+> Se você achou interessante o meu trabalho, recomendo conferir esse [calendário de datas comemorativas](/portfolio/calendario-para-inbound-marketing) — que é excelente para iniciantes no Inbound Marketing.
