@@ -1,7 +1,7 @@
 {
   "name": "andremourasantos.github.io",
   "type": "module",
-  "version": "3.1.10",
+  "version": "3.1.14",
   "scripts": {
     "dev": "astro dev",
     "build:test": "node --no-warnings --loader=ts-node/esm tests/check-images.ts && cross-env PUBLIC_SITE_URL=https://andremourasantos-2c83a--test-channel-r3b8t814.web.app astro build",
