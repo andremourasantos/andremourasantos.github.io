@@ -4,14 +4,14 @@ import "../assets/animations.css";
 interface Props {
   quoteText:string,
   quoteAuthor:string,
-  quouteAuthorWork:string
+  quoteAuthorWork:string
 }
 
-const { quoteText, quoteAuthor, quouteAuthorWork } = Astro.props;
+const { quoteText, quoteAuthor, quoteAuthorWork } = Astro.props;
 ---
 <div class="quote-container">
   <q>{quoteText}</q>
-  <p><strong>{quoteAuthor}</strong><span>, {quouteAuthorWork}.</span></p>
+  <p><strong>{quoteAuthor}</strong><span>, {quoteAuthorWork}.</span></p>
 </div>
 
 <script>

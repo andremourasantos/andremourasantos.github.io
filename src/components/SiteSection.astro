@@ -4,6 +4,7 @@ import "../assets/animations.css";
 interface Props {
   title: string;
   description: string;
+  mediaType?: "image" | "video";
   orientation?: "LTR" | "RTL";
   imageName?: string;
   imageAltText: string;
@@ -13,29 +14,37 @@ interface Props {
 const {
   title,
   description,
+  mediaType = "image",
   orientation = "LTR",
   imageName = "test",
   imageAltText,
   imageSaturate = true,
 } = Astro.props;
 
-let imagePath;
-try {
-  imagePath = await import(`../assets/photos/${imageName}.jpg`).then((res) => {
-    return res.default.src;
-  });
-} catch (error) {
+let mediaPath;
+
+if(mediaType === "image") {
   try {
-    imagePath = await import(`../assets/photos/posts/${imageName}.jpg`).then(
-      (res) => {
-        return res.default.src;
-      },
-    );
-  } catch (error) {
-    imagePath = await import(`../assets/photos/test.jpg`).then((res) => {
+    mediaPath = await import(`../assets/photos/${imageName}.jpg`).then((res) => {
       return res.default.src;
     });
+  } catch (error) {
+    try {
+      mediaPath = await import(`../assets/photos/posts/${imageName}.jpg`).then(
+        (res) => {
+          return res.default.src;
+        },
+      );
+    } catch (error) {
+      mediaPath = await import(`../assets/photos/${imageName}.jpg`).then((res) => {
+        return res.default.src;
+      });
+    }
   }
+} else {
+  mediaPath = await import(`../assets/photos/${imageName}.webm`).then((res) => {
+    return res.default;
+  });
 }
 ---
 
@@ -45,12 +54,18 @@ try {
     <p set:html={description} />
     <div class="slot"><slot /></div>
   </div>
-  <img
-    src={imagePath}
-    alt={imageAltText}
-    class:list={imageSaturate ? "saturated" : ""}
-    loading="lazy"
-  />
+  {mediaType === "image" ? (
+    <img
+      src={mediaPath}
+      alt={imageAltText}
+      class:list={imageSaturate ? "saturated" : ""}
+      loading="lazy"
+    />
+  ) : (
+    <video autoplay loop muted>
+      <source src={mediaPath} type="video/mp4" />
+    </video>
+  )}
 </section>
 
 <script>
@@ -89,7 +104,7 @@ try {
     font-size: var(--font-size_large);
   }
 
-  img {
+  img, video {
     width: 100%;
     height: auto;
     aspect-ratio: 4/3;
@@ -109,7 +124,7 @@ try {
     grid-area: col2;
   }
 
-  .RTL img {
+  .RTL img, .RTL video {
     grid-area: col1;
   }
 
@@ -122,7 +137,7 @@ try {
       grid-area: col1;
     }
 
-    .RTL img {
+    .RTL img, .RTL video {
       grid-area: col2;
     }
   }
