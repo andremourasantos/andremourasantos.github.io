@@ -3,7 +3,7 @@ import { readdir, readFile } from 'node:fs/promises';
 import { join } from 'node:path';
 
 const postsPath = './src/posts';
-const imagesPath = './src/assets/photos/posts';
+const imagesPath = './src/assets/media/posts';
 
 async function getUnusedImages() {
   const getImagesName = await readdir(imagesPath);

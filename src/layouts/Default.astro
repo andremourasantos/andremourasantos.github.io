@@ -18,9 +18,9 @@ const SITE_URL = import.meta.env.PUBLIC_SITE_URL;
 
 let imagePath;
 try {
-  imagePath = await import(`../assets/photos/${imageName}.jpg`).then((res) => {return res.default.src});
+  imagePath = await import(`../assets/media/${imageName}.jpg`).then((res) => {return res.default.src});
 } catch (error) {
-  imagePath = await import(`../assets/photos/default.jpg`).then((res) => {return res.default.src});
+  imagePath = await import(`../assets/media/default.jpg`).then((res) => {return res.default.src});
 }
 
 const absoluteImagePath = `${SITE_URL}${imagePath}`;

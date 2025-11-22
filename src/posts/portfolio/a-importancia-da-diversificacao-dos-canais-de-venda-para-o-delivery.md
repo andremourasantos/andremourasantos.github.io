@@ -32,7 +32,7 @@ E eu não estou falando de campanhas genéricas no WhatsApp ou publicações nas
 
 Eu estou falando de um canal de vendas próprio: como um site ou um aplicativo web progressivo (PWA).
 
-![Mockup de aplicativo de delivery de pizza em dois smartphones.](../../assets/photos/posts/aplicativo-de-delivery_mockup.png)
+![Mockup de aplicativo de delivery de pizza em dois smartphones.](../../assets/media/posts/aplicativo-de-delivery_mockup.png)
 
 ### As vantagens de um canal de vendas próprio
 
@@ -74,7 +74,7 @@ Com campanhas segmentadas no Google Ads ou nas redes sociais, por exemplo, você
 
 Isso, além de aumentar drasticamente o tamanho do público ao qual tem acesso, diversifica os seus canais de aquisição de clientes, tornado o seu negócio mais resiliente.
 
-![Mockup de um aplicativo de delivery de pizza em um smartphone centralizado, conectado visualmente a ícones de diversas plataformas como WhatsApp, TikTok, Instagram, Facebook, Google Ads, Meta, Google e Bing, ilustrando como o tráfego dessas fontes pode ser direcionado para o aplicativo próprio do negócio.](../../assets/photos/posts/aplicativo-de-delivery_anuncios.png)
+![Mockup de um aplicativo de delivery de pizza em um smartphone centralizado, conectado visualmente a ícones de diversas plataformas como WhatsApp, TikTok, Instagram, Facebook, Google Ads, Meta, Google e Bing, ilustrando como o tráfego dessas fontes pode ser direcionado para o aplicativo próprio do negócio.](../../assets/media/posts/aplicativo-de-delivery_anuncios.png)
 
 Assim, você pode não somente pensar em estratégias de **remarketing**, como também tem um maior controle sobre o **Custo por Aquisição de Cliente (CAC)**, uma vez que você está no controle da maioria das variáveis.
 
@@ -84,7 +84,7 @@ Com um canal de vendas próprio, você ainda recupera o controle sobre os dados 
 
 Nome, endereço, WhatsApp... — todas essas informações se tornam acessíveis (respeitando a LGPD, é claro).
 
-![Mockup de um aplicativo de delivery de pizza em um smartphone, conectado a um conjunto de ícones de plataformas de aquisição de tráfego (como Google Ads, redes sociais, etc.) à esquerda, e a ícones que representam o relacionamento direto com o cliente (como perfil, chat e telefone) à direita, ilustrando o fluxo de atração e a capacidade de comunicação direta com o cliente através do canal próprio.](../../assets/photos/posts/aplicativo-de-delivery_relacionamento-com-cliente.png)
+![Mockup de um aplicativo de delivery de pizza em um smartphone, conectado a um conjunto de ícones de plataformas de aquisição de tráfego (como Google Ads, redes sociais, etc.) à esquerda, e a ícones que representam o relacionamento direto com o cliente (como perfil, chat e telefone) à direita, ilustrando o fluxo de atração e a capacidade de comunicação direta com o cliente através do canal próprio.](../../assets/media/posts/aplicativo-de-delivery_relacionamento-com-cliente.png)
 
 E esse acesso direto permite que você vá muito além da simples entrega de um pedido:
 * Você pode implementar programas de fidelidade;
@@ -107,7 +107,7 @@ No entanto, o objetivo primário passa a ser direcionar a maior parte dos esfor�
 
 Tranformando a loja no Ifood em uma **fonte adicional** de receita, e não *toda fonte de receita*.
 
-![Mockup de um aplicativo de delivery de pizza em um smartphone centralizado, conectado visualmente a ícones de diversas plataformas de tráfego (Google Ads, Instagram, Facebook, TikTok) à esquerda e ao logo do Ifood à direita, ilustrando uma estratégia híbrida onde o negócio conta com multiplas fontes de receita ao invés de uma única fonte (Ifood).](../../assets/photos/posts/aplicativo-de-delivery-abordagem_hibrida.png)
+![Mockup de um aplicativo de delivery de pizza em um smartphone centralizado, conectado visualmente a ícones de diversas plataformas de tráfego (Google Ads, Instagram, Facebook, TikTok) à esquerda e ao logo do Ifood à direita, ilustrando uma estratégia híbrida onde o negócio conta com multiplas fontes de receita ao invés de uma única fonte (Ifood).](../../assets/media/posts/aplicativo-de-delivery-abordagem_hibrida.png)
 
 Essa visão de longo prazo foca na construção de uma base de clientes e de um canal de vendas que pertencem ao negócio, garantindo maior autonomia, lucratividade e a capacidade de adaptação em um mercado em constante mudança.
 

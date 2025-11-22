@@ -16,9 +16,9 @@ const { title, description, imageName, postId, link, isDraft } = Astro.props;
 
 let imagePath;
 try {
-  imagePath = await import(`../assets/photos/posts/${imageName}.jpg`).then((res) => {return res.default.src});
+  imagePath = await import(`../assets/media/posts/${imageName}.jpg`).then((res) => {return res.default.src});
 } catch (error) {
-  imagePath = await import(`../assets/photos/test.jpg`).then((res) => {return res.default.src});
+  imagePath = await import(`../assets/media/test.jpg`).then((res) => {return res.default.src});
 }
 ---
 <div class="card" class:list={isDraft ? 'isDraftContent' : ''}>

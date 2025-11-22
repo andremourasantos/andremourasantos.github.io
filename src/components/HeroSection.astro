@@ -14,12 +14,12 @@ const { heroTitle, heroSubtitle, heroImage, heroCustomButtons, heroBtnText, hero
 
 let imagePath;
 try {
-  imagePath = await import(`../assets/photos/${heroImage}.jpg`).then((res) => {return res.default.src});
+  imagePath = await import(`../assets/media/${heroImage}.jpg`).then((res) => {return res.default.src});
 } catch (error) {
   try {
-    imagePath = await import(`../assets/photos/posts/${heroImage}.jpg`).then((res) => {return res.default.src});
+    imagePath = await import(`../assets/media/posts/${heroImage}.jpg`).then((res) => {return res.default.src});
   } catch (error) {
-    imagePath = await import(`../assets/photos/test.jpg`).then((res) => {return res.default.src}); 
+    imagePath = await import(`../assets/media/test.jpg`).then((res) => {return res.default.src}); 
   }
 }
 ---
