@@ -8,7 +8,6 @@ interface Props {
   orientation?: "LTR" | "RTL";
   mediaName?: string;
   mediaAltText: string;
-  mediaSaturate?: boolean;
 }
 
 const {
@@ -18,17 +17,12 @@ const {
   orientation = "LTR",
   mediaName = "test",
   mediaAltText,
-  mediaSaturate = false,
 } = Astro.props;
 
 let mediaPath;
 
 if(mediaType === "image") {
   try {
-    mediaPath = await import(`../assets/media/${mediaName}.jpg`).then((res) => {
-      return res.default.src;
-    });
-  } catch (error) {
     try {
       mediaPath = await import(`../assets/media/posts/${mediaName}.jpg`).then(
         (res) => {
@@ -40,6 +34,11 @@ if(mediaType === "image") {
         return res.default.src;
       });
     }
+  } catch (error) {
+    mediaPath = await import(`../assets/media/test.jpg`)
+    .then((res) => {
+      return res.default.src;
+    });
   }
 } else {
   mediaPath = await import(`../assets/media/${mediaName}.webm`).then((res) => {
@@ -58,7 +57,6 @@ if(mediaType === "image") {
     <img
       src={mediaPath}
       alt={mediaAltText}
-      class:list={mediaSaturate ? "saturated" : ""}
       loading="lazy"
     />
   ) : (
@@ -110,10 +108,6 @@ if(mediaType === "image") {
     aspect-ratio: 4/3;
     object-fit: cover;
     grid-area: col2;
-  }
-
-  img.saturated {
-    filter: saturate(0.5);
   }
 
   section.RTL {
