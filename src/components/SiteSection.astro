@@ -6,9 +6,9 @@ interface Props {
   description: string;
   mediaType?: "image" | "video";
   orientation?: "LTR" | "RTL";
-  imageName?: string;
-  imageAltText: string;
-  imageSaturate?: boolean;
+  mediaName?: string;
+  mediaAltText: string;
+  mediaSaturate?: boolean;
 }
 
 const {
@@ -16,33 +16,33 @@ const {
   description,
   mediaType = "image",
   orientation = "LTR",
-  imageName = "test",
-  imageAltText,
-  imageSaturate = true,
+  mediaName = "test",
+  mediaAltText,
+  mediaSaturate = false,
 } = Astro.props;
 
 let mediaPath;
 
 if(mediaType === "image") {
   try {
-    mediaPath = await import(`../assets/media/${imageName}.jpg`).then((res) => {
+    mediaPath = await import(`../assets/media/${mediaName}.jpg`).then((res) => {
       return res.default.src;
     });
   } catch (error) {
     try {
-      mediaPath = await import(`../assets/media/posts/${imageName}.jpg`).then(
+      mediaPath = await import(`../assets/media/posts/${mediaName}.jpg`).then(
         (res) => {
           return res.default.src;
         },
       );
     } catch (error) {
-      mediaPath = await import(`../assets/media/${imageName}.jpg`).then((res) => {
+      mediaPath = await import(`../assets/media/${mediaName}.jpg`).then((res) => {
         return res.default.src;
       });
     }
   }
 } else {
-  mediaPath = await import(`../assets/media/${imageName}.webm`).then((res) => {
+  mediaPath = await import(`../assets/media/${mediaName}.webm`).then((res) => {
     return res.default;
   });
 }
@@ -57,8 +57,8 @@ if(mediaType === "image") {
   {mediaType === "image" ? (
     <img
       src={mediaPath}
-      alt={imageAltText}
-      class:list={imageSaturate ? "saturated" : ""}
+      alt={mediaAltText}
+      class:list={mediaSaturate ? "saturated" : ""}
       loading="lazy"
     />
   ) : (

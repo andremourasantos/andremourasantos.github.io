@@ -6,17 +6,17 @@ import ComingSoonButtonArticleGroup from "./ComingSoonButtonArticleGroup.astro";
 interface Props {
   title:string,
   description:string,
-  imageName:string,
+  mediaName:string,
   postId:string,
   link:string,
   isDraft:boolean
 }
 
-const { title, description, imageName, postId, link, isDraft } = Astro.props;
+const { title, description, mediaName, postId, link, isDraft } = Astro.props;
 
 let imagePath;
 try {
-  imagePath = await import(`../assets/media/posts/${imageName}.jpg`).then((res) => {return res.default.src});
+  imagePath = await import(`../assets/media/posts/${mediaName}.jpg`).then((res) => {return res.default.src});
 } catch (error) {
   imagePath = await import(`../assets/media/test.jpg`).then((res) => {return res.default.src});
 }

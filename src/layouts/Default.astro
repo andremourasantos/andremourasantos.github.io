@@ -6,19 +6,19 @@ import Footer from '../components/Footer.astro';
 interface Props {
   title: string,
   description: string,
-  imageName?:string,
+  mediaName?:string,
   pageType:"webiste"|"article",
   pubDate?:Date,
   updatedDate?:Date
 }
 
-const { title, description, imageName, pageType, pubDate, updatedDate } = Astro.props;
+const { title, description, mediaName, pageType, pubDate, updatedDate } = Astro.props;
 
 const SITE_URL = import.meta.env.PUBLIC_SITE_URL;
 
 let imagePath;
 try {
-  imagePath = await import(`../assets/media/${imageName}.jpg`).then((res) => {return res.default.src});
+  imagePath = await import(`../assets/media/${mediaName}.jpg`).then((res) => {return res.default.src});
 } catch (error) {
   imagePath = await import(`../assets/media/default.jpg`).then((res) => {return res.default.src});
 }

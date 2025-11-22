@@ -2,7 +2,7 @@
 isDraft: false
 title: "Traqueamento de leads a partir de UTMs"
 description: "Aprenda a parametrizar suas URLs e obtenha insights robustos sobre leads pagos e orgânicos facilmente."
-imageName: "1981-digital-bMWHu8wU1Vk-unsplash"
+mediaName: "1981-digital-bMWHu8wU1Vk-unsplash"
 pubDate: 2024-01-13
 updatedDate: 2025-05-01
 tags: ["automação"]

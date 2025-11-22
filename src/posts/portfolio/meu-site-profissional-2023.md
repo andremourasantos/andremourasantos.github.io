@@ -2,7 +2,7 @@
 isDraft: true
 title: "Meu site profissional (2023)"
 description: "Explorando o mercado de freelancer e  experimentando estilos visuais disruptivos no Web Design."
-imageName: "cytonn-photography-n95VMLxqM2I-unsplash"
+mediaName: "cytonn-photography-n95VMLxqM2I-unsplash"
 pubDate: 2023-10-16
 updatedDate: 2025-05-01
 tags: ["design"]

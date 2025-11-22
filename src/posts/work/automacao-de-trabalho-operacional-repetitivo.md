@@ -2,7 +2,7 @@
 isDraft: true
 title: "Automação de trabalho operacional repetitivo"
 description: "Como economizei quase 40 horas de trabalho de baixo valor agregado, por mês, com automações."
-imageName: "Whisk_941fd709db"
+mediaName: "Whisk_941fd709db"
 pubDate: 2025-04-24
 updatedDate: 2025-04-24
 tags: ["trabalho", "automação"]

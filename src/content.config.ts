@@ -7,7 +7,7 @@ const portfolio = defineCollection({
     isDraft: z.boolean(),
     title: z.string(),
     description: z.string(),
-    imageName: z.string(),
+    mediaName: z.string(),
     pubDate: z.coerce.date(),
     updatedDate: z.coerce.date(),
     tags: z.array(z.enum(['automação', 'design', 'programação'])),
@@ -20,7 +20,7 @@ const works = defineCollection({
     isDraft: z.boolean(),
     title: z.string(),
     description: z.string(),
-    imageName: z.string(),
+    mediaName: z.string(),
     pubDate: z.coerce.date(),
     updatedDate: z.coerce.date(),
     tags: z.array(z.string())

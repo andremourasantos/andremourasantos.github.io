@@ -2,7 +2,7 @@
 isDraft: true
 title: "Gerenciamento de usuários e Banco de Dados no Google Firebase"
 description: "MVP para aprendizagem das funcionalidades do Google Cloud Platform (GCP) através do Firebase JS SDK v9."
-imageName: "test"
+mediaName: "test"
 pubDate: 2024-01-07
 updatedDate: 2025-05-01
 tags: ["programação"]

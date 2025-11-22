@@ -2,7 +2,7 @@
 isDraft: true
 title: "Meu site profissional (2021)"
 description: "Os primeiros passos rumo à construção de uma marca pessoal como profissional de Marketing."
-imageName: "test"
+mediaName: "test"
 pubDate: 2021-11-10
 updatedDate: 2025-05-01
 tags: ["design"]

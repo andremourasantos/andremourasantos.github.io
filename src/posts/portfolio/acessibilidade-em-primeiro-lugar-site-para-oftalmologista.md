@@ -2,7 +2,7 @@
 isDraft: false
 title: "Acessibilidade em primeiro lugar: site para oftalmologista"
 description: "Como entender quem é o seu público molda a forma como construímos experiências."
-imageName: "Whisk_906aa0b294"
+mediaName: "Whisk_906aa0b294"
 pubDate: 2022-02-08
 updatedDate: 2025-05-01
 tags: ["design"]

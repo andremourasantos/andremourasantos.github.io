@@ -2,7 +2,7 @@
 isDraft: false
 title: "Calendário para Inbound Marketing"
 description: "Planeje suas ações de Inbound Marketing e Social Selling para diversos clientes com facilidade."
-imageName: "calendario-de-inbound-marketing"
+mediaName: "calendario-de-inbound-marketing"
 pubDate: 2024-01-03
 updatedDate: 2025-07-20
 tags: ["programação", "automação"]

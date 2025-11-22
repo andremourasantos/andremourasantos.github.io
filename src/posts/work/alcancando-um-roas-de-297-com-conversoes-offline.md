@@ -2,7 +2,7 @@
 isDraft: false
 title: "Alcançando um ROAS de 297% com conversões offline"
 description: "Como usei o CRM da Engel Advogados para aprimorar as campanhas de anúncio no Google Ads."
-imageName: "appshunter-io-pf66ltW0zIU-unsplash"
+mediaName: "appshunter-io-pf66ltW0zIU-unsplash"
 pubDate: 2025-09-05
 updatedDate: 2025-11-20
 tags: ["trabalho", "automação"]

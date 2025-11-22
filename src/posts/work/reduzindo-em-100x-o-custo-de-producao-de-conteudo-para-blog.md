@@ -2,7 +2,7 @@
 isDraft: false
 title: "Reduzindo em 100x o custo de produção de conteúdo para blog"
 description: "Como usei IA para potencializar a produção de conteúdo em um escritório de advocacia."
-imageName: "susan-q-yin-2JIvboGLeho-unsplash"
+mediaName: "susan-q-yin-2JIvboGLeho-unsplash"
 pubDate: 2025-07-31
 updatedDate: 2025-10-24
 tags: ["trabalho", "automação"]

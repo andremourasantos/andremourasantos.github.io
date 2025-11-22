@@ -12,7 +12,7 @@ const sortedPosts = posts.sort((a, b) => {
 <PortofolioPage heroTitle="Projetos de programação" heroSubtitle="Compartilhando projetos para incorporar na sua operação." sectionTitle="Tirando ideias do papel" sectionDescription=`A gente sempre acaba precisando de uma ferramentas que parece não existir no mercado né? Mas ao invés de recorrer às planilhas, eu resolvi desenvolver algumas por conta própria.<br><br>E para ajudar outros profissionais da área, fiz esse repositório para compartilhar tanto os erros quanto os acertos.` sectionImage="mika-baumeister-J5yoGZLdpSI-unsplash">
   {
     sortedPosts.map(post => {
-      return <ProjectCard title={post.data.title} description={post.data.description} imageName={post.data.imageName} link={"/portfolio/"+post.id} isDraft={post.data.isDraft} postId={post.id}/>
+      return <ProjectCard title={post.data.title} description={post.data.description} mediaName={post.data.mediaName} link={"/portfolio/"+post.id} isDraft={post.data.isDraft} postId={post.id}/>
     })
   }
 </PortofolioPage>
