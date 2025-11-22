@@ -1,4 +1,6 @@
 ---
+import "../assets/animations.css";
+
 interface Props {
   quoteText:string,
   quoteAuthor:string,
@@ -12,6 +14,18 @@ const { quoteText, quoteAuthor, quouteAuthorWork } = Astro.props;
   <p><strong>{quoteAuthor}</strong><span>, {quouteAuthorWork}.</span></p>
 </div>
 
+<script>
+  import { getElementWhenIntersectWithViewport } from "../composables/animations.ts";
+
+  const quoteEls = document.querySelectorAll(".quote-container") as NodeListOf<HTMLElement>;
+
+  if (quoteEls) {
+    quoteEls.forEach((quoteEl) => {
+      getElementWhenIntersectWithViewport(quoteEl, "fadeInFromBottom");
+    });
+  }
+</script>
+
 <style>
   div {
     width: 100%;
@@ -22,6 +36,8 @@ const { quoteText, quoteAuthor, quouteAuthorWork } = Astro.props;
 
   div.quote-container {
     position: relative;
+    animation: var(--default);
+    opacity: 0;
   }
 
   div::before {

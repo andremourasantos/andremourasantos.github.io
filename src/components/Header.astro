@@ -1,4 +1,5 @@
 ---
+import "../assets/animations.css";
 import Button from "./Button.astro";
 ---
 <header>
@@ -40,6 +41,7 @@ import Button from "./Button.astro";
 
   if(mobileNavBtnClosed && mobileNavBtnOpened && mobileNavMenu && html){
     mobileNavBtnClosed.addEventListener("click", () => {
+      mobileNavMenu.style.animationDirection = "normal";
       html.style.overflow = 'hidden';
       mobileNavBtnClosed.style.display = "none";
       mobileNavBtnOpened.style.display = "flex";
@@ -47,10 +49,20 @@ import Button from "./Button.astro";
     })
 
     mobileNavBtnOpened.addEventListener("click", () => {
-      html.style.overflow = 'auto';
       mobileNavBtnClosed.style.display = "flex";
       mobileNavBtnOpened.style.display = "none";
-      mobileNavMenu.style.display = "none";
+      mobileNavMenu.style.animationName = "none";
+      requestAnimationFrame(() => {
+        setTimeout(() => {
+          mobileNavMenu.style.animationName = "";
+        }, 0);
+      });
+      mobileNavMenu.style.animationDirection = "reverse";
+
+      setTimeout(() => {
+        html.style.overflow = 'auto';
+        mobileNavMenu.style.display = "none";
+      }, 250);
     })
   }
 </script>
@@ -109,10 +121,14 @@ import Button from "./Button.astro";
     align-items: center;
     justify-content: center;
     background-color: #F5F5F5;
+    animation: fadeIn var(--quick);
+    opacity: 0;
   }
 
   #mobileNavMenu > a {
     text-decoration: none;
+    animation: fadeInFromBottom var(--quick);
+    opacity: 0;
   }
 
   nav > a {

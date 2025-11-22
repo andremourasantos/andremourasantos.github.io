@@ -1,51 +1,87 @@
 ---
-import { Image } from 'astro:assets';
+import "../assets/animations.css";
 
 interface Props {
-  title:string,
-  description:string,
-  orientation?:'LTR'|'RTL',
-  imageName?:string,
-  imageAltText:string,
-  imageSaturate?:boolean
+  title: string;
+  description: string;
+  orientation?: "LTR" | "RTL";
+  imageName?: string;
+  imageAltText: string;
+  imageSaturate?: boolean;
 }
 
-const { title, description, orientation = 'LTR', imageName = 'test', imageAltText, imageSaturate = true } = Astro.props;
+const {
+  title,
+  description,
+  orientation = "LTR",
+  imageName = "test",
+  imageAltText,
+  imageSaturate = true,
+} = Astro.props;
 
 let imagePath;
 try {
-  imagePath = await import(`../assets/photos/${imageName}.jpg`).then((res) => {return res.default.src});
+  imagePath = await import(`../assets/photos/${imageName}.jpg`).then((res) => {
+    return res.default.src;
+  });
 } catch (error) {
   try {
-    imagePath = await import(`../assets/photos/posts/${imageName}.jpg`).then((res) => {return res.default.src});
+    imagePath = await import(`../assets/photos/posts/${imageName}.jpg`).then(
+      (res) => {
+        return res.default.src;
+      },
+    );
   } catch (error) {
-    imagePath = await import(`../assets/photos/test.jpg`).then((res) => {return res.default.src});
+    imagePath = await import(`../assets/photos/test.jpg`).then((res) => {
+      return res.default.src;
+    });
   }
 }
-
 ---
-<section class:list={orientation}>
+
+<section class="site-section" class:list={orientation}>
   <div>
     <h2>{title}</h2>
-    <p set:html={description}></p>
-    <div class="slot"><slot/></div>
+    <p set:html={description} />
+    <div class="slot"><slot /></div>
   </div>
-  <img src={imagePath} alt={imageAltText} class:list={imageSaturate ? 'saturated' : ''} loading="lazy">
+  <img
+    src={imagePath}
+    alt={imageAltText}
+    class:list={imageSaturate ? "saturated" : ""}
+    loading="lazy"
+  />
 </section>
+
+<script>
+  import { getElementWhenIntersectWithViewport } from "../composables/animations.ts";
+
+  const sectionEls = document.querySelectorAll("section.site-section") as NodeListOf<HTMLElement>;
+
+  if (sectionEls) {
+    sectionEls.forEach((sectionEl) => {
+      getElementWhenIntersectWithViewport(sectionEl, "fadeInFromCenter");
+    });
+  }
+</script>
 
 <style>
   section {
     display: grid;
     grid-template-columns: 600px 1fr;
     grid-template-areas: "col1 col2";
-    align-items: center;
+    align-items: start;
     justify-content: space-between;
     gap: var(--padding_10x);
+    animation: var(--default);
+    opacity: 0;
   }
 
   div {
     width: 100%;
     grid-area: col1;
+    position: sticky;
+    top: 80px;
   }
 
   h2 {
