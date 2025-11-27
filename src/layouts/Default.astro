@@ -14,17 +14,23 @@ interface Props {
 
 const { title, description, imageName, pageType, pubDate, updatedDate } = Astro.props;
 
-const SITE_URL = import.meta.env.PUBLIC_SITE_URL;
+let siteUrl:string;
+
+if(import.meta.env.MODE === "development") {
+  siteUrl = "http://localhost:4321/";
+} else {
+  siteUrl = "https://andremourasantos.com.br/";
+}
 
 let imagePath;
 try {
-  imagePath = await import(`../assets/photos/${imageName}.jpg`).then((res) => {return res.default.src});
+  imagePath = await import(`../assets/photos/posts/${imageName}.jpg`).then((res) => {return res.default.src});
 } catch (error) {
   imagePath = await import(`../assets/photos/default.jpg`).then((res) => {return res.default.src});
 }
 
-const absoluteImagePath = `${SITE_URL}${imagePath}`;
-const absolutePageUrl = `${SITE_URL}${Astro.url.pathname}`;
+const absoluteImagePath = `${siteUrl}${imagePath.substring(1)}`;
+const absolutePageUrl = `${siteUrl}${Astro.url.pathname.substring(1)}`;
 ---
 
 <html lang="pt-br">
