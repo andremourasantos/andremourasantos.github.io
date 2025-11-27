@@ -1,7 +1,7 @@
 {
   "name": "andremourasantos.github.io",
   "type": "module",
-  "version": "3.1.15",
+  "version": "3.2.0",
   "scripts": {
     "dev": "astro dev",
     "build:test": "node --no-warnings --loader=ts-node/esm tests/check-images.ts && cross-env PUBLIC_SITE_URL=https://andremourasantos-2c83a--test-channel-r3b8t814.web.app astro build",
@@ -18,8 +18,10 @@
     "@astrojs/vue": "^5.0.13",
     "@lucide/astro": "^0.509.0",
     "astro": "^5.7.12",
+    "astro-seo-schema": "^5.1.0",
     "firebase": "^12.2.1",
     "lucide-vue-next": "^0.525.0",
+    "schema-dts": "^1.1.5",
     "vue": "^3.5.13"
   },
   "devDependencies": {

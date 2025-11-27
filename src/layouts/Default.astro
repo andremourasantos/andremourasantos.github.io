@@ -2,12 +2,13 @@
 import '../assets/main.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import { Schema } from 'astro-seo-schema';
 
 interface Props {
   title: string,
   description: string,
   imageName?:string,
-  pageType:"webiste"|"article",
+  pageType:"website"|"article",
   pubDate?:Date,
   updatedDate?:Date
 }
@@ -64,6 +65,45 @@ const absolutePageUrl = `${siteUrl}${Astro.url.pathname.substring(1)}`;
 
     <title>{title} | André S.</title>
     <!--SCRIPTS-->
+    
+    {pageType === "website" ? <Schema item={{
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      mainEntityOfPage: {
+        '@type': 'WebPage',
+        '@id': absolutePageUrl
+      },
+      headline: title,
+      description: description,
+      image: absoluteImagePath,
+      author: {
+        '@type': 'Person',
+        name: 'André S.',
+        "@id": "https://andremourasantos.com.br/"
+      },
+      datePublished: new Date().toISOString(),
+      dateModified: new Date().toISOString()
+    }}/>
+    : <Schema item={{
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      mainEntityOfPage: {
+        '@type': 'WebPage',
+        '@id': absolutePageUrl
+      },
+      headline: title,
+      description: description,
+      image: absoluteImagePath,
+      author: {
+        '@type': 'Person',
+        name: 'André S.',
+        "@id": "https://andremourasantos.com.br/"
+      },
+      datePublished: pubDate?.toISOString(),
+      dateModified: updatedDate?.toISOString()
+    }}/>
+    }
+    <slot name="head"/>
   </head>
   <body>
     <Header/>

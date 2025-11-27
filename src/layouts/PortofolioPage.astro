@@ -17,7 +17,7 @@ interface Props {
 const { heroTitle, heroSubtitle, sectionTitle, sectionDescription, sectionImage } = Astro.props;
 ---
 
-<Default title={heroTitle} description={heroSubtitle} pageType="webiste" imageName="portfolio">
+<Default title={heroTitle} description={heroSubtitle} pageType="website" imageName="portfolio">
   <HeroSection heroTitle={heroTitle} heroSubtitle={heroSubtitle}/>
   <ContentHolder orientation="column" id="content">
     <SiteSection title={sectionTitle} description={sectionDescription} imageName={sectionImage} imageAltText="">
