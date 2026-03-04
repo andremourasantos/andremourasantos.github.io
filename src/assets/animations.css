@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+:root {
+  /*PRESETS*/
+  --default: 750ms cubic-bezier(.17,.67,.45,1) 250ms forwards;
+  --quick: 250ms cubic-bezier(.17,.67,.45,1) 0ms forwards;
+}
+
+@keyframes fadeInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInFromCenter {
+  from {
+    opacity: 0;
+    transform: scale(0.90);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  @keyframes fadeInFromBottom {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInFromCenter {
+    from {
+      opacity: 1;
+      transform: scale(1);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}

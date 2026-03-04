@@ -1,24 +1,24 @@
 ---
+import "../assets/animations.css";
 import Button from "./Button.astro";
 import ComingSoonButtonArticleGroup from "./ComingSoonButtonArticleGroup.astro";
-import ButtonGroup from "./ButtonGroup.astro";
 
 interface Props {
   title:string,
   description:string,
-  imageName:string,
+  mediaName:string,
   postId:string,
   link:string,
   isDraft:boolean
 }
 
-const { title, description, imageName, postId, link, isDraft } = Astro.props;
+const { title, description, mediaName, postId, link, isDraft } = Astro.props;
 
 let imagePath;
 try {
-  imagePath = await import(`../assets/photos/posts/${imageName}.jpg`).then((res) => {return res.default.src});
+  imagePath = await import(`../assets/media/posts/${mediaName}.jpg`).then((res) => {return res.default.src});
 } catch (error) {
-  imagePath = await import(`../assets/photos/test.jpg`).then((res) => {return res.default.src});
+  imagePath = await import(`../assets/media/test.jpg`).then((res) => {return res.default.src});
 }
 ---
 <div class="card" class:list={isDraft ? 'isDraftContent' : ''}>
@@ -39,6 +39,31 @@ try {
   </div>
 </div>
 
+<script>
+  const cardEls = Array.from(document.querySelectorAll(".card")) as HTMLElement[];
+
+  if (cardEls.length > 0) {
+    const observer = new IntersectionObserver((entries) => {
+      const intersectingEntries = entries.filter((entry) => entry.isIntersecting);
+
+      intersectingEntries.sort((a, b) => {
+        return cardEls.indexOf(a.target as HTMLElement) - cardEls.indexOf(b.target as HTMLElement);
+      });
+
+      intersectingEntries.forEach((entry, index) => {
+        const el = entry.target as HTMLElement;
+        el.style.animationDelay = `${250 + index * 100}ms`;
+        el.style.animationName = "fadeInFromBottom";
+        observer.unobserve(el);
+      });
+    });
+
+    cardEls.forEach((cardEl) => {
+      observer.observe(cardEl);
+    });
+  }
+</script>
+
 <style>
   .card {
     min-width: fit-content;
@@ -46,6 +71,8 @@ try {
     display: flex;
     flex-direction: column;
     border: 1px solid var(--colors-border_line_color);
+    animation: var(--default);
+    opacity: 0;
   }
 
   img, .isDraft {

@@ -3,7 +3,7 @@ import { readdir, readFile } from 'node:fs/promises';
 import { join } from 'node:path';
 
 const postsPath = './src/posts';
-const imagesPath = './src/assets/photos/posts';
+const imagesPath = './src/assets/media/posts';
 
 async function getUnusedImages() {
   const getImagesName = await readdir(imagesPath);
@@ -41,7 +41,7 @@ async function getUnusedImages() {
       if(file.isDirectory()) {
         await searchForCoverImagesInPosts(path);
       } else if (file.name.endsWith('.md') || file.name.endsWith('.mdx')) {
-        const regex = /imageName:\s*"([^"]+)"/
+        const regex = /mediaName:\s*"([^"]+)"/
         const content = await readFile(path, 'utf-8');
         const match = content.match(regex)?.[1];
 

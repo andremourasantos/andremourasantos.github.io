@@ -2,7 +2,7 @@
 isDraft: false
 title: "Política de Privacidade"
 description: "Este site pode coletar informações sobre a sua sessão e dados pessoais. Saiba como são tratadas aqui."
-imageName: "flyd-zAhAUSdRLJ8-unsplash"
+mediaName: "flyd-zAhAUSdRLJ8-unsplash"
 pubDate: 2023-10-12
 updatedDate: 2025-05-31
 tags: ["política de privacidade"]

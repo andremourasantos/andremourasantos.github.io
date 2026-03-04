@@ -2,7 +2,7 @@
 isDraft: true
 title: "Meu site profissional (2025)"
 description: "Visão da marca pessoal como compartilhador de experiências e aprendizados para crescimento mútuo."
-imageName: "test"
+mediaName: "test"
 pubDate: 2025-05-03
 updatedDate: 2025-05-03
 tags: ["design"]

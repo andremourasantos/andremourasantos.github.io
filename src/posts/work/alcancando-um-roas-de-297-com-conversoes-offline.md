@@ -2,7 +2,7 @@
 isDraft: false
 title: "Alcançando um ROAS de 297% com conversões offline"
 description: "Como usei o CRM da Engel Advogados para aprimorar as campanhas de anúncio no Google Ads."
-imageName: "appshunter-io-pf66ltW0zIU-unsplash"
+mediaName: "appshunter-io-pf66ltW0zIU-unsplash"
 pubDate: 2025-09-05
 updatedDate: 2025-11-20
 tags: ["trabalho", "automação"]
@@ -28,7 +28,7 @@ Mas, depois do Lead cair no seu CRM, ele **ainda deve passar pelo processo de qu
 
 E é aqui que entra a conversão offline: com um processo de qualificação bem definido, é possível registrar um evento de conversão novo, como "Lead qualificado", e usar ele para guiar as suas campanhas.
 
-![Diagrama ilustrando o fluxo de um lead, desde a conversão online até a qualificação offline no CRM, e como essa informação retroalimenta as campanhas de anúncios.](../../assets/photos/posts/alcancando-um-roas-de-297-com-conversoes-offline-1.png)
+![Diagrama ilustrando o fluxo de um lead, desde a conversão online até a qualificação offline no CRM, e como essa informação retroalimenta as campanhas de anúncios.](../../assets/media/posts/alcancando-um-roas-de-297-com-conversoes-offline-1.png)
 
 Perceba como agora, ao invés de usar apenas as conversões no forms, as campanhas podem utilizar informação bem mais no fundo do funil para realizar as otimizações: dessa forma, você passa a otimizar os anúncios de acordo com o seu funil de vendas de forma automática!
 
@@ -56,7 +56,7 @@ Veja: o Google Ads — e qualquer outra plataforma de anúncios, na realidade �
 
 E, a partir dessa informação (quem preencheu o formulário), a plataforma tenta identificar grupos de pessoas similares, com objetivo de mostrar o seu anúncio para elas e, então, fazê-las converter na sua página.
 
-![Ilustração mostrando que o Google Ads vê apenas conversões de formulário, enquanto o funil de vendas real acontece no CRM, invisível para a plataforma.](../../assets/photos/posts/alcancando-um-roas-de-297-com-conversoes-offline-2.png)
+![Ilustração mostrando que o Google Ads vê apenas conversões de formulário, enquanto o funil de vendas real acontece no CRM, invisível para a plataforma.](../../assets/media/posts/alcancando-um-roas-de-297-com-conversoes-offline-2.png)
 
 A verdade é que o gerenciador (quando não conectado ao seu CRM) **não mostra a eficácia da sua campanha**, **mas sim o quão eficiente são os seus anúncios** — quantos leads você consegue gerar com X orçamento (e nem estamos falando de Leads qualificados, apenas Leads mesmo). *E essas são duas coisas bem diferentes.*
 
@@ -68,7 +68,7 @@ Ele organiza as conversões tanto para o time comercial entender quais leads est
 
 Munido então dessas informações, o algoritmo passa a otimizar suas campanhas para um grupo diferente de pessoas, as que efetivamente viraram clientes (ou as que se tornaram leads qualificados).
 
-![Novo diagrama mostrando a otimização com conversões offline: o CRM alimenta o Google Ads com dados de leads qualificados e clientes, permitindo uma otimização mais inteligente.](../../assets/photos/posts/alcancando-um-roas-de-297-com-conversoes-offline-3.png)
+![Novo diagrama mostrando a otimização com conversões offline: o CRM alimenta o Google Ads com dados de leads qualificados e clientes, permitindo uma otimização mais inteligente.](../../assets/media/posts/alcancando-um-roas-de-297-com-conversoes-offline-3.png)
 
 Com isso em mãos, o algoritmo terá um direcionamento muito mais rico para poder selecionar *quando*, *onde* e *para quem* os seus anúncios serão exibidos, aumentando exponencialmente a qualidade dos Leads.
 
@@ -99,13 +99,13 @@ Em apenas dois meses, já foi possível ver os resultados:
 * A proporção de Leads qualificados (MQLs) chegou a 42%, e;
 * A proporção de SQLs disparou de ~10%, em Maio, para 30%, em Agosto, chegando a 41% no começo de Setembro (4x mais alta).
 
-![O gráfico de barras verticais apresenta a evolução da captação mensal de Leads, MQLs (Marketing Qualified Leads) e SQLs (Sales Qualified Leads) no período de Maio a Setembro. Em Maio, foram gerados 247 Leads com 24 SQLs e 0 MQLs. Em Junho, os números foram 192 Leads, 15 SQLs e 1 MQL. Uma mudança drástica na proporção de leads qualificados é evidente a partir de Julho, quando foram registrados 95 Leads, 27 SQLs e 40 MQLs. Em Agosto, o volume de Leads se manteve baixo em 89, mas as qualificações foram altas, com 26 SQLs e 34 MQLs. Por fim, Setembro registrou 12 Leads, 5 SQLs e 10 MQLs. O gráfico demonstra claramente que, apesar da redução no volume total de Leads ao longo dos meses (caindo de 247 para 12), a proporção de MQLs e SQLs aumentou significativamente a partir de Julho, indicando uma otimização bem-sucedida na qualidade dos leads captados.](../../assets/photos/posts/alcancando-um-roas-de-297-com-conversoes-offline-4.png)
+![O gráfico de barras verticais apresenta a evolução da captação mensal de Leads, MQLs (Marketing Qualified Leads) e SQLs (Sales Qualified Leads) no período de Maio a Setembro. Em Maio, foram gerados 247 Leads com 24 SQLs e 0 MQLs. Em Junho, os números foram 192 Leads, 15 SQLs e 1 MQL. Uma mudança drástica na proporção de leads qualificados é evidente a partir de Julho, quando foram registrados 95 Leads, 27 SQLs e 40 MQLs. Em Agosto, o volume de Leads se manteve baixo em 89, mas as qualificações foram altas, com 26 SQLs e 34 MQLs. Por fim, Setembro registrou 12 Leads, 5 SQLs e 10 MQLs. O gráfico demonstra claramente que, apesar da redução no volume total de Leads ao longo dos meses (caindo de 247 para 12), a proporção de MQLs e SQLs aumentou significativamente a partir de Julho, indicando uma otimização bem-sucedida na qualidade dos leads captados.](../../assets/media/posts/alcancando-um-roas-de-297-com-conversoes-offline-4.png)
 
 > Veja que, mesmo com a informação da qualificação disponível todo esse tempo, eles ainda não marcavam os Leads como qualificados no CRM, apenas se eram SQLs ou não. Essa informação começou a ser marcada apenas em Julho. Os dados de Setembro são de 01/09 a 04/09.
 
 Com o sucesso preliminar da nova campanha, o orçamento foi gradualmente sendo elevado ao longo do tempo:
 
-![O gráfico de barras verticais apresenta o investimento mensal em Reais (R$) de Maio a Setembro. Em Maio, o investimento foi de R$ 4,0k. Em Junho, houve uma leve redução para R$ 3,9k. Em Julho, o investimento subiu para R$ 4,5k, e em Agosto, atingiu o pico de R$ 4,7k. Por fim, em Setembro (referente apenas aos primeiros quatro dias do mês), o investimento registrado foi de R$ 500.](../../assets/photos/posts/alcancando-um-roas-de-297-com-conversoes-offline-5.png)
+![O gráfico de barras verticais apresenta o investimento mensal em Reais (R$) de Maio a Setembro. Em Maio, o investimento foi de R$ 4,0k. Em Junho, houve uma leve redução para R$ 3,9k. Em Julho, o investimento subiu para R$ 4,5k, e em Agosto, atingiu o pico de R$ 4,7k. Por fim, em Setembro (referente apenas aos primeiros quatro dias do mês), o investimento registrado foi de R$ 500.](../../assets/media/posts/alcancando-um-roas-de-297-com-conversoes-offline-5.png)
 
 > Os dados de Setembro são de 01/09 a 04/09.
 
@@ -123,7 +123,7 @@ Isso significa que as oportunidades que chegam para o time Comercial **estão ma
 
 E, após toda implementação das melhorias na campanha do Google Ads, foi possível obter um retorno de 297% sobre o investimento feito na campanha, em outras palavras: para cada R$ 1 investido, R$ 2,97 retornavam para o escritório, em forma de honorários de entrada.
 
-![Dashboard de 'Retorno sobre Investimento em Anúncios' da Engel Advogados, com dados de performance e atribuição da campanha. O Resumo Geral destaca: 95 Leads (queda de 54%), 40 MQLs (aumento de 3.900% na proporção de MQLs), Investimento Ads de R$ 4,5 mil, Honorários de entrada de R$ 13,4 mil (aumento de 75%), e 7 Clientes (aumento de 133%). O dashboard visualiza o alto retorno sobre o investimento e a concentração da performance no canal Google após as otimizações.](../../assets/photos/posts/alcancando-um-roas-de-297-com-conversoes-offline-6.png)
+![Dashboard de 'Retorno sobre Investimento em Anúncios' da Engel Advogados, com dados de performance e atribuição da campanha. O Resumo Geral destaca: 95 Leads (queda de 54%), 40 MQLs (aumento de 3.900% na proporção de MQLs), Investimento Ads de R$ 4,5 mil, Honorários de entrada de R$ 13,4 mil (aumento de 75%), e 7 Clientes (aumento de 133%). O dashboard visualiza o alto retorno sobre o investimento e a concentração da performance no canal Google após as otimizações.](../../assets/media/posts/alcancando-um-roas-de-297-com-conversoes-offline-6.png)
 
 > Na Engel Advogados, apenas os Honorários de Entrada são contabilizados para o cálculo do ROAS das campanhas.
 
@@ -151,7 +151,7 @@ Esse foi o caso da Engel Advogados, onde só precisamos criar um campo específi
 
 Sendo assim, para a **implementação da API de conversões offline do Google Ads**, foi realizada uma chamada de webhook, mediante chegada do Lead em uma determinada etapa do processo comercial, para o Make.com, onde uma nova chamada, dessa vez para a API do CRM, era realizada, os dados processados e enviados ao Google Ads.
 
-![Diagrama mostrando o fluxo de dados entre o Make.com, o CRM e o Google Ads, com o envio do GCLID e das conversões offline.](../../assets/photos/posts/alcancando-um-roas-de-297-com-conversoes-offline-7.png)
+![Diagrama mostrando o fluxo de dados entre o Make.com, o CRM e o Google Ads, com o envio do GCLID e das conversões offline.](../../assets/media/posts/alcancando-um-roas-de-297-com-conversoes-offline-7.png)
 
 Todo esse processo foi implementado de maneira simplificada, permitindo fácil manutenção, ajustes e refinos. Além disso, quando um erro ou problema ocorria, uma notificação era enviada diretamente para o meu usuário, informando sobre erros, para que eu pudesse resolver o problema imediatamente.
 
