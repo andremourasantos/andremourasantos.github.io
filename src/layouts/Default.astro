@@ -2,11 +2,12 @@
 import '../assets/main.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import { Schema } from 'astro-seo-schema';
 
 interface Props {
   title: string,
   description: string,
-  mediaName?:string,
+  imageName?:string,
   pageType:"webiste"|"article",
   pubDate?:Date,
   updatedDate?:Date
@@ -14,17 +15,23 @@ interface Props {
 
 const { title, description, mediaName, pageType, pubDate, updatedDate } = Astro.props;
 
-const SITE_URL = import.meta.env.PUBLIC_SITE_URL;
+let siteUrl:string;
+
+if(import.meta.env.MODE === "development") {
+  siteUrl = "http://localhost:4321/";
+} else {
+  siteUrl = "https://andremourasantos.com.br/";
+}
 
 let imagePath;
 try {
-  imagePath = await import(`../assets/media/${mediaName}.jpg`).then((res) => {return res.default.src});
+  imagePath = await import(`../assets/photos/${imageName}.jpg`).then((res) => {return res.default.src});
 } catch (error) {
   imagePath = await import(`../assets/media/default.jpg`).then((res) => {return res.default.src});
 }
 
-const absoluteImagePath = `${SITE_URL}${imagePath}`;
-const absolutePageUrl = `${SITE_URL}${Astro.url.pathname}`;
+const absoluteImagePath = `${siteUrl}${imagePath.substring(1)}`;
+const absolutePageUrl = `${siteUrl}${Astro.url.pathname.substring(1)}`;
 ---
 
 <html lang="pt-br">
@@ -58,6 +65,45 @@ const absolutePageUrl = `${SITE_URL}${Astro.url.pathname}`;
 
     <title>{title} | André S.</title>
     <!--SCRIPTS-->
+    
+    {pageType === "website" ? <Schema item={{
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      mainEntityOfPage: {
+        '@type': 'WebPage',
+        '@id': absolutePageUrl
+      },
+      headline: title,
+      description: description,
+      image: absoluteImagePath,
+      author: {
+        '@type': 'Person',
+        name: 'André S.',
+        "@id": "https://andremourasantos.com.br/"
+      },
+      datePublished: new Date().toISOString(),
+      dateModified: new Date().toISOString()
+    }}/>
+    : <Schema item={{
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      mainEntityOfPage: {
+        '@type': 'WebPage',
+        '@id': absolutePageUrl
+      },
+      headline: title,
+      description: description,
+      image: absoluteImagePath,
+      author: {
+        '@type': 'Person',
+        name: 'André S.',
+        "@id": "https://andremourasantos.com.br/"
+      },
+      datePublished: pubDate?.toISOString(),
+      dateModified: updatedDate?.toISOString()
+    }}/>
+    }
+    <slot name="head"/>
   </head>
   <body>
     <Header/>

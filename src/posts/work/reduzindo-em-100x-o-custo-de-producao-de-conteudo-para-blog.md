@@ -202,7 +202,7 @@ Ao eliminar erros manuais e atrasos, as novas pipelines também permitiram que *
 
 Com todas essas inovações implementadas, o escritório não só conseguiu **internalizar a produção de conteúdo**, como também **aprimorou a qualidade** e **escalou significativamente sua capacidade de entrega**.
 
-Além disso, com todas as inovações apresentadas aqui, o projeto obteve o reconhecimento BRONZE, na categoria Marketing, do prêmio NDA+ da FENALAW 2025, a maior jurídica da América Latina!
+Além disso, com todas as inovações apresentadas aqui, o projeto obteve o reconhecimento BRONZE, na categoria Marketing, do prêmio DNA+ da FENALAW 2025, a maior jurídica da América Latina!
 
 ![Prêmio BRONZE para o projeto 'Fluxo de Marketing com IA para produção de conteúdo que economiza 7,2% do faturamento anual.'](../../assets/media/posts/reduzindo-em-100x-o-custo-de-producao-de-conteudo-com-ia-foto-12.jpg)
 
