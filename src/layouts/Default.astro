@@ -7,8 +7,8 @@ import { Schema } from 'astro-seo-schema';
 interface Props {
   title: string,
   description: string,
-  imageName?:string,
-  pageType:"webiste"|"article",
+  mediaName?:string,
+  pageType:"website"|"article",
   pubDate?:Date,
   updatedDate?:Date
 }
@@ -25,13 +25,15 @@ if(import.meta.env.MODE === "development") {
 
 let imagePath;
 try {
-  imagePath = await import(`../assets/photos/${imageName}.jpg`).then((res) => {return res.default.src});
+  imagePath = await import(`../assets/photos/${mediaName}.jpg`).then((res) => {return res.default.src});
 } catch (error) {
   imagePath = await import(`../assets/media/default.jpg`).then((res) => {return res.default.src});
 }
 
 const absoluteImagePath = `${siteUrl}${imagePath.substring(1)}`;
 const absolutePageUrl = `${siteUrl}${Astro.url.pathname.substring(1)}`;
+const canonicalUrl = absolutePageUrl;
+
 ---
 
 <html lang="pt-br">
@@ -55,6 +57,9 @@ const absolutePageUrl = `${siteUrl}${Astro.url.pathname.substring(1)}`;
     <meta property="og:image:height" content="630" />
     {pubDate && <meta property="article:published_time" content={pubDate.toISOString()} />}
     {updatedDate && <meta property="article:modified_time" content={updatedDate.toISOString()} />}
+
+    <!--CANONICAL URL FOR SEO-->
+    <link rel="canonical" href={canonicalUrl} />
 
     <!--CRITICAL FONTS-->
     <link rel="preload" href="/fonts/Atkinson_Hyperlegible_Next/AtkinsonHyperlegibleNext-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
